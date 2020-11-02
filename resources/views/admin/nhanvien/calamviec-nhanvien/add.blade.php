@@ -70,7 +70,7 @@
 
                                     <div class="form-group">
                                         <label>Ngày kết thúc</label>
-                                        <input class="form-control" type="time" value="hh:dd:ss" id="example-time-input">
+                                        <input class="form-control" type="date" value="_/_/_" id="example-time-input">
                                     </div>
                         
                                 <button type="submit" class="btn btn-primary">Submit</button>
