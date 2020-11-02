@@ -24,7 +24,7 @@ class CalamviecController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.nhanvien.calamviec.add');
     }
 
     /**

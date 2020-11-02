@@ -24,7 +24,7 @@ class ListnhanvienController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.nhanvien.list-nhanvien.add');
     }
 
     /**
@@ -57,7 +57,7 @@ class ListnhanvienController extends Controller
      */
     public function edit($id)
     {
-        //
+        return view('admin.nhanvien.list-nhanvien.edit');
     }
 
     /**
