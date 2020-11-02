@@ -1,26 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-    
-<!-- Mirrored from coderthemes.com/uplon/layouts/vertical/pages-login.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 31 Oct 2020 19:25:16 GMT -->
-<head>
-        <meta charset="utf-8" />
-        <title>Log In | Uplon - Responsive Bootstrap 4 Admin Dashboard</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta content="Responsive bootstrap 4 admin template" name="description" />
-        <meta content="Coderthemes" name="author" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <!-- App favicon -->
-        <link rel="shortcut icon" href="{{url('admin')}}/images/favicon.ico">
 
-        <!-- App css -->
-        <link href="{{url('admin')}}/css/bootstrap.min.css" rel="stylesheet" type="text/css" id="bootstrap-stylesheet" />
-        <link href="{{url('admin')}}/css/icons.min.css" rel="stylesheet" type="text/css" />
-        <link href="{{url('admin')}}/css/app.min.css" rel="stylesheet" type="text/css"  id="app-stylesheet" />
-
-    </head>
-
-    <body class="authentication-bg">
-
+@extends('authur.main')
+@section('title', 'Login')
+@section('content')
         <div class="account-pages pt-5 my-5">
             <div class="container">
                 <div class="row justify-content-center">
@@ -32,10 +13,10 @@
                                     <div class="text-center">
                                         <div class="my-3">
                                             <a href="index.html">
-                                                <span><img src="{{url('admin')}}/images/logo.png" alt="" height="28"></span>
+                                                <span><img src="{{url('admin')}}/images/logogym.gif" alt="" height="50px"></span>
                                             </a>
                                         </div>
-                                        <h5 class="text-muted text-uppercase py-3 font-16">Sign In</h5>
+                                        <h5 class="text-muted text-uppercase py-3 font-16">Đăng nhập hệ thống</h5>
                                     </div>
     
                                     <form action="#" class="mt-2">
@@ -59,11 +40,11 @@
                                             <button class="btn btn-success btn-block waves-effect waves-light" type="submit"> Log In </button>
                                         </div>
 
-                                        <a href="pages-recoverpw.html" class="text-muted"><i class="mdi mdi-lock mr-1"></i> Forgot your password?</a>
+                                        <a href="{{route('resetpass')}}" class="text-muted"><i class="mdi mdi-lock mr-1"></i> Forgot your password?</a>
     
                                     </form>
 
-                                    <div class="text-center mt-4">
+                                    <!-- <div class="text-center mt-4">
                                         <h5 class="text-muted py-2"><b>Sign in with</b></h5>
 
                                         <div class="row">
@@ -81,7 +62,7 @@
                                                 </button>
                                             </div>
                                         </div>
-                                    </div>
+                                    </div> -->
     
                                 </div> <!-- end card-body -->
                             </div>
@@ -101,15 +82,5 @@
             </div>
             <!-- end container -->
         </div>
-        <!-- end page -->
-
-        <!-- Vendor js -->
-        <script src="{{url('admin')}}/js/vendor.min.js"></script>
-
-        <!-- App js -->
-        <script src="{{url('admin')}}/js/app.min.js"></script>
-        
-    </body>
-
-<!-- Mirrored from coderthemes.com/uplon/layouts/vertical/pages-login.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 31 Oct 2020 19:25:16 GMT -->
-</html>
+ 
+@endsection()

@@ -1,19 +1,20 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Nhanvien;
 
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class AuthurController extends Controller
+class CalamviecController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function login()
+    public function index()
     {
-        return view('authur.login');
+        return view('admin.nhanvien.calamviec.index');
     }
 
     /**
@@ -21,9 +22,9 @@ class AuthurController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function resetpass()
+    public function create()
     {
-        return view('authur.resetpass');
+        //
     }
 
     /**

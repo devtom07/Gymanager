@@ -287,7 +287,7 @@
 
                 <ul class="list-unstyled topnav-menu topnav-menu-left m-0">
                     <li>
-                        <button class="button-menu-mobile waves-effect waves-light">
+                        <button class="button-menu-mobile waves-effect waves-light">    
                             <i class="mdi mdi-menu"></i>
                         </button>
                     </li>
@@ -307,147 +307,7 @@
                         </form>
                     </li>
 
-                    <li class="dropdown dropdown-mega d-none d-lg-block">
-                        <a class="nav-link dropdown-toggle waves-effect waves-light" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
-                            Mega Menu
-                            <i class="mdi mdi-chevron-down"></i> 
-                        </a>
-                        <div class="dropdown-menu dropdown-megamenu p-0">
-                            <div class="row">
-                                <div class="col-sm-5">
-
-                                    <div class="p-4">
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <h5 class="font-16 mt-0"><i class="mdi mdi-toolbox-outline mr-1"></i> UI Components</h5>
-                                                <ul class="list-unstyled megamenu-list">
-                                                    <li>
-                                                        <a href="javascript:void(0);">Widgets</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="javascript:void(0);">Calendar</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="javascript:void(0);">Range Sliders</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="javascript:void(0);">Sweet Alerts</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="javascript:void(0);">Ratings</a>
-                                                    </li>
-                            
-                                                    <li>
-                                                        <a href="javascript:void(0);">Treeview Page</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="javascript:void(0);">Tour Page</a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-    
-                                            <div class="col-md-6">
-                                                <h5 class="font-16 mt-0"><i class="mdi mdi-flip-horizontal mr-1"></i> Layouts</h5>
-                                                <ul class="list-unstyled megamenu-list">
-                                                    <li>
-                                                        <a href="javascript:void(0);">Dark Sidebar</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="javascript:void(0);">Small Sidebar</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="javascript:void(0);">Sidebar Collapsed</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="javascript:void(0);">Unsticky Layout</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="javascript:void(0);">Boxed Layout</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="javascript:void(0);">Topbar Light</a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-7">
-                                    <div class="row">
-                                        <div class="col-md-7">
-                                            <div class="p-4">
-                                                <div class="row">
-                                                    <div class="col-md-4">
-                                                        <div class="text-center">
-                                                            <div>
-                                                                <i class="fab fa-bootstrap text-purple h2 mb-0"></i>
-                                                            </div>
-                                                            <h5 class="font-16">Bootstrap</h5>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-4">
-                                                        <div class="text-center mt-4 mt-md-0">
-                                                            <div>
-                                                                <i class="fab fa-npm text-danger h2 mb-0"></i>
-                                                            </div>
-                                                            <h5 class="font-16">Npm</h5>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-4">
-                                                        <div class="text-center mt-4 mt-md-0">
-                                                            <div>
-                                                                <i class="fab fa-sass text-pink h2 mb-0"></i>
-                                                            </div>
-                                                            <h5 class="font-16">Sass support</h5>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col-md-4">
-                                                        <div class="text-center mt-4">
-                                                            <div>
-                                                                <i class="fas fa-tablet-alt text-dark h2 mb-0"></i>
-                                                            </div>
-                                                            <h5 class="font-16">Responsive</h5>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-4">
-                                                        <div class="text-center mt-4">
-                                                            <div>
-                                                                <i class="fab fa-gulp text-primary h2 mb-0"></i>
-                                                            </div>
-                                                            <h5 class="font-16">Gulp Support</h5>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-4">
-                                                        <div class="text-center mt-4">
-                                                            <div>
-                                                                <i class="far fa-file-code text-warning h2 mb-0"></i>
-                                                            </div>
-                                                            <h5 class="font-16">Free Landing</h5>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-5">
-                                            <div class="text-center">
-                                                <div class="p-4">
-                                                    <h4 class="mt-0">Special Discount Sale!</h4>
-                                                    <h5 class="mt-4">Save up to <span class="text-primary">60%</span> off.</h5>
-                                                    <p class="text-muted">Get free updates lifetime</p>
-                                                    <a href="https://1.envato.market/XY7j5" target="_blank" class="btn btn-primary btn-rounded">Download Now</a>
-                                                </div>
-                                            </div>
-                                
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                    </li>
+                    
                 </ul>
             </div>
             <!-- end Topbar -->
@@ -478,7 +338,20 @@
                                     <span> Calendar </span>
                                 </a>
                             </li> -->
-
+                            <li>
+                                <a href="javascript: void(0);">
+                                <i class="mdi mdi-account-circle-outline"></i>
+                                    <span>Nhân viên</span>
+                                    <span class="badge badge-danger badge-pill float-right">New</span>
+                                </a>
+                                <ul class="nav-second-level" aria-expanded="false">
+                                    <li><a href="{{route('listnhanvien')}}">Danh sách nhân viên</a></li>
+                                    <li><a href="{{route('calamviec')}}">Ca làm việc</a></li>
+                                   <li><a href="{{route('calamviecnhanvien')}}">Ca làm việc nhân viên</a></li>
+                                    <!--  <li><a href="layouts-unsticky.html">Unsticky Layout</a></li>
+                                    <li><a href="layouts-boxed.html">Boxed Layout</a></li> -->
+                                </ul>
+                            </li>
                             <li>
                                 <a href="javascript: void(0);">
                                 <i class="mdi mdi-account-multiple"></i>
@@ -493,6 +366,7 @@
                                     <li><a href="layouts-boxed.html">Boxed Layout</a></li> -->
                                 </ul>
                             </li>
+                           
                 
                             <li>
                                 <a href="javascript: void(0);">
