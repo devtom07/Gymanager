@@ -18,3 +18,13 @@ Route::get('/addcalamviec','Nhanvien\CalamviecController@create')->name('calamvi
 //Ca làm việc nhân viên
 Route::get('/calamviecnhanvien','Nhanvien\CalamviecNhanVien@index')->name('calamviecnhanvien');
 Route::get('/addcalamviecnhanvien','Nhanvien\CalamviecNhanVien@create')->name('calamviecnhanvien.add');
+
+//========================Users========================//
+//account
+Route::get('/Account','Users\AccountController@index')->name('account');
+Route::get('/addaccount','Users\AccountController@create')->name('account.add');
+//function
+Route::get('/function','Users\FunctionController@index')->name('function');
+//nhom quyền
+Route::get('/nhomquyen','Users\NhomquyenController@index')->name('nhomquyen');
+Route::get('/addnhomquyen','Users\NhomquyenController@create')->name('nhomquyen.add');
