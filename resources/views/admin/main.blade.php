@@ -340,6 +340,20 @@
                             </li> -->
                             <li>
                                 <a href="javascript: void(0);">
+                                <i class="mdi mdi-account-box-multiple"></i>
+                                    <span>Tài khoản</span>
+                                    <span class="badge badge-danger badge-pill float-right">New</span>
+                                </a>
+                                <ul class="nav-second-level" aria-expanded="false">
+                                    <li><a href="{{route('account')}}">Quản trị người dùng</a></li>
+                                    <li><a href="{{route('nhomquyen')}}">Nhóm quyền</a></li>
+                                   <li><a href="{{route('function')}}">Nhóm chức năng</a></li>
+                                    <!--  <li><a href="layouts-unsticky.html">Unsticky Layout</a></li>
+                                    <li><a href="layouts-boxed.html">Boxed Layout</a></li> -->
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="javascript: void(0);">
                                 <i class="mdi mdi-account-circle-outline"></i>
                                     <span>Nhân viên</span>
                                     <span class="badge badge-danger badge-pill float-right">New</span>
