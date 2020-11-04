@@ -19,7 +19,6 @@ class CreateWorkShiftStaffTable extends Migration
             $table->foreign('id_work_shift')->references('id')->on('work_shaft')->onDelete('cascade');
             $table->date('date_start');
             $table->date('date_end');
-            $table->string('cycle');
             $table->timestamps();
         });
     }
