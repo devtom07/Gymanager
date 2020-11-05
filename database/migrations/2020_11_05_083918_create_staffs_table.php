@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateWorkSiftsTable extends Migration
+class CreateStaffsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,16 @@ class CreateWorkSiftsTable extends Migration
      */
     public function up()
     {
-        Schema::create('work_sifts', function (Blueprint $table) {
+        Schema::create('staffs', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->dateTime('hour_start');
-            $table->dateTime('hour_start_center');
-            $table->dateTime('hour_end_center');
-            $table->dateTime('hour_end');
+            $table->integer('phone');
+            $table->string('email')->unique();
+            $table->string('address');
             $table->string('status');
+            $table->string('contract');
+            $table->integer('wage');
+            $table->string('title');
             $table->timestamps();
         });
     }
@@ -32,6 +34,6 @@ class CreateWorkSiftsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('work_sifts');
+        Schema::dropIfExists('staffs');
     }
 }
