@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-    
+
 <!-- Mirrored from coderthemes.com/uplon/layouts/vertical/pages-login.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 31 Oct 2020 19:25:16 GMT -->
 <head>
         <meta charset="utf-8" />
@@ -11,6 +11,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <!-- App favicon -->
         <link rel="shortcut icon" href="{{url('admin')}}/images/logogym.gif">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
 
         <!-- App css -->
         <link href="{{url('admin')}}/css/bootstrap.min.css" rel="stylesheet" type="text/css" id="bootstrap-stylesheet" />
@@ -20,6 +21,7 @@
     </head>
 
     <body class="authentication-bg">
+    @include('sweetalert::alert')
 
       @yield('content')
         <!-- end page -->
@@ -29,7 +31,9 @@
 
         <!-- App js -->
         <script src="{{url('admin')}}/js/app.min.js"></script>
-        
+      <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+
     </body>
 
 <!-- Mirrored from coderthemes.com/uplon/layouts/vertical/pages-login.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 31 Oct 2020 19:25:16 GMT -->

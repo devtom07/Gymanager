@@ -20,29 +20,30 @@
                </div>
             </div>
          </div>
-         <!-- end page title --> 
+         <!-- end page title -->
          <div class="row">
             <div class="col-12">
                <div class="card-box">
                   <h4 class="header-title mb-4">Tạo mới tài khoản</h4>
-                  <form>
+                  <form method="post" action="{{route('user.store')}}">
+                      @csrf
                      <div class="row">
                         <div class="col-xl-6">
                            <div class="form-group">
                               <label for="exampleInputEmail1">Tên tài khoản (*)</label>
-                              <input type="text" class="form-control" id="exampleInputEmail1" placeholder="">
+                              <input name="name" type="text" class="form-control" id="exampleInputEmail1" placeholder="">
                            </div>
                            <div class="form-group">
                               <label for="exampleInputEmail1">Mật khẩu (*)</label>
-                              <input class="form-control" type="password" value="" id="example-date-input">
+                              <input name="password" class="form-control" type="password" value="" id="example-date-input">
                            </div>
                            <div class="form-group">
                               <label for="exampleInputPassword1">Xác nhận mật khẩu (*)</label>
-                              <input class="form-control" type="password" value="" id="example-time-input">
+                              <input name="password_1" class="form-control" type="password" value="" id="example-time-input">
                            </div>
                            <div class="form-group">
                               <label for="exampleInputPassword1">Email (*)</label>
-                              <input class="form-control" type="text" value="" id="example-time-input">
+                              <input name="email" class="form-control" type="text" value="" id="example-time-input">
                            </div>
                         </div>
                         <div class="col-xl-6">
