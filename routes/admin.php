@@ -13,11 +13,19 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/dashdoard','AdminController@index')->name('dashboard');
+//login
+Route::get('Admin','AuthurController@admin')->name('admin');
+Route::match(['post','get'],'/login','AuthurController@login')->name('login');
+Route::get('/logout','AuthurController@logout')->name('logout');
+
+Route::middleware(['auth'])->group(function (){
+//user
+Route::get('xemtaikhoan','UserController@index')->name('user.index');
+Route::get('themtaikhoan','UserController@create')->name('user.add');
+Route::post('themtaikhoan/post','UserController@store')->name('user.store');
+//auth
+Route::get('/dashboard','AdminController@index')->name('dashboard');
 Route::get('/customer','CustomerController@index')->name('customer');
-Route::get('/customer/add','CustomerController@add')->name('customer.add');
-Route::get('/login','AuthurController@login')->name('login');
-Route::get('/resetpass','AuthurController@resetpass')->name('resetpass');
 
 
 //=========================Nhân viên==================//
@@ -33,11 +41,7 @@ Route::get('/calamviecnhanvien','Nhanvien\CalamviecNhanVien@index')->name('calam
 Route::get('/addcalamviecnhanvien','Nhanvien\CalamviecNhanVien@create')->name('calamviecnhanvien.add');
 
 //========================Users========================//
-//account
-Route::get('/Account','Users\AccountController@index')->name('account');
-Route::get('/addaccount','Users\AccountController@create')->name('account.add');
-//function
-Route::get('/function','Users\FunctionController@index')->name('function');
 //nhom quyền
 Route::get('/nhomquyen','Users\NhomquyenController@index')->name('nhomquyen');
 Route::get('/addnhomquyen','Users\NhomquyenController@create')->name('nhomquyen.add');
+});

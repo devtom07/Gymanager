@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-    
+
 <!-- Mirrored from coderthemes.com/uplon/layouts/vertical/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 31 Oct 2020 19:24:40 GMT -->
 <head>
         <meta charset="utf-8" />
@@ -11,7 +11,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <!-- App favicon -->
         <link rel="shortcut icon" href="{{url('admin')}}/images/logogym.gif">
-
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
         <!-- App css -->
         <link href="{{url('admin')}}/css/bootstrap.min.css" rel="stylesheet" type="text/css" id="bootstrap-stylesheet" />
         <link href="{{url('admin')}}/css/icons.min.css" rel="stylesheet" type="text/css" />
@@ -19,12 +19,13 @@
 
     </head>
 
-    <body>
 
+    <body>
+    @include('sweetalert::alert')
         <!-- Begin page -->
         <div id="wrapper">
 
-            
+
             <!-- Topbar Start -->
             <div class="navbar-custom">
                 <ul class="list-unstyled topnav-menu float-right mb-0">
@@ -90,7 +91,7 @@
                                         <small class="text-muted">There are new settings available</small>
                                     </p>
                                 </a>
-                    
+
                                 <!-- item-->
                                 <a href="javascript:void(0);" class="dropdown-item notify-item">
                                     <div class="notify-icon bg-info">
@@ -214,7 +215,7 @@
                     <li class="dropdown notification-list">
                         <a class="nav-link dropdown-toggle nav-user mr-0 waves-effect waves-light" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
                             <img src="{{url('admin')}}/images/users/avatar-1.jpg" alt="user-image" class="rounded-circle">
-                            <span class="d-none d-sm-inline-block ml-1 font-weight-medium">Alex M.</span>
+                            <span class="d-none d-sm-inline-block ml-1 font-weight-medium">{{\Illuminate\Support\Facades\Auth::user()->name}}</span>
                             <i class="mdi mdi-chevron-down d-none d-sm-inline-block"></i>
                         </a>
                         <div class="dropdown-menu dropdown-menu-right profile-dropdown ">
@@ -244,7 +245,7 @@
                             <div class="dropdown-divider"></div>
 
                             <!-- item-->
-                            <a href="{{route('login')}}" class="dropdown-item notify-item">
+                            <a href="{{route('logout')}}" class="dropdown-item notify-item">
                                 <i class="mdi mdi-logout-variant"></i>
                                 <span>Logout</span>
                             </a>
@@ -287,11 +288,11 @@
 
                 <ul class="list-unstyled topnav-menu topnav-menu-left m-0">
                     <li>
-                        <button class="button-menu-mobile waves-effect waves-light">    
+                        <button class="button-menu-mobile waves-effect waves-light">
                             <i class="mdi mdi-menu"></i>
                         </button>
                     </li>
-        
+
                     <li class="d-none d-sm-block">
                         <form class="app-search">
                             <div class="app-search-box">
@@ -307,12 +308,12 @@
                         </form>
                     </li>
 
-                    
+
                 </ul>
             </div>
             <!-- end Topbar -->
 
-            
+
             <!-- ========== Left Sidebar Start ========== -->
             <div class="left-side-menu">
 
@@ -345,9 +346,9 @@
                                     <span class="badge badge-danger badge-pill float-right">New</span>
                                 </a>
                                 <ul class="nav-second-level" aria-expanded="false">
-                                    <li><a href="{{route('account')}}">Quản trị người dùng</a></li>
+                                    <li><a href="{{route('user.index')}}">Quản trị người dùng</a></li>
                                     <li><a href="{{route('nhomquyen')}}">Nhóm quyền</a></li>
-                                   <li><a href="{{route('function')}}">Nhóm chức năng</a></li>
+                                   <li><a href="">Nhóm chức năng</a></li>
                                     <!--  <li><a href="layouts-unsticky.html">Unsticky Layout</a></li>
                                     <li><a href="layouts-boxed.html">Boxed Layout</a></li> -->
                                 </ul>
@@ -380,8 +381,8 @@
                                     <li><a href="layouts-boxed.html">Boxed Layout</a></li> -->
                                 </ul>
                             </li>
-                           
-                
+
+
                             <li>
                                 <a href="javascript: void(0);">
                                     <i class="mdi mdi-google-pages"></i>
@@ -579,7 +580,7 @@
             <!-- Start Page Content here -->
             <!-- ============================================================== -->
              @yield('content')
-           
+
 
             <!-- ============================================================== -->
             <!-- End Page content -->
@@ -597,7 +598,7 @@
                 <h4 class="font-18 m-0 text-white">Tuỳ chỉnh giao diện</h4>
             </div>
             <div class="slimscroll-menu">
-        
+
                 <div class="p-4">
                     <div class="alert alert-warning" role="alert">
                         <strong>Tuỳ chỉnh </strong> bảng màu, bố cục,...
@@ -609,16 +610,16 @@
                         <input type="checkbox" class="custom-control-input theme-choice" id="light-mode-switch" checked />
                         <label class="custom-control-label" for="light-mode-switch">Chế độ sáng</label>
                     </div>
-            
+
                     <div class="mb-2">
                         <img src="{{url('admin')}}/images/layouts/dark.png" class="img-fluid img-thumbnail" alt="">
                     </div>
                     <div class="custom-control custom-switch mb-3">
-                        <input type="checkbox" class="custom-control-input theme-choice" id="dark-mode-switch" data-bsStyle="{{url('admin')}}/css/bootstrap-dark.min.css" 
+                        <input type="checkbox" class="custom-control-input theme-choice" id="dark-mode-switch" data-bsStyle="{{url('admin')}}/css/bootstrap-dark.min.css"
                             data-appStyle="{{url('admin')}}/css/app-dark.min.css" />
                         <label class="custom-control-label" for="dark-mode-switch">Chế độ tối</label>
                     </div>
-                   
+
                 </div>
             </div> <!-- end slimscroll-menu-->
         </div>
@@ -627,7 +628,7 @@
         <!-- Right bar overlay-->
         <div class="rightbar-overlay"></div>
 
-      
+
         <!-- Vendor js -->
         <script src="{{url('admin')}}/js/vendor.min.js"></script>
 
@@ -640,7 +641,7 @@
 
         <!-- App js -->
         <script src="{{url('admin')}}/js/app.min.js"></script>
-        
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     </body>
 
 <!-- Mirrored from coderthemes.com/uplon/layouts/vertical/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 31 Oct 2020 19:25:02 GMT -->

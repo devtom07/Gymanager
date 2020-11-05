@@ -1,82 +1,62 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Support\Facades\Session;
+use RealRashid\SweetAlert\Facades\Alert;
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\Auth;
 class AuthurController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function login()
+
+    public function admin()
     {
         return view('authur.login');
     }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function resetpass()
-    {
-        return view('authur.resetpass');
+    public function login(Request $request){
+        $user = [
+            'email' =>$request->email,
+            'password' => $request->password,
+        ];
+        if(Auth::attempt($user)){
+            alert()->success('Thành công','Bạn đã đăng nhâp thành công');
+            return  redirect()->route('dashboard');
+        }else{
+            Session::put('message','Tài khoản hoặc mật khẩu không chính xác');
+            return  redirect()->route('admin');
+        }
     }
+  public function logout(){
+      Auth::logout();
+      alert()->info('Thành công','Bạn đã đăng xuất thành công');
+      return  redirect()->route('admin');
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
+  }
+
+
+
+
     public function store(Request $request)
     {
         //
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function show($id)
     {
         //
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+
     public function edit($id)
     {
         //
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+
     public function update(Request $request, $id)
     {
         //
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function destroy($id)
     {
         //
