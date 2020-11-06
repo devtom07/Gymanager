@@ -1,5 +1,5 @@
 @extends('admin.main')
-@section('title', 'đăng ký Khách hàng')
+@section('title', 'Đăng ký Khách hàng')
 @section('content')
 <div class="content-page">
                 <div class="content">
@@ -18,7 +18,7 @@
                                             <li class="breadcrumb-item active">Đăng ký khách hàng</li>
                                         </ol>
                                     </div>
-                                    <h4 class="page-title">ăng ký khách hàng</h4>
+                                    <h4 class="page-title">Đăng ký khách hàng</h4>
                                 </div>
                             </div>
                         </div>     

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-    
+
 <!-- Mirrored from coderthemes.com/uplon/layouts/vertical/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 31 Oct 2020 19:24:40 GMT -->
 <head>
         <meta charset="utf-8" />
@@ -11,7 +11,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <!-- App favicon -->
         <link rel="shortcut icon" href="{{url('admin')}}/images/logogym.gif">
-
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
         <!-- App css -->
         <link href="{{url('admin')}}/css/bootstrap.min.css" rel="stylesheet" type="text/css" id="bootstrap-stylesheet" />
         <link href="{{url('admin')}}/css/icons.min.css" rel="stylesheet" type="text/css" />
@@ -19,12 +19,13 @@
 
     </head>
 
-    <body>
 
+    <body>
+    @include('sweetalert::alert')
         <!-- Begin page -->
         <div id="wrapper">
 
-            
+
             <!-- Topbar Start -->
             <div class="navbar-custom">
                 <ul class="list-unstyled topnav-menu float-right mb-0">
@@ -90,7 +91,7 @@
                                         <small class="text-muted">There are new settings available</small>
                                     </p>
                                 </a>
-                    
+
                                 <!-- item-->
                                 <a href="javascript:void(0);" class="dropdown-item notify-item">
                                     <div class="notify-icon bg-info">
@@ -214,7 +215,7 @@
                     <li class="dropdown notification-list">
                         <a class="nav-link dropdown-toggle nav-user mr-0 waves-effect waves-light" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
                             <img src="{{url('admin')}}/images/users/avatar-1.jpg" alt="user-image" class="rounded-circle">
-                            <span class="d-none d-sm-inline-block ml-1 font-weight-medium">Alex M.</span>
+                            <span class="d-none d-sm-inline-block ml-1 font-weight-medium">{{\Illuminate\Support\Facades\Auth::user()->name}}</span>
                             <i class="mdi mdi-chevron-down d-none d-sm-inline-block"></i>
                         </a>
                         <div class="dropdown-menu dropdown-menu-right profile-dropdown ">
@@ -244,7 +245,7 @@
                             <div class="dropdown-divider"></div>
 
                             <!-- item-->
-                            <a href="javascript:void(0);" class="dropdown-item notify-item">
+                            <a href="{{route('logout')}}" class="dropdown-item notify-item">
                                 <i class="mdi mdi-logout-variant"></i>
                                 <span>Logout</span>
                             </a>
@@ -291,7 +292,7 @@
                             <i class="mdi mdi-menu"></i>
                         </button>
                     </li>
-        
+
                     <li class="d-none d-sm-block">
                         <form class="app-search">
                             <div class="app-search-box">
@@ -307,152 +308,12 @@
                         </form>
                     </li>
 
-                    <li class="dropdown dropdown-mega d-none d-lg-block">
-                        <a class="nav-link dropdown-toggle waves-effect waves-light" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
-                            Mega Menu
-                            <i class="mdi mdi-chevron-down"></i> 
-                        </a>
-                        <div class="dropdown-menu dropdown-megamenu p-0">
-                            <div class="row">
-                                <div class="col-sm-5">
 
-                                    <div class="p-4">
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <h5 class="font-16 mt-0"><i class="mdi mdi-toolbox-outline mr-1"></i> UI Components</h5>
-                                                <ul class="list-unstyled megamenu-list">
-                                                    <li>
-                                                        <a href="javascript:void(0);">Widgets</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="javascript:void(0);">Calendar</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="javascript:void(0);">Range Sliders</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="javascript:void(0);">Sweet Alerts</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="javascript:void(0);">Ratings</a>
-                                                    </li>
-                            
-                                                    <li>
-                                                        <a href="javascript:void(0);">Treeview Page</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="javascript:void(0);">Tour Page</a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-    
-                                            <div class="col-md-6">
-                                                <h5 class="font-16 mt-0"><i class="mdi mdi-flip-horizontal mr-1"></i> Layouts</h5>
-                                                <ul class="list-unstyled megamenu-list">
-                                                    <li>
-                                                        <a href="javascript:void(0);">Dark Sidebar</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="javascript:void(0);">Small Sidebar</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="javascript:void(0);">Sidebar Collapsed</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="javascript:void(0);">Unsticky Layout</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="javascript:void(0);">Boxed Layout</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="javascript:void(0);">Topbar Light</a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-7">
-                                    <div class="row">
-                                        <div class="col-md-7">
-                                            <div class="p-4">
-                                                <div class="row">
-                                                    <div class="col-md-4">
-                                                        <div class="text-center">
-                                                            <div>
-                                                                <i class="fab fa-bootstrap text-purple h2 mb-0"></i>
-                                                            </div>
-                                                            <h5 class="font-16">Bootstrap</h5>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-4">
-                                                        <div class="text-center mt-4 mt-md-0">
-                                                            <div>
-                                                                <i class="fab fa-npm text-danger h2 mb-0"></i>
-                                                            </div>
-                                                            <h5 class="font-16">Npm</h5>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-4">
-                                                        <div class="text-center mt-4 mt-md-0">
-                                                            <div>
-                                                                <i class="fab fa-sass text-pink h2 mb-0"></i>
-                                                            </div>
-                                                            <h5 class="font-16">Sass support</h5>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col-md-4">
-                                                        <div class="text-center mt-4">
-                                                            <div>
-                                                                <i class="fas fa-tablet-alt text-dark h2 mb-0"></i>
-                                                            </div>
-                                                            <h5 class="font-16">Responsive</h5>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-4">
-                                                        <div class="text-center mt-4">
-                                                            <div>
-                                                                <i class="fab fa-gulp text-primary h2 mb-0"></i>
-                                                            </div>
-                                                            <h5 class="font-16">Gulp Support</h5>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-4">
-                                                        <div class="text-center mt-4">
-                                                            <div>
-                                                                <i class="far fa-file-code text-warning h2 mb-0"></i>
-                                                            </div>
-                                                            <h5 class="font-16">Free Landing</h5>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-5">
-                                            <div class="text-center">
-                                                <div class="p-4">
-                                                    <h4 class="mt-0">Special Discount Sale!</h4>
-                                                    <h5 class="mt-4">Save up to <span class="text-primary">60%</span> off.</h5>
-                                                    <p class="text-muted">Get free updates lifetime</p>
-                                                    <a href="https://1.envato.market/XY7j5" target="_blank" class="btn btn-primary btn-rounded">Download Now</a>
-                                                </div>
-                                            </div>
-                                
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                    </li>
                 </ul>
             </div>
             <!-- end Topbar -->
 
-            
+
             <!-- ========== Left Sidebar Start ========== -->
             <div class="left-side-menu">
 
@@ -478,7 +339,34 @@
                                     <span> Calendar </span>
                                 </a>
                             </li> -->
-
+                            <li>
+                                <a href="javascript: void(0);">
+                                <i class="mdi mdi-account-box-multiple"></i>
+                                    <span>Tài khoản</span>
+                                    <span class="badge badge-danger badge-pill float-right">New</span>
+                                </a>
+                                <ul class="nav-second-level" aria-expanded="false">
+                                    <li><a href="{{route('user.index')}}">Quản trị người dùng</a></li>
+                                    <li><a href="{{route('nhomquyen')}}">Nhóm quyền</a></li>
+                                   <li><a href="">Nhóm chức năng</a></li>
+                                    <!--  <li><a href="layouts-unsticky.html">Unsticky Layout</a></li>
+                                    <li><a href="layouts-boxed.html">Boxed Layout</a></li> -->
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="javascript: void(0);">
+                                <i class="mdi mdi-account-circle-outline"></i>
+                                    <span>Nhân viên</span>
+                                    <span class="badge badge-danger badge-pill float-right">New</span>
+                                </a>
+                                <ul class="nav-second-level" aria-expanded="false">
+                                    <li><a href="{{route('listnhanvien')}}">Danh sách nhân viên</a></li>
+                                    <li><a href="{{route('calamviec')}}">Ca làm việc</a></li>
+                                   <li><a href="{{route('calamviecnhanvien')}}">Ca làm việc nhân viên</a></li>
+                                    <!--  <li><a href="layouts-unsticky.html">Unsticky Layout</a></li>
+                                    <li><a href="layouts-boxed.html">Boxed Layout</a></li> -->
+                                </ul>
+                            </li>
                             <li>
                                 <a href="javascript: void(0);">
                                 <i class="mdi mdi-account-multiple"></i>
@@ -493,7 +381,8 @@
                                     <li><a href="layouts-boxed.html">Boxed Layout</a></li> -->
                                 </ul>
                             </li>
-                
+
+
                             <li>
                                 <a href="javascript: void(0);">
                                     <i class="mdi mdi-google-pages"></i>
@@ -691,7 +580,7 @@
             <!-- Start Page Content here -->
             <!-- ============================================================== -->
              @yield('content')
-           
+
 
             <!-- ============================================================== -->
             <!-- End Page content -->
@@ -709,7 +598,7 @@
                 <h4 class="font-18 m-0 text-white">Tuỳ chỉnh giao diện</h4>
             </div>
             <div class="slimscroll-menu">
-        
+
                 <div class="p-4">
                     <div class="alert alert-warning" role="alert">
                         <strong>Tuỳ chỉnh </strong> bảng màu, bố cục,...
@@ -721,16 +610,16 @@
                         <input type="checkbox" class="custom-control-input theme-choice" id="light-mode-switch" checked />
                         <label class="custom-control-label" for="light-mode-switch">Chế độ sáng</label>
                     </div>
-            
+
                     <div class="mb-2">
                         <img src="{{url('admin')}}/images/layouts/dark.png" class="img-fluid img-thumbnail" alt="">
                     </div>
                     <div class="custom-control custom-switch mb-3">
-                        <input type="checkbox" class="custom-control-input theme-choice" id="dark-mode-switch" data-bsStyle="{{url('admin')}}/css/bootstrap-dark.min.css" 
+                        <input type="checkbox" class="custom-control-input theme-choice" id="dark-mode-switch" data-bsStyle="{{url('admin')}}/css/bootstrap-dark.min.css"
                             data-appStyle="{{url('admin')}}/css/app-dark.min.css" />
                         <label class="custom-control-label" for="dark-mode-switch">Chế độ tối</label>
                     </div>
-                   
+
                 </div>
             </div> <!-- end slimscroll-menu-->
         </div>
@@ -739,7 +628,7 @@
         <!-- Right bar overlay-->
         <div class="rightbar-overlay"></div>
 
-      
+
         <!-- Vendor js -->
         <script src="{{url('admin')}}/js/vendor.min.js"></script>
 
@@ -752,7 +641,7 @@
 
         <!-- App js -->
         <script src="{{url('admin')}}/js/app.min.js"></script>
-        
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     </body>
 
 <!-- Mirrored from coderthemes.com/uplon/layouts/vertical/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 31 Oct 2020 19:25:02 GMT -->
