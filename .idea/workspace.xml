@@ -21,13 +21,8 @@
   <component name="ChangeListManager">
     <list default="true" id="49a55a82-a09c-4fca-bbc3-6b576eb8fc71" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_11_04_082046_create_work_sifts_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_11_04_082046_create_work_sifts_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_11_04_082143_create_work_sift_staff_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/ClassLoader.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/ClassLoader.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_real.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_real.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_static.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_static.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -207,7 +202,10 @@
       <option name="presentableId" value="Default" />
       <updated>1604205738627</updated>
       <workItem from="1604205739766" duration="1057000" />
-      <workItem from="1604540024006" duration="22547000" />
+      <workItem from="1604540024006" duration="24543000" />
+      <workItem from="1604626712882" duration="6819000" />
+      <workItem from="1604745727041" duration="883000" />
+      <workItem from="1604759387161" duration="1464000" />
     </task>
     <servers />
   </component>
@@ -235,6 +233,22 @@
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state x="466" y="155" width="424" height="491" key="FileChooserDialogImpl/0.27.1366.741@0.27.1366.741" timestamp="1604207008527" />
+    <state width="1320" height="172" key="GridCell.Tab.0.bottom" timestamp="1604764832692">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state width="1320" height="172" key="GridCell.Tab.0.bottom/0.27.1366.741@0.27.1366.741" timestamp="1604764832692" />
+    <state width="1320" height="172" key="GridCell.Tab.0.center" timestamp="1604764832692">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state width="1320" height="172" key="GridCell.Tab.0.center/0.27.1366.741@0.27.1366.741" timestamp="1604764832692" />
+    <state width="1320" height="172" key="GridCell.Tab.0.left" timestamp="1604764832691">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state width="1320" height="172" key="GridCell.Tab.0.left/0.27.1366.741@0.27.1366.741" timestamp="1604764832691" />
+    <state width="1320" height="172" key="GridCell.Tab.0.right" timestamp="1604764832692">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state width="1320" height="172" key="GridCell.Tab.0.right/0.27.1366.741@0.27.1366.741" timestamp="1604764832692" />
     <state x="132" y="86" width="1092" height="629" key="MergeDialog" timestamp="1604461944845">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
