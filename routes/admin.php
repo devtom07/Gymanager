@@ -43,5 +43,5 @@ Route::get('/addcalamviecnhanvien','Nhanvien\CalamviecNhanVien@create')->name('c
 //========================Users========================//
 //nhom quyền
 Route::get('/nhomquyen','Users\NhomquyenController@index')->name('nhomquyen');
-Route::get('/addnhomquyen','Users\NhomquyenController@create')->name('nhomquyen.add');
+Route::get('/addnhomquyen','Users\NhomquyenController@create')->name('nhomquyen.add');k
 });
