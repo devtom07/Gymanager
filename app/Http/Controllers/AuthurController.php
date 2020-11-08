@@ -17,7 +17,7 @@ class AuthurController extends Controller
             'email' =>$request->email,
             'password' => $request->password,
         ];
-        if(Auth::attempt($user)){
+        if(Auth::attempt($user)){ 
             alert()->success('Thành công','Bạn đã đăng nhâp thành công');
             return  redirect()->route('dashboard');
         }else{
