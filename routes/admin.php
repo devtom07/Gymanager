@@ -1,5 +1,3 @@
-
-
 <?php
 use Illuminate\Support\Facades\Route;
 
@@ -14,7 +12,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 //login
-Route::get('Admin','AuthurController@admin')->name('admin');
+Route::get('Admin1','AuthurController@admin')->name('admin');
 Route::match(['post','get'],'/login','AuthurController@login')->name('login');
 Route::get('/logout','AuthurController@logout')->name('logout');
 
