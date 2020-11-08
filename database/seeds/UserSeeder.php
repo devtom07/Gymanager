@@ -1,7 +1,9 @@
+
 <?php
 
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\DB;
 class UserSeeder extends Seeder
 {
     /**
@@ -18,3 +20,4 @@ class UserSeeder extends Seeder
         ]);
     }
 }
+
