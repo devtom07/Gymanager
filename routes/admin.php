@@ -18,7 +18,7 @@ Route::get('Admin','AuthurController@admin')->name('admin');
 Route::match(['post','get'],'/login','AuthurController@login')->name('login');
 Route::get('/logout','AuthurController@logout')->name('logout');
 
-Route::middleware(['auth'])->group(function (){
+ Route::middleware(['auth'])->group(function (){
 //user
 Route::get('xemtaikhoan','UserController@index')->name('user.index');
 Route::get('themtaikhoan','UserController@create')->name('user.add');
