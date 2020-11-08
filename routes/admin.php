@@ -1,5 +1,3 @@
-
-
 <?php
 use Illuminate\Support\Facades\Route;
 
@@ -14,11 +12,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 //login
-Route::get('Admin','AuthurController@admin')->name('admin');
+
+Route::get('dangnhap','AuthurController@admin')->name('admin');
 Route::match(['post','get'],'/login','AuthurController@login')->name('login');
 Route::get('/logout','AuthurController@logout')->name('logout');
 
-// Route::middleware(['auth'])->group(function (){
+ Route::middleware(['auth'])->group(function (){
+
 //user
 Route::get('xemtaikhoan','UserController@index')->name('user.index');
 Route::get('themtaikhoan','UserController@create')->name('user.add');
@@ -44,4 +44,4 @@ Route::get('/addcalamviecnhanvien','Nhanvien\CalamviecNhanVien@create')->name('c
 //nhom quyền
 Route::get('/nhomquyen','Users\NhomquyenController@index')->name('nhomquyen');
 Route::get('/addnhomquyen','Users\NhomquyenController@create')->name('nhomquyen.add');
-// });
+});
