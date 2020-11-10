@@ -27,12 +27,12 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         Schema::defaultStringLength(191);
-        if(!$this->app->runningInConsole()){
-        foreach(Permission::all() as $_pms){
-            Gate::define($_pms->name,function($user) use ($_pms){
-              return $user->hasPermission($_pms);
-            });
-        }
-    }
+//        $this->registerPolicies();
+
+        // Implicitly grant "Super Admin" role all permissions
+        // This works in the app by using gate-related functions like auth()->user->can() and @can()
+        Gate::before(function ($user, $ability) {
+            return $user->hasRole('Super Admin') ? true : null;
+        });
     }
 }

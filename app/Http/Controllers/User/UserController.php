@@ -3,23 +3,34 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\ValidateFormaddUser;
+use App\Staff;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use RealRashid\SweetAlert\Facades\Alert;
+use Spatie\Permission\Models\Permission;
+use Yajra\DataTables\DataTables;
+use Spatie\Permission\Models\Role;
 
 class UserController extends Controller
 {
     public function index()
     {
-        return view('admin.users.account.index');
+        $users = User::all();
+        return view('admin.users.account.index',compact('users'));
     }
+    public function anyData()
+    {
 
+    }
 
     public function create()
     {
-        return view('admin.users.account.add');
+         $staff = Staff::all();
+          $role = Role::all();
+          $permission = Permission::all();
+        return view('admin.users.account.add',compact('staff','role','permission'));
     }
 
 

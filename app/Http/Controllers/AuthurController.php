@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Session;
 use RealRashid\SweetAlert\Facades\Alert;
 use Illuminate\Http\Request;
@@ -17,7 +18,9 @@ class AuthurController extends Controller
             'email' =>$request->email,
             'password' => $request->password,
         ];
-        if(Auth::attempt($user)){ 
+        if(Auth::attempt($user)){
+            Auth::user()->last_login = date('Y-m-d H:i:s');
+            Auth::user()->save();
             alert()->success('Thành công','Bạn đã đăng nhâp thành công');
             return  redirect()->route('dashboard');
         }else{

@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Http\Controllers\Nhanvien;
+namespace App\Http\Controllers\Staff;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class CalamviecNhanVien extends Controller
+class CalamviecController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +14,7 @@ class CalamviecNhanVien extends Controller
      */
     public function index()
     {
-        return view('admin.nhanvien.calamviec-nhanvien.index');
+        return view('admin.nhanvien.calamviec.index');
     }
 
     /**
@@ -24,7 +24,7 @@ class CalamviecNhanVien extends Controller
      */
     public function create()
     {
-        return view('admin.nhanvien.calamviec-nhanvien.add');
+        return view('admin.nhanvien.calamviec.add');
     }
 
     /**

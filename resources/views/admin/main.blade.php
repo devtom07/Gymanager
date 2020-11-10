@@ -16,6 +16,9 @@
         <link href="{{url('admin')}}/css/bootstrap.min.css" rel="stylesheet" type="text/css" id="bootstrap-stylesheet" />
         <link href="{{url('admin')}}/css/icons.min.css" rel="stylesheet" type="text/css" />
         <link href="{{url('admin')}}/css/app.min.css" rel="stylesheet" type="text/css"  id="app-stylesheet" />
+{{--    datatable--}}
+    <link href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css" rel="stylesheet">
+    <link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet">
 
     </head>
 
@@ -348,16 +351,15 @@
                                     <span class="badge badge-danger badge-pill float-right">New</span>
                                 </a>
                                 <ul class="nav-second-level" aria-expanded="false">
-                                    <li><a href="{{route('user.index')}}">Quản trị người dùng</a></li>
+                                    <li><a href="{{route('user.index')}}">Quản trị Admin</a></li>
                                     <li><a href="{{route('nhomquyen')}}">Nhóm quyền</a></li>
                                    <li><a href="">Nhóm chức năng</a></li>
-                                    <!--  <li><a href="layouts-unsticky.html">Unsticky Layout</a></li>
-                                    <li><a href="layouts-boxed.html">Boxed Layout</a></li> -->
+
                                 </ul>
                             </li>
                             <li>
                                 <a href="javascript: void(0);">
-                                <i class="mdi mdi-account-circle-outline"></i>
+                                <i class="mdi mdi-account-arrow-left"></i>
                                     <span>Nhân viên</span>
                                     <span class="badge badge-danger badge-pill float-right">New</span>
                                 </a>
@@ -365,8 +367,6 @@
                                     <li><a href="{{route('listnhanvien')}}">Danh sách nhân viên</a></li>
                                     <li><a href="{{route('calamviec')}}">Ca làm việc</a></li>
                                    <li><a href="{{route('calamviecnhanvien')}}">Ca làm việc nhân viên</a></li>
-                                    <!--  <li><a href="layouts-unsticky.html">Unsticky Layout</a></li>
-                                    <li><a href="layouts-boxed.html">Boxed Layout</a></li> -->
                                 </ul>
                             </li>
                             <li>
@@ -643,7 +643,13 @@
 
         <!-- App js -->
         <script src="{{url('admin')}}/js/app.min.js"></script>
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        {{--    datatable--}}
+    <script src=https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/core.js></script>
+    <script src=https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js></script>
+    <script src=https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js></script>
+    <script src=https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js></script>
+
     </body>
 
 <!-- Mirrored from coderthemes.com/uplon/layouts/vertical/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 31 Oct 2020 19:25:02 GMT -->

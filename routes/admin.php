@@ -13,26 +13,33 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
 //login
 Route::get('dangnhap','AuthurController@admin')->name('admin');
 Route::match(['post','get'],'/login','AuthurController@login')->name('login');
 Route::get('/logout','AuthurController@logout')->name('logout');
 
  Route::middleware(['auth'])->group(function (){
-
+     Route::prefix('Admin')->group(function (){
+     Route::get('/dashboard','AdminController@index')->name('dashboard');
 //user
-Route::get('xemtaikhoan','UserController@index')->name('user.index')->middleware('can:user');
-Route::get('themtaikhoan','UserController@create')->name('user.add')->middleware('can:user');
-Route::post('themtaikhoan/post','UserController@store')->name('user.store')->middleware('can:user');
+Route::get('xemtaikhoan','UserController@index')
+    ->name('user.index')
+    ->middleware('permission:list user');
+Route::get('themtaikhoan','UserController@create')
+    ->name('user.add')
+    ->middleware('permission:add user');
+Route::post('themtaikhoan/post','UserController@store')
+    ->name('user.store');
+Route::get('datatable','UserController@anyData')->name('user.datatable');
 //auth
-Route::get('/dashboard','AdminController@index')->name('dashboard');
 Route::get('/customer','CustomerController@index')->name('customer');
 
 
 //=========================Nhân viên==================//
 //list nhân viên
-Route::get('/nhan-vien','Nhanvien\ListnhanvienController@index')->name('listnhanvien')->middleware('can:Staff');
-Route::get('/addnhanvien','Nhanvien\ListnhanvienController@create')->name('listnhanvien.add')->middleware('can:Staff');
+Route::get('/nhan-vien','Nhanvien\ListnhanvienController@index')->name('listnhanvien');
+Route::get('/addnhanvien','Nhanvien\ListnhanvienController@create')->name('listnhanvien.add');
 Route::get('/editnhanvien/{id}','Nhanvien\ListnhanvienController@edit')->name('listnhanvien.edit')->middleware('can:Staff');
 // Ca làm việc
 Route::get('/calamviec','Nhanvien\CalamviecController@index')->name('calamviec');
@@ -41,8 +48,9 @@ Route::get('/addcalamviec','Nhanvien\CalamviecController@create')->name('calamvi
 Route::get('/calamviecnhanvien','Nhanvien\CalamviecNhanVien@index')->name('calamviecnhanvien');
 Route::get('/addcalamviecnhanvien','Nhanvien\CalamviecNhanVien@create')->name('calamviecnhanvien.add');
 
-//========================Users========================//
+//========================User========================//
 //nhom quyền
-Route::get('/nhomquyen','Users\NhomquyenController@index')->name('nhomquyen');
-Route::get('/addnhomquyen','Users\NhomquyenController@create')->name('nhomquyen.add');
+Route::get('/nhomquyen','User\NhomquyenController@index')->name('nhomquyen');
+Route::get('/addnhomquyen','User\NhomquyenController@create')->name('nhomquyen.add');
 });
+ });
