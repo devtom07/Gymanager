@@ -36,7 +36,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="manhnd" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -266,9 +266,9 @@
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state x="132" y="86" width="1092" height="629" key="MergeDialog/0.27.1366.741@0.27.1366.741" timestamp="1604830217440" />
-    <state x="408" y="91" width="539" height="619" key="git4idea.branch.GitSmartOperationDialog" timestamp="1605038153635">
+    <state x="408" y="91" width="539" height="619" key="git4idea.branch.GitSmartOperationDialog" timestamp="1604830337729">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state x="408" y="91" width="539" height="619" key="git4idea.branch.GitSmartOperationDialog/0.27.1366.741@0.27.1366.741" timestamp="1605038153635" />
+    <state x="408" y="91" width="539" height="619" key="git4idea.branch.GitSmartOperationDialog/0.27.1366.741@0.27.1366.741" timestamp="1604830337729" />
   </component>
 </project>
