@@ -16,10 +16,10 @@ class CreateWorkSiftsTable extends Migration
         Schema::create('work_sifts', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->dateTime('hour_start');
-            $table->dateTime('hour_start_center');
-            $table->dateTime('hour_end_center');
-            $table->dateTime('hour_end');
+            $table->timeTz('hour_start');
+            $table->timeTz('hour_start_center');
+            $table->timeTz('hour_end_center');
+            $table->timeTz('hour_end');
             $table->string('status');
             $table->timestamps();
         });
