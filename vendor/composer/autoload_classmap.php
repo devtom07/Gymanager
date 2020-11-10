@@ -25,6 +25,7 @@ return array(
     'App\\Http\\Middleware\\TrustHosts' => $baseDir . '/app/Http/Middleware/TrustHosts.php',
     'App\\Http\\Middleware\\TrustProxies' => $baseDir . '/app/Http/Middleware/TrustProxies.php',
     'App\\Http\\Middleware\\VerifyCsrfToken' => $baseDir . '/app/Http/Middleware/VerifyCsrfToken.php',
+    'App\\Http\\Requests\\ValidateFormAddStaff' => $baseDir . '/app/Http/Requests/ValidateFormAddStaff.php',
     'App\\Http\\Requests\\ValidateFormaddUser' => $baseDir . '/app/Http/Requests/ValidateFormaddUser.php',
     'App\\Models\\WorkSift' => $baseDir . '/app/Models/WorkSift.php',
     'App\\Models\\WorkSiftStaff' => $baseDir . '/app/Models/WorkSiftStaff.php',

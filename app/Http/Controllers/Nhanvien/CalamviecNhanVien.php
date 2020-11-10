@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Nhanvien;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\WorkSift;
 
 class CalamviecNhanVien extends Controller
 {

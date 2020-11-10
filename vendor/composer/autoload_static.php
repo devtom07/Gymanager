@@ -631,6 +631,7 @@ class ComposerStaticInit2fc96856fd0e9595f1c02fecdcf27b2c
         'App\\Http\\Middleware\\TrustHosts' => __DIR__ . '/../..' . '/app/Http/Middleware/TrustHosts.php',
         'App\\Http\\Middleware\\TrustProxies' => __DIR__ . '/../..' . '/app/Http/Middleware/TrustProxies.php',
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
+        'App\\Http\\Requests\\ValidateFormAddStaff' => __DIR__ . '/../..' . '/app/Http/Requests/ValidateFormAddStaff.php',
         'App\\Http\\Requests\\ValidateFormaddUser' => __DIR__ . '/../..' . '/app/Http/Requests/ValidateFormaddUser.php',
         'App\\Models\\WorkSift' => __DIR__ . '/../..' . '/app/Models/WorkSift.php',
         'App\\Models\\WorkSiftStaff' => __DIR__ . '/../..' . '/app/Models/WorkSiftStaff.php',
