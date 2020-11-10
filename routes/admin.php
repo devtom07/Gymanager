@@ -1,3 +1,5 @@
+
+
 <?php
 use Illuminate\Support\Facades\Route;
 
@@ -12,7 +14,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 //login
-
 Route::get('dangnhap','AuthurController@admin')->name('admin');
 Route::match(['post','get'],'/login','AuthurController@login')->name('login');
 Route::get('/logout','AuthurController@logout')->name('logout');
@@ -20,9 +21,9 @@ Route::get('/logout','AuthurController@logout')->name('logout');
  Route::middleware(['auth'])->group(function (){
 
 //user
-Route::get('xemtaikhoan','UserController@index')->name('user.index');
-Route::get('themtaikhoan','UserController@create')->name('user.add');
-Route::post('themtaikhoan/post','UserController@store')->name('user.store');
+Route::get('xemtaikhoan','UserController@index')->name('user.index')->middleware('can:user');
+Route::get('themtaikhoan','UserController@create')->name('user.add')->middleware('can:user');
+Route::post('themtaikhoan/post','UserController@store')->name('user.store')->middleware('can:user');
 //auth
 Route::get('/dashboard','AdminController@index')->name('dashboard');
 Route::get('/customer','CustomerController@index')->name('customer');
@@ -30,9 +31,9 @@ Route::get('/customer','CustomerController@index')->name('customer');
 
 //=========================Nhân viên==================//
 //list nhân viên
-Route::get('/nhan-vien','Nhanvien\ListnhanvienController@index')->name('listnhanvien');
-Route::get('/addnhanvien','Nhanvien\ListnhanvienController@create')->name('listnhanvien.add');
-Route::get('/editnhanvien/{id}','Nhanvien\ListnhanvienController@edit')->name('listnhanvien.edit');
+Route::get('/nhan-vien','Nhanvien\ListnhanvienController@index')->name('listnhanvien')->middleware('can:Staff');
+Route::get('/addnhanvien','Nhanvien\ListnhanvienController@create')->name('listnhanvien.add')->middleware('can:Staff');
+Route::get('/editnhanvien/{id}','Nhanvien\ListnhanvienController@edit')->name('listnhanvien.edit')->middleware('can:Staff');
 // Ca làm việc
 Route::get('/calamviec','Nhanvien\CalamviecController@index')->name('calamviec');
 Route::get('/addcalamviec','Nhanvien\CalamviecController@create')->name('calamviec.add');
