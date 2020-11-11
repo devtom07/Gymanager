@@ -2606,16 +2606,28 @@ Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
        'Alert' => 'RealRashid\\SweetAlert\\Facades\\Alert',
      ),
    ),
+<<<<<<< HEAD
+-  'spatie/laravel-permission' =>
+-  array (
+-    'providers' =>
+=======
 -  'spatie/laravel-permission' => 
 -  array (
 -    'providers' => 
+>>>>>>> 23b3c682d32f56589c980ad5eacc4d9bdbc962ac
 -    array (
 -      0 => 'Spatie\\Permission\\PermissionServiceProvider',
 -    ),
 -  ),
+<<<<<<< HEAD
+   'yajra/laravel-datatables-buttons' =>
+   array (
+     'providers' =>
+=======
    'yajra/laravel-datatables-buttons' => 
    array (
      'providers' => 
+>>>>>>> 23b3c682d32f56589c980ad5eacc4d9bdbc962ac
 Index: bootstrap/cache/services.php
 IDEA additional info:
 Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
@@ -2652,7 +2664,11 @@ Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
 +    39 => 'App\\Providers\\RouteServiceProvider',
 +    40 => 'RealRashid\\SweetAlert\\SweetAlertServiceProvider',
    ),
+<<<<<<< HEAD
+   'eager' =>
+=======
    'eager' => 
+>>>>>>> 23b3c682d32f56589c980ad5eacc4d9bdbc962ac
    array (
 @@ -64,18 +62,16 @@
      14 => 'Carbon\\Laravel\\ServiceProvider',
@@ -2681,7 +2697,11 @@ Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
 +    25 => 'App\\Providers\\RouteServiceProvider',
 +    26 => 'RealRashid\\SweetAlert\\SweetAlertServiceProvider',
    ),
+<<<<<<< HEAD
+   'deferred' =>
+=======
    'deferred' => 
+>>>>>>> 23b3c682d32f56589c980ad5eacc4d9bdbc962ac
    array (
 Index: app/User.php
 IDEA additional info:
@@ -2694,7 +2714,11 @@ Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
 +++ app/User.php	(date 1605033055000)
 @@ -3,17 +3,12 @@
  namespace App;
+<<<<<<< HEAD
+
+=======
  
+>>>>>>> 23b3c682d32f56589c980ad5eacc4d9bdbc962ac
  use Illuminate\Contracts\Auth\MustVerifyEmail;
 -use Illuminate\Database\Eloquent\Relations\BelongsToMany;
  use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -2702,12 +2726,20 @@ Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
 -use Spatie\Permission\Models\Permission;
 -use Spatie\Permission\Models\Role;
 -use Spatie\Permission\Traits\HasRoles;
+<<<<<<< HEAD
+
+=======
  
+>>>>>>> 23b3c682d32f56589c980ad5eacc4d9bdbc962ac
  class User extends Authenticatable
  {
      use Notifiable;
 -    use HasRoles;
+<<<<<<< HEAD
+
+=======
  
+>>>>>>> 23b3c682d32f56589c980ad5eacc4d9bdbc962ac
      /**
       * The attributes that are mass assignable.
 @@ -41,12 +36,15 @@
@@ -2724,7 +2756,11 @@ Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
 -        return $this->belongsToMany(Permission::class,'model_has_permissions','model_id','permission_id');
 +        return $this->belongsToMany(Role::class, 'role_users', 'user_id', 'role_id');
      }
+<<<<<<< HEAD
+
+=======
  
+>>>>>>> 23b3c682d32f56589c980ad5eacc4d9bdbc962ac
 +    public function hasPermission(Permission $permission){
 +        $check = !!optional(optional($this->role)->permission)->contains($permission);
 +                 var_dump($check);
@@ -2759,7 +2795,11 @@ Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
 --- app/Models/WorkSift.php	(revision c3be8d7882de51e99b366964162017b0902e9743)
 +++ app/Models/WorkSift.php	(date 1605033055000)
 @@ -6,5 +6,7 @@
+<<<<<<< HEAD
+
+=======
  
+>>>>>>> 23b3c682d32f56589c980ad5eacc4d9bdbc962ac
  class WorkSift extends Model
  {
 -    //
@@ -2787,7 +2827,11 @@ Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
  Route::get('dangnhap','AuthurController@admin')->name('admin');
  Route::match(['post','get'],'/login','AuthurController@login')->name('login');
  Route::get('/logout','AuthurController@logout')->name('logout');
+<<<<<<< HEAD
+
+=======
  
+>>>>>>> 23b3c682d32f56589c980ad5eacc4d9bdbc962ac
   Route::middleware(['auth'])->group(function (){
 -     Route::prefix('Admin')->group(function (){
 -     Route::get('/dashboard','AdminController@index')->name('dashboard');
@@ -2808,8 +2852,13 @@ Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
  //auth
 +Route::get('/dashboard','AdminController@index')->name('dashboard');
  Route::get('/customer','CustomerController@index')->name('customer');
+<<<<<<< HEAD
+
+
+=======
  
  
+>>>>>>> 23b3c682d32f56589c980ad5eacc4d9bdbc962ac
  //=========================Nhân viên==================//
  //list nhân viên
 -Route::get('/nhan-vien','Nhanvien\ListnhanvienController@index')->name('listnhanvien');
@@ -2834,7 +2883,11 @@ Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
  //Ca làm việc nhân viên
  Route::get('/calamviecnhanvien','Nhanvien\CalamviecNhanVien@index')->name('calamviecnhanvien');
  Route::get('/addcalamviecnhanvien','Nhanvien\CalamviecNhanVien@create')->name('calamviecnhanvien.add');
+<<<<<<< HEAD
+
+=======
  
+>>>>>>> 23b3c682d32f56589c980ad5eacc4d9bdbc962ac
 -//========================User========================//
 +//========================Users========================//
  //nhom quyền
@@ -2884,7 +2937,11 @@ Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
 +++ routes/web.php	(date 1605033055000)
 @@ -1,8 +1,7 @@
  <?php
+<<<<<<< HEAD
+
+=======
  
+>>>>>>> 23b3c682d32f56589c980ad5eacc4d9bdbc962ac
  use Illuminate\Support\Facades\Route;
 -use Spatie\Permission\Models\Role;
 -use Spatie\Permission\Models\Permission;
@@ -2895,7 +2952,11 @@ Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
 @@ -14,13 +13,7 @@
  |
  */
+<<<<<<< HEAD
+
+=======
  
+>>>>>>> 23b3c682d32f56589c980ad5eacc4d9bdbc962ac
 - Route::get('/', function () {
 -//     $role = Role::create(['name' => 'Super Admin']);
 -//     $permission = Permission::create(['name' => 'list PT']);
@@ -2922,7 +2983,11 @@ Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
 +++ database/seeds/PermissionSeeder.php	(date 1605033055000)
 @@ -1,7 +1,7 @@
  <?php
+<<<<<<< HEAD
+
+=======
  
+>>>>>>> 23b3c682d32f56589c980ad5eacc4d9bdbc962ac
  use Illuminate\Database\Seeder;
 -use Illuminate\Support\Facades\DB;
 +
@@ -2985,7 +3050,11 @@ Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
 +++ database/seeds/RoleSeeder.php	(date 1605033055000)
 @@ -1,7 +1,7 @@
  <?php
+<<<<<<< HEAD
+
+=======
  
+>>>>>>> 23b3c682d32f56589c980ad5eacc4d9bdbc962ac
  use Illuminate\Database\Seeder;
 -use Illuminate\Support\Facades\DB;
 +
@@ -3033,8 +3102,13 @@ Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
          App\Providers\RouteServiceProvider::class,
          RealRashid\SweetAlert\SweetAlertServiceProvider::class,
 -        Spatie\Permission\PermissionServiceProvider::class,
+<<<<<<< HEAD
+
+
+=======
  
  
+>>>>>>> 23b3c682d32f56589c980ad5eacc4d9bdbc962ac
      ],
 Index: app/Http/Controllers/AuthurController.php
 IDEA additional info:
@@ -3047,7 +3121,11 @@ Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
 +++ app/Http/Controllers/AuthurController.php	(date 1605033055000)
 @@ -1,7 +1,6 @@
  <?php
+<<<<<<< HEAD
+
+=======
  
+>>>>>>> 23b3c682d32f56589c980ad5eacc4d9bdbc962ac
  namespace App\Http\Controllers;
 -use Illuminate\Support\Carbon;
  use Illuminate\Support\Facades\Session;
@@ -3060,7 +3138,11 @@ Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
 -        if(Auth::attempt($user)){
 -            Auth::user()->last_login = date('Y-m-d H:i:s');
 -            Auth::user()->save();
+<<<<<<< HEAD
++        if(Auth::attempt($user)){
+=======
 +        if(Auth::attempt($user)){ 
+>>>>>>> 23b3c682d32f56589c980ad5eacc4d9bdbc962ac
              alert()->success('Thành công','Bạn đã đăng nhâp thành công');
              return  redirect()->route('dashboard');
          }else{
@@ -3725,7 +3807,11 @@ Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
 -        return false;
 +        return true;
      }
+<<<<<<< HEAD
+
+=======
  
+>>>>>>> 23b3c682d32f56589c980ad5eacc4d9bdbc962ac
      /**
 @@ -24,7 +24,31 @@
      public function rules()
@@ -3775,7 +3861,11 @@ Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
                      </div>
                  </div>
              </div>
+<<<<<<< HEAD
+-            <!-- end page title -->
+=======
 -            <!-- end page title --> 
+>>>>>>> 23b3c682d32f56589c980ad5eacc4d9bdbc962ac
 +            <!-- end page title -->
              <div class="row">
                  <div class="col-12">
@@ -3784,7 +3874,11 @@ Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
                          <div class="row">
 -                                <div class="col-xl-6">
 -                        <form>
+<<<<<<< HEAD
+-
+=======
 -                           
+>>>>>>> 23b3c682d32f56589c980ad5eacc4d9bdbc962ac
 +                            <div class="col-xl-6">
 +                                <form method="post" enctype="multipart/form-data">
 +                                    <div class=" form-group">
@@ -3802,7 +3896,11 @@ Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
 +                                        <input class="form-control" type="time" name="hour_start" value="H:i:s"
 +                                            id="example-date-input">
                                      </div>
+<<<<<<< HEAD
+-
+=======
 -                                    
+>>>>>>> 23b3c682d32f56589c980ad5eacc4d9bdbc962ac
 +                                    @error('hour_start')
 +                                    <p style="color:red">{{$message}}</p>
 +                                    @enderror
@@ -3851,10 +3949,17 @@ Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
                                              </div>
                                          </div>
                                      </div>
+<<<<<<< HEAD
+-
+-
+-                                <button type="submit" class="btn btn-primary">Submit</button>
+-
+=======
 -                               
 -                        
 -                                <button type="submit" class="btn btn-primary">Submit</button>
 -                           
+>>>>>>> 23b3c682d32f56589c980ad5eacc4d9bdbc962ac
 -                        </form> </div> </div>
 +                                    <button type="submit" class="btn btn-primary">Submit</button>
 +                                    {{csrf_field()}}
@@ -3877,7 +3982,11 @@ Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
                      </div>
                  </div>
              </div>
+<<<<<<< HEAD
+-            <!-- end page title -->
+=======
 -            <!-- end page title --> 
+>>>>>>> 23b3c682d32f56589c980ad5eacc4d9bdbc962ac
 +            <!-- end page title -->
              <div class="row">
                  <div class="col-12">
@@ -3886,7 +3995,11 @@ Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
                          <div class="row">
 -                                <div class="col-xl-6">
 -                        <form>
+<<<<<<< HEAD
+-
+=======
 -                           
+>>>>>>> 23b3c682d32f56589c980ad5eacc4d9bdbc962ac
 -                                    <div class="form-group">
 +                            <div class="col-xl-6">
 +                                <form method="post">
@@ -3904,7 +4017,11 @@ Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
 +                                        <input class="form-control" type="time" name="hour_start"
 +                                            id="example-date-input" value="{{$work_sift->hour_start}}">
                                      </div>
+<<<<<<< HEAD
+-
+=======
 -                                    
+>>>>>>> 23b3c682d32f56589c980ad5eacc4d9bdbc962ac
 +                                    @error('hour_start')
 +                                    <p style="color:red">{{$message}}</p>
 +                                    @enderror
@@ -3953,10 +4070,17 @@ Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
                                              </div>
                                          </div>
                                      </div>
+<<<<<<< HEAD
+-
+-
+-                                <button type="submit" class="btn btn-primary">Submit</button>
+-
+=======
 -                               
 -                        
 -                                <button type="submit" class="btn btn-primary">Submit</button>
 -                           
+>>>>>>> 23b3c682d32f56589c980ad5eacc4d9bdbc962ac
 -                        </form> </div> </div>
 +                                    <button type="submit" class="btn btn-primary">Submit</button>
 +                                    {{csrf_field()}}
@@ -3997,7 +4121,11 @@ Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
 -               </div>
 -            </div>
 -         </div>
+<<<<<<< HEAD
+-         <!-- end page title -->
+=======
 -         <!-- end page title --> 
+>>>>>>> 23b3c682d32f56589c980ad5eacc4d9bdbc962ac
 -         <div class="row">
 -            <div class="col-12">
 -               <div class="card-box">
@@ -4011,7 +4139,11 @@ Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
 -                                    <li class="checkbox-row"><input type="checkbox" name="toggle-tech-companies-1-col-1" id="toggle-tech-companies-1-col-1" value="tech-companies-1-col-1"> <label for="toggle-tech-companies-1-col-1">Email</label></li>
 -                                    <li class="checkbox-row"><input type="checkbox" name="toggle-tech-companies-1-col-2" id="toggle-tech-companies-1-col-2" value="tech-companies-1-col-2"> <label for="toggle-tech-companies-1-col-2">Trạng thái</label></li>
 -                                    <li class="checkbox-row"><input type="checkbox" name="toggle-tech-companies-1-col-3" id="toggle-tech-companies-1-col-3" value="tech-companies-1-col-3"> <label for="toggle-tech-companies-1-col-3">Ngày bắt đầu</label></li>
+<<<<<<< HEAD
+-                                    <li class="checkbox-row"><input type="checkbox" name="toggle-tech-companies-1-col-4" id="toggle-tech-companies-1-col-4" value="tech-companies-1-col-4">
+=======
 -                                    <li class="checkbox-row"><input type="checkbox" name="toggle-tech-companies-1-col-4" id="toggle-tech-companies-1-col-4" value="tech-companies-1-col-4"> 
+>>>>>>> 23b3c682d32f56589c980ad5eacc4d9bdbc962ac
 -                                       <label for="toggle-tech-companies-1-col-4">Ngày kết thúc</label>
 -                                    </li>
 -                                    <li class="checkbox-row"><input type="checkbox" name="toggle-tech-companies-1-col-5" id="toggle-tech-companies-1-col-5" value="tech-companies-1-col-5"> <label for="toggle-tech-companies-1-col-5">Avarta</label></li>
@@ -4022,14 +4154,22 @@ Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
 -                              </div>
 -                              <div class="dataTables_length" id="datatable_length"><label>Show <select name="datatable_length" aria-controls="datatable" class="custom-select custom-select-sm form-control form-control-sm"><option value="10">10</option><option value="25">25</option><option value="50">50</option><option value="100">100</option></select> entries</label></div>
 -                              <div id="datatable_filter" class="dataTables_filter" ><label>Search:<input type="search" class="form-control form-control-sm" placeholder="" aria-controls="datatable"></label></div>
+<<<<<<< HEAD
+-
+=======
 -                            
+>>>>>>> 23b3c682d32f56589c980ad5eacc4d9bdbc962ac
 -                           </div>
 -                           <div class="table-responsive fixed-solution" data-pattern="priority-columns">
 -                              <div class="sticky-table-header" style="height: 49px; visibility: hidden; width: auto; top: -1px;">
 -                                 <table id="tech-companies-1-clone" class="table table-striped">
 -                                    <thead>
 -                                       <tr>
+<<<<<<< HEAD
+-
+=======
 -                  
+>>>>>>> 23b3c682d32f56589c980ad5eacc4d9bdbc962ac
 -                                          <th data-priority="1" id="tech-companies-1-col-1-clone">Tên ca làm việc</th>
 -                                          <th data-priority="3" id="tech-companies-1-col-2-clone">Ngày tạo</th>
 -                                          <th data-priority="1" id="tech-companies-1-col-3-clone">Giờ làm việc</th>
@@ -4053,7 +4193,11 @@ Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
 -                                                    <div class="dropdown-menu" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 29px, 0px);">
 -                                                        <a class="dropdown-item" href="#"><i class="mdi mdi-lead-pencil"></i> Sửa</a>
 -                                                        <a class="dropdown-item" href="#"><i class="mdi mdi-delete"></i> Xoá</a>
+<<<<<<< HEAD
+-
+=======
 -                                 
+>>>>>>> 23b3c682d32f56589c980ad5eacc4d9bdbc962ac
 -                                                    </div>
 -                                                </div>
 -                                          </td>
@@ -4071,7 +4215,11 @@ Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
 -                                                    <div class="dropdown-menu" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 29px, 0px);">
 -                                                        <a class="dropdown-item" href="#"><i class="mdi mdi-lead-pencil"></i> Sửa</a>
 -                                                        <a class="dropdown-item" href="#"><i class="mdi mdi-delete"></i> Xoá</a>
+<<<<<<< HEAD
+-
+=======
 -                                 
+>>>>>>> 23b3c682d32f56589c980ad5eacc4d9bdbc962ac
 -                                                    </div>
 -                                                </div>
 -                                          </td>
@@ -4083,7 +4231,11 @@ Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
 -                              <table id="tech-companies-1-clone" class="table table-striped">
 -                                    <thead>
 -                                       <tr>
+<<<<<<< HEAD
+-
+=======
 -                  
+>>>>>>> 23b3c682d32f56589c980ad5eacc4d9bdbc962ac
 -                                          <th data-priority="1" id="tech-companies-1-col-1-clone">Tên ca làm việc</th>
 -                                          <th data-priority="3" id="tech-companies-1-col-2-clone">Ngày tạo</th>
 -                                          <th data-priority="1" id="tech-companies-1-col-3-clone">Giờ làm việc</th>
@@ -4107,7 +4259,11 @@ Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
 -                                                    <div class="dropdown-menu" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 29px, 0px);">
 -                                                        <a class="dropdown-item" href="#"><i class="mdi mdi-lead-pencil"></i> Sửa</a>
 -                                                        <a class="dropdown-item" href="#"><i class="mdi mdi-delete"></i> Xoá</a>
+<<<<<<< HEAD
+-
+=======
 -                                 
+>>>>>>> 23b3c682d32f56589c980ad5eacc4d9bdbc962ac
 -                                                    </div>
 -                                                </div>
 -                                          </td>
@@ -4125,7 +4281,11 @@ Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
 -                                                    <div class="dropdown-menu" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 29px, 0px);">
 -                                                        <a class="dropdown-item" href="#"><i class="mdi mdi-lead-pencil"></i> Sửa</a>
 -                                                        <a class="dropdown-item" href="#"><i class="mdi mdi-delete"></i> Xoá</a>
+<<<<<<< HEAD
+-
+=======
 -                                 
+>>>>>>> 23b3c682d32f56589c980ad5eacc4d9bdbc962ac
 -                                                    </div>
 -                                                </div>
 -                                          </td>
@@ -4755,8 +4915,13 @@ Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
 --- resources/views/admin/main.blade.php	(revision c3be8d7882de51e99b366964162017b0902e9743)
 +++ resources/views/admin/main.blade.php	(date 1605033055000)
 @@ -22,628 +22,636 @@
+<<<<<<< HEAD
+
+
+=======
  
  
+>>>>>>> 23b3c682d32f56589c980ad5eacc4d9bdbc962ac
  <body>
 -@include('sweetalert::alert')
 -<!-- Begin page -->
@@ -4764,15 +4929,24 @@ Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
 +    @include('sweetalert::alert')
 +    <!-- Begin page -->
 +    <div id="wrapper">
+<<<<<<< HEAD
+
+
+=======
  
  
+>>>>>>> 23b3c682d32f56589c980ad5eacc4d9bdbc962ac
 -    <!-- Topbar Start -->
 -    <div class="navbar-custom">
 -        <ul class="list-unstyled topnav-menu float-right mb-0">
 +        <!-- Topbar Start -->
 +        <div class="navbar-custom">
 +            <ul class="list-unstyled topnav-menu float-right mb-0">
+<<<<<<< HEAD
+
+=======
  
+>>>>>>> 23b3c682d32f56589c980ad5eacc4d9bdbc962ac
 -            <li class="dropdown notification-list dropdown d-none d-lg-inline-block ml-2">
 -                <a class="nav-link dropdown-toggle mr-0 waves-effect waves-light" data-toggle="dropdown" href="#"
 -                   role="button" aria-haspopup="false" aria-expanded="false">
@@ -4795,7 +4969,11 @@ Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
 +                            <img src="{{url('admin')}}/images/flags/germany.jpg" alt="lang-image" class="mr-1"
 +                                height="12"> <span class="align-middle">German</span>
 +                        </a>
+<<<<<<< HEAD
+
+=======
  
+>>>>>>> 23b3c682d32f56589c980ad5eacc4d9bdbc962ac
 -                    <!-- item-->
 -                    <a href="javascript:void(0);" class="dropdown-item notify-item">
 -                        <img src="{{url('admin')}}/images/flags/italy.jpg" alt="lang-image" class="mr-1"
@@ -4806,7 +4984,11 @@ Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
 +                            <img src="{{url('admin')}}/images/flags/italy.jpg" alt="lang-image" class="mr-1"
 +                                height="12"> <span class="align-middle">Italian</span>
 +                        </a>
+<<<<<<< HEAD
+
+=======
  
+>>>>>>> 23b3c682d32f56589c980ad5eacc4d9bdbc962ac
 -                    <!-- item-->
 -                    <a href="javascript:void(0);" class="dropdown-item notify-item">
 -                        <img src="{{url('admin')}}/images/flags/spain.jpg" alt="lang-image" class="mr-1"
@@ -4817,7 +4999,11 @@ Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
 +                            <img src="{{url('admin')}}/images/flags/spain.jpg" alt="lang-image" class="mr-1"
 +                                height="12"> <span class="align-middle">Spanish</span>
 +                        </a>
+<<<<<<< HEAD
+
+=======
  
+>>>>>>> 23b3c682d32f56589c980ad5eacc4d9bdbc962ac
 -                    <!-- item-->
 -                    <a href="javascript:void(0);" class="dropdown-item notify-item">
 -                        <img src="{{url('admin')}}/images/flags/russia.jpg" alt="lang-image" class="mr-1"
@@ -4828,12 +5014,20 @@ Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
 +                            <img src="{{url('admin')}}/images/flags/russia.jpg" alt="lang-image" class="mr-1"
 +                                height="12"> <span class="align-middle">Russian</span>
 +                        </a>
+<<<<<<< HEAD
+
+=======
  
+>>>>>>> 23b3c682d32f56589c980ad5eacc4d9bdbc962ac
 -                </div>
 -            </li>
 +                    </div>
 +                </li>
+<<<<<<< HEAD
+
+=======
  
+>>>>>>> 23b3c682d32f56589c980ad5eacc4d9bdbc962ac
 -            <li class="dropdown notification-list">
 -                <a class="nav-link dropdown-toggle  waves-effect waves-light" data-toggle="dropdown" href="#"
 -                   role="button" aria-haspopup="false" aria-expanded="false">
@@ -4848,7 +5042,11 @@ Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
 +                        <span class="noti-icon-badge"></span>
 +                    </a>
 +                    <div class="dropdown-menu dropdown-menu-right dropdown-lg">
+<<<<<<< HEAD
+
+=======
  
+>>>>>>> 23b3c682d32f56589c980ad5eacc4d9bdbc962ac
 -                    <!-- item-->
 -                    <div class="dropdown-item noti-title">
 -                        <h5 class="font-16 text-white m-0">
@@ -4864,10 +5062,17 @@ Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
 -                    </div>
 +                            </h5>
 +                        </div>
+<<<<<<< HEAD
+
+-                    <div class="slimscroll noti-scroll">
++                        <div class="slimscroll noti-scroll">
+
+=======
  
 -                    <div class="slimscroll noti-scroll">
 +                        <div class="slimscroll noti-scroll">
  
+>>>>>>> 23b3c682d32f56589c980ad5eacc4d9bdbc962ac
 -                        <!-- item-->
 -                        <a href="javascript:void(0);" class="dropdown-item notify-item">
 -                            <div class="notify-icon bg-success">
@@ -4886,7 +5091,11 @@ Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
 +                                    <small class="text-muted">There are new settings available</small>
 +                                </p>
 +                            </a>
+<<<<<<< HEAD
+
+=======
  
+>>>>>>> 23b3c682d32f56589c980ad5eacc4d9bdbc962ac
 -                        <!-- item-->
 -                        <a href="javascript:void(0);" class="dropdown-item notify-item">
 -                            <div class="notify-icon bg-info">
@@ -4905,7 +5114,11 @@ Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
 +                                    <small class="text-muted">There are 2 new updates available</small>
 +                                </p>
 +                            </a>
+<<<<<<< HEAD
+
+=======
  
+>>>>>>> 23b3c682d32f56589c980ad5eacc4d9bdbc962ac
 -                        <!-- item-->
 -                        <a href="javascript:void(0);" class="dropdown-item notify-item">
 -                            <div class="notify-icon bg-danger">
@@ -4924,7 +5137,11 @@ Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
 +                                    <small class="text-muted">You have 10 unread messages</small>
 +                                </p>
 +                            </a>
+<<<<<<< HEAD
+
+=======
  
+>>>>>>> 23b3c682d32f56589c980ad5eacc4d9bdbc962ac
 -                        <!-- item-->
 -                        <a href="javascript:void(0);" class="dropdown-item notify-item">
 -                            <div class="notify-icon bg-info">
@@ -4943,7 +5160,11 @@ Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
 +                                    <small class="text-muted">4 days ago</small>
 +                                </p>
 +                            </a>
+<<<<<<< HEAD
+
+=======
  
+>>>>>>> 23b3c682d32f56589c980ad5eacc4d9bdbc962ac
 -                        <!-- item-->
 -                        <a href="javascript:void(0);" class="dropdown-item notify-item">
 -                            <div class="notify-icon bg-secondary">
@@ -4966,7 +5187,11 @@ Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
 +                                </p>
 +                            </a>
 +                        </div>
+<<<<<<< HEAD
+
+=======
  
+>>>>>>> 23b3c682d32f56589c980ad5eacc4d9bdbc962ac
 -                    <!-- All-->
 -                    <a href="javascript:void(0);" class="dropdown-item text-primary notify-item notify-all">
 -                        View all
@@ -4977,12 +5202,20 @@ Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
 +                            View all
 +                            <i class="fi-arrow-right"></i>
 +                        </a>
+<<<<<<< HEAD
+
+=======
  
+>>>>>>> 23b3c682d32f56589c980ad5eacc4d9bdbc962ac
 -                </div>
 -            </li>
 +                    </div>
 +                </li>
+<<<<<<< HEAD
+
+=======
  
+>>>>>>> 23b3c682d32f56589c980ad5eacc4d9bdbc962ac
 -            <li class="dropdown notification-list">
 -                <a class="nav-link dropdown-toggle  waves-effect waves-light" data-toggle="dropdown" href="#"
 -                   role="button" aria-haspopup="false" aria-expanded="false">
@@ -4997,7 +5230,11 @@ Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
 +                        <span class="noti-icon-badge"></span>
 +                    </a>
 +                    <div class="dropdown-menu dropdown-menu-right dropdown-lg">
+<<<<<<< HEAD
+
+=======
  
+>>>>>>> 23b3c682d32f56589c980ad5eacc4d9bdbc962ac
 -                    <!-- item-->
 -                    <div class="dropdown-item noti-title">
 -                        <h5 class="font-16 text-white m-0">
@@ -5013,10 +5250,17 @@ Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
 -                    </div>
 +                            </h5>
 +                        </div>
+<<<<<<< HEAD
+
+-                    <div class="slimscroll noti-scroll">
++                        <div class="slimscroll noti-scroll">
+
+=======
  
 -                    <div class="slimscroll noti-scroll">
 +                        <div class="slimscroll noti-scroll">
  
+>>>>>>> 23b3c682d32f56589c980ad5eacc4d9bdbc962ac
 -                        <div class="inbox-widget">
 -                            <a href="#">
 -                                <div class="inbox-item">
@@ -5105,14 +5349,22 @@ Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
 +                                                alt=""></div>
 +                                        <p class="inbox-item-author">Shahedk</p>
 +                                        <p class="inbox-item-text text-truncate">Hey! there I'm available...</p>
+<<<<<<< HEAD
+
+=======
  
+>>>>>>> 23b3c682d32f56589c980ad5eacc4d9bdbc962ac
 -                                </div>
 -                            </a>
 -                        </div> <!-- end inbox-widget -->
 +                                    </div>
 +                                </a>
 +                            </div> <!-- end inbox-widget -->
+<<<<<<< HEAD
+
+=======
  
+>>>>>>> 23b3c682d32f56589c980ad5eacc4d9bdbc962ac
 -                    </div>
 -                    <!-- All-->
 -                    <a href="javascript:void(0);" class="dropdown-item text-primary notify-item notify-all">
@@ -5125,12 +5377,20 @@ Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
 +                            View all
 +                            <i class="fi-arrow-right"></i>
 +                        </a>
+<<<<<<< HEAD
+
+=======
  
+>>>>>>> 23b3c682d32f56589c980ad5eacc4d9bdbc962ac
 -                </div>
 -            </li>
 +                    </div>
 +                </li>
+<<<<<<< HEAD
+
+=======
  
+>>>>>>> 23b3c682d32f56589c980ad5eacc4d9bdbc962ac
 -            <li class="dropdown notification-list">
 -                <a class="nav-link dropdown-toggle nav-user mr-0 waves-effect waves-light" data-toggle="dropdown"
 -                   href="#" role="button" aria-haspopup="false" aria-expanded="false">
@@ -5157,7 +5417,11 @@ Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
 +                        <div class="dropdown-header noti-title">
 +                            <h6 class="text-overflow text-white m-0">Welcome !</h6>
 +                        </div>
+<<<<<<< HEAD
+
+=======
  
+>>>>>>> 23b3c682d32f56589c980ad5eacc4d9bdbc962ac
 -                    <!-- item-->
 -                    <a href="javascript:void(0);" class="dropdown-item notify-item">
 -                        <i class="mdi mdi-account-outline"></i>
@@ -5168,7 +5432,11 @@ Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
 +                            <i class="mdi mdi-account-outline"></i>
 +                            <span>Profile</span>
 +                        </a>
+<<<<<<< HEAD
+
+=======
  
+>>>>>>> 23b3c682d32f56589c980ad5eacc4d9bdbc962ac
 -                    <!-- item-->
 -                    <a href="javascript:void(0);" class="dropdown-item notify-item">
 -                        <i class="mdi mdi-settings-outline"></i>
@@ -5179,7 +5447,11 @@ Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
 +                            <i class="mdi mdi-settings-outline"></i>
 +                            <span>Settings</span>
 +                        </a>
+<<<<<<< HEAD
+
+=======
  
+>>>>>>> 23b3c682d32f56589c980ad5eacc4d9bdbc962ac
 -                    <!-- item-->
 -                    <a href="javascript:void(0);" class="dropdown-item notify-item">
 -                        <i class="mdi mdi-lock-outline"></i>
@@ -5190,10 +5462,17 @@ Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
 +                            <i class="mdi mdi-lock-outline"></i>
 +                            <span>Lock Screen</span>
 +                        </a>
+<<<<<<< HEAD
+
+-                    <div class="dropdown-divider"></div>
++                        <div class="dropdown-divider"></div>
+
+=======
  
 -                    <div class="dropdown-divider"></div>
 +                        <div class="dropdown-divider"></div>
  
+>>>>>>> 23b3c682d32f56589c980ad5eacc4d9bdbc962ac
 -                    <!-- item-->
 -                    <a href="{{route('logout')}}" class="dropdown-item notify-item">
 -                        <i class="mdi mdi-logout-variant"></i>
@@ -5204,12 +5483,20 @@ Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
 +                            <i class="mdi mdi-logout-variant"></i>
 +                            <span>Logout</span>
 +                        </a>
+<<<<<<< HEAD
+
+=======
  
+>>>>>>> 23b3c682d32f56589c980ad5eacc4d9bdbc962ac
 -                </div>
 -            </li>
 +                    </div>
 +                </li>
+<<<<<<< HEAD
+
+=======
  
+>>>>>>> 23b3c682d32f56589c980ad5eacc4d9bdbc962ac
 -            <li class="dropdown notification-list">
 -                <a href="javascript:void(0);" class="nav-link right-bar-toggle waves-effect waves-light">
 -                    <i class="mdi mdi-settings-outline noti-icon"></i>
@@ -5220,10 +5507,17 @@ Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
 +                        <i class="mdi mdi-settings-outline noti-icon"></i>
 +                    </a>
 +                </li>
+<<<<<<< HEAD
+
+-        </ul>
++            </ul>
+
+=======
  
 -        </ul>
 +            </ul>
  
+>>>>>>> 23b3c682d32f56589c980ad5eacc4d9bdbc962ac
 -        <!-- LOGO -->
 -        <div class="logo-box">
 -            <a href="{{route('dashboard')}}" class="logo text-center logo-dark">
@@ -5241,7 +5535,11 @@ Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
                      </span>
 -            </a>
 +                </a>
+<<<<<<< HEAD
+
+=======
  
+>>>>>>> 23b3c682d32f56589c980ad5eacc4d9bdbc962ac
 -            <a href="index.html" class="logo text-center logo-light">
 +                <a href="index.html" class="logo text-center logo-light">
                      <span class="logo-lg">
@@ -5257,7 +5555,11 @@ Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
 -        </div>
 +                </a>
 +            </div>
+<<<<<<< HEAD
+
+=======
  
+>>>>>>> 23b3c682d32f56589c980ad5eacc4d9bdbc962ac
 -        <ul class="list-unstyled topnav-menu topnav-menu-left m-0">
 -            <li>
 -                <button class="button-menu-mobile waves-effect waves-light">
@@ -5270,7 +5572,11 @@ Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
 +                        <i class="mdi mdi-menu"></i>
 +                    </button>
 +                </li>
+<<<<<<< HEAD
+
+=======
  
+>>>>>>> 23b3c682d32f56589c980ad5eacc4d9bdbc962ac
 -            <li class="d-none d-sm-block">
 -                <form class="app-search">
 -                    <div class="app-search-box">
@@ -5299,28 +5605,54 @@ Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
 +                        </div>
 +                    </form>
 +                </li>
+<<<<<<< HEAD
+
+
+=======
  
  
+>>>>>>> 23b3c682d32f56589c980ad5eacc4d9bdbc962ac
 -        </ul>
 -    </div>
 -    <!-- end Topbar -->
 +            </ul>
 +        </div>
 +        <!-- end Topbar -->
+<<<<<<< HEAD
+
+
+=======
  
  
+>>>>>>> 23b3c682d32f56589c980ad5eacc4d9bdbc962ac
 -    <!-- ========== Left Sidebar Start ========== -->
 -    <div class="left-side-menu">
 +        <!-- ========== Left Sidebar Start ========== -->
 +        <div class="left-side-menu">
+<<<<<<< HEAD
+
+-        <div class="slimscroll-menu">
++            <div class="slimscroll-menu">
+
+=======
  
 -        <div class="slimscroll-menu">
 +            <div class="slimscroll-menu">
  
+>>>>>>> 23b3c682d32f56589c980ad5eacc4d9bdbc962ac
 -            <!--- Sidemenu -->
 -            <div id="sidebar-menu">
 +                <!--- Sidemenu -->
 +                <div id="sidebar-menu">
+<<<<<<< HEAD
+
+-                <ul class="metismenu" id="side-menu">
++                    <ul class="metismenu" id="side-menu">
+
+-                    <li class="menu-title">Navigation</li>
++                        <li class="menu-title">Navigation</li>
+
+=======
  
 -                <ul class="metismenu" id="side-menu">
 +                    <ul class="metismenu" id="side-menu">
@@ -5328,6 +5660,7 @@ Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
 -                    <li class="menu-title">Navigation</li>
 +                        <li class="menu-title">Navigation</li>
  
+>>>>>>> 23b3c682d32f56589c980ad5eacc4d9bdbc962ac
 -                    <li>
 -                        <a href="{{route('dashboard')}}">
 -                            <i class="mdi mdi-view-dashboard"></i>
@@ -5340,7 +5673,11 @@ Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
 +                                <span> Dashboard </span>
 +                            </a>
 +                        </li>
+<<<<<<< HEAD
+
+=======
  
+>>>>>>> 23b3c682d32f56589c980ad5eacc4d9bdbc962ac
 -                    <!-- <li>
 -                            <a href="calendar.html">
 -                                <i class="mdi mdi-calendar-month"></i>
@@ -5437,8 +5774,13 @@ Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
 +                                    <li><a href="layouts-boxed.html">Boxed Layout</a></li> -->
 +                            </ul>
 +                        </li>
+<<<<<<< HEAD
+
+
+=======
  
  
+>>>>>>> 23b3c682d32f56589c980ad5eacc4d9bdbc962ac
 -                    <li>
 -                        <a href="javascript: void(0);">
 -                            <i class="mdi mdi-google-pages"></i>
@@ -5471,7 +5813,11 @@ Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
 +                                <li><a href="pages-500.html">Error 500</a></li>
 +                            </ul>
 +                        </li>
+<<<<<<< HEAD
+
+=======
  
+>>>>>>> 23b3c682d32f56589c980ad5eacc4d9bdbc962ac
 -                    <li>
 -                        <a href="javascript: void(0);">
 -                            <i class="mdi mdi-content-copy"></i>
@@ -5502,10 +5848,17 @@ Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
 +                                <li><a href="pages-comingsoon.html">Coming Soon</a></li>
 +                            </ul>
 +                        </li>
+<<<<<<< HEAD
+
+-                    <!-- <li class="menu-title mt-2">Components</li> -->
++                        <!-- <li class="menu-title mt-2">Components</li> -->
+
+=======
  
 -                    <!-- <li class="menu-title mt-2">Components</li> -->
 +                        <!-- <li class="menu-title mt-2">Components</li> -->
  
+>>>>>>> 23b3c682d32f56589c980ad5eacc4d9bdbc962ac
 -                    <!-- <li>
 -                            <a href="javascript: void(0);">
 -                                <i class="mdi mdi-format-underline"></i>
@@ -5790,25 +6143,44 @@ Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
 +                                </ul>
 +                            </li> -->
 +                    </ul>
+<<<<<<< HEAD
+
+=======
  
+>>>>>>> 23b3c682d32f56589c980ad5eacc4d9bdbc962ac
 -            </div>
 -            <!-- End Sidebar -->
 +                </div>
 +                <!-- End Sidebar -->
+<<<<<<< HEAD
+
+-            <div class="clearfix"></div>
++                <div class="clearfix"></div>
+
+=======
  
 -            <div class="clearfix"></div>
 +                <div class="clearfix"></div>
  
+>>>>>>> 23b3c682d32f56589c980ad5eacc4d9bdbc962ac
 -        </div>
 -        <!-- Sidebar -left -->
 +            </div>
 +            <!-- Sidebar -left -->
+<<<<<<< HEAD
+
+=======
  
+>>>>>>> 23b3c682d32f56589c980ad5eacc4d9bdbc962ac
 -    </div>
 -    <!-- Left Sidebar End -->
 +        </div>
 +        <!-- Left Sidebar End -->
+<<<<<<< HEAD
+
+=======
  
+>>>>>>> 23b3c682d32f56589c980ad5eacc4d9bdbc962ac
 -    <!-- ============================================================== -->
 -    <!-- Start Page Content here -->
 -    <!-- ============================================================== -->
@@ -5817,20 +6189,33 @@ Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
 +        <!-- Start Page Content here -->
 +        <!-- ============================================================== -->
 +        @yield('content')
+<<<<<<< HEAD
+
+
+=======
  
  
+>>>>>>> 23b3c682d32f56589c980ad5eacc4d9bdbc962ac
 -<!-- ============================================================== -->
 -    <!-- End Page content -->
 -    <!-- ============================================================== -->
 +        <!-- ============================================================== -->
 +        <!-- End Page content -->
 +        <!-- ============================================================== -->
+<<<<<<< HEAD
+
+=======
  
+>>>>>>> 23b3c682d32f56589c980ad5eacc4d9bdbc962ac
 -</div>
 -<!-- END wrapper -->
 +    </div>
 +    <!-- END wrapper -->
+<<<<<<< HEAD
+
+=======
  
+>>>>>>> 23b3c682d32f56589c980ad5eacc4d9bdbc962ac
 -<!-- Right Sidebar -->
 -<div class="right-bar">
 -    <div class="rightbar-title">
@@ -5849,7 +6234,11 @@ Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
 +            <h4 class="font-18 m-0 text-white">Tuỳ chỉnh giao diện</h4>
 +        </div>
 +        <div class="slimscroll-menu">
+<<<<<<< HEAD
+
+=======
  
+>>>>>>> 23b3c682d32f56589c980ad5eacc4d9bdbc962ac
 -        <div class="p-4">
 -            <div class="alert alert-warning" role="alert">
 -                <strong>Tuỳ chỉnh </strong> bảng màu, bố cục,...
@@ -5872,7 +6261,11 @@ Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
 +                    <input type="checkbox" class="custom-control-input theme-choice" id="light-mode-switch" checked />
 +                    <label class="custom-control-label" for="light-mode-switch">Chế độ sáng</label>
 +                </div>
+<<<<<<< HEAD
+
+=======
  
+>>>>>>> 23b3c682d32f56589c980ad5eacc4d9bdbc962ac
 -            <div class="mb-2">
 -                <img src="{{url('admin')}}/images/layouts/dark.png" class="img-fluid img-thumbnail" alt="">
 -            </div>
@@ -5891,7 +6284,11 @@ Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
 +                        data-appStyle="{{url('admin')}}/css/app-dark.min.css" />
 +                    <label class="custom-control-label" for="dark-mode-switch">Chế độ tối</label>
 +                </div>
+<<<<<<< HEAD
+
+=======
  
+>>>>>>> 23b3c682d32f56589c980ad5eacc4d9bdbc962ac
 -        </div>
 -    </div> <!-- end slimscroll-menu-->
 -</div>
@@ -5900,13 +6297,22 @@ Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
 +        </div> <!-- end slimscroll-menu-->
 +    </div>
 +    <!-- /Right-bar -->
+<<<<<<< HEAD
+
+=======
  
+>>>>>>> 23b3c682d32f56589c980ad5eacc4d9bdbc962ac
 -<!-- Right bar overlay-->
 -<div class="rightbar-overlay"></div>
 +    <!-- Right bar overlay-->
 +    <div class="rightbar-overlay"></div>
+<<<<<<< HEAD
+
+
+=======
  
  
+>>>>>>> 23b3c682d32f56589c980ad5eacc4d9bdbc962ac
 -<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
 +    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
          integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
@@ -5929,19 +6335,31 @@ Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
 +    </script>
 +    <!-- Vendor js -->
 +    <script src="{{url('admin')}}/js/vendor.min.js"></script>
+<<<<<<< HEAD
+
+=======
  
+>>>>>>> 23b3c682d32f56589c980ad5eacc4d9bdbc962ac
 -<!--Morris Chart-->
 -<script src="{{url('admin')}}/libs/morris-js/morris.min.js"></script>
 -<script src="{{url('admin')}}/libs/raphael/raphael.min.js"></script>
 +    <!--Morris Chart-->
 +    <script src="{{url('admin')}}/libs/morris-js/morris.min.js"></script>
 +    <script src="{{url('admin')}}/libs/raphael/raphael.min.js"></script>
+<<<<<<< HEAD
+
+=======
  
+>>>>>>> 23b3c682d32f56589c980ad5eacc4d9bdbc962ac
 -<!-- Dashboard init js-->
 -<script src="{{url('admin')}}/js/pages/dashboard.init.js"></script>
 +    <!-- Dashboard init js-->
 +    <script src="{{url('admin')}}/js/pages/dashboard.init.js"></script>
+<<<<<<< HEAD
+
+=======
  
+>>>>>>> 23b3c682d32f56589c980ad5eacc4d9bdbc962ac
 -<!-- App js -->
 -<script src="{{url('admin')}}/js/app.min.js"></script>
 -<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
@@ -5949,9 +6367,15 @@ Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
 +    <script src="{{url('admin')}}/js/app.min.js"></script>
 +    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
  </body>
+<<<<<<< HEAD
+
+ <!-- Mirrored from coderthemes.com/uplon/layouts/vertical/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 31 Oct 2020 19:25:02 GMT -->
+
+=======
  
  <!-- Mirrored from coderthemes.com/uplon/layouts/vertical/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 31 Oct 2020 19:25:02 GMT -->
  
+>>>>>>> 23b3c682d32f56589c980ad5eacc4d9bdbc962ac
 -</html>
 +</html>
 \ No newline at end of file
