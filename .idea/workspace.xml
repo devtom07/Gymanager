@@ -19,11 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="49a55a82-a09c-4fca-bbc3-6b576eb8fc71" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Staff/CalamviecController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Staff/CalamviecController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/main.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/main.blade.php" afterDir="false" />
-    </list>
+    <list default="true" id="49a55a82-a09c-4fca-bbc3-6b576eb8fc71" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -234,6 +230,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="387" y="222" width="582" height="357" key="#Notifications" timestamp="1605110844997">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state x="387" y="222" width="582" height="357" key="#Notifications/0.27.1366.741@0.27.1366.741" timestamp="1605110844997" />
     <state x="416" y="146" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1604549435257">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
