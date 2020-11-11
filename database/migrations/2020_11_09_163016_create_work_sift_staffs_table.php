@@ -15,13 +15,13 @@ class CreateWorkSiftStaffsTable extends Migration
     {
         Schema::create('work_sift_staffs', function (Blueprint $table) {
             $table->id(); //khóa chính
-            $table->unsignedBigInteger('work_sift_id');
-            $table->foreign('work_sift_id')->references('id')->on('work_sifts');
-            $table->date('date_start');
-            $table->date('date_end');
-            $table->unsignedBigInteger('staff_id');
-            $table->foreign('staff_id')->references('id')->on('staffs');
-            $table->timestamps();
+                $table->unsignedBigInteger('work_sift_id');
+                $table->foreign('work_sift_id')->references('id')->on('work_sifts');
+                $table->date('date_start');
+                $table->date('date_end');
+                $table->unsignedBigInteger('staff_id');
+                $table->foreign('staff_id')->references('id')->on('staffs');
+                $table->timestamps();
         });
     }
 
@@ -32,6 +32,6 @@ class CreateWorkSiftStaffsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('work_sift_staff');
+        Schema::dropIfExists('work_sift_staffs');
     }
 }
