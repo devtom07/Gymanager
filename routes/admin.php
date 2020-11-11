@@ -35,6 +35,7 @@ Route::get('/nhan-vien','Nhanvien\ListnhanvienController@index')->name('listnhan
 Route::get('/addnhanvien','Nhanvien\ListnhanvienController@create')->name('listnhanvien.add')->middleware('can:Staff');
 Route::get('/editnhanvien/{id}','Nhanvien\ListnhanvienController@edit')->name('listnhanvien.edit')->middleware('can:Staff');
 // Ca làm việc
+
 Route::get('/calamviec','Nhanvien\CalamviecController@index')->name('calamviec');
 Route::get('/addcalamviec','Nhanvien\CalamviecController@create')->name('calamviec.add');
 Route::post('/addcalamviec','Nhanvien\CalamviecController@store')->name('calamviec.add');
