@@ -42,8 +42,12 @@ Route::get('/nhan-vien','Nhanvien\ListnhanvienController@index')->name('listnhan
 Route::get('/addnhanvien','Nhanvien\ListnhanvienController@create')->name('listnhanvien.add');
 Route::get('/editnhanvien/{id}','Nhanvien\ListnhanvienController@edit')->name('listnhanvien.edit')->middleware('can:Staff');
 // Ca làm việc
-Route::get('/calamviec','Nhanvien\CalamviecController@index')->name('calamviec');
-Route::get('/addcalamviec','Nhanvien\CalamviecController@create')->name('calamviec.add');
+   Route::get('/calamviec','Nhanvien\CalamviecController@index')->name('calamviec');
+   Route::get('/addcalamviec','Nhanvien\CalamviecController@create')->name('calamviec.add');
+   Route::post('/addcalamviec','Nhanvien\CalamviecController@store')->name('calamviec.add');
+   Route::get('/edit/{id}','Nhanvien\CalamviecController@edit')->name('calamviec.edit');
+   Route::post('/edit/{id}','Nhanvien\CalamviecController@update')->name('calamviec.edit');
+   Route::get('/addcalamviec/delete/{id}','Nhanvien\CalamviecController@destroy')->name('calamviec.delete');
 //Ca làm việc nhân viên
 Route::get('/calamviecnhanvien','Nhanvien\CalamviecNhanVien@index')->name('calamviecnhanvien');
 Route::get('/addcalamviecnhanvien','Nhanvien\CalamviecNhanVien@create')->name('calamviecnhanvien.add');
