@@ -1,11 +1,12 @@
 <?php
 
-namespace App\Http\Controllers\Staff;
+namespace App\Http\Controllers\Nhanvien;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\WorkSift;
 
-class ListnhanvienController extends Controller
+class CalamviecNhanVien extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +15,7 @@ class ListnhanvienController extends Controller
      */
     public function index()
     {
-        return view('admin.nhanvien.list-nhanvien.index');
+        return view('admin.nhanvien.calamviec-nhanvien.index');
     }
 
     /**
@@ -24,7 +25,7 @@ class ListnhanvienController extends Controller
      */
     public function create()
     {
-        return view('admin.nhanvien.list-nhanvien.add');
+        return view('admin.nhanvien.calamviec-nhanvien.add');
     }
 
     /**
@@ -57,7 +58,7 @@ class ListnhanvienController extends Controller
      */
     public function edit($id)
     {
-        return view('admin.nhanvien.list-nhanvien.edit');
+        //
     }
 
     /**
