@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-<<<<<<< HEAD
   <component name="ChangeListManager">
     <list default="true" id="49a55a82-a09c-4fca-bbc3-6b576eb8fc71" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-=======
   <component name="BranchesTreeState">
     <expand>
       <path>
@@ -24,41 +22,37 @@
     <select />
   </component>
   <component name="ChangeListManager">
+
     <list default="true" id="49a55a82-a09c-4fca-bbc3-6b576eb8fc71" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Staff/CalamviecController.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Staff/CalamviecNhanVien.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/main.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/main.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/admin.php" afterDir="false" />
->>>>>>> manhnd
     </list>
+
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-<<<<<<< HEAD
   <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
-=======
-  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
->>>>>>> manhnd
+
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
   </component>
   <component name="Git.Settings">
-<<<<<<< HEAD
-=======
+
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
         <entry key="$PROJECT_DIR$" value="manh2" />
       </map>
     </option>
->>>>>>> manhnd
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
-<<<<<<< HEAD
+
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php80" />
       <path value="$PROJECT_DIR$/vendor/symfony/console" />
       <path value="$PROJECT_DIR$/vendor/symfony/http-foundation" />
@@ -175,7 +169,6 @@
       <path value="$PROJECT_DIR$/vendor/markbaker/complex" />
       <path value="$PROJECT_DIR$/vendor/phpoffice/phpspreadsheet" />
       <path value="$PROJECT_DIR$/vendor/maennchen/zipstream-php" />
-=======
       <path value="$PROJECT_DIR$/vendor/composer" />
       <path value="$PROJECT_DIR$/vendor/psr/log" />
       <path value="$PROJECT_DIR$/vendor/psr/http-client" />
@@ -294,7 +287,6 @@
       <path value="$PROJECT_DIR$/vendor/phpdocumentor/type-resolver" />
       <path value="$PROJECT_DIR$/vendor/laravelcollective/html" />
       <path value="$PROJECT_DIR$/vendor/spatie/laravel-permission" />
->>>>>>> manhnd
     </include_path>
   </component>
   <component name="ProjectId" id="1jfqxGD1SNIbJ7tHqRCS1GosSkO" />
@@ -306,11 +298,11 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../laravel-training.local/public_html/laravel-training" />
-<<<<<<< HEAD
+
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
-=======
+
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
@@ -328,7 +320,6 @@
       <recent name="$PROJECT_DIR$/public/admin" />
     </key>
   </component>
->>>>>>> manhnd
   <component name="RunManager">
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner scope="XML" />
@@ -344,8 +335,7 @@
       <option name="presentableId" value="Default" />
       <updated>1604205738627</updated>
       <workItem from="1604205739766" duration="1057000" />
-<<<<<<< HEAD
-=======
+
       <workItem from="1604540024006" duration="24543000" />
       <workItem from="1604626712882" duration="6819000" />
       <workItem from="1604745727041" duration="883000" />
@@ -357,16 +347,16 @@
       <workItem from="1604894703171" duration="1610000" />
       <workItem from="1604930960858" duration="10357000" />
       <workItem from="1604973154457" duration="27813000" />
->>>>>>> manhnd
+
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-<<<<<<< HEAD
+
   <component name="WindowStateProjectService">
-=======
+
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
@@ -380,6 +370,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="387" y="222" width="582" height="357" key="#Notifications" timestamp="1605110844997">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state x="387" y="222" width="582" height="357" key="#Notifications/0.27.1366.741@0.27.1366.741" timestamp="1605110844997" />
     <state x="416" y="146" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1604549435257">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
@@ -388,13 +382,11 @@
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state x="416" y="155" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.27.1366.741@0.27.1366.741" timestamp="1605001288490" />
->>>>>>> manhnd
     <state x="466" y="155" width="424" height="491" key="FileChooserDialogImpl" timestamp="1604207008527">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state x="466" y="155" width="424" height="491" key="FileChooserDialogImpl/0.27.1366.741@0.27.1366.741" timestamp="1604207008527" />
-<<<<<<< HEAD
-=======
+
     <state width="1320" height="172" key="GridCell.Tab.0.bottom" timestamp="1604833915589">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
@@ -415,10 +407,10 @@
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state x="132" y="86" width="1092" height="629" key="MergeDialog/0.27.1366.741@0.27.1366.741" timestamp="1604830217440" />
-    <state x="408" y="91" width="539" height="619" key="git4idea.branch.GitSmartOperationDialog" timestamp="1604830337729">
+    <state x="408" y="91" width="539" height="619" key="git4idea.branch.GitSmartOperationDialog" timestamp="1605038153635">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state x="408" y="91" width="539" height="619" key="git4idea.branch.GitSmartOperationDialog/0.27.1366.741@0.27.1366.741" timestamp="1604830337729" />
->>>>>>> manhnd
+
   </component>
 </project>
