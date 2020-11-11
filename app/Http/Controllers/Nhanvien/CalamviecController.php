@@ -59,15 +59,7 @@ class CalamviecController extends Controller
      */
     public function show($id)
     {
-        $work_sifts = new WorkSift;
-        $work_sifts->name = $request->name;
-        $work_sifts->hour_start = $request->hour_start;
-        $work_sifts->hour_start_center = $request->hour_start_center;
-        $work_sifts->hour_end_center = $request->hour_end_center;
-        $work_sifts->hour_end = $request->hour_end;
-        $work_sifts->status = $request->status;
-        $work_sifts->save();
-        return redirect('calamviec');
+        //
     }
 
     /**
