@@ -32,50 +32,46 @@
                            <div class="form-group">
                               <label for="exampleInputEmail1">Tên tài khoản (*)</label>
                               <input name="name" type="text" class="form-control" id="exampleInputEmail1" placeholder="">
-                               @if ($errors->has('name'))
-                                   <p style="color: red">{{ $errors->first('name') }}</p>
-                               @endif
                            </div>
                            <div class="form-group">
                               <label for="exampleInputEmail1">Mật khẩu (*)</label>
                               <input name="password" class="form-control" type="password" value="" id="example-date-input">
-                               @if ($errors->has('password'))
-                                   <p style="color: red">{{ $errors->first('password') }}</p>
-                               @endif
+                           </div>
+                           <div class="form-group">
+                              <label for="exampleInputPassword1">Xác nhận mật khẩu (*)</label>
+                              <input name="password_1" class="form-control" type="password" value="" id="example-time-input">
                            </div>
                            <div class="form-group">
                               <label for="exampleInputPassword1">Email (*)</label>
                               <input name="email" class="form-control" type="text" value="" id="example-time-input">
-                               @if ($errors->has('email'))
-                                   <p style="color: red">{{ $errors->first('email') }}</p>
-                               @endif
                            </div>
                         </div>
                         <div class="col-xl-6">
                            <div class="form-group">
                               <label>Phân loại tài khoản (*)</label>
-                              <select name="role" class="form-control" id="exampleSelect1">
-                                  <option></option>
-                                  @foreach($role as $roles)
-                                 <option value="{{$roles->id}}">{{$roles->name}}</option>
-                                  @endforeach
+                              <select class="form-control" id="exampleSelect1">
+                                 <option></option>
+                                 <option>Quản trị cấp cao</option>
+                                 <option>Nhân viên</option>
+                                 <option>Khách hàng</option>
                               </select>
                            </div>
                            <div class="form-group">
                               <label>Nhóm quyền (*)</label>
-                              <select multiple name="permission[]" class="form-control" id="exampleSelect1">
-                                  @foreach($permission as $permissions)
-                                 <option value="{{$permissions->id}}">{{$permissions->name}}</option>
-                                  @endforeach
+                              <select class="form-control" id="exampleSelect1">
+                                 <option></option>
+                                 <option>admin</option>
+                                 <option>maketing</option>
+                                 <option>nhân viên</option>
                               </select>
                            </div>
                            <div class="form-group">
                               <label>Nhân viên (*)</label>
                               <select class="form-control" id="exampleSelect1">
                                  <option></option>
-                                  @foreach($staff as $staffs)
-                                 <option value="{{$staffs->id}}">{{$staffs->name}}</option>
-                                  @endforeach
+                                 <option>Long</option>
+                                 <option>Mạnh</option>
+                                 <option>Hoành</option>
                               </select>
                            </div>
                         </div>
