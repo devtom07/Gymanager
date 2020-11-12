@@ -13,7 +13,8 @@ class UserController extends Controller
 {
     public function index()
     {
-        return view('admin.users.account.index');
+        $user = User::with('staff')->get();
+        return view('admin.users.account.index',compact('user'));
     }
 
 
