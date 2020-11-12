@@ -9,13 +9,22 @@ use App\Http\Requests\ValidateFormEditStaff;
 
 class CalamviecController extends Controller
 {
-
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
     public function index()
     {
         $data['listworkSift'] = WorkSift::all();
-        return view('admin.nhanvien.calamviec.index',compact('data'));
+        return view('admin.nhanvien.calamviec.index', $data);
     }
 
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
     public function create()
 
     {

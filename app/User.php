@@ -37,4 +37,14 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
+    public function role()
+    {
+        return $this->belongsToMany(Role::class, 'role_users', 'user_id', 'role_id');
+    }
+
+    public function hasPermission(Permission $permission){
+        $check = !!optional(optional($this->role)->permission)->contains($permission);
+                 var_dump($check);
+        return $check;
+    }
 }
