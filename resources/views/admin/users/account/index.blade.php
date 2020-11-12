@@ -83,7 +83,7 @@
                                         @if($users->hasAnyRole('Super Admin'))
                                        <td data-org-colspan="1" data-priority="1" data-columns="tech-companies-1-col-3">Toàn bộ quyền</td>
                                         @else
-                                            <td data-org-colspan="1" data-priority="1" data-columns="tech-companies-1-col-3">{{$users->getPermissionNames()}}</td>
+                                                <td data-org-colspan="1" data-priority="1" data-columns="tech-companies-1-col-3">{{$users->getPermissionNames()}}</td>
 
                                         @endif
                                        <td data-org-colspan="1" data-priority="3" data-columns="tech-companies-1-col-4"><input type="checkbox" readonly></td>
