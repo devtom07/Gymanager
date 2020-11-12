@@ -1,3 +1,5 @@
+
+
 <?php
 use Illuminate\Support\Facades\Route;
 
@@ -12,7 +14,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 //login
-
 Route::get('dangnhap','AuthurController@admin')->name('admin');
 Route::match(['post','get'],'/login','AuthurController@login')->name('login');
 Route::get('/logout','AuthurController@logout')->name('logout');
@@ -34,8 +35,13 @@ Route::get('/nhan-vien','Nhanvien\ListnhanvienController@index')->name('listnhan
 Route::get('/addnhanvien','Nhanvien\ListnhanvienController@create')->name('listnhanvien.add');
 Route::get('/editnhanvien/{id}','Nhanvien\ListnhanvienController@edit')->name('listnhanvien.edit');
 // Ca làm việc
-Route::get('/calamviec','Nhanvien\CalamviecController@index')->name('calamviec');
-Route::get('/addcalamviec','Nhanvien\CalamviecController@create')->name('calamviec.add');
+Route::get('/calamviec','CalamviecController@index')->name('calamviec');
+Route::get('/addcalamviec','CalamviecController@create')->name('calamviec.add');
+Route::post('/addcalamviec','CalamviecController@store')->name('calamviec.add');
+Route::get('/edit/{id}','CalamviecController@edit')->name('calamviec.edit');
+Route::post('/edit/{id}','CalamviecController@update')->name('calamviec.edit');
+Route::get('/addcalamviec/delete/{id}','Nhanvien\CalamviecController@destroy')->name('calamviec.delete');
+
 //Ca làm việc nhân viên
 Route::get('/calamviecnhanvien','Nhanvien\CalamviecNhanVien@index')->name('calamviecnhanvien');
 Route::get('/addcalamviecnhanvien','Nhanvien\CalamviecNhanVien@create')->name('calamviecnhanvien.add');

@@ -13,7 +13,7 @@ class ValidateFormAddStaff extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +24,31 @@ class ValidateFormAddStaff extends FormRequest
     public function rules()
     {
         return [
-            //
+            'name' => 'required|unique:work_sifts,name',
+            'hour_start' => 'required:work_sifts,hour_start ',
+            'hour_start_center' => 'required:work_sifts,hour_start_center',
+            'hour_end_center' => 'required:work_sifts,hour_end_center',
+            'hour_end' => 'required:work_sifts,hour_end',
+
+        ];
+    }
+    public function messages()
+    {
+        return [
+            'required' => ':attribute không được để trống',
+            'name.unique' => 'Ca này đã có !'
+
+        ];
+    }
+    public function attributes()
+    {
+        return [
+            'name' => 'Ca',
+            'hour_start' => 'Giờ bắt đầu',
+            'hour_start_center' => 'Giờ nghỉ trưa',
+            'hour_end_center' => 'Kết thúc giờ nghỉ trưa',
+            'hour_end' => 'Giờ kết thúc',
+
         ];
     }
 }
