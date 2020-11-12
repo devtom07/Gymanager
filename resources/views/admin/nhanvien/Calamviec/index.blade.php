@@ -204,7 +204,7 @@
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                                @foreach($listworkSift as $listwork)
+                                                @foreach($listWorkSift as $listwork)
                                                 <tr>
                                                     <th data-org-colspan="1" data-columns="tech-companies-1-col-0"><span
                                                             class="co-name">{{$listwork->name}}</span></th>
