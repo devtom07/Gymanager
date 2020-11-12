@@ -27,12 +27,6 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         Schema::defaultStringLength(191);
-        if(!$this->app->runningInConsole()){
-        foreach(Permission::all() as $_pms){
-            Gate::define($_pms->name,function($user) use ($_pms){
-              return $user->hasPermission($_pms);
-            });
-        }
-    }
+
     }
 }
