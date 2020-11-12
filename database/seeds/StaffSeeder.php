@@ -20,7 +20,8 @@ class StaffSeeder extends Seeder
          'status' => 'Đi làm' ,
          'contract' => 'Hợp đồng lao động',
          'wage' => '1000000',
-         'title' => 'Quản lý chính'
+         'title' => 'Quản lý chính',
+         'user_id' => '1'
      ]);
         DB::table('staffs')->insert([
             'code' => substr(md5(microtime()), rand(0, 26), 5),
@@ -31,7 +32,10 @@ class StaffSeeder extends Seeder
             'status' => 'Đi làm' ,
             'contract' => 'Hợp đồng lao động',
             'wage' => '1000000',
-            'title' => 'Quản lý khách hàng'
+            'title' => 'Quản lý khách hàng',
+            'user_id' => '2'
+
+
         ]);
         DB::table('staffs')->insert([
             'code' => substr(md5(microtime()), rand(0, 26), 5),
@@ -42,7 +46,9 @@ class StaffSeeder extends Seeder
             'status' => 'Đi làm' ,
             'contract' => 'Hợp đồng lao động',
             'wage' => '1000000',
-            'title' => 'PT'
+            'title' => 'PT',
+            'user_id' => '3'
+
         ]);
         DB::table('staffs')->insert([
             'code' => substr(md5(microtime()), rand(0, 26), 5),
@@ -53,7 +59,9 @@ class StaffSeeder extends Seeder
             'status' => 'Đi làm' ,
             'contract' => 'Hợp đồng lao động',
             'wage' => '1000000',
-            'title' => 'Quản lý tài chính'
+            'title' => 'Quản lý tài chính',
+            'user_id' => '4'
+
         ]);
         DB::table('staffs')->insert([
             'code' => substr(md5(microtime()), rand(0, 26), 5),
@@ -64,7 +72,10 @@ class StaffSeeder extends Seeder
             'status' => 'Đi làm' ,
             'contract' => 'Hợp đồng lao động',
             'wage' => '1000000',
-            'title' => 'Quản lý dịch vụ'
+            'title' => 'Quản lý dịch vụ',
+            'user_id' => '5'
+
+
         ]);
     }
 }
