@@ -32,48 +32,63 @@
                            <div class="form-group">
                               <label for="exampleInputEmail1">Tên tài khoản (*)</label>
                               <input name="name" type="text" class="form-control" id="exampleInputEmail1" placeholder="">
+                               @if($errors->first('name'))
+                                   <p class="text-danger">{{ $errors->first('name') }}</p>
+                               @endif
                            </div>
                            <div class="form-group">
                               <label for="exampleInputEmail1">Mật khẩu (*)</label>
                               <input name="password" class="form-control" type="password" value="" id="example-date-input">
+                               @if($errors->first('password'))
+                                   <p class="text-danger">{{ $errors->first('password') }}</p>
+                               @endif
                            </div>
                            <div class="form-group">
                               <label for="exampleInputPassword1">Xác nhận mật khẩu (*)</label>
-                              <input name="password_1" class="form-control" type="password" value="" id="example-time-input">
+                              <input name="password_confirm" class="form-control" type="password" value="" id="example-time-input">
+                               @if($errors->first('password_confirm'))
+                                   <p class="text-danger">{{ $errors->first('password_confirm') }}</p>
+                               @endif
                            </div>
                            <div class="form-group">
                               <label for="exampleInputPassword1">Email (*)</label>
                               <input name="email" class="form-control" type="text" value="" id="example-time-input">
+                               @if($errors->first('email'))
+                                   <p class="text-danger">{{ $errors->first('email') }}</p>
+                               @endif
                            </div>
                         </div>
                         <div class="col-xl-6">
                            <div class="form-group">
                               <label>Phân loại tài khoản (*)</label>
-                              <select class="form-control" id="exampleSelect1">
-                                 <option></option>
-                                 <option>Quản trị cấp cao</option>
-                                 <option>Nhân viên</option>
-                                 <option>Khách hàng</option>
+                              <select multiple name="role[]" class="form-control" id="exampleSelect1">
+                                  @foreach($role as $key => $roles )
+                                 <option value="{{$roles->id}}">{{$roles->name}}</option>
+                                  @endforeach
                               </select>
-                           </div>
-                           <div class="form-group">
-                              <label>Nhóm quyền (*)</label>
-                              <select class="form-control" id="exampleSelect1">
-                                 <option></option>
-                                 <option>admin</option>
-                                 <option>maketing</option>
-                                 <option>nhân viên</option>
-                              </select>
+                               @if($errors->first('role'))
+                                   <p class="text-danger">{{ $errors->first('role') }}</p>
+                               @endif
                            </div>
                            <div class="form-group">
                               <label>Nhân viên (*)</label>
-                              <select class="form-control" id="exampleSelect1">
+                              <select name="staff_user" class="form-control" id="exampleSelect1">
                                  <option></option>
-                                 <option>Long</option>
-                                 <option>Mạnh</option>
-                                 <option>Hoành</option>
+                                  @foreach($staff as $key => $staffs )
+                                      <option value="{{$staffs->id}}">{{$staffs->name}}</option>
+                                  @endforeach
                               </select>
+                               @if($errors->first('staff'))
+                                   <p class="text-danger">{{ $errors->first('staff') }}</p>
+                               @endif
                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Phone (*)</label>
+                                <input name="phone" class="form-control" type="text" value="" id="example-time-input">
+                                @if($errors->first('phone'))
+                                    <p class="text-danger">{{ $errors->first('phone') }}</p>
+                                @endif
+                            </div>
                         </div>
                         <button type="submit" class="btn btn-primary">Submit</button>
                      </div>

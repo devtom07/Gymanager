@@ -24,8 +24,6 @@ class CreateStaffsTable extends Migration
             $table->string('contract');
             $table->integer('wage');
             $table->string('title');
-            $table->unsignedBigInteger('user_id');
-            $table->foreign('user_id')->references('id')->on('users');
             $table->timestamps();
         });
     }
