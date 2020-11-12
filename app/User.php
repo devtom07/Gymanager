@@ -19,7 +19,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'email', 'password','staff_id','phone'
     ];
 
     /**
@@ -40,7 +40,7 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 public  function staff(){
-    return $this->hasOne('App\Staff','user_id','id');
+    return $this->belongsTo('App\Staff','staff_id','id');
 }
 
 
