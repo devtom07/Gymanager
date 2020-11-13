@@ -28,9 +28,9 @@ class ValidateFormaddUser extends FormRequest
             'phone'=>'required|min:10|max:11|regex:[^[0-9\-\+]{9,15}$]',
             'password' => 'required|min:6|max:32|regex:[^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$]',
             'password_confirm' => 'required|same:password',
-            'staff_user' => 'required'
-
-
+            'staff_user' => 'required',
+//            'permission' => 'required',
+             'role'    => 'required'
         ];
     }
     public function messages()
@@ -55,6 +55,8 @@ class ValidateFormaddUser extends FormRequest
             'password_confirm.same' => 'Hai mật khẩu không trùng nhau',
             'role.required' => 'Không được phép để trống',
             'staff_user.required' => 'Không được phép để trống',
+            'permission.required' => 'Không được phép để trống',
+
 
         ];
     }

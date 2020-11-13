@@ -41,8 +41,9 @@ class UserController extends Controller
            'password' => Hash::make($request->password),
         ]);
        $roles = $request->role;
-        $user->assignRole([$roles]);
-
+//       $permission = $request->permission;
+        $user->assignRole($roles);
+//        $user->givePermissionTo([$permission]);
         DB::commit();
         Alert()->success('Thành công','Bạn đã thêm tài khoản thành công');
         return redirect()->route('user.index');
