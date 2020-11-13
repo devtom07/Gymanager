@@ -59,13 +59,12 @@
                                  <thead>
                                     <tr>
                                        <th id="tech-companies-1-col-0-clone">STT</th>
-                                       <th data-priority="1" id="tech-companies-1-col-1-clone">Loại tài khoản</th>
-                                       <th data-priority="3" id="tech-companies-1-col-2-clone">Tài khoản</th>
-                                       <th data-priority="1" id="tech-companies-1-col-3-clone">Mã nhân viên</th>
-                                       <th data-priority="3" id="tech-companies-1-col-4-clone">Nhóm quyền</th>
-                                       <th data-priority="3" id="tech-companies-1-col-5-clone">Khoá</th>
+                                       <th data-priority="3" id="tech-companies-1-col-2-clone">Tên tài khoản</th>
                                        <th data-priority="6" id="tech-companies-1-col-6-clone">Email</th>
-                                       <th data-priority="6" id="tech-companies-1-col-7-clone">Đăng nhập cuối</th>
+                                        <th data-priority="3" id="tech-companies-1-col-5-clone">Trạng thái phê duyệt</th>
+                                        <th data-priority="3" id="tech-companies-1-col-5-clone">Trạng thái khóa</th>
+                                        <th data-priority="3" id="tech-companies-1-col-5-clone">Ngày tạo</th>
+                                        <th data-priority="6" id="tech-companies-1-col-7-clone">Đăng nhập cuối</th>
                                        <th data-priority="6" id="tech-companies-1-col-8-clone">Action</th>
                                     </tr>
                                  </thead>
@@ -73,22 +72,12 @@
                                  @foreach($user as $key => $users)
                                     <tr>
                                        <th data-org-colspan="1" data-columns="tech-companies-1-col-0">{{$key+1}}</th>
-                                       <td data-org-colspan="1" data-priority="1" data-columns="tech-companies-1-col-1"><span class="co-name">{{$users->getRoleNames()}}</span></td>
                                        <td data-org-colspan="1" data-priority="1" data-columns="tech-companies-1-col-1">{{$users->name}}</td>
-                                       <td data-org-colspan="1" data-priority="3" data-columns="tech-companies-1-col-2">
-                                           @if($users->staff)
-                                               {{$users->staff->code}}
-                                           @endif
-                                       </td>
-                                        @if($users->hasAnyRole('Super Admin'))
-                                       <td data-org-colspan="1" data-priority="1" data-columns="tech-companies-1-col-3">Toàn bộ quyền</td>
-                                        @else
-                                                <td data-org-colspan="1" data-priority="1" data-columns="tech-companies-1-col-3">{{$users->getPermissionNames()}}</td>
-
-                                        @endif
-                                       <td data-org-colspan="1" data-priority="3" data-columns="tech-companies-1-col-4"><input type="checkbox" readonly></td>
                                        <td data-org-colspan="1" data-priority="3" data-columns="tech-companies-1-col-5">{{$users->email}}</td>
-                                       <td data-org-colspan="1" data-priority="6" data-columns="tech-companies-1-col-6">{{$users->last_login}}</td>
+                                        <td data-org-colspan="1" data-priority="3" data-columns="tech-companies-1-col-4">Đã phê duyệt</td>
+                                        <td data-org-colspan="1" data-priority="3" data-columns="tech-companies-1-col-4"><i style="color: #00aced" class="fas fa-lock-open"></i></td>
+                                        <td data-org-colspan="1" data-priority="6" data-columns="tech-companies-1-col-6">11/11/2020</td>
+                                        <td data-org-colspan="1" data-priority="6" data-columns="tech-companies-1-col-6">{{$users->last_login}}</td>
                                        <td data-org-colspan="1" data-priority="6" data-columns="tech-companies-1-col-8">
                                           <div class="btn-group mt-1 mr-1">
                                              <button class="btn btn-success btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
