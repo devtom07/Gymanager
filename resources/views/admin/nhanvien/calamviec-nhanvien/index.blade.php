@@ -108,7 +108,7 @@
                                       @foreach($work_staffs as $work_staff)
                                        <tr>
                                           <th data-org-colspan="1" data-columns="tech-companies-1-col-0"><span class="co-name">{{ $work_staff->WorkSift->name }}</span></th>
-                                          <td data-org-colspan="1" data-priority="1" data-columns="tech-companies-1-col-1">{{ $work_staff->staff_id }}</td>
+                                          <td data-org-colspan="1" data-priority="1" data-columns="tech-companies-1-col-1">{{ $work_staff->Staff->name }}</td>
                                           <td data-org-colspan="1" data-priority="3" data-columns="tech-companies-1-col-2">{{ $work_staff->date_start }}</td>
                                           <td data-org-colspan="1" data-priority="1" data-columns="tech-companies-1-col-3">{{ $work_staff->cycle }}</td>
                                           <td data-org-colspan="1" data-priority="3" data-columns="tech-companies-1-col-4">{{ $work_staff->work_schedule_name }}</td>
