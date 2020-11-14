@@ -84,15 +84,21 @@ class ComposerStaticInitd18bb394463e63c932b02d3a9cc20a30
         'aa53dcba601214d17ad405b7c291b7e8' => __DIR__ . '/..' . '/markbaker/matrix/classes/src/operations/multiply.php',
         '75c79eb1b25749b05a47976f32b0d8a2' => __DIR__ . '/..' . '/markbaker/matrix/classes/src/operations/divideby.php',
         '6ab8ad87a734f276a6bcd5a0fe1289be' => __DIR__ . '/..' . '/markbaker/matrix/classes/src/operations/divideinto.php',
+
         'e39a8b23c42d4e1452234d762b03835a' => __DIR__ . '/..' . '/ramsey/uuid/src/functions.php',
+
         '538ca81a9a966a6716601ecf48f4eaef' => __DIR__ . '/..' . '/opis/closure/functions.php',
+        'e39a8b23c42d4e1452234d762b03835a' => __DIR__ . '/..' . '/ramsey/uuid/src/functions.php',
         'f0906e6318348a765ffb6eb24e0d0938' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Foundation/helpers.php',
         '58571171fd5812e6e447dce228f52f4d' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Support/helpers.php',
         '9cdd7b9056abc3081735233ba9dd9c7f' => __DIR__ . '/..' . '/facade/flare-client-php/src/helpers.php',
         '8825ede83f2f289127722d4e842cf7e8' => __DIR__ . '/..' . '/symfony/polyfill-intl-grapheme/bootstrap.php',
         'b6b991a57620e2fb6b2f66f03fe9ddc2' => __DIR__ . '/..' . '/symfony/string/Resources/functions.php',
+        'b6ec61354e97f32c0ae683041c78392a' => __DIR__ . '/..' . '/scrivo/highlight.php/HighlightUtilities/functions.php',
+        '8825ede83f2f289127722d4e842cf7e8' => __DIR__ . '/..' . '/symfony/polyfill-intl-grapheme/bootstrap.php',
         'ed962a97bd972bc82007176b647d4e36' => __DIR__ . '/..' . '/facade/ignition/src/helpers.php',
         '6124b4c8570aa390c21fafd04a26c69f' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
+        'b6b991a57620e2fb6b2f66f03fe9ddc2' => __DIR__ . '/..' . '/symfony/string/Resources/functions.php',
         '6b34c85f7b1ad6faa15aa12109e030f2' => __DIR__ . '/..' . '/realrashid/sweet-alert/src/functions.php',
         '377b22b161c09ed6e5152de788ca020a' => __DIR__ . '/..' . '/spatie/laravel-permission/src/helpers.php',
     );
@@ -267,11 +273,13 @@ class ComposerStaticInitd18bb394463e63c932b02d3a9cc20a30
         ),
         'Yajra\\DataTables\\' => 
         array (
-            0 => __DIR__ . '/..' . '/yajra/laravel-datatables-editor/src',
-            1 => __DIR__ . '/..' . '/yajra/laravel-datatables-fractal/src',
-            2 => __DIR__ . '/..' . '/yajra/laravel-datatables-oracle/src',
+
+            0 => __DIR__ . '/..' . '/yajra/laravel-datatables-buttons/src',
+            1 => __DIR__ . '/..' . '/yajra/laravel-datatables-editor/src',
+            2 => __DIR__ . '/..' . '/yajra/laravel-datatables-fractal/src',
             3 => __DIR__ . '/..' . '/yajra/laravel-datatables-html/src',
-            4 => __DIR__ . '/..' . '/yajra/laravel-datatables-buttons/src',
+            4 => __DIR__ . '/..' . '/yajra/laravel-datatables-oracle/src',
+
         ),
         'XdgBaseDir\\' => 
         array (
@@ -611,11 +619,13 @@ class ComposerStaticInitd18bb394463e63c932b02d3a9cc20a30
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
         'App\\Http\\Controllers\\AdminController' => __DIR__ . '/../..' . '/app/Http/Controllers/AdminController.php',
         'App\\Http\\Controllers\\AuthurController' => __DIR__ . '/../..' . '/app/Http/Controllers/AuthurController.php',
+        'App\\Http\\Controllers\\CalamviecController' => __DIR__ . '/../..' . '/app/Http/Controllers/Nhanvien/CalamviecController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
         'App\\Http\\Controllers\\CustomerController' => __DIR__ . '/../..' . '/app/Http/Controllers/CustomerController.php',
+
+        'App\\Http\\Controllers\\ListnhanvienController' => __DIR__ . '/../..' . '/app/Http/Controllers/Nhanvien/ListnhanvienController.php',
         'App\\Http\\Controllers\\Nhanvien\\CalamviecNhanVien' => __DIR__ . '/../..' . '/app/Http/Controllers/Nhanvien/CalamviecNhanVien.php',
-        'App\\Http\\Controllers\\Nhanvien\\ListnhanvienController' => __DIR__ . '/../..' . '/app/Http/Controllers/Nhanvien/ListnhanvienController.php',
-        'App\\Http\\Controllers\\Nhanvien\\WorkSiftStaffController' => __DIR__ . '/../..' . '/app/Http/Controllers/Nhanvien/WorkSiftStaffController.php',
+        'App\\Http\\Controllers\\UserController' => __DIR__ . '/../..' . '/app/Http/Controllers/Users/UserController.php',
         'App\\Http\\Controllers\\Users\\NhomquyenController' => __DIR__ . '/../..' . '/app/Http/Controllers/Users/NhomquyenController.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
         'App\\Http\\Middleware\\Authenticate' => __DIR__ . '/../..' . '/app/Http/Middleware/Authenticate.php',
@@ -637,6 +647,7 @@ class ComposerStaticInitd18bb394463e63c932b02d3a9cc20a30
         'App\\Providers\\BroadcastServiceProvider' => __DIR__ . '/../..' . '/app/Providers/BroadcastServiceProvider.php',
         'App\\Providers\\EventServiceProvider' => __DIR__ . '/../..' . '/app/Providers/EventServiceProvider.php',
         'App\\Providers\\RouteServiceProvider' => __DIR__ . '/../..' . '/app/Providers/RouteServiceProvider.php',
+        'App\\Staff' => __DIR__ . '/../..' . '/app/Models/Staff.php',
         'App\\User' => __DIR__ . '/../..' . '/app/User.php',
         'Asm89\\Stack\\Cors' => __DIR__ . '/..' . '/asm89/stack-cors/src/Cors.php',
         'Asm89\\Stack\\CorsService' => __DIR__ . '/..' . '/asm89/stack-cors/src/CorsService.php',
@@ -738,7 +749,6 @@ class ComposerStaticInitd18bb394463e63c932b02d3a9cc20a30
         'Collective\\Html\\HtmlServiceProvider' => __DIR__ . '/..' . '/laravelcollective/html/src/HtmlServiceProvider.php',
         'Complex\\Complex' => __DIR__ . '/..' . '/markbaker/complex/classes/src/Complex.php',
         'Complex\\Exception' => __DIR__ . '/..' . '/markbaker/complex/classes/src/Exception.php',
-        'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
         'Cron\\AbstractField' => __DIR__ . '/..' . '/dragonmantank/cron-expression/src/Cron/AbstractField.php',
         'Cron\\CronExpression' => __DIR__ . '/..' . '/dragonmantank/cron-expression/src/Cron/CronExpression.php',
         'Cron\\DayOfMonthField' => __DIR__ . '/..' . '/dragonmantank/cron-expression/src/Cron/DayOfMonthField.php',
@@ -4473,6 +4483,7 @@ class ComposerStaticInitd18bb394463e63c932b02d3a9cc20a30
         'RolePermissionSeeder' => __DIR__ . '/../..' . '/database/seeds/RolePermissionSeeder.php',
         'RoleSeeder' => __DIR__ . '/../..' . '/database/seeds/RoleSeeder.php',
         'RoleUserSeeder' => __DIR__ . '/../..' . '/database/seeds/RoleUserSeeder.php',
+
         'SebastianBergmann\\CliParser\\AmbiguousOptionException' => __DIR__ . '/..' . '/sebastian/cli-parser/src/exceptions/AmbiguousOptionException.php',
         'SebastianBergmann\\CliParser\\Exception' => __DIR__ . '/..' . '/sebastian/cli-parser/src/exceptions/Exception.php',
         'SebastianBergmann\\CliParser\\OptionDoesNotAllowArgumentException' => __DIR__ . '/..' . '/sebastian/cli-parser/src/exceptions/OptionDoesNotAllowArgumentException.php',
@@ -4480,6 +4491,7 @@ class ComposerStaticInitd18bb394463e63c932b02d3a9cc20a30
         'SebastianBergmann\\CliParser\\RequiredOptionArgumentMissingException' => __DIR__ . '/..' . '/sebastian/cli-parser/src/exceptions/RequiredOptionArgumentMissingException.php',
         'SebastianBergmann\\CliParser\\UnknownOptionException' => __DIR__ . '/..' . '/sebastian/cli-parser/src/exceptions/UnknownOptionException.php',
         'SebastianBergmann\\CodeCoverage\\BranchAndPathCoverageNotSupportedException' => __DIR__ . '/..' . '/phpunit/php-code-coverage/src/Exception/BranchAndPathCoverageNotSupportedException.php',
+
         'SebastianBergmann\\CodeCoverage\\CodeCoverage' => __DIR__ . '/..' . '/phpunit/php-code-coverage/src/CodeCoverage.php',
         'SebastianBergmann\\CodeCoverage\\CrapIndex' => __DIR__ . '/..' . '/phpunit/php-code-coverage/src/CrapIndex.php',
         'SebastianBergmann\\CodeCoverage\\DeadCodeDetectionNotSupportedException' => __DIR__ . '/..' . '/phpunit/php-code-coverage/src/Exception/DeadCodeDetectionNotSupportedException.php',
@@ -4858,6 +4870,7 @@ class ComposerStaticInitd18bb394463e63c932b02d3a9cc20a30
         'Symfony\\Component\\EventDispatcher\\Debug\\TraceableEventDispatcher' => __DIR__ . '/..' . '/symfony/event-dispatcher/Debug/TraceableEventDispatcher.php',
         'Symfony\\Component\\EventDispatcher\\Debug\\WrappedListener' => __DIR__ . '/..' . '/symfony/event-dispatcher/Debug/WrappedListener.php',
         'Symfony\\Component\\EventDispatcher\\DependencyInjection\\AddEventAliasesPass' => __DIR__ . '/..' . '/symfony/event-dispatcher/DependencyInjection/AddEventAliasesPass.php',
+        'Symfony\\Component\\EventDispatcher\\DependencyInjection\\ExtractingEventDispatcher' => __DIR__ . '/..' . '/symfony/event-dispatcher/DependencyInjection/RegisterListenersPass.php',
         'Symfony\\Component\\EventDispatcher\\DependencyInjection\\RegisterListenersPass' => __DIR__ . '/..' . '/symfony/event-dispatcher/DependencyInjection/RegisterListenersPass.php',
         'Symfony\\Component\\EventDispatcher\\EventDispatcher' => __DIR__ . '/..' . '/symfony/event-dispatcher/EventDispatcher.php',
         'Symfony\\Component\\EventDispatcher\\EventDispatcherInterface' => __DIR__ . '/..' . '/symfony/event-dispatcher/EventDispatcherInterface.php',
@@ -5219,6 +5232,7 @@ class ComposerStaticInitd18bb394463e63c932b02d3a9cc20a30
         'Symfony\\Component\\Routing\\Loader\\GlobFileLoader' => __DIR__ . '/..' . '/symfony/routing/Loader/GlobFileLoader.php',
         'Symfony\\Component\\Routing\\Loader\\ObjectLoader' => __DIR__ . '/..' . '/symfony/routing/Loader/ObjectLoader.php',
         'Symfony\\Component\\Routing\\Loader\\PhpFileLoader' => __DIR__ . '/..' . '/symfony/routing/Loader/PhpFileLoader.php',
+        'Symfony\\Component\\Routing\\Loader\\ProtectedPhpFileLoader' => __DIR__ . '/..' . '/symfony/routing/Loader/PhpFileLoader.php',
         'Symfony\\Component\\Routing\\Loader\\XmlFileLoader' => __DIR__ . '/..' . '/symfony/routing/Loader/XmlFileLoader.php',
         'Symfony\\Component\\Routing\\Loader\\YamlFileLoader' => __DIR__ . '/..' . '/symfony/routing/Loader/YamlFileLoader.php',
         'Symfony\\Component\\Routing\\Matcher\\CompiledUrlMatcher' => __DIR__ . '/..' . '/symfony/routing/Matcher/CompiledUrlMatcher.php',
