@@ -17,7 +17,8 @@
     <link href="{{url('admin')}}/css/bootstrap.min.css" rel="stylesheet" type="text/css" id="bootstrap-stylesheet" />
     <link href="{{url('admin')}}/css/icons.min.css" rel="stylesheet" type="text/css" />
     <link href="{{url('admin')}}/css/app.min.css" rel="stylesheet" type="text/css" id="app-stylesheet" />
-
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.css">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 </head>
 
 
@@ -432,154 +433,6 @@
                                 <li><a href="pages-comingsoon.html">Coming Soon</a></li>
                             </ul>
                         </li>
-
-                        <!-- <li class="menu-title mt-2">Components</li> -->
-
-                        <!-- <li>
-                                <a href="javascript: void(0);">
-                                    <i class="mdi mdi-format-underline"></i>
-                                    <span> User Interface </span>
-                                    <span class="menu-arrow"></span>
-                                </a>
-                                <ul class="nav-second-level" aria-expanded="false">
-                                    <li><a href="ui-buttons.html">Buttons</a></li>
-                                    <li><a href="ui-cards.html">Cards</a></li>
-                                    <li><a href="ui-dropdowns.html">Dropdowns</a></li>
-                                    <li><a href="ui-checkbox-radio.html">Checkboxs-Radios</a></li>
-                                    <li><a href="ui-navs.html">Navs</a></li>
-                                    <li><a href="ui-progress.html">Progress</a></li>
-                                    <li><a href="ui-modals.html">Modals</a></li>
-                                    <li><a href="ui-notification.html">Notification</a></li>
-                                    <li><a href="ui-alerts.html">Alerts</a></li>
-                                    <li><a href="ui-carousel.html">Carousel</a></li>
-                                    <li><a href="ui-bootstrap.html">Bootstrap UI</a></li>
-                                    <li><a href="ui-typography.html">Typography</a></li>
-                                </ul>
-                            </li>
-
-                            <li>
-                                <a href="javascript: void(0);">
-                                    <i class="mdi mdi-package-variant-closed"></i>
-                                    <span> Components </span>
-                                    <span class="menu-arrow"></span>
-                                </a>
-                                <ul class="nav-second-level" aria-expanded="false">
-                                    <li><a href="components-grid.html">Grid</a></li>
-                                    <li><a href="components-range-sliders.html">Range sliders</a></li>
-                                    <li><a href="components-sweet-alert.html">Sweet Alerts</a></li>
-                                    <li><a href="components-ratings.html">Ratings</a></li>
-                                    <li><a href="components-treeview.html">Treeview</a></li>
-                                    <li><a href="components-tour.html">Tour</a></li>
-                                </ul>
-                            </li>
-
-                            <li>
-                                <a href="javascript: void(0);">
-                                    <i class="mdi mdi-puzzle-outline"></i>
-                                    <span> Widgets </span>
-                                    <span class="menu-arrow"></span>
-                                </a>
-                                <ul class="nav-second-level" aria-expanded="false">
-                                    <li><a href="widgets-tiles.html">Tile Box</a></li>
-                                    <li><a href="widgets-charts.html">Chart Widgets</a></li>
-                                </ul>
-                            </li>
-
-                            <li>
-                                <a href="javascript: void(0);">
-                                    <i class="mdi mdi-black-mesa"></i>
-                                    <span> Icons </span>
-                                    <span class="menu-arrow"></span>
-                                </a>
-                                <ul class="nav-second-level" aria-expanded="false">
-                                    <li><a href="icons-materialdesign.html">Material Design</a></li>
-                                    <li><a href="icons-ionicons.html">Ion Icons</a></li>
-                                    <li><a href="icons-fontawesome.html">Font awesome</a></li>
-                                    <li><a href="icons-themify.html">Themify Icons</a></li>
-                                    <li><a href="icons-simple-line.html">Simple line Icons</a></li>
-                                    <li><a href="icons-weather.html">Weather Icons</a></li>
-                                    <li><a href="icons-pe7.html">PE7 Icons</a></li>
-                                    <li><a href="icons-typicons.html">Typicons</a></li>
-                                </ul>
-                            </li>
-
-                            <li>
-                                <a href="javascript: void(0);">
-                                    <i class="mdi mdi-file-document-box-check-outline"></i>
-                                    <span class="badge badge-warning badge-pill float-right">8</span>
-                                    <span> Forms </span>
-                                </a>
-                                <ul class="nav-second-level" aria-expanded="false">
-                                    <li><a href="form-elements.html">General Elements</a></li>
-                                    <li><a href="form-advanced.html">Advanced Form</a></li>
-                                    <li><a href="form-validation.html">Form Validation</a></li>
-                                    <li><a href="form-pickers.html">Form Pickers</a></li>
-                                    <li><a href="form-wizard.html">Form Wizard</a></li>
-                                    <li><a href="form-mask.html">Form Masks</a></li>
-                                    <li><a href="form-uploads.html">Multiple File Upload</a></li>
-                                    <li><a href="form-xeditable.html">X-editable</a></li>
-                                </ul>
-                            </li>
-
-                            <li>
-                                <a href="javascript: void(0);">
-                                    <i class="mdi mdi-table-settings"></i>
-                                    <span> Tables </span>
-                                    <span class="menu-arrow"></span>
-                                </a>
-                                <ul class="nav-second-level" aria-expanded="false">
-                                    <li><a href="tables-basic.html">Basic Tables</a></li>
-                                    <li><a href="tables-datatable.html">Data Tables</a></li>
-                                    <li><a href="tables-responsive.html">Responsive Table</a></li>
-                                    <li><a href="tables-tablesaw.html">Tablesaw</a></li>
-                                </ul>
-                            </li>
-
-                            <li>
-                                <a href="javascript: void(0);">
-                                    <i class="mdi mdi-poll"></i>
-                                    <span> Charts </span>
-                                    <span class="menu-arrow"></span>
-                                </a>
-                                <ul class="nav-second-level" aria-expanded="false">
-                                    <li><a href="charts-flot.html">Flot Charts</a></li>
-                                    <li><a href="charts-morris.html">Morris Charts</a></li>
-                                    <li><a href="charts-chartjs.html">Chartjs</a></li>
-                                    <li><a href="charts-peity.html">Peity Charts</a></li>
-                                    <li><a href="charts-chartist.html">Chartist Charts</a></li>
-                                    <li><a href="charts-c3.html">C3 Charts</a></li>
-                                    <li><a href="charts-sparkline.html">Sparkline Charts</a></li>
-                                    <li><a href="charts-knob.html">Jquery Knob</a></li>
-                                </ul>
-                            </li>
-
-                            <li class="menu-title mt-2">More</li>
-
-                            <li>
-                                <a href="javascript: void(0);">
-                                    <i class="mdi mdi-share-variant"></i>
-                                    <span> Multi Level </span>
-                                    <span class="menu-arrow"></span>
-                                </a>
-                                <ul class="nav-second-level nav" aria-expanded="false">
-                                    <li>
-                                        <a href="javascript: void(0);">Level 1.1</a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript: void(0);" aria-expanded="false">Level 1.2
-                                            <span class="menu-arrow"></span>
-                                        </a>
-                                        <ul class="nav-third-level nav" aria-expanded="false">
-                                            <li>
-                                                <a href="javascript: void(0);">Level 2.1</a>
-                                            </li>
-                                            <li>
-                                                <a href="javascript: void(0);">Level 2.2</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </li> -->
                     </ul>
 
                 </div>
@@ -685,6 +538,18 @@
     <!-- App js -->
     <script src="{{url('admin')}}/js/app.min.js"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="{{asset('admin/js/User.js')}}"></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js" type="text/javascript" charset="utf-8" async defer></script>
+    <script type="text/javascript" charset="utf-8">
+        $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
+        });
+    </script>
 </body>
 
 <!-- Mirrored from coderthemes.com/uplon/layouts/vertical/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 31 Oct 2020 19:25:02 GMT -->

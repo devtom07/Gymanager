@@ -24,6 +24,12 @@ Route::get('/logout','AuthurController@logout')->name('logout');
 Route::get('xemtaikhoan','UserController@index')->name('user.index');
 Route::get('themtaikhoan','UserController@create')->name('user.add');
 Route::post('themtaikhoan/post','UserController@store')->name('user.store');
+Route::get('suataikhoan/{id}','UserController@edit')->name('user.edit');
+Route::post('suataikhoan/post/{id}','UserController@update')->name('user.update');
+Route::get('xemchitiettaikhoan/{id}','UserController@show')->name('user.show');
+
+
+
 //auth
 Route::get('/dashboard','AdminController@index')->name('dashboard');
 Route::get('/customer','CustomerController@index')->name('customer');
@@ -40,7 +46,7 @@ Route::get('/addcalamviec','CalamviecController@create')->name('calamviec.add');
 Route::post('/addcalamviec','CalamviecController@store')->name('calamviec.add');
 Route::get('/edit/{id}','CalamviecController@edit')->name('calamviec.edit');
 Route::post('/edit/{id}','CalamviecController@update')->name('calamviec.edit');
-Route::get('/addcalamviec/delete/{id}','Nhanvien\CalamviecController@destroy')->name('calamviec.delete');
+Route::get('/addcalamviec/delete/{id}','CalamviecController@destroy')->name('calamviec.delete');
 
 //Ca làm việc nhân viên
 Route::get('/ca-lam-viec-nhan-vien','Nhanvien\WorkSiftStaffController@index')->name('calamviecnhanvien');

@@ -28,7 +28,10 @@ class UserController extends Controller
         $staff = Staff::all();
         return view('admin.users.account.add',compact('role','permission','staff'));
     }
-
+    public function show($id){
+        $user = User::with('staff')->with('role')->where('id',$id)->get();
+        return response()->json(['data'=>$user,'name'=>'Bình'],200); // 200 là mã lỗi
+            }
 
     public function store(ValidateFormaddUser $request)
     {
@@ -39,23 +42,16 @@ class UserController extends Controller
            'phone' => $request->phone,
            'staff_id' => $request->staff_user,
            'password' => Hash::make($request->password),
+           'created_at' => \DateTime::ATOM
         ]);
        $roles = $request->role;
 //       $permission = $request->permission;
-        $user->assignRole($roles);
+        $user->assignRole([$roles]);
 //        $user->givePermissionTo([$permission]);
         DB::commit();
         Alert()->success('Thành công','Bạn đã thêm tài khoản thành công');
         return redirect()->route('user.index');
     }
-
-
-    public function show($id)
-    {
-        //
-    }
-
-
     public function edit($id)
     {
         //
