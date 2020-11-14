@@ -59,9 +59,21 @@
                            </div>
                         </div>
                         <div class="col-xl-6">
+{{--                            <div class="form-group">--}}
+{{--                                <label>Chức năng</label>--}}
+{{--                                <select multiple name="permission[]" class="form-control" id="exampleSelect1">--}}
+{{--                                    @foreach($permission as $key => $permission )--}}
+{{--                                        <option value="{{$permission->id}}">{{$permission->name}}</option>--}}
+{{--                                    @endforeach--}}
+{{--                                </select>--}}
+{{--                                @if($errors->first('permission'))--}}
+{{--                                    <p class="text-danger">{{ $errors->first('permission') }}</p>--}}
+{{--                                @endif--}}
+{{--                            </div>--}}
                            <div class="form-group">
                               <label>Phân loại tài khoản (*)</label>
-                              <select multiple name="role[]" class="form-control" id="exampleSelect1">
+                              <select  name="role" class="form-control" id="exampleSelect1">
+                                  <option></option>
                                   @foreach($role as $key => $roles )
                                  <option value="{{$roles->id}}">{{$roles->name}}</option>
                                   @endforeach

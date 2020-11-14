@@ -43,8 +43,12 @@ Route::post('/edit/{id}','CalamviecController@update')->name('calamviec.edit');
 Route::get('/addcalamviec/delete/{id}','Nhanvien\CalamviecController@destroy')->name('calamviec.delete');
 
 //Ca làm việc nhân viên
-Route::get('/calamviecnhanvien','Nhanvien\CalamviecNhanVien@index')->name('calamviecnhanvien');
-Route::get('/addcalamviecnhanvien','Nhanvien\CalamviecNhanVien@create')->name('calamviecnhanvien.add');
+Route::get('/ca-lam-viec-nhan-vien','Nhanvien\WorkSiftStaffController@index')->name('calamviecnhanvien');
+Route::get('/them-ca-lam-viec-nv','Nhanvien\WorkSiftStaffController@create')->name('calamviecnhanvien.add');
+Route::post('/them-ca-lam-viec-nv','Nhanvien\WorkSiftStaffController@store')->name('calamviecnhanvien.post');
+Route::get('/sua-ca-lam-viec-nv/{id}','Nhanvien\WorkSiftStaffController@show')->name('suacalamviecnhanvien');
+Route::post('/sua-ca-lam-viec-nv/{id}','Nhanvien\WorkSiftStaffController@update')->name('suacalamviecnhanvien');
+Route::get('/xoa/{id}', 'Nhanvien\WorkSiftStaffController@destroy')->name('xoacalamviecvn');
 
 //========================Users========================//
 //nhom quyền
