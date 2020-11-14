@@ -1,9 +1,9 @@
 <?php
 
 namespace App\Http\Controllers\Nhanvien;
-
-use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use App\Models\Staff;
 
 class ListnhanvienController extends Controller
 {
@@ -14,7 +14,8 @@ class ListnhanvienController extends Controller
      */
     public function index()
     {
-        return view('admin.nhanvien.list-nhanvien.index');
+        $listStaffs = Staff::all();
+        return view('admin.nhanvien.list-nhanvien.index',$listStaffs);
     }
 
     /**
