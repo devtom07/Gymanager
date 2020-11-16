@@ -68,7 +68,7 @@
                                        <tr>
                                           <th data-org-colspan="1" data-columns="tech-companies-1-col-0"></th>
                                           <td data-org-colspan="1" data-priority="1" data-columns="tech-companies-1-col-1">
-                                             <span class="co-name">{{ $staffs->$name}}</span></td>
+                                             <span class="co-name">{{ $staffs->name}}</span></td>
                                           <td data-org-colspan="1" data-priority="1" data-columns="tech-companies-1-col-1">
                                              {{ $staffs->phone}}
                                           </td>
@@ -97,6 +97,7 @@
                                                 </div>
                                           </td>
                                        </tr>
+                                       @endforeach
                                     </tbody>
                                  </table>
                               </div>

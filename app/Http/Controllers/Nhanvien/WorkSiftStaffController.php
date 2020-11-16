@@ -34,7 +34,8 @@ class WorkSiftStaffController extends Controller
     public function create()
     {
         $work_sift['data'] = WorkSift::all();
-        return view('admin.nhanvien.calamviec-nhanvien.add',$work_sift);
+        $staff['dataStaff'] = Staff::all();
+        return view('admin.nhanvien.calamviec-nhanvien.add',$work_sift,$staff);
     }
 
     /**

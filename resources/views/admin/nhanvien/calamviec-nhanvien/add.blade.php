@@ -48,9 +48,9 @@
                                     <div class="form-group">
                                         <label for="exampleInputEmail1">Nhân viên (*)</label>
                                         <select class="form-control" name="staff_id" id="exampleSelect1">
-                                            <option value="1">Trần Văn Long</option>
-                                            <option value="2">Nguyễn Hữu Tiến</option>
-                                            <option value="3">Phan Tuấn Anh</option>
+                                            @foreach($dataStaff as $staff)
+                                            <option value="{{ $staff->id }}">{{ $staff->name }}</option>
+                                            @endforeach
                                         </select>
                                     </div>
 

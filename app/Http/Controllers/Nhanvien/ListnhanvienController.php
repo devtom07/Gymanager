@@ -15,7 +15,7 @@ class ListnhanvienController extends Controller
     public function index()
     {
         $listStaffs = Staff::all();
-        return view('admin.nhanvien.list-nhanvien.index',$listStaffs);
+        return view('admin.nhanvien.list-nhanvien.index',['listStaffs'=>$listStaffs]);
     }
 
     /**
