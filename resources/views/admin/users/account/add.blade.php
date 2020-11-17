@@ -62,7 +62,6 @@
                            <div class="form-group">
                               <label>Phân loại tài khoản (*)</label>
                               <select multiple  name="role[]" class="form-control" id="exampleSelect1">
-                                  <option></option>
                                   @foreach($role as $key => $roles )
                                  <option value="{{$roles->id}}">{{$roles->name}}</option>
                                   @endforeach
