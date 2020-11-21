@@ -613,6 +613,10 @@ class ComposerStaticInitd18bb394463e63c932b02d3a9cc20a30
         'App\\Http\\Controllers\\AuthurController' => __DIR__ . '/../..' . '/app/Http/Controllers/AuthurController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
         'App\\Http\\Controllers\\CustomerController' => __DIR__ . '/../..' . '/app/Http/Controllers/CustomerController.php',
+        'App\\Http\\Controllers\\Nhanvien\\ListnhanvienController' => __DIR__ . '/../..' . '/app/Http/Controllers/Nhanvien/ListnhanvienController.php',
+        'App\\Http\\Controllers\\Nhanvien\\WorkSiftStaffController' => __DIR__ . '/../..' . '/app/Http/Controllers/Nhanvien/WorkSiftStaffController.php',
+        'App\\Http\\Controllers\\UserController' => __DIR__ . '/../..' . '/app/Http/Controllers/Users/UserController.php',
+
         'App\\Http\\Controllers\\Nhanvien\\CalamviecNhanVien' => __DIR__ . '/../..' . '/app/Http/Controllers/Nhanvien/CalamviecNhanVien.php',
         'App\\Http\\Controllers\\Nhanvien\\ListnhanvienController' => __DIR__ . '/../..' . '/app/Http/Controllers/Nhanvien/ListnhanvienController.php',
         'App\\Http\\Controllers\\Nhanvien\\WorkSiftStaffController' => __DIR__ . '/../..' . '/app/Http/Controllers/Nhanvien/WorkSiftStaffController.php',
@@ -626,6 +630,7 @@ class ComposerStaticInitd18bb394463e63c932b02d3a9cc20a30
         'App\\Http\\Middleware\\TrustHosts' => __DIR__ . '/../..' . '/app/Http/Middleware/TrustHosts.php',
         'App\\Http\\Middleware\\TrustProxies' => __DIR__ . '/../..' . '/app/Http/Middleware/TrustProxies.php',
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
+        'App\\Http\\Requests\\ValidateAddStaff' => __DIR__ . '/../..' . '/app/Http/Requests/ValidateAddStaff.php',
         'App\\Http\\Requests\\ValidateFormAddStaff' => __DIR__ . '/../..' . '/app/Http/Requests/ValidateFormAddStaff.php',
         'App\\Http\\Requests\\ValidateFormEditStaff' => __DIR__ . '/../..' . '/app/Http/Requests/ValidateFormEditStaff.php',
         'App\\Http\\Requests\\ValidateFormaddUser' => __DIR__ . '/../..' . '/app/Http/Requests/ValidateFormaddUser.php',
