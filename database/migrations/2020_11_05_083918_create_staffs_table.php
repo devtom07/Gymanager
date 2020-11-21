@@ -24,7 +24,7 @@ class CreateStaffsTable extends Migration
             $table->string('avatar');
             $table->integer('wage');
             $table->foreign('work-sift_id')->references('id')->on('work_sift');
-            $table->foreign('title')->references('id')->on('position');;
+            $table->string('title');
             $table->timestamps();
         });
     }

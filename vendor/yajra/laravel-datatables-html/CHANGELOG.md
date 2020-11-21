@@ -8,6 +8,18 @@
 
 ## CHANGELOG
 
+### v4.35.2 - 11-04-2020
+
+- Add missing button options as per [docs](https://datatables.net/reference/option/#buttons).
+
+### v4.35.1 - 11-03-2020
+
+- Add missing upload field options as per doc. [#152]
+
+### v4.35.0 - 11-03-2020
+
+- Add formatted column factory. [#147]
+
 ### v4.34.0 - 10-31-2020
 
 - Add support for search panes extension. [#137]
@@ -704,6 +716,8 @@ To `created_at` with title `Created At`
 [#143]: https://github.com/yajra/laravel-datatables-html/pull/143
 [#144]: https://github.com/yajra/laravel-datatables-html/pull/144
 [#137]: https://github.com/yajra/laravel-datatables-html/pull/137
+[#147]: https://github.com/yajra/laravel-datatables-html/pull/147
+[#152]: https://github.com/yajra/laravel-datatables-html/pull/152
 
 [#134]: https://github.com/yajra/laravel-datatables-html/issues/134
 [#3]: https://github.com/yajra/laravel-datatables-html/issues/3

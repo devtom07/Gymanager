@@ -1,5 +1,5 @@
 @extends('admin.main')
-@section('title', 'Đăng ký khách hàng')
+@section('title', 'Tài khoản')
 @section('content')
 <div class="content-page">
    <div class="content">
@@ -74,9 +74,9 @@
                                        <th data-org-colspan="1" data-columns="tech-companies-1-col-0">{{$key+1}}</th>
                                        <td data-org-colspan="1" data-priority="1" data-columns="tech-companies-1-col-1">{{$users->name}}</td>
                                        <td data-org-colspan="1" data-priority="3" data-columns="tech-companies-1-col-5">{{$users->email}}</td>
-                                        <td data-org-colspan="1" data-priority="3" data-columns="tech-companies-1-col-4">Đã phê duyệt</td>
+                                        <td data-org-colspan="1" data-priority="3" data-columns="tech-companies-1-col-4"><button type="button" class="btn btn-success btn-rounded waves-effect waves-light">Đã phê duyệt</button></td>
                                         <td data-org-colspan="1" data-priority="3" data-columns="tech-companies-1-col-4"><i style="color: #00aced" class="fas fa-lock-open"></i></td>
-                                        <td data-org-colspan="1" data-priority="6" data-columns="tech-companies-1-col-6">11/11/2020</td>
+                                        <td data-org-colspan="1" data-priority="6" data-columns="tech-companies-1-col-6">{{$users->created_at}}</td>
                                         <td data-org-colspan="1" data-priority="6" data-columns="tech-companies-1-col-6">{{$users->last_login}}</td>
                                        <td data-org-colspan="1" data-priority="6" data-columns="tech-companies-1-col-8">
                                           <div class="btn-group mt-1 mr-1">
@@ -84,8 +84,8 @@
                                              <i class="mdi mdi-format-list-bulleted-square"></i>
                                              </button>
                                              <div class="dropdown-menu" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left:0px; transform: translate3d(0px, 29px, 0px);">
-                                                <a class="dropdown-item" href="#"><i class="mdi mdi-lead-pencil"></i> Sửa</a>
-                                                <a class="dropdown-item" href="#"><i class="mdi mdi-delete"></i> Xoá</a>
+                                                 <a class="dropdown-item  btn-show" href="{{ route('user.show',$users->id) }}"><i class="mdi mdi-eye"></i> Chi tiết</a>
+                                                <a class="dropdown-item" href="{{route('user.delete',$users->id)}}"><i class="mdi mdi-delete"></i> Xoá</a>
                                              </div>
                                           </div>
                                        </td>
@@ -111,15 +111,7 @@
    </div>
    <!-- end content -->
    <!-- Footer Start -->
-   <footer class="footer">
-      <div class="container-fluid">
-         <div class="row">
-            <div class="col-md-12">
-               2016 - 2019 © Uplon theme by <a href="#">Coderthemes</a>
-            </div>
-         </div>
-      </div>
-   </footer>
+
    <!-- end Footer -->
 </div>
 @endsection()

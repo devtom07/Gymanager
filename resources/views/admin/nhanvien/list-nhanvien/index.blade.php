@@ -81,6 +81,7 @@
                                           </td>
                                           <td data-org-colspan="1" data-priority="6" data-columns="tech-companies-1-col-6">
                                              {{ $staffs->contract}}
+
                                           </td>
                                           <td data-org-colspan="1" data-priority="6" data-columns="tech-companies-1-col-7">
                                              {{ $staffs->wage}}

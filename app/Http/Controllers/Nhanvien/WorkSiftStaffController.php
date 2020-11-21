@@ -18,7 +18,7 @@ class WorkSiftStaffController extends Controller
      */
     public function index()
     {
-        $work_staff = WorkSiftStaff::with('workSift')->orderBy('id', 'DESC')->get(); 
+        $work_staff = WorkSiftStaff::with('workSift', 'Staff')->orderBy('id', 'DESC')->get(); 
         // DB::table('work_sift_staffs')
         // ->join('work_sifts','work_sift_staffs.work_sift_id', '=', 'work_sifts.id')
         // ->orderBy('work_sift_staffs.id','desc')
@@ -34,7 +34,8 @@ class WorkSiftStaffController extends Controller
     public function create()
     {
         $work_sift['data'] = WorkSift::all();
-        return view('admin.nhanvien.calamviec-nhanvien.add',$work_sift);
+        $staff['dataStaff'] = Staff::all();
+        return view('admin.nhanvien.calamviec-nhanvien.add',$work_sift,$staff);
     }
 
     /**

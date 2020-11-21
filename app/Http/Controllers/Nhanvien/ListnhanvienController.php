@@ -16,6 +16,7 @@ class ListnhanvienController extends Controller
         $listStaffs = Staff::all();
         $listWorkSift = WorkSift::all();
         return view('admin.nhanvien.list-nhanvien.index',['listStaffs'=>$listStaffs,'listWorkSift'=>$listWorkSift]);
+
     }
     public function create()
     {
