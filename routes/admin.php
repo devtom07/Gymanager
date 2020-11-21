@@ -57,6 +57,6 @@ Route::get('/addcalamviecnhanvien','Nhanvien\CalamviecNhanVien@create')->name('c
 
 //========================Users========================//
 //nhom quyền
-Route::get('/nhomquyen','Users\NhomquyenController@index')->name('nhomquyen');
-Route::get('/addnhomquyen','Users\NhomquyenController@create')->name('nhomquyen.add');
+Route::get('/phanquyen','RoleController@index')->name('role');
+Route::get('/themquyen','RoleController@create')->name('role.add');
 });

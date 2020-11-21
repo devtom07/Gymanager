@@ -33,8 +33,6 @@ class UserController extends Controller
         $role_user = Role::all();
         $users = User::with('staff')->with('role')->where('id',$id)->get();
         foreach ($users as $user){}
-        foreach ($user->role as $roles){}
-
         return view('admin.users.account.show_detail',compact('user','role_user','roles'));
             }
 
@@ -83,8 +81,6 @@ class UserController extends Controller
         Alert()->success('Thành công','Bạn đã Sửa tài khoản thành công');
         return redirect()->route('user.index');
     }
-
-
     public function destroy($id)
     {
        $user = User::find($id);

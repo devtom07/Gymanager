@@ -228,11 +228,13 @@
                             <input type="hidden" name="id" id="user-id">
                             <select name="role[]" multiple class="custom-select" id="inputGroupSelect02">
                                 @foreach($role_user as $key => $role_user)
+                                    @foreach ($user->role as $roles)
                                     @if($role_user->id == $roles->id)
                                     <option selected  value="{{$role_user->id}}">{{$role_user->name}}</option>
                                     @else
                                         <option   value="{{$role_user->id}}">{{$role_user->name}}</option>
                                     @endif
+                                        @endforeach
                                 @endforeach
                             </select>
                             <div class="input-group-append">
