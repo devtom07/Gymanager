@@ -32,8 +32,10 @@ Route::get('/customer','CustomerController@index')->name('customer');
 //=========================Nhân viên==================//
 //list nhân viên
 Route::get('/nhan-vien','Nhanvien\ListnhanvienController@index')->name('listnhanvien');
-Route::get('/addnhanvien','Nhanvien\ListnhanvienController@create')->name('listnhanvien.add');
-Route::get('/editnhanvien/{id}','Nhanvien\ListnhanvienController@edit')->name('listnhanvien.edit');
+Route::get('/them-nhan-vien','Nhanvien\ListnhanvienController@create')->name('listnhanvien.add');
+Route::post('/them-nhan-vien','Nhanvien\ListnhanvienController@store')->name('listnhanvien.add');
+Route::get('/sua-nhan-vien/{id}','Nhanvien\ListnhanvienController@edit')->name('listnhanvien.edit');
+Route::get('/xoa/{id}', 'Nhanvien\ListnhanvienController@destroy')->name('xoanhanvien');
 // Ca làm việc
 Route::get('/calamviec','CalamviecController@index')->name('calamviec');
 Route::get('/addcalamviec','CalamviecController@create')->name('calamviec.add');

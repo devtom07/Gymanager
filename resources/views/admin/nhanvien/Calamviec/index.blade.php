@@ -213,7 +213,7 @@
                                                     </td>
                                                     <td data-org-colspan="1" data-priority="3"
                                                         data-columns="tech-companies-1-col-2">
-                                                        {{$listwork->	hour_start_center}}</td>
+                                                        {{$listwork->hour_start_center}}</td>
                                                     <td data-org-colspan="1" data-priority="1"
                                                         data-columns="tech-companies-1-col-3">
                                                         {{$listwork->hour_end_center}}</td>
