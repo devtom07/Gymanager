@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreatePositionTable extends Migration
+class CreateDemoTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,9 @@ class CreatePositionTable extends Migration
      */
     public function up()
     {
-        Schema::create('position', function (Blueprint $table) {
+        Schema::create('demo', function (Blueprint $table) {
             $table->id();
-            $table->name;
+            $table->string('name');
             $table->timestamps();
         });
     }
@@ -27,6 +27,6 @@ class CreatePositionTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('position');
+        Schema::dropIfExists('demo');
     }
 }

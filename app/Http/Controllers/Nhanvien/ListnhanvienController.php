@@ -6,6 +6,7 @@ use App\Http\Requests\ValidateAddStaff;
 use App\Http\Controllers\Controller;
 use App\Models\Staff;
 use App\Models\WorkSift;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class ListnhanvienController extends Controller
 {
@@ -13,31 +14,35 @@ class ListnhanvienController extends Controller
     public function index()
     {
         $listStaffs = Staff::all();
-        $work_sift = WorkSift::all();
-        return view('admin.nhanvien.list-nhanvien.index',['listStaffs'=>$listStaffs,'listWorkSift'=>$work_sift]);
+        $listWorkSift = WorkSift::all();
+        return view('admin.nhanvien.list-nhanvien.index',['listStaffs'=>$listStaffs,'listWorkSift'=>$listWorkSift]);
     }
     public function create()
     {
-        $work_sift = WorkSift::all();
-        return view('admin.nhanvien.list-nhanvien.add',['listWorkSift'=>$work_sift]);
+        $listWorkSift = WorkSift::all();
+        return view('admin.nhanvien.list-nhanvien.add',['listWorkSift'=>$listWorkSift]);
     }
     public function store(ValidateAddStaff $request)
     {
-        $file_name = $request->file('avatar')->getClientOriginalName();
+        $get_image = $request->file('avatar');
+        $get_name_image = $get_image->getClientOriginalName();
+        $name_image = current(explode('.',$get_name_image));
+        $new_image =  $name_image . rand(0,99) . '.' .$get_image->getClientOriginalExtension();
+        $get_image->move('/public/admin/staff',$new_image);
         $staffs = new Staff;
         $staffs->name = $request->name;
-        $staffs->avatar = $file_name;
-        $staffs->work_sift_id = implode(',', $request->work_sift_id);
+        $staffs->work_sift_id = $request->work_sift_id;
         $staffs->phone = $request->phone;
         $staffs->email = $request->email;
         $staffs->address = $request->address;
         $staffs->status = $request->status;
         $staffs->contract = $request->contract;
         $staffs->wage = $request->wage;
-        $staffs->title = $request->title;
-        $request->file('avatar')->move('public/admin/images/',$file_name);
+        $staffs->title = 'admin';
+        $staffs['avatar'] = $new_image;
         $staffs->save();
-        return redirect()->action('Nhanvien\ListnhanvienController@index');
+       Alert()->success('thành công','bạn đã thêm nhân viên thành công');
+        return redirect()->route('listnhanvien');
     }
 
     public function show($id)
@@ -69,7 +74,8 @@ class ListnhanvienController extends Controller
     }
     public function destroy($id)
     {
-        Staff::destroy($id);
+        Staff::find($id)->delete();
+        Alert()->success('thành công','bạn đã xóa nhân viên thành công');
         return back();
     }
 }

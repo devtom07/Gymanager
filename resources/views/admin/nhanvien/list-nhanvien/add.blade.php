@@ -25,7 +25,7 @@
                 <div class="col-12">
                     <div class="card-box">
                         <h4 class="header-title mb-4">Tạo mới nhân viên</h4>
-                        <form {{ route('listnhanvien.add')}} method="POST">
+                        <form action="{{route('listnhanvien.store') }}" method="post" enctype="multipart/form-data">
                             @csrf
                             <div class="row">
                                 <div class="col-xl-6">
@@ -45,9 +45,11 @@
                                     </div>
                                     <div class="form-group">
                                         <label>Ca lam viec</label>
-                                        <select class="form-control" id="exampleSelect1" name="work_sift_id">
-                                            @foreach ($work_sift as $item)
-                                                <option>{{ $item->name}}</option>
+                                        <select  class="form-control" id="exampleSelect1" name="work_sift_id">
+                                            @foreach ($listWorkSift as $item)
+                                        <option value="{{$item->id}}">
+                                                    {{ $item->name}}  
+                                                </option>
                                             @endforeach
                                         </select>
                                     </div>
@@ -76,12 +78,12 @@
                                     </div>
                                     <div class="form-group">
                                         <label>Loại hợp đồng (*)</label>
-                                        <select class="form-control" id="exampleSelect1">
+                                        <select class="form-control" id="exampleSelect1" name="contract">
                                             <option></option>
-                                            <option>Hợp đồng lao động</option>
-                                            <option>Thực tập</option>
-                                            <option>Hợp đồng PT</option>
-                                            <option>Hợp đồng nhân viên</option>
+                                            <option value="hợp đồng lao động">Hợp đồng lao động</option>
+                                            <option value="thực tập">Thực tập</option>
+                                            <option value="hợp đồng pt">Hợp đồng PT</option>
+                                            <option value="hợp đồng nhân viên">Hợp đồng nhân viên</option>
                                         </select>
                                     </div>
                                     <div class="form-group">
