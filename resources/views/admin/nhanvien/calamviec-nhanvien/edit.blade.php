@@ -40,9 +40,9 @@
                                         <select class="form-control" id="exampleSelect1" name="work_sift_id">
                                             @foreach($data as $work_sifts)
                                             <option 
-                                            {{-- <?php if($work_sifts->id == $work_staff->work_sift_id):?>
+                                            <?php if($work_sifts->id == $work_staff->work_sift_id):?>
                                                         selected
-                                                    <?php endif?> --}}
+                                                    <?php endif?>
                                               value="{{ $work_sifts->id }}">{{ $work_sifts->name }}</option>
                                             @endforeach
                                         </select>

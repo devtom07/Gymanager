@@ -64,9 +64,12 @@
                                     <tbody>
                                        @foreach($listStaffs as $key => $staffs)
                                        <tr>
-                                          <th data-org-colspan="1" data-columns="tech-companies-1-col-0">{{$key + 1}}</th>
+                                          <th data-org-colspan="1" data-columns="tech-companies-1-col-0">{{$key+1}}</th>
                                           <td data-org-colspan="1" data-priority="1" data-columns="tech-companies-1-col-1">
-                                             <span class="co-name">{{ $staffs->name}}</span></td>
+                                             <span class="co-name">
+                                                {{ $staffs->name}}
+                                             </span>
+                                          </td>
                                           <td data-org-colspan="1" data-priority="1" data-columns="tech-companies-1-col-1">
                                              {{ $staffs->phone}}
                                           </td>
@@ -89,21 +92,24 @@
                                           <td data-org-colspan="1" data-priority="3" data-columns="tech-companies-1-col-4">
                                              <button type="button" class="btn btn-success btn-rounded waves-effect waves-light">
                                                    {{ $staffs->status}}
-                                                </button></td>
+                                             </button>
+                                          </td>
                                           <td data-org-colspan="1" data-priority="6" data-columns="tech-companies-1-col-8">
-                                          <div class="btn-group mt-1 mr-1">
-                                                    <button class="btn btn-success btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                    <i class="mdi mdi-format-list-bulleted-square"></i>
-                                                    </button>
-                                                    <div class="dropdown-menu" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 29px, 0px);">
-                                                    <a class="dropdown-item" href="{{route('staff.edit',$staffs->id)}}"><i class="mdi mdi-lead-pencil"></i> Sửa</a>
-                                                    <a class="dropdown-item btn-remove" href="{{route('staff.delete',$staffs->id)}}">
-                                                         <i class="mdi mdi-delete"></i> 
-                                                            Xoá
-                                                         </a>
-                                 
-                                                    </div>
+                                             <div class="btn-group mt-1 mr-1">
+                                                <button class="btn btn-success btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                   <i class="mdi mdi-format-list-bulleted-square"></i>
+                                                </button>
+                                                <div class="dropdown-menu" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 29px, 0px);">
+                                                   <a class="dropdown-item" href="{{route('staff.edit',$staffs->id)}}">
+                                                      <i class="mdi mdi-lead-pencil"></i> 
+                                                         Sửa
+                                                   </a>
+                                                   <a class="dropdown-item btn-remove" href="{{route('staff.delete',$staffs->id)}}">
+                                                      <i class="mdi mdi-delete"></i> 
+                                                         Xoá
+                                                   </a>
                                                 </div>
+                                             </div>
                                           </td>
                                        </tr>
                                        @endforeach

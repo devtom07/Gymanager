@@ -25,29 +25,34 @@
                 <div class="col-12">
                     <div class="card-box">
                         <h4 class="header-title mb-4">Tạo mới nhân viên</h4>
-                        <form action="{{ router('listnhanvien.update')}}" method="POST">
+                        <form action="" method="POST">
                             @csrf
                             <div class="row">
                                 <div class="col-xl-6">
                                     <div class="form-group">
                                         <label for="exampleInputEmail1">Họ và tên (*)</label>
-                                        <input type="text" class="form-control" name="name" id="exampleInputEmail1" value="{{ $staffs->name}}">
+                                        <input type="text" class="form-control" name="name" id="exampleInputEmail1" value="{{ $listStaffs->name}}">
                                     </div>
                                     
                                     <div class="form-group">
                                         <label for="exampleInputEmail1">Ảnh đại diện (*)</label>
-                                        <input type="file" class="form-control" name="avatar" id="exampleInputEmail1" value="{{ $staffs->avatar}}">
+                                        <input type="file" class="form-control" name="avatar" id="exampleInputEmail1">
+                                        <img src="{{asset('public/admin/images/' .$listStaffs->new_image)}}" alt="">
                                     </div>
 
                                     <div class="form-group">
                                         <label for="exampleInputPassword1">Số điện thoại (*)</label>
-                                        <input type="number" class="form-control" name="phone" id="exampleInputPassword1" value="{{ $staffs->phone}}">
+                                        <input type="number" class="form-control" name="phone" id="exampleInputPassword1" value="{{ $listStaffs->phone}}">
                                     </div>
                                     <div class="form-group">
                                         <label>Ca lam viec</label>
                                         <select class="form-control" id="exampleSelect1" name="work_sift_id">
                                             @foreach ($listWorkSift as $item)
-                                                <option>
+                                                <option
+                                                    <?php if($item->id == $listStaffs->work_sift_id):?>
+                                                        selected
+                                                    <?php endif?>
+                                                    >
                                                     {{ $item->name}}  
                                                 </option>
                                             @endforeach
@@ -70,33 +75,29 @@
                                 <div class="col-xl-6">
                                     <div class="form-group">
                                         <label for="exampleInputPassword1">Email (*)</label>
-                                        <input type="text" class="form-control" name="email" id="exampleInputPassword1"  value="{{ $staffs->email}}">
+                                        <input type="text" class="form-control" name="email" id="exampleInputPassword1"  value="{{ $listStaffs->email}}">
                                     </div>
                                     <div class="form-group">
                                         <label>Địa chỉ</label>
-                                        <input class="form-control" type="text" name="address"  value="{{ $staffs->address}}">
+                                        <input class="form-control" type="text" name="address"  value="{{ $listStaffs->address}}">
                                     </div>
                                     <div class="form-group">
                                         <label>Loại hợp đồng (*)</label>
-                                        <select class="form-control" id="exampleSelect1">
+                                        <select class="form-control" id="exampleSelect1" name="contract">
                                             <option></option>
-                                            <option>Hợp đồng lao động</option>
-                                            <option>Thực tập</option>
-                                            <option>Hợp đồng PT</option>
-                                            <option>Hợp đồng nhân viên</option>
+                                            <option value="0">Hợp đồng lao động</option>
+                                            <option value="1">Thực tập</option>
                                         </select>
                                     </div>
                                     <div class="form-group">
                                         <label>Mức lương</label>
-                                        <input class="form-control" type="number" name="wage"  value="{{ $staffs->wage}}">
+                                        <input class="form-control" type="number" name="wage"  value="{{ $listStaffs->wage}}">
                                     </div>
                                     <div class="form-group">
                                         <label>Chức danh</label>
-                                        <select class="form-control" id="exampleSelect1">
+                                        <select class="form-control" id="exampleSelect1" name="title">
                                             <option></option>
-                                            <option>Maketing</option>
-                                            <option>Kế toán</option>
-                                            <option>Nhân viên lễ tân</option>
+                                            <option value="1">Maketing</option>
                                         </select>
                                     </div>
                                 </div>

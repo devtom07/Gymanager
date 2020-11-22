@@ -48,18 +48,23 @@ class ListnhanvienController extends Controller
 
     public function show($id)
     {
-        $listStaff = Staff::find($id);
-        return view('admin.nhanvien.list-nhanvien.index',['listStaff'=>$listStaff]);
+        $listStaffs = Staff::find($id);
+        return view('admin.nhanvien.list-nhanvien.index',['listStaffs'=>$listStaffs]);
     }
 
     public function edit($id)
     {
-        $listStaff = Staff::find($id);
-        return view('admin.nhanvien.list-nhanvien.index',['listStaff'=>$listStaff]);
+        $listWorkSift = WorkSift::all();
+        $listStaffs = Staff::find($id);
+        return view('admin.nhanvien.list-nhanvien.edit',['listStaffs'=>$listStaffs, 'listWorkSift'=>$listWorkSift]);
     }
     public function update(Request $request, $id)
     {
-        // $file_name = $request->file('avatar')->getClientOriginalName();
+        // $get_image = $request->file('avatar');
+        // $get_name_image = $get_image->getClientOriginalName();
+        // $name_image = current(explode('.',$get_name_image));
+        // $new_image =  $name_image . rand(0,99) . '.' .$get_image->getClientOriginalExtension();
+        // $get_image->move('/public/admin/staff',$new_image);
         $staffs = new Staff;
         $arr['name'] = $request->name;
         $arr['avatar'] = $request->avatar;
