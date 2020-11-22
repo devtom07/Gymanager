@@ -1,7 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Nhanvien;
 
+use App\Http\Controllers\Controller;
 use App\Http\Requests\ValidateFormAddStaff;
 use App\Http\Requests\ValidateFormEditStaff;
 use App\Models\WorkSift;
