@@ -20,6 +20,7 @@ class CreateUsersTable extends Migration
             $table->integer('phone');
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
+            $table->string('avatar')->nullable();
             $table->date('last_login')->nullable();
             $table->unsignedBigInteger('staff_id');
             $table->foreign('staff_id')->references('id')->on('staffs');

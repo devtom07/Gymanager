@@ -10,8 +10,8 @@
                         <div class="card-title mb-4">
                             <div class="d-flex justify-content-start">
                                 <div class="image-container">
-                                    @if($user->staff->image)
-                                        <img src="\user\{{$user->staff->image}}" id="imgProfile"
+                                    @if($user->avatar)
+                                        <img src="\user\{{$user->avatar}}" id="imgProfile"
                                              style="width: 150px; height: 150px" class="img-thumbnail"/>
                                     @else
                                         <img src="http://placehold.it/150x150" id="imgProfile"
@@ -23,7 +23,7 @@
                                         <div class="middle mt-3">
                                             <input class="form-control" type="file" onchange="this.form.submit()"
                                                    id="profilePicture"
-                                                   name="image"/>
+                                                   name="avatar"/>
                                         </div>
                                     </form>
                                     <div class="userData mt-3">
@@ -227,14 +227,8 @@
                         <div class="input-group mb-3">
                             <input type="hidden" name="id" id="user-id">
                             <select name="role[]" multiple class="custom-select" id="inputGroupSelect02">
-                                @foreach($role_user as $key => $role_user)
-                                    @foreach ($user->role as $roles)
-                                    @if($role_user->id == $roles->id)
-                                    <option selected  value="{{$role_user->id}}">{{$role_user->name}}</option>
-                                    @else
-                                        <option   value="{{$role_user->id}}">{{$role_user->name}}</option>
-                                    @endif
-                                        @endforeach
+                                @foreach($role_user as  $role_users)
+                                    <option  {{$listRoleUser->contains($role_users->id) ? 'selected' : '' }}   value="{{$role_users->id}}">{{$role_users->name}}</option>
                                 @endforeach
                             </select>
                             <div class="input-group-append">

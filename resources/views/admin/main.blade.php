@@ -230,7 +230,7 @@
                 <li class="dropdown notification-list">
                     <a class="nav-link dropdown-toggle nav-user mr-0 waves-effect waves-light" data-toggle="dropdown"
                         href="#" role="button" aria-haspopup="false" aria-expanded="false">
-                        <img src="{{url('admin')}}/images/users/avatar-1.jpg" alt="user-image" class="rounded-circle">
+                        <img src="{{asset('user/'.\Illuminate\Support\Facades\Auth::user()->avatar)}}" alt="user-image" class="rounded-circle">
                         <span class="d-none d-sm-inline-block ml-1 font-weight-medium">
                             {{\Illuminate\Support\Facades\Auth::user()->name}}
                         </span>
