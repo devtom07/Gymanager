@@ -10,7 +10,7 @@ class RoleController extends Controller
 
     public function index()
     {
-        $roles = Role::get();
+        $roles = Role::with('permission')->get();
         return view('admin.role.index',compact('roles'));
     }
 

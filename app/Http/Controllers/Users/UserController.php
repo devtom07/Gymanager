@@ -31,9 +31,14 @@ class UserController extends Controllers
     }
     public function show($id){
         $role_user = Role::all();
+        $role_id = [];
+        $listRoleUser = DB::table('model_has_roles')->where('model_id',$id)->pluck('role_id');
         $users = User::with('staff')->with('role')->where('id',$id)->get();
         foreach ($users as $user){}
-        return view('admin.users.account.show_detail',compact('user','role_user','roles'));
+        foreach ($user->role as $roles){
+            $role_id[] = $roles->id;
+        }
+        return view('admin.users.account.show_detail',compact('user','role_user','roles','role_id','listRoleUser'));
             }
 
     public function store(ValidateFormaddUser $request)
@@ -95,21 +100,20 @@ class UserController extends Controllers
     }
     public function updateRole(Request $request,$id){
         $user = User::find($id);
-        $roles = $request->role;
-          $user->assignRole([$roles])->update();
+        $user->syncRoles($request->role);
         Alert()->success('Thành công','Cập nhật quyền thành công');
         return redirect()->route('user.show',$id);
     }
     public function updateimage(Request $request,$id){
         $user = User::find($id);
         $data = array();
-        $get_image = $request->file('image');
+        $get_image = $request->file('avatar');
         $get_name_image = $get_image ->getClientOriginalName();
         $name_image = current(explode('.',$get_name_image));
         $new_image =  $name_image . rand(0,99) . '.' .$get_image->getClientOriginalExtension();
         $get_image->move('user',$new_image);
-        $data['image']=$new_image;
-        DB::table('staffs')->where('id',$user->id)->update($data);
+        $data['avatar']=$new_image;
+        DB::table('users')->where('id',$user->id)->update($data);
         Alert()->success('Thành công','Cập nhật ảnh thành công');
         return redirect()->route('user.show',$id);
 
