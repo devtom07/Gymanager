@@ -28,7 +28,17 @@ class UserController extends Controller
         $staff = Staff::all();
         return view('admin.users.account.add',compact('role','permission','staff'));
     }
-
+    public function show($id){
+        $role_user = Role::all();
+        $role_id = [];
+        $listRoleUser = DB::table('model_has_roles')->where('model_id',$id)->pluck('role_id');
+        $users = User::with('staff')->with('role')->where('id',$id)->get();
+        foreach ($users as $user){}
+        foreach ($user->role as $roles){
+            $role_id[] = $roles->id;
+        }
+        return view('admin.users.account.show_detail',compact('user','role_user','roles','role_id','listRoleUser'));
+            }
 
     public function store(ValidateFormaddUser $request)
     {
@@ -49,10 +59,7 @@ class UserController extends Controller
     }
 
 
-    public function show($id)
-    {
-        //
-    }
+
 
 
     public function edit($id)
@@ -65,10 +72,38 @@ class UserController extends Controller
     {
         //
     }
-
-
     public function destroy($id)
     {
-        //
+       $user = User::find($id);
+       if ($user->hasAnyRole(['Super Admin'])){
+           Alert()->error('Cảnh báo','Bạn không thể xóa Admin chính');
+           return redirect()->route('user.index',$id);
+       }else{
+           $user->delete();
+           Alert()->success('Thành công','Bạn đã xóa thàn công');
+           return redirect()->route('user.index',$id);
+       }
+    }
+    public function updateRole(Request $request,$id){
+        $user = User::find($id);
+        $user->syncRoles($request->role);
+        Alert()->success('Thành công','Cập nhật quyền thành công');
+        return redirect()->route('user.show',$id);
+    }
+    public function updateimage(Request $request,$id)
+    {
+        $user = User::find($id);
+        $data = array();
+        $get_image = $request->file('avatar');
+        $get_name_image = $get_image->getClientOriginalName();
+        $name_image = current(explode('.', $get_name_image));
+        $new_image = $name_image . rand(0, 99) . '.' . $get_image->getClientOriginalExtension();
+        $get_image->move('user', $new_image);
+        $data['avatar'] = $new_image;
+        DB::table('users')->where('id', $user->id)->update($data);
+        Alert()->success('Thành công', 'Cập nhật ảnh thành công');
+        return redirect()->route('user.show', $id);
+
+
     }
 }
