@@ -1,0 +1,455 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"BranchesTreeState\">\n    <expand>\n      <path>\n        <item name=\"ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\n        <item name=\"LOCAL_ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\n      </path>\n      <path>\n        <item name=\"ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\n        <item name=\"REMOTE_ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\n      </path>\n      <path>\n        <item name=\"ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\n        <item name=\"REMOTE_ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\n        <item name=\"GROUP_NODE:origin\" type=\"e8cecc67:BranchNodeDescriptor\" />\n      </path>\n    </expand>\n    <select />\n  </component>\n  <component name=\"ChangeListManager\">\n    <list default=\"true\" id=\"7633c5da-4012-4f98-b200-5b36a0fea64e\" name=\"Default Changelist\" comment=\"\">\n      <change beforePath=\"$PROJECT_DIR$/.idea/Gymmanager.iml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/Gymmanager.iml\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_17_10,_08_11_2020_[Default_Changelist]/shelved.patch\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_17_10,_08_11_2020_[Default_Changelist]/shelved.patch\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/app/Http/Controllers/Staff/CalamviecController.php\" beforeDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/app/Http/Controllers/Staff/CalamviecNhanVien.php\" beforeDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/public/admin/libs/pdfmake/pdfmake.min.js\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/public/admin/libs/pdfmake/pdfmake.min.js\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/resources/views/admin/main.blade.php\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/resources/views/admin/main.blade.php\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/routes/admin.php\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/routes/admin.php\" afterDir=\"false\" />\n    </list>\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\n  </component>\n  <component name=\"ComposerSettings\" synchronizationState=\"SYNCHRONIZE\">\n    <execution />\n  </component>\n  <component name=\"Git.Settings\">\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\n  </component>\n  <component name=\"PropertiesComponent\">\n    <property name=\"node.js.path.for.package.tslint\" value=\"project\" />\n    <property name=\"node.js.selected.package.tslint\" value=\"(autodetect)\" />\n  </component>\n  <component name=\"RecentsManager\">\n    <key name=\"MoveFile.RECENT_KEYS\">\n      <recent name=\"$PROJECT_DIR$/app/Models\" />\n      <recent name=\"$PROJECT_DIR$/app/Http/Controllers/Customer\" />\n      <recent name=\"$PROJECT_DIR$/app/Http/Controllers/Users\" />\n      <recent name=\"$PROJECT_DIR$/public\" />\n      <recent name=\"$PROJECT_DIR$/public/admin\" />\n    </key>\n  </component>\n  <component name=\"RunManager\">\n    <configuration name=\"phpunit.xml\" type=\"PHPUnitRunConfigurationType\" factoryName=\"PHPUnit\">\n      <TestRunner scope=\"XML\" />\n      <method v=\"2\" />\n    </configuration>\n  </component>\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\n  <component name=\"TaskManager\">\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\n      <changelist id=\"49a55a82-a09c-4fca-bbc3-6b576eb8fc71\" name=\"Default Changelist\" comment=\"\" />\n      <created>1604205738627</created>\n      <option name=\"number\" value=\"Default\" />\n      <option name=\"presentableId\" value=\"Default\" />\n      <updated>1604205738627</updated>\n      <workItem from=\"1604205739766\" duration=\"1057000\" />\n      <workItem from=\"1604540024006\" duration=\"24543000\" />\n      <workItem from=\"1604626712882\" duration=\"6819000\" />\n      <workItem from=\"1604745727041\" duration=\"883000\" />\n      <workItem from=\"1604759387161\" duration=\"1464000\" />\n      <workItem from=\"1604767144820\" duration=\"374000\" />\n      <workItem from=\"1604825866000\" duration=\"651000\" />\n      <workItem from=\"1604850189016\" duration=\"6000\" />\n      <workItem from=\"1604856472436\" duration=\"2271000\" />\n      <workItem from=\"1604894703171\" duration=\"1610000\" />\n      <workItem from=\"1604930960858\" duration=\"10357000\" />\n      <workItem from=\"1604973154457\" duration=\"27813000\" />\n    </task>\n    <servers />\n  </component>\n  <component name=\"TypeScriptGeneratedFilesManager\">\n    <option name=\"version\" value=\"3\" />\n  </component>\n  <component name=\"Vcs.Log.Tabs.Properties\">\n    <option name=\"TAB_STATES\">\n      <map>\n        <entry key=\"MAIN\">\n          <value>\n            <State />\n          </value>\n        </entry>\n      </map>\n    </option>\n    <option name=\"oldMeFiltersMigrated\" value=\"true\" />\n  </component>\n  <component name=\"WindowStateProjectService\">\n    <state x=\"387\" y=\"222\" width=\"582\" height=\"357\" key=\"#Notifications\" timestamp=\"1605110844997\">\n      <screen x=\"0\" y=\"27\" width=\"1366\" height=\"741\" />\n    </state>\n    <state x=\"387\" y=\"222\" width=\"582\" height=\"357\" key=\"#Notifications/0.27.1366.741@0.27.1366.741\" timestamp=\"1605110844997\" />\n    <state x=\"416\" y=\"146\" width=\"524\" height=\"509\" key=\"#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog\" timestamp=\"1604549435257\">\n      <screen x=\"0\" y=\"27\" width=\"1366\" height=\"741\" />\n    </state>\n    <state x=\"416\" y=\"146\" width=\"524\" height=\"509\" key=\"#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.27.1366.741@0.27.1366.741\" timestamp=\"1604549435257\" />\n    <state x=\"416\" y=\"155\" width=\"524\" height=\"491\" key=\"#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog\" timestamp=\"1605001288490\">\n      <screen x=\"0\" y=\"27\" width=\"1366\" height=\"741\" />\n    </state>\n    <state x=\"416\" y=\"155\" width=\"524\" height=\"491\" key=\"#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.27.1366.741@0.27.1366.741\" timestamp=\"1605001288490\" />\n    <state x=\"466\" y=\"155\" width=\"424\" height=\"491\" key=\"FileChooserDialogImpl\" timestamp=\"1605149367900\">\n      <screen x=\"0\" y=\"27\" width=\"1366\" height=\"741\" />\n    </state>\n    <state x=\"466\" y=\"155\" width=\"424\" height=\"491\" key=\"FileChooserDialogImpl/0.27.1366.741@0.27.1366.741\" timestamp=\"1605149367900\" />\n    <state x=\"466\" y=\"155\" width=\"424\" height=\"491\" key=\"FileChooserDialogImpl\" timestamp=\"1604207008527\">\n      <screen x=\"0\" y=\"27\" width=\"1366\" height=\"741\" />\n    </state>\n    <state x=\"466\" y=\"155\" width=\"424\" height=\"491\" key=\"FileChooserDialogImpl/0.27.1366.741@0.27.1366.741\" timestamp=\"1604207008527\" />\n    <state width=\"1320\" height=\"172\" key=\"GridCell.Tab.0.bottom\" timestamp=\"1604833915589\">\n      <screen x=\"0\" y=\"27\" width=\"1366\" height=\"741\" />\n    </state>\n    <state width=\"1320\" height=\"172\" key=\"GridCell.Tab.0.bottom/0.27.1366.741@0.27.1366.741\" timestamp=\"1604833915589\" />\n    <state width=\"1320\" height=\"172\" key=\"GridCell.Tab.0.center\" timestamp=\"1604833915588\">\n      <screen x=\"0\" y=\"27\" width=\"1366\" height=\"741\" />\n    </state>\n    <state width=\"1320\" height=\"172\" key=\"GridCell.Tab.0.center/0.27.1366.741@0.27.1366.741\" timestamp=\"1604833915588\" />\n    <state width=\"1320\" height=\"172\" key=\"GridCell.Tab.0.left\" timestamp=\"1604833915587\">\n      <screen x=\"0\" y=\"27\" width=\"1366\" height=\"741\" />\n    </state>\n    <state width=\"1320\" height=\"172\" key=\"GridCell.Tab.0.left/0.27.1366.741@0.27.1366.741\" timestamp=\"1604833915587\" />\n    <state width=\"1320\" height=\"172\" key=\"GridCell.Tab.0.right\" timestamp=\"1604833915588\">\n      <screen x=\"0\" y=\"27\" width=\"1366\" height=\"741\" />\n    </state>\n    <state width=\"1320\" height=\"172\" key=\"GridCell.Tab.0.right/0.27.1366.741@0.27.1366.741\" timestamp=\"1604833915588\" />\n    <state x=\"132\" y=\"86\" width=\"1092\" height=\"629\" key=\"MergeDialog\" timestamp=\"1604830217440\">\n      <screen x=\"0\" y=\"27\" width=\"1366\" height=\"741\" />\n    </state>\n    <state x=\"132\" y=\"86\" width=\"1092\" height=\"629\" key=\"MergeDialog/0.27.1366.741@0.27.1366.741\" timestamp=\"1604830217440\" />\n    <state x=\"408\" y=\"91\" width=\"539\" height=\"619\" key=\"git4idea.branch.GitSmartOperationDialog\" timestamp=\"1605038153635\">\n      <screen x=\"0\" y=\"27\" width=\"1366\" height=\"741\" />\n    </state>\n    <state x=\"408\" y=\"91\" width=\"539\" height=\"619\" key=\"git4idea.branch.GitSmartOperationDialog/0.27.1366.741@0.27.1366.741\" timestamp=\"1604830337729\" />\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/workspace.xml	(revision ba24796c5e0cbdf806546b64db5dc5fed91cf5e3)
++++ .idea/workspace.xml	(date 1606097488641)
+@@ -20,14 +20,178 @@
+   </component>
+   <component name="ChangeListManager">
+     <list default="true" id="7633c5da-4012-4f98-b200-5b36a0fea64e" name="Default Changelist" comment="">
+-      <change beforePath="$PROJECT_DIR$/.idea/Gymmanager.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Gymmanager.iml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_17_10,_08_11_2020_[Default_Changelist]/shelved.patch" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_17_10,_08_11_2020_[Default_Changelist]/shelved.patch" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Staff/CalamviecController.php" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Staff/CalamviecNhanVien.php" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/public/admin/libs/pdfmake/pdfmake.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/admin/libs/pdfmake/pdfmake.min.js" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/resources/views/admin/main.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/main.blade.php" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/routes/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/admin.php" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_08_56,_23_11_2020_[Default_Changelist]/shelved.patch" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_08_57,_23_11_2020_[Default_Changelist]/shelved.patch" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/Pe-icon-7-strokebb1d.eot" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/Pe-icon-7-strokebb1d.ttf" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/Pe-icon-7-strokebb1d.woff" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/Pe-icon-7-strokebb1d1.eot" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/Pe-icon-7-strokebb1d1.ttf" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/Pe-icon-7-strokebb1d1.woff" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/Pe-icon-7-stroked41d.eot" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/Pe-icon-7-stroked41d1.eot" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/Simple-Line-Icons4c82.eot" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/Simple-Line-Icons4c82.ttf" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/Simple-Line-Icons4c82.woff" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/Simple-Line-Icons4c82.woff2" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/Simple-Line-Icons4c821.eot" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/Simple-Line-Icons4c821.ttf" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/Simple-Line-Icons4c821.woff" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/Simple-Line-Icons4c821.woff2" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/Simple-Line-Iconsd41d.eot" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/Simple-Line-Iconsd41d1.eot" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/avatar-1.jpg" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/avatar-10.jpg" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/avatar-101.jpg" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/avatar-11.jpg" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/avatar-2.jpg" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/avatar-21.jpg" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/avatar-3.jpg" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/avatar-31.jpg" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/avatar-4.jpg" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/avatar-41.jpg" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/avatar-5.jpg" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/avatar-51.jpg" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/avatar-6.jpg" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/avatar-61.jpg" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/avatar-8.jpg" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/avatar-81.jpg" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/avatar-9.jpg" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/avatar-91.jpg" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/dark.png" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/dark1.png" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/fa-brands-400.eot" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/fa-brands-400.ttf" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/fa-brands-400.woff" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/fa-brands-400.woff2" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/fa-brands-4001.eot" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/fa-brands-4001.ttf" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/fa-brands-4001.woff" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/fa-brands-4001.woff2" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/fa-brands-400d41d.eot" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/fa-brands-400d41d1.eot" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/fa-regular-400.eot" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/fa-regular-400.ttf" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/fa-regular-400.woff" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/fa-regular-400.woff2" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/fa-regular-4001.eot" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/fa-regular-4001.ttf" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/fa-regular-4001.woff" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/fa-regular-4001.woff2" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/fa-regular-400d41d.eot" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/fa-regular-400d41d1.eot" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/fa-solid-900.eot" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/fa-solid-900.ttf" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/fa-solid-900.woff" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/fa-solid-900.woff2" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/fa-solid-9001.eot" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/fa-solid-9001.ttf" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/fa-solid-9001.woff" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/fa-solid-9001.woff2" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/fa-solid-900d41d.eot" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/fa-solid-900d41d1.eot" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/favicon.ico" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/favicon1.ico" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/germany.jpg" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/germany1.jpg" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/img-1.jpg" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/img-10.jpg" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/img-101.jpg" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/img-11.jpg" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/img-111.jpg" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/img-112.jpg" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/img-12.jpg" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/img-121.jpg" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/img-1211.jpg" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/img-122.jpg" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/img-2.jpg" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/img-21.jpg" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/img-211.jpg" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/img-22.jpg" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/img-3.jpg" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/img-31.jpg" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/img-311.jpg" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/img-32.jpg" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/img-4.jpg" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/img-41.jpg" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/img-5.jpg" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/img-51.jpg" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/img-6.jpg" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/img-61.jpg" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/img-7.jpg" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/img-71.jpg" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/img-8.jpg" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/img-81.jpg" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/img-9.jpg" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/img-91.jpg" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/ioniconsde33.eot" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/ioniconsde33.ttf" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/ioniconsde33.woff" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/ioniconsde33.woff2" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/ioniconsde331.eot" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/ioniconsde331.ttf" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/ioniconsde331.woff" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/ioniconsde331.woff2" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/italy.jpg" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/italy1.jpg" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/light.png" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/light1.png" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/logo-light.png" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/logo-light1.png" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/logo-sm-light.png" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/logo-sm-light1.png" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/logo-sm.png" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/logo-sm1.png" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/logo.png" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/logo1.png" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/logogym.gif" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/logogym1.gif" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/materialdesignicons-webfont2f9b.eot" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/materialdesignicons-webfont2f9b.ttf" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/materialdesignicons-webfont2f9b.woff" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/materialdesignicons-webfont2f9b.woff2" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/materialdesignicons-webfont2f9b1.eot" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/materialdesignicons-webfont2f9b1.ttf" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/materialdesignicons-webfont2f9b1.woff" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/materialdesignicons-webfont2f9b1.woff2" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/materialdesignicons-webfontd41d.eot" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/materialdesignicons-webfontd41d1.eot" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/rtl.png" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/rtl1.png" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/russia.jpg" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/russia1.jpg" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/spain.jpg" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/spain1.jpg" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/themify9f24.eot" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/themify9f24.ttf" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/themify9f24.woff" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/themify9f241.eot" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/themify9f241.ttf" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/themify9f241.woff" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/themifyd41d.eot" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/themifyd41d1.eot" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/typicons.eot" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/typicons.ttf" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/typicons.woff" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/typicons1.eot" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/typicons1.ttf" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/typicons1.woff" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/typiconsd41d.eot" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/typiconsd41d1.eot" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/us.jpg" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/us1.jpg" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/weathericons-regular-webfont.eot" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/weathericons-regular-webfont.ttf" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/weathericons-regular-webfont.woff" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/weathericons-regular-webfont.woff2" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/weathericons-regular-webfont1.eot" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/weathericons-regular-webfont1.ttf" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/weathericons-regular-webfont1.woff" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/weathericons-regular-webfont1.woff2" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/weathericons-regular-webfontd41d.eot" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/weathericons-regular-webfontd41d1.eot" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_23_36,_11_11_2020_[Default_Changelist]1/shelved.patch" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/storage/framework/views/6072e3dc2c09e924dd1017c6ff2015008cc6d44b.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/6072e3dc2c09e924dd1017c6ff2015008cc6d44b.php" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -35,14 +199,158 @@
+     <option name="LAST_RESOLUTION" value="IGNORE" />
+   </component>
+   <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
++    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
+     <execution />
+   </component>
+   <component name="Git.Settings">
++    <option name="RECENT_BRANCH_BY_REPOSITORY">
++      <map>
++        <entry key="$PROJECT_DIR$" value="main" />
++      </map>
++    </option>
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+   </component>
++  <component name="PhpWorkspaceProjectConfiguration">
++    <include_path>
++      <path value="$PROJECT_DIR$/vendor/symfony/string" />
++      <path value="$PROJECT_DIR$/vendor/ramsey/collection" />
++      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring" />
++      <path value="$PROJECT_DIR$/vendor/symfony/translation" />
++      <path value="$PROJECT_DIR$/vendor/symfony/event-dispatcher-contracts" />
++      <path value="$PROJECT_DIR$/vendor/symfony/event-dispatcher" />
++      <path value="$PROJECT_DIR$/vendor/symfony/http-foundation" />
++      <path value="$PROJECT_DIR$/vendor/symfony/console" />
++      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php80" />
++      <path value="$PROJECT_DIR$/vendor/ramsey/uuid" />
++      <path value="$PROJECT_DIR$/vendor/fakerphp/faker" />
++      <path value="$PROJECT_DIR$/vendor/dnoegel/php-xdg-base-dir" />
++      <path value="$PROJECT_DIR$/vendor/ralouphie/getallheaders" />
++      <path value="$PROJECT_DIR$/vendor/voku/portable-ascii" />
++      <path value="$PROJECT_DIR$/vendor/hamcrest/hamcrest-php" />
++      <path value="$PROJECT_DIR$/vendor/maennchen/zipstream-php" />
++      <path value="$PROJECT_DIR$/vendor/fideloper/proxy" />
++      <path value="$PROJECT_DIR$/vendor/filp/whoops" />
++      <path value="$PROJECT_DIR$/vendor/league/mime-type-detection" />
++      <path value="$PROJECT_DIR$/vendor/league/commonmark" />
++      <path value="$PROJECT_DIR$/vendor/league/flysystem" />
++      <path value="$PROJECT_DIR$/vendor/league/fractal" />
++      <path value="$PROJECT_DIR$/vendor/myclabs/php-enum" />
++      <path value="$PROJECT_DIR$/vendor/myclabs/deep-copy" />
++      <path value="$PROJECT_DIR$/vendor/yajra/laravel-datatables-oracle" />
++      <path value="$PROJECT_DIR$/vendor/yajra/laravel-datatables-editor" />
++      <path value="$PROJECT_DIR$/vendor/yajra/laravel-datatables-fractal" />
++      <path value="$PROJECT_DIR$/vendor/yajra/laravel-datatables" />
++      <path value="$PROJECT_DIR$/vendor/yajra/laravel-datatables-html" />
++      <path value="$PROJECT_DIR$/vendor/yajra/laravel-datatables-buttons" />
++      <path value="$PROJECT_DIR$/vendor/theseer/tokenizer" />
++      <path value="$PROJECT_DIR$/vendor/markbaker/complex" />
++      <path value="$PROJECT_DIR$/vendor/markbaker/matrix" />
++      <path value="$PROJECT_DIR$/vendor/realrashid/sweet-alert" />
++      <path value="$PROJECT_DIR$/vendor/dragonmantank/cron-expression" />
++      <path value="$PROJECT_DIR$/vendor/phpdocumentor/type-resolver" />
++      <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-docblock" />
++      <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-common" />
++      <path value="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer" />
++      <path value="$PROJECT_DIR$/vendor/egulias/email-validator" />
++      <path value="$PROJECT_DIR$/vendor/sebastian/type" />
++      <path value="$PROJECT_DIR$/vendor/sebastian/recursion-context" />
++      <path value="$PROJECT_DIR$/vendor/sebastian/version" />
++      <path value="$PROJECT_DIR$/vendor/sebastian/diff" />
++      <path value="$PROJECT_DIR$/vendor/sebastian/code-unit-reverse-lookup" />
++      <path value="$PROJECT_DIR$/vendor/sebastian/comparator" />
++      <path value="$PROJECT_DIR$/vendor/sebastian/global-state" />
++      <path value="$PROJECT_DIR$/vendor/sebastian/environment" />
++      <path value="$PROJECT_DIR$/vendor/sebastian/object-reflector" />
++      <path value="$PROJECT_DIR$/vendor/sebastian/object-enumerator" />
++      <path value="$PROJECT_DIR$/vendor/sebastian/resource-operations" />
++      <path value="$PROJECT_DIR$/vendor/sebastian/exporter" />
++      <path value="$PROJECT_DIR$/vendor/facade/ignition" />
++      <path value="$PROJECT_DIR$/vendor/facade/ignition-contracts" />
++      <path value="$PROJECT_DIR$/vendor/facade/flare-client-php" />
++      <path value="$PROJECT_DIR$/vendor/doctrine/instantiator" />
++      <path value="$PROJECT_DIR$/vendor/doctrine/inflector" />
++      <path value="$PROJECT_DIR$/vendor/doctrine/lexer" />
++      <path value="$PROJECT_DIR$/vendor/psr/container" />
++      <path value="$PROJECT_DIR$/vendor/psr/simple-cache" />
++      <path value="$PROJECT_DIR$/vendor/psr/http-message" />
++      <path value="$PROJECT_DIR$/vendor/psr/event-dispatcher" />
++      <path value="$PROJECT_DIR$/vendor/psr/http-factory" />
++      <path value="$PROJECT_DIR$/vendor/psr/http-client" />
++      <path value="$PROJECT_DIR$/vendor/psr/log" />
++      <path value="$PROJECT_DIR$/vendor/maatwebsite/excel" />
++      <path value="$PROJECT_DIR$/vendor/vlucas/phpdotenv" />
++      <path value="$PROJECT_DIR$/vendor/guzzlehttp/guzzle" />
++      <path value="$PROJECT_DIR$/vendor/guzzlehttp/psr7" />
++      <path value="$PROJECT_DIR$/vendor/guzzlehttp/promises" />
++      <path value="$PROJECT_DIR$/vendor/phpoffice/phpspreadsheet" />
++      <path value="$PROJECT_DIR$/vendor/brick/math" />
++      <path value="$PROJECT_DIR$/vendor/phar-io/version" />
++      <path value="$PROJECT_DIR$/vendor/phar-io/manifest" />
++      <path value="$PROJECT_DIR$/vendor/nikic/php-parser" />
++      <path value="$PROJECT_DIR$/vendor/phpspec/prophecy" />
++      <path value="$PROJECT_DIR$/vendor/fruitcake/laravel-cors" />
++      <path value="$PROJECT_DIR$/vendor/tijsverkoyen/css-to-inline-styles" />
++      <path value="$PROJECT_DIR$/vendor/mockery/mockery" />
++      <path value="$PROJECT_DIR$/vendor/phpunit/php-file-iterator" />
++      <path value="$PROJECT_DIR$/vendor/phpunit/php-text-template" />
++      <path value="$PROJECT_DIR$/vendor/phpunit/php-timer" />
++      <path value="$PROJECT_DIR$/vendor/phpunit/phpunit" />
++      <path value="$PROJECT_DIR$/vendor/phpunit/php-token-stream" />
++      <path value="$PROJECT_DIR$/vendor/phpunit/php-code-coverage" />
++      <path value="$PROJECT_DIR$/vendor/webmozart/assert" />
++      <path value="$PROJECT_DIR$/vendor/nunomaduro/collision" />
++      <path value="$PROJECT_DIR$/vendor/asm89/stack-cors" />
++      <path value="$PROJECT_DIR$/vendor/laravelcollective/html" />
++      <path value="$PROJECT_DIR$/vendor/psy/psysh" />
++      <path value="$PROJECT_DIR$/vendor/phpoption/phpoption" />
++      <path value="$PROJECT_DIR$/vendor/scrivo/highlight.php" />
++      <path value="$PROJECT_DIR$/vendor/laravel/framework" />
++      <path value="$PROJECT_DIR$/vendor/laravel/tinker" />
++      <path value="$PROJECT_DIR$/vendor/monolog/monolog" />
++      <path value="$PROJECT_DIR$/vendor/nesbot/carbon" />
++      <path value="$PROJECT_DIR$/vendor/opis/closure" />
++      <path value="$PROJECT_DIR$/vendor/composer" />
++      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-normalizer" />
++      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-iconv" />
++      <path value="$PROJECT_DIR$/vendor/symfony/css-selector" />
++      <path value="$PROJECT_DIR$/vendor/symfony/deprecation-contracts" />
++      <path value="$PROJECT_DIR$/vendor/symfony/translation-contracts" />
++      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php72" />
++      <path value="$PROJECT_DIR$/vendor/symfony/var-dumper" />
++      <path value="$PROJECT_DIR$/vendor/symfony/routing" />
++      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php73" />
++      <path value="$PROJECT_DIR$/vendor/symfony/http-client-contracts" />
++      <path value="$PROJECT_DIR$/vendor/symfony/process" />
++      <path value="$PROJECT_DIR$/vendor/symfony/http-kernel" />
++      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-idn" />
++      <path value="$PROJECT_DIR$/vendor/symfony/error-handler" />
++      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-grapheme" />
++      <path value="$PROJECT_DIR$/vendor/symfony/mime" />
++      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-ctype" />
++      <path value="$PROJECT_DIR$/vendor/symfony/service-contracts" />
++      <path value="$PROJECT_DIR$/vendor/symfony/finder" />
++      <path value="$PROJECT_DIR$/vendor/spatie/laravel-permission" />
++      <path value="$PROJECT_DIR$/vendor/phpunit/php-invoker" />
++      <path value="$PROJECT_DIR$/vendor/sebastian/cli-parser" />
++      <path value="$PROJECT_DIR$/vendor/sebastian/code-unit" />
++      <path value="$PROJECT_DIR$/vendor/sebastian/lines-of-code" />
++      <path value="$PROJECT_DIR$/vendor/sebastian/complexity" />
++    </include_path>
++  </component>
++  <component name="ProjectId" id="1kffPdoQbSSybQpCmO8HLiTZvTA" />
++  <component name="ProjectViewState">
++    <option name="hideEmptyMiddlePackages" value="true" />
++    <option name="showExcludedFiles" value="false" />
++    <option name="showLibraryContents" value="true" />
++    <option name="sortByType" value="true" />
++  </component>
+   <component name="PropertiesComponent">
++    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
++    <property name="WebServerToolWindowFactoryState" value="false" />
+     <property name="node.js.path.for.package.tslint" value="project" />
+     <property name="node.js.selected.package.tslint" value="(autodetect)" />
++    <property name="nodejs_package_manager_path" value="npm" />
++    <property name="vue.rearranger.settings.migration" value="true" />
+   </component>
+   <component name="RecentsManager">
+     <key name="MoveFile.RECENT_KEYS">
+@@ -62,7 +370,7 @@
+   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+   <component name="TaskManager">
+     <task active="true" id="Default" summary="Default task">
+-      <changelist id="49a55a82-a09c-4fca-bbc3-6b576eb8fc71" name="Default Changelist" comment="" />
++      <changelist id="7633c5da-4012-4f98-b200-5b36a0fea64e" name="Default Changelist" comment="" />
+       <created>1604205738627</created>
+       <option name="number" value="Default" />
+       <option name="presentableId" value="Default" />
+@@ -79,6 +387,7 @@
+       <workItem from="1604894703171" duration="1610000" />
+       <workItem from="1604930960858" duration="10357000" />
+       <workItem from="1604973154457" duration="27813000" />
++      <workItem from="1606096551268" duration="904000" />
+     </task>
+     <servers />
+   </component>
+@@ -98,10 +407,10 @@
+     <option name="oldMeFiltersMigrated" value="true" />
+   </component>
+   <component name="WindowStateProjectService">
+-    <state x="387" y="222" width="582" height="357" key="#Notifications" timestamp="1605110844997">
++    <state x="387" y="222" width="582" height="357" key="#Notifications" timestamp="1606097467119">
+       <screen x="0" y="27" width="1366" height="741" />
+     </state>
+-    <state x="387" y="222" width="582" height="357" key="#Notifications/0.27.1366.741@0.27.1366.741" timestamp="1605110844997" />
++    <state x="387" y="222" width="582" height="357" key="#Notifications/0.27.1366.741@0.27.1366.741" timestamp="1606097467119" />
+     <state x="416" y="146" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1604549435257">
+       <screen x="0" y="27" width="1366" height="741" />
+     </state>
+@@ -110,37 +419,37 @@
+       <screen x="0" y="27" width="1366" height="741" />
+     </state>
+     <state x="416" y="155" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.27.1366.741@0.27.1366.741" timestamp="1605001288490" />
+-    <state x="466" y="155" width="424" height="491" key="FileChooserDialogImpl" timestamp="1605149367900">
+-      <screen x="0" y="27" width="1366" height="741" />
+-    </state>
+-    <state x="466" y="155" width="424" height="491" key="FileChooserDialogImpl/0.27.1366.741@0.27.1366.741" timestamp="1605149367900" />
+     <state x="466" y="155" width="424" height="491" key="FileChooserDialogImpl" timestamp="1604207008527">
+       <screen x="0" y="27" width="1366" height="741" />
+     </state>
+     <state x="466" y="155" width="424" height="491" key="FileChooserDialogImpl/0.27.1366.741@0.27.1366.741" timestamp="1604207008527" />
+-    <state width="1320" height="172" key="GridCell.Tab.0.bottom" timestamp="1604833915589">
++    <state width="1320" height="172" key="GridCell.Tab.0.bottom" timestamp="1606096760460">
++      <screen x="0" y="27" width="1366" height="741" />
++    </state>
++    <state width="1320" height="172" key="GridCell.Tab.0.bottom/0.27.1366.741@0.27.1366.741" timestamp="1606096760460" />
++    <state width="1320" height="172" key="GridCell.Tab.0.center" timestamp="1606096760460">
+       <screen x="0" y="27" width="1366" height="741" />
+     </state>
+-    <state width="1320" height="172" key="GridCell.Tab.0.bottom/0.27.1366.741@0.27.1366.741" timestamp="1604833915589" />
+-    <state width="1320" height="172" key="GridCell.Tab.0.center" timestamp="1604833915588">
++    <state width="1320" height="172" key="GridCell.Tab.0.center/0.27.1366.741@0.27.1366.741" timestamp="1606096760460" />
++    <state width="1320" height="172" key="GridCell.Tab.0.left" timestamp="1606096760459">
+       <screen x="0" y="27" width="1366" height="741" />
+     </state>
+-    <state width="1320" height="172" key="GridCell.Tab.0.center/0.27.1366.741@0.27.1366.741" timestamp="1604833915588" />
+-    <state width="1320" height="172" key="GridCell.Tab.0.left" timestamp="1604833915587">
++    <state width="1320" height="172" key="GridCell.Tab.0.left/0.27.1366.741@0.27.1366.741" timestamp="1606096760459" />
++    <state width="1320" height="172" key="GridCell.Tab.0.right" timestamp="1606096760460">
+       <screen x="0" y="27" width="1366" height="741" />
+     </state>
+-    <state width="1320" height="172" key="GridCell.Tab.0.left/0.27.1366.741@0.27.1366.741" timestamp="1604833915587" />
+-    <state width="1320" height="172" key="GridCell.Tab.0.right" timestamp="1604833915588">
++    <state width="1320" height="172" key="GridCell.Tab.0.right/0.27.1366.741@0.27.1366.741" timestamp="1606096760460" />
++    <state x="132" y="86" width="1092" height="629" key="MergeDialog" timestamp="1606097417113">
+       <screen x="0" y="27" width="1366" height="741" />
+     </state>
+-    <state width="1320" height="172" key="GridCell.Tab.0.right/0.27.1366.741@0.27.1366.741" timestamp="1604833915588" />
+-    <state x="132" y="86" width="1092" height="629" key="MergeDialog" timestamp="1604830217440">
++    <state x="132" y="86" width="1092" height="629" key="MergeDialog/0.27.1366.741@0.27.1366.741" timestamp="1606097417113" />
++    <state x="314" y="160" width="728" height="482" key="MultipleFileMergeDialog" timestamp="1606097438178">
+       <screen x="0" y="27" width="1366" height="741" />
+     </state>
+-    <state x="132" y="86" width="1092" height="629" key="MergeDialog/0.27.1366.741@0.27.1366.741" timestamp="1604830217440" />
+-    <state x="408" y="91" width="539" height="619" key="git4idea.branch.GitSmartOperationDialog" timestamp="1605038153635">
++    <state x="314" y="160" width="728" height="482" key="MultipleFileMergeDialog/0.27.1366.741@0.27.1366.741" timestamp="1606097438178" />
++    <state x="408" y="91" width="539" height="619" key="git4idea.branch.GitSmartOperationDialog" timestamp="1606096627129">
+       <screen x="0" y="27" width="1366" height="741" />
+     </state>
+-    <state x="408" y="91" width="539" height="619" key="git4idea.branch.GitSmartOperationDialog/0.27.1366.741@0.27.1366.741" timestamp="1604830337729" />
++    <state x="408" y="91" width="539" height="619" key="git4idea.branch.GitSmartOperationDialog/0.27.1366.741@0.27.1366.741" timestamp="1606096627129" />
+   </component>
+-</project>
+\ No newline at end of file
++</project>
+Index: .gitignore
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>/node_modules\n/public/hot\n/public/storage\n/storage/*.key\n/vendor\n.env\n.env.backup\n.phpunit.result.cache\nHomestead.json\nHomestead.yaml\nnpm-debug.log\nyarn-error.log\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .gitignore	(revision ba24796c5e0cbdf806546b64db5dc5fed91cf5e3)
++++ .gitignore	(date 1606097772147)
+@@ -10,3 +10,4 @@
+ Homestead.yaml
+ npm-debug.log
+ yarn-error.log
++
