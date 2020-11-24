@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="BranchesTreeState">
     <expand>
       <path>
@@ -20,128 +23,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7633c5da-4012-4f98-b200-5b36a0fea64e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_03_02,_11_11_2020_[Default_Changelist]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_03_02__11_11_2020__Default_Changelist_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_03_03,_11_11_2020_[Default_Changelist]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_03_03__11_11_2020__Default_Changelist_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_03_13,_11_11_2020_[Default_Changelist]/Pe-icon-7-strokebb1d.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_03_13,_11_11_2020_[Default_Changelist]/Pe-icon-7-strokebb1d.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_03_13,_11_11_2020_[Default_Changelist]/Pe-icon-7-strokebb1d.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_03_13,_11_11_2020_[Default_Changelist]/Pe-icon-7-stroked41d.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_03_13,_11_11_2020_[Default_Changelist]/Simple-Line-Icons4c82.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_03_13,_11_11_2020_[Default_Changelist]/Simple-Line-Icons4c82.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_03_13,_11_11_2020_[Default_Changelist]/Simple-Line-Icons4c82.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_03_13,_11_11_2020_[Default_Changelist]/Simple-Line-Icons4c82.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_03_13,_11_11_2020_[Default_Changelist]/Simple-Line-Iconsd41d.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_03_13,_11_11_2020_[Default_Changelist]/avatar-1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_03_13,_11_11_2020_[Default_Changelist]/avatar-10.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_03_13,_11_11_2020_[Default_Changelist]/avatar-2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_03_13,_11_11_2020_[Default_Changelist]/avatar-3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_03_13,_11_11_2020_[Default_Changelist]/avatar-4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_03_13,_11_11_2020_[Default_Changelist]/avatar-5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_03_13,_11_11_2020_[Default_Changelist]/avatar-6.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_03_13,_11_11_2020_[Default_Changelist]/avatar-8.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_03_13,_11_11_2020_[Default_Changelist]/avatar-9.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_03_13,_11_11_2020_[Default_Changelist]/dark.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_03_13,_11_11_2020_[Default_Changelist]/fa-brands-400.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_03_13,_11_11_2020_[Default_Changelist]/fa-brands-400.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_03_13,_11_11_2020_[Default_Changelist]/fa-brands-400.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_03_13,_11_11_2020_[Default_Changelist]/fa-brands-400.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_03_13,_11_11_2020_[Default_Changelist]/fa-brands-400d41d.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_03_13,_11_11_2020_[Default_Changelist]/fa-regular-400.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_03_13,_11_11_2020_[Default_Changelist]/fa-regular-400.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_03_13,_11_11_2020_[Default_Changelist]/fa-regular-400.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_03_13,_11_11_2020_[Default_Changelist]/fa-regular-400.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_03_13,_11_11_2020_[Default_Changelist]/fa-regular-400d41d.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_03_13,_11_11_2020_[Default_Changelist]/fa-solid-900.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_03_13,_11_11_2020_[Default_Changelist]/fa-solid-900.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_03_13,_11_11_2020_[Default_Changelist]/fa-solid-900.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_03_13,_11_11_2020_[Default_Changelist]/fa-solid-900.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_03_13,_11_11_2020_[Default_Changelist]/fa-solid-900d41d.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_03_13,_11_11_2020_[Default_Changelist]/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_03_13,_11_11_2020_[Default_Changelist]/germany.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_03_13,_11_11_2020_[Default_Changelist]/img-1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_03_13,_11_11_2020_[Default_Changelist]/img-10.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_03_13,_11_11_2020_[Default_Changelist]/img-11.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_03_13,_11_11_2020_[Default_Changelist]/img-12.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_03_13,_11_11_2020_[Default_Changelist]/img-121.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_03_13,_11_11_2020_[Default_Changelist]/img-2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_03_13,_11_11_2020_[Default_Changelist]/img-21.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_03_13,_11_11_2020_[Default_Changelist]/img-3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_03_13,_11_11_2020_[Default_Changelist]/img-31.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_03_13,_11_11_2020_[Default_Changelist]/img-4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_03_13,_11_11_2020_[Default_Changelist]/img-5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_03_13,_11_11_2020_[Default_Changelist]/img-6.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_03_13,_11_11_2020_[Default_Changelist]/img-7.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_03_13,_11_11_2020_[Default_Changelist]/img-8.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_03_13,_11_11_2020_[Default_Changelist]/img-9.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_03_13,_11_11_2020_[Default_Changelist]/ioniconsde33.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_03_13,_11_11_2020_[Default_Changelist]/ioniconsde33.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_03_13,_11_11_2020_[Default_Changelist]/ioniconsde33.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_03_13,_11_11_2020_[Default_Changelist]/ioniconsde33.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_03_13,_11_11_2020_[Default_Changelist]/italy.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_03_13,_11_11_2020_[Default_Changelist]/light.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_03_13,_11_11_2020_[Default_Changelist]/logo-light.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_03_13,_11_11_2020_[Default_Changelist]/logo-sm-light.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_03_13,_11_11_2020_[Default_Changelist]/logo-sm.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_03_13,_11_11_2020_[Default_Changelist]/logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_03_13,_11_11_2020_[Default_Changelist]/logogym.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_03_13,_11_11_2020_[Default_Changelist]/materialdesignicons-webfont2f9b.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_03_13,_11_11_2020_[Default_Changelist]/materialdesignicons-webfont2f9b.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_03_13,_11_11_2020_[Default_Changelist]/materialdesignicons-webfont2f9b.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_03_13,_11_11_2020_[Default_Changelist]/materialdesignicons-webfont2f9b.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_03_13,_11_11_2020_[Default_Changelist]/materialdesignicons-webfontd41d.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_03_13,_11_11_2020_[Default_Changelist]/rtl.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_03_13,_11_11_2020_[Default_Changelist]/russia.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_03_13,_11_11_2020_[Default_Changelist]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_03_13,_11_11_2020_[Default_Changelist]/spain.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_03_13,_11_11_2020_[Default_Changelist]/themify9f24.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_03_13,_11_11_2020_[Default_Changelist]/themify9f24.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_03_13,_11_11_2020_[Default_Changelist]/themify9f24.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_03_13,_11_11_2020_[Default_Changelist]/themifyd41d.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_03_13,_11_11_2020_[Default_Changelist]/typicons.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_03_13,_11_11_2020_[Default_Changelist]/typicons.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_03_13,_11_11_2020_[Default_Changelist]/typicons.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_03_13,_11_11_2020_[Default_Changelist]/typiconsd41d.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_03_13,_11_11_2020_[Default_Changelist]/us.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_03_13,_11_11_2020_[Default_Changelist]/weathericons-regular-webfont.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_03_13,_11_11_2020_[Default_Changelist]/weathericons-regular-webfont.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_03_13,_11_11_2020_[Default_Changelist]/weathericons-regular-webfont.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_03_13,_11_11_2020_[Default_Changelist]/weathericons-regular-webfont.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_03_13,_11_11_2020_[Default_Changelist]/weathericons-regular-webfontd41d.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_03_13__11_11_2020__Default_Changelist_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_08_56__23_11_2020__Default_Changelist_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_08_57__23_11_2020__Default_Changelist_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43,_11_11_2020_[Default_Changelist]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_43__11_11_2020__Default_Changelist_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_47,_11_11_2020_[Default_Changelist]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_47__11_11_2020__Default_Changelist_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_49,_11_11_2020_[Default_Changelist]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_49__11_11_2020__Default_Changelist_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_16_42,_12_11_2020_[Default_Changelist]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_16_42__12_11_2020__Default_Changelist_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_17_10,_08_11_2020_[Default_Changelist]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_17_10__08_11_2020__Default_Changelist_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_17_12,_08_11_2020_[Default_Changelist]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_17_12__08_11_2020__Default_Changelist_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_22_19,_11_11_2020_[Default_Changelist]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_22_19__11_11_2020__Default_Changelist_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_23_36,_11_11_2020_[Default_Changelist]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_23_36,_11_11_2020_[Default_Changelist]1/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_23_36__11_11_2020__Default_Changelist_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_23_36__11_11_2020__Default_Changelist_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_23_37,_11_11_2020_[Default_Changelist]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_23_37,_11_11_2020_[Default_Changelist]1/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_23_37__11_11_2020__Default_Changelist_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_23_37__11_11_2020__Default_Changelist_1.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Users/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Users/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/admin/js/User.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/User/ValidateFormUpdateUser.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/User/ValidateFormUpdateUser.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/User/ValidateFormaddUser.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/User/ValidateFormaddUser.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/admin/js/user/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/admin/js/user/user.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/user/2812_900x60351.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/user/5_27455265.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/user/87983757_2547138755604274_2691951549692772352_n12.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/user/87983757_2547138755604274_2691951549692772352_n37.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/user/87983757_2547138755604274_2691951549692772352_n4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/user/87983757_2547138755604274_2691951549692772352_n85.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/user/FPT_Polytechnic47.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/user/FPT_Polytechnic62.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/user/anh-meo-de-thuong-05080.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/user/download33.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/user/download49.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/user/hinh-nen-avenger-4k_10474594021.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/user/hinh-nen-may-tinh-119.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/user/hinh-nen-may-tinh-meo-de-thuong_05370575470.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/main.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/main.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/users/account/add.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/users/account/add.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/users/account/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/users/account/edit.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/users/account/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/users/account/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/users/account/show_detail.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/users/account/show_detail.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/admin.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -416,9 +322,9 @@
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state x="347" y="174" width="672" height="677" key="run.anything.popup/0.27.1366.741@0.27.1366.741" timestamp="1606186237859" />
-    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1606141520094">
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1606219199436">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup/0.27.1366.741@0.27.1366.741" timestamp="1606141520094" />
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup/0.27.1366.741@0.27.1366.741" timestamp="1606219199436" />
   </component>
 </project>

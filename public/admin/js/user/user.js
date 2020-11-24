@@ -22,13 +22,12 @@ url:'GetUser/'+id,
                 $("#phone").html(data.phone)
             $("#staff").html(data.staff.name)
             $.each(data.role,function (key,val){
-                $("#role").html(val.name)
+                $("#role").append(function (){
+                    return  val.name +  '<br>'
+                })
             })
 
         })
     }
-
-
-
 })
 })

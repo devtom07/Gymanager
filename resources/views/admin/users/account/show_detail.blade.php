@@ -55,8 +55,8 @@
                         <div class="col-sm-3 col-md-2 col-5">
                             <label style="font-family: inherit">Chức vụ</label>
                         </div>
-                        <div id="role" class="col-md-8 col-6">
-
+                        <div class="col-md-8 col-6">
+                           <p id="role"></p>
                         </div>
                     </div>
 
@@ -66,8 +66,8 @@
 
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
-                <button type="button" class="btn btn-primary">Sửa</button>
+                <button type="button" id="closerUser" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
+{{--                <button type="button" data-id="" id="editUser" class="btn btn-primary">Sửa</button>--}}
             </div>
         </div>
     </div>
