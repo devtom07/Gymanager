@@ -29,8 +29,8 @@ class ValidateFormaddUser extends FormRequest
             'password' => 'required|min:6|max:32|regex:[^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$]',
             'password_confirm' => 'required|same:password',
             'staff_user' => 'required',
-//            'permission' => 'required',
-             'role'    => 'required'
+             'role'    => 'required',
+            'avatar' =>'image|mimes:jpeg,jpg,png,gif|required|max:10000'
         ];
     }
     public function messages()
@@ -56,7 +56,10 @@ class ValidateFormaddUser extends FormRequest
             'role.required' => 'Không được phép để trống',
             'staff_user.required' => 'Không được phép để trống',
             'permission.required' => 'Không được phép để trống',
-
+            'avatar.required' => 'Không được để trống !',
+            'avatar.image' => 'Cần nhập đúng định dạng file là ảnh !',
+            'avatar.mimes' => 'Chỉ được nhập file jpg,png,gif',
+            'avatar.max' => 'Kích thước tối đa của file là 10000 byte'
 
         ];
     }

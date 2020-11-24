@@ -23,10 +23,11 @@ class ValidateFormUpdateUser extends FormRequest
      */
     public function rules(){
         return [
-            'name'=>'required',
+            'name'=>'required|min:8',
             'email' => 'unique:users,email,' . $this->id,
-//            'phone'=>'required|min:10|max:11|regex:[^[0-9\-\+]{9,15}$]',
-
+            'phone'=>'required|min:10|max:11|regex:[^[0-9\-\+]{9,15}$]',
+            'staff_user' => 'required',
+            'role'    => 'required',
         ];
     }
     public function messages()
@@ -49,6 +50,13 @@ class ValidateFormUpdateUser extends FormRequest
             'password.regex' => 'Mật khẩu là có chữ và số (Không có ký tự đặc biệt!)',
             'password_confirm.required' => 'Không được phép để trống !' ,
             'password_confirm.same' => 'Hai mật khẩu không trùng nhau',
+            'role.required' => 'Không được phép để trống',
+            'staff_user.required' => 'Không được phép để trống',
+            'permission.required' => 'Không được phép để trống',
+            'avatar.required' => 'Không được để trống !',
+            'avatar.image' => 'Cần nhập đúng định dạng file là ảnh !',
+            'avatar.mimes' => 'Chỉ được nhập file jpg,png,gif',
+            'avatar.max' => 'Kích thước tối đa của file là 10000 byte'
         ];
     }
 }
