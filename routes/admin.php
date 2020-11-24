@@ -28,6 +28,8 @@ Route::post('themtaikhoan/post','UserController@store')->name('user.store');
 Route::get('suataikhoan/{id}','UserController@edit')->name('user.edit');
 Route::post('suataikhoan/post/{id}','UserController@update')->name('user.update');
 Route::get('xemchitiettaikhoan/{id}','UserController@show')->name('user.show');
+Route::get('GetUser/{id}','UserController@GetUser')->name('user.GetUser');
+
 Route::post('Suaquyen/{id}','UserController@updateRole')->name('user.updateRole');
 Route::post('Suaanh/{id}','UserController@updateimage')->name('user.updateImage');
 Route::get('xoanguoidung/{id}','UserController@destroy')->name('user.delete');

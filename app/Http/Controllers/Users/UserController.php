@@ -39,6 +39,19 @@ class UserController extends Controller
         }
         return view('admin.users.account.show_detail',compact('user','role_user','roles','role_id','listRoleUser'));
             }
+            public function GetUser($id){
+                $role_user = Role::all();
+                $role_id = [];
+                $listRoleUser = DB::table('model_has_roles')->where('model_id',$id)->pluck('role_id');
+                $users = User::with('staff')->with('role')->where('id',$id)->get();
+                foreach ($users as $user){
+                    $staff = $user->staff->name;
+                }
+                foreach ($user->role as $roles){
+                    $role_id[] = $roles->id;
+                }
+                return json_encode(array('data'=>$user));
+            }
 
     public function store(ValidateFormaddUser $request)
     {

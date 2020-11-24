@@ -84,7 +84,7 @@
                                              <i class="mdi mdi-format-list-bulleted-square"></i>
                                              </button>
                                              <div class="dropdown-menu" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left:0px; transform: translate3d(0px, 29px, 0px);">
-                                                 <a class="dropdown-item  btn-show" href="{{ route('user.show',$users->id) }}"><i class="mdi mdi-eye"></i> Chi tiết</a>
+                                                 <a class="dropdown-item  btn-show"  id="show_user" data-id ="{{$users->id}}" data-toggle="modal" data-target="#exampleModalCenter"><i class="mdi mdi-eye"></i> Chi tiết</a>
                                                 <a class="dropdown-item" href="{{route('user.delete',$users->id)}}"><i class="mdi mdi-delete"></i> Xoá</a>
                                              </div>
                                           </div>
@@ -114,4 +114,5 @@
 
    <!-- end Footer -->
 </div>
+   @include('admin.users.account.show_detail')
 @endsection()
