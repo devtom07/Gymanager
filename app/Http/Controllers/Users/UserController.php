@@ -98,52 +98,86 @@ class UserController extends Controller
     public function update(ValidateFormUpdateUser $request, $id)
     {
         $get_image = $request->file('avatar');
-        if ($get_image) {
-            $get_name_image = $get_image->getClientOriginalName();
-            $name_image = current(explode('.', $get_name_image));
-            $new_image = $name_image . rand(0, 99) . '.' . $get_image->getClientOriginalExtension();
-            $get_image->move('user', $new_image);
-            DB::beginTransaction();
-             User::find($id)->update([
-                'name' => $request->name,
-                'email' => $request->email,
-                'phone' => $request->phone,
-                'staff_id' => $request->staff_user,
-                'password' => Hash::make($request->password),
-                'avatar' => $new_image
-            ]);
-             $user = User::find($id);
-            $user->syncRoles($request->role);
-            DB::commit();
-            Alert()->success('Thành công', 'Bạn đã cập nhật thàn công');
-            return redirect()->route('user.index');
+        $password = $request->password;
+        if($password != null){
+            if ($get_image) {
+                $get_name_image = $get_image->getClientOriginalName();
+                $name_image = current(explode('.', $get_name_image));
+                $new_image = $name_image . rand(0, 99) . '.' . $get_image->getClientOriginalExtension();
+                $get_image->move('user', $new_image);
+                DB::beginTransaction();
+                User::find($id)->update([
+                    'name' => $request->name,
+                    'email' => $request->email,
+                    'phone' => $request->phone,
+                    'staff_id' => $request->staff_user,
+                    'password' => Hash::make($request->password),
+                    'avatar' => $new_image
+                ]);
+                $user = User::find($id);
+                $user->syncRoles($request->role);
+                DB::commit();
+                Alert()->success('Thành công', 'Bạn đã cập nhật thàn công');
+                return redirect()->route('user.index');
 
-        }else{
-            User::find($id)->update([
-                'name' => $request->name,
-                'email' => $request->email,
-                'phone' => $request->phone,
-                'staff_id' => $request->staff_user,
-                'password' => Hash::make($request->password),
-            ]);
-            $user = User::find($id);
-            $user->syncRoles($request->role);
-            DB::commit();
-            Alert()->success('Thành công', 'Bạn đã cập nhật thàn công');
-            return redirect()->route('user.index');
+            }else{
+                User::find($id)->update([
+                    'name' => $request->name,
+                    'email' => $request->email,
+                    'phone' => $request->phone,
+                    'staff_id' => $request->staff_user,
+                    'password' => Hash::make($request->password),
+                ]);
+                $user = User::find($id);
+                $user->syncRoles($request->role);
+                DB::commit();
+                Alert()->success('Thành công', 'Bạn đã cập nhật thàn công');
+                return redirect()->route('user.index');
+            }
+        }else {
+            if ($get_image) {
+                $get_name_image = $get_image->getClientOriginalName();
+                $name_image = current(explode('.', $get_name_image));
+                $new_image = $name_image . rand(0, 99) . '.' . $get_image->getClientOriginalExtension();
+                $get_image->move('user', $new_image);
+                DB::beginTransaction();
+                User::find($id)->update([
+                    'name' => $request->name,
+                    'email' => $request->email,
+                    'phone' => $request->phone,
+                    'staff_id' => $request->staff_user,
+                    'avatar' => $new_image
+                ]);
+                $user = User::find($id);
+                $user->syncRoles($request->role);
+                DB::commit();
+                Alert()->success('Thành công', 'Bạn đã cập nhật thàn công');
+                return redirect()->route('user.index');
+
+            } else {
+                User::find($id)->update([
+                    'name' => $request->name,
+                    'email' => $request->email,
+                    'phone' => $request->phone,
+                    'staff_id' => $request->staff_user,
+                    'password' => Hash::make($request->password),
+                ]);
+                $user = User::find($id);
+                $user->syncRoles($request->role);
+                DB::commit();
+                Alert()->success('Thành công', 'Bạn đã cập nhật thàn công');
+                return redirect()->route('user.index');
+            }
         }
+
     }
     public function destroy($id)
     {
        $user = User::find($id);
-       if (Auth::user()){
-           Alert()->error('Cảnh báo','Bạn không thể xóa tài khoản hiện đang đăng nhập');
-           return redirect()->route('user.index',$id);
-       }else{
+
            $user->delete();
            Alert()->success('Thành công','Bạn đã xóa thàn công');
            return redirect()->route('user.index',$id);
-       }
     }
     public function updateRole(Request $request,$id){
         $user = User::find($id);

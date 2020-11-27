@@ -13,7 +13,7 @@ class CreateWageTable extends Migration
      */
     public function up()
     {
-        Schema::create('wage.', function (Blueprint $table) {
+        Schema::create('wage', function (Blueprint $table) {
             $table->id();
             $table->string('name');
             $table->integer('salary');
