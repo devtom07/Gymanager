@@ -20,35 +20,35 @@ Route::match(['post','get'],'/login','AuthurController@login')->name('login');
 Route::get('/logout','AuthurController@logout')->name('logout');
 
  Route::middleware(['auth'])->group(function (){
+     Route::prefix('admin')->group(function (){
+         //auth
+         Route::get('/dashboard','AdminController@index')->name('dashboard');
+         Route::get('/customer','CustomerController@index')->name('customer');
 
+             //
 //user
-Route::get('xemtaikhoan','UserController@index')->name('user.index');
-Route::get('themtaikhoan','UserController@create')->name('user.add');
-Route::post('themtaikhoan/post','UserController@store')->name('user.store');
-Route::get('suataikhoan/{id}','UserController@edit')->name('user.edit');
-Route::post('suataikhoan/post/{id}','UserController@update')->name('user.update');
-Route::get('xemchitiettaikhoan/{id}','UserController@show')->name('user.show');
-Route::get('GetUser/{id}','UserController@GetUser')->name('user.GetUser');
+Route::get('xemtaikhoan','UserController@index')->name('user.index')->middleware(['permission:Xem tài khoản']);
+Route::get('themtaikhoan','UserController@create')->name('user.add')->middleware(['permission:Thêm tài khoản']);
+Route::post('themtaikhoan/post','UserController@store')->name('user.store')->middleware(['permission:Thêm tài khoản']);
+Route::get('suataikhoan/{id}','UserController@edit')->name('user.edit')->middleware(['permission:Sửa tài khoản']);
+Route::post('suataikhoan/post/{id}','UserController@update')->name('user.update')->middleware(['permission:Sửa tài khoản']);
+Route::get('xemchitiettaikhoan/{id}','UserController@show')->name('user.show')->middleware(['permission:Xem tài khoản']);
+Route::get('GetUser/{id}','UserController@GetUser')->name('user.GetUser')->middleware(['permission:Xem tài khoản']);
 
 Route::post('Suaquyen/{id}','UserController@updateRole')->name('user.updateRole');
 Route::post('Suaanh/{id}','UserController@updateimage')->name('user.updateImage');
-Route::get('xoanguoidung/{id}','UserController@destroy')->name('user.delete');
+Route::get('xoanguoidung/{id}','UserController@destroy')->name('user.delete')->middleware(['permission:Xóa tài khoản']);
 
-
-
-//auth
-Route::get('/dashboard','AdminController@index')->name('dashboard');
-Route::get('/customer','CustomerController@index')->name('customer');
 
 
 //=========================Nhân viên==================//
 //list nhân viên
-Route::get('/nhan-vien','Nhanvien\ListnhanvienController@index')->name('listnhanvien');
-Route::get('/them-nhan-vien','Nhanvien\ListnhanvienController@create')->name('listnhanvien.add');
-Route::post('/them-nhan-vien/post','Nhanvien\ListnhanvienController@store')->name('listnhanvien.store');
-Route::get('/sua-nhan-vien/{id}','Nhanvien\ListnhanvienController@edit')->name('staff.edit');
-Route::post('/sua-nhan-vien/post/{id}','Nhanvien\ListnhanvienController@update')->name('staff.update');
-Route::get('/nhanvien/xoa/{id}','Nhanvien\ListnhanvienController@destroy')->name('staff.delete');
+Route::get('/nhan-vien','Nhanvien\ListnhanvienController@index')->name('listnhanvien')->middleware(['permission:Xem nhân viên']);
+Route::get('/them-nhan-vien','Nhanvien\ListnhanvienController@create')->name('listnhanvien.add')->middleware(['permission:Thêm nhân viên']);
+Route::post('/them-nhan-vien/post','Nhanvien\ListnhanvienController@store')->name('listnhanvien.store')->middleware(['permission:Thêm nhân viên']);
+Route::get('/sua-nhan-vien/{id}','Nhanvien\ListnhanvienController@edit')->name('staff.edit')->middleware(['permission:Sửa nhân viên']);
+Route::post('/sua-nhan-vien/post/{id}','Nhanvien\ListnhanvienController@update')->name('staff.update')->middleware(['permission:Sửa nhân viên']);
+Route::get('/nhanvien/xoa/{id}','Nhanvien\ListnhanvienController@destroy')->name('staff.delete')->middleware(['permission:Xóa nhân viên']);
 // Ca làm việc
 Route::get('/calamviec','Nhanvien\CalamviecController@index')->name('calamviec');
 Route::get('/addcalamviec','Nhanvien\CalamviecController@create')->name('calamviec.add');
@@ -69,4 +69,8 @@ Route::get('/xoa/{id}', 'Nhanvien\WorkSiftStaffController@destroy')->name('xoaca
 //nhom quyền
 Route::get('/phanquyen','RoleController@index')->name('role');
 Route::get('/themquyen','RoleController@create')->name('role.add');
+Route::post('/themquyen/post','RoleController@store')->name('role.store');
+Route::get('/suaquyen/{id}','RoleController@edit')->name('role.edit');
+Route::post('/suaquyen/post/{id}','RoleController@update')->name('role.update');
+         });
 });

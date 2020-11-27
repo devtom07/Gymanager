@@ -13,36 +13,36 @@ class PermissionSeeder extends Seeder
     {
         //user
         DB::table('permissions')->insert([
-         'name' => 'list user',
+         'name' => 'xem tài khoản',
             'guard_name' => 'web'
         ]);
         DB::table('permissions')->insert([
-            'name' => 'add user',
+            'name' => 'thêm tài khoản',
             'guard_name' => 'web'
         ]);
         DB::table('permissions')->insert([
-            'name' => 'edit user',
+            'name' => 'Sửa tài khoản',
             'guard_name' => 'web'
         ]);
         DB::table('permissions')->insert([
-            'name' => 'delete user',
+            'name' => 'Xóa tài khoản',
             'guard_name' => 'web'
         ]);
         //staff
         DB::table('permissions')->insert([
-            'name' => 'list staff',
+            'name' => 'Xem nhân viên',
             'guard_name' => 'web'
         ]);
         DB::table('permissions')->insert([
-            'name' => 'add staff',
+            'name' => 'Thêm nhân viên',
             'guard_name' => 'web'
         ]);
         DB::table('permissions')->insert([
-            'name' => 'edit staff',
+            'name' => 'Sửa nhân viên ',
             'guard_name' => 'web'
         ]);
         DB::table('permissions')->insert([
-            'name' => 'delete staff',
+            'name' => 'Xóa nhân viên',
             'guard_name' => 'web'
         ]);
     }

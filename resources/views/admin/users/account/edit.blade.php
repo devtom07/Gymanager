@@ -38,7 +38,7 @@
                                         </div>
                                         <div class="form-group">
                                             <label for="exampleInputEmail1">Mật khẩu (*)</label>
-                                            <input  name="password" class="form-control" type="password" value="{{\Illuminate\Support\Facades\Hash::make($user->password)}}" id="example-date-input" >
+                                            <input  name="password" class="form-control" type="password"  id="example-date-input" >
                                             @if($errors->first('password'))
                                                 <p class="text-danger">{{ $errors->first('password') }}</p>
                                             @endif
