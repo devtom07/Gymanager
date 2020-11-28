@@ -78,7 +78,7 @@ Route::get('/logout','AuthurController@logout')->name('logout');
             ->name('user.delete')
             ->middleware(['permission:Xóa tài khoản']);
         //=========================Nhân viên==================//
-        //list nhân viên
+        //nhân viên
         Route::get('/nhan-vien','Nhanvien\ListnhanvienController@index')
             ->name('listnhanvien')
             ->middleware(['permission:Xem nhân viên']);
