@@ -7,7 +7,6 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\WorkSiftStaff;
 use App\Models\WorkSift;
-use App\Models\Staff;
 use App\Http\Requests\WorkStaffRequest;
 
 class WorkSiftStaffController extends Controller
