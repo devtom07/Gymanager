@@ -124,8 +124,23 @@ Route::get('/logout','AuthurController@logout')->name('logout');
             ->name('suacalamviecnhanvien');
         Route::get('/xoa/{id}', 'Nhanvien\WorkSiftStaffController@destroy')
             ->name('xoacalamviecvn');
+        //customers
+         Route::get('khachhang','CustomerController@index')
+             ->name('customer.index');
+         Route::get('themkhachhang','CustomerController@add')
+             ->name('customer.add');
+         Route::get('suakhachhang/{id}','CustomerController@edit')
+             ->name('customer.edit');
+         Route::post('themkhachhang/post','CustomerController@store')
+             ->name('customer.store');
+         Route::post('suakhachhang/post/{id}','CustomerController@update')
+             ->name('customer.update');
+         Route::get('xoakhachhang/{id}','CustomerController@destroy')
+             ->name('customer.delete');
+       //pt-level
 
-//========================Users========================//
+
+
 
          });
 });

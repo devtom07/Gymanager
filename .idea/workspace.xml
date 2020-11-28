@@ -24,23 +24,12 @@
   <component name="ChangeListManager">
     <list default="true" id="7633c5da-4012-4f98-b200-5b36a0fea64e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Nhanvien/CalamviecController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Nhanvien/CalamviecController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Nhanvien/ListnhanvienController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Nhanvien/ListnhanvienController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/RoleController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/RoleController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/User/ValidateFormUpdateUser.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/User/ValidateFormUpdateUser.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/User/ValidateFormaddUser.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/User/ValidateFormaddUser.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/WorkStaffRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/WorkStaffRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/permission.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/permission.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/admin/libs/flot-charts/jquery.flot.axislabels.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/admin/libs/flot-charts/jquery.flot.axislabels.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/admin/libs/jquery-countdown/jquery.countdown.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/admin/libs/jquery-countdown/jquery.countdown.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/main.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/main.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/nhanvien/Calamviec/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/nhanvien/Calamviec/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/nhanvien/Calamviec/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/nhanvien/Calamviec/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/nhanvien/calamviec-nhanvien/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/nhanvien/calamviec-nhanvien/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/nhanvien/list-nhanvien/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/nhanvien/list-nhanvien/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/users/function/index.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/users/role/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/users/role/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CustomerController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CustomerController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/customer/add.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/customer/add.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/customer/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/customer/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/admin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_static.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_static.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -252,6 +241,7 @@
       <workItem from="1606305208610" duration="4658000" />
       <workItem from="1606357119728" duration="3054000" />
       <workItem from="1606490750830" duration="12471000" />
+      <workItem from="1606534291413" duration="5597000" />
     </task>
     <servers />
   </component>
@@ -311,6 +301,10 @@
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state x="478" y="323" width="399" height="156" key="NewPhpFileDialog/0.27.1366.741@0.27.1366.741" timestamp="1606492992420" />
+    <state x="293" y="27" width="770" height="741" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1606551888829">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state x="293" y="27" width="770" height="741" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.27.1366.741@0.27.1366.741" timestamp="1606551888829" />
     <state x="495" y="157" width="365" height="487" key="git4idea.branch.GitBranchIsNotFullyMergedDialog" timestamp="1606100951424">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
