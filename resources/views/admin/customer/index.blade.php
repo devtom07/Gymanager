@@ -1,5 +1,5 @@
 @extends('admin.main')
-@section('title', 'Đăng ký khách hàng')
+@section('title', 'Danh sách khách hàng')
 @section('content')
 <div class="content-page">
    <div class="content">
@@ -73,8 +73,16 @@
                                           <td data-org-colspan="1" data-priority="6" data-columns="tech-companies-1-col-6">30/10/2020</td>
                                           <td data-org-colspan="1" data-priority="6" data-columns="tech-companies-1-col-7">Trần Văn Long</td>
                                           <td data-org-colspan="1" data-priority="6" data-columns="tech-companies-1-col-8">
-                                             <button class="btn waves-effect waves-light btn-warning"> <i class="mdi mdi-wrench"></i> </button>
-                                             <button class="btn waves-effect waves-light btn-danger disabled"> <i class="mdi mdi-close"></i> </button>
+                                          <div class="btn-group mt-1 mr-1">
+                                                    <button class="btn btn-success btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                       <i class="mdi mdi-chevron-down"></i>
+                                                    </button>
+                                                    <div class="dropdown-menu" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 29px, 0px);">
+                                                        <a class="dropdown-item" href="#">Sửa</a>
+                                                        <a class="dropdown-item" href="#">Xoá</a>
+                                 
+                                                    </div>
+                                                </div>
                                           </td>
                                        </tr>
                                     </tbody>
@@ -92,13 +100,13 @@
                                        <th data-priority="6" id="tech-companies-1-col-6-clone">Ngày bắt đầu</th>
                                        <th data-priority="6" id="tech-companies-1-col-7-clone">Ngày hết hạn</th>
                                        <th data-priority="6" id="tech-companies-1-col-8-clone">Nhân viên phụ trách</th>
-                                       <th data-priority="6" id="tech-companies-1-col-8-clone" style="width:180px">Action</th>
+                                       <th data-priority="6" id="tech-companies-1-col-8-clone" >Action</th>
                                     </tr>
                                  </thead>
                                  <tbody>
                                     <tr>
                                        <th data-org-colspan="1" data-columns="tech-companies-1-col-0">1</th>
-                                       <td data-org-colspan="1" data-priority="1" data-columns="tech-companies-1-col-1">0944194857</td>
+                                       <td data-org-colspan="1" data-priority="1" data-columns="tech-companies-1-col-1">Phan Tuấn Anh</td>
                                        <td data-org-colspan="1" data-priority="1" data-columns="tech-companies-1-col-1">0944194857</td>
                                        <td data-org-colspan="1" data-priority="3" data-columns="tech-companies-1-col-2">Giảm cân</td>
                                        <td data-org-colspan="1" data-priority="1" data-columns="tech-companies-1-col-3">600.000 VND</td>
@@ -107,9 +115,16 @@
                                        <td data-org-colspan="1" data-priority="6" data-columns="tech-companies-1-col-6">30/10/2020</td>
                                        <td data-org-colspan="1" data-priority="6" data-columns="tech-companies-1-col-7">Trần Văn Long</td>
                                        <td data-org-colspan="1" data-priority="6" data-columns="tech-companies-1-col-8">
-                                       <button class="btn waves-effect waves-light btn-info"> + </button>
-                                            <a href="{{route('customer.add')}}" class=""><button class="btn waves-effect waves-light btn-warning"><i class="mdi mdi-wrench"></i></button></a>
-                                          <button class="btn waves-effect waves-light btn-danger disabled"> <i class="mdi mdi-close"></i> </button>
+                                       <div class="btn-group mt-1 mr-1">
+                                                    <button class="btn btn-success btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                       <i class="mdi mdi-chevron-down"></i>
+                                                    </button>
+                                                    <div class="dropdown-menu" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 29px, 0px);">
+                                                        <a class="dropdown-item" href="#">Sửa</a>
+                                                        <a class="dropdown-item" href="#">Xoá</a>
+                                 
+                                                    </div>
+                                                </div>
                                        </td>
                                     </tr>
                                  </tbody>
@@ -136,7 +151,7 @@
       <div class="container-fluid">
          <div class="row">
             <div class="col-md-12">
-               2016 - 2019 © Uplon theme by <a href="#">Coderthemes</a>
+               2020
             </div>
          </div>
       </div>
