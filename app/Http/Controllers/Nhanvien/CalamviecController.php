@@ -31,7 +31,8 @@ class CalamviecController extends Controller
         $work_sifts->hour_end = $request->hour_end;
         $work_sifts->status = $request->status;
         $work_sifts->save();
-        return redirect('calamviec');
+        Alert()->success('Thành công','Thêm ca làm việc thành công');
+        return redirect()->route('calamviec');
     }
 
 
@@ -57,12 +58,13 @@ class CalamviecController extends Controller
         $arr['hour_end'] = $request->hour_end;
         $arr['status'] = $request->status;
         $work_sifts::where('id', $id)->update($arr);
-        return redirect('calamviec');
+        Alert()->success('Thành công','Cập nhật ca làm việc thành công');
+        return redirect()->route('calamviec');
     }
 
     public function destroy($id)
     {
         WorkSift::destroy($id);
-        return back();
-    }
+        Alert()->success('Thành công','Xóa ca làm việc thành công');
+        return redirect()->route('calamviec');    }
 }
