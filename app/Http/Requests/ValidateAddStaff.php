@@ -24,15 +24,14 @@ class ValidateAddStaff extends FormRequest
     public function rules()
     {
         return [
-            'name' => 'required|unique:staffs,name',
-            'work_sift_id'=>'required:staffs,work_sift_id',
-            'avatar' => 'required:staffs,avatar ',
-            'phone' => 'required:staffs,phone',
-            'email' => 'required:staffs,email',
-            'address' => 'required:staffs,address',
-            'contract' => 'required:staffs,contract',
-            'wage' => 'required:staffs,wage',
-            'title' => 'required:staffs,title',
+            'name' => 'required',
+            'avatar' => 'required',
+            'phone' => 'required|min:10',
+            'email' => 'required',
+            'address' => 'required|min:5',
+            'contract' => 'required',
+            'wage' => 'required',
+            'title' => 'required',
 
         ];
     }
@@ -40,7 +39,7 @@ class ValidateAddStaff extends FormRequest
     {
         return [
             'required' => ':attribute không được để trống',
-            'name.unique' => 'Tên này đã có !'
+            'name.unique' => 'Ca này đã có !'
 
         ];
     }
@@ -48,7 +47,6 @@ class ValidateAddStaff extends FormRequest
     {
         return [
             'name' => 'Tên nhân viên',
-            'work_sift_id'=>'Thời gian làm việc',
             'avatar' => 'Ảnh đại diện',
             'email' => 'email',
             'phone' => 'Số điện thoại',

@@ -141,5 +141,3 @@ return [
         'store' => 'default',
     ],
 ];
-
-

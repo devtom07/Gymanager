@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Providers;
 
 use App\Permission;
@@ -31,4 +32,3 @@ class AppServiceProvider extends ServiceProvider
         });
     }
 }
-
