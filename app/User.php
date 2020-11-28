@@ -20,7 +20,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password','staff_id','phone'
+        'name', 'email', 'password','staff_id','phone','avatar'
     ];
 
     /**
@@ -41,7 +41,7 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
      public  function staff(){
-     return $this->belongsTo('App\Staff','staff_id','id');
+     return $this->belongsTo('App\Models\Staff','staff_id','id');
       }
       public function role(){
          return $this->belongsToMany(Role::class,'model_has_roles','model_id','role_id');
