@@ -8,6 +8,8 @@ use Illuminate\Http\Request;
 use App\Models\WorkSiftStaff;
 use App\Models\WorkSift;
 use App\Models\Staff;
+
+
 use App\Http\Requests\WorkStaffRequest;
 
 class WorkSiftStaffController extends Controller
@@ -20,11 +22,12 @@ class WorkSiftStaffController extends Controller
     public function index()
     {
         $work_staff = WorkSiftStaff::with('workSift', 'Staff')->orderBy('id', 'DESC')->get(); 
+         $work_sift = WorkSift::get();
         // DB::table('work_sift_staffs')
         // ->join('work_sifts','work_sift_staffs.work_sift_id', '=', 'work_sifts.id')
         // ->orderBy('work_sift_staffs.id','desc')
         // ->get();
-        return view('admin.nhanvien.calamviec-nhanvien.index', ['work_staffs'=>$work_staff]);
+        return view('admin.nhanvien.calamviec-nhanvien.index', ['work_staffs'=>$work_staff,'work_sift'=>$work_sift]);
     }
 
     /**
@@ -47,9 +50,10 @@ class WorkSiftStaffController extends Controller
      */
     public function store(WorkStaffRequest $request)
     {
+
         //
         $work_staff = new WorkSiftStaff;
-        $work_staff->work_sift_id = $request->work_sift_id;
+        $work_staff->work_sift_id = json_encode($request->work_sift_id);
         $work_staff->date_start = $request->date_start;
         $work_staff->date_end = $request->date_end;
         $work_staff->staff_id = $request->staff_id;

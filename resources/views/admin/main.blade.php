@@ -555,6 +555,13 @@
             }
         });
     </script>
+    <script>
+    $(document).ready(function() {
+        $('#calamviec').select2();
+    });
+</script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
+
 </body>
 
 <!-- Mirrored from coderthemes.com/uplon/layouts/vertical/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 31 Oct 2020 19:25:02 GMT -->
