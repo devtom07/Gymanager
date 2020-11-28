@@ -50,6 +50,7 @@
                                     <thead>
                                        <tr>
                                           <th id="tech-companies-1-col-0-clone">STT</th>
+                                          <th data-priority="1" id="tech-companies-1-col-1-clone">Ma nhan vien</th>
                                           <th data-priority="1" id="tech-companies-1-col-1-clone">Họ và Tên</th>
                                           <th data-priority="3" id="tech-companies-1-col-2-clone">Điện thoại</th>
                                           <th data-priority="3" id="tech-companies-1-col-2-clone">Anh dai dien</th>
@@ -66,6 +67,11 @@
                                        @foreach($listStaffs as $key => $staffs)
                                        <tr>
                                           <th data-org-colspan="1" data-columns="tech-companies-1-col-0">{{$key+1}}</th>
+                                          <td data-org-colspan="1" data-priority="1" data-columns="tech-companies-1-col-1">
+                                             <span class="co-name">
+                                                {{ $staffs->code}}
+                                             </span>
+                                          </td>
                                           <td data-org-colspan="1" data-priority="1" data-columns="tech-companies-1-col-1">
                                              <span class="co-name">
                                                 {{ $staffs->name}}
