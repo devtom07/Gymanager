@@ -17,3 +17,4 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 require_once 'admin.php';
+require_once 'fontend.php';
