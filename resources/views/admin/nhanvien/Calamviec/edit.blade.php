@@ -16,7 +16,7 @@
                                 <li class="breadcrumb-item active">Tạo mới ca làm việc</li>
                             </ol>
                         </div>
-                        <h4 class="page-title">Tạo mới ca làm việc</h4>
+                        <h4 class="page-title">Cập nhật ca làm việc</h4>
                     </div>
                 </div>
             </div>
@@ -24,7 +24,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="card-box">
-                        <h4 class="header-title mb-4">Tạo mới ca làm việc</h4>
+                        <h4 class="header-title mb-4">Cập nhật ca làm việc</h4>
                         <div class="row">
                             <div class="col-xl-6">
                                 <form method="post">

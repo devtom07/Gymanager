@@ -7,6 +7,7 @@ use App\Permission;
 use Illuminate\Http\Request;
 use App\Role;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Log;
 use RealRashid\SweetAlert\Facades\Alert;
 
 class RoleController extends Controller
@@ -39,12 +40,6 @@ class RoleController extends Controller
         Alert()->success('Thành công','Thêm chức vụ thành công');
         return redirect()->route('role');
     }
-    public function show($id)
-    {
-        //
-    }
-
-
     public function edit($id)
     {
         $roles = Role::where('id',$id)->get();
@@ -69,6 +64,21 @@ class RoleController extends Controller
     }
     public function destroy($id)
     {
-        //
+        try {
+            DB::beginTransaction();
+            $role = Role::find($id);
+            //delete user of role_user_table
+            //delete role_user
+            $role->permissions()->detach();
+            $role->delete();
+            DB::commit();
+            Alert()->success('Xóa thành công!')->autoClose(1500);
+            return \redirect()->route('role');
+        } catch (\Exception $e) {
+            \abort(403);
+            DB::rollBack();
+            Log::error($e->getMessage() . $e->getLine());
+        }
+
     }
 }
