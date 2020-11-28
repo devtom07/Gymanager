@@ -83,7 +83,7 @@
                                              </button>
                                              <div class="dropdown-menu" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 29px, 0px);">
                                                 <a class="dropdown-item" href="{{route('role.edit',$role->id)}}"><i class="mdi mdi-lead-pencil"></i> Sửa</a>
-                                                <a class="dropdown-item" href="#"><i class="mdi mdi-delete"></i> Xoá</a>
+                                                <a class="dropdown-item btn-remove" href="{{route('role.delete',$role->id)}}"><i class="mdi mdi-delete"></i> Xoá</a>
                                              </div>
                                           </div>
                                        </td>
@@ -109,15 +109,7 @@
    </div>
    <!-- end content -->
    <!-- Footer Start -->
-   <footer class="footer">
-      <div class="container-fluid">
-         <div class="row">
-            <div class="col-md-12">
-               2016 - 2019 © Uplon theme by <a href="#">Coderthemes</a>
-            </div>
-         </div>
-      </div>
-   </footer>
+
    <!-- end Footer -->
 </div>
 @endsection()

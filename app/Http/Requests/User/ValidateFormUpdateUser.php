@@ -23,7 +23,7 @@ class ValidateFormUpdateUser extends FormRequest
      */
     public function rules(){
         return [
-            'name'=>'required|min:8',
+            'name'=>'required',
             'email' => 'unique:users,email,' . $this->id,
             'phone'=>'required|min:10|max:11|regex:[^[0-9\-\+]{9,15}$]',
             'staff_user' => 'required',
