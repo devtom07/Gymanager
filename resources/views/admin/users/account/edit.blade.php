@@ -1,153 +1,124 @@
 @extends('admin.main')
-@section('title','Sửa tài khoản')
+@section('title', 'Tạo mới tài khoản')
 @section('content')
-<div class="card">
-    <div class="card-body">
-        <div class="card-title mb-4">
-            <div class="d-flex justify-content-start">
-                <div class="image-container">
-                    <img src="http://laravel-training.local/storage/images/1603351081_8613549_9be24318e4be276aaf5961a08cd7ae53.png" id="imgProfile" style="width: 150px; height: 150px" class="img-thumbnail">
-                    <form action="http://laravel-training.local/users/upload/1" method="post" enctype="multipart/form-data">
-                        <input type="hidden" name="_token" value="nF6vzGJtEs08JEi1AQ86JJ0MrHymVjEUjQGVvSFg">                                                <div class="middle mt-3">
-                            <input class="form-control" type="file" onchange="this.form.submit()" id="profilePicture" name="cover">
-                        </div>
-                    </form>
-                    <div class="userData mt-3">
-                        <p style="color: #0a0a0a;font-size: 20px; font-family: inherit">Thông tin
-                            cá nhân</p>
-                    </div>
-                </div>
-                <div class="ml-auto">
-                    <input type="button" class="btn btn-primary d-none" id="btnDiscard" value="Discard Changes">
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-12">
-                <ul class="nav nav-tabs mb-4" id="myTab" role="tablist">
-                    <li class="nav-item">
-                        <a class="nav-link active" id="basicInfo-tab" data-toggle="tab" href="#basicInfo" role="tab" aria-controls="basicInfo" aria-selected="true">Chi
-                            tiết</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" id="connectedServices-tab" data-toggle="tab" href="#connectedServices" role="tab" aria-controls="connectedServices" aria-selected="false">Chỉnh sửa</a>
-                    </li>
-                </ul>
-                <div class="tab-content ml-1" id="myTabContent">
-                    <div class="tab-pane fade show active" id="basicInfo" role="tabpanel" aria-labelledby="basicInfo-tab">
-                        <div class="row">
-                            <div class="col-sm-3 col-md-2 col-5">
-                                <label style=" font-family: inherit">Tên</label>
+    <div class="content-page">
+        <div class="content">
+            <!-- Start Content-->
+            <div class="container-fluid">
+                <!-- start page title -->
+                <div class="row">
+                    <div class="col-12">
+                        <div class="page-title-box">
+                            <div class="page-title-right">
+                                <ol class="breadcrumb m-0">
+                                    <li class="breadcrumb-item"><a href="javascript: void(0);">Gymanager</a></li>
+                                    <li class="breadcrumb-item"><a href="javascript: void(0);">Forms</a></li>
+                                    <li class="breadcrumb-item active">Tạo mới tài khoản</li>
+                                </ol>
                             </div>
-                            <div class="col-md-8 col-6">
-                                ADMIN
-                            </div>
-                        </div>
-                        <hr>
-
-                        <div class="row">
-                            <div class="col-sm-3 col-md-2 col-5">
-                                <label style="font-family: inherit">Email</label>
-                            </div>
-                            <div class="col-md-8 col-6">
-                                ADMIN@gmail.com
-                            </div>
-                        </div>
-                        <hr>
-                        <div class="row">
-                            <div class="col-sm-3 col-md-2 col-5">
-                                <label style="font-family: inherit">Số điện thoại</label>
-                            </div>
-                            <div class="col-md-8 col-6">
-                                0982047922
-                            </div>
-                        </div>
-                        <hr>
-                        <div class="row">
-                            <div class="col-sm-3 col-md-2 col-5">
-                                <label style="font-family: inherit">Địa chỉ</label>
-                            </div>
-                            <div class="col-md-8 col-6">
-
-                            </div>
-                        </div>
-                        <hr>
-
-                        <div class="row">
-                            <div class="col-sm-3 col-md-2 col-5">
-                                <label style="font-family: inherit">Chức vụ</label>
-                            </div>
-                            <div class="col-md-8 col-6">
-                                SupperAdmin<br>
-                                Quản lí sản phẩm<br>
-                                Quản trị thương hiệu<br>
-                                Quản lí vận chuyển<br>
-                                Quản lí Sale<br>
-                                Quản trị Slide<br>
-                                Quản trị danh mục<br>
-                                (<a class="pos" href="#" data-key="1" data-toggle="modal" data-target=".bs-example-modal-sm">Click để thêm chức vụ</a>)
-                            </div>
-                        </div>
-                        <hr>
-                        <hr>
-                        <div class="row" style="margin-left: 400px">
-                            <a href="http://laravel-training.local/users/list" class="btn btn-secondary waves-effect">
-                                Trở về
-                            </a>
+                            <h4 class="page-title">Cập nhật tài khoản</h4>
                         </div>
                     </div>
-                    <div class="tab-pane fade" id="connectedServices" role="tabpanel" aria-labelledby="ConnectedServices-tab">
-                        <form method="post" action="http://laravel-training.local/users/update/1">
-                            <input type="hidden" name="_token" value="nF6vzGJtEs08JEi1AQ86JJ0MrHymVjEUjQGVvSFg">                                                                                <div class="tab-pane fade show active" id="basicInfo" role="tabpanel" aria-labelledby="basicInfo-tab">
+                </div>
+                <!-- end page title -->
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card-box">
+                            <h4 class="header-title mb-4">Cập nhật tài khoản</h4>
+                            <form method="post" action="{{route('user.update',$user->id)}}" enctype="multipart/form-data">
+                                @csrf
                                 <div class="row">
-                                    <div class="col-sm-3 col-md-2 col-5">
-                                        <label style=" font-family: inherit" class="">Tên (*)</label>
-                                    </div>
-                                    <div class="col-md-8 col-6">
-                                        <input class="form-control " type="text" name="name" value="ADMIN">
-                                    </div>
-                                </div>
-                                <hr>
-                                <div class="row">
-                                    <div class="col-sm-3 col-md-2 col-5">
-                                        <label style="font-family: inherit" class="">Số điện thoại (*)</label>
-                                    </div>
-                                    <div class="col-md-8 col-6">
-                                        <input class="form-control " type="text" name="phone" value="0982047922">
-                                    </div>
-
-                                </div>
-                                <hr>
-                                <div class="row">
-                                    <div class="col-sm-3 col-md-2 col-5">
-                                        <label style="font-family: inherit">Địa chỉ</label>
-                                    </div>
-                                    <div class="col-md-8 col-6">
-                                        <input class="form-control" type="text" name="address" value="">
-                                    </div>
-                                </div>
-
-
-                                <hr>
-                                <div class="row mt-2">
-                                    <div class="col-sm-3 col-md-2 col-5">
-                                    </div>
-                                    <div class="col-md-8 col-6">
-                                        <div>
-                                            <p>Ghi chú: Mục tích dấu (*) là bắt buộc!!!</p>
+                                    <div class="col-xl-6">
+                                        <div class="form-group">
+                                            <label for="exampleInputEmail1">Tên tài khoản (*)</label>
+                                            <input value="{{$user->name}}" name="name" type="text" class="form-control" id="exampleInputEmail1" placeholder="">
+                                            @if($errors->first('name'))
+                                                <p class="text-danger">{{ $errors->first('name') }}</p>
+                                            @endif
                                         </div>
-                                        <input class="btn btn-primary" type="submit" value="Cập nhập">
-                                        <a class="btn btn-secondary" href="">Trở
-                                            lại</a>
+                                        <div class="form-group">
+                                            <label for="exampleInputEmail1">Mật khẩu (*)</label>
+                                            <input  name="password" class="form-control" type="password"  id="example-date-input" >
+                                            @if($errors->first('password'))
+                                                <p class="text-danger">{{ $errors->first('password') }}</p>
+                                            @endif
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleInputPassword1">Email (*)</label>
+                                            <input value="{{$user->email}}" name="email" class="form-control" type="text" value="" id="example-time-input">
+                                            @if($errors->first('email'))
+                                                <p class="text-danger">{{ $errors->first('email') }}</p>
+                                            @endif
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleInputPassword1">Phone (*)</label>
+                                            <input value="{{$user->phone}}" name="phone"  class="form-control" type="text"  id="example-time-input">
+                                            @if($errors->first('phone'))
+                                                <p class="text-danger">{{ $errors->first('phone') }}</p>
+                                            @endif
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Nhân viên (*)</label>
+                                            <select name="staff_user" class="form-control" id="exampleSelect1">
+                                                @foreach($staff as $staffs )
+                                                    @if($staffs->id == $user->staff_id)
+                                                        <option selected  value="{{$staffs->id}}">{{$staffs->name}}</option>
+                                                    @else
+                                                        <option  value="{{$staffs->id}}">{{$staffs->name}}</option>
+                                                    @endif
+                                                @endforeach
+                                            </select>
+                                            @if($errors->first('staff'))
+                                                <p class="text-danger">{{ $errors->first('staff') }}</p>
+                                            @endif
+                                        </div>
                                     </div>
+                                    <div class="col-xl-6">
+                                        <div class="form-group">
+                                            @if($user->avatar)
+                                            <img width="200px" src="{{asset('user/'.$user->avatar)}}">
+                                            @else
+                                                <img width="200px" src="http://placehold.it/150x150">
+                                            @endif
+
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleInputImage">Avatar (*)</label>
+                                            <input value="{{old('avatar')}}" name="avatar" class="form-control-file" type="file" id="example-time-input" >
+                                            @if($errors->first('avatar'))
+                                                <p class="text-danger">{{ $errors->first('avatar') }}</p>
+                                            @endif
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Phân loại tài khoản (*)</label>
+                                            <br>
+                                            <select  multiple  name="role[]" class="selected" id="exampleSelect1">
+                                                @foreach($role_user as  $roles )
+                                                    <option {{$listRoleUser->contains($roles->id) ? 'selected' : '' }} value="{{$roles->id}}">{{$roles->name}}</option>
+                                                @endforeach
+                                            </select>
+                                            @if($errors->first('role'))
+                                                <p class="text-danger">{{ $errors->first('role') }}</p>
+                                            @endif
+                                        </div>
+
+                                    </div>
+                                    <button type="submit" class="btn btn-primary">Submit</button>
                                 </div>
-                            </div>
-                        </form>
+                            </form>
+                            <!-- end col -->
+                            <!-- end row -->
+                        </div>
                     </div>
+                    <!-- end col -->
                 </div>
+                <!-- end row -->
+                <!-- end row -->
             </div>
+            <!-- end container-fluid -->
         </div>
+        <!-- end content -->
+        <!-- Footer Start -->
+        <!-- end Footer -->
     </div>
-</div>
-@endsection
+@endsection()

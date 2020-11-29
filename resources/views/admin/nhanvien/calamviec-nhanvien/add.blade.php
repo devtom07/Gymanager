@@ -1,6 +1,7 @@
 @extends('admin.main')
 @section('title', 'Tạo mới ca làm việc')
 @section('content')
+<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
 <div class="content-page">
     <div class="content">
         <!-- Start Content-->
@@ -38,7 +39,7 @@
                                         @enderror
                                     <div class="form-group">
                                         <label for="exampleInputEmail1">Ca làm việc (*)</label>
-                                        <select class="form-control" id="exampleSelect1" name="work_sift_id">
+                                        <select class="form-control" id="calamviec" name="work_sift_id[]" multiple>
                                             @foreach($data as $work_sifts)
                                             <option value="{{ $work_sifts->id }}">{{ $work_sifts->name }}</option>
                                             @endforeach
@@ -92,4 +93,5 @@
     <!-- Footer Start -->
     <!-- end Footer -->
 </div>
+
 @endsection()

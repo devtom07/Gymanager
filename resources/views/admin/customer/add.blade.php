@@ -28,7 +28,7 @@
                             <div class="col-12">
                                 <div class="card-box">
 
-                                    <h4 class="header-title mb-4">Input Types</h4>
+                                    <h4 class="header-title mb-4">Đăng kí khách hàng</h4>
 
                                     <div class="row">
                                         <div class="col-xl-6">

@@ -61,7 +61,6 @@
                                        <th id="tech-companies-1-col-0-clone">STT</th>
                                        <th data-priority="3" id="tech-companies-1-col-2-clone">Tên tài khoản</th>
                                        <th data-priority="6" id="tech-companies-1-col-6-clone">Email</th>
-                                        <th data-priority="3" id="tech-companies-1-col-5-clone">Trạng thái phê duyệt</th>
                                         <th data-priority="3" id="tech-companies-1-col-5-clone">Trạng thái khóa</th>
                                         <th data-priority="3" id="tech-companies-1-col-5-clone">Ngày tạo</th>
                                         <th data-priority="6" id="tech-companies-1-col-7-clone">Đăng nhập cuối</th>
@@ -74,18 +73,28 @@
                                        <th data-org-colspan="1" data-columns="tech-companies-1-col-0">{{$key+1}}</th>
                                        <td data-org-colspan="1" data-priority="1" data-columns="tech-companies-1-col-1">{{$users->name}}</td>
                                        <td data-org-colspan="1" data-priority="3" data-columns="tech-companies-1-col-5">{{$users->email}}</td>
-                                        <td data-org-colspan="1" data-priority="3" data-columns="tech-companies-1-col-4"><button type="button" class="btn btn-success btn-rounded waves-effect waves-light">Đã phê duyệt</button></td>
                                         <td data-org-colspan="1" data-priority="3" data-columns="tech-companies-1-col-4"><i style="color: #00aced" class="fas fa-lock-open"></i></td>
-                                        <td data-org-colspan="1" data-priority="6" data-columns="tech-companies-1-col-6">{{$users->created_at}}</td>
-                                        <td data-org-colspan="1" data-priority="6" data-columns="tech-companies-1-col-6">{{$users->last_login}}</td>
+                                       @if($users->created_at)
+                                        <td data-org-colspan="1" data-priority="6" data-columns="tech-companies-1-col-6">{{date('d-m-Y', strtotime($users->created_at))}}</td>
+                                       @else
+                                          <td data-org-colspan="1" data-priority="6" data-columns="tech-companies-1-col-6"></td>
+
+                                       @endif
+                                       @if($users->last_login)
+                                        <td data-org-colspan="1" data-priority="6" data-columns="tech-companies-1-col-6">{{date('d-m-Y', strtotime($users->last_login))}}</td>
+                                       @else
+                                          <td data-org-colspan="1" data-priority="6" data-columns="tech-companies-1-col-6"></td>
+                                       @endif
                                        <td data-org-colspan="1" data-priority="6" data-columns="tech-companies-1-col-8">
                                           <div class="btn-group mt-1 mr-1">
                                              <button class="btn btn-success btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                              <i class="mdi mdi-format-list-bulleted-square"></i>
                                              </button>
                                              <div class="dropdown-menu" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left:0px; transform: translate3d(0px, 29px, 0px);">
-                                                 <a class="dropdown-item  btn-show" href="{{ route('user.show',$users->id) }}"><i class="mdi mdi-eye"></i> Chi tiết</a>
-                                                <a class="dropdown-item" href="{{route('user.delete',$users->id)}}"><i class="mdi mdi-delete"></i> Xoá</a>
+                                                 <a class="dropdown-item  btn-show"  id="show_user" data-id ="{{$users->id}}" data-toggle="modal" data-target="#exampleModalCenter"><i class="mdi mdi-eye"></i> Chi tiết</a>
+                                                <a class="dropdown-item" href="{{route('user.edit',$users->id)}}"><i class="mdi mdi-account-edit"></i> Sửa</a>
+                                                <a class="dropdown-item btn-remove" href="{{route('user.delete',$users->id)}}"><i class="mdi mdi-delete"></i> Xoá</a>
+
                                              </div>
                                           </div>
                                        </td>
@@ -114,4 +123,5 @@
 
    <!-- end Footer -->
 </div>
+   @include('admin.users.account.show_detail')
 @endsection()
