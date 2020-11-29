@@ -30,7 +30,7 @@
                                     <div class="btn-toolbar">
                                         <div class="btn-group dropdown-btn-group pull-right">
                                             <button type="button" class="btn btn-default"><a
-                                                    href="{{route('calamviec.add')}}" class="active">Tạo
+                                                    href="{{route('calamviec.store')}}" class="active">Tạo
                                                     mới</a></button><button type="button"
                                                 class="btn btn-default dropdown-toggle" data-toggle="dropdown">Hiện thêm
                                                 thông tin <span class="caret"></span></button>
@@ -204,7 +204,7 @@
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                                @foreach($listworkSift as $listwork)
+                                                @foreach($listWorkSift as $listwork)
                                                 <tr>
                                                     <th data-org-colspan="1" data-columns="tech-companies-1-col-0"><span
                                                             class="co-name">{{$listwork->name}}</span></th>
@@ -213,7 +213,7 @@
                                                     </td>
                                                     <td data-org-colspan="1" data-priority="3"
                                                         data-columns="tech-companies-1-col-2">
-                                                        {{$listwork->	hour_start_center}}</td>
+                                                        {{$listwork->hour_start_center}}</td>
                                                     <td data-org-colspan="1" data-priority="1"
                                                         data-columns="tech-companies-1-col-3">
                                                         {{$listwork->hour_end_center}}</td>
@@ -235,10 +235,10 @@
                                                             <div class="dropdown-menu" x-placement="bottom-start"
                                                                 style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 29px, 0px);">
                                                                 <a class="dropdown-item"
-                                                                    href="{{asset('edit/'.$listwork->id)}}"><i
+                                                                    href="{{route('calamviec.edit',$listwork->id)}}"><i
                                                                         class="mdi mdi-lead-pencil"></i> Sửa</a>
                                                                 <a class="dropdown-item btn-remove"
-                                                                    href="{{asset('addcalamviec/delete/'.$listwork->id)}}"><i
+                                                                    href="{{route('calamviec.delete',$listwork->id)}}"><i
                                                                         class="mdi mdi-delete"></i> Xoá</a>
 
                                                             </div>
@@ -267,15 +267,7 @@
     </div>
     <!-- end content -->
     <!-- Footer Start -->
-    <footer class="footer">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-12">
-                    2016 - 2019 © Uplon theme by <a href="#">Coderthemes</a>
-                </div>
-            </div>
-        </div>
-    </footer>
+
     <!-- end Footer -->
 </div>
 

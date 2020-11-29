@@ -46,48 +46,7 @@
                               </div>
                            </div>
                            <div class="table-responsive fixed-solution" data-pattern="priority-columns">
-                              <div class="sticky-table-header" style="height: 49px; visibility: hidden; width: auto; top: -1px;">
-                                 <table id="tech-companies-1-clone" class="table table-striped">
-                                    <thead>
-                                       <tr>
-                                          <th id="tech-companies-1-col-0-clone">STT</th>
-                                          <th data-priority="1" id="tech-companies-1-col-1-clone">Tên</th>
-                                          <th data-priority="3" id="tech-companies-1-col-2-clone">Số điện thoại</th>
-                                          <th data-priority="1" id="tech-companies-1-col-3-clone">Dịch vụ</th>
-                                          <th data-priority="3" id="tech-companies-1-col-4-clone">Giá</th>
-                                          <th data-priority="3" id="tech-companies-1-col-5-clone">Còn lại</th>
-                                          <th data-priority="6" id="tech-companies-1-col-6-clone">Ngày bắt đầu</th>
-                                          <th data-priority="6" id="tech-companies-1-col-7-clone">Ngày hết hạn</th>
-                                          <th data-priority="6" id="tech-companies-1-col-8-clone">Nhân viên phụ trách</th>
-                                          <th data-priority="6" id="tech-companies-1-col-8-clone">Action</th>
-                                       </tr>
-                                    </thead>
-                                    <tbody>
-                                       <tr>
-                                          <th data-org-colspan="1" data-columns="tech-companies-1-col-0">1 <span class="co-name">Phan Tuấn Anh</span></th>
-                                          <td data-org-colspan="1" data-priority="1" data-columns="tech-companies-1-col-1">0944194857</td>
-                                          <td data-org-colspan="1" data-priority="3" data-columns="tech-companies-1-col-2">Giảm cân</td>
-                                          <td data-org-colspan="1" data-priority="1" data-columns="tech-companies-1-col-3">600.000 VND</td>
-                                          <td data-org-colspan="1" data-priority="3" data-columns="tech-companies-1-col-4">5</td>
-                                          <td data-org-colspan="1" data-priority="3" data-columns="tech-companies-1-col-5">12/10/2020</td>
-                                          <td data-org-colspan="1" data-priority="6" data-columns="tech-companies-1-col-6">30/10/2020</td>
-                                          <td data-org-colspan="1" data-priority="6" data-columns="tech-companies-1-col-7">Trần Văn Long</td>
-                                          <td data-org-colspan="1" data-priority="6" data-columns="tech-companies-1-col-8">
-                                          <div class="btn-group mt-1 mr-1">
-                                                    <button class="btn btn-success btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                       <i class="mdi mdi-chevron-down"></i>
-                                                    </button>
-                                                    <div class="dropdown-menu" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 29px, 0px);">
-                                                        <a class="dropdown-item" href="#">Sửa</a>
-                                                        <a class="dropdown-item" href="#">Xoá</a>
-                                 
-                                                    </div>
-                                                </div>
-                                          </td>
-                                       </tr>
-                                    </tbody>
-                                 </table>
-                              </div>
+
                               <table id="tech-companies-1" class="table table-striped">
                                  <thead>
                                     <tr>
@@ -105,9 +64,10 @@
                                  </thead>
                                  <tbody>
                                     <tr>
-                                       <th data-org-colspan="1" data-columns="tech-companies-1-col-0">1</th>
-                                       <td data-org-colspan="1" data-priority="1" data-columns="tech-companies-1-col-1">Phan Tuấn Anh</td>
-                                       <td data-org-colspan="1" data-priority="1" data-columns="tech-companies-1-col-1">0944194857</td>
+                                       @foreach($customers as $key => $customer)
+                                       <th data-org-colspan="1" data-columns="tech-companies-1-col-0">{{$key++}}</th>
+                                       <td data-org-colspan="1" data-priority="1" data-columns="tech-companies-1-col-1">{{$customer->name}}</td>
+                                       <td data-org-colspan="1" data-priority="1" data-columns="tech-companies-1-col-1">{{$customer->phone}}</td>
                                        <td data-org-colspan="1" data-priority="3" data-columns="tech-companies-1-col-2">Giảm cân</td>
                                        <td data-org-colspan="1" data-priority="1" data-columns="tech-companies-1-col-3">600.000 VND</td>
                                        <td data-org-colspan="1" data-priority="3" data-columns="tech-companies-1-col-4">5</td>
@@ -122,10 +82,11 @@
                                                     <div class="dropdown-menu" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 29px, 0px);">
                                                         <a class="dropdown-item" href="#">Sửa</a>
                                                         <a class="dropdown-item" href="#">Xoá</a>
-                                 
+
                                                     </div>
                                                 </div>
                                        </td>
+                                       @endforeach
                                     </tr>
                                  </tbody>
                               </table>
@@ -147,15 +108,7 @@
    </div>
    <!-- end content -->
    <!-- Footer Start -->
-   <footer class="footer">
-      <div class="container-fluid">
-         <div class="row">
-            <div class="col-md-12">
-               2016 - 2019 © Uplon theme by <a href="#">Coderthemes</a>
-            </div>
-         </div>
-      </div>
-   </footer>
+
    <!-- end Footer -->
 </div>
 @endsection()

@@ -1,5 +1,5 @@
 @extends('admin.main')
-@section('title', 'Đăng ký khách hàng')
+@section('title', 'Tài khoản')
 @section('content')
 <div class="content-page">
    <div class="content">
@@ -55,124 +55,51 @@
                               <div id="datatable_filter" class="dataTables_filter" ><label>Search:<input type="search" class="form-control form-control-sm" placeholder="" aria-controls="datatable"></label></div>
                            </div>
                            <div class="table-responsive fixed-solution" data-pattern="priority-columns">
-                              <div class="sticky-table-header" style="height: 49px; visibility: hidden; width: auto; top: -1px;">
-                                 <table id="tech-companies-1-clone" class="table table-striped">
-                                    <thead>
-                                       <tr>
-                                          <th id="tech-companies-1-col-0-clone">STT</th>
-                                          <th data-priority="1" id="tech-companies-1-col-1-clone">Loại tài khoản</th>
-                                          <th data-priority="3" id="tech-companies-1-col-2-clone">Tài khoản</th>
-                                          <th data-priority="1" id="tech-companies-1-col-3-clone">Mã nhân viên</th>
-                                          <th data-priority="3" id="tech-companies-1-col-4-clone">Nhóm quyền</th>
-                                          <th data-priority="3" id="tech-companies-1-col-5-clone">Khoá</th>
-                                          <th data-priority="6" id="tech-companies-1-col-6-clone">Email</th>
-                                          <th data-priority="6" id="tech-companies-1-col-7-clone">Đăng nhập cuối</th>
-                                          <th data-priority="6" id="tech-companies-1-col-8-clone">Action</th>
-                                       </tr>
-                                    </thead>
-                                    <tbody>
-                                       <tr>
-                                          <th data-org-colspan="1" data-columns="tech-companies-1-col-0">1 </th>
-                                          <td data-org-colspan="1" data-priority="1" data-columns="tech-companies-1-col-1"><span class="co-name">Quản trị cao nhất</span></td>
-                                          <td data-org-colspan="1" data-priority="1" data-columns="tech-companies-1-col-1">admin</td>
-                                          <td data-org-colspan="1" data-priority="3" data-columns="tech-companies-1-col-2">NV93849</td>
-                                          <td data-org-colspan="1" data-priority="1" data-columns="tech-companies-1-col-3">Admin</td>
-                                          <td data-org-colspan="1" data-priority="3" data-columns="tech-companies-1-col-4"><input type="checkbox" readonly></td>
-                                          <td data-org-colspan="1" data-priority="3" data-columns="tech-companies-1-col-5">admin@abc.com</td>
-                                          <td data-org-colspan="1" data-priority="6" data-columns="tech-companies-1-col-6">1/11/2020</td>
-                                          <td data-org-colspan="1" data-priority="6" data-columns="tech-companies-1-col-8">
-                                             <div class="btn-group mt-1 mr-1">
-                                                <button class="btn btn-success btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                <i class="mdi mdi-format-list-bulleted-square"></i>
-                                                </button>
-                                                <div class="dropdown-menu" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 29px, 0px);">
-                                                   <a class="dropdown-item" href=""><i class="mdi mdi-lead-pencil"></i> Sửa</a>
-                                                   <a class="dropdown-item" href="#"><i class="mdi mdi-delete"></i> Xoá</a>
-                                                </div>
-                                             </div>
-                                          </td>
-                                       </tr>
-                                       <tr>
-                                          <th data-org-colspan="1" data-columns="tech-companies-1-col-0">2 </th>
-                                          <td data-org-colspan="1" data-priority="1" data-columns="tech-companies-1-col-1"><span class="co-name">Người dùng mức đại lý</span></td>
-                                          <td data-org-colspan="1" data-priority="1" data-columns="tech-companies-1-col-1">admin123</td>
-                                          <td data-org-colspan="1" data-priority="3" data-columns="tech-companies-1-col-2">NV552</td>
-                                          <td data-org-colspan="1" data-priority="1" data-columns="tech-companies-1-col-3">Manager</td>
-                                          <td data-org-colspan="1" data-priority="3" data-columns="tech-companies-1-col-4"><input type="checkbox" readonly></td>
-                                          <td data-org-colspan="1" data-priority="3" data-columns="tech-companies-1-col-5">admin123@gmail.com</td>
-                                          <td data-org-colspan="1" data-priority="6" data-columns="tech-companies-1-col-6">5/12/2020</td>
-                                          <td data-org-colspan="1" data-priority="6" data-columns="tech-companies-1-col-8">
-                                             <div class="btn-group mt-1 mr-1">
-                                                <button class="btn btn-success btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                <i class="mdi mdi-format-list-bulleted-square"></i>
-                                                </button>
-                                                <div class="dropdown-menu" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left:0px; transform: translate3d(0px, 29px, 0px);">
-                                                   <a class="dropdown-item" href="#"><i class="mdi mdi-lead-pencil"></i> Sửa</a>
-                                                   <a class="dropdown-item" href="#"><i class="mdi mdi-delete"></i> Xoá</a>
-                                                </div>
-                                             </div>
-                                          </td>
-                                       </tr>
-                                    </tbody>
-                                 </table>
-                              </div>
                               <table id="tech-companies-1-clone" class="table table-striped">
                                  <thead>
                                     <tr>
                                        <th id="tech-companies-1-col-0-clone">STT</th>
-                                       <th data-priority="1" id="tech-companies-1-col-1-clone">Loại tài khoản</th>
-                                       <th data-priority="3" id="tech-companies-1-col-2-clone">Tài khoản</th>
-                                       <th data-priority="1" id="tech-companies-1-col-3-clone">Mã nhân viên</th>
-                                       <th data-priority="3" id="tech-companies-1-col-4-clone">Nhóm quyền</th>
-                                       <th data-priority="3" id="tech-companies-1-col-5-clone">Khoá</th>
+                                       <th data-priority="3" id="tech-companies-1-col-2-clone">Tên tài khoản</th>
                                        <th data-priority="6" id="tech-companies-1-col-6-clone">Email</th>
-                                       <th data-priority="6" id="tech-companies-1-col-7-clone">Đăng nhập cuối</th>
+                                        <th data-priority="3" id="tech-companies-1-col-5-clone">Trạng thái khóa</th>
+                                        <th data-priority="3" id="tech-companies-1-col-5-clone">Ngày tạo</th>
+                                        <th data-priority="6" id="tech-companies-1-col-7-clone">Đăng nhập cuối</th>
                                        <th data-priority="6" id="tech-companies-1-col-8-clone">Action</th>
                                     </tr>
                                  </thead>
                                  <tbody>
+                                 @foreach($user as $key => $users)
                                     <tr>
-                                       <th data-org-colspan="1" data-columns="tech-companies-1-col-0">1 </th>
-                                       <td data-org-colspan="1" data-priority="1" data-columns="tech-companies-1-col-1"><span class="co-name">Quản trị cao nhất</span></td>
-                                       <td data-org-colspan="1" data-priority="1" data-columns="tech-companies-1-col-1">admin</td>
-                                       <td data-org-colspan="1" data-priority="3" data-columns="tech-companies-1-col-2">NV93849</td>
-                                       <td data-org-colspan="1" data-priority="1" data-columns="tech-companies-1-col-3">Admin</td>
-                                       <td data-org-colspan="1" data-priority="3" data-columns="tech-companies-1-col-4"><input type="checkbox" readonly></td>
-                                       <td data-org-colspan="1" data-priority="3" data-columns="tech-companies-1-col-5">admin@abc.com</td>
-                                       <td data-org-colspan="1" data-priority="6" data-columns="tech-companies-1-col-6">1/11/2020</td>
-                                       <td data-org-colspan="1" data-priority="6" data-columns="tech-companies-1-col-8">
-                                          <div class="btn-group mt-1 mr-1">
-                                             <button class="btn btn-success btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                             <i class="mdi mdi-format-list-bulleted-square"></i>
-                                             </button>
-                                             <div class="dropdown-menu" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 29px, 0px);">
-                                                <a class="dropdown-item" href=""><i class="mdi mdi-lead-pencil"></i> Sửa</a>
-                                                <a class="dropdown-item" href="#"><i class="mdi mdi-delete"></i> Xoá</a>
-                                             </div>
-                                          </div>
-                                       </td>
-                                    </tr>
-                                    <tr>
-                                       <th data-org-colspan="1" data-columns="tech-companies-1-col-0">2 </th>
-                                       <td data-org-colspan="1" data-priority="1" data-columns="tech-companies-1-col-1"><span class="co-name">Người dùng mức đại lý</span></td>
-                                       <td data-org-colspan="1" data-priority="1" data-columns="tech-companies-1-col-1">admin123</td>
-                                       <td data-org-colspan="1" data-priority="3" data-columns="tech-companies-1-col-2">NV552</td>
-                                       <td data-org-colspan="1" data-priority="1" data-columns="tech-companies-1-col-3">Manager</td>
-                                       <td data-org-colspan="1" data-priority="3" data-columns="tech-companies-1-col-4"><input type="checkbox" readonly></td>
-                                       <td data-org-colspan="1" data-priority="3" data-columns="tech-companies-1-col-5">admin123@gmail.com</td>
-                                       <td data-org-colspan="1" data-priority="6" data-columns="tech-companies-1-col-6">5/12/2020</td>
+                                       <th data-org-colspan="1" data-columns="tech-companies-1-col-0">{{$key+1}}</th>
+                                       <td data-org-colspan="1" data-priority="1" data-columns="tech-companies-1-col-1">{{$users->name}}</td>
+                                       <td data-org-colspan="1" data-priority="3" data-columns="tech-companies-1-col-5">{{$users->email}}</td>
+                                        <td data-org-colspan="1" data-priority="3" data-columns="tech-companies-1-col-4"><i style="color: #00aced" class="fas fa-lock-open"></i></td>
+                                       @if($users->created_at)
+                                        <td data-org-colspan="1" data-priority="6" data-columns="tech-companies-1-col-6">{{date('d-m-Y', strtotime($users->created_at))}}</td>
+                                       @else
+                                          <td data-org-colspan="1" data-priority="6" data-columns="tech-companies-1-col-6"></td>
+
+                                       @endif
+                                       @if($users->last_login)
+                                        <td data-org-colspan="1" data-priority="6" data-columns="tech-companies-1-col-6">{{date('d-m-Y', strtotime($users->last_login))}}</td>
+                                       @else
+                                          <td data-org-colspan="1" data-priority="6" data-columns="tech-companies-1-col-6"></td>
+                                       @endif
                                        <td data-org-colspan="1" data-priority="6" data-columns="tech-companies-1-col-8">
                                           <div class="btn-group mt-1 mr-1">
                                              <button class="btn btn-success btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                              <i class="mdi mdi-format-list-bulleted-square"></i>
                                              </button>
                                              <div class="dropdown-menu" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left:0px; transform: translate3d(0px, 29px, 0px);">
-                                                <a class="dropdown-item" href="#"><i class="mdi mdi-lead-pencil"></i> Sửa</a>
-                                                <a class="dropdown-item" href="#"><i class="mdi mdi-delete"></i> Xoá</a>
+                                                 <a class="dropdown-item  btn-show"  id="show_user" data-id ="{{$users->id}}" data-toggle="modal" data-target="#exampleModalCenter"><i class="mdi mdi-eye"></i> Chi tiết</a>
+                                                <a class="dropdown-item" href="{{route('user.edit',$users->id)}}"><i class="mdi mdi-account-edit"></i> Sửa</a>
+                                                <a class="dropdown-item btn-remove" href="{{route('user.delete',$users->id)}}"><i class="mdi mdi-delete"></i> Xoá</a>
+
                                              </div>
                                           </div>
                                        </td>
                                     </tr>
+                                 @endforeach
                                  </tbody>
                               </table>
                            </div>
@@ -193,15 +120,8 @@
    </div>
    <!-- end content -->
    <!-- Footer Start -->
-   <footer class="footer">
-      <div class="container-fluid">
-         <div class="row">
-            <div class="col-md-12">
-               2016 - 2019 © Uplon theme by <a href="#">Coderthemes</a>
-            </div>
-         </div>
-      </div>
-   </footer>
+
    <!-- end Footer -->
 </div>
+   @include('admin.users.account.show_detail')
 @endsection()

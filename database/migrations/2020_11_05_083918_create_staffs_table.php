@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 
 use Illuminate\Database\Migrations\Migration;
@@ -15,12 +16,14 @@ class CreateStaffsTable extends Migration
     {
         Schema::create('staffs', function (Blueprint $table) {
             $table->id();
+            $table->string('code');
             $table->string('name');
             $table->integer('phone');
-            $table->string('email')->unique();
+            $table->string('email');
             $table->string('address');
             $table->string('status');
             $table->string('contract');
+            $table->string('avatar')->nullable();
             $table->integer('wage');
             $table->string('title');
             $table->timestamps();
@@ -37,3 +40,4 @@ class CreateStaffsTable extends Migration
         Schema::dropIfExists('staffs');
     }
 }
+

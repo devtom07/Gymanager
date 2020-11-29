@@ -1,6 +1,7 @@
 @extends('admin.main')
 @section('title', 'Tạo mới ca làm việc')
 @section('content')
+<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
 <div class="content-page">
     <div class="content">
         <!-- Start Content-->
@@ -27,52 +28,54 @@
                         <h4 class="header-title mb-4">Tạo mới ca làm việc nhân viên</h4>
                         <div class="row">
                                 <div class="col-xl-6">
-                        <form>       
+                        <form action="{{ route('calamviecnhanvien.post') }}" method="post">      
+                         @csrf
                                      <div class="form-group">
                                         <label>Tên lịch làm việc</label>
-                                        <input class="form-control" type="text" value="" id="example-time-input">
+                                        <input class="form-control" type="text" name="work_schedule_name" value="" id="example-time-input">
                                     </div>
-                           
+                                       @error('work_schedule_name')
+                                            <p style="color:red">{{$message}}</p>
+                                        @enderror
                                     <div class="form-group">
                                         <label for="exampleInputEmail1">Ca làm việc (*)</label>
-                                        <select class="form-control" id="exampleSelect1">
-                                            <option></option>
-                                            <option>Ca sáng</option>
-                                            <option>Ca chiều</option>
-                                            <option>Ca tối</option>
+                                        <select class="form-control" id="calamviec" name="work_sift_id[]" multiple>
+                                            @foreach($data as $work_sifts)
+                                            <option value="{{ $work_sifts->id }}">{{ $work_sifts->name }}</option>
+                                            @endforeach
                                         </select>
                                     </div>
-                                    
+                                    {{-- nhan vien --}}
                                     <div class="form-group">
                                         <label for="exampleInputEmail1">Nhân viên (*)</label>
-                                        <select class="form-control" id="exampleSelect1">
-                                            <option></option>
-                                            <option>Trần Văn Long</option>
-                                            <option>Nguyễn Hữu Tiến</option>
-                                            <option>Phan Tuấn Anh</option>
+                                        <select class="form-control" name="staff_id" id="exampleSelect1">
+                                            @foreach($dataStaff as $staff)
+                                            <option value="{{ $staff->id }}">{{ $staff->name }}</option>
+                                            @endforeach
                                         </select>
                                     </div>
 
                                     <div class="form-group">
                                         <label for="exampleInputPassword1">Ngày bắt đầu (*)</label>
-                                        <input class="form-control" type="date" value="_/_/_" id="example-time-input">
+                                        <input class="form-control" type="date" name="date_start" value="Y.m.d" id="example-time-input">
                                     </div>
-
+                                    @error('date_start')
+                                        <p style="color:red">{{$message}}</p>
+                                    @enderror
                                     <div class="form-group">
                                         <label for="exampleInputPassword1">Chu kỳ (*)</label>
-                                        <select class="form-control" id="exampleSelect1">
-                                            <option></option>
-                                            <option>Theo tuần</option>
-                                            <option>Theo tháng</option>
-                                            <option>Luân phiên</option>
-                                        </select>
+                                        <input class="form-control" type="text" name="cycle" value="" id="example-time-input">
                                     </div>
-
+                                    @error('cycle')
+                                        <p style="color:red">{{$message}}</p>
+                                    @enderror
                                     <div class="form-group">
                                         <label>Ngày kết thúc</label>
-                                        <input class="form-control" type="date" value="_/_/_" id="example-time-input">
+                                        <input class="form-control" type="date" name="date_end" value="Y.m.d" id="example-time-input">
                                     </div>
-                        
+                                    @error('date_end')
+                                        <p style="color:red">{{$message}}</p>
+                                    @enderror
                                 <button type="submit" class="btn btn-primary">Submit</button>
                            
                         </form> </div> </div>
@@ -85,10 +88,10 @@
             <!-- end row -->
             <!-- end row -->
         </div>
-        <!-- end container-fluid -->
     </div>
     <!-- end content -->
     <!-- Footer Start -->
     <!-- end Footer -->
 </div>
+
 @endsection()

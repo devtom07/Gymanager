@@ -30,6 +30,11 @@
                         <div class="btn-toolbar">
                               <div class="btn-group dropdown-btn-group pull-right">
                                  <button type="button" class="btn btn-default"><a href="{{route('calamviecnhanvien.add')}}" class="active">Tạo mới</a></button><button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Hiện thêm thông tin <span class="caret"></span></button>
+                                 @if(session('thongbao'))
+                                 <div class="alert alert-success">
+                                     {{ session('thongbao') }}
+                                 </div>
+                                 @endif
                                  <ul class="dropdown-menu">
                                     <li class="checkbox-row"><input type="checkbox" name="toggle-tech-companies-1-col-1" id="toggle-tech-companies-1-col-1" value="tech-companies-1-col-1"> <label for="toggle-tech-companies-1-col-1">Email</label></li>
                                     <li class="checkbox-row"><input type="checkbox" name="toggle-tech-companies-1-col-2" id="toggle-tech-companies-1-col-2" value="tech-companies-1-col-2"> <label for="toggle-tech-companies-1-col-2">Trạng thái</label></li>
@@ -49,7 +54,7 @@
                            </div>
                            <div class="table-responsive fixed-solution" data-pattern="priority-columns">
                               <div class="sticky-table-header" style="height: 49px; visibility: hidden; width: auto; top: -1px;">
-                                 <table id="tech-companies-1-clone" class="table table-striped">
+                                 {{-- <table id="tech-companies-1-clone" class="table table-striped">
                                     <thead>
                                        <tr>
                                           
@@ -84,7 +89,7 @@
                                           </td>
                                        </tr>
                                     </tbody>
-                                 </table>
+                                 </table> --}}
                               </div>
                               <table id="tech-companies-1-clone" class="table table-striped">
                                     <thead>
@@ -100,26 +105,32 @@
                                        </tr>
                                     </thead>
                                     <tbody>
+                                      @foreach($work_staffs as $work_staff)
                                        <tr>
-                                          <th data-org-colspan="1" data-columns="tech-companies-1-col-0"><span class="co-name">Ca sáng</span></th>
-                                          <td data-org-colspan="1" data-priority="1" data-columns="tech-companies-1-col-1">Long</td>
-                                          <td data-org-colspan="1" data-priority="3" data-columns="tech-companies-1-col-2">01/11/2020</td>
-                                          <td data-org-colspan="1" data-priority="1" data-columns="tech-companies-1-col-3">Theo tuần</td>
-                                          <td data-org-colspan="1" data-priority="3" data-columns="tech-companies-1-col-4">Lịch của Long</td>
-                                          <td data-org-colspan="1" data-priority="6" data-columns="tech-companies-1-col-7"></td>
+                                          <th data-org-colspan="1" data-columns="tech-companies-1-col-0"><span class="co-name">
+                                            @foreach(
+                                            json_decode($work_staff->work_sift_id)  as $item)
+                                            <li>{{$work_sift->find($item)->name }}</li>
+                                          @endforeach</span></th>
+                                          <td data-org-colspan="1" data-priority="1" data-columns="tech-companies-1-col-1">{{ $work_staff->Staff->name }}</td>
+                                          <td data-org-colspan="1" data-priority="3" data-columns="tech-companies-1-col-2">{{ $work_staff->date_start }}</td>
+                                          <td data-org-colspan="1" data-priority="1" data-columns="tech-companies-1-col-3">{{ $work_staff->cycle }}</td>
+                                          <td data-org-colspan="1" data-priority="3" data-columns="tech-companies-1-col-4">{{ $work_staff->work_schedule_name }}</td>
+                                          <td data-org-colspan="1" data-priority="6" data-columns="tech-companies-1-col-7">{{ $work_staff->date_end }}</td>
                                           <td data-org-colspan="1" data-priority="6" data-columns="tech-companies-1-col-8">
                                           <div class="btn-group mt-1 mr-1">
                                                     <button class="btn btn-success btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                     <i class="mdi mdi-format-list-bulleted-square"></i>
                                                     </button>
                                                     <div class="dropdown-menu" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 29px, 0px);">
-                                                        <a class="dropdown-item" href="#"><i class="mdi mdi-lead-pencil"></i> Sửa</a>
-                                                        <a class="dropdown-item" href="#"><i class="mdi mdi-delete"></i> Xoá</a>
+                                                        <a class="dropdown-item" href="{{ route('suacalamviecnhanvien', ['id'=>$work_staff->id]) }}"><i class="mdi mdi-lead-pencil"></i> Sửa</a>
+                                                        <a class="dropdown-item" href="{{ route('xoacalamviecvn', ['id'=>$work_staff->id]) }}"><i class="mdi mdi-delete"></i> Xoá</a>
                                  
                                                     </div>
                                                 </div>
                                           </td>
                                        </tr>
+                                       @endforeach
                                     </tbody>
                                  </table>
                            </div>
@@ -140,15 +151,7 @@
    </div>
    <!-- end content -->
    <!-- Footer Start -->
-   <footer class="footer">
-      <div class="container-fluid">
-         <div class="row">
-            <div class="col-md-12">
-               2016 - 2019 © Uplon theme by <a href="#">Coderthemes</a>
-            </div>
-         </div>
-      </div>
-   </footer>
+
    <!-- end Footer -->
 </div>
 @endsection()

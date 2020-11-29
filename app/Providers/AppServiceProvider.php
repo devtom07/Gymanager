@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Providers;
 
 use App\Permission;
@@ -27,12 +26,9 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         Schema::defaultStringLength(191);
-        if(!$this->app->runningInConsole()){
-        foreach(Permission::all() as $_pms){
-            Gate::define($_pms->name,function($user) use ($_pms){
-              return $user->hasPermission($_pms);
-            });
-        }
-    }
+        Gate::before(function ($user, $ability) {
+            return $user->hasRole('Super Admin') ? true : null;
+        });
     }
 }
+

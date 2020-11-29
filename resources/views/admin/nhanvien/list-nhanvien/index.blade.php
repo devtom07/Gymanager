@@ -1,5 +1,5 @@
 @extends('admin.main')
-@section('title', 'Đăng ký khách hàng')
+@section('title', 'Danh sach nhan vien')
 @section('content')
 <div class="content-page">
    <div class="content">
@@ -44,10 +44,8 @@
                               </div>
                               <div class="dataTables_length" id="datatable_length"><label>Show <select name="datatable_length" aria-controls="datatable" class="custom-select custom-select-sm form-control form-control-sm"><option value="10">10</option><option value="25">25</option><option value="50">50</option><option value="100">100</option></select> entries</label></div>
                               <div id="datatable_filter" class="dataTables_filter" ><label>Search:<input type="search" class="form-control form-control-sm" placeholder="" aria-controls="datatable"></label></div>
-                            
                            </div>
                            <div class="table-responsive fixed-solution" data-pattern="priority-columns">
-                              <div class="sticky-table-header" style="height: 49px; visibility: hidden; width: auto; top: -1px;">
                               <table id="tech-companies-1-clone" class="table table-striped">
                                     <thead>
                                        <tr>
@@ -56,171 +54,65 @@
                                           <th data-priority="3" id="tech-companies-1-col-2-clone">Điện thoại</th>
                                           <th data-priority="1" id="tech-companies-1-col-3-clone">Email</th>
                                           <th data-priority="3" id="tech-companies-1-col-4-clone">Địa chỉ</th>
-                                          <th data-priority="3" id="tech-companies-1-col-5-clone">Trạng thái</th>
+                                          <th data-priority="3" id="tech-companies-1-col-5-clone">Chuc vu</th>
                                           <th data-priority="6" id="tech-companies-1-col-6-clone">Loại hợp đồng</th>
                                           <th data-priority="6" id="tech-companies-1-col-7-clone">Mức lương</th>
-                                          <th data-priority="6" id="tech-companies-1-col-8-clone">Chức danh</th>
+                                          <th data-priority="6" id="tech-companies-1-col-8-clone">Trang thai</th>
                                           <th data-priority="6" id="tech-companies-1-col-8-clone">Action</th>
                                        </tr>
                                     </thead>
                                     <tbody>
+                                       @foreach($listStaffs as $key => $staffs)
                                        <tr>
-                                          <th data-org-colspan="1" data-columns="tech-companies-1-col-0">1 </th>
-                                          <td data-org-colspan="1" data-priority="1" data-columns="tech-companies-1-col-1"><span class="co-name">Phan Tuấn Anh</span></td>
-                                          <td data-org-colspan="1" data-priority="1" data-columns="tech-companies-1-col-1">0944194857</td>
-                                          <td data-org-colspan="1" data-priority="3" data-columns="tech-companies-1-col-2">anh@bvc.com</td>
-                                          <td data-org-colspan="1" data-priority="1" data-columns="tech-companies-1-col-3">Hà nội</td>
-                                          <td data-org-colspan="1" data-priority="3" data-columns="tech-companies-1-col-4"><button type="button" class="btn btn-success btn-rounded waves-effect waves-light">Đang làm</button></td>
-                                          <td data-org-colspan="1" data-priority="3" data-columns="tech-companies-1-col-5">Hợp đồng lao động</td>
-                                          <td data-org-colspan="1" data-priority="6" data-columns="tech-companies-1-col-6">6.000.000 VND</td>
-                                          <td data-org-colspan="1" data-priority="6" data-columns="tech-companies-1-col-7">Nhân viên Maketing</td>
+                                          <th data-org-colspan="1" data-columns="tech-companies-1-col-0">{{$key+1}}</th>
+                                          <td data-org-colspan="1" data-priority="1" data-columns="tech-companies-1-col-1">
+                                             <span class="co-name">
+                                                {{ $staffs->name}}
+                                             </span>
+                                          </td>
+                                          <td data-org-colspan="1" data-priority="1" data-columns="tech-companies-1-col-1">
+                                             {{ $staffs->phone}}
+                                          </td>
+                                          <td data-org-colspan="1" data-priority="3" data-columns="tech-companies-1-col-2">
+                                             {{ $staffs->email}}
+                                          </td>
+                                          <td data-org-colspan="1" data-priority="1" data-columns="tech-companies-1-col-3">
+                                             {{ $staffs->address}}
+                                          </td>
+                                          <td data-org-colspan="1" data-priority="3" data-columns="tech-companies-1-col-5">
+                                             {{ $staffs->title}}
+                                          </td>
+                                          <td data-org-colspan="1" data-priority="6" data-columns="tech-companies-1-col-6">
+                                             {{ $staffs->contract}}
+
+                                          </td>
+                                          <td data-org-colspan="1" data-priority="6" data-columns="tech-companies-1-col-7">
+                                             {{ $staffs->wage}}
+                                          </td>
+                                          <td data-org-colspan="1" data-priority="3" data-columns="tech-companies-1-col-4">
+                                             <button type="button" class="btn btn-success btn-rounded waves-effect waves-light">
+                                                   {{ $staffs->status}}
+                                             </button>
+                                          </td>
                                           <td data-org-colspan="1" data-priority="6" data-columns="tech-companies-1-col-8">
-                                          <div class="btn-group mt-1 mr-1">
-                                                    <button class="btn btn-success btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                    <i class="mdi mdi-format-list-bulleted-square"></i>
-                                                    </button>
-                                                    <div class="dropdown-menu" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 29px, 0px);">
-                                                        <a class="dropdown-item" href=""><i class="mdi mdi-lead-pencil"></i> Sửa</a>
-                                                        <a class="dropdown-item" href="#"><i class="mdi mdi-delete"></i> Xoá</a>
-                                 
-                                                    </div>
+                                             <div class="btn-group mt-1 mr-1">
+                                                <button class="btn btn-success btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                   <i class="mdi mdi-format-list-bulleted-square"></i>
+                                                </button>
+                                                <div class="dropdown-menu" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 29px, 0px);">
+                                                   <a class="dropdown-item" href="{{route('staff.edit',$staffs->id)}}">
+                                                      <i class="mdi mdi-lead-pencil"></i> 
+                                                         Sửa
+                                                   </a>
+                                                   <a class="dropdown-item btn-remove" href="{{route('staff.delete',$staffs->id)}}">
+                                                      <i class="mdi mdi-delete"></i> 
+                                                         Xoá
+                                                   </a>
                                                 </div>
+                                             </div>
                                           </td>
                                        </tr>
-                                       <tr>
-                                          <th data-org-colspan="1" data-columns="tech-companies-1-col-0">1 </th>
-                                          <td data-org-colspan="1" data-priority="1" data-columns="tech-companies-1-col-1"><span class="co-name">Phan Tuấn Anh</span></td>
-                                          <td data-org-colspan="1" data-priority="1" data-columns="tech-companies-1-col-1">0944194857</td>
-                                          <td data-org-colspan="1" data-priority="3" data-columns="tech-companies-1-col-2">anh@bvc.com</td>
-                                          <td data-org-colspan="1" data-priority="1" data-columns="tech-companies-1-col-3">Hà nội</td>
-                                          <td data-org-colspan="1" data-priority="3" data-columns="tech-companies-1-col-4"><button type="button" class="btn btn-success btn-rounded waves-effect waves-light">Đang làm</button></td>
-                                          <td data-org-colspan="1" data-priority="3" data-columns="tech-companies-1-col-5">Hợp đồng lao động</td>
-                                          <td data-org-colspan="1" data-priority="6" data-columns="tech-companies-1-col-6">6.000.000 VND</td>
-                                          <td data-org-colspan="1" data-priority="6" data-columns="tech-companies-1-col-7">Nhân viên Maketing</td>
-                                          <td data-org-colspan="1" data-priority="6" data-columns="tech-companies-1-col-8">
-                                          <div class="btn-group mt-1 mr-1">
-                                                    <button class="btn btn-success btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                    <i class="mdi mdi-format-list-bulleted-square"></i>
-                                                    </button>
-                                                    <div class="dropdown-menu" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left:0px; transform: translate3d(0px, 29px, 0px);">
-                                                        <a class="dropdown-item" href="#"><i class="mdi mdi-lead-pencil"></i> Sửa</a>
-                                                        <a class="dropdown-item" href="#"><i class="mdi mdi-delete"></i> Xoá</a>
-                                 
-                                                    </div>
-                                                </div>
-                                          </td>
-                                       </tr>
-                                       <tr>
-                                          <th data-org-colspan="1" data-columns="tech-companies-1-col-0">1 </th>
-                                          <td data-org-colspan="1" data-priority="1" data-columns="tech-companies-1-col-1"><span class="co-name">Phan Tuấn Anh</span></td>
-                                          <td data-org-colspan="1" data-priority="1" data-columns="tech-companies-1-col-1">0944194857</td>
-                                          <td data-org-colspan="1" data-priority="3" data-columns="tech-companies-1-col-2">anh@bvc.com</td>
-                                          <td data-org-colspan="1" data-priority="1" data-columns="tech-companies-1-col-3">Hà nội</td>
-                                          <td data-org-colspan="1" data-priority="3" data-columns="tech-companies-1-col-4"><button type="button" class="btn btn-success btn-rounded waves-effect waves-light">Đang làm</button></td>
-                                          <td data-org-colspan="1" data-priority="3" data-columns="tech-companies-1-col-5">Hợp đồng lao động</td>
-                                          <td data-org-colspan="1" data-priority="6" data-columns="tech-companies-1-col-6">6.000.000 VND</td>
-                                          <td data-org-colspan="1" data-priority="6" data-columns="tech-companies-1-col-7">Nhân viên Maketing</td>
-                                          <td data-org-colspan="1" data-priority="6" data-columns="tech-companies-1-col-8">
-                                          <div class="btn-group mt-1 mr-1">
-                                                    <button class="btn btn-success btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                    <i class="mdi mdi-format-list-bulleted-square"></i>
-                                                    </button>
-                                                    <div class="dropdown-menu" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 29px, 0px);">
-                                                        <a class="dropdown-item" href="#"><i class="mdi mdi-lead-pencil"></i> Sửa</a>
-                                                        <a class="dropdown-item" href="#"><i class="mdi mdi-delete"></i> Xoá</a>
-                                 
-                                                    </div>
-                                                </div>
-                                          </td>
-                                       </tr>
-                                    </tbody>
-                                 </table>
-                              </div>
-                              <table id="tech-companies-1-clone" class="table table-striped">
-                                    <thead>
-                                       <tr>
-                                          <th id="tech-companies-1-col-0-clone">STT</th>
-                                          <th data-priority="1" id="tech-companies-1-col-1-clone">Họ và Tên</th>
-                                          <th data-priority="3" id="tech-companies-1-col-2-clone">Điện thoại</th>
-                                          <th data-priority="1" id="tech-companies-1-col-3-clone">Email</th>
-                                          <th data-priority="3" id="tech-companies-1-col-4-clone">Địa chỉ</th>
-                                          <th data-priority="3" id="tech-companies-1-col-5-clone">Trạng thái</th>
-                                          <th data-priority="6" id="tech-companies-1-col-6-clone">Loại hợp đồng</th>
-                                          <th data-priority="6" id="tech-companies-1-col-7-clone">Mức lương</th>
-                                          <th data-priority="6" id="tech-companies-1-col-8-clone">Chức danh</th>
-                                          <th data-priority="6" id="tech-companies-1-col-8-clone">Action</th>
-                                       </tr>
-                                    </thead>
-                                    <tbody>
-                                       <tr>
-                                          <th data-org-colspan="1" data-columns="tech-companies-1-col-0">1 </th>
-                                          <td data-org-colspan="1" data-priority="1" data-columns="tech-companies-1-col-1"><span class="co-name">Phan Tuấn Anh</span></td>
-                                          <td data-org-colspan="1" data-priority="1" data-columns="tech-companies-1-col-1">0944194857</td>
-                                          <td data-org-colspan="1" data-priority="3" data-columns="tech-companies-1-col-2">anh@bvc.com</td>
-                                          <td data-org-colspan="1" data-priority="1" data-columns="tech-companies-1-col-3">Hà nội</td>
-                                          <td data-org-colspan="1" data-priority="3" data-columns="tech-companies-1-col-4"><button type="button" class="btn btn-success btn-rounded waves-effect waves-light">Đang làm</button></td>
-                                          <td data-org-colspan="1" data-priority="3" data-columns="tech-companies-1-col-5">Hợp đồng lao động</td>
-                                          <td data-org-colspan="1" data-priority="6" data-columns="tech-companies-1-col-6">6.000.000 VND</td>
-                                          <td data-org-colspan="1" data-priority="6" data-columns="tech-companies-1-col-7">Nhân viên Maketing</td>
-                                          <td data-org-colspan="1" data-priority="6" data-columns="tech-companies-1-col-8">
-                                          <div class="btn-group mt-1 mr-1">
-                                                    <button class="btn btn-success btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                    <i class="mdi mdi-format-list-bulleted-square"></i>
-                                                    </button>
-                                                    <div class="dropdown-menu" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left:0px; transform: translate3d(0px, 29px, 0px); ">
-                                                        <a class="dropdown-item" href="#"><i class="mdi mdi-lead-pencil"></i> Sửa</a>
-                                                        <a class="dropdown-item" href="#"><i class="mdi mdi-delete"></i> Xoá</a>
-                                 
-                                                    </div>
-                                                </div>
-                                          </td>
-                                       </tr>
-                                       <tr>
-                                          <th data-org-colspan="1" data-columns="tech-companies-1-col-0">1 </th>
-                                          <td data-org-colspan="1" data-priority="1" data-columns="tech-companies-1-col-1"><span class="co-name">Phan Tuấn Anh</span></td>
-                                          <td data-org-colspan="1" data-priority="1" data-columns="tech-companies-1-col-1">0944194857</td>
-                                          <td data-org-colspan="1" data-priority="3" data-columns="tech-companies-1-col-2">anh@bvc.com</td>
-                                          <td data-org-colspan="1" data-priority="1" data-columns="tech-companies-1-col-3">Hà nội</td>
-                                          <td data-org-colspan="1" data-priority="3" data-columns="tech-companies-1-col-4"><button type="button" class="btn btn-success btn-rounded waves-effect waves-light">Đang làm</button></td>
-                                          <td data-org-colspan="1" data-priority="3" data-columns="tech-companies-1-col-5">Hợp đồng lao động</td>
-                                          <td data-org-colspan="1" data-priority="6" data-columns="tech-companies-1-col-6">6.000.000 VND</td>
-                                          <td data-org-colspan="1" data-priority="6" data-columns="tech-companies-1-col-7">Nhân viên Maketing</td>
-                                          <td data-org-colspan="1" data-priority="6" data-columns="tech-companies-1-col-8">
-                                          <div class="btn-group mt-1 mr-1">
-                                                    <button class="btn btn-success btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                    <i class="mdi mdi-format-list-bulleted-square"></i>
-                                                    </button>
-                                                    <div class="dropdown-menu" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 29px, 0px);">
-                                                        <a class="dropdown-item" href="#"><i class="mdi mdi-lead-pencil"></i> Sửa</a>
-                                                        <a class="dropdown-item" href="#"><i class="mdi mdi-delete"></i> Xoá</a>
-                                 
-                                                    </div>
-                                                </div>
-                                          </td>
-                                       </tr>
-                                       <tr>
-                                          <th data-org-colspan="1" data-columns="tech-companies-1-col-0">1 </th>
-                                          <td data-org-colspan="1" data-priority="1" data-columns="tech-companies-1-col-1"><span class="co-name">Phan Tuấn Anh</span></td>
-                                          <td data-org-colspan="1" data-priority="1" data-columns="tech-companies-1-col-1">0944194857</td>
-                                          <td data-org-colspan="1" data-priority="3" data-columns="tech-companies-1-col-2">anh@bvc.com</td>
-                                          <td data-org-colspan="1" data-priority="1" data-columns="tech-companies-1-col-3">Hà nội</td>
-                                          <td data-org-colspan="1" data-priority="3" data-columns="tech-companies-1-col-4"><button type="button" class="btn btn-success btn-rounded waves-effect waves-light">Đang làm</button></td>
-                                          <td data-org-colspan="1" data-priority="3" data-columns="tech-companies-1-col-5">Hợp đồng lao động</td>
-                                          <td data-org-colspan="1" data-priority="6" data-columns="tech-companies-1-col-6">6.000.000 VND</td>
-                                          <td data-org-colspan="1" data-priority="6" data-columns="tech-companies-1-col-7">Nhân viên Maketing</td>
-                                          <td data-org-colspan="1" data-priority="6" data-columns="tech-companies-1-col-8">
-                                          <div class="btn-group mt-1 mr-1">
-                                                    <button class="btn btn-success btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                    <i class="mdi mdi-format-list-bulleted-square"></i>
-                                                    </button>
-                                                    <div class="dropdown-menu" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 29px, 0px);">
-                                                        <a class="dropdown-item" href="#"><i class="mdi mdi-lead-pencil"></i> Sửa</a>
-                                                        <a class="dropdown-item" href="#"><i class="mdi mdi-delete"></i> Xoá</a>
-                                 
-                                                    </div>
-                                                </div>
-                                          </td>
-                                       </tr>
+                                       @endforeach
                                     </tbody>
                                  </table>
                            </div>
@@ -241,15 +133,7 @@
    </div>
    <!-- end content -->
    <!-- Footer Start -->
-   <footer class="footer">
-      <div class="container-fluid">
-         <div class="row">
-            <div class="col-md-12">
-               2016 - 2019 © Uplon theme by <a href="#">Coderthemes</a>
-            </div>
-         </div>
-      </div>
-   </footer>
+
    <!-- end Footer -->
 </div>
 @endsection()
