@@ -27,7 +27,7 @@ class ValidateAddStaff extends FormRequest
             'code'=>'required',
             'name' => 'required',
             'avatar' => 'required|image',
-            'phone' => 'required|regex:/(0)[0-9]/|not_regex:/[a-z]/|min:9',
+            'phone' => 'required',
             'email' => 'required',
             'address' => 'required|min:5',
             'contract' => 'required',
