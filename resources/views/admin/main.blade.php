@@ -247,7 +247,7 @@
                         </div>
 
                         <!-- item-->
-                        <a href="javascript:void(0);" class="dropdown-item notify-item">
+                        <a href="{{route('user.profile')}}" class="dropdown-item notify-item">
                             <i class="mdi mdi-account-outline"></i>
                             <span>Profile</span>
                         </a>
@@ -287,7 +287,7 @@
             <div class="logo-box">
                 <a href="{{route('dashboard')}}" class="logo text-center logo-dark">
                     <span class="logo-lg">
-                        <img src="{{url('admin')}}/images/logogym.gif" alt="" height="22">
+                        <img src="{{url('admin')}}/images/logogym.gif" alt=""  width="200px">
                         <!-- <span class="logo-lg-text-dark">Uplon</span> -->
                     </span>
                     <span class="logo-sm">
@@ -346,7 +346,7 @@
 
                     <ul class="metismenu" id="side-menu">
 
-                        <li class="menu-title">Navigation</li>
+                        <li class="menu-title">Gymmanager</li>
 
                         <li>
                             <a href="{{route('dashboard')}}">
@@ -355,86 +355,40 @@
                             </a>
                         </li>
 
-                        <!-- <li>
-                                <a href="calendar.html">
-                                    <i class="mdi mdi-calendar-month"></i>
-                                    <span> Calendar </span>
-                                </a>
-                            </li> -->
                         <li>
                             <a href="javascript: void(0);">
                                 <i class="mdi mdi-account-box-multiple"></i>
                                 <span>Tài khoản</span>
-                                <span class="badge badge-danger badge-pill float-right">New</span>
+{{--                                <span class="badge badge-danger badge-pill float-right">New</span>--}}
                             </a>
                             <ul class="nav-second-level" aria-expanded="false">
                                 <li><a href="{{route('user.index')}}">Quản trị người dùng</a></li>
-                                <li><a href="{{route('role')}}">Nhóm quyền</a></li>
-                                <li><a href="">Nhóm chức năng</a></li>
-                                <!--  <li><a href="layouts-unsticky.html">Unsticky Layout</a></li>
-                                    <li><a href="layouts-boxed.html">Boxed Layout</a></li> -->
+                                <li><a href="{{route('role')}}">Chức vụ</a></li>
                             </ul>
                         </li>
                         <li>
                             <a href="javascript: void(0);">
-                                <i class="mdi mdi-account-circle-outline"></i>
+                                <i class="mdi mdi-star-off"></i>
                                 <span>Nhân viên</span>
-                                <span class="badge badge-danger badge-pill float-right">New</span>
+{{--                                <span class="badge badge-danger badge-pill float-right">New</span>--}}
                             </a>
                             <ul class="nav-second-level" aria-expanded="false">
                                 <li><a href="{{route('listnhanvien')}}">Danh sách nhân viên</a></li>
                                 <li><a href="{{route('calamviec')}}">Ca làm việc</a></li>
                                 <li><a href="{{route('calamviecnhanvien')}}">Ca làm việc nhân viên</a></li>
-                                <!--  <li><a href="layouts-unsticky.html">Unsticky Layout</a></li>
-                                    <li><a href="layouts-boxed.html">Boxed Layout</a></li> -->
+
                             </ul>
                         </li>
                         <li>
                             <a href="javascript: void(0);">
                                 <i class="mdi mdi-account-multiple"></i>
                                 <span> Khách hàng </span>
-                                <span class="badge badge-danger badge-pill float-right">New</span>
+{{--                                <span class="badge badge-danger badge-pill float-right">New</span>--}}
                             </a>
                             <ul class="nav-second-level" aria-expanded="false">
                                 <li><a href="{{route('customer')}}">Danh sách khách hàng</a></li>
-                                <!-- <li><a href="layouts-small-sidebar.html">Small Sidebar</a></li>
-                                    <li><a href="layouts-sidebar-collapsed.html">Sidebar Collapsed</a></li>
-                                    <li><a href="layouts-unsticky.html">Unsticky Layout</a></li>
-                                    <li><a href="layouts-boxed.html">Boxed Layout</a></li> -->
-                            </ul>
-                        </li>
+                                <li><a href="#">Dịch vụ</a></li>
 
-
-                        <li>
-                            <a href="javascript: void(0);">
-                                <i class="mdi mdi-google-pages"></i>
-                                <span> Pages </span>
-                                <span class="menu-arrow"></span>
-                            </a>
-                            <ul class="nav-second-level" aria-expanded="false">
-                                <li><a href="pages-starter.html">Starter Page</a></li>
-                                <li><a href="pages-login.html">Login</a></li>
-                                <li><a href="pages-register.html">Register</a></li>
-                                <li><a href="pages-recoverpw.html">Recover Password</a></li>
-                                <li><a href="pages-lock-screen.html">Lock Screen</a></li>
-                                <li><a href="pages-404.html">Error 404</a></li>
-                                <li><a href="pages-500.html">Error 500</a></li>
-                            </ul>
-                        </li>
-
-                        <li>
-                            <a href="javascript: void(0);">
-                                <i class="mdi mdi-content-copy"></i>
-                                <span> Extra Pages </span>
-                                <span class="menu-arrow"></span>
-                            </a>
-                            <ul class="nav-second-level" aria-expanded="false">
-                                <li><a href="pages-timeline.html">Timeline</a></li>
-                                <li><a href="pages-invoice.html">Invoice</a></li>
-                                <li><a href="pages-pricing.html">Pricing</a></li>
-                                <li><a href="pages-gallery.html">Gallery</a></li>
-                                <li><a href="pages-maintenance.html">Maintenance</a></li>
-                                <li><a href="pages-comingsoon.html">Coming Soon</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -555,6 +509,13 @@
             }
         });
     </script>
+    <script>
+    $(document).ready(function() {
+        $('#calamviec').select2();
+    });
+</script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
+
 </body>
 
 <!-- Mirrored from coderthemes.com/uplon/layouts/vertical/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 31 Oct 2020 19:25:02 GMT -->

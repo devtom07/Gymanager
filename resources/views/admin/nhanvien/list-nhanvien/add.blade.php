@@ -68,17 +68,21 @@
                                     @error('phone')
                                             <p style="color:red">{{$message}}</p>
                                     @enderror
+<<<<<<< HEAD
                                     
+=======
+
+>>>>>>> 27a7bb4eb575111c76b64362e02d4922322d5204
                                     <div class="form-group">
                                         <label>Trạng thái</label>
                                         <div class="mt-4">
                                             <div class="radio radio-info form-check-inline">
                                                 <input type="radio" id="inlineRadio1" value="Đi làm" name="status" checked>
-                                                <label for="inlineRadio1">Còn hiệu lực</label>
+                                                <label for="inlineRadio1">Đang làm </label>
                                             </div>
                                             <div class="radio form-check-inline">
                                                 <input type="radio" id="inlineRadio2" value="Nghỉ làm" name="status">
-                                                <label for="inlineRadio2"> Hết hạn</label>
+                                                <label for="inlineRadio2">Nghỉ việc</label>
                                             </div>
                                         </div>
                                     </div>

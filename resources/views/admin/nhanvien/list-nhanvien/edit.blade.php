@@ -24,8 +24,13 @@
             <div class="row">
                 <div class="col-12">
                     <div class="card-box">
+<<<<<<< HEAD
                         <h4 class="header-title mb-4">Sua nhân viên</h4>
                         <form action="" method="POST">
+=======
+                        <h4 class="header-title mb-4">Tạo mới nhân viên</h4>
+                        <form action="{{route('staff.update',$listStaffs->id)}}" method="POST">
+>>>>>>> 27a7bb4eb575111c76b64362e02d4922322d5204
                             @csrf
                             <div class="row">
                                 <div class="col-xl-6">
