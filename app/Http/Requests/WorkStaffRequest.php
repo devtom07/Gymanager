@@ -28,7 +28,7 @@ class WorkStaffRequest extends FormRequest
             'date_start'=>'required|date',
             'date_end'=>'required|date|after:date_start',
             'cycle'=>'required|min:4|max:10',
-            'work_schedule_name'=>'required|min:10|max:30'
+            'work_schedule_name'=>'required|max:30'
         ];
     }
     public function messages(){
@@ -38,7 +38,7 @@ class WorkStaffRequest extends FormRequest
             'cycle.min'=>'chu kì không dưới 4 kí tự',
             'cycle.max'=>' chu kì không quá 10 kí tự',
             'work_schedule_name.min'=>'tên lịch làm việc không dưới 10 kí tự',
-            'work_schedule_name.min'=>'tên lịch làm việc không quá 30 kí tự',
+            'work_schedule_name.max'=>'tên lịch làm việc không quá 30 kí tự',
         ];
     }
     public function attribute(){

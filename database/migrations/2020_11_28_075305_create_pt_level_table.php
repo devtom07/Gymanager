@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateDemoTable extends Migration
+class CreatePtLevelTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,11 @@ class CreateDemoTable extends Migration
      */
     public function up()
     {
-        Schema::create('demo', function (Blueprint $table) {
+        Schema::create('pt_levels', function (Blueprint $table) {
             $table->id();
+            $table->string('code');
             $table->string('name');
+            $table->string('level');
             $table->timestamps();
         });
     }
@@ -27,6 +29,6 @@ class CreateDemoTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('demo');
+        Schema::dropIfExists('pt_level');
     }
 }

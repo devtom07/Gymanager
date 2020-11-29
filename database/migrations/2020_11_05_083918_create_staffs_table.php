@@ -15,16 +15,17 @@ class CreateStaffsTable extends Migration
     {
         Schema::create('staffs', function (Blueprint $table) {
             $table->id();
+            $table->string('code')->nullable();
             $table->string('name');
+            $table->string('gender');
             $table->integer('phone');
             $table->string('email');
             $table->string('address');
             $table->string('status');
             $table->string('contract');
-            $table->string('avatar');
+            $table->string('avatar')->nullable();
             $table->integer('wage');
-            $table->foreign('work-sift_id')->references('id')->on('work_sift');
-            $table->string('title');
+            $table->foreign('title')->references('id')->on('title');
             $table->timestamps();
         });
     }
