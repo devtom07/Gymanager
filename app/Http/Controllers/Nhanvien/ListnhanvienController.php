@@ -20,7 +20,7 @@ class ListnhanvienController extends Controller
     }
     public function create()
     {
-        $listTitle = Title::all()->where('id','1');
+        $listTitle = Title::all();
         return view('admin.nhanvien.list-nhanvien.add',['listTitle'=>$listTitle]);
     }
     public function store(ValidateAddStaff $request)
