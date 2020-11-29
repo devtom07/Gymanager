@@ -51,29 +51,17 @@
                                     @error('phone')
                                             <p style="color:red">{{$message}}</p>
                                     @enderror
-                                    <div class="form-group">
-                                        <label>Ca lam viec</label>
-                                        <select  class="form-control" id="exampleSelect1" name="work_sift_id">
-                                            @foreach ($listWorkSift as $item)
-                                                <option value="{{$item->id}}">
-                                                    {{ $item->name}}  
-                                                </option>
-                                            @endforeach
-                                        </select>
-                                    </div>
-                                    @error('work_sift_id')
-                                            <p style="color:red">{{$message}}</p>
-                                    @enderror
+
                                     <div class="form-group">
                                         <label>Trạng thái</label>
                                         <div class="mt-4">
                                             <div class="radio radio-info form-check-inline">
                                                 <input type="radio" id="inlineRadio1" value="Đi làm" name="status" checked>
-                                                <label for="inlineRadio1">Còn hiệu lực</label>
+                                                <label for="inlineRadio1">Đang làm </label>
                                             </div>
                                             <div class="radio form-check-inline">
                                                 <input type="radio" id="inlineRadio2" value="Nghỉ làm" name="status">
-                                                <label for="inlineRadio2"> Hết hạn</label>
+                                                <label for="inlineRadio2">Nghỉ việc</label>
                                             </div>
                                         </div>
                                     </div>

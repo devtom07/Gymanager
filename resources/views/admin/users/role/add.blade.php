@@ -27,25 +27,25 @@
                   <h4 class="header-title mb-4">Tạo mới nhóm quyền</h4>
                   <div class="row">
                      <div class="col-xl-6">
-                        <form>
+                        <form action="{{route('role.store')}}" method="post">
+                           @csrf
                            <div class="form-group">
                               <label for="exampleInputEmail1">Tên nhóm quyền (*)</label>
-                              <input type="text" class="form-control" id="exampleInputEmail1" placeholder="">
-                           </div>
-                           <div class="form-group">
-                              <label for="exampleInputEmail1">Mô tả</label>
-                              <input class="form-control" type="password" value="" id="example-date-input">
+                              <input name="name" type="text" class="form-control" id="exampleInputEmail1" placeholder="">
+                              @if($errors->first('name'))
+                                 <p class="text-danger">{{ $errors->first('name') }}</p>
+                              @endif
                            </div>
                            <div class="form-group">
                               <label>Chon nhóm chức năng (*)</label>
-                              <select class="form-control" id="exampleSelect1">
-                                 <option></option>
-                                 <option>Xoá tài khoản</option>
-                                 <option>Tạo mới nhân viên</option>
-                                 <option>Xoá nhân viên</option>
-                                 <option>Cập nhập thông tin người dùng</option>
-                                 <option>Menu khách hàng</option>
+                              <select multiple name="permission[]" class="form-control" id="exampleSelect1">
+                                 @foreach($permission as $permissions)
+                                 <option value="{{$permissions->id}}">{{$permissions->name}}</option>
+                                 @endforeach
                               </select>
+                              @if($errors->first('permission'))
+                                 <p class="text-danger">{{ $errors->first('permission') }}</p>
+                              @endif
                            </div>
                            <button type="submit" class="btn btn-primary">Submit</button>
                         </form>
