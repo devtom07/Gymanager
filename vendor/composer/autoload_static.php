@@ -618,6 +618,7 @@ class ComposerStaticInit050e50b3c43ae1f01281ae03a87bcb07
         'App\\Http\\Controllers\\AuthurController' => __DIR__ . '/../..' . '/app/Http/Controllers/AuthurController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
         'App\\Http\\Controllers\\CustomerController' => __DIR__ . '/../..' . '/app/Http/Controllers/CustomerController.php',
+        'App\\Http\\Controllers\\FontendController' => __DIR__ . '/../..' . '/app/Http/Controllers/FontendController.php',
         'App\\Http\\Controllers\\Nhanvien\\CalamviecController' => __DIR__ . '/../..' . '/app/Http/Controllers/Nhanvien/CalamviecController.php',
         'App\\Http\\Controllers\\Nhanvien\\CalamviecNhanVien' => __DIR__ . '/../..' . '/app/Http/Controllers/Nhanvien/CalamviecNhanVien.php',
         'App\\Http\\Controllers\\Nhanvien\\ListnhanvienController' => __DIR__ . '/../..' . '/app/Http/Controllers/Nhanvien/ListnhanvienController.php',
