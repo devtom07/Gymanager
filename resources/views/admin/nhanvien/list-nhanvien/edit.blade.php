@@ -24,27 +24,48 @@
             <div class="row">
                 <div class="col-12">
                     <div class="card-box">
+<<<<<<< HEAD
+                        <h4 class="header-title mb-4">Sua nhân viên</h4>
+                        <form action="" method="POST">
+=======
                         <h4 class="header-title mb-4">Tạo mới nhân viên</h4>
                         <form action="{{route('staff.update',$listStaffs->id)}}" method="POST">
+>>>>>>> 27a7bb4eb575111c76b64362e02d4922322d5204
                             @csrf
                             <div class="row">
                                 <div class="col-xl-6">
                                     <div class="form-group">
+                                        <label for="exampleInputEmail1">Ma  nhan vien (*)</label>
+                                        <input type="text" class="form-control" name="code" id="exampleInputEmail1" value="{{ $listStaffs->code}}">
+                                    </div>
+                                    <div class="form-group">
                                         <label for="exampleInputEmail1">Họ và tên (*)</label>
                                         <input type="text" class="form-control" name="name" id="exampleInputEmail1" value="{{ $listStaffs->name}}">
                                     </div>
-                                    
+                                    <div class="form-group">
+                                        <label>Giới tính</label>
+                                        <div class="mt-4">
+                                            <div class="radio radio-info form-check-inline col-md-3">
+                                                <input type="radio" id="inlineRadio1" value="Nam" name="gender"{{ $listStaffs->gender == 'Nam' ? 'checked' : ''}}>
+                                                <label for="inlineRadio1">Nam</label>
+                                            </div>
+                                            <div class="radio form-check-inline">
+                                                <input type="radio" id="inlineRadio2" value="Nữ" name="gender" {{ $listStaffs->gender == 'Nữ' ? 'checked' : ''}}>
+                                                <label for="inlineRadio2">Nữ</label>
+                                            </div>
+                                        </div>
+                                    </div>
                                     <div class="form-group">
                                         <label for="exampleInputEmail1">Ảnh đại diện (*)</label>
                                         <input type="file" class="form-control" name="avatar" id="exampleInputEmail1">
-                                        <img src="{{asset('public/admin/images/' .$listStaffs->new_image)}}" alt="">
+                                        {{-- <img src="{{asset('public/admin/images/' .$listStaffs->new_image)}}" alt=""> --}}
                                     </div>
 
                                     <div class="form-group">
                                         <label for="exampleInputPassword1">Số điện thoại (*)</label>
                                         <input type="number" class="form-control" name="phone" id="exampleInputPassword1" value="{{ $listStaffs->phone}}">
                                     </div>
-                                    <div class="form-group">
+                                    {{-- <div class="form-group">
                                         <label>Ca lam viec</label>
                                         <select class="form-control" id="exampleSelect1" name="work_sift_id">
                                             @foreach ($listWorkSift as $item)
@@ -57,16 +78,16 @@
                                                 </option>
                                             @endforeach
                                         </select>
-                                    </div>
+                                    </div> --}}
                                     <div class="form-group">
                                         <label>Trạng thái</label>
                                         <div class="mt-4">
                                             <div class="radio radio-info form-check-inline">
-                                                <input type="radio" id="inlineRadio1" value="0" name="status" checked>
+                                                <input type="radio" id="inlineRadio1" value="Còn hiệu lực" name="status" {{ $listStaffs->status == 'Còn hiệu lực' ? 'checked' : ''}}>
                                                 <label for="inlineRadio1">Còn hiệu lực</label>
                                             </div>
                                             <div class="radio form-check-inline">
-                                                <input type="radio" id="inlineRadio2" value="1" name="status">
+                                                <input type="radio" id="inlineRadio2" value="Hết hạn" name="status" {{ $listStaffs->status == 'Hết hạn' ? 'checked' : ''}}>
                                                 <label for="inlineRadio2"> Hết hạn</label>
                                             </div>
                                         </div>
@@ -83,11 +104,16 @@
                                     </div>
                                     <div class="form-group">
                                         <label>Loại hợp đồng (*)</label>
-                                        <select class="form-control" id="exampleSelect1" name="contract">
-                                            <option></option>
-                                            <option value="0">Hợp đồng lao động</option>
-                                            <option value="1">Thực tập</option>
-                                        </select>
+                                        <div class="mt-4">
+                                            <div class="radio radio-info form-check-inline col-md-3">
+                                                <input type="radio" id="inlineRadio1" value="Chính thức" name="contract" checked>
+                                                <label for="inlineRadio1">Chính thức</label>
+                                            </div>
+                                            <div class="radio form-check-inline">
+                                                <input type="radio" id="inlineRadio2" value="Thử việc" name="contract">
+                                                <label for="inlineRadio2">Thử việc</label>
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="form-group">
                                         <label>Mức lương</label>
@@ -96,8 +122,15 @@
                                     <div class="form-group">
                                         <label>Chức danh</label>
                                         <select class="form-control" id="exampleSelect1" name="title">
-                                            <option></option>
-                                            <option value="1">Maketing</option>
+                                            @foreach ($listTitle as $item)
+                                                <option
+                                                    <?php if($item->id == $listTitle->title):?>
+                                                        selected
+                                                    <?php endif?>
+                                                    >
+                                                    {{ $item->name}}  
+                                                </option>
+                                            @endforeach
                                         </select>
                                     </div>
                                 </div>
