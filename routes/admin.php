@@ -1,6 +1,3 @@
-
-
-
 <?php
 use Illuminate\Support\Facades\Route;
 
@@ -53,7 +50,7 @@ Route::get('/logout','AuthurController@logout')->name('logout');
          Route::get('/xoachucnang/{id}','PermissionController@destroy')
              ->name('permission.destroy');
         //user
-        Route::get('xemtaikhoan','UserController@index')
+        Route::get('xemtaikhoan','Users\UserController@index')
             ->name('user.index')
             ->middleware(['permission:xem tài khoản']);
         Route::get('themtaikhoan','UserController@create')
