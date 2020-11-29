@@ -55,13 +55,13 @@ Route::get('/logout','AuthurController@logout')->name('logout');
         //user
         Route::get('xemtaikhoan','UserController@index')
             ->name('user.index')
-            ->middleware(['permission:Xem tài khoản']);
+            ->middleware(['permission:xem tài khoản']);
         Route::get('themtaikhoan','UserController@create')
             ->name('user.add')
-            ->middleware(['permission:Thêm tài khoản']);
+            ->middleware(['permission:thêm tài khoản']);
         Route::post('themtaikhoan/post','UserController@store')
             ->name('user.store')
-            ->middleware(['permission:Thêm tài khoản']);
+            ->middleware(['permission:thêm tài khoản']);
         Route::get('suataikhoan/{id}','UserController@edit')
             ->name('user.edit')
             ->middleware(['permission:Sửa tài khoản']);
