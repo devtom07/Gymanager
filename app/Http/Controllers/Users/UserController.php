@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\ValidateFormaddUser;
 use App\Http\Requests\ValidateFormUpdateUser;
-use App\Http\Requests\ValidateUpdateProfile;
 use App\Models\Staff;
 use App\User;
 use Illuminate\Http\Request;
@@ -186,29 +185,24 @@ class UserController extends Controller
         Alert()->success('Thành công','Cập nhật quyền thành công');
         return redirect()->route('user.show',$id);
     }
-
-    public function profile($id){
-         $users = User::where('id',$id)->get();
-        return view('admin.users.account.profile',compact('users'));
-    }
-    public function profilePicture(Request $request,$id){
+    public function updateimage(Request $request,$id)
+    {
+        $user = User::find($id);
+        $data = array();
         $get_image = $request->file('avatar');
         $get_name_image = $get_image->getClientOriginalName();
         $name_image = current(explode('.', $get_name_image));
         $new_image = $name_image . rand(0, 99) . '.' . $get_image->getClientOriginalExtension();
         $get_image->move('user', $new_image);
-        DB::beginTransaction();
-     User::where('id',$id)->update([
-             'avatar' => $new_image
-     ]);
-     DB::commit();
+        $data['avatar'] = $new_image;
+        DB::table('users')->where('id', $user->id)->update($data);
         Alert()->success('Thành công', 'Cập nhật ảnh thành công');
-        return redirect()->route('user.profile', $id);
+        return redirect()->route('user.show', $id);
+
     }
-    public function updateProfile(ValidateUpdateProfile $request,$id){
-       $current_password = $request->current_password;
+    public function profile(){
 
 
-
+        return view('admin.users.account.profile');
     }
 }
