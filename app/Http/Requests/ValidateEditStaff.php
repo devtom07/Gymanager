@@ -24,10 +24,9 @@ class ValidateEditStaff extends FormRequest
     public function rules()
     {
         return [
-            'code'=>'required',
             'name' => 'required',
             'avatar' => 'required',
-            'phone' => 'required|min:10',
+            'phone' => 'required|regex:/(0)[0-9]/|not_regex:/[a-z]/|min:9',
             'email' => 'required',
             'address' => 'required|min:5',
             'contract' => 'required',
@@ -40,14 +39,13 @@ class ValidateEditStaff extends FormRequest
     {
         return [
             'required' => ':attribute không được để trống',
-            'name.unique' => 'Ca này đã có !'
+            'name.unique' => 'Da ton tai !',
 
         ];
     }
     public function attributes()
     {
         return [
-            'code'=>'Ma nhan vien',
             'name' => 'Tên nhân viên',
             'avatar' => 'Ảnh đại diện',
             'email' => 'email',

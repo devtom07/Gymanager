@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\ValidateFormaddUser;
 use App\Http\Requests\ValidateFormUpdateUser;
-use App\Staff;
+use App\ModelStaff;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -107,17 +107,7 @@ class UserController extends Controllers
     public function updateimage(Request $request,$id){
         $user = User::find($id);
         $data = array();
-<<<<<<< HEAD
-        $get_image = $request->file('image');
-        $get_name_image = $get_image ->getClientOriginalName();
-        $name_image = current(explode('.',$get_name_image));
-        $new_image =  $name_image . rand(0,99) . '.' .$get_image->getClientOriginalExtension();
-        $get_image->move('user',$new_image);
-        $data['image']=$new_image;
-        DB::table('staffs')->where('id',$user->id)->update($data);
-        Alert()->success('Thành công','Cập nhật ảnh thành công');
-        return redirect()->route('user.show',$id);
-=======
+
         $get_image = $request->file('avatar');
         $get_name_image = $get_image->getClientOriginalName();
         $name_image = current(explode('.', $get_name_image));
@@ -131,7 +121,6 @@ class UserController extends Controllers
     }
     public function profile(){
 
->>>>>>> 27a7bb4eb575111c76b64362e02d4922322d5204
 
         return view('admin.users.account.profile');
     }

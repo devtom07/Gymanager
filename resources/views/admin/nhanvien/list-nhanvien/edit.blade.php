@@ -24,24 +24,22 @@
             <div class="row">
                 <div class="col-12">
                     <div class="card-box">
-<<<<<<< HEAD
                         <h4 class="header-title mb-4">Sua nhân viên</h4>
-                        <form action="" method="POST">
-=======
-                        <h4 class="header-title mb-4">Tạo mới nhân viên</h4>
-                        <form action="{{route('staff.update',$listStaffs->id)}}" method="POST">
->>>>>>> 27a7bb4eb575111c76b64362e02d4922322d5204
+                    <form action="{{route('staff.update',$listStaffs->id)}}" method="POST">
                             @csrf
                             <div class="row">
                                 <div class="col-xl-6">
-                                    <div class="form-group">
+                                    {{-- <div class="form-group">
                                         <label for="exampleInputEmail1">Ma  nhan vien (*)</label>
                                         <input type="text" class="form-control" name="code" id="exampleInputEmail1" value="{{ $listStaffs->code}}">
-                                    </div>
+                                    </div> --}}
                                     <div class="form-group">
                                         <label for="exampleInputEmail1">Họ và tên (*)</label>
                                         <input type="text" class="form-control" name="name" id="exampleInputEmail1" value="{{ $listStaffs->name}}">
                                     </div>
+                                    @error('name')
+                                            <p style="color:red">{{$message}}</p>
+                                    @enderror
                                     <div class="form-group">
                                         <label>Giới tính</label>
                                         <div class="mt-4">
@@ -55,76 +53,85 @@
                                             </div>
                                         </div>
                                     </div>
+                                    @error('gender')
+                                        <p style="color:red">{{$message}}</p>
+                                    @enderror
                                     <div class="form-group">
                                         <label for="exampleInputEmail1">Ảnh đại diện (*)</label>
                                         <input type="file" class="form-control" name="avatar" id="exampleInputEmail1">
                                         {{-- <img src="{{asset('public/admin/images/' .$listStaffs->new_image)}}" alt=""> --}}
                                     </div>
-
+                                    @error('avatar')
+                                        <p style="color:red">{{$message}}</p>
+                                    @enderror
                                     <div class="form-group">
                                         <label for="exampleInputPassword1">Số điện thoại (*)</label>
                                         <input type="number" class="form-control" name="phone" id="exampleInputPassword1" value="{{ $listStaffs->phone}}">
                                     </div>
-                                    {{-- <div class="form-group">
-                                        <label>Ca lam viec</label>
-                                        <select class="form-control" id="exampleSelect1" name="work_sift_id">
-                                            @foreach ($listWorkSift as $item)
-                                                <option
-                                                    <?php if($item->id == $listStaffs->work_sift_id):?>
-                                                        selected
-                                                    <?php endif?>
-                                                    >
-                                                    {{ $item->name}}  
-                                                </option>
-                                            @endforeach
-                                        </select>
-                                    </div> --}}
+                                    @error('phone')
+                                        <p style="color:red">{{$message}}</p>
+                                    @enderror
                                     <div class="form-group">
                                         <label>Trạng thái</label>
                                         <div class="mt-4">
                                             <div class="radio radio-info form-check-inline">
-                                                <input type="radio" id="inlineRadio1" value="Còn hiệu lực" name="status" {{ $listStaffs->status == 'Còn hiệu lực' ? 'checked' : ''}}>
-                                                <label for="inlineRadio1">Còn hiệu lực</label>
+                                                <input type="radio" id="inlineRadio1" value="Đang làm" name="status" {{ $listStaffs->status == 'Đang làm' ? 'checked' : ''}}>
+                                                <label for="inlineRadio1">Đang làm</label>
                                             </div>
                                             <div class="radio form-check-inline">
-                                                <input type="radio" id="inlineRadio2" value="Hết hạn" name="status" {{ $listStaffs->status == 'Hết hạn' ? 'checked' : ''}}>
-                                                <label for="inlineRadio2"> Hết hạn</label>
+                                                <input type="radio" id="inlineRadio2" value="Nghỉ làm" name="status" {{ $listStaffs->status == 'Nghỉ làm' ? 'checked' : ''}}>
+                                                <label for="inlineRadio2">Nghỉ làm</label>
                                             </div>
                                         </div>
                                     </div>
+                                    @error('status')
+                                        <p style="color:red">{{$message}}</p>
+                                    @enderror
                                 </div>
                                 <div class="col-xl-6">
                                     <div class="form-group">
                                         <label for="exampleInputPassword1">Email (*)</label>
                                         <input type="text" class="form-control" name="email" id="exampleInputPassword1"  value="{{ $listStaffs->email}}">
                                     </div>
+                                    @error('email')
+                                        <p style="color:red">{{$message}}</p>
+                                    @enderror
                                     <div class="form-group">
                                         <label>Địa chỉ</label>
                                         <input class="form-control" type="text" name="address"  value="{{ $listStaffs->address}}">
                                     </div>
+                                    @error('address')
+                                        <p style="color:red">{{$message}}</p>
+                                    @enderror
                                     <div class="form-group">
                                         <label>Loại hợp đồng (*)</label>
                                         <div class="mt-4">
                                             <div class="radio radio-info form-check-inline col-md-3">
-                                                <input type="radio" id="inlineRadio1" value="Chính thức" name="contract" checked>
+                                                <input type="radio" id="inlineRadio1" value="Chính thức" name="contract" {{ $listStaffs->contract == 'Chính thức' ? 'checked' : ''}}>
                                                 <label for="inlineRadio1">Chính thức</label>
                                             </div>
                                             <div class="radio form-check-inline">
-                                                <input type="radio" id="inlineRadio2" value="Thử việc" name="contract">
+                                                <input type="radio" id="inlineRadio2" value="Thử việc" name="contract" {{ $listStaffs->contract == 'Thử việc' ? 'checked' : ''}}>
                                                 <label for="inlineRadio2">Thử việc</label>
                                             </div>
                                         </div>
                                     </div>
+                                    @error('contract')
+                                        <p style="color:red">{{$message}}</p>
+                                    @enderror
                                     <div class="form-group">
                                         <label>Mức lương</label>
                                         <input class="form-control" type="number" name="wage"  value="{{ $listStaffs->wage}}">
                                     </div>
+                                    @error('wage')
+                                        <p style="color:red">{{$message}}</p>
+                                    @enderror
                                     <div class="form-group">
                                         <label>Chức danh</label>
                                         <select class="form-control" id="exampleSelect1" name="title">
                                             @foreach ($listTitle as $item)
                                                 <option
-                                                    <?php if($item->id == $listTitle->title):?>
+                                                    <?php if($item->id == $listStaffs->title):?>
                                                         selected
                                                     <?php endif?>
                                                     >
@@ -133,6 +140,9 @@
                                             @endforeach
                                         </select>
                                     </div>
+                                    @error('title')
+                                        <p style="color:red">{{$message}}</p>
+                                    @enderror
                                 </div>
                                 <button type="submit" class="btn btn-primary">Submit</button>
                             </div>

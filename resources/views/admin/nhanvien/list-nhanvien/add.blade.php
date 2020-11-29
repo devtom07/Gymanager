@@ -68,11 +68,6 @@
                                     @error('phone')
                                             <p style="color:red">{{$message}}</p>
                                     @enderror
-<<<<<<< HEAD
-                                    
-=======
-
->>>>>>> 27a7bb4eb575111c76b64362e02d4922322d5204
                                     <div class="form-group">
                                         <label>Trạng thái</label>
                                         <div class="mt-4">

@@ -87,13 +87,15 @@ Route::get('/logout','AuthurController@logout')->name('logout');
         Route::get('/them-nhan-vien','Nhanvien\ListnhanvienController@create')
             ->name('listnhanvien.add')
             ->middleware(['permission:Thêm nhân viên']);
+        Route::get('/chi-tiet-nhan-vien/{id}','Nhanvien\ListnhanvienController@show')
+        ->name('staff.show');
         Route::post('/them-nhan-vien/post','Nhanvien\ListnhanvienController@store')
             ->name('listnhanvien.store')
             ->middleware(['permission:Thêm nhân viên']);
         Route::get('/sua-nhan-vien/{id}','Nhanvien\ListnhanvienController@edit')
             ->name('staff.edit')
             ->middleware(['permission:Sửa nhân viên']);
-        Route::post('/sua-nhan-vien/post/{id}','Nhanvien\ListnhanvienController@update')
+        Route::post('/sua-nhan-vien/{id}','Nhanvien\ListnhanvienController@update')
             ->name('staff.update')
             ->middleware(['permission:Sửa nhân viên']);
         Route::get('/nhanvien/xoa/{id}','Nhanvien\ListnhanvienController@destroy')
