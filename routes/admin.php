@@ -77,8 +77,12 @@ Route::get('/logout','AuthurController@logout')->name('logout');
         Route::get('xoanguoidung/{id}','UserController@destroy')
             ->name('user.delete')
             ->middleware(['permission:Xóa tài khoản']);
-        Route::get('profile','UserController@profile')
+        Route::get('profile/{id}','UserController@profile')
             ->name('user.profile');
+         Route::post('profilePicture/{id}','UserController@profilePicture')
+             ->name('user.profilePicture');
+         Route::post('profile/update/{id}','UserController@updateProfile')
+             ->name('user.updateProfile');
         //=========================Nhân viên==================//
         //nhân viên
         Route::get('/nhan-vien','Nhanvien\ListnhanvienController@index')

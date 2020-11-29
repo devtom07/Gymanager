@@ -247,7 +247,7 @@
                         </div>
 
                         <!-- item-->
-                        <a href="{{route('user.profile')}}" class="dropdown-item notify-item">
+                        <a href="{{route('user.profile',\Illuminate\Support\Facades\Auth::user()->id)}}" class="dropdown-item notify-item">
                             <i class="mdi mdi-account-outline"></i>
                             <span>Profile</span>
                         </a>
