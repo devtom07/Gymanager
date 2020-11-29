@@ -247,7 +247,7 @@
                         </div>
 
                         <!-- item-->
-                        <a href="javascript:void(0);" class="dropdown-item notify-item">
+                        <a href="{{route('user.profile')}}" class="dropdown-item notify-item">
                             <i class="mdi mdi-account-outline"></i>
                             <span>Profile</span>
                         </a>
@@ -287,7 +287,7 @@
             <div class="logo-box">
                 <a href="{{route('dashboard')}}" class="logo text-center logo-dark">
                     <span class="logo-lg">
-                        <img src="{{url('admin')}}/images/logogym.gif" alt="" height="22">
+                        <img src="{{url('admin')}}/images/logogym.gif" alt=""  width="200px">
                         <!-- <span class="logo-lg-text-dark">Uplon</span> -->
                     </span>
                     <span class="logo-sm">
@@ -346,7 +346,7 @@
 
                     <ul class="metismenu" id="side-menu">
 
-                        <li class="menu-title">Navigation</li>
+                        <li class="menu-title">Gymmanager</li>
 
                         <li>
                             <a href="{{route('dashboard')}}">
@@ -368,7 +368,7 @@
                         </li>
                         <li>
                             <a href="javascript: void(0);">
-                                <i class="mdi mdi-account-circle-outline"></i>
+                                <i class="mdi mdi-star-off"></i>
                                 <span>Nhân viên</span>
 {{--                                <span class="badge badge-danger badge-pill float-right">New</span>--}}
                             </a>

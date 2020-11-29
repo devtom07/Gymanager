@@ -199,6 +199,10 @@ class UserController extends Controller
         Alert()->success('Thành công', 'Cập nhật ảnh thành công');
         return redirect()->route('user.show', $id);
 
+    }
+    public function profile(){
 
+
+        return view('admin.users.account.profile');
     }
 }
