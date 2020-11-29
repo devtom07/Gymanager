@@ -32,7 +32,11 @@ class ColumnTypeGuesser
                     return $generator->boolean;
                 };
             case 'decimal':
+<<<<<<< HEAD
                 $size = $field['precision'] ?? 2;
+=======
+                $size = isset($field['precision']) ? $field['precision'] : 2;
+>>>>>>> 9fa171c0de55c2e6808dd3c84ab6e998d0940244
 
                 return function () use ($generator, $size) {
                     return $generator->randomNumber($size + 2) / 100;
@@ -54,7 +58,11 @@ class ColumnTypeGuesser
                     return $generator->randomFloat(null, 0, intval('4294967295'));
                 };
             case 'string':
+<<<<<<< HEAD
                 $size = $field['length'] ?? 255;
+=======
+                $size = isset($field['length']) ? $field['length'] : 255;
+>>>>>>> 9fa171c0de55c2e6808dd3c84ab6e998d0940244
 
                 return function () use ($generator, $size) {
                     return $generator->text($size);

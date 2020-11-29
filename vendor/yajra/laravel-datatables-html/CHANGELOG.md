@@ -8,12 +8,16 @@
 
 ## CHANGELOG
 
+<<<<<<< HEAD
 ### v4.36.0 - 11-14-2020
 
 - Add drawCallbackWithLivewire api.
 - Solution as per issue https://github.com/yajra/laravel-datatables/issues/2401.
 
 ### v4.35.2 - 11-14-2020
+=======
+### v4.35.2 - 11-04-2020
+>>>>>>> 9fa171c0de55c2e6808dd3c84ab6e998d0940244
 
 - Add missing button options as per [docs](https://datatables.net/reference/option/#buttons).
 

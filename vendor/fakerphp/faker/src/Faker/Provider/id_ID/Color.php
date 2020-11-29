@@ -10,15 +10,26 @@ class Color extends \Faker\Provider\Color
      * @link https://id.wikipedia.org/wiki/Warna_tersier
      **/
 
+<<<<<<< HEAD
     protected static $safeColorNames = ['abu-abu', 'biru', 'biru dongker', 'biru laut', 'cokelat',
         'emas', 'hijau', 'hitam', 'jingga', 'krem', 'kuning', 'magenta', 'mawar', 'merah', 'merah jambu',
         'merah marun', 'nila', 'perak', 'putih', 'sepia', 'teal', 'toska', 'ungu', 'violet', 'zaitun'
     ];
+=======
+    protected static $safeColorNames = array('abu-abu', 'biru', 'biru dongker', 'biru laut', 'cokelat',
+        'emas', 'hijau', 'hitam', 'jingga', 'krem', 'kuning', 'magenta', 'mawar', 'merah', 'merah jambu',
+        'merah marun', 'nila', 'perak', 'putih', 'sepia', 'teal', 'toska', 'ungu', 'violet', 'zaitun'
+    );
+>>>>>>> 9fa171c0de55c2e6808dd3c84ab6e998d0940244
 
     /**
      * @link https://id.wikipedia.org/wiki/Daftar_warna
      **/
+<<<<<<< HEAD
     protected static $allColorNames = [
+=======
+    protected static $allColorNames = array(
+>>>>>>> 9fa171c0de55c2e6808dd3c84ab6e998d0940244
         'Abu-Abu', 'Abu-Abu Tua', 'Abu-Abu Muda', 'Abu-Abu Kecokelatan', 'Almond',
         'Biru', 'Biru Baja', 'Biru Dongker', 'Biru Keabu-abuan', 'Biru Kehijauan', 'Biru Keunguan', 'Biru Laut', 'Biru Laut Gelap', 'Biru Laut Terang', 'Biru Langit', 'Biru Langit Muda', 'Biru Langit Tua', 'Biru Malam', 'Biru Muda', 'Biru Nilam', 'Biru Pucat', 'Biru Terang', 'Biru Tua',
         'Chiffon', 'Cokelat', 'Cokelat Gandum', 'Cokelat Keemasan', 'Cokelat Kekuningan', 'Cokelat Kemerahan', 'Cokelat Tua',
@@ -37,5 +48,9 @@ class Color extends \Faker\Provider\Color
         'Tembaga', 'Tomat',
         'Ungu', 'Ungu Gelap', 'Ungu Kebiruan', 'Ungu Kecokelatan', 'Ungu Lembayung', 'Ungu Lembayung Muda', 'Ungu Muda', 'Ungu Terong',
         'Zaitun', 'Zaitun Hijau Gelap'
+<<<<<<< HEAD
     ];
+=======
+    );
+>>>>>>> 9fa171c0de55c2e6808dd3c84ab6e998d0940244
 }

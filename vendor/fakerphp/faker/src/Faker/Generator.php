@@ -134,8 +134,13 @@ namespace Faker;
  * @property string $countryISOAlpha3
  * @property string $languageCode
  * @property string $currencyCode
+<<<<<<< HEAD
  * @property bool $boolean
  * @method bool boolean($chanceOfGettingTrue = 50)
+=======
+ * @property boolean $boolean
+ * @method boolean boolean($chanceOfGettingTrue = 50)
+>>>>>>> 9fa171c0de55c2e6808dd3c84ab6e998d0940244
  *
  * @property int    $randomDigit
  * @property int    $randomDigitNot
@@ -163,7 +168,11 @@ namespace Faker;
  * @method Generator valid($validator = null, $maxRetries = 10000)
  * @method mixed passthrough($passthrough)
  *
+<<<<<<< HEAD
  * @method int biasedNumberBetween($min = 0, $max = 100, $function = 'sqrt')
+=======
+ * @method integer biasedNumberBetween($min = 0, $max = 100, $function = 'sqrt')
+>>>>>>> 9fa171c0de55c2e6808dd3c84ab6e998d0940244
  *
  * @property string $macProcessor
  * @property string $linuxProcessor
@@ -195,11 +204,20 @@ namespace Faker;
  * @property string $colorName
  *
  * @method string randomHtml($maxDepth = 4, $maxWidth = 4)
+<<<<<<< HEAD
  */
 class Generator
 {
     protected $providers = [];
     protected $formatters = [];
+=======
+ *
+ */
+class Generator
+{
+    protected $providers = array();
+    protected $formatters = array();
+>>>>>>> 9fa171c0de55c2e6808dd3c84ab6e998d0940244
 
     public function addProvider($provider)
     {
@@ -224,7 +242,11 @@ class Generator
         }
     }
 
+<<<<<<< HEAD
     public function format($formatter, $arguments = [])
+=======
+    public function format($formatter, $arguments = array())
+>>>>>>> 9fa171c0de55c2e6808dd3c84ab6e998d0940244
     {
         return call_user_func_array($this->getFormatter($formatter), $arguments);
     }
@@ -232,7 +254,11 @@ class Generator
     /**
      * @param string $formatter
      *
+<<<<<<< HEAD
      * @return callable
+=======
+     * @return Callable
+>>>>>>> 9fa171c0de55c2e6808dd3c84ab6e998d0940244
      */
     public function getFormatter($formatter)
     {
@@ -241,7 +267,11 @@ class Generator
         }
         foreach ($this->providers as $provider) {
             if (method_exists($provider, $formatter)) {
+<<<<<<< HEAD
                 $this->formatters[$formatter] = [$provider, $formatter];
+=======
+                $this->formatters[$formatter] = array($provider, $formatter);
+>>>>>>> 9fa171c0de55c2e6808dd3c84ab6e998d0940244
 
                 return $this->formatters[$formatter];
             }
@@ -257,7 +287,11 @@ class Generator
      */
     public function parse($string)
     {
+<<<<<<< HEAD
         return preg_replace_callback('/\{\{\s?(\w+)\s?\}\}/u', [$this, 'callFormatWithMatches'], $string);
+=======
+        return preg_replace_callback('/\{\{\s?(\w+)\s?\}\}/u', array($this, 'callFormatWithMatches'), $string);
+>>>>>>> 9fa171c0de55c2e6808dd3c84ab6e998d0940244
     }
 
     protected function callFormatWithMatches($matches)

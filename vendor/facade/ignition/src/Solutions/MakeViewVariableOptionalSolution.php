@@ -4,7 +4,10 @@ namespace Facade\Ignition\Solutions;
 
 use Facade\IgnitionContracts\RunnableSolution;
 use Illuminate\Support\Facades\Blade;
+<<<<<<< HEAD
 use Illuminate\Support\Str;
+=======
+>>>>>>> 9fa171c0de55c2e6808dd3c84ab6e998d0940244
 
 class MakeViewVariableOptionalSolution implements RunnableSolution
 {
@@ -71,6 +74,7 @@ class MakeViewVariableOptionalSolution implements RunnableSolution
         }
     }
 
+<<<<<<< HEAD
     protected function isSafePath(string $path): bool
     {
         if (! Str::startsWith($path, ['/', './'])) {
@@ -89,6 +93,10 @@ class MakeViewVariableOptionalSolution implements RunnableSolution
             return false;
         }
 
+=======
+    public function makeOptional(array $parameters = [])
+    {
+>>>>>>> 9fa171c0de55c2e6808dd3c84ab6e998d0940244
         $originalContents = file_get_contents($parameters['viewFile']);
         $newContents = str_replace('$'.$parameters['variableName'], '$'.$parameters['variableName']." ?? ''", $originalContents);
 

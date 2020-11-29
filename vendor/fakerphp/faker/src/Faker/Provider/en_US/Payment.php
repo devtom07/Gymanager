@@ -15,7 +15,11 @@ class Payment extends \Faker\Provider\Payment
     public function bankRoutingNumber()
     {
         $district = self::numberBetween(1, 12);
+<<<<<<< HEAD
         $type = self::randomElement([0, 0, 0, 0, 20, 20, 60]);
+=======
+        $type = self::randomElement(array(0, 0, 0, 0, 20, 20, 60));
+>>>>>>> 9fa171c0de55c2e6808dd3c84ab6e998d0940244
         $clearingCenter = self::randomDigitNotNull();
         $state = self::randomDigit();
         $institution = self::randomNumber(4, true);

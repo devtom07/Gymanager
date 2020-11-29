@@ -38,7 +38,11 @@ class Uuid extends Base
         $tHi |= (3 << 12);
 
         // cast to string
+<<<<<<< HEAD
         return sprintf(
+=======
+        $uuid = sprintf(
+>>>>>>> 9fa171c0de55c2e6808dd3c84ab6e998d0940244
             '%08x-%04x-%04x-%02x%02x-%02x%02x%02x%02x%02x%02x',
             $tLo,
             $tMi,
@@ -52,5 +56,10 @@ class Uuid extends Base
             $byte[14],
             $byte[15]
         );
+<<<<<<< HEAD
+=======
+
+        return $uuid;
+>>>>>>> 9fa171c0de55c2e6808dd3c84ab6e998d0940244
     }
 }

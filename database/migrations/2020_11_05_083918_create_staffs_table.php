@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 9fa171c0de55c2e6808dd3c84ab6e998d0940244
 <?php
 
 use Illuminate\Database\Migrations\Migration;
@@ -16,8 +19,13 @@ class CreateStaffsTable extends Migration
     {
         Schema::create('staffs', function (Blueprint $table) {
             $table->id();
+<<<<<<< HEAD
             $table->string('code');
+=======
+            $table->string('code')->nullable();
+>>>>>>> 9fa171c0de55c2e6808dd3c84ab6e998d0940244
             $table->string('name');
+            $table->string('gender');
             $table->integer('phone');
             $table->string('email');
             $table->string('address');
@@ -25,7 +33,11 @@ class CreateStaffsTable extends Migration
             $table->string('contract');
             $table->string('avatar')->nullable();
             $table->integer('wage');
+<<<<<<< HEAD
             $table->string('title');
+=======
+            $table->foreign('title')->references('id')->on('title');
+>>>>>>> 9fa171c0de55c2e6808dd3c84ab6e998d0940244
             $table->timestamps();
         });
     }
@@ -40,4 +52,7 @@ class CreateStaffsTable extends Migration
         Schema::dropIfExists('staffs');
     }
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 9fa171c0de55c2e6808dd3c84ab6e998d0940244

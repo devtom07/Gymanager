@@ -40,8 +40,13 @@ class HtmlLorem extends Base
     }
 
     /**
+<<<<<<< HEAD
      * @param int $maxDepth
      * @param int $maxWidth
+=======
+     * @param integer $maxDepth
+     * @param integer $maxWidth
+>>>>>>> 9fa171c0de55c2e6808dd3c84ab6e998d0940244
      *
      * @return string
      */
@@ -128,7 +133,11 @@ class HtmlLorem extends Base
                 $node->setAttribute("class", $this->generator->word);
                 break;
             case 2:
+<<<<<<< HEAD
                 $node->setAttribute("id", (string) $this->idGenerator->randomNumber(5));
+=======
+                $node->setAttribute("id", (string)$this->idGenerator->randomNumber(5));
+>>>>>>> 9fa171c0de55c2e6808dd3c84ab6e998d0940244
                 break;
         }
     }
@@ -165,7 +174,11 @@ class HtmlLorem extends Base
 
     private function addRandomH(\DOMElement $element, $maxLength = 10)
     {
+<<<<<<< HEAD
         $h = static::H_TAG . (string) mt_rand(1, 3);
+=======
+        $h = static::H_TAG . (string)mt_rand(1, 3);
+>>>>>>> 9fa171c0de55c2e6808dd3c84ab6e998d0940244
         $text = $element->ownerDocument->createTextNode($this->generator->sentence(mt_rand(1, $maxLength)));
         $node = $element->ownerDocument->createElement($h);
         $node->appendChild($text);

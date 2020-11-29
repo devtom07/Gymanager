@@ -6,7 +6,11 @@ class Factory
 {
     public const DEFAULT_LOCALE = 'en_US';
 
+<<<<<<< HEAD
     protected static $defaultProviders = ['Address', 'Barcode', 'Biased', 'Color', 'Company', 'DateTime', 'File', 'HtmlLorem', 'Image', 'Internet', 'Lorem', 'Miscellaneous', 'Payment', 'Person', 'PhoneNumber', 'Text', 'UserAgent', 'Uuid'];
+=======
+    protected static $defaultProviders = array('Address', 'Barcode', 'Biased', 'Color', 'Company', 'DateTime', 'File', 'HtmlLorem', 'Image', 'Internet', 'Lorem', 'Miscellaneous', 'Payment', 'Person', 'PhoneNumber', 'Text', 'UserAgent', 'Uuid');
+>>>>>>> 9fa171c0de55c2e6808dd3c84ab6e998d0940244
 
     /**
      * Create a new generator
@@ -49,7 +53,11 @@ class Factory
     /**
      * @param string $provider
      * @param string $locale
+<<<<<<< HEAD
      * @return string|null
+=======
+     * @return string
+>>>>>>> 9fa171c0de55c2e6808dd3c84ab6e998d0940244
      */
     protected static function findProviderClassname($provider, $locale = '')
     {
@@ -57,7 +65,10 @@ class Factory
         if (class_exists($providerClass, true)) {
             return $providerClass;
         }
+<<<<<<< HEAD
 
         return null;
+=======
+>>>>>>> 9fa171c0de55c2e6808dd3c84ab6e998d0940244
     }
 }

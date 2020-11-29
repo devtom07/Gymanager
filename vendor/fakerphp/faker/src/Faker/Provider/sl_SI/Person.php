@@ -4,27 +4,45 @@ namespace Faker\Provider\sl_SI;
 
 class Person extends \Faker\Provider\Person
 {
+<<<<<<< HEAD
     protected static $maleNameFormats = [
+=======
+    protected static $maleNameFormats = array(
+>>>>>>> 9fa171c0de55c2e6808dd3c84ab6e998d0940244
         '{{firstNameMale}} {{lastName}}',
         '{{firstNameMale}} {{lastName}}',
         '{{firstNameMale}} {{lastName}}',
         '{{firstNameMale}} {{lastName}}',
         '{{title}} {{firstNameMale}} {{lastName}}',
+<<<<<<< HEAD
     ];
 
     protected static $femaleNameFormats = [
+=======
+    );
+
+    protected static $femaleNameFormats = array(
+>>>>>>> 9fa171c0de55c2e6808dd3c84ab6e998d0940244
         '{{firstNameFemale}} {{lastName}}',
         '{{firstNameFemale}} {{lastName}}',
         '{{firstNameFemale}} {{lastName}}',
         '{{firstNameFemale}} {{lastName}}',
         '{{title}} {{firstNameFemale}} {{lastName}}',
+<<<<<<< HEAD
     ];
+=======
+    );
+>>>>>>> 9fa171c0de55c2e6808dd3c84ab6e998d0940244
 
     /**
      * @link http://www.stat.si/imena_top_imena_spol.asp?r=True
      * @link http://www.stat.si/doc/vsebina/05/imena/TOPIMENA_SI.xlsx
      */
+<<<<<<< HEAD
     protected static $firstNameMale = [
+=======
+    protected static $firstNameMale = array(
+>>>>>>> 9fa171c0de55c2e6808dd3c84ab6e998d0940244
         'Adam', 'Adolf', 'Albert', 'Albin', 'Aleks', 'Aleksandar', 'Aleksander', 'Aleksej', 'Alen',
         'Alex', 'Aleš', 'Aljaž', 'Aljoša', 'Alojz', 'Alojzij', 'Andraž', 'Andrej', 'Anej', 'Anton',
         'Anže', 'Avgust', 'Ažbe', 'Benjamin', 'Bernard', 'Bine', 'Blaž', 'Bogdan', 'Bogomir',
@@ -50,13 +68,21 @@ class Person extends \Faker\Provider\Person
         'Tjaš', 'Tomaž', 'Tomislav', 'Tristan', 'Urban', 'Uroš', 'Val', 'Valentin', 'Valter',
         'Vid', 'Viktor', 'Viljem', 'Vincenc', 'Vinko', 'Vito', 'Vladimir', 'Vlado', 'Vojko',
         'Zdenko', 'Zdravko', 'Zlatko', 'Zoran', 'Zvonko', 'Štefan', 'Žak', 'Žan', 'Željko', 'Žiga'
+<<<<<<< HEAD
     ];
+=======
+    );
+>>>>>>> 9fa171c0de55c2e6808dd3c84ab6e998d0940244
 
     /**
      * @link http://www.stat.si/imena_top_imena_spol.asp?r=True
      * @link http://www.stat.si/doc/vsebina/05/imena/TOPIMENA_SI.xlsx
      */
+<<<<<<< HEAD
     protected static $firstNameFemale = [
+=======
+    protected static $firstNameFemale = array(
+>>>>>>> 9fa171c0de55c2e6808dd3c84ab6e998d0940244
         'Ajda', 'Ajla', 'Albina', 'Aleksandra', 'Alenka', 'Alina', 'Alja', 'Alojzija', 'Amalija',
         'Ana Marija', 'Ana', 'Andreja', 'Andrejka', 'Aneja', 'Angela', 'Anica', 'Anika', 'Anita',
         'Anja', 'Anka', 'Antonija', 'Barbara', 'Bernarda', 'Blanka', 'Bojana', 'Branka', 'Breda',
@@ -84,12 +110,20 @@ class Person extends \Faker\Provider\Person
         'Veronika', 'Vesna', 'Vida', 'Viktorija', 'Vita', 'Vlasta', 'Zala', 'Zara', 'Zarja',
         'Zdenka', 'Zlatka', 'Zofija', 'Zoja', 'Zora', 'Zvonka', 'Špela', 'Štefanija', 'Štefka',
         'Žana', 'Živa'
+<<<<<<< HEAD
     ];
+=======
+    );
+>>>>>>> 9fa171c0de55c2e6808dd3c84ab6e998d0940244
 
     /**
      * @link http://www.stat.si/imena_top_priimki.asp?r=True
      */
+<<<<<<< HEAD
     protected static $lastName = [
+=======
+    protected static $lastName = array(
+>>>>>>> 9fa171c0de55c2e6808dd3c84ab6e998d0940244
         'Ambrožič', 'Babič', 'Bajc', 'Bergant', 'Bevc', 'Bezjak', 'Bizjak', 'Blatnik', 'Blažič',
         'Bogataj', 'Božič', 'Bregar', 'Breznik', 'Bukovec', 'Cerar', 'Cvetko', 'Debeljak',
         'Demšar', 'Dolenc', 'Dolinar', 'Dolinšek', 'Erjavec', 'Eržen', 'Filipič', 'Fras', 'Furlan',
@@ -113,11 +147,19 @@ class Person extends \Faker\Provider\Person
         'Zajc', 'Zakrajšek', 'Zalar', 'Zalokar', 'Založnik', 'Zemljič', 'Zorko', 'Zorman', 'Zupan',
         'Zupanc', 'Zupančič', 'Zver', 'Čeh', 'Černe', 'Čuk', 'Šinkovec', 'Škof', 'Šmid',
         'Štrukelj', 'Šuštar', 'Žagar', 'Železnik', 'Žibert', 'Žižek', 'Žnidaršič'
+<<<<<<< HEAD
     ];
 
     protected static $title = [
         'dr.', 'mag.', 'inž.', 'univ. dipl.', 'dipl.', 'univ. dipl. inž.', 'dipl. inž.', 'prof.', 'akad.', 'dr. med.', 'spec.'
     ];
+=======
+    );
+
+    protected static $title = array(
+        'dr.', 'mag.', 'inž.', 'univ. dipl.', 'dipl.', 'univ. dipl. inž.', 'dipl. inž.', 'prof.', 'akad.', 'dr. med.', 'spec.'
+    );
+>>>>>>> 9fa171c0de55c2e6808dd3c84ab6e998d0940244
 
     /**
      * replaced by specific unisex slovenian title

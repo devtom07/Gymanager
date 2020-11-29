@@ -1,7 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Users;
 
+use App\Http\Controllers\Controller;
 use App\Http\Requests\ValidateFormaddUser;
 use App\Http\Requests\ValidateFormUpdateUser;
 use App\Models\Staff;
@@ -32,14 +33,11 @@ class UserController extends Controller
     }
     public function show($id){
         $role_user = Role::all();
-        $role_id = [];
-        $listRoleUser = DB::table('model_has_roles')->where('model_id',$id)->pluck('role_id');
         $users = User::with('staff')->with('role')->where('id',$id)->get();
         foreach ($users as $user){}
-        foreach ($user->role as $roles){
-            $role_id[] = $roles->id;
-        }
-        return view('admin.users.account.show_detail',compact('user','role_user','roles','role_id','listRoleUser'));
+        foreach ($user->role as $roles){}
+
+        return view('admin.users.account.show_detail',compact('user','role_user','roles'));
             }
             public function GetUser($id){
                 $role_user = Role::all();
@@ -69,15 +67,21 @@ class UserController extends Controller
            'phone' => $request->phone,
            'staff_id' => $request->staff_user,
            'password' => Hash::make($request->password),
+<<<<<<< HEAD
            'avatar' => $new_image
+=======
+           'created_at' => \DateTime::ATOM
+>>>>>>> 9fa171c0de55c2e6808dd3c84ab6e998d0940244
         ]);
        $roles = $request->role;
+//       $permission = $request->permission;
         $user->assignRole([$roles]);
-
+//        $user->givePermissionTo([$permission]);
         DB::commit();
         Alert()->success('Thành công','Bạn đã thêm tài khoản thành công');
         return redirect()->route('user.index');
     }
+<<<<<<< HEAD
 
     public function edit($id)
     {
@@ -170,7 +174,36 @@ class UserController extends Controller
             }
         }
 
+=======
+    public function edit($id)
+    {
+        return view('admin.users.account.edit');
     }
+    public function update(ValidateFormUpdateUser $request, $id)
+    {
+        $password = $request->password;
+        DB::beginTransaction();
+     if ($password != null){
+         User::find($id)->update([
+         'name' => $request->name,
+         'email' => $request->email,
+         'phone' => $request->phone,
+         'password' => Hash::make($request->password),
+     ]);
+     }else{
+         User::find($id)->update([
+             'name' => $request->name,
+             'email' => $request->email,
+             'phone' => $request->phone,
+             ]);
+     }
+        DB::commit();
+        Alert()->success('Thành công','Bạn đã Sửa tài khoản thành công');
+        return redirect()->route('user.index');
+>>>>>>> 9fa171c0de55c2e6808dd3c84ab6e998d0940244
+    }
+
+
     public function destroy($id)
     {
        $user = User::find($id);
@@ -181,14 +214,15 @@ class UserController extends Controller
     }
     public function updateRole(Request $request,$id){
         $user = User::find($id);
-        $user->syncRoles($request->role);
+        $roles = $request->role;
+          $user->assignRole([$roles])->update();
         Alert()->success('Thành công','Cập nhật quyền thành công');
         return redirect()->route('user.show',$id);
     }
-    public function updateimage(Request $request,$id)
-    {
+    public function updateimage(Request $request,$id){
         $user = User::find($id);
         $data = array();
+
         $get_image = $request->file('avatar');
         $get_name_image = $get_image->getClientOriginalName();
         $name_image = current(explode('.', $get_name_image));

@@ -4,7 +4,11 @@ namespace Faker\Provider\fr_CA;
 
 class Person extends \Faker\Provider\Person
 {
+<<<<<<< HEAD
     protected static $maleNameFormats = [
+=======
+    protected static $maleNameFormats = array(
+>>>>>>> 9fa171c0de55c2e6808dd3c84ab6e998d0940244
         '{{firstNameMale}} {{lastName}}',
         '{{firstNameMale}} {{lastName}}',
         '{{firstNameMale}} {{lastName}}',
@@ -12,9 +16,15 @@ class Person extends \Faker\Provider\Person
         '{{firstNameMale}} {{lastName}}',
         '{{firstNameMale}} {{lastName}}-{{lastName}}',
         '{{firstNameMale}}-{{firstNameMale}} {{lastName}}',
+<<<<<<< HEAD
     ];
 
     protected static $femaleNameFormats = [
+=======
+    );
+
+    protected static $femaleNameFormats = array(
+>>>>>>> 9fa171c0de55c2e6808dd3c84ab6e998d0940244
         '{{firstNameFemale}} {{lastName}}',
         '{{firstNameFemale}} {{lastName}}',
         '{{firstNameFemale}} {{lastName}}',
@@ -22,13 +32,21 @@ class Person extends \Faker\Provider\Person
         '{{firstNameFemale}} {{lastName}}',
         '{{firstNameFemale}} {{lastName}}-{{lastName}}',
         '{{firstNameFemale}}-{{firstNameFemale}} {{lastName}}',
+<<<<<<< HEAD
     ];
+=======
+    );
+>>>>>>> 9fa171c0de55c2e6808dd3c84ab6e998d0940244
 
     /**
      * This list is more or less the same as in \Faker\Provider\fr_FR\Person.php
      * Some common names were added and other removed.
      */
+<<<<<<< HEAD
     protected static $firstNameMale = [
+=======
+    protected static $firstNameMale = array(
+>>>>>>> 9fa171c0de55c2e6808dd3c84ab6e998d0940244
         'Adrien', 'Aimé', 'Alain', 'Albert', 'Alexandre', 'Alfred', 'Alphonse', 'Alysson', 'André', 'Anthony', 'Antoine', 'Arthur', 'Auguste',
         'Augustin', 'Augustine', 'Benjamin', 'Benoit', 'Benoît', 'Bernard', 'Bertrand', 'Charles', 'Christian', 'Christophe', 'Claude', 'Daniel',
         'David', 'Denis', 'Dominic', 'Emmanuel', 'Eugène', 'Françis', 'François', 'Frédéric', 'Gabriel', 'Georges', 'Gilbert', 'Gilles',
@@ -37,9 +55,15 @@ class Person extends \Faker\Provider\Person
         'Nicolas', 'Noël', 'Olivier', 'Patrick', 'Paul', 'Philippe', 'Pierre', 'Raymond', 'René', 'Richard', 'Robert', 'Roger',
         'Roland', 'Rémy', 'Simone', 'Stéphane', 'Sébastien', 'Thierry', 'Thomas', 'Théo', 'Théophile', 'Timothée', 'Tristan', 'Victor',
         'Vincent', 'William', 'Xavier', 'Yvan', 'Yves', 'Yvon', 'Zacharie', 'Édouard', 'Émanuelle', 'Émile', 'Éric', 'Étienne', 'Honoré',
+<<<<<<< HEAD
     ];
 
     protected static $firstNameFemale = [
+=======
+    );
+
+    protected static $firstNameFemale = array(
+>>>>>>> 9fa171c0de55c2e6808dd3c84ab6e998d0940244
         'Adrienne', 'Adèle', 'Agathe', 'Aimée', 'Alexandra', 'Alice', 'Aline', 'Amélie', 'Anaïs', 'Andrée', 'Ann', 'Anne', 'Annette',
         'Annie', 'Anouk', 'Arianne', 'Audrey', 'Aurore', 'Aurélie', 'Bernadette', 'Brigitte', 'Camille', 'Caroline', 'Catherine', 'Chantal',
         'Charlotte', 'Christiane', 'Christine', 'Claire', 'Claudine', 'Colette', 'Corrine', 'Cécile', 'Céline', 'Danielle', 'Denise', 'Dominique',
@@ -49,13 +73,21 @@ class Person extends \Faker\Provider\Person
         'Odette', 'Olivia', 'Patrice', 'Patricia', 'Paule', 'Paulette', 'Pauline', 'Pénélope', 'Renée', 'Rolande', 'Sophie', 'Stéphanie',
         'Susanne', 'Suzanne', 'Sylvie', 'Thérèse', 'Valérie', 'Virginie', 'Véronique', 'Yvonne', 'Zoé', 'Édith', 'Élisabeth', 'Élise',
         'Élodie', 'Émilie', 'Érika', 'Honorée',
+<<<<<<< HEAD
     ];
+=======
+    );
+>>>>>>> 9fa171c0de55c2e6808dd3c84ab6e998d0940244
 
     /**
      * These last names come from this list of most common family names in Québec (1 to 130)
      * http://fr.wikipedia.org/wiki/Liste_des_noms_de_famille_les_plus_courants_au_Québec
      */
+<<<<<<< HEAD
     protected static $lastName = [
+=======
+    protected static $lastName = array(
+>>>>>>> 9fa171c0de55c2e6808dd3c84ab6e998d0940244
         'Allard', 'Arsenault', 'Audet',
         'Beaudoin', 'Beaulieu', 'Bédard', 'Bélanger', 'Benoît', 'Bergeron', 'Bernard', 'Bernier', 'Bertrand', 'Bérubé',
         'Bilodeau', 'Blais', 'Blanchette', 'Boisvert', 'Boivin', 'Bolduc', 'Bouchard', 'Boucher', 'Boudreau',
@@ -78,5 +110,9 @@ class Person extends \Faker\Provider\Person
         'Savard', 'Simard', 'St-Pierre',
         'Tardif', 'Tessier', 'Thériault', 'Therrien', 'Thibault', 'Tremblay', 'Trudel', 'Turcotte',
         'Vachon', 'Vaillancourt', 'Villeneuve'
+<<<<<<< HEAD
     ];
+=======
+    );
+>>>>>>> 9fa171c0de55c2e6808dd3c84ab6e998d0940244
 }

@@ -1,6 +1,9 @@
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> 9fa171c0de55c2e6808dd3c84ab6e998d0940244
 <?php
 use Illuminate\Support\Facades\Route;
 
@@ -53,7 +56,11 @@ Route::get('/logout','AuthurController@logout')->name('logout');
          Route::get('/xoachucnang/{id}','PermissionController@destroy')
              ->name('permission.destroy');
         //user
+<<<<<<< HEAD
         Route::get('xemtaikhoan','UserController@index')
+=======
+        Route::get('xemtaikhoan','Users\UserController@index')
+>>>>>>> 9fa171c0de55c2e6808dd3c84ab6e998d0940244
             ->name('user.index')
             ->middleware(['permission:xem tài khoản']);
         Route::get('themtaikhoan','UserController@create')
@@ -87,13 +94,22 @@ Route::get('/logout','AuthurController@logout')->name('logout');
         Route::get('/them-nhan-vien','Nhanvien\ListnhanvienController@create')
             ->name('listnhanvien.add')
             ->middleware(['permission:Thêm nhân viên']);
+<<<<<<< HEAD
+=======
+        Route::get('/chi-tiet-nhan-vien/{id}','Nhanvien\ListnhanvienController@show')
+        ->name('staff.show');
+>>>>>>> 9fa171c0de55c2e6808dd3c84ab6e998d0940244
         Route::post('/them-nhan-vien/post','Nhanvien\ListnhanvienController@store')
             ->name('listnhanvien.store')
             ->middleware(['permission:Thêm nhân viên']);
         Route::get('/sua-nhan-vien/{id}','Nhanvien\ListnhanvienController@edit')
             ->name('staff.edit')
             ->middleware(['permission:Sửa nhân viên']);
+<<<<<<< HEAD
         Route::post('/sua-nhan-vien/post/{id}','Nhanvien\ListnhanvienController@update')
+=======
+        Route::post('/sua-nhan-vien/{id}','Nhanvien\ListnhanvienController@update')
+>>>>>>> 9fa171c0de55c2e6808dd3c84ab6e998d0940244
             ->name('staff.update')
             ->middleware(['permission:Sửa nhân viên']);
         Route::get('/nhanvien/xoa/{id}','Nhanvien\ListnhanvienController@destroy')
@@ -145,4 +161,8 @@ Route::get('/logout','AuthurController@logout')->name('logout');
 
 
          });
+<<<<<<< HEAD
 });
+=======
+});
+>>>>>>> 9fa171c0de55c2e6808dd3c84ab6e998d0940244

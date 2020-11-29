@@ -38,6 +38,7 @@ abstract class Enum implements \JsonSerializable
     protected static $cache = [];
 
     /**
+<<<<<<< HEAD
      * Cache of instances of the Enum class
      *
      * @var array
@@ -46,6 +47,8 @@ abstract class Enum implements \JsonSerializable
     protected static $instances = [];
 
     /**
+=======
+>>>>>>> 9fa171c0de55c2e6808dd3c84ab6e998d0940244
      * Creates a new value of some type
      *
      * @psalm-pure
@@ -219,10 +222,15 @@ abstract class Enum implements \JsonSerializable
      * @param array  $arguments
      *
      * @return static
+<<<<<<< HEAD
+=======
+     * @psalm-pure
+>>>>>>> 9fa171c0de55c2e6808dd3c84ab6e998d0940244
      * @throws \BadMethodCallException
      */
     public static function __callStatic($name, $arguments)
     {
+<<<<<<< HEAD
         $class = static::class;
         if (!isset(self::$instances[$class][$name])) {
             $array = static::toArray();
@@ -233,6 +241,14 @@ abstract class Enum implements \JsonSerializable
             return self::$instances[$class][$name] = new static($array[$name]);
         }
         return clone self::$instances[$class][$name];
+=======
+        $array = static::toArray();
+        if (isset($array[$name]) || \array_key_exists($name, $array)) {
+            return new static($array[$name]);
+        }
+
+        throw new \BadMethodCallException("No static method or enum constant '$name' in class " . static::class);
+>>>>>>> 9fa171c0de55c2e6808dd3c84ab6e998d0940244
     }
 
     /**

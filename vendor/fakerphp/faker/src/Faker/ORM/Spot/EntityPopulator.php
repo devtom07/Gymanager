@@ -31,11 +31,19 @@ class EntityPopulator
     /**
      * @var array
      */
+<<<<<<< HEAD
     protected $columnFormatters = [];
     /**
      * @var array
      */
     protected $modifiers = [];
+=======
+    protected $columnFormatters = array();
+    /**
+     * @var array
+     */
+    protected $modifiers = array();
+>>>>>>> 9fa171c0de55c2e6808dd3c84ab6e998d0940244
 
     /**
      * @var bool
@@ -43,9 +51,17 @@ class EntityPopulator
     protected $useExistingData = false;
 
     /**
+<<<<<<< HEAD
      * @param Mapper $mapper
      * @param Locator $locator
      * @param bool $useExistingData
+=======
+     * Class constructor.
+     *
+     * @param Mapper $mapper
+     * @param Locator $locator
+     * @param $useExistingData
+>>>>>>> 9fa171c0de55c2e6808dd3c84ab6e998d0940244
      */
     public function __construct(Mapper $mapper, Locator $locator, $useExistingData = false)
     {
@@ -62,6 +78,12 @@ class EntityPopulator
         return $this->mapper;
     }
 
+<<<<<<< HEAD
+=======
+    /**
+     * @param $columnFormatters
+     */
+>>>>>>> 9fa171c0de55c2e6808dd3c84ab6e998d0940244
     public function setColumnFormatters($columnFormatters)
     {
         $this->columnFormatters = $columnFormatters;
@@ -75,6 +97,12 @@ class EntityPopulator
         return $this->columnFormatters;
     }
 
+<<<<<<< HEAD
+=======
+    /**
+     * @param $columnFormatters
+     */
+>>>>>>> 9fa171c0de55c2e6808dd3c84ab6e998d0940244
     public function mergeColumnFormattersWith($columnFormatters)
     {
         $this->columnFormatters = array_merge($this->columnFormatters, $columnFormatters);
@@ -110,7 +138,11 @@ class EntityPopulator
      */
     public function guessColumnFormatters(Generator $generator)
     {
+<<<<<<< HEAD
         $formatters = [];
+=======
+        $formatters = array();
+>>>>>>> 9fa171c0de55c2e6808dd3c84ab6e998d0940244
         $nameGuesser = new Name($generator);
         $columnTypeGuesser = new ColumnTypeGuesser($generator);
         $fields = $this->mapper->fields();
@@ -168,6 +200,10 @@ class EntityPopulator
     /**
      * Insert one new record using the Entity class.
      *
+<<<<<<< HEAD
+=======
+     * @param $insertedEntities
+>>>>>>> 9fa171c0de55c2e6808dd3c84ab6e998d0940244
      * @return string
      */
     public function execute($insertedEntities)
@@ -183,6 +219,13 @@ class EntityPopulator
         return $obj;
     }
 
+<<<<<<< HEAD
+=======
+    /**
+     * @param $obj
+     * @param $insertedEntities
+     */
+>>>>>>> 9fa171c0de55c2e6808dd3c84ab6e998d0940244
     private function fillColumns($obj, $insertedEntities)
     {
         foreach ($this->columnFormatters as $field => $format) {
@@ -193,6 +236,13 @@ class EntityPopulator
         }
     }
 
+<<<<<<< HEAD
+=======
+    /**
+     * @param $obj
+     * @param $insertedEntities
+     */
+>>>>>>> 9fa171c0de55c2e6808dd3c84ab6e998d0940244
     private function callMethods($obj, $insertedEntities)
     {
         foreach ($this->getModifiers() as $modifier) {

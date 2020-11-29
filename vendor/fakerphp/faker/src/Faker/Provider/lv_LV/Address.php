@@ -4,6 +4,7 @@ namespace Faker\Provider\lv_LV;
 
 class Address extends \Faker\Provider\Address
 {
+<<<<<<< HEAD
     protected static $cityPrefix = ['pilsēta'];
 
     protected static $regionSuffix = ['reģions'];
@@ -13,11 +14,26 @@ class Address extends \Faker\Provider\Address
 
     protected static $buildingNumber = ['##'];
     protected static $postcode = ['LV ####'];
+=======
+    protected static $cityPrefix = array('pilsēta');
+
+    protected static $regionSuffix = array('reģions');
+    protected static $streetPrefix = array(
+        'iela', 'bulvāris', 'skvērs', 'gāte',
+    );
+
+    protected static $buildingNumber = array('##');
+    protected static $postcode = array('LV ####');
+>>>>>>> 9fa171c0de55c2e6808dd3c84ab6e998d0940244
 
     /**
      * @link https://lv.wikipedia.org/wiki/Suver%C4%93no_valstu_uzskait%C4%ABjums
      */
+<<<<<<< HEAD
     protected static $country = [
+=======
+    protected static $country = array(
+>>>>>>> 9fa171c0de55c2e6808dd3c84ab6e998d0940244
         'Afganistāna', 'Albānija', 'Alžīrija', 'Amerikas Savienotās Valstis', 'Andora', 'Angola', 'Antigva un Barbuda',
         'Apvienotie Arābu Emirāti', 'Argentīna', 'Armēnija', 'Austrālija', 'Austrija', 'Austrumtimora', 'Azerbaidžāna',
         'Bahamas', 'Bahreina', 'Baltkrievija', 'Bangladeša', 'Barbadosa', 'Beliza', 'Beļģija', 'Benina', 'Bolīvija',
@@ -42,6 +58,7 @@ class Address extends \Faker\Provider\Address
         'Tunisija', 'Turcija', 'Turkmenistāna', 'Tuvalu', 'Uganda', 'Ukraina', 'Ungārija', 'Urugvaja', 'Uzbekistāna',
         'Vācija', 'Vanuatu', 'Vatikāns', 'Venecuēla', 'Vjetnama', 'Zālamana Salas', 'Zambija', 'Ziemeļkoreja',
         'Zimbabve', 'Zviedrija',
+<<<<<<< HEAD
     ];
 
     protected static $region = [
@@ -62,6 +79,28 @@ class Address extends \Faker\Provider\Address
     protected static $addressFormats = [
         "{{postcode}}, {{region}} {{regionSuffix}}, {{city}} {{cityPrefix}}, {{street}} {{streetPrefix}}, {{buildingNumber}}",
     ];
+=======
+    );
+
+    protected static $region = array(
+        'Kurzemes', 'Latgales', 'Rīgas', 'Vidzemes', 'Zemgales'
+    );
+
+    protected static $city = array('Aizkraukle' ,'Aluksne','Balvi', 'Bauska','Cesis',
+        'Daugavpils', 'Dobele','Gulbene', 'Jekabpils', 'Jelgava', 'Kraslava', 'Kuldiga', 'Liepaja',
+        'Limbazi', 'Ludza', 'Madona', 'Mobile Phones', 'Ogre', 'Preili', 'Rezekne', 'Rīga', 'Ventspils'
+    );
+
+    protected static $street = array(
+        'Alfrēda Kalniņa', 'Alksnāja', 'Amatu', 'Anglikāņu', 'Arhitektu', 'Arsenāla', 'Artilērijas',
+        'Aspazijas', 'Atgriežu', 'Audēju', 'Basteja', 'Baumaņa', 'Bīskapa', 'Blaumaņa', 'Brīvības', 'Brīvības',
+        'Bruņinieku', 'Dainas', 'Daugavas'
+    );
+
+    protected static $addressFormats = array(
+        "{{postcode}}, {{region}} {{regionSuffix}}, {{city}} {{cityPrefix}}, {{street}} {{streetPrefix}}, {{buildingNumber}}",
+    );
+>>>>>>> 9fa171c0de55c2e6808dd3c84ab6e998d0940244
 
     public static function buildingNumber()
     {

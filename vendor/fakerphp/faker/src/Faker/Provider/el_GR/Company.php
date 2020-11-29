@@ -4,11 +4,16 @@ namespace Faker\Provider\el_GR;
 
 class Company extends \Faker\Provider\Company
 {
+<<<<<<< HEAD
     protected static $companySuffix = [
+=======
+    protected static $companySuffix = array(
+>>>>>>> 9fa171c0de55c2e6808dd3c84ab6e998d0940244
         'Ο.Ε',
         'Ε.Ε',
         'Α.Ε',
         'Ε.Π.Ε'
+<<<<<<< HEAD
     ];
 
     protected static $companyFormats = [
@@ -20,6 +25,19 @@ class Company extends \Faker\Provider\Company
 
 
     protected static $doy = [
+=======
+    );
+
+    protected static $companyFormats = array(
+        '{{lastName}} {{firstName}} {{companySuffix}}',
+        '{{lastName}}-{{firstName}}'
+    );
+
+    protected static $grafm = array('#########');
+
+
+    protected static $doy = array(
+>>>>>>> 9fa171c0de55c2e6808dd3c84ab6e998d0940244
         'Α\' Αθήνας',
         'Β\' Αθήνας',
         'Γ\' Αθήνας',
@@ -41,10 +59,17 @@ class Company extends \Faker\Provider\Company
         'Πατρών',
         'ΔΟΥ ΠΛΟΙΩΝ',
         'ΦΑΕΕ ΑΘΗΝΩΝ'
+<<<<<<< HEAD
     ];
 
 
     protected static $object = [
+=======
+    );
+
+
+    protected static $object = array(
+>>>>>>> 9fa171c0de55c2e6808dd3c84ab6e998d0940244
         'Προγραμματιστής',
         'Δικηγόρος',
         'Γιατρός',
@@ -64,7 +89,11 @@ class Company extends \Faker\Provider\Company
         'Εισαγωγαί-εξαγωγαί',
         'Ωρολογοποιός',
         'Καθεκλοποιός',
+<<<<<<< HEAD
     ];
+=======
+    );
+>>>>>>> 9fa171c0de55c2e6808dd3c84ab6e998d0940244
 
     /**
      * @example 'Αθήνας'

@@ -20,6 +20,7 @@ class Barcode extends Base
      *
      * @param string $input
      *
+<<<<<<< HEAD
      * @return int
      */
     protected static function eanChecksum($input)
@@ -28,6 +29,16 @@ class Barcode extends Base
         $sums = 0;
         foreach (str_split($input) as $n => $digit) {
             $sums += ((int) $digit) * $sequence[$n % 2];
+=======
+     * @return integer
+     */
+    protected static function eanChecksum($input)
+    {
+        $sequence = (strlen($input) + 1) === 8 ? array(3, 1) : array(1, 3);
+        $sums = 0;
+        foreach (str_split($input) as $n => $digit) {
+            $sums += $digit * $sequence[$n % 2];
+>>>>>>> 9fa171c0de55c2e6808dd3c84ab6e998d0940244
         }
         return (10 - $sums % 10) % 10;
     }
@@ -39,7 +50,11 @@ class Barcode extends Base
      * @param  string           $input ISBN without check-digit
      * @throws \LengthException When wrong input length passed
      *
+<<<<<<< HEAD
      * @return string
+=======
+     * @return integer Check digit
+>>>>>>> 9fa171c0de55c2e6808dd3c84ab6e998d0940244
      */
     protected static function isbnChecksum($input)
     {
@@ -61,7 +76,11 @@ class Barcode extends Base
         $result = (11 - array_sum($digits) % 11) % 11;
 
         // 10 is replaced by X
+<<<<<<< HEAD
         return ($result < 10) ? (string) $result : 'X';
+=======
+        return ($result < 10) ? $result : 'X';
+>>>>>>> 9fa171c0de55c2e6808dd3c84ab6e998d0940244
     }
 
     /**

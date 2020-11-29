@@ -10,9 +10,15 @@ class Text extends \Faker\Provider\Text
     /**
      * All punctuation in $baseText: 、 。 「 」 『 』 ！ ？ ー ， ： ；
      */
+<<<<<<< HEAD
     protected static $notEndPunct = ['、', '「', '『', 'ー', '，', '：', '；'];
     protected static $endPunct = ['。', '」', '』', '！', '？'];
     protected static $notBeginPunct = ['、', '。', '」', '』', '！', '？', 'ー', '，', '：', '；'];
+=======
+    protected static $notEndPunct = array('、', '「', '『', 'ー', '，', '：', '；');
+    protected static $endPunct = array('。', '」', '』', '！', '？');
+    protected static $notBeginPunct = array('、', '。', '」', '』', '！', '？', 'ー', '，', '：', '；');
+>>>>>>> 9fa171c0de55c2e6808dd3c84ab6e998d0940244
 
     /**
      * Title: 吶喊 Call to Arms (1922)
@@ -802,7 +808,11 @@ EOT;
 
     protected static function explode($text)
     {
+<<<<<<< HEAD
         $chars = [];
+=======
+        $chars = array();
+>>>>>>> 9fa171c0de55c2e6808dd3c84ab6e998d0940244
 
         foreach (preg_split('//u', str_replace(PHP_EOL, '', $text)) as $char) {
             if (! empty($char)) {
@@ -861,7 +871,11 @@ EOT;
      */
     protected static function utf8Encoding($text)
     {
+<<<<<<< HEAD
         $encoding = [];
+=======
+        $encoding = array();
+>>>>>>> 9fa171c0de55c2e6808dd3c84ab6e998d0940244
 
         $chars = str_split($text);
 

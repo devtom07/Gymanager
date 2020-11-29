@@ -7,7 +7,11 @@ class Person extends \Faker\Provider\fr_FR\Person
     /**
      * @link http://www.bfs.admin.ch/bfs/portal/de/index/themen/01/02/blank/dos/prenoms/02.html
      */
+<<<<<<< HEAD
     protected static $firstNameMale = [
+=======
+    protected static $firstNameMale = array(
+>>>>>>> 9fa171c0de55c2e6808dd3c84ab6e998d0940244
         'Adrian', 'Adrien', 'Alain', 'Albert', 'Alberto', 'Alessandro', 'Alex', 'Alexander', 'Alexandre', 'Alexis', 'Alfred', 'Ali', 'Andrea', 'André', 'Angelo', 'Anthony', 'Antoine', 'Antonio', 'António', 'Arnaud', 'Arthur', 'Aurélien', 'Axel',
         'Baptiste', 'Bastien', 'Benjamin', 'Benoît', 'Bernard', 'Bertrand', 'Bruno', 'Bryan',
         'Carlos', 'Charles', 'Christian', 'Christophe', 'Christopher', 'Claude', 'Claudio', 'Cyril', 'Cédric',
@@ -31,12 +35,20 @@ class Person extends \Faker\Provider\fr_FR\Person
         'Walter', 'William', 'Willy',
         'Xavier',
         'Yann', 'Yannick', 'Yvan', 'Yves',
+<<<<<<< HEAD
     ];
+=======
+    );
+>>>>>>> 9fa171c0de55c2e6808dd3c84ab6e998d0940244
 
     /**
      * @link http://www.bfs.admin.ch/bfs/portal/de/index/themen/01/02/blank/dos/prenoms/02.html
      */
+<<<<<<< HEAD
     protected static $firstNameFemale = [
+=======
+    protected static $firstNameFemale = array(
+>>>>>>> 9fa171c0de55c2e6808dd3c84ab6e998d0940244
         'Agnès', 'Alexandra', 'Alice', 'Alicia', 'Aline', 'Amélie', 'Ana', 'Anaïs', 'Andrea', 'Andrée', 'Angela', 'Anita', 'Anna', 'Anne', 'Anne-Marie', 'Antoinette', 'Ariane', 'Arlette', 'Audrey', 'Aurélie',
         'Barbara', 'Bernadette', 'Brigitte', 'Béatrice',
         'Camille', 'Carine', 'Carla', 'Carmen', 'Carole', 'Caroline', 'Catherine', 'Chantal', 'Charlotte', 'Chloé', 'Christelle', 'Christiane', 'Christine', 'Cindy', 'Claire', 'Clara', 'Claudia', 'Claudine', 'Colette', 'Coralie', 'Corinne', 'Cristina', 'Cécile', 'Célia', 'Céline',
@@ -59,12 +71,20 @@ class Person extends \Faker\Provider\fr_FR\Person
         'Valentine', 'Valérie', 'Vanessa', 'Victoria', 'Virginie', 'Viviane', 'Véronique',
         'Yolande', 'Yvette', 'Yvonne',
         'Zoé',
+<<<<<<< HEAD
     ];
+=======
+    );
+>>>>>>> 9fa171c0de55c2e6808dd3c84ab6e998d0940244
 
     /**
      * @link http://blog.tagesanzeiger.ch/datenblog/index.php/6859
      */
+<<<<<<< HEAD
     protected static $lastName = [
+=======
+    protected static $lastName = array(
+>>>>>>> 9fa171c0de55c2e6808dd3c84ab6e998d0940244
         'Aebischer', 'Aeby', 'Andrey', 'Aubert', 'Aubry',
         'Bachmann', 'Baechler', 'Baeriswyl', 'Barbey', 'Barras', 'Baumann', 'Baumgartner', 'Berger', 'Bernard', 'Berset', 'Bersier', 'Berthoud', 'Besson', 'Blanc', 'Blaser', 'Boillat', 'Bonvin', 'Bourquin', 'Bruchez', 'Brunner', 'Brügger', 'Buchs', 'Bugnon', 'Burri', 'Bühler',
         'Castella', 'Cattin', 'Chappuis', 'Chapuis', 'Chassot', 'Chatelain', 'Chevalley', 'Chollet', 'Christen', 'Clerc', 'Clément', 'Constantin', 'Crausaz',
@@ -86,7 +106,11 @@ class Person extends \Faker\Provider\fr_FR\Person
         'Vaucher', 'Vonlanthen', 'Vuilleumier',
         'Waeber', 'Weber', 'Wenger', 'Widmer', 'Wyss',
         'Zbinden', 'Zimmermann',
+<<<<<<< HEAD
     ];
+=======
+    );
+>>>>>>> 9fa171c0de55c2e6808dd3c84ab6e998d0940244
 
     /**
      * Generates a valid random AVS13 (swiss social security) number
@@ -99,15 +123,29 @@ class Person extends \Faker\Provider\fr_FR\Person
      */
     public static function avs13()
     {
+<<<<<<< HEAD
         $p = [
+=======
+        $p = array(
+>>>>>>> 9fa171c0de55c2e6808dd3c84ab6e998d0940244
             756,
             self::numerify('####'),
             self::numerify('####'),
             self::numerify('#'),
+<<<<<<< HEAD
         ];
 
         $checksum = \Faker\Calculator\Ean::checksum(implode('', $p));
 
         return sprintf("%s.%s.%s.%s%s", $p[0], $p[1], $p[2], $p[3], $checksum);
+=======
+        );
+
+        $checksum = \Faker\Calculator\Ean::checksum(implode($p));
+
+        $avs = sprintf("%s.%s.%s.%s%s", $p[0], $p[1], $p[2], $p[3], $checksum);
+
+        return $avs;
+>>>>>>> 9fa171c0de55c2e6808dd3c84ab6e998d0940244
     }
 }

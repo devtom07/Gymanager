@@ -7,7 +7,11 @@ class PhoneNumber extends \Faker\Provider\PhoneNumber
     /**
      * @link https://fa.wikipedia.org/wiki/%D8%B4%D9%85%D8%A7%D8%B1%D9%87%E2%80%8C%D9%87%D8%A7%DB%8C_%D8%AA%D9%84%D9%81%D9%86_%D8%AF%D8%B1_%D8%A7%DB%8C%D8%B1%D8%A7%D9%86#.D8.AA.D9.84.D9.81.D9.86.E2.80.8C.D9.87.D8.A7.DB.8C_.D9.87.D9.85.D8.B1.D8.A7.D9.87
      */
+<<<<<<< HEAD
     protected static $formats = [ // land line formts seprated by province
+=======
+    protected static $formats = array( // land line formts seprated by province
+>>>>>>> 9fa171c0de55c2e6808dd3c84ab6e998d0940244
         "011########", //Mazandaran
         "013########", //Gilan
         "017########", //Golestan
@@ -39,9 +43,15 @@ class PhoneNumber extends \Faker\Provider\PhoneNumber
         "084########", //Ilam
         "086########", //Markazi
         "087########", //Kurdistan
+<<<<<<< HEAD
     ];
 
     protected static $mobileNumberPrefixes = [
+=======
+    );
+
+    protected static $mobileNumberPrefixes = array(
+>>>>>>> 9fa171c0de55c2e6808dd3c84ab6e998d0940244
         '0910#######',//mci
         '0911#######',
         '0912#######',
@@ -67,7 +77,11 @@ class PhoneNumber extends \Faker\Provider\PhoneNumber
         '0921#######',
         '0937#######',
         '0990#######', // MCI
+<<<<<<< HEAD
     ];
+=======
+    );
+>>>>>>> 9fa171c0de55c2e6808dd3c84ab6e998d0940244
     public static function mobileNumber()
     {
         return static::numerify(static::randomElement(static::$mobileNumberPrefixes));

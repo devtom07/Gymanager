@@ -4,25 +4,43 @@ namespace Faker\Provider\ru_RU;
 
 class Person extends \Faker\Provider\Person
 {
+<<<<<<< HEAD
     protected static $maleNameFormats = [
         '{{firstNameMale}} {{middleNameMale}} {{lastName}}',
         '{{lastName}} {{firstNameMale}} {{middleNameMale}}',
     ];
+=======
+    protected static $maleNameFormats = array(
+        '{{firstNameMale}} {{middleNameMale}} {{lastName}}',
+        '{{lastName}} {{firstNameMale}} {{middleNameMale}}',
+    );
+>>>>>>> 9fa171c0de55c2e6808dd3c84ab6e998d0940244
 
     /**
      * This provider uses wikipedia's 250 top russian last names
      * That list of MALE last names could be safely extended to FEMALE list just by adding 'a' letter at the end
      */
+<<<<<<< HEAD
     protected static $femaleNameFormats = [
         '{{firstNameFemale}} {{middleNameFemale}} {{lastName}}а',
         '{{lastName}}а {{firstNameFemale}} {{middleNameFemale}}',
     ];
+=======
+    protected static $femaleNameFormats = array(
+        '{{firstNameFemale}} {{middleNameFemale}} {{lastName}}а',
+        '{{lastName}}а {{firstNameFemale}} {{middleNameFemale}}',
+    );
+>>>>>>> 9fa171c0de55c2e6808dd3c84ab6e998d0940244
 
     /**
      * {@link} http://ru.wikipedia.org/wiki/%D0%A0%D1%83%D1%81%D1%81%D0%BA%D0%BE%D0%B5_%D0%BB%D0%B8%D1%87%D0%BD%D0%BE%D0%B5_%D0%B8%D0%BC%D1%8F
      * {@link} http://masterrussian.com/aa031701a.shtml
      **/
+<<<<<<< HEAD
     protected static $firstNameMale = [
+=======
+    protected static $firstNameMale = array(
+>>>>>>> 9fa171c0de55c2e6808dd3c84ab6e998d0940244
         'Абрам', 'Август', 'Адам', 'Адриан', 'Аким', 'Александр', 'Алексей', 'Альберт', 'Ананий', 'Анатолий', 'Андрей', 'Антон', 'Антонин',
         'Аполлон', 'Аркадий', 'Арсений', 'Артемий', 'Артур', 'Артём', 'Афанасий', 'Богдан', 'Болеслав', 'Борис', 'Бронислав', 'Вадим',
         'Валентин', 'Валериан', 'Валерий', 'Василий', 'Вениамин', 'Викентий', 'Виктор', 'Виль', 'Виталий', 'Витольд', 'Влад', 'Владимир',
@@ -34,12 +52,20 @@ class Person extends \Faker\Provider\Person
         'Радислав', 'Рафаил', 'Роберт', 'Родион', 'Роман', 'Ростислав', 'Руслан', 'Сава', 'Савва', 'Святослав', 'Семён', 'Сергей',
         'Спартак', 'Станислав', 'Степан', 'Стефан', 'Тарас', 'Тимофей', 'Тимур', 'Тит', 'Трофим', 'Феликс', 'Филипп', 'Фёдор',
         'Эдуард', 'Эрик', 'Юлиан', 'Юлий', 'Юрий', 'Яков', 'Ян', 'Ярослав', 'Милан',
+<<<<<<< HEAD
     ];
+=======
+    );
+>>>>>>> 9fa171c0de55c2e6808dd3c84ab6e998d0940244
 
     /**
      * {@link} http://masterrussian.com/aa031001a.shtml
      **/
+<<<<<<< HEAD
     protected static $firstNameFemale = [
+=======
+    protected static $firstNameFemale = array(
+>>>>>>> 9fa171c0de55c2e6808dd3c84ab6e998d0940244
         'Александра', 'Алина', 'Алиса', 'Алла', 'Альбина', 'Алёна', 'Анастасия', 'Анжелика', 'Анна', 'Антонина', 'Анфиса', 'Валентина', 'Валерия',
         'Варвара', 'Василиса', 'Вера', 'Вероника', 'Виктория', 'Владлена', 'Галина', 'Дарья', 'Диана', 'Дина', 'Доминика', 'Ева',
         'Евгения', 'Екатерина', 'Елена', 'Елизавета', 'Жанна', 'Зинаида', 'Злата', 'Зоя', 'Изабелла', 'Изольда', 'Инга', 'Инесса',
@@ -48,6 +74,7 @@ class Person extends \Faker\Provider\Person
         'Нелли', 'Ника', 'Нина', 'Нонна', 'Оксана', 'Олеся', 'Ольга', 'Полина', 'Рада', 'Раиса', 'Регина', 'Рената',
         'Розалина', 'Светлана', 'Софья', 'София', 'Таисия', 'Тамара', 'Татьяна', 'Ульяна', 'Фаина', 'Федосья', 'Флорентина', 'Эльвира', 'Эмилия',
         'Эмма', 'Юлия', 'Яна', 'Ярослава',
+<<<<<<< HEAD
     ];
 
     protected static $middleNameMale = [
@@ -61,11 +88,30 @@ class Person extends \Faker\Provider\Person
         'Сергеевна', 'Ивановна', 'Фёдоровна', 'Львовна', 'Романовна', 'Владимировна',
         'Борисовна', 'Максимовна',
     ];
+=======
+    );
+
+    protected static $middleNameMale = array(
+        'Александрович', 'Алексеевич', 'Андреевич', 'Дмитриевич', 'Евгеньевич',
+        'Сергеевич', 'Иванович', 'Фёдорович', 'Львович', 'Романович', 'Владимирович',
+        'Борисович', 'Максимович',
+    );
+
+    protected static $middleNameFemale = array(
+        'Александровна', 'Алексеевна', 'Андреевна', 'Дмитриевна', 'Евгеньевна',
+        'Сергеевна', 'Ивановна', 'Фёдоровна', 'Львовна', 'Романовна', 'Владимировна',
+        'Борисовна', 'Максимовна',
+    );
+>>>>>>> 9fa171c0de55c2e6808dd3c84ab6e998d0940244
 
     /**
      * {@link} http://ru.wikipedia.org/wiki/%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA_%D0%BE%D0%B1%D1%89%D0%B5%D1%80%D1%83%D1%81%D1%81%D0%BA%D0%B8%D1%85_%D1%84%D0%B0%D0%BC%D0%B8%D0%BB%D0%B8%D0%B9
      **/
+<<<<<<< HEAD
     protected static $lastName = [
+=======
+    protected static $lastName = array(
+>>>>>>> 9fa171c0de55c2e6808dd3c84ab6e998d0940244
         'Смирнов', 'Иванов', 'Кузнецов', 'Соколов', 'Попов', 'Лебедев', 'Козлов',
         'Новиков', 'Морозов', 'Петров', 'Волков', 'Соловьёв', 'Васильев', 'Зайцев',
         'Павлов', 'Семёнов', 'Голубев', 'Виноградов', 'Богданов', 'Воробьёв',
@@ -103,9 +149,15 @@ class Person extends \Faker\Provider\Person
         'Сысоев', 'Фомичёв', 'Русаков', 'Стрелков', 'Гущин', 'Тетерин', 'Колобов',
         'Субботин', 'Фокин', 'Блохин', 'Селиверстов', 'Пестов', 'Кондратьев', 'Силин',
         'Меркушев', 'Лыткин', 'Туров',
+<<<<<<< HEAD
     ];
 
     protected static $lastNameSuffix = ['а', ''];
+=======
+    );
+
+    protected static $lastNameSuffix = array('а', '');
+>>>>>>> 9fa171c0de55c2e6808dd3c84ab6e998d0940244
 
     /**
      * Return male middle name
@@ -151,10 +203,17 @@ class Person extends \Faker\Provider\Person
             return $this->middleNameFemale();
         }
 
+<<<<<<< HEAD
         return $this->middleName(static::randomElement([
             static::GENDER_MALE,
             static::GENDER_FEMALE,
         ]));
+=======
+        return $this->middleName(static::randomElement(array(
+            static::GENDER_MALE,
+            static::GENDER_FEMALE,
+        )));
+>>>>>>> 9fa171c0de55c2e6808dd3c84ab6e998d0940244
     }
 
     /**

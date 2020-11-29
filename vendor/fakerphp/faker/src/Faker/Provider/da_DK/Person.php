@@ -12,7 +12,11 @@ class Person extends \Faker\Provider\Person
     /**
      * @var array Danish person name formats.
      */
+<<<<<<< HEAD
     protected static $maleNameFormats = [
+=======
+    protected static $maleNameFormats = array(
+>>>>>>> 9fa171c0de55c2e6808dd3c84ab6e998d0940244
         '{{firstNameMale}} {{lastName}}',
         '{{firstNameMale}} {{lastName}}',
         '{{firstNameMale}} {{lastName}}',
@@ -20,9 +24,15 @@ class Person extends \Faker\Provider\Person
         '{{firstNameMale}} {{middleName}} {{lastName}}',
         '{{firstNameMale}} {{middleName}}-{{middleName}} {{lastName}}',
         '{{firstNameMale}} {{middleName}} {{middleName}}-{{lastName}}',
+<<<<<<< HEAD
     ];
 
     protected static $femaleNameFormats = [
+=======
+    );
+
+    protected static $femaleNameFormats = array(
+>>>>>>> 9fa171c0de55c2e6808dd3c84ab6e998d0940244
         '{{firstNameFemale}} {{lastName}}',
         '{{firstNameFemale}} {{lastName}}',
         '{{firstNameFemale}} {{lastName}}',
@@ -30,12 +40,20 @@ class Person extends \Faker\Provider\Person
         '{{firstNameFemale}} {{middleName}} {{lastName}}',
         '{{firstNameFemale}} {{middleName}}-{{middleName}} {{lastName}}',
         '{{firstNameFemale}} {{middleName}} {{middleName}}-{{lastName}}',
+<<<<<<< HEAD
     ];
+=======
+    );
+>>>>>>> 9fa171c0de55c2e6808dd3c84ab6e998d0940244
 
     /**
      * @var array Danish first names.
      */
+<<<<<<< HEAD
     protected static $firstNameMale = [
+=======
+    protected static $firstNameMale = array(
+>>>>>>> 9fa171c0de55c2e6808dd3c84ab6e998d0940244
         'Aage', 'Adam', 'Adolf', 'Ahmad', 'Ahmed', 'Aksel', 'Albert', 'Alex', 'Alexander', 'Alf', 'Alfred', 'Ali', 'Allan',
         'Anders', 'Andreas', 'Anker', 'Anton', 'Arne', 'Arnold', 'Arthur', 'Asbjørn', 'Asger', 'August', 'Axel', 'Benjamin',
         'Benny', 'Bent', 'Bernhard', 'Birger', 'Bjarne', 'Bjørn', 'Bo', 'Brian', 'Bruno', 'Børge', 'Carl', 'Carlo',
@@ -59,9 +77,15 @@ class Person extends \Faker\Provider\Person
         'Chr', 'Eigil', 'Ejgil', 'Ejler', 'Ejnar', 'Ejner', 'Evald', 'Folmer', 'Gunner', 'Gurli', 'Hartvig', 'Herluf', 'Hjalmar',
         'Ingemann', 'Ingolf', 'Ingvard', 'Keld', 'Kresten', 'Laurids', 'Laurits', 'Lauritz', 'Ludvig', 'Lynge', 'Oluf', 'Osvald',
         'Povl', 'Richardt', 'Sigfred', 'Sofus', 'Thorkild', 'Viggo', 'Vilhelm', 'Villiam',
+<<<<<<< HEAD
     ];
 
     protected static $firstNameFemale = [
+=======
+    );
+
+    protected static $firstNameFemale = array(
+>>>>>>> 9fa171c0de55c2e6808dd3c84ab6e998d0940244
         'Aase', 'Agathe', 'Agnes', 'Alberte', 'Alexandra', 'Alice', 'Alma', 'Amalie', 'Amanda', 'Andrea', 'Ane', 'Anette', 'Anita',
         'Anja', 'Ann', 'Anna', 'Annalise', 'Anne', 'Anne-Lise', 'Anne-Marie', 'Anne-Mette', 'Annelise', 'Annette', 'Anni', 'Annie',
         'Annika', 'Anny', 'Asta', 'Astrid', 'Augusta', 'Benedikte', 'Bente', 'Berit', 'Bertha', 'Betina', 'Bettina', 'Betty',
@@ -90,12 +114,20 @@ class Person extends \Faker\Provider\Person
         'Winnie', 'Yrsa', 'Yvonne', 'Agnete', 'Agnethe', 'Alfrida', 'Alvilda', 'Anine', 'Bolette', 'Dorthea', 'Gunhild',
         'Hansine', 'Inge-Lise', 'Jensine', 'Juel', 'Jørgine', 'Kamma', 'Kristiane', 'Maj-Britt', 'Margrete', 'Metha', 'Nielsine',
         'Oline', 'Petrea', 'Petrine', 'Pouline', 'Ragna', 'Sørine', 'Thora', 'Valborg', 'Vilhelmine',
+<<<<<<< HEAD
     ];
+=======
+    );
+>>>>>>> 9fa171c0de55c2e6808dd3c84ab6e998d0940244
 
     /**
      * @var array Danish middle names.
      */
+<<<<<<< HEAD
     protected static $middleName = [
+=======
+    protected static $middleName = array(
+>>>>>>> 9fa171c0de55c2e6808dd3c84ab6e998d0940244
         'Møller', 'Lund', 'Holm', 'Jensen', 'Juul', 'Nielsen', 'Kjær', 'Hansen', 'Skov', 'Østergaard', 'Vestergaard',
         'Nørgaard', 'Dahl', 'Bach', 'Friis', 'Søndergaard', 'Andersen', 'Bech', 'Pedersen', 'Bruun', 'Nygaard', 'Winther',
         'Bang', 'Krogh', 'Schmidt', 'Christensen', 'Hedegaard', 'Toft', 'Damgaard', 'Holst', 'Sørensen', 'Juhl', 'Munk',
@@ -120,12 +152,20 @@ class Person extends \Faker\Provider\Person
         'Linde', 'Lange', 'Stokholm', 'Bredahl', 'Hein', 'Mose', 'Bækgaard', 'Sandberg', 'Klarskov', 'Kamp', 'Green',
         'Iversen', 'Riber', 'Smedegaard', 'Nyholm', 'Vad', 'Balle', 'Kjeldsen', 'Strøm', 'Borch', 'Lerche', 'Grønlund',
         'Vestergård', 'Østergård', 'Nyborg', 'Qvist', 'Damkjær', 'Kold', 'Sønderskov', 'Bank',
+<<<<<<< HEAD
     ];
+=======
+    );
+>>>>>>> 9fa171c0de55c2e6808dd3c84ab6e998d0940244
 
     /**
      * @var array Danish last names.
      */
+<<<<<<< HEAD
     protected static $lastName = [
+=======
+    protected static $lastName = array(
+>>>>>>> 9fa171c0de55c2e6808dd3c84ab6e998d0940244
         'Jensen', 'Nielsen', 'Hansen', 'Pedersen', 'Andersen', 'Christensen', 'Larsen', 'Sørensen', 'Rasmussen', 'Petersen',
         'Jørgensen', 'Madsen', 'Kristensen', 'Olsen', 'Christiansen', 'Thomsen', 'Poulsen', 'Johansen', 'Knudsen', 'Mortensen',
         'Møller', 'Jacobsen', 'Jakobsen', 'Olesen', 'Frederiksen', 'Mikkelsen', 'Henriksen', 'Laursen', 'Lund', 'Schmidt',
@@ -166,7 +206,11 @@ class Person extends \Faker\Provider\Person
         'Bergmann', 'Bjerrum', 'Petersson', 'Smed', 'Jeremiassen', 'Nyborg', 'Borch', 'Foged', 'Terp', 'Mark', 'Busch',
         'Lundgaard', 'Boye', 'Yde', 'Hinrichsen', 'Matzen', 'Esbensen', 'Hertz', 'Westh', 'Holmberg', 'Geertsen', 'Raun',
         'Aagaard', 'Kock', 'Falk', 'Munk',
+<<<<<<< HEAD
     ];
+=======
+    );
+>>>>>>> 9fa171c0de55c2e6808dd3c84ab6e998d0940244
 
     /**
      * Randomly return a danish name.

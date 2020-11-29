@@ -8,7 +8,11 @@ class PhoneNumber extends \Faker\Provider\PhoneNumber
      * @link https://www.viestintavirasto.fi/en/internettelephone/numberingoftelecommunicationsnetworks/localcallsandtelecommunicationsareas/mapoftelecommunicationsareas.html
      * @var array
      */
+<<<<<<< HEAD
     protected static $landLineareaCodes = [
+=======
+    protected static $landLineareaCodes = array(
+>>>>>>> 9fa171c0de55c2e6808dd3c84ab6e998d0940244
         '02',
         '03',
         '05',
@@ -22,17 +26,26 @@ class PhoneNumber extends \Faker\Provider\PhoneNumber
         '017',
         '018',
         '019',
+<<<<<<< HEAD
     ];
+=======
+    );
+>>>>>>> 9fa171c0de55c2e6808dd3c84ab6e998d0940244
 
     /**
      * @link https://www.viestintavirasto.fi/en/internettelephone/numberingoftelecommunicationsnetworks/mobilenetworks/mobilenetworkareacodes.html
      * @var array
      */
+<<<<<<< HEAD
     protected static $mobileNetworkAreaCodes = [
+=======
+    protected static $mobileNetworkAreaCodes = array(
+>>>>>>> 9fa171c0de55c2e6808dd3c84ab6e998d0940244
         '040',
         '050',
         '044',
         '045',
+<<<<<<< HEAD
     ];
 
     protected static $numberFormats = [
@@ -41,13 +54,27 @@ class PhoneNumber extends \Faker\Provider\PhoneNumber
     ];
 
     protected static $formats = [
+=======
+    );
+
+    protected static $numberFormats = array(
+        '### ####',
+        '#######',
+    );
+
+    protected static $formats = array(
+>>>>>>> 9fa171c0de55c2e6808dd3c84ab6e998d0940244
         '+358 ({{ e164MobileNetworkAreaCode }}) {{ numberFormat }}',
         '+358 {{ e164MobileNetworkAreaCode }} {{ numberFormat }}',
         '+358 ({{ e164landLineAreaCode }}) {{ numberFormat }}',
         '+358 {{ e164landLineAreaCode }} {{ numberFormat }}',
         '{{ mobileNetworkAreaCode }}{{ separator }}{{ numberFormat }}',
         '{{ landLineAreaCode }}{{ separator }}{{ numberFormat }}',
+<<<<<<< HEAD
     ];
+=======
+    );
+>>>>>>> 9fa171c0de55c2e6808dd3c84ab6e998d0940244
 
     /**
      * @return string
@@ -94,6 +121,10 @@ class PhoneNumber extends \Faker\Provider\PhoneNumber
      */
     public function separator()
     {
+<<<<<<< HEAD
         return static::randomElement([' ', '-']);
+=======
+        return static::randomElement(array(' ', '-'));
+>>>>>>> 9fa171c0de55c2e6808dd3c84ab6e998d0940244
     }
 }

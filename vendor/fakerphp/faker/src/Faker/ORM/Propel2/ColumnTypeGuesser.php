@@ -67,12 +67,20 @@ class ColumnTypeGuesser
                 };
             case PropelTypes::FLOAT:
                 return function () {
+<<<<<<< HEAD
                     return mt_rand(0, intval('2147483647')) / mt_rand(1, intval('2147483647'));
+=======
+                    return mt_rand(0, intval('2147483647'))/mt_rand(1, intval('2147483647'));
+>>>>>>> 9fa171c0de55c2e6808dd3c84ab6e998d0940244
                 };
             case PropelTypes::DOUBLE:
             case PropelTypes::REAL:
                 return function () {
+<<<<<<< HEAD
                     return mt_rand(0, intval('9223372036854775807')) / mt_rand(1, intval('9223372036854775807'));
+=======
+                    return mt_rand(0, intval('9223372036854775807'))/mt_rand(1, intval('9223372036854775807'));
+>>>>>>> 9fa171c0de55c2e6808dd3c84ab6e998d0940244
                 };
             case PropelTypes::CHAR:
             case PropelTypes::VARCHAR:

@@ -38,6 +38,7 @@ trait HasCallbacks
     }
 
     /**
+<<<<<<< HEAD
      * Set drawCallback option value with Livewire integration.
      * Solution as per issue https://github.com/yajra/laravel-datatables/issues/2401.
      *
@@ -61,6 +62,8 @@ trait HasCallbacks
     }
 
     /**
+=======
+>>>>>>> 9fa171c0de55c2e6808dd3c84ab6e998d0940244
      * Set footerCallback option value.
      *
      * @param mixed $script

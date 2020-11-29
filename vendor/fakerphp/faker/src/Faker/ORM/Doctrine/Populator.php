@@ -11,6 +11,7 @@ use Faker\Generator;
  */
 class Populator
 {
+<<<<<<< HEAD
     /** @var int */
     protected $batchSize;
 
@@ -28,6 +29,25 @@ class Populator
 
     /** @var array */
     protected $generateId = [];
+=======
+    /** @var int  */
+    protected $batchSize;
+
+    /** @var Generator  */
+    protected $generator;
+
+    /** @var ObjectManager|null  */
+    protected $manager;
+
+    /** @var array  */
+    protected $entities = array();
+
+    /** @var array  */
+    protected $quantities = array();
+
+    /** @var array  */
+    protected $generateId = array();
+>>>>>>> 9fa171c0de55c2e6808dd3c84ab6e998d0940244
 
     /**
      * Populator constructor.
@@ -48,7 +68,11 @@ class Populator
      * @param mixed $entity A Doctrine classname, or a \Faker\ORM\Doctrine\EntityPopulator instance
      * @param int   $number The number of entities to populate
      */
+<<<<<<< HEAD
     public function addEntity($entity, $number, $customColumnFormatters = [], $customModifiers = [], $generateId = false)
+=======
+    public function addEntity($entity, $number, $customColumnFormatters = array(), $customModifiers = array(), $generateId = false)
+>>>>>>> 9fa171c0de55c2e6808dd3c84ab6e998d0940244
     {
         if (!$entity instanceof \Faker\ORM\Doctrine\EntityPopulator) {
             if (null === $this->manager) {
@@ -87,7 +111,11 @@ class Populator
             throw new \InvalidArgumentException("No entity manager passed to Doctrine Populator.");
         }
 
+<<<<<<< HEAD
         $insertedEntities = [];
+=======
+        $insertedEntities = array();
+>>>>>>> 9fa171c0de55c2e6808dd3c84ab6e998d0940244
         foreach ($this->quantities as $class => $number) {
             $generateId = $this->generateId[$class];
             for ($i=0; $i < $number; $i++) {

@@ -18,7 +18,10 @@
     },
     "require-dev": {
         "ext-intl": "*",
+<<<<<<< HEAD
         "bamarni/composer-bin-plugin": "^1.4.1",
+=======
+>>>>>>> 9fa171c0de55c2e6808dd3c84ab6e998d0940244
         "phpunit/phpunit": "^7.5.20 || ^8.5.8 || ^9.4.2"
     },
     "autoload": {

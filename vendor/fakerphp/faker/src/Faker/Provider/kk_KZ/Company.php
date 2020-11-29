@@ -4,11 +4,16 @@ namespace Faker\Provider\kk_KZ;
 
 class Company extends \Faker\Provider\Company
 {
+<<<<<<< HEAD
     protected static $companyNameFormats = [
+=======
+    protected static $companyNameFormats = array(
+>>>>>>> 9fa171c0de55c2e6808dd3c84ab6e998d0940244
         '{{companyPrefix}} {{companyNameElement}}',
         '{{companyPrefix}} {{companyNameElement}}{{companyNameElement}}',
         '{{companyPrefix}} {{companyNameElement}}{{companyNameElement}}{{companyNameElement}}',
         '{{companyPrefix}} {{companyNameElement}}{{companyNameElement}}{{companyNameElement}}{{companyNameSuffix}}',
+<<<<<<< HEAD
     ];
 
     protected static $companyPrefixes = [
@@ -23,6 +28,22 @@ class Company extends \Faker\Provider\Company
         'Қазақ', 'Кітап', 'Цемент', 'Лифт', 'Креп', 'Авто', 'Теле', 'Транс', 'Алмаз', 'Метиз',
         'Мотор', 'Қаз', 'Тех', 'Сантех', 'Алматы', 'Астана', 'Электро',
     ];
+=======
+    );
+
+    protected static $companyPrefixes = array(
+        'АҚ', 'ЖШС', 'ЖАҚ'
+    );
+
+    protected static $companyNameSuffixes = array(
+        'Құрылыс', 'Машина', 'Бұзу', '-М', 'Лизинг', 'Страх', 'Ком', 'Телеком'
+    );
+
+    protected static $companyElements = array(
+        'Қазақ', 'Кітап', 'Цемент', 'Лифт', 'Креп', 'Авто', 'Теле', 'Транс', 'Алмаз', 'Метиз',
+        'Мотор', 'Қаз', 'Тех', 'Сантех', 'Алматы', 'Астана', 'Электро',
+    );
+>>>>>>> 9fa171c0de55c2e6808dd3c84ab6e998d0940244
 
     /**
      * @example 'ЖШС АлматыТелеком'

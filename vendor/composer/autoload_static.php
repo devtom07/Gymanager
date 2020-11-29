@@ -90,9 +90,9 @@ class ComposerStaticInitd18bb394463e63c932b02d3a9cc20a30
         '58571171fd5812e6e447dce228f52f4d' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Support/helpers.php',
         '9cdd7b9056abc3081735233ba9dd9c7f' => __DIR__ . '/..' . '/facade/flare-client-php/src/helpers.php',
         '8825ede83f2f289127722d4e842cf7e8' => __DIR__ . '/..' . '/symfony/polyfill-intl-grapheme/bootstrap.php',
-        'ed962a97bd972bc82007176b647d4e36' => __DIR__ . '/..' . '/facade/ignition/src/helpers.php',
         '6124b4c8570aa390c21fafd04a26c69f' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
         'b6b991a57620e2fb6b2f66f03fe9ddc2' => __DIR__ . '/..' . '/symfony/string/Resources/functions.php',
+        'ed962a97bd972bc82007176b647d4e36' => __DIR__ . '/..' . '/facade/ignition/src/helpers.php',
         '6b34c85f7b1ad6faa15aa12109e030f2' => __DIR__ . '/..' . '/realrashid/sweet-alert/src/functions.php',
         '377b22b161c09ed6e5152de788ca020a' => __DIR__ . '/..' . '/spatie/laravel-permission/src/helpers.php',
     );
@@ -270,8 +270,8 @@ class ComposerStaticInitd18bb394463e63c932b02d3a9cc20a30
             0 => __DIR__ . '/..' . '/yajra/laravel-datatables-buttons/src',
             1 => __DIR__ . '/..' . '/yajra/laravel-datatables-editor/src',
             2 => __DIR__ . '/..' . '/yajra/laravel-datatables-fractal/src',
-            3 => __DIR__ . '/..' . '/yajra/laravel-datatables-html/src',
-            4 => __DIR__ . '/..' . '/yajra/laravel-datatables-oracle/src',
+            3 => __DIR__ . '/..' . '/yajra/laravel-datatables-oracle/src',
+            4 => __DIR__ . '/..' . '/yajra/laravel-datatables-html/src',
         ),
         'XdgBaseDir\\' => 
         array (
@@ -608,6 +608,7 @@ class ComposerStaticInitd18bb394463e63c932b02d3a9cc20a30
 
     public static $classMap = array (
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
+        'App\\Customer' => __DIR__ . '/../..' . '/app/Customer.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
         'App\\Http\\Controllers\\AdminController' => __DIR__ . '/../..' . '/app/Http/Controllers/AdminController.php',
         'App\\Http\\Controllers\\AuthurController' => __DIR__ . '/../..' . '/app/Http/Controllers/AuthurController.php',
@@ -618,7 +619,10 @@ class ComposerStaticInitd18bb394463e63c932b02d3a9cc20a30
         'App\\Http\\Controllers\\Nhanvien\\WorkSiftStaffController' => __DIR__ . '/../..' . '/app/Http/Controllers/Nhanvien/WorkSiftStaffController.php',
         'App\\Http\\Controllers\\PermissionController' => __DIR__ . '/../..' . '/app/Http/Controllers/PermissionController.php',
         'App\\Http\\Controllers\\RoleController' => __DIR__ . '/../..' . '/app/Http/Controllers/RoleController.php',
+<<<<<<< HEAD
         'App\\Http\\Controllers\\UserController' => __DIR__ . '/../..' . '/app/Http/Controllers/Users/UserController.php',
+=======
+>>>>>>> 9fa171c0de55c2e6808dd3c84ab6e998d0940244
         'App\\Http\\Controllers\\Users\\NhomquyenController' => __DIR__ . '/../..' . '/app/Http/Controllers/Users/NhomquyenController.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
         'App\\Http\\Middleware\\Authenticate' => __DIR__ . '/../..' . '/app/Http/Middleware/Authenticate.php',
@@ -630,14 +634,23 @@ class ComposerStaticInitd18bb394463e63c932b02d3a9cc20a30
         'App\\Http\\Middleware\\TrustProxies' => __DIR__ . '/../..' . '/app/Http/Middleware/TrustProxies.php',
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
         'App\\Http\\Requests\\ValidateAddStaff' => __DIR__ . '/../..' . '/app/Http/Requests/ValidateAddStaff.php',
+        'App\\Http\\Requests\\ValidateEditStaff' => __DIR__ . '/../..' . '/app/Http/Requests/ValidateEditStaff.php',
         'App\\Http\\Requests\\ValidateFormAddStaff' => __DIR__ . '/../..' . '/app/Http/Requests/ValidateFormAddStaff.php',
         'App\\Http\\Requests\\ValidateFormEditStaff' => __DIR__ . '/../..' . '/app/Http/Requests/ValidateFormEditStaff.php',
         'App\\Http\\Requests\\ValidateFormPermission' => __DIR__ . '/../..' . '/app/Http/Requests/ValidateFormPermission.php',
+<<<<<<< HEAD
+=======
+        'App\\Http\\Requests\\ValidateRole' => __DIR__ . '/../..' . '/app/Http/Requests/ValidateRole.php',
+
+>>>>>>> 9fa171c0de55c2e6808dd3c84ab6e998d0940244
         'App\\Http\\Requests\\ValidateFormUpdateUser' => __DIR__ . '/../..' . '/app/Http/Requests/User/ValidateFormUpdateUser.php',
         'App\\Http\\Requests\\ValidateFormaddUser' => __DIR__ . '/../..' . '/app/Http/Requests/User/ValidateFormaddUser.php',
         'App\\Http\\Requests\\ValidateRole' => __DIR__ . '/../..' . '/app/Http/Requests/ValidateRole.php',
         'App\\Http\\Requests\\WorkStaffRequest' => __DIR__ . '/../..' . '/app/Http/Requests/WorkStaffRequest.php',
+        'App\\Models\\Package' => __DIR__ . '/../..' . '/app/Models/Package.php',
+        'App\\Models\\Service' => __DIR__ . '/../..' . '/app/Models/Service.php',
         'App\\Models\\Staff' => __DIR__ . '/../..' . '/app/Models/Staff.php',
+        'App\\Models\\Title' => __DIR__ . '/../..' . '/app/Models/Title.php',
         'App\\Models\\WorkSift' => __DIR__ . '/../..' . '/app/Models/WorkSift.php',
         'App\\Models\\WorkSiftStaff' => __DIR__ . '/../..' . '/app/Models/WorkSiftStaff.php',
         'App\\Permission' => __DIR__ . '/../..' . '/app/Permission.php',
@@ -748,6 +761,7 @@ class ComposerStaticInitd18bb394463e63c932b02d3a9cc20a30
         'Collective\\Html\\HtmlServiceProvider' => __DIR__ . '/..' . '/laravelcollective/html/src/HtmlServiceProvider.php',
         'Complex\\Complex' => __DIR__ . '/..' . '/markbaker/complex/classes/src/Complex.php',
         'Complex\\Exception' => __DIR__ . '/..' . '/markbaker/complex/classes/src/Exception.php',
+        'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
         'Cron\\AbstractField' => __DIR__ . '/..' . '/dragonmantank/cron-expression/src/Cron/AbstractField.php',
         'Cron\\CronExpression' => __DIR__ . '/..' . '/dragonmantank/cron-expression/src/Cron/CronExpression.php',
         'Cron\\DayOfMonthField' => __DIR__ . '/..' . '/dragonmantank/cron-expression/src/Cron/DayOfMonthField.php',
@@ -4868,7 +4882,6 @@ class ComposerStaticInitd18bb394463e63c932b02d3a9cc20a30
         'Symfony\\Component\\EventDispatcher\\Debug\\TraceableEventDispatcher' => __DIR__ . '/..' . '/symfony/event-dispatcher/Debug/TraceableEventDispatcher.php',
         'Symfony\\Component\\EventDispatcher\\Debug\\WrappedListener' => __DIR__ . '/..' . '/symfony/event-dispatcher/Debug/WrappedListener.php',
         'Symfony\\Component\\EventDispatcher\\DependencyInjection\\AddEventAliasesPass' => __DIR__ . '/..' . '/symfony/event-dispatcher/DependencyInjection/AddEventAliasesPass.php',
-        'Symfony\\Component\\EventDispatcher\\DependencyInjection\\ExtractingEventDispatcher' => __DIR__ . '/..' . '/symfony/event-dispatcher/DependencyInjection/RegisterListenersPass.php',
         'Symfony\\Component\\EventDispatcher\\DependencyInjection\\RegisterListenersPass' => __DIR__ . '/..' . '/symfony/event-dispatcher/DependencyInjection/RegisterListenersPass.php',
         'Symfony\\Component\\EventDispatcher\\EventDispatcher' => __DIR__ . '/..' . '/symfony/event-dispatcher/EventDispatcher.php',
         'Symfony\\Component\\EventDispatcher\\EventDispatcherInterface' => __DIR__ . '/..' . '/symfony/event-dispatcher/EventDispatcherInterface.php',
@@ -5230,7 +5243,6 @@ class ComposerStaticInitd18bb394463e63c932b02d3a9cc20a30
         'Symfony\\Component\\Routing\\Loader\\GlobFileLoader' => __DIR__ . '/..' . '/symfony/routing/Loader/GlobFileLoader.php',
         'Symfony\\Component\\Routing\\Loader\\ObjectLoader' => __DIR__ . '/..' . '/symfony/routing/Loader/ObjectLoader.php',
         'Symfony\\Component\\Routing\\Loader\\PhpFileLoader' => __DIR__ . '/..' . '/symfony/routing/Loader/PhpFileLoader.php',
-        'Symfony\\Component\\Routing\\Loader\\ProtectedPhpFileLoader' => __DIR__ . '/..' . '/symfony/routing/Loader/PhpFileLoader.php',
         'Symfony\\Component\\Routing\\Loader\\XmlFileLoader' => __DIR__ . '/..' . '/symfony/routing/Loader/XmlFileLoader.php',
         'Symfony\\Component\\Routing\\Loader\\YamlFileLoader' => __DIR__ . '/..' . '/symfony/routing/Loader/YamlFileLoader.php',
         'Symfony\\Component\\Routing\\Matcher\\CompiledUrlMatcher' => __DIR__ . '/..' . '/symfony/routing/Matcher/CompiledUrlMatcher.php',

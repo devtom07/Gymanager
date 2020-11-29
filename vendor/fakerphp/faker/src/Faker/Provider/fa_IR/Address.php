@@ -4,6 +4,7 @@ namespace Faker\Provider\fa_IR;
 
 class Address extends \Faker\Provider\Address
 {
+<<<<<<< HEAD
     protected static $cityPrefix = ['استان'];
     protected static $streetPrefix = ['خیابان'];
     protected static $buildingNamePrefix = ['ساختمان'];
@@ -11,11 +12,21 @@ class Address extends \Faker\Provider\Address
     protected static $postcodePrefix = ['کد پستی'];
 
     protected static $cityName = [
+=======
+    protected static $cityPrefix = array('استان');
+    protected static $streetPrefix = array('خیابان');
+    protected static $buildingNamePrefix = array('ساختمان');
+    protected static $buildingNumberPrefix = array('پلاک', 'قطعه');
+    protected static $postcodePrefix = array('کد پستی');
+
+    protected static $cityName = array(
+>>>>>>> 9fa171c0de55c2e6808dd3c84ab6e998d0940244
         "آذربایجان شرقی", "آذربایجان غربی", "اردبیل", "اصفهان", "البرز", "ایلام", "بوشهر",
         "تهران", "خراسان جنوبی", "خراسان رضوی", "خراسان شمالی", "خوزستان", "زنجان", "سمنان",
         "سیستان و بلوچستان", "فارس", "قزوین", "قم", "لرستان", "مازندران", "مرکزی", "هرمزگان",
         "همدان", "چهارمحال و بختیاری", "کردستان", "کرمان", "کرمانشاه", "کهگیلویه و بویراحمد",
         "گلستان", "گیلان", "یزد"
+<<<<<<< HEAD
     ];
 
     protected static $cityFormats = [
@@ -39,6 +50,31 @@ class Address extends \Faker\Provider\Address
 
     protected static $postcode = ['##########'];
     protected static $country = ['ایران'];
+=======
+    );
+
+    protected static $cityFormats = array(
+        '{{cityName}}',
+        '{{cityPrefix}} {{cityName}}',
+    );
+    protected static $streetNameFormats = array(
+        '{{streetPrefix}} {{lastName}}'
+    );
+    protected static $streetAddressFormats = array(
+        '{{streetName}} {{building}}'
+    );
+    protected static $addressFormats = array(
+        '{{city}} {{streetAddress}} {{postcodePrefix}} {{postcode}}',
+        '{{city}} {{streetAddress}}',
+    );
+    protected static $buildingFormat = array(
+        '{{buildingNamePrefix}} {{firstName}} {{buildingNumberPrefix}} {{buildingNumber}}',
+        '{{buildingNamePrefix}} {{firstName}}',
+    );
+
+    protected static $postcode = array('##########');
+    protected static $country = array('ایران');
+>>>>>>> 9fa171c0de55c2e6808dd3c84ab6e998d0940244
 
     /**
      * @example 'استان'

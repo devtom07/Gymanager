@@ -7,7 +7,11 @@ class PhoneNumber extends \Faker\Provider\PhoneNumber
     /**
      * @var array Swedish phone number formats
      */
+<<<<<<< HEAD
     protected static $formats = [
+=======
+    protected static $formats = array(
+>>>>>>> 9fa171c0de55c2e6808dd3c84ab6e998d0940244
         '08-### ### ##',
         '0%#-### ## ##',
         '0%########',
@@ -33,5 +37,9 @@ class PhoneNumber extends \Faker\Provider\PhoneNumber
         '+46 (0)%######',
         '+46(0)%######',
         '+46%######',
+<<<<<<< HEAD
     ];
+=======
+    );
+>>>>>>> 9fa171c0de55c2e6808dd3c84ab6e998d0940244
 }

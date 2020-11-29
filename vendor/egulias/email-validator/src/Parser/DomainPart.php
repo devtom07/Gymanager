@@ -336,7 +336,10 @@ class DomainPart extends Parser
         $invalidDomainTokens = array(
             EmailLexer::S_DQUOTE => true,
             EmailLexer::S_SQUOTE => true,
+<<<<<<< HEAD
             EmailLexer::S_BACKTICK => true,
+=======
+>>>>>>> 9fa171c0de55c2e6808dd3c84ab6e998d0940244
             EmailLexer::S_SEMICOLON => true,
             EmailLexer::S_GREATERTHAN => true,
             EmailLexer::S_LOWERTHAN => true,

@@ -19,7 +19,11 @@ class Name
     /**
      * @param string $name
      * @param int|null $size Length of field, if known
+<<<<<<< HEAD
      * @return callable|null
+=======
+     * @return callable
+>>>>>>> 9fa171c0de55c2e6808dd3c84ab6e998d0940244
      */
     public function guessFormat($name, $size = null)
     {
@@ -152,7 +156,10 @@ class Name
                     return $generator->text;
                 };
         }
+<<<<<<< HEAD
 
         return null;
+=======
+>>>>>>> 9fa171c0de55c2e6808dd3c84ab6e998d0940244
     }
 }
