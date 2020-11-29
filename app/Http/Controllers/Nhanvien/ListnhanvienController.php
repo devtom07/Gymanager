@@ -66,6 +66,7 @@ class ListnhanvienController extends Controller
         $new_image =  $name_image . rand(0,99) . '.' .$get_image->getClientOriginalExtension();
         $get_image->move('/public/admin/images',$new_image);
         $staffs = new Staff;
+        $arr['code'] = $request->code;
         $arr['name'] = $request->name;
         $arr['gender'] = $request->gender;
         $arr['avatar'] = $request->$name_image;

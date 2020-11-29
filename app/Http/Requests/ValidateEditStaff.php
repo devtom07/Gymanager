@@ -24,6 +24,7 @@ class ValidateEditStaff extends FormRequest
     public function rules()
     {
         return [
+            'code'=>'required',
             'name' => 'required',
             'avatar' => 'required',
             'phone' => 'required|min:10',
@@ -46,6 +47,7 @@ class ValidateEditStaff extends FormRequest
     public function attributes()
     {
         return [
+            'code'=>'Ma nhan vien',
             'name' => 'Tên nhân viên',
             'avatar' => 'Ảnh đại diện',
             'email' => 'email',

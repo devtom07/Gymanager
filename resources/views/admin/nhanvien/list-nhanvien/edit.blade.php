@@ -24,11 +24,15 @@
             <div class="row">
                 <div class="col-12">
                     <div class="card-box">
-                        <h4 class="header-title mb-4">Tạo mới nhân viên</h4>
+                        <h4 class="header-title mb-4">Sua nhân viên</h4>
                         <form action="" method="POST">
                             @csrf
                             <div class="row">
                                 <div class="col-xl-6">
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1">Ma  nhan vien (*)</label>
+                                        <input type="text" class="form-control" name="code" id="exampleInputEmail1" value="{{ $listStaffs->code}}">
+                                    </div>
                                     <div class="form-group">
                                         <label for="exampleInputEmail1">Họ và tên (*)</label>
                                         <input type="text" class="form-control" name="name" id="exampleInputEmail1" value="{{ $listStaffs->name}}">
