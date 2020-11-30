@@ -63,8 +63,9 @@
                                     </tr>
                                  </thead>
                                  <tbody>
+                                 @foreach($customers as $key => $customer)
+
                                     <tr>
-                                       @foreach($customers as $key => $customer)
                                        <th data-org-colspan="1" data-columns="tech-companies-1-col-0">{{$key++}}</th>
                                        <td data-org-colspan="1" data-priority="1" data-columns="tech-companies-1-col-1">{{$customer->name}}</td>
                                        <td data-org-colspan="1" data-priority="1" data-columns="tech-companies-1-col-1">{{$customer->phone}}</td>
@@ -86,8 +87,9 @@
                                                     </div>
                                                 </div>
                                        </td>
-                                       @endforeach
                                     </tr>
+                                 @endforeach
+
                                  </tbody>
                               </table>
                            </div>

@@ -21,8 +21,7 @@ class CreateCustomersTable extends Migration
             $table->integer('phone');
             $table->string('contract_code');
             $table->string('identity_card');
-            $table->unsignedBigInteger('pt_level_id');
-            $table->foreign('pt_level_id')->references('id')->on('pt_levels');
+            $table->string('level');
             $table->string('address');
             $table->string('email');
             $table->longText('note');
