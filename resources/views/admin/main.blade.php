@@ -408,6 +408,17 @@
 
                             </ul>
                         </li>
+                        <li>
+                            <a href="javascript: void(0);">
+                                <i class="mdi mdi-teach"></i>
+                                <span> PT </span>
+                            </a>
+                            <ul class="nav-second-level" aria-expanded="false">
+                                <li><a href="">Danh sách khách hàng</a></li>
+                                <li><a href="#">Dịch vụ</a></li>
+
+                            </ul>
+                        </li>
                     </ul>
 
                 </div>
