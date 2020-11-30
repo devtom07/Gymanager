@@ -414,8 +414,8 @@
                                 <span> PT </span>
                             </a>
                             <ul class="nav-second-level" aria-expanded="false">
-                                <li><a href="">Danh sách khách hàng</a></li>
-                                <li><a href="#">Dịch vụ</a></li>
+                                <li><a href="">Danh sách PT</a></li>
+                                <li><a href="#">Ca tập</a></li>
 
                             </ul>
                         </li>

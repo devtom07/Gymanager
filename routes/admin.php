@@ -143,19 +143,19 @@ Route::get('/logout','AuthurController@logout')->name('logout');
              ->name('customer.update');
          Route::get('xoakhachhang/{id}','CustomerController@destroy')
              ->name('customer.delete');
-       //Dịch vụ
-       Route::get('/dich-vu','Dichvu\ServiceController@index')
-       ->name('service');
-       Route::get('/them-dich-vu','Dichvu\ServiceController@create')
-       ->name('service.add');
-       Route::post('/them-dich-vu','Dichvu\ServiceController@store')
-       ->name('service.store');
-       Route::get('/edit_dichvu/{id}','Dichvu\ServiceController@edit')
-       ->name('service.edit');
-   Route::post('/edit_dichvu/{id}','Dichvu\ServiceController@update')
-       ->name('service.update');
-   Route::get('/delete_dichvu/{id}','Dichvu\ServiceController@destroy')
-       ->name('service.delete');
+        //Dịch vụ
+         Route::get('/dich-vu','Dichvu\ServiceController@index')
+         ->name('service');
+         Route::get('/them-dich-vu','Dichvu\ServiceController@create')
+          ->name('service.add');
+         Route::post('/them-dich-vu','Dichvu\ServiceController@store')
+          ->name('service.store');
+         Route::get('/edit_dichvu/{id}','Dichvu\ServiceController@edit')
+          ->name('service.edit');
+         Route::post('/edit_dichvu/{id}','Dichvu\ServiceController@update')
+             ->name('service.update');
+          Route::get('/delete_dichvu/{id}','Dichvu\ServiceController@destroy')
+          ->name('service.delete');
 
 
 
