@@ -1,6 +1,3 @@
-
-
-
 <?php
 use Illuminate\Support\Facades\Route;
 
@@ -77,9 +74,16 @@ Route::get('/logout','AuthurController@logout')->name('logout');
         Route::get('xoanguoidung/{id}','UserController@destroy')
             ->name('user.delete')
             ->middleware(['permission:Xóa tài khoản']);
-        Route::get('profile','UserController@profile')
+        Route::get('profile/{id}','UserController@profile')
             ->name('user.profile');
-        //=========================Nhân viên==================//
+         Route::post('ImageProfile/{id}','UserController@ImageProfile')
+             ->name('user.ImageProfile');
+         Route::post('profile/update/{id}','UserController@updateProfile')
+             ->name('user.updateProfile');
+         Route::post('profile/update/password/{id}','UserController@updatePassword')
+             ->name('user.updatePassword');
+
+         //=========================Nhân viên==================//
         //nhân viên
         Route::get('/nhan-vien','Nhanvien\ListnhanvienController@index')
             ->name('listnhanvien')
@@ -139,7 +143,21 @@ Route::get('/logout','AuthurController@logout')->name('logout');
              ->name('customer.update');
          Route::get('xoakhachhang/{id}','CustomerController@destroy')
              ->name('customer.delete');
-       //pt-level
+         Route::get('GetCustomer/{id}','CustomerController@show')
+             ->name('customer.show');
+        //Dịch vụ
+         Route::get('/dich-vu','Dichvu\ServiceController@index')
+         ->name('service');
+         Route::get('/them-dich-vu','Dichvu\ServiceController@create')
+          ->name('service.add');
+         Route::post('/them-dich-vu','Dichvu\ServiceController@store')
+          ->name('service.store');
+         Route::get('/edit_dichvu/{id}','Dichvu\ServiceController@edit')
+          ->name('service.edit');
+         Route::post('/edit_dichvu/{id}','Dichvu\ServiceController@update')
+             ->name('service.update');
+          Route::get('/delete_dichvu/{id}','Dichvu\ServiceController@destroy')
+          ->name('service.delete');
 
 
 
