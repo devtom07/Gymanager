@@ -408,6 +408,17 @@
 
                             </ul>
                         </li>
+                        <li>
+                            <a href="javascript: void(0);">
+                                <i class="mdi mdi-teach"></i>
+                                <span> PT </span>
+                            </a>
+                            <ul class="nav-second-level" aria-expanded="false">
+                                <li><a href="">Danh sách PT</a></li>
+                                <li><a href="#">Ca tập</a></li>
+
+                            </ul>
+                        </li>
                     </ul>
 
                 </div>
@@ -514,6 +525,8 @@
     <script src="{{url('admin')}}/js/app.min.js"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="{{asset('admin/js/user/user.js')}}"></script>
+    <script src="{{asset('admin/js/customer/showCustomer.js')}}"></script>
+
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js" type="text/javascript"

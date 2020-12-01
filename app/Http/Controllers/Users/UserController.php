@@ -92,7 +92,7 @@ class UserController extends Controller
         foreach ($user->role as $roles){
             $role_id[] = $roles->id;
         }
-        return view('admin.users.account.edit',compact('user','role_user','roles','role_id','listRoleUser','staff'));
+        return view('admin.users.account.edit',compact('user','role_user','role_id','listRoleUser','staff'));
 
     }
 
