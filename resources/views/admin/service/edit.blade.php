@@ -43,6 +43,9 @@
                                             <option value="4">5</option>
                                         </select>
                                     </div>
+                                    @error('id_package')
+                                    <p style="color:red">{{$message}}</p>
+                                    @enderror
                                     <div class="form-group">
                                         <label for="">Tên khách hàng</label>
                                         <select class="form-control" id="id_customer" name="id_customer">
@@ -53,6 +56,9 @@
                                             <option value="4">5</option>
                                         </select>
                                     </div>
+                                    @error('id_customer')
+                                    <p style="color:red">{{$message}}</p>
+                                    @enderror
                                     <div class="form-group">
                                         <label for="">Tên huấn luyện viên</label>
                                         <select class="form-control" id="id_coach" name="id_coach">
@@ -64,22 +70,33 @@
                                         </select>
 
                                     </div>
+                                    @error('id_coach')
+                                    <p style="color:red">{{$message}}</p>
+                                    @enderror
                                     <div class="form-group">
                                         <label for="">Ngày bắt đầu</label>
                                         <input type="date" class="form-control" id="start_date" name="start_date"
                                             placeholder="Ngày bắt đầu" value="{{$service->start_date}}">
                                     </div>
+                                    @error('start_date')
+                                    <p style="color:red">{{$message}}</p>
+                                    @enderror
                                     <div class="form-group">
                                         <label for="">Ngày kết thúc</label>
                                         <input type="date" class="form-control" id="end_date" name="end_date"
                                             placeholder="Ngày bắt đầu" value="{{$service->end_date}}">
                                     </div>
+                                    @error('end_date')
+                                    <p style="color:red">{{$message}}</p>
+                                    @enderror
                                     <div class="form-group">
                                         <label for="">Ngày kích hoạt</label>
                                         <input type="date" class="form-control" id="active_date" name="active_date"
                                             placeholder="Ngày kích hoạt" value="{{$service->active_date}}">
                                     </div>
-
+                                    @error('active_date')
+                                    <p style="color:red">{{$message}}</p>
+                                    @enderror
                             </div><!-- end col -->
 
                             <div class="col-xl-6">
@@ -89,12 +106,18 @@
                                         placeholder="Tổng tiền khách phải thanh toán" name='total_package'
                                         value="{{$service->total_package}}">
                                 </div>
+                                @error('total_package')
+                                <p style="color:red">{{$message}}</p>
+                                @enderror
                                 <div class="form-group">
                                     <label for="">Số tiền khách trả</label>
                                     <input type="member" id="customers_pay" class="form-control"
                                         placeholder="Số tiền khách đã thanh toán" name='customers_pay'
                                         value="{{$service->customers_pay}}">
                                 </div>
+                                @error('customers_pay')
+                                <p style="color:red">{{$message}}</p>
+                                @enderror
                                 <div class="form-group">
                                     <label for="">Phương thức thanh toán</label>
                                     <select class="form-control" id="pay_method" name="pay_method">
@@ -103,6 +126,9 @@
                                         <option value="1">Chuyển khoản</option>
                                     </select>
                                 </div>
+                                @error('pay_method')
+                                <p style="color:red">{{$message}}</p>
+                                @enderror
                                 <button type="submit" class="btn btn-primary">Submit</button>
                             </div>
 

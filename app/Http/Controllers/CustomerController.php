@@ -17,7 +17,7 @@ class CustomerController extends Controller
     }
     public function add()
     {
-        return view('admin.customer.add',compact('pt_level'));
+        return view('admin.customer.add');
     }
     public function edit(){
         $pt_level = DB::table('pt_levels');
