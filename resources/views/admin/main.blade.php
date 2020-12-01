@@ -407,6 +407,7 @@
                                 <li><a href="{{route('customer')}}">Danh sách khách hàng</a></li>
                                 <li><a href="{{route('service')}}">Dịch vụ</a></li>
                                 <li><a href="{{route('hymnal.index')}}">Ca tập</a></li>
+                                <li><a href="{{ route('package.index') }}">Gói cước</a></li>
 
 
                             </ul>

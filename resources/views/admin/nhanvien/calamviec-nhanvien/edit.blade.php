@@ -1,6 +1,7 @@
 @extends('admin.main')
 @section('title', 'Tạo mới ca làm việc')
 @section('content')
+<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
 <div class="content-page">
     <div class="content">
         <!-- Start Content-->
@@ -37,7 +38,7 @@
                                         @enderror
                                     <div class="form-group">
                                         <label for="exampleInputEmail1">Ca làm việc (*)</label>
-                                        <select class="form-control" id="exampleSelect1" name="work_sift_id">
+                                        <select class="form-control" id="calamviec" name="work_sift_id[]" multiple>
                                             @foreach($data as $work_sifts)
                                             <option 
                                             <?php if($work_sifts->id == $work_staff->work_sift_id):?>
@@ -66,7 +67,12 @@
                                     @enderror
                                     <div class="form-group">
                                         <label for="exampleInputPassword1">Chu kỳ (*)</label>
-                                        <input class="form-control" type="text" name="cycle" value="{{ $work_staff->cycle }}" id="example-time-input">
+                                        {{-- <input type="text" name="cycle"> --}}
+                                        <select class="form-control" name="cycle" id="">
+                                            <option value="Tuần">Tuần</option>
+                                            <option value="Tháng">Tháng</option>
+                                            <option value="Năm">Năm</option>
+                                        </select>
                                     </div>
                                     @error('cycle')
                                         <p style="color:red">{{$message}}</p>

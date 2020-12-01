@@ -15,7 +15,7 @@ class CreateWorkSiftStaffsTable extends Migration
     {
         Schema::create('work_sift_staffs', function (Blueprint $table) {
             $table->id(); //khóa chính
-            $table->integer('work_sift_id');
+            $table->string('work_sift_id');
             // $table->foreign('work_sift_id')->references('id')->on('work_sifts');
 
             $table->integer('staff_id');
