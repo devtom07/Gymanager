@@ -1,173 +1,125 @@
 @extends('admin.main')
-@section('title', 'Đăng ký Khách hàng')
+@section('title', 'Tạo mới tài khoản')
 @section('content')
-<div class="content-page">
-                <div class="content">
-                    
-                    <!-- Start Content-->
-                    <div class="container-fluid">
-                        
-                        <!-- start page title -->
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="page-title-box">
-                                    <div class="page-title-right">
-                                        <ol class="breadcrumb m-0">
-                                            <li class="breadcrumb-item"><a href="javascript: void(0);">Gymanager</a></li>
-                                            <li class="breadcrumb-item"><a href="javascript: void(0);">Forms</a></li>
-                                            <li class="breadcrumb-item active">Đăng ký khách hàng</li>
-                                        </ol>
-                                    </div>
-                                    <h4 class="page-title">Đăng ký khách hàng</h4>
-                                </div>
+    <div class="content-page">
+        <div class="content">
+            <!-- Start Content-->
+            <div class="container-fluid">
+                <!-- start page title -->
+                <div class="row">
+                    <div class="col-12">
+                        <div class="page-title-box">
+                            <div class="page-title-right">
+                                <ol class="breadcrumb m-0">
+                                    <li class="breadcrumb-item"><a href="javascript: void(0);">Gymanager</a></li>
+                                    <li class="breadcrumb-item"><a href="javascript: void(0);">Forms</a></li>
+                                    <li class="breadcrumb-item active">Tạo mới tài khoản</li>
+                                </ol>
                             </div>
-                        </div>     
-                        <!-- end page title --> 
-
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="card-box">
-
-                                    <h4 class="header-title mb-4">Đăng kí khách hàng</h4>
-
-                                    <div class="row">
-                                        <div class="col-xl-6">
-                                            <form>
-                                                <div class="form-group">
-                                                    <label for="exampleInputEmail1">Email address</label>
-                                                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
-                                                    <small class="text-muted">We'll never share your email with anyone
-                                                        else.
-                                                    </small>
-                                                </div>
-                                                <div class="form-group">
-                                                    <label for="exampleInputPassword1">Password</label>
-                                                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-                                                </div>
-                                                <div class="form-group">
-                                                    <label for="exampleSelect1">Example select</label>
-                                                    <select class="form-control" id="exampleSelect1">
-                                                        <option>1</option>
-                                                        <option>2</option>
-                                                        <option>3</option>
-                                                        <option>4</option>
-                                                        <option>5</option>
-                                                    </select>
-                                                </div>
-                                                <div class="form-group">
-                                                    <label for="exampleSelect2">Example multiple select</label>
-                                                    <select multiple="" class="form-control" id="exampleSelect2">
-                                                        <option>1</option>
-                                                        <option>2</option>
-                                                        <option>3</option>
-                                                        <option>4</option>
-                                                        <option>5</option>
-                                                    </select>
-                                                </div>
-                                                <div class="form-group">
-                                                    <label for="exampleTextarea">Example textarea</label>
-                                                    <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
-                                                </div>
-
-                                                <div class="form-group">
-                                                    <label>Example Readonly</label>
-                                                    <input class="form-control" type="text" placeholder="Readonly input here…" readonly="">
-                                                </div>
-                                                <button type="submit" class="btn btn-primary">Submit</button>
-                                            </form>
-                                        </div><!-- end col -->
-
-                                        <div class="col-xl-6">
-                                            <form>
-                                                <fieldset disabled="">
-                                                    <div class="form-group">
-                                                        <label for="disabledTextInput">Disabled input</label>
-                                                        <input type="text" id="disabledTextInput" class="form-control" placeholder="Disabled input">
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label for="disabledSelect">Disabled select menu</label>
-                                                        <select id="disabledSelect" class="form-control">
-                                                            <option>Disabled select</option>
-                                                        </select>
-                                                    </div>
-                                                </fieldset>
-
-                                                <div>
-                                                    <label>Example Control sizing</label>
-                                                    <input class="form-control form-control-lg mb-3" type="text" placeholder=".form-control-lg">
-                                                    <input class="form-control mb-3" type="text" placeholder="Default input">
-                                                    <input class="form-control form-control-sm mb-3" type="text" placeholder=".form-control-sm">
-
-                                                    <div class="row">
-                                                        <div class="col-2">
-                                                            <input type="text" class="form-control mb-3" placeholder=".col-2">
-                                                        </div>
-                                                        <div class="col-3">
-                                                            <input type="text" class="form-control mb-3" placeholder=".col-3">
-                                                        </div>
-                                                        <div class="col-4">
-                                                            <input type="text" class="form-control mb-3" placeholder=".col-4">
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <div>
-                                                    <label>Select menu</label>
-
-                                                    <select class="custom-select mb-3">
-                                                        <option selected="">Open this select menu</option>
-                                                        <option value="1">One</option>
-                                                        <option value="2">Two</option>
-                                                        <option value="3">Three</option>
-                                                    </select>
-
-                                                    <label> <i class="fa fa-star"></i> Checkboxes and Radios</label>
-
-                                                    <div class="mt-3">
-                                                        <div class="custom-control custom-checkbox">
-                                                            <input type="checkbox" class="custom-control-input" id="customCheck1">
-                                                            <label class="custom-control-label" for="customCheck1">Check this custom checkbox</label>
-                                                        </div>
-                                                        <div class="custom-control custom-checkbox">
-                                                            <input type="checkbox" class="custom-control-input" id="customCheck2">
-                                                            <label class="custom-control-label" for="customCheck2">Check this custom checkbox</label>
-                                                        </div>
-                                                    </div>
-                                                    <div class="mt-3">
-                                                        <div class="custom-control custom-radio">
-                                                            <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
-                                                            <label class="custom-control-label" for="customRadio1">Toggle this custom radio</label>
-                                                        </div>
-                                                        <div class="custom-control custom-radio">
-                                                            <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
-                                                            <label class="custom-control-label" for="customRadio2">Or toggle this other custom radio</label>
-                                                        </div>
-                                                    </div>
-
-                                                </div>
-                                            </form>
-                                        </div><!-- end col -->
-
-                                    </div><!-- end row -->
-                                </div>
-                            </div><!-- end col -->
+                            <h4 class="page-title">Đăng ký khách hàng</h4>
                         </div>
-                        <!-- end row -->
+                    </div>
+                </div>
+                <!-- end page title -->
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card-box">
+                            <form method="post" action="{{route('customer.store')}}" enctype="multipart/form-data">
+                                @csrf
+                                <div class="row">
+                                    <div class="col-xl-6">
+                                        <div class="form-group">
+                                            <label for="exampleInputEmail1">Tên khách hàng (*)</label>
+                                            <input value="{{old('name')}}" name="name" type="text" class="form-control" id="exampleInputEmail1" placeholder="">
+                                            @if($errors->first('name'))
+                                                <p class="text-danger">{{ $errors->first('name') }}</p>
+                                            @endif
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleInputEmail1">Số điện thoại</label>
+                                            <input  value="{{old('phone')}}" name="phone" class="form-control" type="number"  id="example-date-input">
+                                            @if($errors->first('phone'))
+                                                <p class="text-danger">{{ $errors->first('phone') }}</p>
+                                            @endif
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleInputPassword1">Mã hóa đơn</label>
+                                            <input value="{{old('contract_code')}}" name="contract_code" class="form-control" type="text" id="example-time-input">
+                                            @if($errors->first('contract_code'))
+                                                <p class="text-danger">{{ $errors->first('contract_code') }}</p>
+                                            @endif
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleInputPassword1">Email (*)</label>
+                                            <input value="{{old('email')}}" name="email" class="form-control" type="text"  id="example-time-input">
+                                            @if($errors->first('email'))
+                                                <p class="text-danger">{{ $errors->first('email') }}</p>
+                                            @endif
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleInputPassword1">Giới tính</label>
+                                            <div class="mt-3">
+                                                <div class="custom-control custom-radio">
+                                                    <input value="nam" type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
+                                                    <label class="custom-control-label" for="customRadio1">Nam</label>
+                                                </div>
+                                                <div class="custom-control custom-radio">
+                                                    <input value="nữ" type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
+                                                    <label  class="custom-control-label" for="customRadio2">Nữ</label>
+                                                </div>
+                                            </div>
+                                            @if($errors->first('customRadio'))
+                                                <p class="text-danger">{{ $errors->first('customRadio') }}</p>
+                                            @endif
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6">
+                                        <div class="form-group">
+                                            <label for="exampleInputPassword1">Số CMND/HC (*)</label>
+                                            <input value="{{old('identity_card')}}" name="identity_card"  class="form-control" type="number"  id="example-time-input">
+                                            @if($errors->first('identity_card'))
+                                                <p class="text-danger">{{ $errors->first('identity_card') }}</p>
+                                            @endif
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleInputPassword1">Trình độ</label>
+                                            <input value="{{old('level')}}" name="level"  class="form-control" type="text"  id="example-time-input">
+                                            @if($errors->first('level'))
+                                                <p class="text-danger">{{ $errors->first('level') }}</p>
+                                            @endif
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleInputPassword1">Địa chỉ</label>
+                                            <textarea  type="text" class="form-control" name="address" placeholder="">{{old('address')}}</textarea>
+                                            @if ($errors->has('address'))
+                                                <p style="color: red">{{ $errors->first('address') }}</p>
+                                            @endif
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleInputPassword1">Ghi chú</label>
+                                            <textarea id="editor1"  type="text" class="form-control" name="note" placeholder="">{{old('note')}}</textarea>
+                                            @if ($errors->has('note'))
+                                                <p style="color: red">{{ $errors->first('note') }}</p>
+                                            @endif
+                                        </div>
 
-                    
-
-                    
-                        <!-- end row -->
-                        
-                    </div> <!-- end container-fluid -->
-
-                </div> <!-- end content -->
-
-                
-
-                <!-- Footer Start -->
-               
-                <!-- end Footer -->
-
+                                    </div>
+                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                </div>
+                            </form>
+                            <!-- end col -->
+                            <!-- end row -->
+                        </div>
+                    </div>
+                    <!-- end col -->
+                </div>
+                <!-- end row -->
+                <!-- end row -->
             </div>
+            <!-- end container-fluid -->
+        </div>
+        <!-- end content -->
+        <!-- Footer Start -->
+        <!-- end Footer -->
+    </div>
 @endsection()

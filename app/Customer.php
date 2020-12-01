@@ -2,12 +2,21 @@
 
 namespace App;
 
+use App\Models\Staff;
 use Illuminate\Database\Eloquent\Model;
 
 class Customer extends Model
 {
     protected $table = 'customers';
     protected $fillable = [
-        'code','name','sex','phone','contract_code','identity_card','pt_level_id','address','email','note'
+        'code','name','sex','phone','contract_code','identity_card','level','address','email','note'
         ];
+
+    public function services(){
+      return $this->hasMany(Services::class,'id_customer','id');
+    }
+    public function pt(){
+        return $this->belongsToMany(Staff::class,'services','id_customer','id_coach');
+    }
 }
+

@@ -63,31 +63,38 @@
                                     </tr>
                                  </thead>
                                  <tbody>
+                                 @foreach($customers as $key => $customer)
+
                                     <tr>
-                                       @foreach($customers as $key => $customer)
-                                       <th data-org-colspan="1" data-columns="tech-companies-1-col-0">{{$key++}}</th>
+                                       <th data-org-colspan="1" data-columns="tech-companies-1-col-0">{{$key+1}}</th>
                                        <td data-org-colspan="1" data-priority="1" data-columns="tech-companies-1-col-1">{{$customer->name}}</td>
                                        <td data-org-colspan="1" data-priority="1" data-columns="tech-companies-1-col-1">{{$customer->phone}}</td>
+                                       @foreach($customer->services as $service)
                                        <td data-org-colspan="1" data-priority="3" data-columns="tech-companies-1-col-2">Giảm cân</td>
-                                       <td data-org-colspan="1" data-priority="1" data-columns="tech-companies-1-col-3">600.000 VND</td>
-                                       <td data-org-colspan="1" data-priority="3" data-columns="tech-companies-1-col-4">5</td>
-                                       <td data-org-colspan="1" data-priority="3" data-columns="tech-companies-1-col-5">12/10/2020</td>
-                                       <td data-org-colspan="1" data-priority="6" data-columns="tech-companies-1-col-6">30/10/2020</td>
-                                       <td data-org-colspan="1" data-priority="6" data-columns="tech-companies-1-col-7">Trần Văn Long</td>
+                                       <td data-org-colspan="1" data-priority="1" data-columns="tech-companies-1-col-3">{{$service->total_package}}</td>
+                                       <td id="days" data-org-colspan="1" data-priority="3" data-columns="tech-companies-1-col-4"></td>
+                                       <td data-org-colspan="1" data-priority="3" data-columns="tech-companies-1-col-5">{{$service->start_date}}</td>
+                                       <td id="endDate" data-org-colspan="1" data-priority="6" data-columns="tech-companies-1-col-6">{{$service->end_date}}</td>
+                                       @endforeach
+                                       @foreach($customer->pt as $pt)
+                                       <td data-org-colspan="1" data-priority="6" data-columns="tech-companies-1-col-7">{{$pt->name}}</td>
+                                       @endforeach
                                        <td data-org-colspan="1" data-priority="6" data-columns="tech-companies-1-col-8">
                                        <div class="btn-group mt-1 mr-1">
                                                     <button class="btn btn-success btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                        <i class="mdi mdi-chevron-down"></i>
                                                     </button>
                                                     <div class="dropdown-menu" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 29px, 0px);">
-                                                        <a class="dropdown-item" href="#">Sửa</a>
-                                                        <a class="dropdown-item" href="#">Xoá</a>
+                                                       <a class="dropdown-item  btn-show"  id="show_customer" data-id ="{{$customer->id}}" data-toggle="modal" data-target="#exampleModalCenter"> Chi tiết</a>
+                                                       <a class="dropdown-item" href="{{route('customer.edit',$customer->id)}}">Sửa</a>
+                                                        <a class="dropdown-item" href="{{route('customer.delete',$customer->id)}}">Xoá</a>
 
                                                     </div>
                                                 </div>
                                        </td>
-                                       @endforeach
                                     </tr>
+                                 @endforeach
+
                                  </tbody>
                               </table>
                            </div>
@@ -111,4 +118,6 @@
 
    <!-- end Footer -->
 </div>
+@include('admin.customer.show_detail')
+
 @endsection()
