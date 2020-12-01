@@ -32,7 +32,7 @@
                          @csrf
                                      <div class="form-group">
                                         <label>Tên lịch làm việc</label>
-                                        <input class="form-control" type="text" name="work_schedule_name" value="" id="example-time-input">
+                                        <input class="form-control" type="text" name="work_schedule_name" value="{{  old('work_schedule_name')}}" id="example-time-input">
                                     </div>
                                        @error('work_schedule_name')
                                             <p style="color:red">{{$message}}</p>
@@ -57,21 +57,26 @@
 
                                     <div class="form-group">
                                         <label for="exampleInputPassword1">Ngày bắt đầu (*)</label>
-                                        <input class="form-control" type="date" name="date_start" value="Y.m.d" id="example-time-input">
+                                        <input class="form-control" type="date" name="date_start" value="{{ old('date_start') }}" id="example-time-input">
                                     </div>
                                     @error('date_start')
                                         <p style="color:red">{{$message}}</p>
                                     @enderror
                                     <div class="form-group">
                                         <label for="exampleInputPassword1">Chu kỳ (*)</label>
-                                        <input class="form-control" type="text" name="cycle" value="" id="example-time-input">
+                                        {{-- <input type="text" name="cycle"> --}}
+                                        <select class="form-control" name="cycle" id="">
+                                            <option value="Tuần">Tuần</option>
+                                            <option value="Tháng">Tháng</option>
+                                            <option value="Năm">Năm</option>
+                                        </select>
                                     </div>
                                     @error('cycle')
                                         <p style="color:red">{{$message}}</p>
                                     @enderror
                                     <div class="form-group">
                                         <label>Ngày kết thúc</label>
-                                        <input class="form-control" type="date" name="date_end" value="Y.m.d" id="example-time-input">
+                                        <input class="form-control" type="date" name="date_end" value="{{ old('date_end') }}" id="example-time-input">
                                     </div>
                                     @error('date_end')
                                         <p style="color:red">{{$message}}</p>

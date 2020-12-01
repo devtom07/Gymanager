@@ -388,6 +388,7 @@
                             <ul class="nav-second-level" aria-expanded="false">
                                 <li><a href="{{route('customer')}}">Danh sách khách hàng</a></li>
                                 <li><a href="#">Dịch vụ</a></li>
+                                <li><a href="{{ route('package.index') }}">Gói cước</a></li>
 
                             </ul>
                         </li>
@@ -512,6 +513,9 @@
     <script>
     $(document).ready(function() {
         $('#calamviec').select2();
+    });
+    $(document).ready(function() {
+        $('#free_service').select2();
     });
 </script>
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
