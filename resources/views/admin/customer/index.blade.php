@@ -85,7 +85,8 @@
                                                        <i class="mdi mdi-chevron-down"></i>
                                                     </button>
                                                     <div class="dropdown-menu" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 29px, 0px);">
-                                                        <a class="dropdown-item" href="{{route('customer.edit',$customer->id)}}">Sửa</a>
+                                                       <a class="dropdown-item  btn-show"  id="show_customer" data-id ="{{$customer->id}}" data-toggle="modal" data-target="#exampleModalCenter"> Chi tiết</a>
+                                                       <a class="dropdown-item" href="{{route('customer.edit',$customer->id)}}">Sửa</a>
                                                         <a class="dropdown-item" href="{{route('customer.delete',$customer->id)}}">Xoá</a>
 
                                                     </div>
@@ -117,16 +118,6 @@
 
    <!-- end Footer -->
 </div>
-   <script>
-      $(document).ready(function () {
-         var endDate = $('#endDate').val();
-         var nowDate = new Date();
-         console.log(endDate)
-         var now = new Date(nowDate);
-         var end = new Date(endDate);
-         var diffDate = (end - now) / (1000 * 60 * 60 * 24);
-         var days = Math.round(diffDate);
-         $('#days').html(days)
-      });
-   </script>
+@include('admin.customer.show_detail')
+
 @endsection()

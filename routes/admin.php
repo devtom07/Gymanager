@@ -143,6 +143,8 @@ Route::get('/logout','AuthurController@logout')->name('logout');
              ->name('customer.update');
          Route::get('xoakhachhang/{id}','CustomerController@destroy')
              ->name('customer.delete');
+         Route::get('GetCustomer/{id}','CustomerController@show')
+             ->name('customer.show');
         //Dịch vụ
          Route::get('/dich-vu','Dichvu\ServiceController@index')
          ->name('service');

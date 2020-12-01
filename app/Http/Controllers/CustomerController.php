@@ -13,8 +13,9 @@ class CustomerController extends Controller
 {
     public function index()
     {
+        $date = new \DateTime();
         $customers = Customer::all();
-        return view('admin.customer.index',compact('customers'));
+        return view('admin.customer.index',compact('customers','date'));
     }
     public function add()
     {
@@ -64,5 +65,10 @@ class CustomerController extends Controller
         Customer::find($id)->delete();
         Alert()->success('thành công','thêm khách hàng thành công');
         return redirect()->route('customer.index');
+    }
+    public function show($id){
+        $customer = Customer::where('id',$id)->get();
+        return json_encode(array('data'=>$customer));
+
     }
 }
