@@ -19,7 +19,7 @@ class CustomerController extends Controller
     }
     public function add()
     {
-        return view('admin.customer.add',compact('pt_level'));
+        return view('admin.customer.add');
     }
     public function edit($id){
         $customer = Customer::where('id',$id)->get();
@@ -44,6 +44,7 @@ class CustomerController extends Controller
         Alert()->success('thành công','thêm khách hàng thành công');
         return redirect()->route('customer.index');
     }
+
     public function update(ValidateFormAddCustomer $request,$id){
         DB::beginTransaction();
         Customer::where('id',$id)->update([

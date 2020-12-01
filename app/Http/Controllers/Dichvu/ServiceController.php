@@ -5,6 +5,9 @@ namespace App\Http\Controllers\Dichvu;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Service;
+// use App\Models\Customer;
+use App\Http\Requests\ValidateFormAddService;
+use App\Http\Requests\ValidateFormEditService;
 
 class ServiceController extends Controller
 {
@@ -15,6 +18,7 @@ class ServiceController extends Controller
      */
     public function index()
     {
+        // $customers ['data'] = Customer::all();
         $listService = Service::all();
         return view('admin.service.index', compact('listService'));
     }
@@ -35,7 +39,7 @@ class ServiceController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(ValidateFormAddService $request)
     {
         $service = new Service;
         $service->id_package = $request->id_package;
@@ -75,6 +79,7 @@ class ServiceController extends Controller
      */
     public function edit($id)
     {
+        
         $data['service'] = Service::find($id);
         return view('admin.service.edit', $data);
     }
@@ -86,7 +91,7 @@ class ServiceController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(ValidateFormEditService $request, $id)
     {
         $service = new Service;
         $arr['id_package'] = $request->id_package;
