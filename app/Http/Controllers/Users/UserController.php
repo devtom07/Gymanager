@@ -1,7 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Users;
 
+use App\Http\Controllers\Controller;
 use App\Http\Requests\ValidateFormaddUser;
 use App\Http\Requests\ValidateFormUpdateUser;
 use App\Models\Staff;

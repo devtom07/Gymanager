@@ -53,7 +53,7 @@ Route::get('/logout','AuthurController@logout')->name('logout');
          Route::get('/xoachucnang/{id}','PermissionController@destroy')
              ->name('permission.destroy');
         //user
-        Route::get('xemtaikhoan','UserController@index')
+        Route::get('xemtaikhoan','Users\UserController@index')
             ->name('user.index')
             ->middleware(['permission:xem tài khoản']);
         Route::get('themtaikhoan','UserController@create')
@@ -140,9 +140,12 @@ Route::get('/logout','AuthurController@logout')->name('logout');
          Route::get('xoakhachhang/{id}','CustomerController@destroy')
              ->name('customer.delete');
        //pt-level
-
-
-
+        Route::get('goi-cuoc','KhachHang\PackageController@index')->name('package.index');
+        Route::get('them-goi-cuoc','KhachHang\PackageController@create')->name('package.create');
+        Route::post('them-goi-cuoc','KhachHang\PackageController@add')->name('package.add');
+        Route::get('sua-goi-cuoc/{id}','KhachHang\PackageController@edit')->name('package.edit');
+        Route::post('sua-goi-cuoc/{id}','KhachHang\PackageController@update')->name('package.edit');
+        Route::get('xoa-goi-cuoc/{id}','KhachHang\PackageController@delete')->name('package.delete');
 
          });
 });

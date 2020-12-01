@@ -27,7 +27,7 @@ class WorkStaffRequest extends FormRequest
             //
             'date_start'=>'required|date',
             'date_end'=>'required|date|after:date_start',
-            'cycle'=>'required|min:4|max:10',
+            'cycle'=>'required|max:10',
             'work_schedule_name'=>'required|max:30'
         ];
     }
