@@ -417,7 +417,25 @@
                                 <span> PT </span>
                             </a>
                             <ul class="nav-second-level" aria-expanded="false">
-                                <li><a href="">Danh sách PT</a></li>
+                                <li><a href="{{route('pt.index')}}">Lịch Tập</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="javascript: void(0);">
+                                <i class="mdi mdi-reflect-vertical"></i>
+                                <span> Doanh thu </span>
+                            </a>
+                            <ul class="nav-second-level" aria-expanded="false">
+                                <li><a href="">Doanh thu</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="javascript: void(0);">
+                                <i class="mdi mdi-progress-upload"></i>
+                                <span> Quản lý các sản phẩm </span>
+                            </a>
+                            <ul class="nav-second-level" aria-expanded="false">
+                                <li><a href="">Sản phẩm</a></li>
                             </ul>
                         </li>
                     </ul>

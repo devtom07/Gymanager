@@ -44,7 +44,7 @@ class StaffSeeder extends Seeder
             'status' => 'Đi làm' ,
             'contract' => 'Hợp đồng lao động',
             'wage' => '1000000',
-            'title' => 'PT',
+            'title' => 'pt',
 
         ]);
         DB::table('staffs')->insert([
