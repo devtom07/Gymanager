@@ -63,11 +63,12 @@
                                         <label for="">Tên huấn luyện viên</label>
                                         <select class="form-control" id="id_coach" name="id_coach"
                                             value="{{old('id_coach')}}">
+
                                             <option value=""></option>"
-                                            <option value=" 1">2</option>
-                                            <option value="2">3</option>
-                                            <option value="3">4</option>
-                                            <option value="4">5</option>
+                                            @foreach($staff as $Pt)
+                                            <option value="{{$Pt->id}}">{{$Pt->name}}</option>
+
+                                            @endforeach
                                         </select>
 
                                     </div>
@@ -124,8 +125,8 @@
                                     <select class="form-control" id="pay_method" name="pay_method"
                                         value="{{old('pay_method')}}">
                                         <option value=""></option>
-                                        <option value=" 0">Tiền Mặt</option>
-                                        <option value="1">Chuyển khoản</option>
+                                        <option value="Tiền mặt">Tiền Mặt</option>
+                                        <option value="Chuyển khoản">Chuyển khoản</option>
                                     </select>
                                 </div>
                                 @error('pay_method')
