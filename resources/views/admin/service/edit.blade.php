@@ -50,10 +50,9 @@
                                         <label for="">Tên khách hàng</label>
                                         <select class="form-control" id="id_customer" name="id_customer">
                                             <option value=""></option>
-                                            <option value="1">2</option>
-                                            <option value="2">3</option>
-                                            <option value="3">4</option>
-                                            <option value="4">5</option>
+                                            @foreach($data as $customers)
+                                            <option value="{{ $customers->name }}">{{ $customers->name }}</option>
+                                            @endforeach
                                         </select>
                                     </div>
                                     @error('id_customer')
