@@ -38,10 +38,9 @@
                                         <select class="form-control" id="id_package" name="id_package"
                                             value="{{old('id_package')}}">
                                             <option value=""></option>
-                                            <option value="1">2</option>
-                                            <option value="2">3</option>
-                                            <option value="3">4</option>
-                                            <option value="4">5</option>
+                                            @foreach($data_packages as $packages)
+                                            <option value="{{ $packages->id }}">{{ $packages->name }}</option>
+                                            @endforeach
                                         </select>
                                     </div>
                                     @error('id_package')
@@ -52,10 +51,9 @@
                                         <select class="form-control" id="id_customer" name="id_customer"
                                             value="{{old('id_customer')}}">
                                             <option value=""></option>
-                                            <option value="1">2</option>
-                                            <option value="2">3</option>
-                                            <option value="3">4</option>
-                                            <option value="4">5</option>
+                                            @foreach($data as $customers)
+                                            <option value="{{ $customers->name }}">{{ $customers->name }}</option>
+                                            @endforeach
                                         </select>
                                     </div>
                                     @error('id_customer')

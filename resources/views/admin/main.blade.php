@@ -264,7 +264,8 @@
                         </div>
 
                         <!-- item-->
-                        <a href="{{route('user.profile',\Illuminate\Support\Facades\Auth::user()->id)}}" class="dropdown-item notify-item">
+                        <a href="{{route('user.profile',\Illuminate\Support\Facades\Auth::user()->id)}}"
+                            class="dropdown-item notify-item">
                             <i class="mdi mdi-account-outline"></i>
                             <span>Profile</span>
                         </a>
@@ -549,7 +550,7 @@
     });
     $(document).ready(function() {
         $('#id_package').select2({
-            placeholder: "Mời bạn chọn tên khách hàng"
+            placeholder: "Mời bạn chọn tên gói cước "
         });
     });
     $(document).ready(function() {
@@ -559,13 +560,15 @@
     });
     $(document).ready(function() {
         $('#id_customer').select2({
-            placeholder: "Mời bạn chọn nhập gói cước"
+            placeholder: "Mời bạn chọn nhập khách hàng"
         });
     });
     </script>
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
     <script src="{{ asset('ckeditor4/ckeditor.js') }}"></script>
-    <script> CKEDITOR.replace('editor1'); </script>
+    <script>
+    CKEDITOR.replace('editor1');
+    </script>
 
 
 </body>
