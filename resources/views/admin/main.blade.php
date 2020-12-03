@@ -406,6 +406,8 @@
                             <ul class="nav-second-level" aria-expanded="false">
                                 <li><a href="{{route('customer')}}">Danh sách khách hàng</a></li>
                                 <li><a href="{{route('service')}}">Dịch vụ</a></li>
+                                <li><a href="{{route('hymnal.index')}}">Ca tập</a></li>
+
 
                             </ul>
                         </li>
@@ -416,8 +418,6 @@
                             </a>
                             <ul class="nav-second-level" aria-expanded="false">
                                 <li><a href="">Danh sách PT</a></li>
-                                <li><a href="#">Ca tập</a></li>
-
                             </ul>
                         </li>
                     </ul>

@@ -14,6 +14,6 @@ class Service extends Model
        return $this->belongsTo(Staff::class,'id_coach','id');
    }
    public function customer(){
-       return $this->belongsTo(Customer::class,'id_customer','id');
+           return $this->belongsTo(Customer::class,'id_customer','id');
    }
 }

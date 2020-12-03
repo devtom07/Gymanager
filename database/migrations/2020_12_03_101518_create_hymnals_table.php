@@ -15,6 +15,11 @@ class CreateHymnalsTable extends Migration
     {
         Schema::create('hymnals', function (Blueprint $table) {
             $table->id();
+            $table->string('code');
+            $table->string('name');
+            $table->string('start_hour');
+            $table->string('end_hour');
+            $table->longText('describe');
             $table->timestamps();
         });
     }

@@ -158,7 +158,19 @@ Route::get('/logout','AuthurController@logout')->name('logout');
              ->name('service.update');
           Route::get('/delete_dichvu/{id}','Dichvu\ServiceController@destroy')
           ->name('service.delete');
-
+       //ca tap
+         Route::get('catap','HymnalController@index')
+             ->name('hymnal.index');
+         Route::get('themcatap','HymnalController@add')
+             ->name('hymnal.add');
+         Route::get('suacatap/{id}','HymnalController@edit')
+             ->name('hymnal.edit');
+         Route::post('catap/post','HymnalController@store')
+             ->name('hymnal.store');
+         Route::post('suacatap/post/{id}','HymnalController@update')
+             ->name('hymnal.update');
+         Route::get('xoacatap/{id}','HymnalController@destroy')
+             ->name('hymnal.delete');
 
 
 
