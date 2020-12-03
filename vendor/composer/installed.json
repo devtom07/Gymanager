@@ -1190,17 +1190,17 @@
     },
     {
         "name": "laravel/framework",
-        "version": "v7.29.3",
-        "version_normalized": "7.29.3.0",
+        "version": "v7.30.0",
+        "version_normalized": "7.30.0.0",
         "source": {
             "type": "git",
             "url": "https://github.com/laravel/framework.git",
-            "reference": "93f6d565a07045baa0e4b941ae1f733cd5984d65"
+            "reference": "629c36a0fe87b66d8dccd3c82927950d0f59d3f9"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/laravel/framework/zipball/93f6d565a07045baa0e4b941ae1f733cd5984d65",
-            "reference": "93f6d565a07045baa0e4b941ae1f733cd5984d65",
+            "url": "https://api.github.com/repos/laravel/framework/zipball/629c36a0fe87b66d8dccd3c82927950d0f59d3f9",
+            "reference": "629c36a0fe87b66d8dccd3c82927950d0f59d3f9",
             "shasum": ""
         },
         "require": {
@@ -1272,7 +1272,7 @@
             "illuminate/view": "self.version"
         },
         "require-dev": {
-            "aws/aws-sdk-php": "^3.0",
+            "aws/aws-sdk-php": "^3.155",
             "doctrine/dbal": "^2.6",
             "filp/whoops": "^2.8",
             "guzzlehttp/guzzle": "^6.3.1|^7.0.1",
@@ -1286,7 +1286,7 @@
             "symfony/cache": "^5.0"
         },
         "suggest": {
-            "aws/aws-sdk-php": "Required to use the SQS queue driver, DynamoDb failed job storage and SES mail driver (^3.0).",
+            "aws/aws-sdk-php": "Required to use the SQS queue driver, DynamoDb failed job storage and SES mail driver (^3.155).",
             "doctrine/dbal": "Required to rename columns and drop SQLite columns (^2.6).",
             "ext-ftp": "Required to use the Flysystem FTP driver.",
             "ext-gd": "Required to use Illuminate\\Http\\Testing\\FileFactory::image().",
@@ -1314,7 +1314,7 @@
             "symfony/psr-http-message-bridge": "Required to use PSR-7 bridging features (^2.0).",
             "wildbit/swiftmailer-postmark": "Required to use Postmark mail driver (^3.0)."
         },
-        "time": "2020-11-03T14:12:58+00:00",
+        "time": "2020-12-01T15:01:25+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -1346,11 +1346,7 @@
         "keywords": [
             "framework",
             "laravel"
-        ],
-        "support": {
-            "issues": "https://github.com/laravel/framework/issues",
-            "source": "https://github.com/laravel/framework"
-        }
+        ]
     },
     {
         "name": "laravel/tinker",
@@ -4098,27 +4094,27 @@
     },
     {
         "name": "realrashid/sweet-alert",
-        "version": "v3.1.7",
-        "version_normalized": "3.1.7.0",
+        "version": "v3.2.0",
+        "version_normalized": "3.2.0.0",
         "source": {
             "type": "git",
             "url": "https://github.com/realrashid/sweet-alert.git",
-            "reference": "94415e288bf38e482cc645030800c0a8591c9624"
+            "reference": "f9450bd8ccc5522f7e7c042bd97031f849ad44f8"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/realrashid/sweet-alert/zipball/94415e288bf38e482cc645030800c0a8591c9624",
-            "reference": "94415e288bf38e482cc645030800c0a8591c9624",
+            "url": "https://api.github.com/repos/realrashid/sweet-alert/zipball/f9450bd8ccc5522f7e7c042bd97031f849ad44f8",
+            "reference": "f9450bd8ccc5522f7e7c042bd97031f849ad44f8",
             "shasum": ""
         },
         "require": {
             "laravel/framework": "^5.4|^6.0|^7.0|^8.0",
-            "php": "^7.2"
+            "php": "^7.2|^8.0"
         },
         "require-dev": {
             "symfony/thanks": "^1.0"
         },
-        "time": "2020-09-09T15:24:03+00:00",
+        "time": "2020-12-02T09:39:26+00:00",
         "type": "library",
         "extra": {
             "laravel": {
@@ -4162,13 +4158,7 @@
             "sweet-alert",
             "sweet-alert2",
             "toast"
-        ],
-        "support": {
-            "docs": "https://realrashid.github.io/sweet-alert/",
-            "email": "realrashid05@gmail.com",
-            "issues": "https://github.com/realrashid/sweet-alert/issues",
-            "source": "https://github.com/realrashid/sweet-alert"
-        }
+        ]
     },
     {
         "name": "sebastian/cli-parser",
@@ -7608,17 +7598,17 @@
     },
     {
         "name": "yajra/laravel-datatables-oracle",
-        "version": "v9.15.0",
-        "version_normalized": "9.15.0.0",
+        "version": "v9.15.1",
+        "version_normalized": "9.15.1.0",
         "source": {
             "type": "git",
             "url": "https://github.com/yajra/laravel-datatables.git",
-            "reference": "3f3f652b745a3d10445f26d0680f82832e8c07a2"
+            "reference": "309d0341fab69f5a44188cf2489db09236b52941"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/yajra/laravel-datatables/zipball/3f3f652b745a3d10445f26d0680f82832e8c07a2",
-            "reference": "3f3f652b745a3d10445f26d0680f82832e8c07a2",
+            "url": "https://api.github.com/repos/yajra/laravel-datatables/zipball/309d0341fab69f5a44188cf2489db09236b52941",
+            "reference": "309d0341fab69f5a44188cf2489db09236b52941",
             "shasum": ""
         },
         "require": {
@@ -7638,7 +7628,7 @@
             "yajra/laravel-datatables-fractal": "Plugin for server-side response using Fractal.",
             "yajra/laravel-datatables-html": "Plugin for server-side HTML builder of dataTables."
         },
-        "time": "2020-11-28T01:32:14+00:00",
+        "time": "2020-12-03T09:31:52+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
