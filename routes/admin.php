@@ -171,7 +171,9 @@ Route::get('/logout','AuthurController@logout')->name('logout');
              ->name('hymnal.update');
          Route::get('xoacatap/{id}','HymnalController@destroy')
              ->name('hymnal.delete');
-
+          //Pt
+         Route::get('Pt','PtController@index')
+             ->name('pt.index');
 
 
          });
