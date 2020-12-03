@@ -54,7 +54,7 @@
 
                                     <div class="form-group">
                                         <label>Trạng thái</label>
-                                        <div class="mt-4">
+                                        <div class="mt-4" name="status">
                                             <div class="radio radio-info form-check-inline">
                                                 <input type="radio" id="inlineRadio1" value="Đi làm" name="status" checked>
                                                 <label for="inlineRadio1">Đang làm </label>
@@ -64,6 +64,9 @@
                                                 <label for="inlineRadio2">Nghỉ việc</label>
                                             </div>
                                         </div>
+                                        @error('status')
+                                        <p style="color:red">{{$message}}</p>
+                                        @enderror
                                     </div>
                                 </div>
                                 <div class="col-xl-6">

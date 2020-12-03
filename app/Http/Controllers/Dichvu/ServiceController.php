@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Dichvu;
 
 use App\Http\Controllers\Controller;
+use App\Models\Staff;
 use Illuminate\Http\Request;
 use App\Models\Service;
 use App\Models\Packages;
@@ -12,11 +13,7 @@ use App\Http\Requests\ValidateFormEditService;
 
 class ServiceController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
     public function index()
     {
         
@@ -24,24 +21,16 @@ class ServiceController extends Controller
         return view('admin.service.index',compact('listService'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
     public function create()
     {
-        $packages ['data_packages'] = Packages::all();
-        $customers ['data'] = Customer::all();
-        return view('admin.service.add',$customers,$packages);
+        $staff = Staff::where('title','PT')->get();
+        $data_packages = Packages::all();
+         $data = Customer::all();
+        return view('admin.service.add',compact('data','data_packages','staff'));
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
+
     public function store(ValidateFormAddService $request)
     {
         $service = new Service;
@@ -62,24 +51,14 @@ class ServiceController extends Controller
 
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+
     public function show($id)
     {
         //
         
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+
     public function edit($id)
     {
        
@@ -88,13 +67,7 @@ class ServiceController extends Controller
         return view('admin.service.edit', $data,$customers);
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+
     public function update(ValidateFormEditService $request, $id)
     {
         $service = new Service;
@@ -111,12 +84,7 @@ class ServiceController extends Controller
         Alert()->success('Thành công','Cập nhật ca làm việc thành công');
         return redirect()->route('service');
     }
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+
     public function destroy($id)
   {
     Service::destroy($id);
