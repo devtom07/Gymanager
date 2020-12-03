@@ -34,6 +34,9 @@
                                         <label for="exampleInputEmail1">tên gói tâp(*)</label>
                                         <input type="text" class="form-control" name="name" value="{{ old('name') }}" placeholder="">
                                     </div>
+                                    @error('name')
+                                            <p style="color:red">{{$message}}</p>
+                                    @enderror
                                     <div class="form-group">
                                         <label for="exampleInputEmail1">Giá (*)</label>
                                         <input type="number" class="form-control" name="price" value="{{ old('price') }}" placeholder="">
@@ -41,13 +44,12 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="exampleInputPassword1">Kiểu sử dụng (*)</label>
-                                        <select name="type_use" id="">
+                                        <select name="type_use" class="form-group" id="">
                                             <option value="theo ngày">Theo ngày</option>
                                             <option value="theo tuần">Theo tuần</option>
                                             <option value="theo tháng">Theo tháng</option>
                                         </select>
                                     </div>
-
                                     <div class="form-group">
                                         <label>Trạng thái</label>
                                         <div class="mt-4">
@@ -61,37 +63,53 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="col-xl-6">
-                                    <div class="form-group">
+                                     {{-- <div class="form-group">
                                         <label for="exampleInputPassword1">dịch vụ free (*)</label>
                                         <select class="form-group" name="free_service[]" value="{{ old('free_service') }}" id="free_service" multiple>
                                             <option value="khăn">khăn</option>
                                             <option value="vé xe">vé xe</option>
                                         </select>
+                                    </div> --}}
+                                    <div class="form-group">
+                                        <label>Dich vu free</label><br>
+                                        <input type="radio" id="male" name="free_service" value="Nước">
+                                        <label for="male">Nước</label><br>
+                                        <input type="radio" id="female" name="free_service" value="Vé xe">
+                                        <label for="female">Vé xe</label><br>
                                     </div>
+                                </div>
+                                <div class="col-xl-6">
+                                   
                                     <div class="form-group">
                                         <label>Mô tả</label>
                                         <input class="form-control" type="text" name="desc" value="{{ old('desc') }}" placeholder="Địa chỉ">
                                     </div>
+                                    @error('desc')
+                                            <p style="color:red">{{$message}}</p>
+                                    @enderror
                                     <div class="form-group">
                                         <label>Ca tập (*)</label>
                                         <select class="form-control" id="exampleSelect1" value="{{ old('id_catap') }}" name="id_catap">
-                                            <option value="ca 1">ca 1</option>
-                                            <option value="ca 2">ca 2</option>
-                                            <option value="ca 3">ca 3</option>
-                                            <option value="ca 4">ca 4</option>
+                                            <option value="ca1">ca 1</option>
+                                            <option value="ca2">ca 2</option>
+                                            <option value="ca3">ca 3</option>
+                                            <option value="ca4">ca 4</option>
                                         </select>
                                     </div>
                                     <div class="form-group">
                                         <label for="exampleInputEmail1">Ngày bắt đầu(*)</label>
                                         <input type="date" class="form-control" name="start_date" value="{{ old('start_date') }}" placeholder="">
                                     </div>
+                                    @error('start_date')
+                                            <p style="color:red">{{$message}}</p>
+                                    @enderror
                                     <div class="form-group">
                                         <label for="exampleInputEmail1">Ngày kết thúc(*)</label>
                                         <input type="date" class="form-control" name="end_date" value="{{ old('end_date') }}" placeholder="">
                                     </div>
-
+                                    @error('end_date')
+                                            <p style="color:red">{{$message}}</p>
+                                    @enderror
                                 </div>
                                 <button type="submit" class="btn btn-primary">Submit</button>
                             </div>

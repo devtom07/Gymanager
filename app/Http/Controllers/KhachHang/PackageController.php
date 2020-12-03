@@ -5,6 +5,7 @@ namespace App\Http\Controllers\KhachHang;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Package;
+use App\Http\Requests\Package\PackageRequest;
 
 class PackageController extends Controller
 {
@@ -17,7 +18,7 @@ class PackageController extends Controller
     {
     	return view('admin.customer.package.add');
     }
-    public function add(Request $request){
+    public function add(PackageRequest $request){
     	$package=new Package;
     	$package->name=$request->name;
     	$package->price=$request->price;
@@ -36,7 +37,7 @@ class PackageController extends Controller
     	$package=Package::find($id);
     	return view('admin.customer.package.edit',compact('package'));
     }
-    public function update(Request $request,$id){
+    public function update(PackageRequest $request,$id){
     	$package=Package::find($id);
     	$package->name=$request->name;
     	$package->price=$request->price;

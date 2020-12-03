@@ -56,18 +56,18 @@
 
                                     <div class="form-group">
                                         <label for="exampleInputPassword1">Ngày bắt đầu (*)</label>
-                                        <input class="form-control" type="date" name="date_start" value="{{ old('date_start') }}" id="example-time-input">
+                                        <input class="form-control" type="date" name="date_start" value="{{ old('date_start') }}" id="date_start">
                                     </div>
                                     @error('date_start')
                                     <p style="color:red">{{$message}}</p>
                                     @enderror
                                     <div class="form-group">
                                         <label for="exampleInputPassword1">Chu kỳ (*)</label>
-                                        <!--  -->
-                                        <select class="form-control" name="cycle" id="">
-                                            <option value="Tuần">Tuần</option>
-                                            <option value="Tháng">Tháng</option>
-                                            <option value="Năm">Năm</option>
+                                        {{-- <input type="text" name="cycle"> --}}
+                                        <select class="form-control" name="cycle" id="chuki" onclick="clickDate()">
+                                            <option value="week">Tuần</option>
+                                            <option value="month">Tháng</option>
+                                            <option value="year">Năm</option>
                                         </select>
                                     </div>
                                     @error('cycle')
@@ -75,7 +75,7 @@
                                     @enderror
                                     <div class="form-group">
                                         <label>Ngày kết thúc</label>
-                                        <input class="form-control" type="date" name="date_end" value="{{ old('date_end') }}" id="example-time-input">
+                                        <input class="form-control" type="date" name="date_end" value="{{ old('date_end') }}" id="date_end">
                                     </div>
                                     @error('date_end')
                                     <p style="color:red">{{$message}}</p>
@@ -99,5 +99,7 @@
     <!-- Footer Start -->
     <!-- end Footer -->
 </div>
-
+<script type="text/javascript" charset="utf-8" >
+    
+</script>
 @endsection()

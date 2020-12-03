@@ -34,11 +34,17 @@
                                         <label for="exampleInputEmail1">tên gói tâp(*)</label>
                                         <input type="text" class="form-control" name="name" value="{{ $package->name }}" placeholder="">
                                     </div>
+                                    @error('name')
+                                            <p style="color:red">{{$message}}</p>
+                                    @enderror
                                     <div class="form-group">
                                         <label for="exampleInputEmail1">Giá (*)</label>
                                         <input type="number" class="form-control" name="price" value="{{ $package->price }}" placeholder="">
                                         {{-- <img src="public/admin/images" alt=""> --}}
                                     </div>
+                                    @error('price')
+                                            <p style="color:red">{{$message}}</p>
+                                    @enderror
                                     <div class="form-group">
                                         <label for="exampleInputPassword1">Kiểu sử dụng (*)</label>
                                         <select name="type_use" value="{{ $package->type_use }}" id="">
@@ -74,6 +80,9 @@
                                         <label>Mô tả</label>
                                         <input class="form-control" type="text" name="desc" value="{{ $package->desc }}" placeholder="Địa chỉ">
                                     </div>
+                                    @error('desc')
+                                            <p style="color:red">{{$message}}</p>
+                                    @enderror
                                     <div class="form-group">
                                         <label>Ca tập (*)</label>
                                         <select class="form-control" id="exampleSelect1" value="{{ $package->id_catap }}" name="id_catap">
@@ -87,11 +96,16 @@
                                         <label for="exampleInputEmail1">Ngày bắt đầu(*)</label>
                                         <input type="date" class="form-control" name="start_date" value="{{ $package->start_date }}" placeholder="">
                                     </div>
+                                    @error('start_date')
+                                            <p style="color:red">{{$message}}</p>
+                                    @enderror
                                     <div class="form-group">
                                         <label for="exampleInputEmail1">Ngày kết thúc(*)</label>
                                         <input type="date" class="form-control" name="end_date" value="{{ $package->end_date }}" placeholder="">
                                     </div>
-
+                                    @error('end_date')
+                                            <p style="color:red">{{$message}}</p>
+                                    @enderror
                                 </div>
                                 <button type="submit" class="btn btn-primary">Submit</button>
                             </div>
