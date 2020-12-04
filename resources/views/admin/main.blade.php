@@ -419,6 +419,9 @@
                             <ul class="nav-second-level" aria-expanded="false">
                                 <li><a href="{{route('pt.index')}}">Lịch Tập</a></li>
                             </ul>
+                            <ul class="nav-second-level" aria-expanded="false">
+                                <li><a href="{{route('pt.index')}}">Đăng kí PT</a></li>
+                            </ul>
                         </li>
                         <li>
                             <a href="javascript: void(0);">
