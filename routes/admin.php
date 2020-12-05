@@ -53,34 +53,34 @@ Route::get('/logout','AuthurController@logout')->name('logout');
         Route::get('xemtaikhoan','Users\UserController@index')
             ->name('user.index')
             ->middleware(['permission:xem tài khoản']);
-        Route::get('themtaikhoan','UserController@create')
+        Route::get('themtaikhoan','Users\UserController@create')
             ->name('user.add')
             ->middleware(['permission:thêm tài khoản']);
-        Route::post('themtaikhoan/post','UserController@store')
+        Route::post('themtaikhoan/post','Users\UserController@store')
             ->name('user.store')
             ->middleware(['permission:thêm tài khoản']);
-        Route::get('suataikhoan/{id}','UserController@edit')
+        Route::get('suataikhoan/{id}','Users\UserController@edit')
             ->name('user.edit')
             ->middleware(['permission:Sửa tài khoản']);
-        Route::post('suataikhoan/post/{id}','UserController@update')
+        Route::post('suataikhoan/post/{id}','Users\UserController@update')
             ->name('user.update')
             ->middleware(['permission:Sửa tài khoản']);
-        Route::get('xemchitiettaikhoan/{id}','UserController@show')
+        Route::get('xemchitiettaikhoan/{id}','Users\UserController@show')
             ->name('user.show')
             ->middleware(['permission:Xem tài khoản']);
-        Route::get('GetUser/{id}','UserController@GetUser')
+        Route::get('GetUser/{id}','Users\UserController@GetUser')
             ->name('user.GetUser')
             ->middleware(['permission:Xem tài khoản']);
-        Route::get('xoanguoidung/{id}','UserController@destroy')
+        Route::get('xoanguoidung/{id}','Users\UserController@destroy')
             ->name('user.delete')
             ->middleware(['permission:Xóa tài khoản']);
-        Route::get('profile/{id}','UserController@profile')
+        Route::get('profile/{id}','Users\UserController@profile')
             ->name('user.profile');
-         Route::post('ImageProfile/{id}','UserController@ImageProfile')
+         Route::post('ImageProfile/{id}','Users\UserController@ImageProfile')
              ->name('user.ImageProfile');
-         Route::post('profile/update/{id}','UserController@updateProfile')
+         Route::post('profile/update/{id}','Users\UserController@updateProfile')
              ->name('user.updateProfile');
-         Route::post('profile/update/password/{id}','UserController@updatePassword')
+         Route::post('profile/update/password/{id}','Users\UserController@updatePassword')
              ->name('user.updatePassword');
 
          //=========================Nhân viên==================//
@@ -171,9 +171,12 @@ Route::get('/logout','AuthurController@logout')->name('logout');
              ->name('hymnal.update');
          Route::get('xoacatap/{id}','HymnalController@destroy')
              ->name('hymnal.delete');
+
           //Pt
          Route::get('Pt','PtController@index')
              ->name('pt.index');
+         Route::get('dangKyPt','PtController@addPt')
+             ->name('pt.add');
 
        //pt-level
         Route::get('goi-cuoc','KhachHang\PackageController@index')->name('package.index');

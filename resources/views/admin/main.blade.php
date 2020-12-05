@@ -356,7 +356,7 @@
 
         <!-- ========== Left Sidebar Start ========== -->
         <div class="left-side-menu">
-
+     @if($user->hasAnyRole('Super Admin'))
             <div class="slimscroll-menu">
 
                 <!--- Sidemenu -->
@@ -381,7 +381,7 @@
                             </a>
                             <ul class="nav-second-level" aria-expanded="false">
                                 <li><a href="{{route('user.index')}}">Quản trị người dùng</a></li>
-                                <li><a href="{{route('role')}}">Chức vụ</a></li>
+                                <li><a href="{{route('role')}}">Quyền</a></li>
                             </ul>
                         </li>
                         <li>
@@ -450,6 +450,44 @@
                 <div class="clearfix"></div>
 
             </div>
+            @elseif($user->hasAnyRole('Admin'))
+                <div class="slimscroll-menu">
+                    <!--- Sidemenu -->
+                    <div id="sidebar-menu">
+
+                        <ul class="metismenu" id="side-menu">
+
+                            <li class="menu-title">Gymmanager</li>
+
+                            <li>
+                                <a href="{{route('dashboard')}}">
+                                    <i class="mdi mdi-view-dashboard"></i>
+                                    <span> Dashboard </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript: void(0);">
+                                    <i class="mdi mdi-star-off"></i>
+                                    <span>Nhân viên</span>
+                                    {{--                                <span class="badge badge-danger badge-pill float-right">New</span>--}}
+                                </a>
+                                <ul class="nav-second-level" aria-expanded="false">
+                                    <li><a href="{{route('listnhanvien')}}">Danh sách nhân viên</a></li>
+                                    <li><a href="{{route('calamviec')}}">Ca làm việc</a></li>
+                                    <li><a href="{{route('calamviecnhanvien')}}">Ca làm việc nhân viên</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- End Sidebar -->
+
+                    <div class="clearfix"></div>
+
+                </div>
+         @endif
+
+
+
             <!-- Sidebar -left -->
 
         </div>
@@ -538,11 +576,11 @@
     <script src="{{url('admin')}}/js/vendor.min.js"></script>
 
     <!--Morris Chart-->
-    <script src="{{url('admin')}}/libs/morris-js/morris.min.js"></script>
+{{--    <script src="{{url('admin')}}/libs/morris-js/morris.min.js"></script>--}}
     <script src="{{url('admin')}}/libs/raphael/raphael.min.js"></script>
 
     <!-- Dashboard init js-->
-    <script src="{{url('admin')}}/js/pages/dashboard.init.js"></script>
+{{--    <script src="{{url('admin')}}/js/pages/dashboard.init.js"></script>--}}
 
     <!-- App js -->
     <script src="{{url('admin')}}/js/app.min.js"></script>
@@ -605,7 +643,7 @@
                 numberCk = 365;
             }
             var n=  getdate(val,numberCk);
-            // datend =  val + chuki 
+            // datend =  val + chuki
 
                         console.log(n);
         })
@@ -615,7 +653,7 @@
     var newdate = new Date(date);
 
     newdate.setDate(newdate.getDate() + total);
-    
+
     var dd = newdate.getDate();
     var mm = newdate.getMonth() + 1;
     var y = newdate.getFullYear();

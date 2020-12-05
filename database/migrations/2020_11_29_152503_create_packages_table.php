@@ -19,7 +19,7 @@ class CreatePackagesTable extends Migration
             $table->integer('price');
             $table->string('type_use');
             $table->string('free_service');
-            $table->text('decs');
+            $table->text('desc');
             $table->integer('id_catap');
             $table->integer('status');
             $table->timestamps();

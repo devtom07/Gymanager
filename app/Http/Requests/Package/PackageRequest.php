@@ -24,11 +24,11 @@ class PackageRequest extends FormRequest
     public function rules()
     {
         return [
-            'name'=>['required','min:4','max:50','not_regex:([!@#$%^&*])'],
-            'date_start'=>'required|date|after:today',
-            'price'=>'required',
-            'date_end'=>'required|date|after:date_start',
-            'desc'=>'required'
+                'name'=>['required','min:4','max:50','not_regex:([!@#$%^&*])'],
+                'date_start'=>'required|date|after:today',
+                'price'=>'required',
+                'date_end'=>'required|date|after:date_start',
+                'desc'=>'required'
         ];
     }
     public function messages(){
