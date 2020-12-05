@@ -10,4 +10,8 @@ class PtController extends Controller
 
         return view('admin.pt.index');
     }
+    public function addPt(){
+
+
+    }
 }
