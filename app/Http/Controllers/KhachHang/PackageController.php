@@ -2,21 +2,24 @@
 
 namespace App\Http\Controllers\KhachHang;
 
-use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
+use App\Hymnal;
 use App\Models\Package;
+use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 use App\Http\Requests\Package\PackageRequest;
 
 class PackageController extends Controller
 {
     //
     public function index(){
-    	$package = Package::all();
-    	return view('admin.customer.package.index',compact('package'));
+		$package = Package::all();
+		$catap = Hymnal::all();
+    	return view('admin.customer.package.index',compact('package','catap'));
     }
     public function create()
     {
-    	return view('admin.customer.package.add');
+		$catap = Hymnal::all();
+    	return view('admin.customer.package.add', compact('catap'));
     }
     public function add(PackageRequest $request){
     	$package=new Package;
@@ -24,12 +27,15 @@ class PackageController extends Controller
     	$package->price=$request->price;
     	$package->type_use=$request->type_use;
     	$package->status=$request->status;
-    	$package->free_service=json_encode($request->free_service);
+    	$package->free_service=$request->free_service;
     	$package->desc=$request->desc;
     	$package->id_catap=$request->id_catap;
     	$package->start_date=$request->start_date;
-    	$package->end_date=$request->end_date;
-    	$package->save();
+		$package->end_date=$request->end_date;
+		// dd($package);
+		
+		$package->save();
+		// dd($package);
     	return redirect()->route('package.index')->with('thongbao', 'thêm thành công!!');
 
     }
@@ -43,7 +49,7 @@ class PackageController extends Controller
     	$package->price=$request->price;
     	$package->type_use=$request->type_use;
     	$package->status=$request->status;
-    	$package->free_service=json_encode($request->free_service);
+    	$package->free_service=$request->free_service;
     	$package->desc=$request->desc;
     	$package->id_catap=$request->id_catap;
     	$package->start_date=$request->start_date;
