@@ -12,9 +12,9 @@ class PackageController extends Controller
 {
     //
     public function index(){
-		$package = Package::all();
-		$catap = Hymnal::all();
-    	return view('admin.customer.package.index',compact('package','catap'));
+		$package = Package::with('hymnal')->orderBy('id','desc')->get();
+		// $catap = Hymnal::all();
+    	return view('admin.customer.package.index',compact('package'));
     }
     public function create()
     {
