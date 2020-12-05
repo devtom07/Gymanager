@@ -32,16 +32,19 @@
                                 <div class="col-xl-6">
                                     <div class="form-group">
                                         <label for="exampleInputEmail1">tên gói tâp(*)</label>
-                                        <input type="text" class="form-control" name="name" value="{{ old('name') }}" placeholder="">
+                                        <input type="text" class="form-control" placeholder="tên gói tập" name="name" value="{{ old('name') }}" placeholder="">
                                     </div>
                                     @error('name')
                                             <p style="color:red">{{$message}}</p>
                                     @enderror
                                     <div class="form-group">
                                         <label for="exampleInputEmail1">Giá (*)</label>
-                                        <input type="number" class="form-control" name="price" value="{{ old('price') }}" placeholder="">
+                                        <input type="number" class="form-control" placeholder="Giá" name="price" value="{{ old('price') }}" placeholder="">
                                         {{-- <img src="public/admin/images" alt=""> --}}
                                     </div>
+                                    @error('price')
+                                            <p style="color:red">{{$message}}</p>
+                                    @enderror
                                     <div class="form-group">
                                         <label for="exampleInputPassword1">Kiểu sử dụng (*)</label>
                                         <select name="type_use" class="form-group" id="">
@@ -54,35 +57,40 @@
                                         <label>Trạng thái</label>
                                         <div class="mt-4">
                                             <div class="radio radio-info form-check-inline">
-                                                <input type="radio" id="inlineRadio1" value="Đang tập" name="status" checked>
-                                                <label for="inlineRadio1">Đang tập </label>
+                                                <input type="radio" id="inlineRadio1" value="Đang hoạt dộng" name="status" checked>
+                                                <label for="inlineRadio1">Đang hoạt dộng </label>
                                             </div>
                                             <div class="radio form-check-inline">
-                                                <input type="radio" id="inlineRadio2" value="Nghỉ tập" name="status">
-                                                <label for="inlineRadio2">Nghỉ tập</label>
+                                                <input type="radio" id="inlineRadio2" value="Hết hạn" name="status">
+                                                <label for="inlineRadio2">Hết hạn</label>
                                             </div>
                                         </div>
                                     </div>
-                                     {{-- <div class="form-group">
-                                        <label for="exampleInputPassword1">dịch vụ free (*)</label>
+                                     <!-- <div class="form-group">
+                                        <label for="exampleInputPassword1">dịch vụ free </label>
                                         <select class="form-group" name="free_service[]" value="{{ old('free_service') }}" id="free_service" multiple>
                                             <option value="khăn">khăn</option>
                                             <option value="vé xe">vé xe</option>
                                         </select>
-                                    </div> --}}
+                                    </div>  -->
                                     <div class="form-group">
                                         <label>Dich vu free</label><br>
-                                        <input type="radio" id="male" name="free_service" value="Nước">
+                                        <input type="radio" id="male" checked name="free_service" value="Nước">
                                         <label for="male">Nước</label><br>
                                         <input type="radio" id="female" name="free_service" value="Vé xe">
                                         <label for="female">Vé xe</label><br>
+                                        <input type="radio" id="female" name="free_service" value="không">
+                                        <label for="female">Không</label><br>
                                     </div>
+                                    @error('free_service')
+                                            <p style="color:red">{{$message}}</p>
+                                    @enderror
                                 </div>
                                 <div class="col-xl-6">
                                    
                                     <div class="form-group">
                                         <label>Mô tả</label>
-                                        <input class="form-control" type="text" name="desc" value="{{ old('desc') }}" placeholder="Địa chỉ">
+                                        <input class="form-control" type="text" name="desc" value="{{ old('desc') }}" placeholder="Mô tả">
                                     </div>
                                     @error('desc')
                                             <p style="color:red">{{$message}}</p>
@@ -90,10 +98,10 @@
                                     <div class="form-group">
                                         <label>Ca tập (*)</label>
                                         <select class="form-control" id="exampleSelect1" value="{{ old('id_catap') }}" name="id_catap">
-                                            <option value="ca1">ca 1</option>
-                                            <option value="ca2">ca 2</option>
-                                            <option value="ca3">ca 3</option>
-                                            <option value="ca4">ca 4</option>
+
+                                            @foreach($catap as $ca)
+                                            <option value="{{$ca->id}}">{{$ca->name}}</option>   
+                                            @endforeach
                                         </select>
                                     </div>
                                     <div class="form-group">
