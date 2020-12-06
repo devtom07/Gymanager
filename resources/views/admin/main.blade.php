@@ -20,6 +20,9 @@
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.css">
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
     <meta name="csrf-token" content="{{ csrf_token() }}">
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 </head>
 
 <style>
@@ -264,7 +267,8 @@
                         </div>
 
                         <!-- item-->
-                        <a href="{{route('user.profile',\Illuminate\Support\Facades\Auth::user()->id)}}" class="dropdown-item notify-item">
+                        <a href="{{route('user.profile',\Illuminate\Support\Facades\Auth::user()->id)}}"
+                            class="dropdown-item notify-item">
                             <i class="mdi mdi-account-outline"></i>
                             <span>Profile</span>
                         </a>
@@ -332,20 +336,6 @@
                     </button>
                 </li>
 
-                <li class="d-none d-sm-block">
-                    <form class="app-search">
-                        <div class="app-search-box">
-                            <div class="input-group">
-                                <input type="text" class="form-control" placeholder="Search...">
-                                <div class="input-group-append">
-                                    <button class="btn" type="submit">
-                                        <i class="fas fa-search"></i>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </form>
-                </li>
 
 
             </ul>
@@ -355,7 +345,7 @@
 
         <!-- ========== Left Sidebar Start ========== -->
         <div class="left-side-menu">
-
+     @if($user->hasAnyRole('Super Admin'))
             <div class="slimscroll-menu">
 
                 <!--- Sidemenu -->
@@ -380,7 +370,7 @@
                             </a>
                             <ul class="nav-second-level" aria-expanded="false">
                                 <li><a href="{{route('user.index')}}">Quản trị người dùng</a></li>
-                                <li><a href="{{route('role')}}">Chức vụ</a></li>
+                                <li><a href="{{route('role')}}">Quyền</a></li>
                             </ul>
                         </li>
                         <li>
@@ -405,6 +395,9 @@
                             <ul class="nav-second-level" aria-expanded="false">
                                 <li><a href="{{route('customer')}}">Danh sách khách hàng</a></li>
                                 <li><a href="{{route('service')}}">Dịch vụ</a></li>
+                                <li><a href="{{route('hymnal.index')}}">Ca tập</a></li>
+                                <li><a href="{{ route('package.index') }}">Gói cước</a></li>
+
 
                             </ul>
                         </li>
@@ -414,9 +407,25 @@
                                 <span> PT </span>
                             </a>
                             <ul class="nav-second-level" aria-expanded="false">
-                                <li><a href="">Danh sách PT</a></li>
-                                <li><a href="#">Ca tập</a></li>
-
+                                <li><a href="{{route('pt.index')}}">Thông tin PT</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="javascript: void(0);">
+                                <i class="mdi mdi-reflect-vertical"></i>
+                                <span> Doanh thu </span>
+                            </a>
+                            <ul class="nav-second-level" aria-expanded="false">
+                                <li><a href="">Doanh thu</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="javascript: void(0);">
+                                <i class="mdi mdi-progress-upload"></i>
+                                <span> Quản lý các sản phẩm </span>
+                            </a>
+                            <ul class="nav-second-level" aria-expanded="false">
+                                <li><a href="">Sản phẩm</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -427,6 +436,76 @@
                 <div class="clearfix"></div>
 
             </div>
+            @elseif($user->hasAnyRole('Admin'))
+                <div class="slimscroll-menu">
+                    <!--- Sidemenu -->
+                    <div id="sidebar-menu">
+
+                        <ul class="metismenu" id="side-menu">
+
+                            <li class="menu-title">Gymmanager</li>
+
+                            <li>
+                                <a href="{{route('dashboard')}}">
+                                    <i class="mdi mdi-view-dashboard"></i>
+                                    <span> Dashboard </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript: void(0);">
+                                    <i class="mdi mdi-star-off"></i>
+                                    <span>Nhân viên</span>
+                                    {{--                                <span class="badge badge-danger badge-pill float-right">New</span>--}}
+                                </a>
+                                <ul class="nav-second-level" aria-expanded="false">
+                                    <li><a href="{{route('listnhanvien')}}">Danh sách nhân viên</a></li>
+                                    <li><a href="{{route('calamviec')}}">Ca làm việc</a></li>
+                                    <li><a href="{{route('calamviecnhanvien')}}">Ca làm việc nhân viên</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- End Sidebar -->
+
+                    <div class="clearfix"></div>
+
+                </div>
+            @elseif($user->hasAnyRole('pt'))
+                <div class="slimscroll-menu">
+                    <!--- Sidemenu -->
+                    <div id="sidebar-menu">
+
+                        <ul class="metismenu" id="side-menu">
+
+                            <li class="menu-title">Gymmanager</li>
+
+                            <li>
+                                <a href="{{route('dashboard')}}">
+                                    <i class="mdi mdi-view-dashboard"></i>
+                                    <span> Dashboard </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript: void(0);">
+                                    <i class="mdi mdi-teach"></i>
+                                    <span> PT </span>
+                                </a>
+                                <ul class="nav-second-level" aria-expanded="false">
+                                    <li><a href="{{route('pt.index')}}">Thông tin PT</a></li>
+                                </ul>
+
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- End Sidebar -->
+
+                    <div class="clearfix"></div>
+
+                </div>
+         @endif
+
+
+
             <!-- Sidebar -left -->
 
         </div>
@@ -515,11 +594,11 @@
     <script src="{{url('admin')}}/js/vendor.min.js"></script>
 
     <!--Morris Chart-->
-    <script src="{{url('admin')}}/libs/morris-js/morris.min.js"></script>
+{{--    <script src="{{url('admin')}}/libs/morris-js/morris.min.js"></script>--}}
     <script src="{{url('admin')}}/libs/raphael/raphael.min.js"></script>
 
     <!-- Dashboard init js-->
-    <script src="{{url('admin')}}/js/pages/dashboard.init.js"></script>
+{{--    <script src="{{url('admin')}}/js/pages/dashboard.init.js"></script>--}}
 
     <!-- App js -->
     <script src="{{url('admin')}}/js/app.min.js"></script>
@@ -549,7 +628,7 @@
     });
     $(document).ready(function() {
         $('#id_package').select2({
-            placeholder: "Mời bạn chọn tên khách hàng"
+            placeholder: "Mời bạn chọn tên gói cước "
         });
     });
     $(document).ready(function() {
@@ -559,15 +638,50 @@
     });
     $(document).ready(function() {
         $('#id_customer').select2({
-            placeholder: "Mời bạn chọn nhập gói cước"
+            placeholder: "Mời bạn chọn nhập khách hàng"
         });
     });
     </script>
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
-    <script src="{{ asset('ckeditor4/ckeditor.js') }}"></script>
-    <script> CKEDITOR.replace('editor1'); </script>
+<script>
+    $(document).ready(function(){
+        $('body').on('change', '#date_start', function(event){
+            event.preventDefault();
+            var val = $(this).val();
+            var chuki = $('#chuki').val();
+            var numberCk = 0;
+            switch(chuki){
+                case 'week':
+                numberCk = 7;
+                break;
+                case 'month':
+                numberCk = 30;
+                break;
+                default:
+                numberCk = 365;
+            }
+            var n=  getdate(val,numberCk);
+            // datend =  val + chuki
 
+                        console.log(n);
+        })
+    })
+    function getdate(tt,total) {
+    var date = new Date(tt);
+    var newdate = new Date(date);
 
+    newdate.setDate(newdate.getDate() + total);
+
+    var dd = newdate.getDate();
+    var mm = newdate.getMonth() + 1;
+    var y = newdate.getFullYear();
+
+    var someFormattedDate = y+'-'+mm+'-'+dd;
+
+document.getElementById("date_end").valueAsDate = new Date(someFormattedDate);
+    return someFormattedDate;
+}
+</script>
 </body>
 
 <!-- Mirrored from coderthemes.com/uplon/layouts/vertical/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 31 Oct 2020 19:25:02 GMT -->

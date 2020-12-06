@@ -9,14 +9,8 @@
             <div class="row">
                 <div class="col-12">
                     <div class="page-title-box">
-                        <div class="page-title-right">
-                            <ol class="breadcrumb m-0">
-                                <li class="breadcrumb-item"><a href="javascript: void(0);">Gymmanager</a></li>
-                                <li class="breadcrumb-item"><a href="javascript: void(0);">Tables</a></li>
-                                <li class="breadcrumb-item active">Danh sách khách hàng</li>
-                            </ol>
-                        </div>
-                        <h4 class="page-title">Danh vụ</h4>
+
+                        <h4 class="page-title">Dịch vụ</h4>
                     </div>
                 </div>
             </div>
@@ -116,12 +110,13 @@
                                                 @foreach($listService as $key => $service)
                                                 <tr>
                                                     <th data-org-colspan="1" data-columns="tech-companies-1-col-0">
-                                                        {{$key++}}</th>
+                                                        {{$key+1}}</th>
                                                     <td data-org-colspan="1" data-priority="1"
-                                                        data-columns="tech-companies-1-col-1">{{$service->id_customer}}
+                                                        data-columns="tech-companies-1-col-1">
+{{--                                                        {{$service->customer->name}}--}}
                                                     </td>
                                                     <td data-org-colspan="1" data-priority="1"
-                                                        data-columns="tech-companies-1-col-1">{{$service->id_coach}}
+                                                        data-columns="tech-companies-1-col-1">{{$service->staff->name}}
                                                     </td>
                                                     <td data-org-colspan="1" data-priority="3"
                                                         data-columns="tech-companies-1-col-2">{{$service->id_package}}
@@ -160,11 +155,9 @@
                                                                 <a class="dropdown-item btn-remove"
                                                                     href="{{route('service.delete',$service->id)}}"><i
                                                                         class="mdi mdi-delete"></i> Xoá</a>
-
                                                             </div>
                                                         </div>
                                                     </td>
-
                                                 </tr>
                                                 @endforeach
                                             </tbody>

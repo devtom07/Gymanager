@@ -1,7 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Users;
 
+use App\Http\Controllers\Controller;
 use App\Http\Requests\ValidateFormaddUser;
 use App\Http\Requests\ValidateFormProfile;
 use App\Http\Requests\ValidateFormProfilePassword;
@@ -92,7 +93,7 @@ class UserController extends Controller
         foreach ($user->role as $roles){
             $role_id[] = $roles->id;
         }
-        return view('admin.users.account.edit',compact('user','role_user','roles','role_id','listRoleUser','staff'));
+        return view('admin.users.account.edit',compact('user','role_user','role_id','listRoleUser','staff'));
 
     }
 

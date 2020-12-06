@@ -9,13 +9,7 @@
          <div class="row">
             <div class="col-12">
                <div class="page-title-box">
-                  <div class="page-title-right">
-                     <ol class="breadcrumb m-0">
-                        <li class="breadcrumb-item"><a href="javascript: void(0);">Gymmanager</a></li>
-                        <li class="breadcrumb-item"><a href="javascript: void(0);">Tables</a></li>
-                        <li class="breadcrumb-item active">Danh sách nhân viên</li>
-                     </ol>
-                  </div>
+
                   <h4 class="page-title">Danh sách Nhân viên</h4>
                </div>
             </div>
@@ -57,7 +51,6 @@
                                           <th data-priority="3" id="tech-companies-1-col-5-clone">Chuc vu</th>
                                           <th data-priority="6" id="tech-companies-1-col-6-clone">Loại hợp đồng</th>
                                           <th data-priority="6" id="tech-companies-1-col-7-clone">Mức lương</th>
-                                          <th data-priority="6" id="tech-companies-1-col-8-clone">Trang thai</th>
                                           <th data-priority="6" id="tech-companies-1-col-8-clone">Action</th>
                                        </tr>
                                     </thead>
@@ -89,11 +82,11 @@
                                           <td data-org-colspan="1" data-priority="6" data-columns="tech-companies-1-col-7">
                                              {{ $staffs->wage}}
                                           </td>
-                                          <td data-org-colspan="1" data-priority="3" data-columns="tech-companies-1-col-4">
-                                             <button type="button" class="btn btn-success btn-rounded waves-effect waves-light">
-                                                   {{ $staffs->status}}
-                                             </button>
-                                          </td>
+{{--                                          <td data-org-colspan="1" data-priority="3" data-columns="tech-companies-1-col-4">--}}
+{{--                                             <button type="button" class="btn btn-success btn-rounded waves-effect waves-light">--}}
+{{--                                                   {{ $staffs->status}}--}}
+{{--                                             </button>--}}
+{{--                                          </td>--}}
                                           <td data-org-colspan="1" data-priority="6" data-columns="tech-companies-1-col-8">
                                              <div class="btn-group mt-1 mr-1">
                                                 <button class="btn btn-success btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

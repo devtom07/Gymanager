@@ -16,7 +16,7 @@
                                 <div class="col-sm-3 col-md-2 col-5">
                                     <label style="font-family: inherit">Mã</label>
                                 </div>
-                                <div id="code_customer" class="col-md-8 col-6">
+                                <div id="code" class="col-md-8 col-6">
 
                                 </div>
                             </div>

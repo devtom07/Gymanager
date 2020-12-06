@@ -9,13 +9,7 @@
          <div class="row">
             <div class="col-12">
                <div class="page-title-box">
-                  <div class="page-title-right">
-                     <ol class="breadcrumb m-0">
-                        <li class="breadcrumb-item"><a href="javascript: void(0);">Gymmanager</a></li>
-                        <li class="breadcrumb-item"><a href="javascript: void(0);">Tables</a></li>
-                        <li class="breadcrumb-item active">Danh sách nhân viên</li>
-                     </ol>
-                  </div>
+
                   <h4 class="page-title">Danh sách Nhân viên</h4>
                </div>
             </div>
@@ -61,7 +55,7 @@
                                        <th id="tech-companies-1-col-0-clone">STT</th>
                                        <th data-priority="3" id="tech-companies-1-col-2-clone">Tên tài khoản</th>
                                        <th data-priority="6" id="tech-companies-1-col-6-clone">Email</th>
-                                        <th data-priority="3" id="tech-companies-1-col-5-clone">Trạng thái khóa</th>
+{{--                                        <th data-priority="3" id="tech-companies-1-col-5-clone">Trạng thái khóa</th>--}}
                                         <th data-priority="3" id="tech-companies-1-col-5-clone">Ngày tạo</th>
                                         <th data-priority="6" id="tech-companies-1-col-7-clone">Đăng nhập cuối</th>
                                        <th data-priority="6" id="tech-companies-1-col-8-clone">Action</th>
@@ -73,7 +67,7 @@
                                        <th data-org-colspan="1" data-columns="tech-companies-1-col-0">{{$key+1}}</th>
                                        <td data-org-colspan="1" data-priority="1" data-columns="tech-companies-1-col-1">{{$users->name}}</td>
                                        <td data-org-colspan="1" data-priority="3" data-columns="tech-companies-1-col-5">{{$users->email}}</td>
-                                        <td data-org-colspan="1" data-priority="3" data-columns="tech-companies-1-col-4"><i style="color: #00aced" class="fas fa-lock-open"></i></td>
+{{--                                        <td data-org-colspan="1" data-priority="3" data-columns="tech-companies-1-col-4"><i style="color: #00aced" class="fas fa-lock-open"></i></td>--}}
                                        @if($users->created_at)
                                         <td data-org-colspan="1" data-priority="6" data-columns="tech-companies-1-col-6">{{date('d-m-Y', strtotime($users->created_at))}}</td>
                                        @else

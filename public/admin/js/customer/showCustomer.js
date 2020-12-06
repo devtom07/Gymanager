@@ -11,9 +11,10 @@ $(document).on('click','#show_customer',function (){
         },
         success:function (data){
             console.log(data)
-            $.each(data,function (value,data){
-                    $("#code_customer").html(data.code),
-                    $("#name_Customer").html(data.name)
+            $.each(data,function (index,data){
+                    $("#code").html(data.code),
+                    $("#name_Customer").html(data.name),
+                        $("#sex").html(data.sex)
             });
         }
     })

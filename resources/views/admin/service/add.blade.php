@@ -35,72 +35,103 @@
                                 <form method="post" enctype="multipart/form-data">
                                     <div class="form-group">
                                         <label for="id_package">Gói cước</label>
-                                        <select class="form-control" id="id_package" name="id_package">
+                                        <select class="form-control" id="id_package" name="id_package"
+                                            value="{{old('id_package')}}">
                                             <option value=""></option>
-                                            <option value="1">2</option>
-                                            <option value="2">3</option>
-                                            <option value="3">4</option>
-                                            <option value="4">5</option>
+                                            @foreach($data_packages as $packages)
+                                            <option value="{{ $packages->id }}">{{ $packages->name }}</option>
+                                            @endforeach
                                         </select>
                                     </div>
+                                    @error('id_package')
+                                    <p style="color:red">{{$message}}</p>
+                                    @enderror
                                     <div class="form-group">
                                         <label for="">Tên khách hàng</label>
-                                        <select class="form-control" id="id_customer" name="id_customer">
+                                        <select class="form-control" id="id_customer" name="id_customer"
+                                            value="{{old('id_customer')}}">
                                             <option value=""></option>
-                                            <option value="1">2</option>
-                                            <option value="2">3</option>
-                                            <option value="3">4</option>
-                                            <option value="4">5</option>
+                                            @foreach($data as $customers)
+                                            <option value="{{ $customers->name }}">{{ $customers->name }}</option>
+                                            @endforeach
                                         </select>
                                     </div>
+                                    @error('id_customer')
+                                    <p style="color:red">{{$message}}</p>
+                                    @enderror
                                     <div class="form-group">
                                         <label for="">Tên huấn luyện viên</label>
-                                        <select class="form-control" id="id_coach" name="id_coach">
-                                            <option value=""></option>
-                                            <option value="1">2</option>
-                                            <option value="2">3</option>
-                                            <option value="3">4</option>
-                                            <option value="4">5</option>
+                                        <select class="form-control" id="id_coach" name="id_coach"
+                                            value="{{old('id_coach')}}">
+
+                                            <option value=""></option>"
+                                            @foreach($staff as $Pt)
+                                            <option value="{{$Pt->id}}">{{$Pt->name}}</option>
+
+                                            @endforeach
                                         </select>
 
                                     </div>
+                                    @error('id_coach')
+                                    <p style="color:red">{{$message}}</p>
+                                    @enderror
                                     <div class="form-group">
                                         <label for="">Ngày bắt đầu</label>
                                         <input type="date" class="form-control" id="start_date" name="start_date"
-                                            placeholder="Ngày bắt đầu">
+                                            placeholder="Ngày bắt đầu" value="{{old('start_date')}}">
                                     </div>
+                                    @error('start_date')
+                                    <p style=" color:red">{{$message}}</p>
+                                    @enderror
                                     <div class="form-group">
                                         <label for="">Ngày kết thúc</label>
                                         <input type="date" class="form-control" id="end_date" name="end_date"
-                                            placeholder="Ngày bắt đầu">
+                                            placeholder="Ngày bắt đầu" value="{{old('end_date')}}">
                                     </div>
+                                    @error('end_date')
+                                    <p style=" color:red">{{$message}}</p>
+                                    @enderror
                                     <div class="form-group">
                                         <label for="">Ngày kích hoạt</label>
                                         <input type="date" class="form-control" id="active_date" name="active_date"
-                                            placeholder="Ngày kích hoạt">
+                                            placeholder="Ngày kích hoạt" value="{{old('active_date')}}">
                                     </div>
-
+                                    @error('active_date')
+                                    <p style=" color:red">{{$message}}</p>
+                                    @enderror
                             </div><!-- end col -->
 
                             <div class="col-xl-6">
                                 <div class="form-group">
                                     <label for="">Tổng tiền</label>
                                     <input type="member" id="total_package" class="form-control"
-                                        placeholder="Tổng tiền khách phải thanh toán" name='total_package'>
+                                        placeholder="Tổng tiền khách phải thanh toán" name='total_package'
+                                        value="{{old('total_package')}}">
                                 </div>
+                                @error('total_package')
+                                <p style=" color:red">{{$message}}</p>
+                                @enderror
                                 <div class="form-group">
                                     <label for="">Số tiền khách trả</label>
                                     <input type="member" id="customers_pay" class="form-control"
-                                        placeholder="Số tiền khách đã thanh toán" name='customers_pay'>
+                                        placeholder="Số tiền khách đã thanh toán" name='customers_pay'
+                                        value="{{old('customers_pay')}}">
                                 </div>
+                                @error('customers_pay')
+                                <p style=" color:red">{{$message}}</p>
+                                @enderror
                                 <div class="form-group">
                                     <label for="">Phương thức thanh toán</label>
-                                    <select class="form-control" id="pay_method" name="pay_method">
+                                    <select class="form-control" id="pay_method" name="pay_method"
+                                        value="{{old('pay_method')}}">
                                         <option value=""></option>
-                                        <option value="0">Tiền Mặt</option>
-                                        <option value="1">Chuyển khoản</option>
+                                        <option value="Tiền mặt">Tiền Mặt</option>
+                                        <option value="Chuyển khoản">Chuyển khoản</option>
                                     </select>
                                 </div>
+                                @error('pay_method')
+                                <p style="color:red">{{$message}}</p>
+                                @enderror
                                 <button type="submit" class="btn btn-primary">Submit</button>
                             </div>
 

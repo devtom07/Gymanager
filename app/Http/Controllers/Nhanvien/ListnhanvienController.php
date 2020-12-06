@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers\Nhanvien;
+use App\User;
 use Illuminate\Http\Request;
 use App\Http\Requests\ValidateAddStaff;
 use App\Http\Controllers\Controller;
@@ -100,6 +101,7 @@ class ListnhanvienController extends Controller
     }
     public function destroy($id)
     {
+        User::where('staff_id',$id)->delete();
         Staff::find($id)->delete();
         Alert()->success('thành công','bạn đã xóa nhân viên thành công');
         return back();
