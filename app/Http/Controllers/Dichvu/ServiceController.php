@@ -3,10 +3,10 @@
 namespace App\Http\Controllers\Dichvu;
 
 use App\Http\Controllers\Controller;
+use App\Models\Package;
 use App\Models\Staff;
 use Illuminate\Http\Request;
 use App\Models\Service;
-use App\Models\Packages;
 use App\Customer;
 use App\Http\Requests\ValidateFormAddService;
 use App\Http\Requests\ValidateFormEditService;
@@ -25,7 +25,7 @@ class ServiceController extends Controller
     public function create()
     {
         $staff = Staff::where('title','pt')->get();
-        $data_packages = Packages::all();
+        $data_packages = Package::all();
          $data = Customer::all();
         return view('admin.service.add',compact('data','data_packages','staff'));
     }
