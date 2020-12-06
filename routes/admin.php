@@ -85,7 +85,7 @@ Route::get('/logout','AuthurController@logout')->name('logout');
             ->name('listnhanvien.add')
             ->middleware(['permission:Thêm nhân viên']);
         Route::get('/chi-tiet-nhan-vien/{id}','Nhanvien\ListnhanvienController@show')
-        ->name('staff.show');
+            ->name('staff.show');
         Route::post('/them-nhan-vien/post','Nhanvien\ListnhanvienController@store')
             ->name('listnhanvien.store')
             ->middleware(['permission:Thêm nhân viên']);
@@ -138,7 +138,27 @@ Route::get('/logout','AuthurController@logout')->name('logout');
              ->name('customer.update');
          Route::get('xoakhachhang/{id}','CustomerController@destroy')
              ->name('customer.delete');
-       //pt-level
+       //pt
+        Route::get('/PT','PT\PtController@index')
+            ->name('listpt')
+            ->middleware(['permission:Xem pt']);
+        Route::get('/them-pt','PT\PtController@create')
+            ->name('pt.add')
+            ->middleware(['permission:Thêm pt']);
+        Route::post('/them-pt/post','PT\PtController@store')
+            ->name('pt.store')
+            ->middleware(['permission:Thêm pt']);
+        Route::get('/chi-tiet-pt/{id}','PT\PtController@show')
+            ->name('pt.show');
+        Route::get('/sua-pt/{id}','PT\PtController@edit')
+            ->name('pt.edit')
+            ->middleware(['permission:Sửa pt']);
+        Route::post('/sua-pt/{id}','PT\PtController@update')
+            ->name('pt.update')
+            ->middleware(['permission:Sửa pt']);
+        Route::get('/xoa/{id}','PT\PtController@destroy')
+            ->name('pt.delete')
+            ->middleware(['permission:Xóa pt']);
 
 
 

@@ -392,6 +392,18 @@
 
                             </ul>
                         </li>
+                        <li>
+                            <a href="javascript: void(0);">
+                                <i class="mdi mdi-account-multiple"></i>
+                                <span> PT </span>
+                                {{--                                <span class="badge badge-danger badge-pill float-right">New</span>--}}
+                            </a>
+                            <ul class="nav-second-level" aria-expanded="false">
+                                <li><a href="{{route('listpt')}}">Danh sách PT</a></li>
+                                {{-- <li><a href="#">Dịch vụ</a></li> --}}
+
+                            </ul>
+                        </li>
                     </ul>
 
                 </div>
