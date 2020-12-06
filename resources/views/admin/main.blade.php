@@ -20,6 +20,9 @@
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.css">
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
     <meta name="csrf-token" content="{{ csrf_token() }}">
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 </head>
 
 <style>
@@ -333,20 +336,6 @@
                     </button>
                 </li>
 
-                <li class="d-none d-sm-block">
-                    <form class="app-search">
-                        <div class="app-search-box">
-                            <div class="input-group">
-                                <input type="text" class="form-control" placeholder="Search...">
-                                <div class="input-group-append">
-                                    <button class="btn" type="submit">
-                                        <i class="fas fa-search"></i>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </form>
-                </li>
 
 
             </ul>
@@ -418,10 +407,7 @@
                                 <span> PT </span>
                             </a>
                             <ul class="nav-second-level" aria-expanded="false">
-                                <li><a href="{{route('pt.index')}}">Lịch Tập</a></li>
-                            </ul>
-                            <ul class="nav-second-level" aria-expanded="false">
-                                <li><a href="{{route('pt.index')}}">Đăng kí PT</a></li>
+                                <li><a href="{{route('pt.index')}}">Thông tin PT</a></li>
                             </ul>
                         </li>
                         <li>
@@ -476,6 +462,38 @@
                                     <li><a href="{{route('calamviec')}}">Ca làm việc</a></li>
                                     <li><a href="{{route('calamviecnhanvien')}}">Ca làm việc nhân viên</a></li>
                                 </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- End Sidebar -->
+
+                    <div class="clearfix"></div>
+
+                </div>
+            @elseif($user->hasAnyRole('pt'))
+                <div class="slimscroll-menu">
+                    <!--- Sidemenu -->
+                    <div id="sidebar-menu">
+
+                        <ul class="metismenu" id="side-menu">
+
+                            <li class="menu-title">Gymmanager</li>
+
+                            <li>
+                                <a href="{{route('dashboard')}}">
+                                    <i class="mdi mdi-view-dashboard"></i>
+                                    <span> Dashboard </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript: void(0);">
+                                    <i class="mdi mdi-teach"></i>
+                                    <span> PT </span>
+                                </a>
+                                <ul class="nav-second-level" aria-expanded="false">
+                                    <li><a href="{{route('pt.index')}}">Thông tin PT</a></li>
+                                </ul>
+
                             </li>
                         </ul>
                     </div>
