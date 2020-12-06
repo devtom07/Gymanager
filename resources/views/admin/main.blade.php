@@ -20,7 +20,6 @@
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.css">
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 </head>
@@ -401,15 +400,15 @@
 
                             </ul>
                         </li>
-                        <li>
-                            <a href="javascript: void(0);">
-                                <i class="mdi mdi-teach"></i>
-                                <span> PT </span>
-                            </a>
-                            <ul class="nav-second-level" aria-expanded="false">
-                                <li><a href="{{route('pt.index')}}">Thông tin PT</a></li>
-                            </ul>
-                        </li>
+{{--                        <li>--}}
+{{--                            <a href="javascript: void(0);">--}}
+{{--                                <i class="mdi mdi-teach"></i>--}}
+{{--                                <span> PT </span>--}}
+{{--                            </a>--}}
+{{--                            <ul class="nav-second-level" aria-expanded="false">--}}
+{{--                                <li><a href="{{route('pt.index')}}">Thông tin PT</a></li>--}}
+{{--                            </ul>--}}
+{{--                        </li>--}}
                         <li>
                             <a href="javascript: void(0);">
                                 <i class="mdi mdi-reflect-vertical"></i>

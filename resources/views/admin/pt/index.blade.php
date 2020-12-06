@@ -2,7 +2,7 @@
 @section('title', 'PT')
 @section('content')
         <h2>Thông tin PT</h2>
-        <div style="margin-top: 100px" class="page-content page-container" id="page-content">
+        <div style="margin-top: 100px;" class="page-content page-container" id="page-content">
                 @foreach($pt as $pts)
             <div class="padding">
                 <div class="row container d-flex justify-content-center">
