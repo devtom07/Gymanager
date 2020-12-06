@@ -29,6 +29,7 @@ class PackageRequest extends FormRequest
             'price'=>'required',
             'end_date'=>'required|date|after:date_start',
             'desc'=>'required',
+            'id_catap'=>'required',
             'free_service'=>'required'
         ];
     }
@@ -50,6 +51,7 @@ class PackageRequest extends FormRequest
             'price'=>'Giá',
             'end_date'=>'ngày kết thúc',
             'desc'=>'mô tả',
+            'id_catap'=>'ca tap',
             'free_service'=>'dịch vụ miễn phí'
         ];
     }
