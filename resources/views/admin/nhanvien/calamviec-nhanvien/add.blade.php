@@ -63,7 +63,7 @@
                                     @enderror
                                     <div class="form-group">
                                         <label for="exampleInputPassword1">Chu kỳ (*)</label>
-                                        {{-- <input type="text" name="cycle"> --}}
+                                        <!-- <input type="text" name="cycle"> -->
                                         <select class="form-control" name="cycle" id="chuki" onclick="clickDate()">
                                             <option value="week">Tuần</option>
                                             <option value="month">Tháng</option>
