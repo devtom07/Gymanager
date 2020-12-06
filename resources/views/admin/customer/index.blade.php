@@ -63,7 +63,7 @@
                                        <td data-org-colspan="1" data-priority="1" data-columns="tech-companies-1-col-1">{{$customer->name}}</td>
                                        <td data-org-colspan="1" data-priority="1" data-columns="tech-companies-1-col-1">{{$customer->phone}}</td>
                                        @foreach($customer->services as $service)
-                                       <td data-org-colspan="1" data-priority="3" data-columns="tech-companies-1-col-2">Giảm cân</td>
+                                       <td data-org-colspan="1" data-priority="3" data-columns="tech-companies-1-col-2">{{$service->name}}</td>
                                        <td data-org-colspan="1" data-priority="1" data-columns="tech-companies-1-col-3">{{$service->total_package}}</td>
                                        <td id="days" data-org-colspan="1" data-priority="3" data-columns="tech-companies-1-col-4"></td>
                                        <td data-org-colspan="1" data-priority="3" data-columns="tech-companies-1-col-5">{{$service->start_date}}</td>

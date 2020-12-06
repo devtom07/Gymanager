@@ -24,6 +24,7 @@ class ValidateFormAddService extends FormRequest
     public function rules()
     {
         return [
+            'name' => 'required:name',
             'id_package' => 'required:id_package',
             'id_customer' => 'required:id_customer ',
             'id_coach' => 'required:id_coach',
@@ -47,6 +48,7 @@ class ValidateFormAddService extends FormRequest
     public function attributes()
     {
         return [
+            'name' => 'Tên',
             'id_package' => 'Gói cước',
             'id_customer' => 'Tên khách hàng',
             'id_coach' => 'Tên huấn luyện viên',

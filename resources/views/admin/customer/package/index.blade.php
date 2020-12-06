@@ -86,7 +86,7 @@
                                             từ {{ $packages->start_date}} đến {{ $packages->end_date}}
                                           </td>
                                           <td data-org-colspan="1" data-priority="3" data-columns="tech-companies-1-col-5">
-                                             {{ $packages->hymnal->name}}
+                                             {{$packages->hymnal->name}}
                                           </td>
                                           <td data-org-colspan="1" data-priority="3" data-columns="tech-companies-1-col-4">
                                              <button type="button" class="btn btn-success btn-rounded waves-effect waves-light">

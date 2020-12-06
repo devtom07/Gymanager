@@ -592,19 +592,14 @@
     <!-- Vendor js -->
     <script src="{{url('admin')}}/js/vendor.min.js"></script>
 
-    <!--Morris Chart-->
-{{--    <script src="{{url('admin')}}/libs/morris-js/morris.min.js"></script>--}}
     <script src="{{url('admin')}}/libs/raphael/raphael.min.js"></script>
 
-    <!-- Dashboard init js-->
-{{--    <script src="{{url('admin')}}/js/pages/dashboard.init.js"></script>--}}
 
-    <!-- App js -->
     <script src="{{url('admin')}}/js/app.min.js"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="{{asset('admin/js/user/user.js')}}"></script>
     <script src="{{asset('admin/js/customer/showCustomer.js')}}"></script>
-
+    <script src="{{asset('admin/js/service/addService.js')}}"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js" type="text/javascript"

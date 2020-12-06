@@ -34,6 +34,7 @@ class ServiceController extends Controller
     public function store(ValidateFormAddService $request)
     {
         $service = new Service;
+        $service->name = $request->name;
         $service->id_package = $request->id_package;
         $service->id_customer = $request->id_customer;
         $service->id_coach = $request->id_coach;
@@ -71,6 +72,7 @@ class ServiceController extends Controller
     public function update(ValidateFormEditService $request, $id)
     {
         $service = new Service;
+        $service->name = $request->name;
         $arr['id_package'] = $request->id_package;
         $arr['id_customer'] = $request->id_customer;
         $arr['id_coach'] = $request->id_coach;

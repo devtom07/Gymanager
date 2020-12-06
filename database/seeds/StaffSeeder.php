@@ -33,7 +33,6 @@ class StaffSeeder extends Seeder
             'wage' => '1000000',
             'title' => 'Quản lý khách hàng',
 
-
         ]);
         DB::table('staffs')->insert([
             'code' => substr(md5(microtime()), rand(0, 26), 5),
