@@ -58,9 +58,7 @@
                                        @foreach($listStaffs as $key => $staffs)
                                        <tr>
                                           <th data-org-colspan="1" data-columns="tech-companies-1-col-0">{{$key+1}}</th>
-                                          <td data-org-colspan="1" data-priority="1" data-columns="tech-companies-1-col-1">
-                                             {{ $staffs->code}}
-                                          </td>
+
                                           <td data-org-colspan="1" data-priority="1" data-columns="tech-companies-1-col-1">
                                              <span class="co-name">
                                                 {{ $staffs->name}}
