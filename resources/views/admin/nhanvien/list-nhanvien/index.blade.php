@@ -59,6 +59,9 @@
                                        <tr>
                                           <th data-org-colspan="1" data-columns="tech-companies-1-col-0">{{$key+1}}</th>
                                           <td data-org-colspan="1" data-priority="1" data-columns="tech-companies-1-col-1">
+                                             {{ $staffs->code}}
+                                          </td>
+                                          <td data-org-colspan="1" data-priority="1" data-columns="tech-companies-1-col-1">
                                              <span class="co-name">
                                                 {{ $staffs->name}}
                                              </span>
@@ -73,7 +76,7 @@
                                              {{ $staffs->address}}
                                           </td>
                                           <td data-org-colspan="1" data-priority="3" data-columns="tech-companies-1-col-5">
-                                             {{ $staffs->title}}
+                                             {{ $staffs->position}}
                                           </td>
                                           <td data-org-colspan="1" data-priority="6" data-columns="tech-companies-1-col-6">
                                              {{ $staffs->contract}}
