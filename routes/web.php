@@ -16,5 +16,13 @@ use Illuminate\Support\Facades\Route;
 // Route::get('/', function () {
 //     return view('welcome');
 // });
+// dao dien customers
+
+
+Route::get('/khach-hang','CustomerInterface\HomeController@index');
+Route::get('/login-khach-hang','CustomerInterface\LoginController@index');
+Route::get('/profile-khach-hang','CustomerInterface\HomeController@profile');
+
+
 require_once 'admin.php';
 require_once 'fontend.php';
