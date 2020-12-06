@@ -25,15 +25,15 @@ class ValidateAddStaff extends FormRequest
     {
         return [
             'name' => 'required',
+            'gender' =>'required',
             'status'=>'required',
-            'avatar' => 'required ',
+            'avatar' => 'required|image|mimes:jpeg,png,jpg',
             'phone' => 'required|min:10|max:11|regex:[^[0-9\-\+]{9,15}$]',
             'email' => 'required||unique:staffs,email|email',
             'address' => 'required',
             'contract' => 'required',
             'wage' => 'required',
-            'title' => 'required',
-
+            'position' => 'required',
         ];
     }
     public function messages()
@@ -59,8 +59,8 @@ class ValidateAddStaff extends FormRequest
             'address' => 'Địa chỉ',
             'contract' => 'Loại hợp đồng',
             'wage'=>'Mức lương',
-            'title' => 'Chức vụ',
-            'status' => 'Không được để trống'
+            'position' => 'Chức vụ',
+            'status' => 'Trạng thái'
         ];
     }
 }

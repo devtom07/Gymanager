@@ -30,6 +30,10 @@
                             <div class="row">
                                 <div class="col-xl-6">
                                     <div class="form-group">
+                                        <label for="exampleInputEmail1">Ma nhan vien (*)</label>
+                                        <input type="text" class="form-control" name="code" id="exampleInputEmail1" placeholder="Ma nhan vien">
+                                    </div>
+                                    <div class="form-group">
                                         <label for="exampleInputEmail1">Họ và tên (*)</label>
                                         <input type="text" class="form-control" name="name" id="exampleInputEmail1" placeholder="Họ và tên">
                                     </div>
@@ -37,9 +41,15 @@
                                             <p style="color:red">{{$message}}</p>
                                     @enderror
                                     <div class="form-group">
+                                        <label>Giới tính</label>
+                                        <select class="form-control" id="exampleSelect1" name="gender">
+                                            <option value="Nam">Nam</option>
+                                            <option value="Nữ">Nữ</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
                                         <label for="exampleInputEmail1">Ảnh đại diện (*)</label>
                                         <input type="file" class="form-control" name="avatar" id="exampleInputEmail1" placeholder="">
-                                        {{-- <img src="public/admin/images" alt=""> --}}
                                     </div>
                                     @error('avatar')
                                     <p style="color:red">{{$message}}</p>
@@ -51,10 +61,9 @@
                                     @error('phone')
                                             <p style="color:red">{{$message}}</p>
                                     @enderror
-
                                     <div class="form-group">
                                         <label>Trạng thái</label>
-                                        <div class="mt-4" name="status">
+                                        <div class="mt-4">
                                             <div class="radio radio-info form-check-inline">
                                                 <input type="radio" id="inlineRadio1" value="Đi làm" name="status" checked>
                                                 <label for="inlineRadio1">Đang làm </label>
@@ -64,9 +73,6 @@
                                                 <label for="inlineRadio2">Nghỉ việc</label>
                                             </div>
                                         </div>
-                                        @error('status')
-                                        <p style="color:red">{{$message}}</p>
-                                        @enderror
                                     </div>
                                 </div>
                                 <div class="col-xl-6">
@@ -87,11 +93,8 @@
                                     <div class="form-group">
                                         <label>Loại hợp đồng (*)</label>
                                         <select class="form-control" id="exampleSelect1" name="contract">
-                                            <option></option>
-                                            <option value="hợp đồng lao động">Hợp đồng lao động</option>
-                                            <option value="thực tập">Thực tập</option>
-                                            <option value="hợp đồng pt">Hợp đồng PT</option>
-                                            <option value="hợp đồng nhân viên">Hợp đồng nhân viên</option>
+                                            <option value="Chính thức">Chính thức</option>
+                                            <option value="Thử việc">Thử việc</option>
                                         </select>
                                     </div>
                                     @error('contract')
@@ -106,11 +109,12 @@
                                     @enderror
                                     <div class="form-group">
                                         <label>Chức danh</label>
-                                        <select class="form-control" id="exampleSelect1" name="title">
-                                            <option></option>
-                                            <option value="Marketing">Maketing</option>
-                                            <option value="Ke toan">Kế toán</option>
-                                            <option>Nhân viên lễ tân</option>
+                                        <select class="form-control" id="exampleSelect1" name="position">
+                                            @foreach ($listPosition as $item)
+                                                <option value="{{$item->id}}">
+                                                    {{ $item->name}}  
+                                                </option>
+                                            @endforeach
                                         </select>
                                     </div>
                                     @error('title')
