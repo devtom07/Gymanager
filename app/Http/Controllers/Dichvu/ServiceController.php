@@ -24,7 +24,7 @@ class ServiceController extends Controller
 
     public function create()
     {
-        $staff = Staff::where('title','pt')->get();
+        $staff = Staff::where('position','pt')->get();
         $data_packages = Package::all();
          $data = Customer::all();
         return view('admin.service.add',compact('data','data_packages','staff'));

@@ -393,22 +393,33 @@
                             </a>
                             <ul class="nav-second-level" aria-expanded="false">
                                 <li><a href="{{route('customer')}}">Danh sách khách hàng</a></li>
-                                <li><a href="{{route('service')}}">Dịch vụ</a></li>
+                                <li><a href="{{ route('package.index') }}">Lịch tập</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="javascript: void(0);">
+                                <i class="mdi mdi-teach"></i>
+                                <span>Chương trình PT</span>
+                            </a>
+                            <ul class="nav-second-level" aria-expanded="false">
+                                <li><a href="{{route('pt.index')}}">Đăng ký </a></li>
+                                <li><a href="{{route('pt.index')}}">Xem thông tin PT</a></li>
+
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="javascript: void(0);">
+                                <i class="mdi mdi-package"></i>
+                                <span>Dịch vụ</span>
+                            </a>
+                            <ul class="nav-second-level" aria-expanded="false">
+                                <li><a href="{{route('service')}}"> Xem dịch vụ</a></li>
                                 <li><a href="{{route('hymnal.index')}}">Ca tập</a></li>
                                 <li><a href="{{ route('package.index') }}">Gói cước</a></li>
 
 
                             </ul>
                         </li>
-{{--                        <li>--}}
-{{--                            <a href="javascript: void(0);">--}}
-{{--                                <i class="mdi mdi-teach"></i>--}}
-{{--                                <span> PT </span>--}}
-{{--                            </a>--}}
-{{--                            <ul class="nav-second-level" aria-expanded="false">--}}
-{{--                                <li><a href="{{route('pt.index')}}">Thông tin PT</a></li>--}}
-{{--                            </ul>--}}
-{{--                        </li>--}}
                         <li>
                             <a href="javascript: void(0);">
                                 <i class="mdi mdi-reflect-vertical"></i>

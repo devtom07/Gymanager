@@ -11,7 +11,7 @@
                             <div class="row m-l-0 m-r-0">
                                 <div class="col-sm-4 bg-c-lite-green user-profile">
                                     <div class="card-block text-center text-white">
-                                        <div class="m-b-25"> <img src="{{asset('/staff/'.$pts->staff->avatar)}}" class="img-radius" alt=""> </div>
+                                        <div class="m-b-25"> <img width="150px" src="{{asset('/staff/'.$pts->staff->avatar)}}" class="img-radius" alt=""> </div>
                                         <h6 class="f-w-600">{{$pts->staff->name}}</h6>
                                         <p>{{$pts->staff->code}}</p> <i class=" mdi mdi-square-edit-outline feather icon-edit m-t-10 f-16"></i>
                                     </div>
