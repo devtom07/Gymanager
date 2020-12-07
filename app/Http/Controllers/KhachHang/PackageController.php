@@ -35,13 +35,14 @@ class PackageController extends Controller
 		// dd($package);
 		
 		$package->save();
-		// dd($package);
-    	return redirect()->route('package.index')->with('thongbao', 'thêm thành công!!');
+        Alert()->success('Thành công','Thêm gói cước thành công');
+    	return redirect()->route('package.index');
 
     }
     public function edit($id){
     	$package=Package::find($id);
-    	return view('admin.customer.package.edit',compact('package'));
+    	$catap = Hymnal::all();
+    	return view('admin.customer.package.edit',compact('package','catap'));
     }
     public function update(PackageRequest $request,$id){
     	$package=Package::find($id);
@@ -55,12 +56,13 @@ class PackageController extends Controller
     	$package->start_date=$request->start_date;
     	$package->end_date=$request->end_date;
     	$package->update();
-    	return redirect()->route('package.index')->with('thongbao', 'sửa thành công!!');
+        Alert()->success('Thành công','Cập nhật gói cước thành công');
+        return redirect()->route('package.index');
 
     }
     public function delete($id){
     	$package=Package::find($id);
     	$package->delete();
-    	return back()->with('thongbao','xóa thành công');
-    }
+        Alert()->success('Thành công','Xóa gói cước thành công');
+        return redirect()->route('package.index');    }
 }
