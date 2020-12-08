@@ -193,12 +193,32 @@ Route::get('/logout','AuthurController@logout')->name('logout');
              ->name('pt.add');
 
        //pt-level
-        Route::get('goi-cuoc','KhachHang\PackageController@index')->name('package.index');
-        Route::get('them-goi-cuoc','KhachHang\PackageController@create')->name('package.create');
-        Route::post('them-goi-cuoc','KhachHang\PackageController@add')->name('package.add');
-        Route::get('sua-goi-cuoc/{id}','KhachHang\PackageController@edit')->name('package.edit');
-        Route::post('sua-goi-cuoc/{id}','KhachHang\PackageController@update')->name('package.edit');
-        Route::get('xoa-goi-cuoc/{id}','KhachHang\PackageController@delete')->name('package.delete');
-
+        Route::get('goi-cuoc','KhachHang\PackageController@index')
+            ->name('package.index');
+        Route::get('them-goi-cuoc','KhachHang\PackageController@create')
+            ->name('package.create');
+        Route::post('them-goi-cuoc','KhachHang\PackageController@add')
+            ->name('package.add');
+        Route::get('sua-goi-cuoc/{id}','KhachHang\PackageController@edit')
+            ->name('package.edit');
+        Route::post('sua-goi-cuoc/{id}','KhachHang\PackageController@update')
+            ->name('package.edit');
+        Route::get('xoa-goi-cuoc/{id}','KhachHang\PackageController@delete')
+            ->name('package.delete');
          });
+       //Pt-program
+     Route::get('/chuong-trinh-PT','PT\PtProgramController@index')
+         ->name('ptProgram.index');
+     Route::get('/them-chuong-trinh-PT','PT\PtProgramController@add')
+         ->name('ptProgram.add');
+     Route::post('/them-chuong-trinh-PT','PT\PtProgramController@store')
+         ->name('ptProgram.store');
+     Route::get('/sua-chuong-trinh-PT/{id}','PT\PtProgramController@edit')
+         ->name('ptProgram.edit');
+     Route::post('/cap-nhat-chuong-trinh-PT/{id}','PT\PtProgramController@update')
+         ->name('ptProgram.update');
+     Route::get('/xoa-chuong-trinh-PT/{id}','PT\PtProgramController@destroy')
+         ->name('ptProgram.delete');
+     Route::get('getPackage/{id}','PT\PtProgramController@getPackage')
+         ->name('ptProgram.getPacket');
 });
