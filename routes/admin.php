@@ -100,9 +100,23 @@ Route::get('/logout','AuthurController@logout')->name('logout');
         Route::post('/sua-nhan-vien/post/{id}','Nhanvien\ListnhanvienController@update')
             ->name('staff.update')
             ->middleware(['permission:Sửa nhân viên']);
-        Route::get('/nhanvien/xoa/{id}','Nhanvien\ListnhanvienController@destroy')
-            ->name('staff.delete')
-            ->middleware(['permission:Xóa nhân viên']);
+        Route::get('/staff-delete/{id}','Nhanvien\ListnhanvienController@destroy')->name('deleteStaff');
+        // Route::get('/nhanvien/xoa/{id}','Nhanvien\ListnhanvienController@destroy')
+        // ->name('staff.delete')
+        // ->middleware(['permission:Xóa nhân viên']);
+        // chức vụ
+        Route::get('/chuc-vu','Nhanvien\PositionController@index')
+            ->name('listposition');
+        Route::get('/them-chuc-vu','Nhanvien\PositionController@create')
+            ->name('position.add');
+        Route::post('/them-chuc-vu/post','Nhanvien\PositionController@store')
+            ->name('position.store');
+        Route::get('/sua-chuc-vu/{id}','Nhanvien\PositionController@edit')
+            ->name('position.edit');
+        Route::post('/sua-chuc-vu/post/{id}','Nhanvien\PositionController@update')
+            ->name('position.update');
+        Route::get('/chuc-vu-xoa/{id}','Nhanvien\PositionController@destroy')
+            ->name('position.delete');
         // Ca làm việc
         Route::get('/calamviec','Nhanvien\CalamviecController@index')
             ->name('calamviec');

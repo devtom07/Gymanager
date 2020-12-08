@@ -64,7 +64,7 @@
                                     <div class="form-group">
                                         <label>Trạng thái</label>
                                         <div class="mt-4">
-                                            <div class="radio radio-info form-check-inline">
+                                            <div class="radio radio-info form-check-inline col-md-3">
                                                 <input type="radio" id="inlineRadio1" value="Đi làm" name="status" checked>
                                                 <label for="inlineRadio1">Đang làm </label>
                                             </div>

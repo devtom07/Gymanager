@@ -38,7 +38,6 @@
                                             <select class="form-control" id="id_package" name="id_package"
                                                     value="{{old('id_package')}}">
                                                 <option value=""></option>
-
                                             </select>
                                         </div>
                                         @error('id_package')
@@ -49,7 +48,6 @@
                                             <select class="form-control" id="id_customer" name="id_customer"
                                                     value="{{old('id_customer')}}">
                                                 <option value=""></option>
-
                                             </select>
                                         </div>
                                         @error('id_customer')
@@ -59,11 +57,8 @@
                                             <label for="">Tên huấn luyện viên</label>
                                             <select class="form-control" id="id_coach" name="id_coach"
                                                     value="{{old('id_coach')}}">
-
                                                 <option value=""></option>"
-
                                             </select>
-
                                         </div>
                                         @error('id_coach')
                                         <p style="color:red">{{$message}}</p>
