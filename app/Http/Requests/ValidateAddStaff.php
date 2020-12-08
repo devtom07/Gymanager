@@ -28,7 +28,7 @@ class ValidateAddStaff extends FormRequest
             'gender' =>'required',
             'status'=>'required',
             'avatar' => 'required|image|mimes:jpeg,png,jpg',
-            'phone' => 'required|min:10|max:11|regex:[^[0-9\-\+]{9,15}$]',
+            'phone' => 'required|max:11|regex:/^([0-9\s\-\+\(\)]*)$/|min:10',
             'email' => 'required||unique:staffs,email|email',
             'address' => 'required',
             'contract' => 'required',
@@ -45,7 +45,6 @@ class ValidateAddStaff extends FormRequest
             'phone.min' => 'Số điện thoại không được ít hơn 10 số',
             'phone.max' => 'Số điện thoại không được nhiều hơn 11 số',
             'phone.regex'=>'Số điện thoại không đúng định dạng',
-
         ];
     }
     public function attributes()

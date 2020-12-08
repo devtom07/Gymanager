@@ -382,7 +382,7 @@
                                 <li><a href="{{route('listnhanvien')}}">Danh sách nhân viên</a></li>
                                 <li><a href="{{route('calamviec')}}">Ca làm việc</a></li>
                                 <li><a href="{{route('calamviecnhanvien')}}">Ca làm việc nhân viên</a></li>
-
+                                <li><a href="{{route('listposition')}}">Chức vụ</a></li>
                             </ul>
                         </li>
                         <li>
