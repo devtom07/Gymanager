@@ -31,7 +31,7 @@ class AppServiceProvider extends ServiceProvider
         Gate::before(function ($user, $ability) {
             return $user->hasRole('Super Admin') ? true : null;
         });
-        view()->composer(['admin.main'],function ($view){
+        view()->composer(['admin.layout.main'],function ($view){
          $user = Auth::user();
          $view->with(['user'=>$user]);
 

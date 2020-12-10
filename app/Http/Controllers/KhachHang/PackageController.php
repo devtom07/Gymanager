@@ -14,12 +14,12 @@ class PackageController extends Controller
     public function index(){
 		$package = Package::with('hymnal')->orderBy('id','desc')->get();
 		// $catap = Hymnal::all();
-    	return view('admin.customer.package.index',compact('package'));
+    	return view('admin.package.index',compact('package'));
     }
     public function create()
     {
 		$catap = Hymnal::all();
-    	return view('admin.customer.package.add', compact('catap'));
+    	return view('admin.package.add', compact('catap'));
     }
     public function add(PackageRequest $request){
     	$package=new Package;
@@ -42,7 +42,7 @@ class PackageController extends Controller
     public function edit($id){
     	$package=Package::find($id);
     	$catap = Hymnal::all();
-    	return view('admin.customer.package.edit',compact('package','catap'));
+    	return view('admin  .package.edit',compact('package','catap'));
     }
     public function update(PackageRequest $request,$id){
     	$package=Package::find($id);

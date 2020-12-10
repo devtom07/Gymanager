@@ -7,16 +7,17 @@ $(document).ready(function (){
     url : '/getPackage/' + id,
        method : 'get',
        type:'json',
-       dataType: "json",
+       dataType: 'json',
        data:{
            'id' : id,
        },
     success :function(data){
             console.log(data)
-            $('#totalCustomer').html(data.price)
+            $('#totalCustomer').html(data[0].price)
     }
    });
 })
+
     $("#customRadio2").click(function() {
         $("#bank_account1").show();
     });

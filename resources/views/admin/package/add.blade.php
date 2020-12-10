@@ -1,4 +1,4 @@
-@extends('admin.main')
+@extends('admin.layout.main')
 @section('title', 'Tạo mới nhân viên')
 @section('content')
 <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
@@ -26,20 +26,20 @@
                 <div class="col-12">
                     <div class="card-box">
                         <h4 class="header-title mb-4">Tạo mới gói tập</h4>
-                        <form action="{{ route('package.edit', ['id'=>$package->id]) }}" method="post" enctype="multipart/form-data">
+                        <form action="{{ route('package.add') }}" method="post" enctype="multipart/form-data">
                             @csrf
                             <div class="row">
                                 <div class="col-xl-6">
                                     <div class="form-group">
                                         <label for="exampleInputEmail1">tên gói tâp(*)</label>
-                                        <input type="text" class="form-control" name="name" value="{{ $package->name }}" placeholder="">
+                                        <input type="text" class="form-control" placeholder="tên gói tập" name="name" value="{{ old('name') }}" placeholder="">
                                     </div>
                                     @error('name')
                                             <p style="color:red">{{$message}}</p>
                                     @enderror
                                     <div class="form-group">
                                         <label for="exampleInputEmail1">Giá (*)</label>
-                                        <input type="number" class="form-control" name="price" value="{{ $package->price }}" placeholder="">
+                                        <input type="number" class="form-control" placeholder="Giá" name="price" value="{{ old('price') }}" placeholder="">
                                         {{-- <img src="public/admin/images" alt=""> --}}
                                     </div>
                                     @error('price')
@@ -47,13 +47,12 @@
                                     @enderror
                                     <div class="form-group">
                                         <label for="exampleInputPassword1">Kiểu sử dụng (*)</label>
-                                        <select name="type_use" value="{{ $package->type_use }}" id="">
+                                        <select name="type_use" class="form-group" id="">
                                             <option value="theo ngày">Theo ngày</option>
                                             <option value="theo tuần">Theo tuần</option>
                                             <option value="theo tháng">Theo tháng</option>
                                         </select>
                                     </div>
-
                                     <div class="form-group">
                                         <label>Trạng thái</label>
                                         <div class="mt-4">
@@ -67,6 +66,13 @@
                                             </div>
                                         </div>
                                     </div>
+                                     <!-- <div class="form-group">
+                                        <label for="exampleInputPassword1">dịch vụ free </label>
+                                        <select class="form-group" name="free_service[]" value="{{ old('free_service') }}" id="free_service" multiple>
+                                            <option value="khăn">khăn</option>
+                                            <option value="vé xe">vé xe</option>
+                                        </select>
+                                    </div>  -->
                                     <div class="form-group">
                                         <label>Dich vu free</label><br>
                                         <input type="radio" id="male" checked name="free_service" value="Nước">
@@ -81,9 +87,10 @@
                                     @enderror
                                 </div>
                                 <div class="col-xl-6">
+                                   
                                     <div class="form-group">
                                         <label>Mô tả</label>
-                                        <input class="form-control" type="text" name="desc" value="{{ $package->desc }}" placeholder="Địa chỉ">
+                                        <input class="form-control" type="text" name="desc" value="{{ old('desc') }}" placeholder="Mô tả">
                                     </div>
                                     @error('desc')
                                             <p style="color:red">{{$message}}</p>
@@ -99,14 +106,14 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="exampleInputEmail1">Ngày bắt đầu(*)</label>
-                                        <input type="date" class="form-control" name="start_date" value="{{ $package->start_date }}" placeholder="">
+                                        <input type="date" class="form-control" name="start_date" value="{{ old('start_date') }}" placeholder="">
                                     </div>
                                     @error('start_date')
                                             <p style="color:red">{{$message}}</p>
                                     @enderror
                                     <div class="form-group">
                                         <label for="exampleInputEmail1">Ngày kết thúc(*)</label>
-                                        <input type="date" class="form-control" name="end_date" value="{{ $package->end_date }}" placeholder="">
+                                        <input type="date" class="form-control" name="end_date" value="{{ old('end_date') }}" placeholder="">
                                     </div>
                                     @error('end_date')
                                             <p style="color:red">{{$message}}</p>
