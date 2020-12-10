@@ -19,7 +19,7 @@ class DatabaseSeeder extends Seeder
             PermissionUserSeeder::class,
             StaffSeeder::class,
             UserSeeder::class,
-
+            CustomerAccountSeeder::class,
 
         ]);
     }

@@ -10,7 +10,8 @@ class HomeController extends Controller
     public function index(){
     	return view('customers.customer_training.index');
     }
-    public function profile(){
-    	return view('customers.customer_training.profile');
+    public function profile($id){
+    	$customer_account = CustomerAccount::find($id);
+    	return view('customers.customer_training.profile', compact($customer_account));
     }
 }

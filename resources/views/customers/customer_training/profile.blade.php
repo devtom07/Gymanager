@@ -144,12 +144,13 @@
                     <div class="col-md-8">
                         <div class="tab-content profile-tab" id="myTabContent">
                             <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                @foreach($customer_account as $profile)
                                         <div class="row">
                                             <div class="col-md-6">
-                                                <label>User Id</label>
+                                                <label>Tên khách hàng</label>
                                             </div>
                                             <div class="col-md-6">
-                                                <p>Kshiti123</p>
+                                                <p>{{ $profile->customer->name }}</p>
                                             </div>
                                         </div>
                                         <div class="row">
@@ -184,6 +185,7 @@
                                                 <p>Web Developer and Designer</p>
                                             </div>
                                         </div>
+                                        @endforeach
                             </div>
                             <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
                                         <div class="row">
