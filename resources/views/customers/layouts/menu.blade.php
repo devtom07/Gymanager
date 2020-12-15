@@ -25,7 +25,7 @@
                         </li>
                         {{-- @foreach($customer_account as $profile) --}}
                         <li>
-                            <a href="{{ route('profile',\Illuminate\Support\Facades\Auth::guard('customer_accounts')->id) }}">
+                            <a href="{{ route('profile',\Illuminate\Support\Facades\Auth::guard('customer_accounts')->user()->id) }}">
                                 <i class="fas fa-table"></i>Thông tin cá nhân</a>
                         </li>
                         {{-- @endforeach --}}

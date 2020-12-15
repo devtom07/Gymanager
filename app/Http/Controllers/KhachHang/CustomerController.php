@@ -1,13 +1,14 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\KhachHang;
 
-use App\Customer;
+use App\Models\Customer;
 use App\Http\Requests\ValidateFormAddCustomer;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use RealRashid\SweetAlert\Facades\Alert;
+use App\Http\Controllers\Controller;
 
 class CustomerController extends Controller
 {

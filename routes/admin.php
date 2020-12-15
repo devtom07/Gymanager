@@ -12,19 +12,19 @@ use Illuminate\Support\Facades\Route;
 |
 */
 //login
-Route::get('dangnhap','AuthurController@admin')->name('admin');
-Route::match(['post','get'],'/login','AuthurController@login')->name('login');
-Route::get('/logout','AuthurController@logout')->name('logout');
+Route::get('dangnhap','Admin\AuthurController@admin')->name('admin');
+Route::match(['post','get'],'/login','Admin\AuthurController@login')->name('login');
+Route::get('/logout','Admin\AuthurController@logout')->name('logout');
 
  Route::middleware(['auth'])->group(function (){
      Route::prefix('admin')->group(function (){
          //auth
-         Route::get('/dashboard','AdminController@index')
+         Route::get('/dashboard','Admin\AdminController@index')
              ->name('dashboard');
-         Route::get('/customer','CustomerController@index')
+         Route::get('/customer','KhachHang\CustomerController@index')
              ->name('customer');
          //Chức vụ
-         Route::get('/chucvu','RoleController@index')
+         Route::get('/chucvu','Users\RoleController@index')
              ->name('role');
          Route::get('/themchucvu','RoleController@create')
              ->name('role.add');
@@ -145,19 +145,19 @@ Route::get('/logout','AuthurController@logout')->name('logout');
         Route::get('/xoa/{id}', 'Nhanvien\WorkSiftStaffController@destroy')
             ->name('xoacalamviecvn');
         //customers
-         Route::get('khachhang','CustomerController@index')
+         Route::get('khachhang','KhachHang\CustomerController@index')
              ->name('customer.index');
-         Route::get('themkhachhang','CustomerController@add')
+         Route::get('themkhachhang','KhachHang\CustomerController@add')
              ->name('customer.add');
-         Route::get('suakhachhang/{id}','CustomerController@edit')
+         Route::get('suakhachhang/{id}','KhachHang\CustomerController@edit')
              ->name('customer.edit');
-         Route::post('themkhachhang/post','CustomerController@store')
+         Route::post('themkhachhang/post','KhachHang\CustomerController@store')
              ->name('customer.store');
-         Route::post('suakhachhang/post/{id}','CustomerController@update')
+         Route::post('suakhachhang/post/{id}','KhachHang\CustomerController@update')
              ->name('customer.update');
-         Route::get('xoakhachhang/{id}','CustomerController@destroy')
+         Route::get('xoakhachhang/{id}','KhachHang\CustomerController@destroy')
              ->name('customer.delete');
-         Route::get('GetCustomer/{id}','CustomerController@show')
+         Route::get('GetCustomer/{id}','KhachHang\CustomerController@show')
              ->name('customer.show');
         //Dịch vụ
          Route::get('/dich-vu','Dichvu\ServiceController@index')
