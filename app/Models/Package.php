@@ -9,15 +9,10 @@ class Package extends Model
     protected $table = 'packages';
     protected $primaryKey = 'id';
     protected $guarded =[];
-<<<<<<< HEAD
     public function hymnal(){
         return $this->hasOne(Hymnal::class, 'id', 'id_catap');
     }
-}
-=======
-
-    public function hymnal(){
-        return $this->hasOne(Hymnal::class, 'id', 'id_catap');
+    public function service(){
+    	return $this->belongsTo(Service::class);
     }
 }
->>>>>>> 6384bb357b7ad29d653c5497975eea14bfdd40f5

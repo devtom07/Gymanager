@@ -16,4 +16,7 @@ class Service extends Model
    public function customer(){
            return $this->belongsTo(Customer::class,'id_customer','id');
    }
+   public function package(){
+   	return $this->belongsTo(Package::class,'id_package','id');
+   }
 }
