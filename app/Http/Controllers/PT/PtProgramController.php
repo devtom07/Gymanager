@@ -36,30 +36,30 @@ class PtProgramController extends Controller
     }
     public function store(ValidatePtProgram $request){
 
-        for ($i=1; $i<count($request->schedule);$i++){
-            $schedule[] = [
-                $request->schedule[$i],
-            ];
-        }
+      $schedule = $request->schedule;
+      $count = count($schedule);
+
     DB::beginTransaction();
-        PtProgram::create([
+        for($i = 0; $i < $count; $i++){
+            PtProgram::create([
             'customer_id' => $request->customer,
             'day_contract' => $request->day_contract,
             'number_sessions' => $request->number_sessions,
-            'total ' => $request->total,
+            'total' => $request->total,
             'money_paid' => $request->money_paid,
             'start_date' => $request->start_date,
             'status' => $request->status,
             'pt_id' => $request->pt,
             'contract_code' => $request->contract_code,
             'time' => $request->time,
-            'pay' => $request->pay,
+            'pay' => $request->customRadio,
             'bank_account' => $request->bank_account,
             'still_owe' => $request->still_owe,
             'end_date' => $request->end_date,
             'package_id' => $request->package,
-            'schedule' =>$schedule
+            'schedule' => $schedule[$i]
         ]);
+    }
         DB::commit();
     }
     public function update(){
