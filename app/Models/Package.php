@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Models;
-use App\Hymnal;
+use App\Models\Hymnal;
 use Illuminate\Database\Eloquent\Model;
 
 class Package extends Model

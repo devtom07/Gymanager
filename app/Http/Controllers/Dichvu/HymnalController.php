@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Dichvu;
 
 use App\Http\Requests\ValidateFormHymnal;
 use App\Http\Requests\ValidateFormHymnalupdate;
-use App\Hymnal;
+use App\Models\Hymnal;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 

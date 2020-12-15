@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\KhachHang;
 
-use App\Hymnal;
+use App\Models\Hymnal;
 use App\Models\Package;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;

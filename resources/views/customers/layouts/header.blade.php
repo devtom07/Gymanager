@@ -15,7 +15,7 @@
                                             <img src="{{asset('admin')}}/images/logogym.gif" alt="" width="50px">
                                         </div>
                                         <div class="content">
-                                            <a class="js-acc-btn" href="#">john doe</a>
+                                            <a class="js-acc-btn" href="#">{{ \Illuminate\Support\Facades\Auth::guard('customer_accounts')->user()->name }}</a>
                                         </div>
                                         <div class="account-dropdown js-dropdown">
                                             <div class="info clearfix">
@@ -26,9 +26,9 @@
                                                 </div>
                                                 <div class="content">
                                                     <h5 class="name">
-                                                        <a href="#">john doe</a>
+                                                        <a href="#">{{ \Illuminate\Support\Facades\Auth::guard('customer_accounts')->user()->name }}</a>
                                                     </h5>
-                                                    <span class="email">johndoe@example.com</span>
+                                                    <span class="email">{{ \Illuminate\Support\Facades\Auth::guard('customer_accounts')->user()->email }}</span>
                                                 </div>
                                             </div>
   {{--                                           <div class="account-dropdown__body">

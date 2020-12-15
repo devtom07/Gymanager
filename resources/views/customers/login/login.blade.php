@@ -13,10 +13,10 @@
                         <form action="{{route('loginCustomer')}}" method="post">
                             @csrf
                                 <div class="form-group">
-                                    <label>Name accounts</label>
-                                    <input class="au-input au-input--full" type="text" name="name" placeholder="Name accounts" value="{{ old('name') }}">
+                                    <label>Email</label>
+                                    <input class="au-input au-input--full" type="text" name="email" placeholder="Name accounts" value="{{ old('email') }}">
                                 </div>
-                                @error('name')
+                                @error('email')
                                 <p style="color:red">{{$message}}</p>
                                 @enderror
                                 <div class="form-group">

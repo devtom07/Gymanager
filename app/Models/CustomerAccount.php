@@ -20,7 +20,7 @@ class CustomerAccount extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'password','status','id_customer'
+        'name', 'email', 'password','status','id_customer'
     ];
 
     /**
@@ -41,7 +41,7 @@ class CustomerAccount extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
     public function customer(){
-        return $this->hasOne('App\Customer');
+        return $this->hasOne(Customer::class,'id','id_customer');
     }
 
 }

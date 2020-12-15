@@ -7,7 +7,7 @@ use App\Models\Package;
 use App\Models\Staff;
 use Illuminate\Http\Request;
 use App\Models\Service;
-use App\Customer;
+use App\Models\Customer;
 use App\Http\Requests\ValidateFormAddService;
 use App\Http\Requests\ValidateFormEditService;
 

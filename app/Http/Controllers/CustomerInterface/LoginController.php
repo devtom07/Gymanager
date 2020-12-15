@@ -23,13 +23,14 @@ class LoginController extends Controller
 
     public function loginCustomer(loginCustomerRequest $request){
         $login=[
-            'name' => $request->name,
+            'email' => $request->email,
             'password' => $request->password,
         ];
         if (Auth::guard('customer_accounts')->attempt($login,$request->remember)) {
             return redirect()->route('khachhang.index');
         }
-            return redirect(route('loginCustomer'));
+            Session::put('message','Gmail hoặc mật khẩu không chính xác');
+            return redirect(route('loginCustomer'))->with('message', 'Gmail hoặc mật khẩu không chính xác');
     }
 
     public function logoutCustomer(){
