@@ -1,4 +1,4 @@
-@extends('admin.main')
+@extends('admin.layout.main')
 @section('title', 'PT')
 @section('content')
         <h2>Thông tin PT</h2>

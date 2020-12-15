@@ -33,7 +33,11 @@
 
     <!-- Main CSS-->
     <link href="customers/css/theme.css" rel="stylesheet" media="all">
-
+    {{-- <style>
+        li a .active{
+            color: blue !important;
+        } 
+    </style> --}}
 </head>
 
 <body class="animsition">
@@ -199,6 +203,12 @@
 
     <!-- Main JS-->
     <script src="customers/js/main.js"></script>
+    {{-- <script>
+        $(.nav li a).click(function(){
+            $(this).addClass('active').siblings().removeClass('active');
+        })
+    </script> --}}
+    
 </body>
 
 </html>

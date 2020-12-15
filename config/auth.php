@@ -46,6 +46,16 @@ return [
             'provider' => 'users',
             'hash' => false,
         ],
+        'customer_accounts' => [
+            'driver' => 'session',
+            'provider' => 'customer_accounts',
+        ],
+
+        'customer_account-api' => [
+            'driver' => 'passport',
+            'provider' => 'customer_accounts',
+            'hash' => false,
+        ],
     ],
 
     /*
@@ -66,15 +76,14 @@ return [
     */
 
     'providers' => [
+        'customer_accounts' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\CustomerAccount::class,
+        ],
         'users' => [
             'driver' => 'eloquent',
             'model' => App\User::class,
         ],
-
-        // 'users' => [
-        //     'driver' => 'database',
-        //     'table' => 'users',
-        // ],
     ],
 
     /*
@@ -95,6 +104,12 @@ return [
     'passwords' => [
         'users' => [
             'provider' => 'users',
+            'table' => 'password_resets',
+            'expire' => 60,
+            'throttle' => 60,
+        ],
+        'customer_accounts' => [
+            'provider' => 'customer_accounts',
             'table' => 'password_resets',
             'expire' => 60,
             'throttle' => 60,

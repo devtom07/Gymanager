@@ -1,5 +1,5 @@
 
-@extends('admin.main')
+@extends('admin.layout.main')
 @section('title', 'Danh sách ca tập')
 @section('content')
     <div class="content-page">
