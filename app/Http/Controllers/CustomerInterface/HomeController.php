@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\CustomerAccount;
 use App\Models\Customer;
+use App\Models\Service;
 
 class HomeController extends Controller
 {
@@ -18,6 +19,10 @@ class HomeController extends Controller
     		$customer_id = $customer_accounts->id_customer;
     	}
     	$customer = Customer::where('id',$customer_id)->get();
-    	return view('customers.customer_training.profile', compact('customer_account','customer'));
+        foreach ($customer as $customers) {
+            $customers_id = $customers->id;
+        }
+        $service = Service::where('id_customer',$customers_id)->get();
+    	return view('customers.customer_training.profile', compact('customer_account','customer', 'service'));
     }
 }

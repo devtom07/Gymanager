@@ -26,28 +26,28 @@ Route::get('/logout','Admin\AuthurController@logout')->name('logout');
          //Chức vụ
          Route::get('/chucvu','Users\RoleController@index')
              ->name('role');
-         Route::get('/themchucvu','RoleController@create')
+         Route::get('/themchucvu','Users\RoleController@create')
              ->name('role.add');
-         Route::post('/themchucvu/post','RoleController@store')
+         Route::post('/themchucvu/post','Users\RoleController@store')
              ->name('role.store');
-         Route::get('/suachucvu/{id}','RoleController@edit')
+         Route::get('/suachucvu/{id}','Users\RoleController@edit')
              ->name('role.edit');
-         Route::post('/suachucvu/post/{id}','RoleController@update')
+         Route::post('/suachucvu/post/{id}','Users\RoleController@update')
              ->name('role.update');
-         Route::get('/xoachucvu/{id}','RoleController@destroy')
+         Route::get('/xoachucvu/{id}','Users\RoleController@destroy')
              ->name('role.delete');
          //quyền
-         Route::get('/chucnang','PermissionController@index')
+         Route::get('/chucnang','Users\PermissionController@index')
              ->name('permission.index');
-         Route::get('/themchucnang','PermissionController@add')
+         Route::get('/themchucnang','Users\PermissionController@add')
              ->name('permission.add');
-         Route::get('/suachucnang/{id}','PermissionController@edit')
+         Route::get('/suachucnang/{id}','Users\PermissionController@edit')
              ->name('permission.edit');
-         Route::post('/themchucnang/post','PermissionController@store')
+         Route::post('/themchucnang/post','Users\PermissionController@store')
              ->name('permission.store');
-         Route::post('/suachucnang/post/{id}','PermissionController@update')
+         Route::post('/suachucnang/post/{id}','Users\PermissionController@update')
              ->name('permission.update');
-         Route::get('/xoachucnang/{id}','PermissionController@destroy')
+         Route::get('/xoachucnang/{id}','Users\PermissionController@destroy')
              ->name('permission.destroy');
         //user
         Route::get('xemtaikhoan','Users\UserController@index')
@@ -173,23 +173,23 @@ Route::get('/logout','Admin\AuthurController@logout')->name('logout');
           Route::get('/delete_dichvu/{id}','Dichvu\ServiceController@destroy')
           ->name('service.delete');
        //ca tap
-         Route::get('catap','HymnalController@index')
+         Route::get('catap','Dichvu\HymnalController@index')
              ->name('hymnal.index');
-         Route::get('themcatap','HymnalController@add')
+         Route::get('themcatap','Dichvu\HymnalController@add')
              ->name('hymnal.add');
-         Route::get('suacatap/{id}','HymnalController@edit')
+         Route::get('suacatap/{id}','Dichvu\HymnalController@edit')
              ->name('hymnal.edit');
-         Route::post('catap/post','HymnalController@store')
+         Route::post('catap/post','Dichvu\HymnalController@store')
              ->name('hymnal.store');
-         Route::post('suacatap/post/{id}','HymnalController@update')
+         Route::post('suacatap/post/{id}','Dichvu\HymnalController@update')
              ->name('hymnal.update');
-         Route::get('xoacatap/{id}','HymnalController@destroy')
+         Route::get('xoacatap/{id}','Dichvu\HymnalController@destroy')
              ->name('hymnal.delete');
 
           //Pt
-         Route::get('Pt','PtController@index')
+         Route::get('Pt','PT\PtController@index')
              ->name('pt.index');
-         Route::get('dangKyPt','PtController@addPt')
+         Route::get('dangKyPt','PT\PtController@addPt')
              ->name('pt.add');
 
        //pt-level
