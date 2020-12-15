@@ -14,7 +14,8 @@ class CustomerAccountSeeder extends Seeder
     {
         //
         $data = [
-        	'name' => 'tiennh08978',
+            'name' => 'tiennh08978',
+        	'email' => 'tiennh08978@gmail.com',
         	'password' =>Hash::make('12345678'),
         	'status'=>'hoat dong',
         	'id_customer'=>'1',

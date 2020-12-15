@@ -1,8 +1,9 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
 use App\Models\Staff;
+use App\Models\Services;
 use Illuminate\Database\Eloquent\Model;
 
 class Customer extends Model
@@ -18,8 +19,8 @@ class Customer extends Model
     public function pt(){
         return $this->belongsToMany(Staff::class,'services','id_customer','id_coach');
     }
-    public function customer_account(){
-        return $this->hasOne(CustomerAccount::class, 'id_customer', 'id');
-    }
+    // public function customer_account(){
+    //     return $this->hasOne(CustomerAccount::class, 'id_customer', 'id');
+    // }
 }
 

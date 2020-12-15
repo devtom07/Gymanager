@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\PT;
 
-use App\Customer;
-use App\Services;
+use App\Models\Customer;
+use App\Models\Services;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;

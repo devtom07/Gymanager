@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\PT;
 
-use App\Customer;
+use App\Models\Customer;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\ValidatePtProgram;
 use App\Models\Package;
