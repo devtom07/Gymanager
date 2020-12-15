@@ -111,12 +111,12 @@
                                 <label> Phương thức thanh toán</label>
                                 <div class="mt-3">
                                     <div class="custom-control custom-radio">
-                                        <input type="radio" id="customRadio1" name="customRadio"
+                                        <input value="tiền mặt" type="radio" id="customRadio1" name="customRadio"
                                                class="custom-control-input">
                                         <label class="custom-control-label" for="customRadio1">Tiền mặt</label>
                                     </div>
                                     <div class="custom-control custom-radio">
-                                        <input type="radio" id="customRadio2" name="customRadio"
+                                        <input value="chuyển khoản" type="radio" id="customRadio2" name="customRadio"
                                                class="custom-control-input" value="Click">
                                         <label class="custom-control-label " for="customRadio2">Tài khoản ngân
                                             hàng</label>
@@ -167,37 +167,37 @@
                                     <div class="col-md-2">
                                         <label class="label">Thứ 2</label>
                                         <br>
-                                        <input name="schedule[]" type="checkbox" class="checkbox">
+                                        <input value="Thứ2" name="schedule[]" type="checkbox" class="checkbox">
                                     </div>
                                     <div class="col-md-2">
                                         <label class="label">Thứ 3</label>
                                         <br>
-                                        <input name="schedule[]" type="checkbox" class="checkbox">
+                                        <input value="Thứ3" name="schedule[]" type="checkbox" class="checkbox">
                                     </div>
                                     <div class="col-md-2">
                                         <label class="label">Thứ 4</label>
                                         <br>
-                                        <input name="schedule[]" type="checkbox" class="checkbox">
+                                        <input value="Thứ4" name="schedule[]" type="checkbox" class="checkbox">
                                     </div>
                                     <div class="col-md-2">
                                         <label class="label">Thứ 5</label>
                                         <br>
-                                        <input name="schedule[]" type="checkbox" class="checkbox">
+                                        <input value="Thứ5" name="schedule[]" type="checkbox" class="checkbox">
                                     </div>
                                     <div class="col-md-2">
                                         <label class="label">Thứ 6</label>
                                         <br>
-                                        <input name="schedule[]" type="checkbox" class="checkbox">
+                                        <input value="Thứ6" name="schedule[]" type="checkbox" class="checkbox">
                                     </div>
                                     <div class="col-md-2">
                                         <label class="label">Thứ 7</label>
                                         <br>
-                                        <input name="schedule[]" type="checkbox" class="checkbox">
+                                        <input value="Thứ7" name="schedule[]" type="checkbox" class="checkbox">
                                     </div>
                                     <div class="col-md-2">
                                         <label class="label">Chủ nhật</label>
                                         <br>
-                                        <input name="schedule[]" type="checkbox" class="checkbox">
+                                        <input value="chủ nhật" name="schedule[]" type="checkbox" class="checkbox">
                                     </div>
                                 </div>
                                 @if($errors->first('schedule'))
