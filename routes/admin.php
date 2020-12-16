@@ -200,5 +200,19 @@ Route::get('/logout','AuthurController@logout')->name('logout');
         Route::post('sua-goi-cuoc/{id}','KhachHang\PackageController@update')->name('package.edit');
         Route::get('xoa-goi-cuoc/{id}','KhachHang\PackageController@delete')->name('package.delete');
 
+
+        //san pham
+        Route::get('/san-pham','Sanpham\ProductController@index')
+            ->name('listproduct');
+        Route::get('/them-san-pham','Sanpham\ProductController@create')
+            ->name('product.add');
+        Route::post('/them-san-pham/post','Sanpham\ProductController@store')
+            ->name('product.store');
+        Route::get('/sua-san-pham/{id}','Sanpham\ProductController@edit')
+            ->name('product.edit');
+        Route::post('/sua-san-pham/post/{id}','Sanpham\ProductController@update')
+            ->name('product.update');
+        Route::get('/san-pham-xoa/{id}','Sanpham\ProductController@destroy')
+            ->name('product.delete');
          });
 });
