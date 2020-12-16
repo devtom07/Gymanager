@@ -32,8 +32,8 @@ class ValidatePtProgram extends FormRequest
             'start_date' => 'required',
             'status' => 'required',
             'pt' => 'required',
-            'contract_code' => 'required',
-            'time' => 'required',
+            'contract_code' => 'required|numeric|min:0',
+            'time' => 'required|numeric|min:0',
             'customRadio' => 'required',
             'still_owe' => 'required',
             'end_date' => 'required|after:start_date',
@@ -58,6 +58,8 @@ class ValidatePtProgram extends FormRequest
             'status.required' => 'Không được phép để trống !',
             'pt.required' => 'Không được phép để trống !',
             'contract_code.required' => 'Không được phép để trống !',
+            'contract_code.numeric' => 'Phải là số !',
+            'contract_code.min' => 'Chỉ được phép nhỏ hơn 0 ',
             'time.required' => 'Không được phép để trống !',
             'customRadio.required' => 'Không được phép để trống !',
             'still_owe.required' => 'Không được phép để trống !',
@@ -65,6 +67,7 @@ class ValidatePtProgram extends FormRequest
             'end_date.after' => 'Ngày kết thúc phải sau ngày bắt đầu',
             'package' => 'Không được phép để trống !',
             'schedule.required' => 'Không được phép để trống !',
+            'time.min' => 'Chỉ được phép nhỏ hơn 0'
         ];
     }
 }

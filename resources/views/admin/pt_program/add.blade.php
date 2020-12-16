@@ -25,14 +25,16 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">Ngày hợp đồng</label>
-                                    <input value="{{old('day_contract')}}" type="date" class="form-control" id="example-date-input" name="day_contract">
+                                    <input value="{{old('day_contract')}}" type="date" class="form-control"
+                                           id="example-date-input" name="day_contract">
                                     @if($errors->first('day_contract'))
                                         <p class="text-danger">{{ $errors->first('day_contract') }}</p>
                                     @endif
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">Số buổi</label>
-                                    <input value="{{old('number_sessions')}}" type="number" class="form-control" id="number_sessions"
+                                    <input value="{{old('number_sessions')}}" type="number" class="form-control"
+                                           id="number_sessions"
                                            name="number_sessions" placeholder="Số buổi tập">
                                     @if($errors->first('number_sessions'))
                                         <p class="text-danger">{{ $errors->first('number_sessions') }}</p>
@@ -40,7 +42,8 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">Tổng số tiền</label>
-                                    <input value="{{old('total')}}"  type="number" class="form-control totalCustomer" id="totalCustomer"
+                                    <input value="{{old('total')}}" type="number" class="form-control totalCustomer"
+                                           id="totalCustomer"
                                            name="total" placeholder="Tổng số tiền">
                                     @if($errors->first('total'))
                                         <p class="text-danger">{{ $errors->first('total') }}</p>
@@ -48,7 +51,8 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">Khách trả</label>
-                                    <input value="{{old('money_paid')}}" type="number" min="0 " class="form-control" id="money_paid" name="money_paid"
+                                    <input  value="{{old('money_paid')}}" type="number" min="0 " class="form-control"
+                                           id="money_paid" name="money_paid"
                                            placeholder="Khách trả">
                                     @if($errors->first('money_paid'))
                                         <p class="text-danger">{{ $errors->first('money_paid') }}</p>
@@ -56,7 +60,8 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">Ngày bắt đầu</label>
-                                    <input value="{{old('start_date')}}" type="date" class="form-control" id="start_date" name="start_date">
+                                    <input value="{{old('start_date')}}" type="date" class="form-control"
+                                           id="start_date" name="start_date">
                                     @if($errors->first('start_date'))
                                         <p class="text-danger">{{ $errors->first('start_date') }}</p>
                                     @endif
@@ -93,7 +98,8 @@
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Số hợp đồng</label>
-                                <input value="{{old('contract_code')}}" type="number" class="form-control" id="contract_code" name="contract_code"
+                                <input value="{{old('contract_code')}}" type="number" class="form-control"
+                                       id="contract_code" name="contract_code"
                                        placeholder="Số hợp đồng">
                                 @if($errors->first('contract_code'))
                                     <p class="text-danger">{{ $errors->first('contract_code') }}</p>
@@ -128,13 +134,14 @@
                             </div>
                             <div hidden class="form-group" id="bank_account1">
                                 <label for="exampleInputEmail1">Số tài khoản ngân hàng</label>
-                                <input   type="number" class="form-control" name="Bank_account"
+                                <input type="number" class="form-control" name="Bank_account"
                                        placeholder="Số tài khoản ngân hàng">
 
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Còn nợ</label>
-                                <input value="{{old('still_owe')}}" type="number" class="form-control" id="still_owe" name="still_owe"
+                                <input value="{{old('still_owe')}}" type="number" class="form-control" id="still_owe"
+                                       name="still_owe"
                                        placeholder="Còn nợ">
                                 @if($errors->first('still_owe'))
                                     <p class="text-danger">{{ $errors->first('still_owe') }}</p>
@@ -164,41 +171,14 @@
                             <div class="form-group col-md-12">
                                 <label>Lịch tập</label>
                                 <div class="row">
-                                    <div class="col-md-2">
-                                        <label class="label">Thứ 2</label>
-                                        <br>
-                                        <input value="Thứ2" name="schedule[]" type="checkbox" class="checkbox">
-                                    </div>
-                                    <div class="col-md-2">
-                                        <label class="label">Thứ 3</label>
-                                        <br>
-                                        <input value="Thứ3" name="schedule[]" type="checkbox" class="checkbox">
-                                    </div>
-                                    <div class="col-md-2">
-                                        <label class="label">Thứ 4</label>
-                                        <br>
-                                        <input value="Thứ4" name="schedule[]" type="checkbox" class="checkbox">
-                                    </div>
-                                    <div class="col-md-2">
-                                        <label class="label">Thứ 5</label>
-                                        <br>
-                                        <input value="Thứ5" name="schedule[]" type="checkbox" class="checkbox">
-                                    </div>
-                                    <div class="col-md-2">
-                                        <label class="label">Thứ 6</label>
-                                        <br>
-                                        <input value="Thứ6" name="schedule[]" type="checkbox" class="checkbox">
-                                    </div>
-                                    <div class="col-md-2">
-                                        <label class="label">Thứ 7</label>
-                                        <br>
-                                        <input value="Thứ7" name="schedule[]" type="checkbox" class="checkbox">
-                                    </div>
-                                    <div class="col-md-2">
-                                        <label class="label">Chủ nhật</label>
-                                        <br>
-                                        <input value="chủ nhật" name="schedule[]" type="checkbox" class="checkbox">
-                                    </div>
+                                    @foreach($schedule as $schedules)
+                                        <div class="col-md-2">
+                                            <label class="label">{{$schedules->name}}</label>
+                                            <br>
+                                            <input value="{{$schedules->id}}" name="schedule[]" type="checkbox"
+                                                   class="checkbox">
+                                        </div>
+                                    @endforeach
                                 </div>
                                 @if($errors->first('schedule'))
                                     <p class="text-danger">{{ $errors->first('schedule') }}</p>

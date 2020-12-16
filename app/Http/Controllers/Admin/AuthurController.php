@@ -12,7 +12,11 @@ class AuthurController extends Controller
 
     public function admin()
     {
-        return view('authur.login');
+        if (Auth::check()) {
+            return  redirect()->route('dashboard');
+        } else {
+            return view('authur.login');
+        }
     }
     public function login(Request $request){
         $user = [

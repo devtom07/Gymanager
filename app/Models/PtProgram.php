@@ -13,4 +13,9 @@ class PtProgram extends Model
         'time', 'pay', 'bank_account', 'still_owe', 'end_date', 'package_id',
         'schedule'
     ];
+
+    public function training()
+    {
+        return $this->belongsToMany(Trainings::class, 'ptprogram_trainings', 'id_ptprogram', 'id_training');
+    }
 }

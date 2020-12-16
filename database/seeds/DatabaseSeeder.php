@@ -20,7 +20,12 @@ class DatabaseSeeder extends Seeder
             StaffSeeder::class,
             UserSeeder::class,
             CustomerAccountSeeder::class,
-            CustomerSeeder::class
+            CustomerSeeder::class,
+            PackageSeeder::class,
+            HymnalSeeder::class,
+            WorkSiftsSeeder::class,
+            WorkSiftStaffSeeder::class,
+            TrainingSeeder::class,
         ]);
     }
 }

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Dichvu;
 
+use App\Http\Controllers\Controller;
 use App\Http\Requests\ValidateFormHymnal;
 use App\Http\Requests\ValidateFormHymnalupdate;
 use App\Models\Hymnal;

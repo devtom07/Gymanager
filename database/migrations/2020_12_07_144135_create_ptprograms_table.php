@@ -33,7 +33,6 @@ class CreatePtprogramsTable extends Migration
             $table->date('end_date');
             $table->unsignedBigInteger('package_id');
             $table->foreign('package_id')->references('id')->on('packages');
-            $table->string('schedule');
             $table->timestamps();
         });
     }

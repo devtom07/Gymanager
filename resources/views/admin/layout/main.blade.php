@@ -375,7 +375,7 @@
                             </a>
                             <ul class="nav-second-level" aria-expanded="false">
                                 <li><a href="{{route('ptProgram.add')}}">Đăng ký </a></li>
-                                <li><a href="{{route('pt.index')}}">Xem thông tin PT</a></li>
+                                <li><a href="{{route('ptProgram.index')}}">Quản lý đăng ký PT</a></li>
 
                             </ul>
                         </li>
