@@ -18,9 +18,25 @@
     <link href="{{url('admin')}}/css/icons.min.css" rel="stylesheet" type="text/css" />
     <link href="{{url('admin')}}/css/app.min.css" rel="stylesheet" type="text/css" id="app-stylesheet" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
     <meta name="csrf-token" content="{{ csrf_token() }}">
 </head>
 
+<style>
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+    color: #444;
+    line-height: 40px;
+}
+
+.select2-container .select2-selection--single {
+    box-sizing: border-box;
+    cursor: pointer;
+    display: block;
+    height: 38px;
+    user-select: none;
+    -webkit-user-select: none;
+}
+</style>
 
 <body>
     @include('sweetalert::alert')
@@ -231,9 +247,10 @@
                     <a class="nav-link dropdown-toggle nav-user mr-0 waves-effect waves-light" data-toggle="dropdown"
                         href="#" role="button" aria-haspopup="false" aria-expanded="false">
                         @if(\Illuminate\Support\Facades\Auth::user()->avatar)
-                        <img src="{{asset("user/".\Illuminate\Support\Facades\Auth::user()->avatar)}}" alt="user-image" class="rounded-circle">
+                        <img src="{{asset("user/".\Illuminate\Support\Facades\Auth::user()->avatar)}}" alt="user-image"
+                            class="rounded-circle">
                         @else
-                            <img src="{{url('admin')}}/images/users/avatar-5.jpg" alt="user-image" class="rounded-circle">
+                        <img src="{{url('admin')}}/images/users/avatar-5.jpg" alt="user-image" class="rounded-circle">
                         @endif
                         <span class="d-none d-sm-inline-block ml-1 font-weight-medium">
                             {{\Illuminate\Support\Facades\Auth::user()->name}}
@@ -247,7 +264,8 @@
                         </div>
 
                         <!-- item-->
-                        <a href="{{route('user.profile')}}" class="dropdown-item notify-item">
+                        <a href="{{route('user.profile',\Illuminate\Support\Facades\Auth::user()->id)}}"
+                            class="dropdown-item notify-item">
                             <i class="mdi mdi-account-outline"></i>
                             <span>Profile</span>
                         </a>
@@ -287,7 +305,7 @@
             <div class="logo-box">
                 <a href="{{route('dashboard')}}" class="logo text-center logo-dark">
                     <span class="logo-lg">
-                        <img src="{{url('admin')}}/images/logogym.gif" alt=""  width="200px">
+                        <img src="{{url('admin')}}/images/logogym.gif" alt="" width="200px">
                         <!-- <span class="logo-lg-text-dark">Uplon</span> -->
                     </span>
                     <span class="logo-sm">
@@ -359,7 +377,7 @@
                             <a href="javascript: void(0);">
                                 <i class="mdi mdi-account-box-multiple"></i>
                                 <span>Tài khoản</span>
-{{--                                <span class="badge badge-danger badge-pill float-right">New</span>--}}
+                                {{--                                <span class="badge badge-danger badge-pill float-right">New</span>--}}
                             </a>
                             <ul class="nav-second-level" aria-expanded="false">
                                 <li><a href="{{route('user.index')}}">Quản trị người dùng</a></li>
@@ -370,7 +388,7 @@
                             <a href="javascript: void(0);">
                                 <i class="mdi mdi-star-off"></i>
                                 <span>Nhân viên</span>
-{{--                                <span class="badge badge-danger badge-pill float-right">New</span>--}}
+                                {{--                                <span class="badge badge-danger badge-pill float-right">New</span>--}}
                             </a>
                             <ul class="nav-second-level" aria-expanded="false">
                                 <li><a href="{{route('listnhanvien')}}">Danh sách nhân viên</a></li>
@@ -383,12 +401,42 @@
                             <a href="javascript: void(0);">
                                 <i class="mdi mdi-account-multiple"></i>
                                 <span> Khách hàng </span>
-{{--                                <span class="badge badge-danger badge-pill float-right">New</span>--}}
+                                {{--                                <span class="badge badge-danger badge-pill float-right">New</span>--}}
                             </a>
                             <ul class="nav-second-level" aria-expanded="false">
                                 <li><a href="{{route('customer')}}">Danh sách khách hàng</a></li>
-                                <li><a href="#">Dịch vụ</a></li>
+                                <li><a href="{{route('service')}}">Dịch vụ</a></li>
+                                <li><a href="{{route('hymnal.index')}}">Ca tập</a></li>
+                                <li><a href="{{ route('package.index') }}">Gói cước</a></li>
 
+
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="javascript: void(0);">
+                                <i class="mdi mdi-teach"></i>
+                                <span> PT </span>
+                            </a>
+                            <ul class="nav-second-level" aria-expanded="false">
+                                <li><a href="{{route('pt.index')}}">Lịch Tập</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="javascript: void(0);">
+                                <i class="mdi mdi-reflect-vertical"></i>
+                                <span> Doanh thu </span>
+                            </a>
+                            <ul class="nav-second-level" aria-expanded="false">
+                                <li><a href="">Doanh thu</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="javascript: void(0);">
+                                <i class="mdi mdi-progress-upload"></i>
+                                <span> Quản lý các sản phẩm </span>
+                            </a>
+                            <ul class="nav-second-level" aria-expanded="false">
+                                <li><a href="">Sản phẩm</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -497,25 +545,84 @@
     <script src="{{url('admin')}}/js/app.min.js"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="{{asset('admin/js/user/user.js')}}"></script>
+    <script src="{{asset('admin/js/customer/showCustomer.js')}}"></script>
 
-    <script
-        src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"
-    ></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js" type="text/javascript" charset="utf-8" async defer></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js" type="text/javascript"
+        charset="utf-8" async defer></script>
     <script type="text/javascript" charset="utf-8">
-        $.ajaxSetup({
-            headers: {
-                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-            }
-        });
+    $.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+    });
     </script>
     <script>
     $(document).ready(function() {
         $('#calamviec').select2();
     });
-</script>
+    $(document).ready(function() {
+        $('#pay_method').select2({
+            placeholder: "Mời bạn nhập phương thứ thanh toán"
+        });
+    });
+    $(document).ready(function() {
+        $('#id_package').select2({
+            placeholder: "Mời bạn chọn tên gói cước "
+        });
+    });
+    $(document).ready(function() {
+        $('#id_coach').select2({
+            placeholder: "Mời bạn huấn luyện viên"
+        });
+    });
+    $(document).ready(function() {
+        $('#id_customer').select2({
+            placeholder: "Mời bạn chọn nhập khách hàng"
+        });
+    });
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $('body').on('change', '#date_start', function(event){
+            event.preventDefault();
+            var val = $(this).val();
+            var chuki = $('#chuki').val();
+            var numberCk = 0;
+            switch(chuki){
+                case 'week':
+                numberCk = 7;
+                break;
+                case 'month':
+                numberCk = 30;
+                break;
+                default:
+                numberCk = 365;
+            }
+            var n=  getdate(val,numberCk);
+            // datend =  val + chuki 
 
+                        console.log(n);
+        })
+    })
+    function getdate(tt,total) {
+    var date = new Date(tt);
+    var newdate = new Date(date);
+
+    newdate.setDate(newdate.getDate() + total);
+    
+    var dd = newdate.getDate();
+    var mm = newdate.getMonth() + 1;
+    var y = newdate.getFullYear();
+
+    var someFormattedDate = y+'-'+mm+'-'+dd;
+
+document.getElementById("date_end").valueAsDate = new Date(someFormattedDate);
+    return someFormattedDate;
+}
+</script>
 </body>
 
 <!-- Mirrored from coderthemes.com/uplon/layouts/vertical/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 31 Oct 2020 19:25:02 GMT -->

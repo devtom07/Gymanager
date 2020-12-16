@@ -75,8 +75,9 @@ class WorkSiftStaffController extends Controller
     {
         //
         $work_staff=WorkSiftStaff::find($id);
+        $dataStaff=Staff::all();
         $work_sift['data']=WorkSift::all();
-        return  view('admin.nhanvien.calamviec-nhanvien.edit',['work_staff'=>$work_staff],$work_sift);  
+        return  view('admin.nhanvien.calamviec-nhanvien.edit',['work_staff'=>$work_staff,'dataStaff'=>$dataStaff],$work_sift);  
     }
 
     /**

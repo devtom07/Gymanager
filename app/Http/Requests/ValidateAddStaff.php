@@ -24,15 +24,15 @@ class ValidateAddStaff extends FormRequest
     public function rules()
     {
         return [
-            'name' => 'required|unique:staffs,name',
-            'work_sift_id'=>'required:staffs,work_sift_id',
-            'avatar' => 'required:staffs,avatar ',
-            'phone' => 'required:staffs,phone',
-            'email' => 'required:staffs,email',
-            'address' => 'required:staffs,address',
-            'contract' => 'required:staffs,contract',
-            'wage' => 'required:staffs,wage',
-            'title' => 'required:staffs,title',
+            'name' => 'required',
+            'status'=>'required',
+            'avatar' => 'required ',
+            'phone' => 'required|min:10|max:11|regex:[^[0-9\-\+]{9,15}$]',
+            'email' => 'required||unique:staffs,email|email',
+            'address' => 'required',
+            'contract' => 'required',
+            'wage' => 'required',
+            'title' => 'required',
 
         ];
     }
@@ -40,7 +40,11 @@ class ValidateAddStaff extends FormRequest
     {
         return [
             'required' => ':attribute không được để trống',
-            'name.unique' => 'Tên này đã có !'
+            'email.unique' => 'Email này đã có !',
+            'avatar.image' => 'Phải nhập đúng định dạng file ảnh',
+            'phone.min' => 'Số điện thoại không được ít hơn 10 số',
+            'phone.max' => 'Số điện thoại không được nhiều hơn 11 số',
+            'phone.regex'=>'Số điện thoại không đúng định dạng',
 
         ];
     }
@@ -56,6 +60,7 @@ class ValidateAddStaff extends FormRequest
             'contract' => 'Loại hợp đồng',
             'wage'=>'Mức lương',
             'title' => 'Chức vụ',
+            'status' => 'Không được để trống'
         ];
     }
 }
