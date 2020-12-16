@@ -44,7 +44,7 @@
                                     <thead>
                                        <tr>
                                           <th id="tech-companies-1-col-0-clone">STT</th>
-                                          <th data-priority="1" id="tech-companies-1-col-1-clone">Họ và Tên</th>
+                                          <th data-priority="1" id="tech-companies-1-col-1-clone">Tên sản phẩm</th>
                                           <th data-priority="1" id="tech-companies-1-col-1-clone">Giá</th>
                                           <th data-priority="3" id="tech-companies-1-col-4-clone">Khuyến mãi</th>
                                           <th data-priority="3" id="tech-companies-1-col-5-clone">Tiêu đề</th>

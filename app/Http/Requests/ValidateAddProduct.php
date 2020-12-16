@@ -27,7 +27,7 @@ class ValidateAddProduct extends FormRequest
             'name' => 'required',
             'avatar' => 'required|image|mimes:jpeg,png,jpg',
             'price' => 'required',
-            'sale-price' => 'required',
+            'sale_price' => 'required',
             'short_title' => 'required',
             'detail' => 'required',
         ];

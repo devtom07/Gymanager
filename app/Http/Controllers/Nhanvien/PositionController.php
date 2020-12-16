@@ -1,12 +1,10 @@
 <?php
 
 namespace App\Http\Controllers\Nhanvien;
-use Illuminate\Http\Request;
 use App\Http\Requests\ValidateAddPosition;
 use App\Http\Requests\ValidateEditPosition;
 use App\Http\Controllers\Controller;
 use App\Models\Position;
-use RealRashid\SweetAlert\Facades\Alert;
 
 class PositionController extends Controller
 {

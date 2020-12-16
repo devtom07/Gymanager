@@ -27,17 +27,18 @@ class ProductController extends Controller
         $name_image = current(explode('.',$get_name_image));
         $new_image =  $name_image . rand(0,99) . '.' .$get_image->getClientOriginalExtension();
         $get_image->move('product',$new_image);
-        $staffs = new Product;
-        $staffs->name = $request->name;
-        $staffs->price = $request->price;
-        $staffs->sale_price = $request->sale_price;
-        $staffs->short_title = $request->short_title;
-        $staffs->detail = $request->detail;
-        $staffs->wage = $request->wage;
-        $staffs['avatar'] = $new_image;
-        $staffs->save();
-        Alert()->success('thành công','bạn đã thêm nhân viên thành công');
-        return redirect()->route('listproduct');
+        $products = new Product;
+        $products->name = $request->name;
+        $products->price = $request->price;
+        $products->sale_price = $request->sale_price;
+        $products->short_title = $request->short_title;
+        $products->detail = $request->detail;
+        $products['avatar'] = $new_image;
+        $products->save();
+        var_dump($products);
+
+        Alert()->success('thành công','bạn đã thêm sản phẩm thành công');
+        return redirect()->action('Sanpham\ProductController@index');
     }
 
     public function show($id)
@@ -58,30 +59,30 @@ class ProductController extends Controller
              $name_image = current(explode('.',$get_name_image));
              $new_image =  $name_image . rand(0,99) . '.' .$get_image->getClientOriginalExtension();
              $get_image->move('product',$new_image);
-             $staffs = new Product;
+             $products = new Product;
              $arr['name'] = $request->name;
              $arr['price'] = $request->price;
              $arr['sale_price'] = $request->sale_price;
              $arr['short_title'] = $request->short_title;
              $arr['detail'] = $request->detail;
-             $staffs['avatar'] = $new_image;
-             $staffs->where('id', $id)->update($arr);
+             $products['avatar'] = $new_image;
+             $products->where('id', $id)->update($arr);
          }else{
-             $staffs = new Product;
+             $products = new Product;
              $arr['name'] = $request->name;
              $arr['price'] = $request->price;
              $arr['sale_price'] = $request->sale_price;
              $arr['short_title'] = $request->short_title;
              $arr['detail'] = $request->detail;
-             $staffs->where('id', $id)->update($arr);
+             $products->where('id', $id)->update($arr);
          }
-        Alert()->success('Thành công','bạn đã sửa nhân viên thành công');
+        Alert()->success('Thành công','bạn đã sửa sản phẩm thành công');
         return redirect()->action('Sanpham\ProductController@index');
     }
     public function destroy($id)
     {
         Product::where('id',$id)->delete();
-        Alert()->success('thành công','bạn đã xóa nhân viên thành công');
+        Alert()->success('thành công','bạn đã xóa sản phẩm thành công');
         return back();
     }
 }
