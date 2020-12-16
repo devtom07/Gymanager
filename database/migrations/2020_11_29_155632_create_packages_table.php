@@ -18,7 +18,7 @@ class CreatePackagesTable extends Migration
             $table->string('name');
             $table->integer('price');
             $table->string('type_use');
-            $table->string('free_service')->default(null);
+            $table->string('free_service');
             $table->date('start_date');
             $table->date('end_date');
             $table->text('desc');

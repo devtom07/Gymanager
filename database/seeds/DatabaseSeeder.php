@@ -19,8 +19,13 @@ class DatabaseSeeder extends Seeder
             PermissionUserSeeder::class,
             StaffSeeder::class,
             UserSeeder::class,
-
-
+            CustomerAccountSeeder::class,
+            CustomerSeeder::class,
+            PackageSeeder::class,
+            HymnalSeeder::class,
+            WorkSiftsSeeder::class,
+            WorkSiftStaffSeeder::class,
+            TrainingSeeder::class,
         ]);
     }
 }

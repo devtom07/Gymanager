@@ -1,4 +1,4 @@
-@extends('admin.main')
+@extends('admin.layout.main')
 @section('title', 'Danh vụ')
 @section('content')
 <div class="content-page">
@@ -113,7 +113,7 @@
                                                         {{$key+1}}</th>
                                                     <td data-org-colspan="1" data-priority="1"
                                                         data-columns="tech-companies-1-col-1">
-{{--                                                        {{$service->customer->name}}--}}
+                                                        {{$service->customer->name}}
                                                     </td>
                                                     <td data-org-colspan="1" data-priority="1"
                                                         data-columns="tech-companies-1-col-1">{{$service->staff->name}}

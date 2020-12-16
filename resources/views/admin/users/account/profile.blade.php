@@ -1,4 +1,4 @@
-@extends('admin.main')
+@extends('admin.layout.main')
 @section('title', 'Profile')
 @section('content')
     @foreach($users as $user)

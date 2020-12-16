@@ -1,123 +1,104 @@
-@extends('admin.main')
-@section('title', 'Danh sach nhan vien')
+@extends('admin.layout.main')
+@section('title', 'PT')
 @section('content')
-    <div class="content-page">
-        <div class="content">
-            <!-- Start Content-->
-            <div class="container-fluid">
-                <!-- start page title -->
-                <div class="row">
-                    <div class="col-12">
-                        <div class="page-title-box">
-
-                            <h4 class="page-title">Danh sách Nhân viên</h4>
-                        </div>
-                    </div>
-                </div>
-                <!-- end page title -->
-
-                <div class="row">
-
-                    <div class="col-12">
-                        <div class="card-box">
-                            <div class="responsive-table-plugin">
-                                <div class="table-rep-plugin">
-                                    <div class="table-wrapper">
-                                        <div class="btn-toolbar">
-                                            <div class="btn-group dropdown-btn-group pull-right">
-                                                <button type="button" class="btn btn-default"><a href="{{route('listnhanvien.add')}}" class="active">Tạo mới</a></button><button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Hiện thêm thông tin <span class="caret"></span></button>
-                                                <ul class="dropdown-menu">
-                                                    <li class="checkbox-row"><input type="checkbox" name="toggle-tech-companies-1-col-1" id="toggle-tech-companies-1-col-1" value="tech-companies-1-col-1"> <label for="toggle-tech-companies-1-col-1">Email</label></li>
-                                                    <li class="checkbox-row"><input type="checkbox" name="toggle-tech-companies-1-col-2" id="toggle-tech-companies-1-col-2" value="tech-companies-1-col-2"> <label for="toggle-tech-companies-1-col-2">Trạng thái</label></li>
-                                                    <li class="checkbox-row"><input type="checkbox" name="toggle-tech-companies-1-col-3" id="toggle-tech-companies-1-col-3" value="tech-companies-1-col-3"> <label for="toggle-tech-companies-1-col-3">Ngày bắt đầu</label></li>
-                                                    <li class="checkbox-row"><input type="checkbox" name="toggle-tech-companies-1-col-4" id="toggle-tech-companies-1-col-4" value="tech-companies-1-col-4">
-                                                        <label for="toggle-tech-companies-1-col-4">Ngày kết thúc</label>
-                                                    </li>
-                                                    <li class="checkbox-row"><input type="checkbox" name="toggle-tech-companies-1-col-5" id="toggle-tech-companies-1-col-5" value="tech-companies-1-col-5"> <label for="toggle-tech-companies-1-col-5">Avarta</label></li>
-                                                </ul>
-                                            </div>
-                                            <div class="dataTables_length" id="datatable_length"><label>Show <select name="datatable_length" aria-controls="datatable" class="custom-select custom-select-sm form-control form-control-sm"><option value="10">10</option><option value="25">25</option><option value="50">50</option><option value="100">100</option></select> entries</label></div>
-                                            <div id="datatable_filter" class="dataTables_filter" ><label>Search:<input type="search" class="form-control form-control-sm" placeholder="" aria-controls="datatable"></label></div>
-                                        </div>
-                                        <div class="table-responsive fixed-solution" data-pattern="priority-columns">
-                                            <table id="tech-companies-1-clone" class="table table-striped">
-                                                <thead>
-                                                <tr>
-                                                    <th id="tech-companies-1-col-0-clone">STT</th>
-                                                    <th data-priority="1" id="tech-companies-1-col-1-clone">Họ và Tên</th>
-                                                    <th data-priority="3" id="tech-companies-1-col-2-clone">Điện thoại</th>
-                                                    <th data-priority="1" id="tech-companies-1-col-3-clone">Email</th>
-                                                    <th data-priority="3" id="tech-companies-1-col-4-clone">Địa chỉ</th>
-                                                    <th data-priority="3" id="tech-companies-1-col-5-clone">Chuc vu</th>
-                                                    <th data-priority="6" id="tech-companies-1-col-6-clone">Loại hợp đồng</th>
-                                                    <th data-priority="6" id="tech-companies-1-col-7-clone">Mức lương</th>
-                                                    <th data-priority="6" id="tech-companies-1-col-8-clone">Trang thai</th>
-                                                    <th data-priority="6" id="tech-companies-1-col-8-clone">Action</th>
-                                                </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <th data-org-colspan="1" data-columns="tech-companies-1-col-0"></th>
-                                                        <td data-org-colspan="1" data-priority="1" data-columns="tech-companies-1-col-1">
-                                             <span class="co-name">
-                                             </span>
-                                                        </td>
-                                                        <td data-org-colspan="1" data-priority="1" data-columns="tech-companies-1-col-1">
-                                                        </td>
-                                                        <td data-org-colspan="1" data-priority="3" data-columns="tech-companies-1-col-2">
-                                                        </td>
-                                                        <td data-org-colspan="1" data-priority="1" data-columns="tech-companies-1-col-3">
-                                                        </td>
-                                                        <td data-org-colspan="1" data-priority="3" data-columns="tech-companies-1-col-5">
-                                                        </td>
-                                                        <td data-org-colspan="1" data-priority="6" data-columns="tech-companies-1-col-6">
-
-                                                        </td>
-                                                        <td data-org-colspan="1" data-priority="6" data-columns="tech-companies-1-col-7">
-                                                        </td>
-                                                        <td data-org-colspan="1" data-priority="3" data-columns="tech-companies-1-col-4">
-                                                            <button type="button" class="btn btn-success btn-rounded waves-effect waves-light">
-                                                            </button>
-                                                        </td>
-                                                        <td data-org-colspan="1" data-priority="6" data-columns="tech-companies-1-col-8">
-                                                            <div class="btn-group mt-1 mr-1">
-                                                                <button class="btn btn-success btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                                    <i class="mdi mdi-format-list-bulleted-square"></i>
-                                                                </button>
-                                                                <div class="dropdown-menu" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 29px, 0px);">
-                                                                    <a class="dropdown-item" href="">
-                                                                        <i class="mdi mdi-lead-pencil"></i>
-                                                                        Sửa
-                                                                    </a>
-                                                                    <a class="dropdown-item btn-remove" href="">
-                                                                        <i class="mdi mdi-delete"></i>
-                                                                        Xoá
-                                                                    </a>
-                                                                </div>
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
+        <h2>Thông tin PT</h2>
+        <div style="margin-top: 100px;" class="page-content page-container" id="page-content">
+                @foreach($pt as $pts)
+            <div class="padding">
+                <div class="row container d-flex justify-content-center">
+                    <div class="col-xl-6 col-md-12">
+                        <div class="card user-card-full">
+                            <div class="row m-l-0 m-r-0">
+                                <div class="col-sm-4 bg-c-lite-green user-profile">
+                                    <div class="card-block text-center text-white">
+                                        <div class="m-b-25"> <img width="150px" src="{{asset('/staff/'.$pts->staff->avatar)}}" class="img-radius" alt=""> </div>
+                                        <h6 class="f-w-600">{{$pts->staff->name}}</h6>
+                                        <p>{{$pts->staff->code}}</p> <i class=" mdi mdi-square-edit-outline feather icon-edit m-t-10 f-16"></i>
                                     </div>
-                                    <!-- end .table-responsive -->
                                 </div>
-                                <!-- end .table-rep-plugin-->
-                            </div>
-                            <!-- end .responsive-table-plugin-->
-                        </div>
-                        <!-- end card-box -->
-                    </div>
-                    <!-- end col -->
-                </div>
-                <!-- end row -->
-            </div>
-            <!-- end container-fluid -->
-        </div>
-        <!-- end content -->
-        <!-- Footer Start -->
+                                <div class="col-sm-8">
+                                    <div class="card-block">
+                                        <h6 class="m-b-20 p-b-5 b-b-default f-w-600">Thông tin PT</h6>
+                                        <div class="row">
+                                            <div class="col-sm-6">
+                                                <p class="m-b-10 f-w-600">Email</p>
+                                                <h6 class="text-muted f-w-400">{{$pts->staff->email}}</h6>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <p class="m-b-10 f-w-600">Số điện thoại</p>
+                                                <h6 class="text-muted f-w-400">{{$pts->staff->phone}}</h6>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-6">
+                                                <p class="m-b-10 f-w-600">Số học viên</p>
+                                                <h6 class="text-muted f-w-400">{{$count_customer}}</h6>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <p class="m-b-10 f-w-600">Địa chỉ</p>
+                                                <h6 class="text-muted f-w-400">{{$pts->staff->address}}</h6>
+                                            </div>
+                                        </div>
 
-        <!-- end Footer -->
-    </div>
-@endsection()
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            @endforeach
+        </div>
+        <div style="margin-right: 500px" class="container mt-5 d-flex justify-content-center">
+            @foreach($customer_pt as $customer_pts)
+            <div style="margin-left: 50px" class="card p-4 mt-3">
+                <div class="first">
+                    <h6 class="heading">Thông tin học viên</h6>
+                    <div class="time d-flex flex-row align-items-center justify-content-between mt-3">
+                    </div>
+                </div>
+                <div class="m-b-25"> <img src="https://img.icons8.com/bubbles/100/000000/user.png" class="img-radius" alt=""> </div>
+
+                <div class="row">
+                    <div class="col-sm-6">
+                        <p class="m-b-10 f-w-600">Tên</p>
+                        <h6 class="text-muted f-w-400">{{$customer_pts->customer->name}}</h6>
+                    </div>
+                    <div class="col-sm-6">
+                        <p class="m-b-10 f-w-600">Giới tính</p>
+                        <h6 class="text-muted f-w-400">{{$customer_pts->customer->sex}}</h6>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <p class="m-b-10 f-w-600">Phone</p>
+                        <h6 class="text-muted f-w-400">{{$customer_pts->customer->phone}}</h6>
+                    </div>
+                    <div class="col-sm-6">
+                        <p class="m-b-10 f-w-600">Trình độ</p>
+                        <h6 class="text-muted f-w-400">{{$customer_pts->customer->level}}</h6>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <p class="m-b-10 f-w-600">Email</p>
+                        <h6 class="text-muted f-w-400">{{$customer_pts->customer->email}}</h6>
+                    </div>
+                    <div class="col-sm-6">
+                        <p class="m-b-10 f-w-600">Địa chỉ</p>
+                        <h6 class="text-muted f-w-400">{{$customer_pts->customer->address}}</h6>
+                    </div>
+                </div>
+                <div class="third mt-4"> <button class="btn btn-success btn-block"><i class="fa fa-clock-o"></i> Book Now</button>
+                </div>
+            </div>
+            @endforeach
+        </div>
+        </div>
+@endsection
+
+
+
+
+
+

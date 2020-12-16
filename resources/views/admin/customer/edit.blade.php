@@ -1,4 +1,4 @@
-@extends('admin.main')
+@extends('admin.layout.main')
 @section('title', 'Khách hàng')
 @section('content')
     @foreach($customer as $customer)

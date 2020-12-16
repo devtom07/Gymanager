@@ -24,30 +24,36 @@ class PackageRequest extends FormRequest
     public function rules()
     {
         return [
-            'name'=>['required','min:4','max:50','not_regex:([!@#$%^&*])'],
-            'date_start'=>'required|date|after:today',
+            'name'=>['required','min:4','max:50','unique:packages','not_regex:([!@#$%^&*])'],
+            'start_date'=>'required|date|after:today',
             'price'=>'required',
-            'date_end'=>'required|date|after:date_start',
-            'desc'=>'required'
+            'end_date'=>'required|date|after:date_start',
+            'desc'=>'required',
+            'id_catap'=>'required',
+            'free_service'=>'required'
         ];
     }
     public function messages(){
         return[
             'required'=>':attribute không được để trống',
             'name.min'=>'Tên không được nhỏ hơn 4 kí tự',
+            'name.unique'=>'Tên không được nhỏ hơn 4 kí tự',
             'name.max'=>'Tên không được lớn hơn 50 kí tự',
             'name.not_regex'=>'Tên không được có kí tự',
-            'date_start.after'=>'Ngày bắt đầu phải sau ngày hôm nay',
-            'date_end.after'=>'không được trước thời gian bắt đầu',
+            // 'price.integer'=> 'không đúng định dạng',
+            'start_date.after'=>'Ngày bắt đầu phải sau ngày hôm nay',
+            'end_date.after'=>'không được trước thời gian bắt đầu',
         ];
     }
     public function attributes(){
         return[
             'name'=>'Tên',
-            'date_start'=>'ngày bắt đầu',
+            'start_date'=>'ngày bắt đầu',
             'price'=>'Giá',
-            'date_end'=>'ngày kết thúc',
-            'desc'=>'mô tả'
+            'end_date'=>'ngày kết thúc',
+            'desc'=>'mô tả',
+            'id_catap'=>'ca tap',
+            'free_service'=>'dịch vụ miễn phí'
         ];
     }
 }

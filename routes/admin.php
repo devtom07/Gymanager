@@ -12,19 +12,19 @@ use Illuminate\Support\Facades\Route;
 |
 */
 //login
-Route::get('dangnhap','AuthurController@admin')->name('admin');
-Route::match(['post','get'],'/login','AuthurController@login')->name('login');
-Route::get('/logout','AuthurController@logout')->name('logout');
+Route::get('dangnhap','Admin\AuthurController@admin')->name('admin');
+Route::match(['post','get'],'/login','Admin\AuthurController@login')->name('login');
+Route::get('/logout','Admin\AuthurController@logout')->name('logout');
 
  Route::middleware(['auth'])->group(function (){
      Route::prefix('admin')->group(function (){
          //auth
-         Route::get('/dashboard','AdminController@index')
+         Route::get('/dashboard','Admin\AdminController@index')
              ->name('dashboard');
-         Route::get('/customer','CustomerController@index')
+         Route::get('/customer','KhachHang\CustomerController@index')
              ->name('customer');
          //Chức vụ
-         Route::get('/chucvu','RoleController@index')
+         Route::get('/chucvu','Users\RoleController@index')
              ->name('role');
          Route::get('/themchucvu','RoleController@create')
              ->name('role.add');
@@ -53,34 +53,34 @@ Route::get('/logout','AuthurController@logout')->name('logout');
         Route::get('xemtaikhoan','Users\UserController@index')
             ->name('user.index')
             ->middleware(['permission:xem tài khoản']);
-        Route::get('themtaikhoan','UserController@create')
+        Route::get('themtaikhoan','Users\UserController@create')
             ->name('user.add')
             ->middleware(['permission:thêm tài khoản']);
-        Route::post('themtaikhoan/post','UserController@store')
+        Route::post('themtaikhoan/post','Users\UserController@store')
             ->name('user.store')
             ->middleware(['permission:thêm tài khoản']);
-        Route::get('suataikhoan/{id}','UserController@edit')
+        Route::get('suataikhoan/{id}','Users\UserController@edit')
             ->name('user.edit')
             ->middleware(['permission:Sửa tài khoản']);
-        Route::post('suataikhoan/post/{id}','UserController@update')
+        Route::post('suataikhoan/post/{id}','Users\UserController@update')
             ->name('user.update')
             ->middleware(['permission:Sửa tài khoản']);
-        Route::get('xemchitiettaikhoan/{id}','UserController@show')
+        Route::get('xemchitiettaikhoan/{id}','Users\UserController@show')
             ->name('user.show')
             ->middleware(['permission:Xem tài khoản']);
-        Route::get('GetUser/{id}','UserController@GetUser')
+        Route::get('GetUser/{id}','Users\UserController@GetUser')
             ->name('user.GetUser')
             ->middleware(['permission:Xem tài khoản']);
-        Route::get('xoanguoidung/{id}','UserController@destroy')
+        Route::get('xoanguoidung/{id}','Users\UserController@destroy')
             ->name('user.delete')
             ->middleware(['permission:Xóa tài khoản']);
-        Route::get('profile/{id}','UserController@profile')
+        Route::get('profile/{id}','Users\UserController@profile')
             ->name('user.profile');
-         Route::post('ImageProfile/{id}','UserController@ImageProfile')
+         Route::post('ImageProfile/{id}','Users\UserController@ImageProfile')
              ->name('user.ImageProfile');
-         Route::post('profile/update/{id}','UserController@updateProfile')
+         Route::post('profile/update/{id}','Users\UserController@updateProfile')
              ->name('user.updateProfile');
-         Route::post('profile/update/password/{id}','UserController@updatePassword')
+         Route::post('profile/update/password/{id}','Users\UserController@updatePassword')
              ->name('user.updatePassword');
 
          //=========================Nhân viên==================//
@@ -100,9 +100,23 @@ Route::get('/logout','AuthurController@logout')->name('logout');
         Route::post('/sua-nhan-vien/post/{id}','Nhanvien\ListnhanvienController@update')
             ->name('staff.update')
             ->middleware(['permission:Sửa nhân viên']);
-        Route::get('/nhanvien/xoa/{id}','Nhanvien\ListnhanvienController@destroy')
-            ->name('staff.delete')
-            ->middleware(['permission:Xóa nhân viên']);
+        Route::get('/staff-delete/{id}','Nhanvien\ListnhanvienController@destroy')->name('deleteStaff');
+        // Route::get('/nhanvien/xoa/{id}','Nhanvien\ListnhanvienController@destroy')
+        // ->name('staff.delete')
+        // ->middleware(['permission:Xóa nhân viên']);
+        // chức vụ
+        Route::get('/chuc-vu','Nhanvien\PositionController@index')
+            ->name('listposition');
+        Route::get('/them-chuc-vu','Nhanvien\PositionController@create')
+            ->name('position.add');
+        Route::post('/them-chuc-vu/post','Nhanvien\PositionController@store')
+            ->name('position.store');
+        Route::get('/sua-chuc-vu/{id}','Nhanvien\PositionController@edit')
+            ->name('position.edit');
+        Route::post('/sua-chuc-vu/post/{id}','Nhanvien\PositionController@update')
+            ->name('position.update');
+        Route::get('/chuc-vu-xoa/{id}','Nhanvien\PositionController@destroy')
+            ->name('position.delete');
         // Ca làm việc
         Route::get('/calamviec','Nhanvien\CalamviecController@index')
             ->name('calamviec');
@@ -131,19 +145,19 @@ Route::get('/logout','AuthurController@logout')->name('logout');
         Route::get('/xoa/{id}', 'Nhanvien\WorkSiftStaffController@destroy')
             ->name('xoacalamviecvn');
         //customers
-         Route::get('khachhang','CustomerController@index')
+         Route::get('khachhang','KhachHang\CustomerController@index')
              ->name('customer.index');
-         Route::get('themkhachhang','CustomerController@add')
+         Route::get('themkhachhang','KhachHang\CustomerController@add')
              ->name('customer.add');
-         Route::get('suakhachhang/{id}','CustomerController@edit')
+         Route::get('suakhachhang/{id}','KhachHang\CustomerController@edit')
              ->name('customer.edit');
-         Route::post('themkhachhang/post','CustomerController@store')
+         Route::post('themkhachhang/post','KhachHang\CustomerController@store')
              ->name('customer.store');
-         Route::post('suakhachhang/post/{id}','CustomerController@update')
+         Route::post('suakhachhang/post/{id}','KhachHang\CustomerController@update')
              ->name('customer.update');
-         Route::get('xoakhachhang/{id}','CustomerController@destroy')
+         Route::get('xoakhachhang/{id}','KhachHang\CustomerController@destroy')
              ->name('customer.delete');
-         Route::get('GetCustomer/{id}','CustomerController@show')
+         Route::get('GetCustomer/{id}','KhachHang\CustomerController@show')
              ->name('customer.show');
         //Dịch vụ
          Route::get('/dich-vu','Dichvu\ServiceController@index')
@@ -159,29 +173,52 @@ Route::get('/logout','AuthurController@logout')->name('logout');
           Route::get('/delete_dichvu/{id}','Dichvu\ServiceController@destroy')
           ->name('service.delete');
        //ca tap
-         Route::get('catap','HymnalController@index')
+         Route::get('catap','Dichvu\HymnalController@index')
              ->name('hymnal.index');
-         Route::get('themcatap','HymnalController@add')
+         Route::get('themcatap','Dichvu\HymnalController@add')
              ->name('hymnal.add');
-         Route::get('suacatap/{id}','HymnalController@edit')
+         Route::get('suacatap/{id}','Dichvu\HymnalController@edit')
              ->name('hymnal.edit');
-         Route::post('catap/post','HymnalController@store')
+         Route::post('catap/post','Dichvu\HymnalController@store')
              ->name('hymnal.store');
-         Route::post('suacatap/post/{id}','HymnalController@update')
+         Route::post('suacatap/post/{id}','Dichvu\HymnalController@update')
              ->name('hymnal.update');
-         Route::get('xoacatap/{id}','HymnalController@destroy')
+         Route::get('xoacatap/{id}','Dichvu\HymnalController@destroy')
              ->name('hymnal.delete');
+
           //Pt
          Route::get('Pt','PtController@index')
              ->name('pt.index');
+         Route::get('dangKyPt','PtController@addPt')
+             ->name('pt.add');
 
        //pt-level
-        Route::get('goi-cuoc','KhachHang\PackageController@index')->name('package.index');
-        Route::get('them-goi-cuoc','KhachHang\PackageController@create')->name('package.create');
-        Route::post('them-goi-cuoc','KhachHang\PackageController@add')->name('package.add');
-        Route::get('sua-goi-cuoc/{id}','KhachHang\PackageController@edit')->name('package.edit');
-        Route::post('sua-goi-cuoc/{id}','KhachHang\PackageController@update')->name('package.edit');
-        Route::get('xoa-goi-cuoc/{id}','KhachHang\PackageController@delete')->name('package.delete');
-
+        Route::get('goi-cuoc','KhachHang\PackageController@index')
+            ->name('package.index');
+        Route::get('them-goi-cuoc','KhachHang\PackageController@create')
+            ->name('package.create');
+        Route::post('them-goi-cuoc','KhachHang\PackageController@add')
+            ->name('package.add');
+        Route::get('sua-goi-cuoc/{id}','KhachHang\PackageController@edit')
+            ->name('package.edit');
+        Route::post('sua-goi-cuoc/{id}','KhachHang\PackageController@update')
+            ->name('package.edit');
+        Route::get('xoa-goi-cuoc/{id}','KhachHang\PackageController@delete')
+            ->name('package.delete');
          });
+       //Pt-program
+     Route::get('/chuong-trinh-PT','PT\PtProgramController@index')
+         ->name('ptProgram.index');
+     Route::get('/them-chuong-trinh-PT','PT\PtProgramController@add')
+         ->name('ptProgram.add');
+     Route::post('/them-chuong-trinh-PT','PT\PtProgramController@store')
+         ->name('ptProgram.store');
+     Route::get('/sua-chuong-trinh-PT/{id}','PT\PtProgramController@edit')
+         ->name('ptProgram.edit');
+     Route::post('/cap-nhat-chuong-trinh-PT/{id}','PT\PtProgramController@update')
+         ->name('ptProgram.update');
+     Route::get('/xoa-chuong-trinh-PT/{id}','PT\PtProgramController@destroy')
+         ->name('ptProgram.delete');
+     Route::get('getPackage/{id}','PT\PtProgramController@getPackage')
+         ->name('ptProgram.getPacket');
 });
