@@ -1,4 +1,4 @@
-@extends('admin.main')
+@extends('admin.layout.main')
 @section('title', 'Tạo mới nhân viên')
 @section('content')
 <div class="content-page">
@@ -13,10 +13,10 @@
                             <ol class="breadcrumb m-0">
                                 <li class="breadcrumb-item"><a href="javascript: void(0);">Gymanager</a></li>
                                 <li class="breadcrumb-item"><a href="javascript: void(0);">Forms</a></li>
-                                <li class="breadcrumb-item active">Tạo mới nhân viên</li>
+                                <li class="breadcrumb-item active">Sửa nhân viên</li>
                             </ol>
                         </div>
-                        <h4 class="page-title">Tạo mới nhân viên</h4>
+                        <h4 class="page-title">Sửa nhân viên</h4>
                     </div>
                 </div>
             </div>
@@ -24,18 +24,18 @@
             <div class="row">
                 <div class="col-12">
                     <div class="card-box">
-                        <h4 class="header-title mb-4">Sua nhân viên</h4>
+                        {{-- <h4 class="header-title mb-4">Sua nhân viên</h4> --}}
                     <form action="{{route('staff.update',$listStaffs->id)}}" method="POST"  enctype="multipart/form-data">
                             @csrf
                             <div class="row">
                                 <div class="col-xl-6">
                                     <div class="form-group">
                                         <label for="exampleInputEmail1">Ma  nhan vien (*)</label>
-                                        <input type="text" class="form-control" name="code" id="exampleInputEmail1" value="{{ $listStaffs->code}}">
+                                        <input type="text" class="form-control" name="code" id="exampleInputCode1" value="{{ $listStaffs->code}}">
                                     </div>
                                     <div class="form-group">
                                         <label for="exampleInputEmail1">Họ và tên (*)</label>
-                                        <input type="text" class="form-control" name="name" id="exampleInputEmail1" value="{{ $listStaffs->name}}">
+                                        <input type="text" class="form-control" name="name" id="exampleInputName1" value="{{ $listStaffs->name}}">
                                     </div>
                                     @error('name')
                                             <p style="color:red">{{$message}}</p>
@@ -52,15 +52,16 @@
                                     @enderror
                                     <div class="form-group">
                                         <label for="exampleInputEmail1">Ảnh đại diện (*)</label>
-                                        <input type="file" class="form-control" name="avatar" id="exampleInputEmail1" value="{{$listStaffs->new_image}}">
-                                        {{-- <img src="{{asset('staff' .$listStaffs->new_image)}}" alt="" width="100px" height="100px"> --}}
+                                        <input type="file" class="form-control" name="avatar" id="avatar" value="{{$listStaffs->avatar}}">
+                                    
+                                        {{-- <img src="{{asset('/staff/' .$listStaffs->avatar)}}" alt="" width="100px" height="100px"> --}}
                                     </div>
                                     @error('avatar')
                                         <p style="color:red">{{$message}}</p>
                                     @enderror
                                     <div class="form-group">
                                         <label for="exampleInputPassword1">Số điện thoại (*)</label>
-                                        <input type="number" class="form-control" name="phone" id="exampleInputPassword1" value="{{ $listStaffs->phone}}">
+                                        <input type="number" class="form-control" name="phone" id="exampleInputPhone1" value="{{ $listStaffs->phone}}">
                                     </div>
                                     @error('phone')
                                         <p style="color:red">{{$message}}</p>
@@ -68,11 +69,11 @@
                                     <div class="form-group">
                                         <label>Trạng thái</label>
                                         <div class="mt-4">
-                                            <div class="radio radio-info form-check-inline">
+                                            <div class="radio radio-info form-check-inline doing col-md-3" >
                                                 <input type="radio" id="inlineRadio1" value="Đang làm" name="status" {{ $listStaffs->status == 'Đang làm' ? 'checked' : '' }}>
                                                 <label for="inlineRadio1">Đang làm</label>
                                             </div>
-                                            <div class="radio form-check-inline">
+                                            <div class="radio form-check-inline leave">
                                                 <input type="radio" id="inlineRadio2" value="Nghỉ làm" name="status" {{ $listStaffs->status == 'Nghỉ làm' ? 'checked' : ''}}>
                                                 <label for="inlineRadio2">Nghỉ làm</label>
                                             </div>
@@ -151,3 +152,19 @@
     <!-- end Footer -->
 </div>
 @endsection()
+{{-- @section('js')
+<script>
+    function encodeImageFileAsURL(element) {
+        var file = element.files[0];
+        if(file === undefined){
+            $("#img-preview").attr("src", "<?= Staff . $listStaffs->avatar ?>");
+            return false;
+        }
+        var reader = new FileReader();
+        reader.onloadend = function() {
+            $("#img-preview").attr("src", reader.result);
+        }
+        reader.readAsDataURL(file);
+    }
+</script>
+@endsection --}}

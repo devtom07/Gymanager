@@ -1,4 +1,4 @@
-@extends('admin.main')
+@extends('admin.layout.main')
 @section('title', 'Danh sach nhan vien')
 @section('content')
 <div class="content-page">
@@ -44,7 +44,9 @@
                                     <thead>
                                        <tr>
                                           <th id="tech-companies-1-col-0-clone">STT</th>
+                                          <th data-priority="1" id="tech-companies-1-col-1-clone">Mã nhân viên</th>
                                           <th data-priority="1" id="tech-companies-1-col-1-clone">Họ và Tên</th>
+                                          {{-- <th data-priority="1" id="tech-companies-1-col-1-clone">Anh dai dien</th> --}}
                                           <th data-priority="3" id="tech-companies-1-col-2-clone">Điện thoại</th>
                                           <th data-priority="1" id="tech-companies-1-col-3-clone">Email</th>
                                           <th data-priority="3" id="tech-companies-1-col-4-clone">Địa chỉ</th>
@@ -64,6 +66,9 @@
                                                 {{ $staffs->name}}
                                              </span>
                                           </td>
+                                          {{-- <td data-org-colspan="1" data-priority="1" data-columns="tech-companies-1-col-1">
+                                             <img src="{{asset('staff/'.$staffs->avatar)}}" width="100" height="100" alt="">
+                                          </td> --}}
                                           <td data-org-colspan="1" data-priority="1" data-columns="tech-companies-1-col-1">
                                              {{ $staffs->phone}}
                                           </td>
@@ -81,13 +86,8 @@
 
                                           </td>
                                           <td data-org-colspan="1" data-priority="6" data-columns="tech-companies-1-col-7">
-                                             {{ $staffs->wage}}
+                                             {{number_format( $staffs->wage, 0, ',', ' ')}}
                                           </td>
-{{--                                          <td data-org-colspan="1" data-priority="3" data-columns="tech-companies-1-col-4">--}}
-{{--                                             <button type="button" class="btn btn-success btn-rounded waves-effect waves-light">--}}
-{{--                                                   {{ $staffs->status}}--}}
-{{--                                             </button>--}}
-{{--                                          </td>--}}
                                           <td data-org-colspan="1" data-priority="6" data-columns="tech-companies-1-col-8">
                                              <div class="btn-group mt-1 mr-1">
                                                 <button class="btn btn-success btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -98,7 +98,7 @@
                                                       <i class="mdi mdi-lead-pencil"></i> 
                                                          Sửa
                                                    </a>
-                                                   <a class="dropdown-item btn-remove" href="{{route('staff.delete',$staffs->id)}}">
+                                                <a class="dropdown-item btn-remove" href="{{ route('deleteStaff',$staffs->id) }}">
                                                       <i class="mdi mdi-delete"></i> 
                                                          Xoá
                                                    </a>

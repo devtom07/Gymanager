@@ -24,11 +24,12 @@ class PackageRequest extends FormRequest
     public function rules()
     {
         return [
-            'name'=>['required','min:4','max:50','not_regex:([!@#$%^&*])'],
+            'name'=>['required','min:4','max:50','unique:packages','not_regex:([!@#$%^&*])'],
             'start_date'=>'required|date|after:today',
             'price'=>'required',
             'end_date'=>'required|date|after:date_start',
             'desc'=>'required',
+            'id_catap'=>'required',
             'free_service'=>'required'
         ];
     }
@@ -36,6 +37,7 @@ class PackageRequest extends FormRequest
         return[
             'required'=>':attribute không được để trống',
             'name.min'=>'Tên không được nhỏ hơn 4 kí tự',
+            'name.unique'=>'Tên không được nhỏ hơn 4 kí tự',
             'name.max'=>'Tên không được lớn hơn 50 kí tự',
             'name.not_regex'=>'Tên không được có kí tự',
             // 'price.integer'=> 'không đúng định dạng',
@@ -50,6 +52,7 @@ class PackageRequest extends FormRequest
             'price'=>'Giá',
             'end_date'=>'ngày kết thúc',
             'desc'=>'mô tả',
+            'id_catap'=>'ca tap',
             'free_service'=>'dịch vụ miễn phí'
         ];
     }

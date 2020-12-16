@@ -99,7 +99,7 @@ class ListnhanvienController extends Controller
     }
     public function destroy($id)
     {
-        Staff::find($id)->delete();
+        Staff::where('id',$id)->delete();
         Alert()->success('thành công','bạn đã xóa nhân viên thành công');
         return back();
     }
