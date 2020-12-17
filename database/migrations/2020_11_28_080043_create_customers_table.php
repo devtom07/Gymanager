@@ -18,6 +18,7 @@ class CreateCustomersTable extends Migration
             $table->string('code');
             $table->string('name');
             $table->string('sex');
+            $table->string('avatar');
             $table->string('phone');
             $table->string('contract_code');
             $table->string('identity_card');
