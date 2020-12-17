@@ -1,4 +1,5 @@
 @extends('customers.layouts.master')
+@section('title', 'Thông tin khách hàng')
 @section('content')
 <style>
 	.emp-profile{
@@ -112,7 +113,7 @@
                                         {{ $profile->customer->name }}
                                     </h5>
                                     <h6>
-                                        {{ $profile->customer->sex }}
+                                      Giới tính:  {{ $profile->customer->sex }}
                                     </h6>
                                     <p class="proile-rating">Trình độ : <span>{{ $profile->customer->level }}/10</span></p>
                             <ul class="nav nav-tabs" id="myTab" role="tablist">
@@ -190,57 +191,53 @@
                             </div>
                             <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
                                 @foreach($customer as $customera)
+                                @foreach($customera -> services  as $services)
                                         <div class="row">
                                             <div class="col-md-6">
-                                                <label>Experience</label>
+                                                <label>Tên gói tập</label>
                                             </div>
                                             <div class="col-md-6">
                                                 <p>
-                                            @foreach($customera -> services  as $services)
                                                {{ $services->name }}
-                                            @endforeach
                                                 </p>
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="col-md-6">
-                                                <label>Hourly Rate</label>
+                                                <label>Ngày bắt đầu tập</label>
                                             </div>
                                             <div class="col-md-6">
-                                                <p>10$/hr</p>
+                                                <p>{{ $services->start_date }}</p>
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="col-md-6">
-                                                <label>Total Projects</label>
+                                                <label>Ngày kết thúc tập</label>
                                             </div>
                                             <div class="col-md-6">
-                                                <p>230</p>
+                                                <p>{{ $services->end_date }}</p>
+                                            </div>
+                                        </div>
+                                        @endforeach
+                                        @endforeach
+                                        @foreach($service as $sevices)
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>Giá</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>{{ $sevices->package->price }}</p>
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="col-md-6">
-                                                <label>English Level</label>
+                                                <label>dịch vụ free</label>
                                             </div>
                                             <div class="col-md-6">
-                                                <p>Expert</p>
+                                                <p>{{ $sevices->package->free_service }}</p>
                                             </div>
                                         </div>
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <label>Availability</label>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <p>6 months</p>
-                                            </div>
-                                        </div>
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <label>Your Bio</label><br/>
-                                        <p>Your detail description</p>
-                                    </div>
-                                </div>
-                                @endforeach
+                                        @endforeach
                             </div>
                         </div>
                     </div>

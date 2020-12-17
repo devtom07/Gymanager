@@ -27,7 +27,7 @@ class LoginController extends Controller
             'password' => $request->password,
         ];
         if (Auth::guard('customer_accounts')->attempt($login,$request->remember)) {
-            return redirect()->route('khachhang.index');
+            return redirect(route('khachhang.index'));
         }
             Session::put('message','Gmail hoặc mật khẩu không chính xác');
             return redirect(route('loginCustomer'))->with('message', 'Gmail hoặc mật khẩu không chính xác');

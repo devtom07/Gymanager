@@ -342,6 +342,7 @@
                             <ul class="nav-second-level" aria-expanded="false">
                                 <li><a href="{{route('user.index')}}">Quản trị người dùng</a></li>
                                 <li><a href="{{route('role')}}">Quyền</a></li>
+                                <li><a href="{{route('customer_account')}}">Quản trị tài khoản khách</a></li>
                             </ul>
                         </li>
                         <li>

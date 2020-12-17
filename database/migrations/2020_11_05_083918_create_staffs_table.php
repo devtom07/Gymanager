@@ -26,7 +26,8 @@ class CreateStaffsTable extends Migration
             $table->string('contract');
             $table->string('avatar')->nullable();
             $table->integer('wage');
-            $table->foreign('position')->references('id')->on('position');
+            $table->unsignedBigInteger('position');
+//            $table->foreign('position')->references('id')->on('position');
             $table->timestamps();
         });
     }

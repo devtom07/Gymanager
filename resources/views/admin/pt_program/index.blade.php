@@ -67,8 +67,6 @@
                                                         Chủ Nhật <br>
                                                         {{$Sunday->toDateString()}}
                                                     </th>
-
-
                                                 </tr>
                                                 </thead>
                                                 <tbody>

@@ -1,4 +1,5 @@
 @extends('customers.layouts.master')
+@section('title', 'Lịch tập của khách hàng')
 @section('content')
 	<table class="table table-borderless" style="background: #fff">
   <thead>

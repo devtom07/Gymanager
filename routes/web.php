@@ -30,5 +30,7 @@ Route::group([ 'prefix' => '/', 'middleware'=>'checkAuth'], function () {
 Route::get('/khach-hang','CustomerInterface\HomeController@index')->name('khachhang.index');
 
 Route::get('/profile-khach-hang/{id}','CustomerInterface\HomeController@profile')->name('profile');
+Route::get('/doi-mat-khau', 'CustomerInterface\HomeController@changePassword')->name('changePassword');
+Route::post('/doi-mat-khau/{id}', 'CustomerInterface\HomeController@postChangePassword')->name('changePassword.a');
 });
 

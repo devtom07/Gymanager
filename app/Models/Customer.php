@@ -3,7 +3,7 @@
 namespace App\Models;
 
 use App\Models\Staff;
-use App\Models\Services;
+use App\Models\Service;
 use Illuminate\Database\Eloquent\Model;
 
 class Customer extends Model
@@ -14,7 +14,7 @@ class Customer extends Model
         ];
 
     public function services(){
-      return $this->hasMany(Services::class,'id_customer','id');
+      return $this->hasMany(Service::class,'id_customer','id');
     }
     public function pt(){
         return $this->belongsToMany(Staff::class,'services','id_customer','id_coach');
