@@ -5,6 +5,7 @@ namespace App\Http\Controllers\PT;
 use App\Models\Customer;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\ValidatePtProgram;
+use App\Models\Hymnal;
 use App\Models\Package;
 use App\Models\PtProgram;
 use App\Models\Staff;
@@ -16,20 +17,24 @@ class PtProgramController extends Controller
 {
     public function index()
     {
-        $weekMap = [
-            0 => 'Thứ 2',
-            1 => 'Thứ 3',
-            2 => 'Thứ 4',
-            3 => 'Thứ 5',
-            4 => 'Thứ 6',
-            5 => 'Thứ 7',
-            6 => 'Chủ nhật',
-        ];
-        $dayOfTheWeek = Carbon::now()->dayOfWeek;
-        $weekday = $weekMap[$dayOfTheWeek];
-        $day = Carbon::now();
-        $ptProgram = PtProgram::all();
-        return view('admin.pt_program.index',compact('ptProgram','weekday','dayOfTheWeek','day'));
+        $monday = Carbon::now()->startOfWeek();
+        $tuesday = $monday->copy()->addDay();
+        $wednesday = $tuesday->copy()->addDay();
+        $Thursday = $wednesday->copy()->addDay();
+        $Friday = $Thursday->copy()->addDay();
+        $Saturday = $Friday->copy()->addDay();
+        $Sunday = $Saturday->copy()->endOfWeek();
+        $hymnal = Hymnal::all();
+        foreach ($hymnal as $hymnals){
+         $id_hymnal = $hymnals->id;
+        }
+        $package = Package::where('id_catap',$id_hymnal)->get();
+        foreach ($package as $packages){
+            $id_package = $packages->id;
+        }
+        $ptProgram = PtProgram::where('package_id',$id_package)->get();
+        return view('admin.pt_program.index',
+            compact('ptProgram', 'wednesday', 'monday', 'tuesday', 'Thursday', 'Friday', 'Saturday', 'Sunday','hymnal'));
     }
 
     public function add()
@@ -59,7 +64,7 @@ class PtProgramController extends Controller
 
         $schedule = $request->schedule;
         DB::beginTransaction();
-        $ptProgram =  PtProgram::create([
+        $ptProgram = PtProgram::create([
             'customer_id' => $request->customer,
             'day_contract' => $request->day_contract,
             'number_sessions' => $request->number_sessions,
