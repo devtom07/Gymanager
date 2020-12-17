@@ -1,4 +1,4 @@
-@extends('admin.main')
+@extends('admin.layout.main')
 @section('title', 'Tạo mới nhân viên')
 @section('content')
 <div class="content-page">

@@ -221,6 +221,7 @@ Route::get('/logout','Admin\AuthurController@logout')->name('logout');
         Route::get('/san-pham-xoa/{id}','Sanpham\ProductController@destroy')
             ->name('product.delete');
 
+
          });
        //Pt-program
      Route::get('/chuong-trinh-PT','PT\PtProgramController@index')
