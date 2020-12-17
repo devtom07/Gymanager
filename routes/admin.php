@@ -1,16 +1,7 @@
 <?php
 use Illuminate\Support\Facades\Route;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
+
 //login
 Route::get('dangnhap','Admin\AuthurController@admin')->name('admin');
 Route::match(['post','get'],'/login','Admin\AuthurController@login')->name('login');
@@ -18,11 +9,13 @@ Route::get('/logout','Admin\AuthurController@logout')->name('logout');
 
  Route::middleware(['auth'])->group(function (){
      Route::prefix('admin')->group(function (){
+
          //auth
          Route::get('/dashboard','Admin\AdminController@index')
              ->name('dashboard');
          Route::get('/customer','KhachHang\CustomerController@index')
              ->name('customer');
+
          //Chức vụ
          Route::get('/chucvu','Users\RoleController@index')
              ->name('role');
@@ -36,6 +29,7 @@ Route::get('/logout','Admin\AuthurController@logout')->name('logout');
              ->name('role.update');
          Route::get('/xoachucvu/{id}','RoleController@destroy')
              ->name('role.delete');
+
          //quyền
          Route::get('/chucnang','PermissionController@index')
              ->name('permission.index');
@@ -49,6 +43,7 @@ Route::get('/logout','Admin\AuthurController@logout')->name('logout');
              ->name('permission.update');
          Route::get('/xoachucnang/{id}','PermissionController@destroy')
              ->name('permission.destroy');
+
         //user
         Route::get('xemtaikhoan','Users\UserController@index')
             ->name('user.index')
@@ -101,9 +96,7 @@ Route::get('/logout','Admin\AuthurController@logout')->name('logout');
             ->name('staff.update')
             ->middleware(['permission:Sửa nhân viên']);
         Route::get('/staff-delete/{id}','Nhanvien\ListnhanvienController@destroy')->name('deleteStaff');
-        // Route::get('/nhanvien/xoa/{id}','Nhanvien\ListnhanvienController@destroy')
-        // ->name('staff.delete')
-        // ->middleware(['permission:Xóa nhân viên']);
+        
         // chức vụ
         Route::get('/chuc-vu','Nhanvien\PositionController@index')
             ->name('listposition');
@@ -117,6 +110,7 @@ Route::get('/logout','Admin\AuthurController@logout')->name('logout');
             ->name('position.update');
         Route::get('/chuc-vu-xoa/{id}','Nhanvien\PositionController@destroy')
             ->name('position.delete');
+
         // Ca làm việc
         Route::get('/calamviec','Nhanvien\CalamviecController@index')
             ->name('calamviec');
@@ -144,6 +138,7 @@ Route::get('/logout','Admin\AuthurController@logout')->name('logout');
             ->name('suacalamviecnhanvien');
         Route::get('/xoa/{id}', 'Nhanvien\WorkSiftStaffController@destroy')
             ->name('xoacalamviecvn');
+
         //customers
          Route::get('khachhang','KhachHang\CustomerController@index')
              ->name('customer.index');
@@ -159,6 +154,7 @@ Route::get('/logout','Admin\AuthurController@logout')->name('logout');
              ->name('customer.delete');
          Route::get('GetCustomer/{id}','KhachHang\CustomerController@show')
              ->name('customer.show');
+
         //Dịch vụ
          Route::get('/dich-vu','Dichvu\ServiceController@index')
          ->name('service');
@@ -172,6 +168,7 @@ Route::get('/logout','Admin\AuthurController@logout')->name('logout');
              ->name('service.update');
           Route::get('/delete_dichvu/{id}','Dichvu\ServiceController@destroy')
           ->name('service.delete');
+
        //ca tap
          Route::get('catap','Dichvu\HymnalController@index')
              ->name('hymnal.index');
@@ -206,6 +203,7 @@ Route::get('/logout','Admin\AuthurController@logout')->name('logout');
         Route::get('xoa-goi-cuoc/{id}','KhachHang\PackageController@delete')
         ->name('package.delete');
 
+        //=========================Sản phẩm==================//
         //san pham
         Route::get('/san-pham','Sanpham\ProductController@index')
             ->name('listproduct');
