@@ -34,44 +34,58 @@
                             <div class="col-xl-6">
                                 <form method="post" enctype="multipart/form-data">
                                     <div class="form-group">
+                                        <label for="name">Tên dịch vụ</label>
+                                        <input type="text" class="form-control" id="name" name="name" placeholder="Tên"
+                                            value="{{$service->name}}">
+                                    </div>
+                                    @error('name')
+                                    <p style="color:red">{{$message}}</p>
+                                    @enderror
+                                    <div class="form-group">
                                         <label for="id_package">Gói cước</label>
-                                        <select class="form-control" id="id_package" name="id_package">
+                                        <select class="form-control" id="id_package" name="id_package"
+                                            value="{{ old('id_package') }}">
                                             <option value=""></option>
-                                            <option value="1">2</option>
-                                            <option value="2">3</option>
-                                            <option value="3">4</option>
-                                            <option value="4">5</option>
+                                            @foreach($package as $packages)
+                                            <option <?php if($packages->id == $service->id_package) :?> selected
+                                                <?php endif ?> value="{{ $packages->id }}">
+                                                {{ $packages->name }}</option>
+
+                                            @endforeach
                                         </select>
                                     </div>
                                     @error('id_package')
                                     <p style="color:red">{{$message}}</p>
                                     @enderror
                                     <div class="form-group">
-                                        <label for="">Tên khách hàng</label>
-                                        <select class="form-control" id="id_customer" name="id_customer">
-                                            <option value=""></option>
-                                            @foreach($data as $customers)
-                                            <option value="{{ $customers->name }}">{{ $customers->name }}</option>
-                                            @endforeach
-                                        </select>
+                                        <div class="form-group">
+                                            <label for="exampleInputEmail1">Tên khách hàng (*)</label>
+                                            <select class="form-control" name="id_customer">
+                                                @foreach($customer as $customers)
+                                                <option <?php if($customers->id == $service->id_customer) :?> selected
+                                                    <?php endif ?> value="{{ $customers->id }}">
+                                                    {{ $customers->name }}</option>
+                                                @endforeach
+                                            </select>
+                                        </div>
                                     </div>
                                     @error('id_customer')
                                     <p style="color:red">{{$message}}</p>
                                     @enderror
                                     <div class="form-group">
-                                        <label for="">Tên huấn luyện viên</label>
-                                        <select class="form-control" id="id_coach" name="id_coach">
-                                            <option value=""></option>
-                                            <option value="1">2</option>
-                                            <option value="2">3</option>
-                                            <option value="3">4</option>
-                                            <option value="4">5</option>
-                                        </select>
-
+                                        <label>Trạng thái</label>
+                                        <div class="mt-4">
+                                            <div class="radio radio-info form-check-inline">
+                                                <input type="radio" id="inlineRadio1" value="Không kèm PT" name="status"
+                                                    checked>
+                                                <label for="inlineRadio1">Không kèm PT</label>
+                                            </div>
+                                            <div class="radio form-check-inline">
+                                                <input type="radio" id="inlineRadio2" value="Kèm PT" name="status">
+                                                <label for="inlineRadio2">Kèm PT</label>
+                                            </div>
+                                        </div>
                                     </div>
-                                    @error('id_coach')
-                                    <p style="color:red">{{$message}}</p>
-                                    @enderror
                                     <div class="form-group">
                                         <label for="">Ngày bắt đầu</label>
                                         <input type="date" class="form-control" id="start_date" name="start_date"
@@ -119,10 +133,11 @@
                                 @enderror
                                 <div class="form-group">
                                     <label for="">Phương thức thanh toán</label>
-                                    <select class="form-control" id="pay_method" name="pay_method">
+                                    <select class="form-control" id="pay_method" name="pay_method"
+                                        value="{{$service->pay_method}}">
                                         <option value=""></option>
-                                        <option value="0">Tiền Mặt</option>
-                                        <option value="1">Chuyển khoản</option>
+                                        <option value="Tiền mặt">Tiền Mặt</option>
+                                        <option value="Chuyển khoản">Chuyển khoản</option>
                                     </select>
                                 </div>
                                 @error('pay_method')

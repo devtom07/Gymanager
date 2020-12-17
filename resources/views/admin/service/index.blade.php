@@ -84,9 +84,6 @@
                                                     <th id="tech-companies-1-col-0-clone">STT</th>
                                                     <th data-priority="1" id="tech-companies-1-col-1-clone"
                                                         style="text-alight:center">Tên khách hàng</th>
-                                                    <th data-priority="3" id="tech-companies-1-col-2-clone">
-                                                        Tên HLV
-                                                    </th>
                                                     <th data-priority="1" id="tech-companies-1-col-3-clone">Dịch vụ</th>
                                                     <th data-priority="6" id="tech-companies-1-col-6-clone">Ngày bắt đầu
                                                     </th>
@@ -115,12 +112,15 @@
                                                         data-columns="tech-companies-1-col-1">
                                                         {{$service->customer->name}}
                                                     </td>
+                                                    <!-- <td data-org-colspan="1" data-priority="1"
+                                                        data-columns="tech-companies-1-col-1">{{$service->name}}
+                                                    </td> -->
                                                     <td data-org-colspan="1" data-priority="1"
-                                                        data-columns="tech-companies-1-col-1">{{$service->staff->name}}
+                                                        data-columns="tech-companies-1-col-1">{{$service->status}}
                                                     </td>
-                                                    <td data-org-colspan="1" data-priority="3"
+                                                    <!-- <td data-org-colspan="1" data-priority="3"
                                                         data-columns="tech-companies-1-col-2">{{$service->id_package}}
-                                                    </td>
+                                                    </td> -->
                                                     <td data-org-colspan="1" data-priority="1"
                                                         data-columns="tech-companies-1-col-3">{{$service->start_date}}
                                                     </td>
