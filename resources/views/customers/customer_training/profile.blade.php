@@ -1,4 +1,5 @@
 @extends('customers.layouts.master')
+@section('title', 'Thông tin khách hàng')
 @section('content')
 <style>
 	.emp-profile{

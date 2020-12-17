@@ -235,19 +235,26 @@ Route::get('/logout','Admin\AuthurController@logout')->name('logout');
             ->name('category.delete');
 
        //Pt-program
-        Route::get('/chuong-trinh-PT','PT\PtProgramController@index')
-            ->name('ptProgram.index');
-        Route::get('/them-chuong-trinh-PT','PT\PtProgramController@add')
-            ->name('ptProgram.add');
-        Route::post('/them-chuong-trinh-PT','PT\PtProgramController@store')
-            ->name('ptProgram.store');
-        Route::get('/sua-chuong-trinh-PT/{id}','PT\PtProgramController@edit')
-            ->name('ptProgram.edit');
-        Route::post('/cap-nhat-chuong-trinh-PT/{id}','PT\PtProgramController@update')
-            ->name('ptProgram.update');
-        Route::get('/xoa-chuong-trinh-PT/{id}','PT\PtProgramController@destroy')
-            ->name('ptProgram.delete');
-        Route::get('getPackage/{id}','PT\PtProgramController@getPackage')
-            ->name('ptProgram.getPacket');
-    });
+     Route::get('/chuong-trinh-PT','PT\PtProgramController@index')
+         ->name('ptProgram.index');
+     Route::get('/them-chuong-trinh-PT','PT\PtProgramController@add')
+         ->name('ptProgram.add');
+     Route::post('/them-chuong-trinh-PT','PT\PtProgramController@store')
+         ->name('ptProgram.store');
+     Route::get('/sua-chuong-trinh-PT/{id}','PT\PtProgramController@edit')
+         ->name('ptProgram.edit');
+     Route::post('/cap-nhat-chuong-trinh-PT/{id}','PT\PtProgramController@update')
+         ->name('ptProgram.update');
+     Route::get('/xoa-chuong-trinh-PT/{id}','PT\PtProgramController@destroy')
+         ->name('ptProgram.delete');
+     Route::get('getPackage/{id}','PT\PtProgramController@getPackage')
+         ->name('ptProgram.getPacket');
+
+        //tài khoản khách hàng
+        Route::get('/tai-khoan-khach', 'CustomerAccount\CustomerAccountController@index')->name('customer_account'); 
+        Route::get('/them-tai-khoan-khach/', 'CustomerAccount\CustomerAccountController@create')->name('customer_account.add'); 
+        Route::post('/them-tai-khoan-khach', 'CustomerAccount\CustomerAccountController@store')->name('customer_account.add'); 
+        Route::get('/sua-tai-khoan-khach/{id}', 'CustomerAccount\CustomerAccountController@edit')->name('customer_account.edit'); 
+        Route::post('/tai-khoan-khach/{id}', 'CustomerAccount\CustomerAccountController@update')->name('customer_account.edit'); 
+        Route::get('/xoa-tai-khoan-khach/{id}', 'CustomerAccount\CustomerAccountController@destroy')->name('customer_account.delete'); 
 });
