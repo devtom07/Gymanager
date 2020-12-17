@@ -340,9 +340,9 @@
                                 {{--                                <span class="badge badge-danger badge-pill float-right">New</span>--}}
                             </a>
                             <ul class="nav-second-level" aria-expanded="false">
-                                <li><a href="{{route('user.index')}}">Quản trị người dùng</a></li>
-                                <li><a href="{{route('role')}}">Quyền</a></li>
-                                <li><a href="{{route('customer_account')}}">Quản trị tài khoản khách</a></li>
+                                <li><a href="{{route('user.index')}}">Admin</a></li>
+                                <li><a href="{{route('role')}}">Phân quyền</a></li>
+                                <li><a href="{{route('customer_account')}}">Khách hàng</a></li>
                             </ul>
                         </li>
                         <li>
@@ -353,9 +353,9 @@
                             </a>
                             <ul class="nav-second-level" aria-expanded="false">
                                 <li><a href="{{route('listnhanvien')}}">Danh sách nhân viên</a></li>
+                                <li><a href="{{route('listposition')}}">Chức vụ</a></li>
                                 <li><a href="{{route('calamviec')}}">Ca làm việc</a></li>
                                 <li><a href="{{route('calamviecnhanvien')}}">Ca làm việc nhân viên</a></li>
-                                <li><a href="{{route('listposition')}}">Chức vụ</a></li>
                             </ul>
                         </li>
                         <li>
@@ -376,7 +376,9 @@
                             </a>
                             <ul class="nav-second-level" aria-expanded="false">
                                 <li><a href="{{route('ptProgram.add')}}">Đăng ký </a></li>
-                                <li><a href="{{route('ptProgram.index')}}">Quản lý đăng ký PT</a></li>
+                                <li><a href="{{route('ptProgram.index')}}">Chương trình PT</a></li>
+                                <li><a href="{{route('ptProgram.training')}}">Lịch dạy</a></li>
+                                <li><a href="{{route('ptProgram.index')}}">Thông tin PT</a></li>
 
                             </ul>
                         </li>
@@ -424,11 +426,20 @@
                         <li>
                             <a href="javascript: void(0);">
                                 <i class="mdi mdi-seal-variant"></i>
-                                <span>Cấu hình </span>
+                                <span>Quản lý bài viết</span>
                             </a>
                             <ul class="nav-second-level" aria-expanded="false">
                                 <li><a href="">Bài viết</a></li>
                                 <li><a href="">Danh mục bài viết</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="javascript: void(0);">
+                                <i class="mdi mdi-bread-slice"></i>
+                                <span>Quản lý slide</span>
+                            </a>
+                            <ul class="nav-second-level" aria-expanded="false">
+                                <li><a href="">Slide</a></li>
                             </ul>
                         </li>
                     </ul>

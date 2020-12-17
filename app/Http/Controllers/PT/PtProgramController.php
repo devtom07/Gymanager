@@ -19,7 +19,12 @@ use RealRashid\SweetAlert\Facades\Alert;
 
 class PtProgramController extends Controller
 {
-    public function index()
+
+    public function index(){
+        $ptProgram = PtProgram::all();
+        return view('admin.pt_program.index',compact('ptProgram'));
+    }
+    public function training()
     {
         $monday = Carbon::now()->startOfWeek();
         $tuesday = $monday->copy()->addDay();
@@ -29,7 +34,10 @@ class PtProgramController extends Controller
         $Saturday = $Friday->copy()->addDay();
         $Sunday = $Saturday->copy()->endOfWeek();
         $hymnal = Hymnal::all();
-        return view('admin.pt_program.index',
+        foreach ($hymnal as $hymnals){
+            $id_hymnal = $hymnals->id;
+        }
+        return view('admin.pt_program.training',
             compact('ptProgram', 'wednesday', 'monday', 'tuesday', 'Thursday', 'Friday', 'Saturday', 'Sunday', 'hymnal'));
     }
     public function add()
@@ -47,10 +55,14 @@ class PtProgramController extends Controller
         return response()->json($Get_package);
     }
 
-    public function edit()
+    public function edit($id)
     {
-        return view('admin.pt_program.edit');
-
+        $schedule = DB::table('trainings')->get();
+        $customer = Services::where('status','Kèm PT')->get();
+        $pt = Position::where('name', 'Huấn luyện viên')->get();
+        $package = Package::all();
+        $ptProgram = PtProgram::where('id',$id)->get();
+        return view('admin.pt_program.edit',compact('schedule','customer','pt','package','ptProgram'));
     }
     public function store(ValidatePtProgram $request)
     {
@@ -77,14 +89,11 @@ class PtProgramController extends Controller
         DB::commit();
         Alert()->success('Thành công','Bạn đã đăng lý PT thành công');
         return redirect()->route('ptProgram.index');
-
     }
-
     public function update()
     {
 
     }
-
     public function delete()
     {
 

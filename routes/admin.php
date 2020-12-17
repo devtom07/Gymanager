@@ -92,7 +92,8 @@ Route::middleware(['auth'])->group(function () {
         Route::post('/sua-nhan-vien/post/{id}', 'Nhanvien\ListnhanvienController@update')
             ->name('staff.update')
             ->middleware(['permission:Sửa nhân viên']);
-        Route::get('/staff-delete/{id}','Nhanvien\ListnhanvienController@destroy')->name('deleteStaff');
+        Route::get('/staff-delete/{id}','Nhanvien\ListnhanvienController@destroy')
+            ->name('deleteStaff');
         
         // chức vụ
         Route::get('/chuc-vu', 'Nhanvien\PositionController@index')
@@ -241,8 +242,9 @@ Route::middleware(['auth'])->group(function () {
         Route::get('/xoa-chuong-trinh-PT/{id}', 'PT\PtProgramController@destroy')
             ->name('ptProgram.delete');
         Route::get('getPackage/{id}', 'PT\PtProgramController@getPackage')
-
             ->name('ptProgram.getPacket');
+        Route::get('/lich-day', 'PT\PtProgramController@training')
+            ->name('ptProgram.training');
 
         //tài khoản khách hàng
         Route::get('/tai-khoan-khach', 'CustomerAccount\CustomerAccountController@index')
