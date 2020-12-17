@@ -51,7 +51,6 @@
                                        <th data-priority="3" id="tech-companies-1-col-5-clone">Còn lại</th>
                                        <th data-priority="6" id="tech-companies-1-col-6-clone">Ngày bắt đầu</th>
                                        <th data-priority="6" id="tech-companies-1-col-7-clone">Ngày hết hạn</th>
-                                       <th data-priority="6" id="tech-companies-1-col-8-clone">Nhân viên phụ trách</th>
                                        <th data-priority="6" id="tech-companies-1-col-8-clone" >Action</th>
                                     </tr>
                                  </thead>
@@ -68,9 +67,6 @@
                                        <td id="days" data-org-colspan="1" data-priority="3" data-columns="tech-companies-1-col-4"></td>
                                        <td data-org-colspan="1" data-priority="3" data-columns="tech-companies-1-col-5">{{$service->start_date}}</td>
                                        <td id="endDate" data-org-colspan="1" data-priority="6" data-columns="tech-companies-1-col-6">{{$service->end_date}}</td>
-                                       @endforeach
-                                       @foreach($customer->pt as $pt)
-                                       <td data-org-colspan="1" data-priority="6" data-columns="tech-companies-1-col-7">{{$pt->name}}</td>
                                        @endforeach
                                        <td data-org-colspan="1" data-priority="6" data-columns="tech-companies-1-col-8">
                                        <div class="btn-group mt-1 mr-1">
