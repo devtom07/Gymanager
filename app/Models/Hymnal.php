@@ -10,4 +10,7 @@ class Hymnal extends Model
     protected $fillable = [
      'code' , 'name' , 'start_hour' ,'end_hour' ,'describe'
     ];
+    public function package(){
+        return $this->belongsTo(Package::class, 'id_catap', 'id');
+    }
 }

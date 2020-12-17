@@ -389,8 +389,6 @@
                                 <li><a href="{{route('service')}}"> Xem dịch vụ</a></li>
                                 <li><a href="{{route('hymnal.index')}}">Ca tập</a></li>
                                 <li><a href="{{ route('package.index') }}">Gói cước</a></li>
-
-
                             </ul>
                         </li>
                         <li>
@@ -404,7 +402,7 @@
                         </li>
                         <li>
                             <a href="javascript: void(0);">
-                                <i class="mdi mdi-progress-upload"></i>
+                                <i class="mdi mdi-access-point"></i>
                                 <span> Quản lý sản phẩm </span>
                             </a>
                             <ul class="nav-second-level" aria-expanded="false">
@@ -412,6 +410,25 @@
                                 <li><a href="{{route('product.add')}}">Thêm sản phẩm</a></li>
                                 <li><a href="{{route('listcategory')}}">Danh sách loại sản phẩm</a></li>
                                 <li><a href="{{route('category.add')}}">Thêm loại sản phẩm</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="javascript: void(0);">
+                                <i class="mdi mdi-contact-mail"></i>
+                                <span>Liên hệ</span>
+                            </a>
+                            <ul class="nav-second-level" aria-expanded="false">
+                                <li><a href="">Xem thông tin liên hệ từ khách hàng</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="javascript: void(0);">
+                                <i class="mdi mdi-seal-variant"></i>
+                                <span>Cấu hình </span>
+                            </a>
+                            <ul class="nav-second-level" aria-expanded="false">
+                                <li><a href="">Bài viết</a></li>
+                                <li><a href="">Danh mục bài viết</a></li>
                             </ul>
                         </li>
                     </ul>
