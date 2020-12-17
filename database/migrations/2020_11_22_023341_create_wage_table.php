@@ -28,6 +28,6 @@ class CreateWageTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('wage.');
+        Schema::dropIfExists('wage');
     }
 }

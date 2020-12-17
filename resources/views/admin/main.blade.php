@@ -396,6 +396,7 @@
                                 <li><a href="{{route('service')}}">Dịch vụ</a></li>
                                 <li><a href="{{route('hymnal.index')}}">Ca tập</a></li>
                                 <li><a href="{{ route('package.index') }}">Gói cước</a></li>
+                                <li><a href="{{route('listproduct')}}">san pham</a></li>
 
 
                             </ul>
@@ -424,7 +425,7 @@
                                 <span> Quản lý các sản phẩm </span>
                             </a>
                             <ul class="nav-second-level" aria-expanded="false">
-                                <li><a href="{{route('listproduct')}}">Sản phẩm</a></li>
+                                <li><a href="">Sản phẩm</a></li>
                             </ul>
                         </li>
                     </ul>

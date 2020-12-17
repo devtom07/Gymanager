@@ -12,19 +12,19 @@ use Illuminate\Support\Facades\Route;
 |
 */
 //login
-Route::get('dangnhap','AuthurController@admin')->name('admin');
-Route::match(['post','get'],'/login','AuthurController@login')->name('login');
-Route::get('/logout','AuthurController@logout')->name('logout');
+Route::get('dangnhap','Admin\AuthurController@admin')->name('admin');
+Route::match(['post','get'],'/login','Admin\AuthurController@login')->name('login');
+Route::get('/logout','Admin\AuthurController@logout')->name('logout');
 
  Route::middleware(['auth'])->group(function (){
      Route::prefix('admin')->group(function (){
          //auth
-         Route::get('/dashboard','AdminController@index')
+         Route::get('/dashboard','Admin\AdminController@index')
              ->name('dashboard');
-         Route::get('/customer','CustomerController@index')
+         Route::get('/customer','KhachHang\CustomerController@index')
              ->name('customer');
          //Chức vụ
-         Route::get('/chucvu','RoleController@index')
+         Route::get('/chucvu','Users\RoleController@index')
              ->name('role');
          Route::get('/themchucvu','RoleController@create')
              ->name('role.add');
@@ -145,19 +145,19 @@ Route::get('/logout','AuthurController@logout')->name('logout');
         Route::get('/xoa/{id}', 'Nhanvien\WorkSiftStaffController@destroy')
             ->name('xoacalamviecvn');
         //customers
-         Route::get('khachhang','CustomerController@index')
+         Route::get('khachhang','KhachHang\CustomerController@index')
              ->name('customer.index');
-         Route::get('themkhachhang','CustomerController@add')
+         Route::get('themkhachhang','KhachHang\CustomerController@add')
              ->name('customer.add');
-         Route::get('suakhachhang/{id}','CustomerController@edit')
+         Route::get('suakhachhang/{id}','KhachHang\CustomerController@edit')
              ->name('customer.edit');
-         Route::post('themkhachhang/post','CustomerController@store')
+         Route::post('themkhachhang/post','KhachHang\CustomerController@store')
              ->name('customer.store');
-         Route::post('suakhachhang/post/{id}','CustomerController@update')
+         Route::post('suakhachhang/post/{id}','KhachHang\CustomerController@update')
              ->name('customer.update');
-         Route::get('xoakhachhang/{id}','CustomerController@destroy')
+         Route::get('xoakhachhang/{id}','KhachHang\CustomerController@destroy')
              ->name('customer.delete');
-         Route::get('GetCustomer/{id}','CustomerController@show')
+         Route::get('GetCustomer/{id}','KhachHang\CustomerController@show')
              ->name('customer.show');
         //Dịch vụ
          Route::get('/dich-vu','Dichvu\ServiceController@index')
@@ -173,17 +173,17 @@ Route::get('/logout','AuthurController@logout')->name('logout');
           Route::get('/delete_dichvu/{id}','Dichvu\ServiceController@destroy')
           ->name('service.delete');
        //ca tap
-         Route::get('catap','HymnalController@index')
+         Route::get('catap','Dichvu\HymnalController@index')
              ->name('hymnal.index');
-         Route::get('themcatap','HymnalController@add')
+         Route::get('themcatap','Dichvu\HymnalController@add')
              ->name('hymnal.add');
-         Route::get('suacatap/{id}','HymnalController@edit')
+         Route::get('suacatap/{id}','Dichvu\HymnalController@edit')
              ->name('hymnal.edit');
-         Route::post('catap/post','HymnalController@store')
+         Route::post('catap/post','Dichvu\HymnalController@store')
              ->name('hymnal.store');
-         Route::post('suacatap/post/{id}','HymnalController@update')
+         Route::post('suacatap/post/{id}','Dichvu\HymnalController@update')
              ->name('hymnal.update');
-         Route::get('xoacatap/{id}','HymnalController@destroy')
+         Route::get('xoacatap/{id}','Dichvu\HymnalController@destroy')
              ->name('hymnal.delete');
 
           //Pt
@@ -193,12 +193,18 @@ Route::get('/logout','AuthurController@logout')->name('logout');
              ->name('pt.add');
 
        //pt-level
-        Route::get('goi-cuoc','KhachHang\PackageController@index')->name('package.index');
-        Route::get('them-goi-cuoc','KhachHang\PackageController@create')->name('package.create');
-        Route::post('them-goi-cuoc','KhachHang\PackageController@add')->name('package.add');
-        Route::get('sua-goi-cuoc/{id}','KhachHang\PackageController@edit')->name('package.edit');
-        Route::post('sua-goi-cuoc/{id}','KhachHang\PackageController@update')->name('package.edit');
-        Route::get('xoa-goi-cuoc/{id}','KhachHang\PackageController@delete')->name('package.delete');
+        Route::get('goi-cuoc','KhachHang\PackageController@index')
+        ->name('package.index');
+        Route::get('them-goi-cuoc','KhachHang\PackageController@create')
+        ->name('package.create');
+        Route::post('them-goi-cuoc','KhachHang\PackageController@add')
+        ->name('package.add');
+        Route::get('sua-goi-cuoc/{id}','KhachHang\PackageController@edit')
+        ->name('package.edit');
+        Route::post('sua-goi-cuoc/{id}','KhachHang\PackageController@update')
+        ->name('package.edit');
+        Route::get('xoa-goi-cuoc/{id}','KhachHang\PackageController@delete')
+        ->name('package.delete');
 
 
         //san pham
@@ -214,5 +220,21 @@ Route::get('/logout','AuthurController@logout')->name('logout');
             ->name('product.update');
         Route::get('/san-pham-xoa/{id}','Sanpham\ProductController@destroy')
             ->name('product.delete');
+
          });
+       //Pt-program
+     Route::get('/chuong-trinh-PT','PT\PtProgramController@index')
+         ->name('ptProgram.index');
+     Route::get('/them-chuong-trinh-PT','PT\PtProgramController@add')
+         ->name('ptProgram.add');
+     Route::post('/them-chuong-trinh-PT','PT\PtProgramController@store')
+         ->name('ptProgram.store');
+     Route::get('/sua-chuong-trinh-PT/{id}','PT\PtProgramController@edit')
+         ->name('ptProgram.edit');
+     Route::post('/cap-nhat-chuong-trinh-PT/{id}','PT\PtProgramController@update')
+         ->name('ptProgram.update');
+     Route::get('/xoa-chuong-trinh-PT/{id}','PT\PtProgramController@destroy')
+         ->name('ptProgram.delete');
+     Route::get('getPackage/{id}','PT\PtProgramController@getPackage')
+         ->name('ptProgram.getPacket');
 });
