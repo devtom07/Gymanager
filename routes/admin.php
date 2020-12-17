@@ -194,17 +194,34 @@ Route::get('/logout','Admin\AuthurController@logout')->name('logout');
 
        //pt-level
         Route::get('goi-cuoc','KhachHang\PackageController@index')
-            ->name('package.index');
+        ->name('package.index');
         Route::get('them-goi-cuoc','KhachHang\PackageController@create')
-            ->name('package.create');
+        ->name('package.create');
         Route::post('them-goi-cuoc','KhachHang\PackageController@add')
-            ->name('package.add');
+        ->name('package.add');
         Route::get('sua-goi-cuoc/{id}','KhachHang\PackageController@edit')
-            ->name('package.edit');
+        ->name('package.edit');
         Route::post('sua-goi-cuoc/{id}','KhachHang\PackageController@update')
-            ->name('package.edit');
+        ->name('package.edit');
         Route::get('xoa-goi-cuoc/{id}','KhachHang\PackageController@delete')
-            ->name('package.delete');
+        ->name('package.delete');
+
+
+        //san pham
+        Route::get('/san-pham','Sanpham\ProductController@index')
+            ->name('listproduct');
+        Route::get('/them-san-pham','Sanpham\ProductController@create')
+            ->name('product.add');
+        Route::post('/them-san-pham/post','Sanpham\ProductController@store')
+            ->name('product.store');
+        Route::get('/sua-san-pham/{id}','Sanpham\ProductController@edit')
+            ->name('product.edit');
+        Route::post('/sua-san-pham/post/{id}','Sanpham\ProductController@update')
+            ->name('product.update');
+        Route::get('/san-pham-xoa/{id}','Sanpham\ProductController@destroy')
+            ->name('product.delete');
+
+
          });
        //Pt-program
      Route::get('/chuong-trinh-PT','PT\PtProgramController@index')

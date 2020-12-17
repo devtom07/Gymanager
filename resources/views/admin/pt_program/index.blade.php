@@ -39,28 +39,44 @@
                                                 <tr>
                                                     <th data-priority="3" id="tech-companies-1-col-2-clone">Thời gian
                                                     </th>
-                                                    <th data-priority="3" id="tech-companies-1-col-2-clone">Thứ 2</th>
-                                                    <th data-priority="3" id="tech-companies-1-col-2-clone">Thứ 3
+                                                    <th data-priority="3" id="tech-companies-1-col-2-clone">
+                                                        Thứ 2 <br>
+                                                        {{$monday->toDateString()}}</th>
+                                                    <th data-priority="3" id="tech-companies-1-col-2-clone">
+                                                        Thứ 3 <br>
+                                                        {{$tuesday->toDateString()}}
                                                     </th>
                                                     <th data-priority="3" id="tech-companies-1-col-2-clone">
-                                                        {{$weekday}}
-                                                        <br>
-                                                        {{$day->toDateString()}}
-
+                                                       Thứ 4 <br>
+                                                        {{$wednesday->toDateString()}}
                                                     </th>
-                                                    <th data-priority="3" id="tech-companies-1-col-2-clone">Thứ 5</th>
-                                                    <th data-priority="3" id="tech-companies-1-col-2-clone">Thứ 6</th>
-                                                    <th data-priority="3" id="tech-companies-1-col-2-clone">Thứ 7</th>
-                                                    <th data-priority="3" id="tech-companies-1-col-2-clone">Chủ Nhật
+                                                    <th data-priority="3" id="tech-companies-1-col-2-clone">
+                                                        Thứ 5 <br>
+                                                        {{$Thursday->toDateString()}}
+                                                    </th>
+
+                                                    <th data-priority="3" id="tech-companies-1-col-2-clone">
+                                                        Thứ 6 <br>
+                                                        {{$Friday->toDateString()}}
+                                                    </th>
+                                                    <th data-priority="3" id="tech-companies-1-col-2-clone">
+                                                        Thứ 7 <br>
+                                                        {{$Saturday->toDateString()}}
+                                                    </th>
+                                                    <th data-priority="3" id="tech-companies-1-col-2-clone">
+                                                        Chủ Nhật <br>
+                                                        {{$Sunday->toDateString()}}
                                                     </th>
 
 
                                                 </tr>
                                                 </thead>
                                                 <tbody>
+
+                                                @foreach($hymnal as $hymnals)
                                                 <tr>
                                                     <td data-org-colspan="1" data-priority="1"
-                                                        data-columns="tech-companies-1-col-1"></td>
+                                                        data-columns="tech-companies-1-col-1">{{$hymnals->start_hour}} - {{$hymnals->end_hour}}</td>
                                                     <td data-org-colspan="1" data-priority="1"
                                                         data-columns="tech-companies-1-col-1"></td>
                                                     <td data-org-colspan="1" data-priority="3"
@@ -81,7 +97,7 @@
                                                         data-columns="tech-companies-1-col-8">
                                                     </td>
                                                 </tr>
-
+                                                @endforeach
                                                 </tbody>
                                             </table>
                                         </div>
