@@ -16,5 +16,19 @@ use Illuminate\Support\Facades\Route;
 // Route::get('/', function () {
 //     return view('welcome');
 // });
+// dao dien customers
+
+
 require_once 'admin.php';
 require_once 'fontend.php';
+Route::get('/login-khach-hang','CustomerInterface\LoginController@index')->name('loginCustomer');
+Route::post('/login-khach-hang','CustomerInterface\LoginController@loginCustomer')->name('loginCustomer');
+Route::get('/logout-khach-hang','CustomerInterface\LoginController@logoutCustomer')->name('logoutCustomer');
+
+Route::group([ 'prefix' => '/', 'middleware'=>'checkAuth'], function () {
+
+Route::get('/khach-hang','CustomerInterface\HomeController@index')->name('khachhang.index');
+
+Route::get('/profile-khach-hang/{id}','CustomerInterface\HomeController@profile')->name('profile');
+});
+

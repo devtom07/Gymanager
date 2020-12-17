@@ -1,4 +1,4 @@
-@extends('admin.main')
+@extends('admin.layout.main')
 @section('title', 'Tạo mới ca làm việc')
 @section('content')
 <div class="content-page">
@@ -53,24 +53,23 @@
                                             @endforeach
                                         </select>
                                     </div>
-
-                                    <div class="form-group">
-                                        <label for="exampleInputPassword1">Ngày bắt đầu (*)</label>
-                                        <input class="form-control" type="date" name="date_start" value="{{ old('date_start') }}" id="date_start">
-                                    </div>
-                                    @error('date_start')
-                                    <p style="color:red">{{$message}}</p>
-                                    @enderror
                                     <div class="form-group">
                                         <label for="exampleInputPassword1">Chu kỳ (*)</label>
                                         <!-- <input type="text" name="cycle"> -->
-                                        <select class="form-control" name="cycle" id="chuki" onclick="clickDate()">
+                                        <select class="form-control" name="cycle" id="chuki">
                                             <option value="week">Tuần</option>
                                             <option value="month">Tháng</option>
                                             <option value="year">Năm</option>
                                         </select>
                                     </div>
                                     @error('cycle')
+                                    <p style="color:red">{{$message}}</p>
+                                    @enderror
+                                    <div class="form-group">
+                                        <label for="exampleInputPassword1">Ngày bắt đầu (*)</label>
+                                        <input class="form-control" type="date" name="date_start" value="{{ old('date_start') }}" id="date_start">
+                                    </div>
+                                    @error('date_start')
                                     <p style="color:red">{{$message}}</p>
                                     @enderror
                                     <div class="form-group">

@@ -1,5 +1,5 @@
 
-@extends('admin.main')
+@extends('admin.layout.main')
 @section('title', 'Danh sách ca tập')
 @section('content')
     <div class="content-page">
@@ -65,8 +65,8 @@
                                                 </tr>
                                                 </thead>
                                                 <tbody>
+                                                @foreach($hymnal as $key => $hymnals)
                                                     <tr>
-                                                        @foreach($hymnal as $key => $hymnals)
                                                         <td data-org-colspan="1" data-priority="1" data-columns="tech-companies-1-col-1">{{$hymnals->code}}</td>
                                                         <td data-org-colspan="1" data-priority="3" data-columns="tech-companies-1-col-2">{{$hymnals->name}}</td>
                                                         <td data-org-colspan="1" data-priority="3" data-columns="tech-companies-1-col-2">{{$hymnals->start_hour}}</td>
@@ -83,8 +83,8 @@
                                                                 </div>
                                                             </div>
                                                         </td>
-                                                        @endforeach
                                                     </tr>
+                                                @endforeach
 
                                                 </tbody>
                                             </table>

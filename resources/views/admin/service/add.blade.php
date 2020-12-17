@@ -1,4 +1,4 @@
-@extends('admin.main')
+@extends('admin.layout.main')
 @section('title', 'Đăng ký dịch vụ')
 @section('content')
 <div class="content-page">
@@ -34,6 +34,14 @@
                             <div class="col-xl-6">
                                 <form method="post" enctype="multipart/form-data">
                                     <div class="form-group">
+                                        <label for="name">Tên</label>
+                                        <input type="text" class="form-control" id="name" name="name"
+                                               placeholder="Tên" value="{{old('name')}}">
+                                    </div>
+                                    @error('name')
+                                    <p style="color:red">{{$message}}</p>
+                                    @enderror
+                                    <div class="form-group">
                                         <label for="id_package">Gói cước</label>
                                         <select class="form-control" id="id_package" name="id_package"
                                             value="{{old('id_package')}}">
@@ -52,7 +60,7 @@
                                             value="{{old('id_customer')}}">
                                             <option value=""></option>
                                             @foreach($data as $customers)
-                                            <option value="{{ $customers->name }}">{{ $customers->name }}</option>
+                                            <option value="{{ $customers->id }}">{{ $customers->name }}</option>
                                             @endforeach
                                         </select>
                                     </div>
