@@ -26,7 +26,6 @@ class ValidateFormEditService extends FormRequest
         return [
             'id_package' => 'required:id_package',
             'id_customer' => 'required:id_customer ',
-            'id_coach' => 'required:id_coach',
             'start_date' => 'required:start_date',
             'end_date' => 'required:end_date',
             'active_date' => 'required:active_date',
@@ -49,7 +48,6 @@ class ValidateFormEditService extends FormRequest
         return [
             'id_package' => 'Gói cước',
             'id_customer' => 'Tên khách hàng',
-            'id_coach' => 'Tên huấn luyện viên',
             'start_date' => 'Ngày bắt đầu',
             'end_date' => 'Ngày kết thúc',
             'active_date' => 'Ngày kích hoạt',
