@@ -206,7 +206,6 @@ Route::get('/logout','Admin\AuthurController@logout')->name('logout');
         Route::get('xoa-goi-cuoc/{id}','KhachHang\PackageController@delete')
         ->name('package.delete');
 
-
         //san pham
         Route::get('/san-pham','Sanpham\ProductController@index')
             ->name('listproduct');
@@ -221,21 +220,34 @@ Route::get('/logout','Admin\AuthurController@logout')->name('logout');
         Route::get('/san-pham-xoa/{id}','Sanpham\ProductController@destroy')
             ->name('product.delete');
 
+        //loai san pham
+        Route::get('/loai-san-pham','Sanpham\CategoryController@index')
+            ->name('listcategory');
+        Route::get('/them-loai-san-pham','Sanpham\CategoryController@create')
+            ->name('category.add');
+        Route::post('/them-loai-san-pham/post','Sanpham\CategoryController@store')
+            ->name('category.store');
+        Route::get('/sua-loai-san-pham/{id}','Sanpham\CategoryController@edit')
+            ->name('category.edit');
+        Route::post('/sua-loai-san-pham/post/{id}','Sanpham\CategoryController@update')
+            ->name('category.update');
+        Route::get('/loai-san-pham-xoa/{id}','Sanpham\CategoryController@destroy')
+            ->name('category.delete');
 
-         });
        //Pt-program
-     Route::get('/chuong-trinh-PT','PT\PtProgramController@index')
-         ->name('ptProgram.index');
-     Route::get('/them-chuong-trinh-PT','PT\PtProgramController@add')
-         ->name('ptProgram.add');
-     Route::post('/them-chuong-trinh-PT','PT\PtProgramController@store')
-         ->name('ptProgram.store');
-     Route::get('/sua-chuong-trinh-PT/{id}','PT\PtProgramController@edit')
-         ->name('ptProgram.edit');
-     Route::post('/cap-nhat-chuong-trinh-PT/{id}','PT\PtProgramController@update')
-         ->name('ptProgram.update');
-     Route::get('/xoa-chuong-trinh-PT/{id}','PT\PtProgramController@destroy')
-         ->name('ptProgram.delete');
-     Route::get('getPackage/{id}','PT\PtProgramController@getPackage')
-         ->name('ptProgram.getPacket');
+        Route::get('/chuong-trinh-PT','PT\PtProgramController@index')
+            ->name('ptProgram.index');
+        Route::get('/them-chuong-trinh-PT','PT\PtProgramController@add')
+            ->name('ptProgram.add');
+        Route::post('/them-chuong-trinh-PT','PT\PtProgramController@store')
+            ->name('ptProgram.store');
+        Route::get('/sua-chuong-trinh-PT/{id}','PT\PtProgramController@edit')
+            ->name('ptProgram.edit');
+        Route::post('/cap-nhat-chuong-trinh-PT/{id}','PT\PtProgramController@update')
+            ->name('ptProgram.update');
+        Route::get('/xoa-chuong-trinh-PT/{id}','PT\PtProgramController@destroy')
+            ->name('ptProgram.delete');
+        Route::get('getPackage/{id}','PT\PtProgramController@getPackage')
+            ->name('ptProgram.getPacket');
+    });
 });

@@ -50,6 +50,16 @@
                                     @error('price')
                                             <p style="color:red">{{$message}}</p>
                                     @enderror
+                                    <div class="form-group">
+                                        <label>Loại sản phẩm</label>
+                                        <select class="form-control" id="exampleSelect1" name="cate_id">
+                                            @foreach ($listCategory as $item)
+                                                <option value="{{$item->id}}">
+                                                    {{ $item->name}}  
+                                                </option>
+                                            @endforeach
+                                        </select>
+                                    </div>
                                 </div>
                                 <div class="col-xl-6">
                                     <div class="form-group">
@@ -60,10 +70,10 @@
                                             <p style="color:red">{{$message}}</p>
                                     @enderror
                                     <div class="form-group">
-                                        <label>Tiêu đề</label>
-                                        <input class="form-control" type="text" name="short_title" placeholder="">
+                                        <label>Số lượng</label>
+                                        <input class="form-control" type="number" name="quantity" placeholder="">
                                     </div>
-                                    @error('short_title')
+                                    @error('quantity')
                                             <p style="color:red">{{$message}}</p>
                                     @enderror
                                     <div class="form-group">

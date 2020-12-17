@@ -52,6 +52,23 @@
                                     @error('price')
                                         <p style="color:red">{{$message}}</p>
                                     @enderror
+                                    <div class="form-group">
+                                        <label>Loại sản phẩm</label>
+                                        <select class="form-control" id="exampleSelect1" name="cate_id">
+                                            @foreach ($listCategory as $item)
+                                                <option value="{{$item->id }}"
+                                                    <?php if($item->id == $listProducts->cate_id):?>
+                                                        selected
+                                                    <?php endif?>
+                                                    >
+                                                    {{ $item->name}}  
+                                                </option>
+                                            @endforeach
+                                        </select>
+                                    </div>
+                                    @error('cate_id')
+                                        <p style="color:red">{{$message}}</p>
+                                    @enderror
                                 </div>
                                 <div class="col-xl-6">
                                     <div class="form-group">
@@ -62,10 +79,10 @@
                                         <p style="color:red">{{$message}}</p>
                                     @enderror
                                     <div class="form-group">
-                                        <label>Tiêu đề</label>
-                                        <input class="form-control" type="text" name="short_title"  value="{{ $listProducts->short_title}}">
+                                        <label>Số lượng</label>
+                                        <input class="form-control" type="number" name="quantity"  value="{{ $listProducts->quantity}}">
                                     </div>
-                                    @error('short_title')
+                                    @error('quantity')
                                         <p style="color:red">{{$message}}</p>
                                     @enderror
                                     <div class="form-group">

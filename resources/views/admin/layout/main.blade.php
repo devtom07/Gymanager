@@ -404,14 +404,16 @@
                         <li>
                             <a href="javascript: void(0);">
                                 <i class="mdi mdi-progress-upload"></i>
-                                <span> Quản lý các sản phẩm </span>
+                                <span> Quản lý sản phẩm </span>
                             </a>
                             <ul class="nav-second-level" aria-expanded="false">
-                                <li><a href="{{route('listproduct')}}">Sản phẩm</a></li>
+                                <li><a href="{{route('listproduct')}}">Danh sách sản phẩm</a></li>
+                                <li><a href="{{route('product.add')}}">Thêm sản phẩm</a></li>
+                                <li><a href="{{route('listcategory')}}">Danh sách loại sản phẩm</a></li>
+                                <li><a href="{{route('category.add')}}">Thêm loại sản phẩm</a></li>
                             </ul>
                         </li>
                     </ul>
-
                 </div>
                 <!-- End Sidebar -->
 

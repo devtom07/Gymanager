@@ -7,18 +7,21 @@ use Illuminate\Http\Request;
 use App\Http\Requests\ValidateAddProduct;
 use App\Http\Requests\ValidateEditProduct;
 use App\Models\Product;
+use App\Models\Category;
 
 class ProductController extends Controller
 {
     public function index()
     {
-        $listProducts = Product::all();
-        return view('admin.product.index',['listProducts'=>$listProducts]);
+        $listProducts = Product::with('category')->get();
+        $listCategory = Category::all();
+        return view('admin.san-pham.list-san-pham.index',['listProducts'=>$listProducts, 'listCategory'=>$listCategory]);
 
     }
     public function create()
     {
-        return view('admin.product.add');
+        $listCategory = Category::all();
+        return view('admin.san-pham.list-san-pham.add',['listCategory'=>$listCategory]);
     }
     public function store(ValidateAddProduct $request)
     {
@@ -29,14 +32,13 @@ class ProductController extends Controller
         $get_image->move('product',$new_image);
         $products = new Product;
         $products->name = $request->name;
+        $products->cate_id = $request->cate_id;
         $products->price = $request->price;
         $products->sale_price = $request->sale_price;
-        $products->short_title = $request->short_title;
+        $products->quantity = $request->quantity;
         $products->detail = $request->detail;
         $products['avatar'] = $new_image;
         $products->save();
-        var_dump($products);
-
         Alert()->success('thành công','bạn đã thêm sản phẩm thành công');
         return redirect()->action('Sanpham\ProductController@index');
     }
@@ -49,7 +51,8 @@ class ProductController extends Controller
     public function edit($id)
     {
         $listProducts = Product::find($id);
-        return view('admin.product.edit',['listProducts'=>$listProducts]);
+        $listCategory = Category::all();
+        return view('admin.san-pham.list-san-pham.edit',['listProducts'=>$listProducts, 'listCategory'=>$listCategory]);
     }
     public function update(ValidateEditProduct $request, $id)
     {
@@ -61,18 +64,20 @@ class ProductController extends Controller
              $get_image->move('product',$new_image);
              $products = new Product;
              $arr['name'] = $request->name;
+             $arr['cate_id'] = $request->cate_id;
              $arr['price'] = $request->price;
              $arr['sale_price'] = $request->sale_price;
-             $arr['short_title'] = $request->short_title;
+             $arr['quantity'] = $request->quantity;
              $arr['detail'] = $request->detail;
              $products['avatar'] = $new_image;
              $products->where('id', $id)->update($arr);
          }else{
              $products = new Product;
              $arr['name'] = $request->name;
+             $arr['cate_id'] = $request->cate_id;
              $arr['price'] = $request->price;
              $arr['sale_price'] = $request->sale_price;
-             $arr['short_title'] = $request->short_title;
+             $arr['quantity'] = $request->quantity;
              $arr['detail'] = $request->detail;
              $products->where('id', $id)->update($arr);
          }

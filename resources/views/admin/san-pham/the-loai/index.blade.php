@@ -1,5 +1,5 @@
 @extends('admin.layout.main')
-@section('title', 'Danh sach nhan vien')
+@section('title', 'Danh sach the loai')
 @section('content')
 <div class="content-page">
    <div class="content">
@@ -9,8 +9,7 @@
          <div class="row">
             <div class="col-12">
                <div class="page-title-box">
-
-                  <h4 class="page-title">Danh sách Nhân viên</h4>
+                  <h4 class="page-title">Danh sách Thể loại</h4>
                </div>
             </div>
          </div>
@@ -25,7 +24,7 @@
                         <div class="table-wrapper">
                            <div class="btn-toolbar">
                               <div class="btn-group dropdown-btn-group pull-right">
-                                 <button type="button" class="btn btn-default"><a href="{{route('listnhanvien.add')}}" class="active">Tạo mới</a></button><button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Hiện thêm thông tin <span class="caret"></span></button>
+                                 <button type="button" class="btn btn-default"><a href="{{route('category.add')}}" class="active">Tạo mới</a></button><button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Hiện thêm thông tin <span class="caret"></span></button>
                                  <ul class="dropdown-menu">
                                     <li class="checkbox-row"><input type="checkbox" name="toggle-tech-companies-1-col-1" id="toggle-tech-companies-1-col-1" value="tech-companies-1-col-1"> <label for="toggle-tech-companies-1-col-1">Email</label></li>
                                     <li class="checkbox-row"><input type="checkbox" name="toggle-tech-companies-1-col-2" id="toggle-tech-companies-1-col-2" value="tech-companies-1-col-2"> <label for="toggle-tech-companies-1-col-2">Trạng thái</label></li>
@@ -44,49 +43,18 @@
                                     <thead>
                                        <tr>
                                           <th id="tech-companies-1-col-0-clone">STT</th>
-                                          {{-- <th data-priority="1" id="tech-companies-1-col-1-clone">Mã nhân viên</th> --}}
-                                          <th data-priority="1" id="tech-companies-1-col-1-clone">Họ và Tên</th>
-                                          {{-- <th data-priority="1" id="tech-companies-1-col-1-clone">Anh dai dien</th> --}}
-                                          <th data-priority="3" id="tech-companies-1-col-2-clone">Điện thoại</th>
-                                          <th data-priority="1" id="tech-companies-1-col-3-clone">Email</th>
-                                          <th data-priority="3" id="tech-companies-1-col-4-clone">Địa chỉ</th>
-                                          <th data-priority="3" id="tech-companies-1-col-5-clone">Chuc vu</th>
-                                          <th data-priority="6" id="tech-companies-1-col-6-clone">Loại hợp đồng</th>
-                                          <th data-priority="6" id="tech-companies-1-col-7-clone">Mức lương</th>
+                                          <th data-priority="1" id="tech-companies-1-col-1-clone">Tên thể loại</th>
                                           <th data-priority="6" id="tech-companies-1-col-8-clone">Action</th>
                                        </tr>
                                     </thead>
                                     <tbody>
-                                       @foreach($listStaffs as $key => $staffs)
+                                       @foreach($listCategory as $key => $category)
                                        <tr>
                                           <th data-org-colspan="1" data-columns="tech-companies-1-col-0">{{$key+1}}</th>
-
                                           <td data-org-colspan="1" data-priority="1" data-columns="tech-companies-1-col-1">
                                              <span class="co-name">
-                                                {{ $staffs->name}}
+                                                {{ $category->name}}
                                              </span>
-                                          </td>
-                                          {{-- <td data-org-colspan="1" data-priority="1" data-columns="tech-companies-1-col-1">
-                                             <img src="{{asset('staff/'.$staffs->avatar)}}" width="100" height="100" alt="">
-                                          </td> --}}
-                                          <td data-org-colspan="1" data-priority="1" data-columns="tech-companies-1-col-1">
-                                             {{ $staffs->phone}}
-                                          </td>
-                                          <td data-org-colspan="1" data-priority="3" data-columns="tech-companies-1-col-2">
-                                             {{ $staffs->email}}
-                                          </td>
-                                          <td data-org-colspan="1" data-priority="1" data-columns="tech-companies-1-col-3">
-                                             {{ $staffs->address}}
-                                          </td>
-                                          <td data-org-colspan="1" data-priority="3" data-columns="tech-companies-1-col-5">
-                                             {{ $staffs->position}}
-                                          </td>
-                                          <td data-org-colspan="1" data-priority="6" data-columns="tech-companies-1-col-6">
-                                             {{ $staffs->contract}}
-
-                                          </td>
-                                          <td data-org-colspan="1" data-priority="6" data-columns="tech-companies-1-col-7">
-                                             {{number_format( $staffs->wage, 0, ',', ' ')}}
                                           </td>
                                           <td data-org-colspan="1" data-priority="6" data-columns="tech-companies-1-col-8">
                                              <div class="btn-group mt-1 mr-1">
@@ -94,11 +62,11 @@
                                                    <i class="mdi mdi-format-list-bulleted-square"></i>
                                                 </button>
                                                 <div class="dropdown-menu" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 29px, 0px);">
-                                                   <a class="dropdown-item" href="{{route('staff.edit',$staffs->id)}}">
+                                                   <a class="dropdown-item" href="{{route('category.edit',$category->id)}}">
                                                       <i class="mdi mdi-lead-pencil"></i> 
-                                                         Sửa
+                                                         Cập nhật
                                                    </a>
-                                                <a class="dropdown-item btn-remove" href="{{ route('deleteStaff',$staffs->id) }}">
+                                                   <a class="dropdown-item btn-remove" href="{{route('category.delete',$category->id)}}">
                                                       <i class="mdi mdi-delete"></i> 
                                                          Xoá
                                                    </a>

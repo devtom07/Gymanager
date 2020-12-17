@@ -25,10 +25,11 @@ class ValidateAddProduct extends FormRequest
     {
         return [
             'name' => 'required',
+            'cate_id'=>'required',
             'avatar' => 'required|image|mimes:jpeg,png,jpg',
             'price' => 'required',
             'sale_price' => 'required',
-            'short_title' => 'required',
+            'quantity' => 'required',
             'detail' => 'required',
         ];
     }
@@ -43,10 +44,11 @@ class ValidateAddProduct extends FormRequest
     {
         return [
             'name' => 'Tên nhân viên',
-            'avatar' => 'Ảnh đại diện',
-            'price' => 'giá',
+            'cate_id'=>'Loại sản phẩm',
+            'avatar' => 'Ảnh sản phẩm',
+            'price' => 'Giá sản phẩm',
             'sale_price' => 'Giá khuyễn mãi',
-            'short_title' => 'Tiêu đề',
+            'quantity' => 'Số lượng sản phẩm',
             'detail' => 'Chi tiết',
         ];
     }
