@@ -26,7 +26,7 @@ class CreatePtprogramsTable extends Migration
             $table->unsignedBigInteger('pt_id');
             $table->foreign('pt_id')->references('id')->on('staffs');
             $table->string('contract_code');
-            $table->time('time');
+            $table->integer('time');
             $table->string('pay');
             $table->string('bank_account')->nullable();
             $table->integer('still_owe');

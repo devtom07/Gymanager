@@ -8,6 +8,7 @@ use App\Http\Requests\ValidatePtProgram;
 
 use App\Models\Hymnal;
 use App\Models\Package;
+use App\Models\Position;
 use App\Models\PtProgram;
 use App\Models\Services;
 use App\Models\Staff;
@@ -34,8 +35,8 @@ class PtProgramController extends Controller
     public function add()
     {
         $schedule = DB::table('trainings')->get();
-        $customer = Services::where();
-        $pt = Staff::where('position', '2')->get();
+        $customer = Services::where('status','Kèm PT')->get();
+        $pt = Position::where('name', 'Huấn luyện viên')->get();
         $package = Package::all();
         return view('admin.pt_program.add', compact('customer', 'pt', 'package', 'schedule'));
 
