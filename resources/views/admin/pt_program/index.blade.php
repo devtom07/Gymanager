@@ -72,6 +72,7 @@
                                                 </tr>
                                                 </thead>
                                                 <tbody>
+
                                                 @foreach($hymnal as $hymnals)
                                                 <tr>
                                                     <td data-org-colspan="1" data-priority="1"

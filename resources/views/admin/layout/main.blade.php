@@ -407,7 +407,7 @@
                                 <span> Quản lý các sản phẩm </span>
                             </a>
                             <ul class="nav-second-level" aria-expanded="false">
-                                <li><a href="">Sản phẩm</a></li>
+                                <li><a href="{{route('listproduct')}}">Sản phẩm</a></li>
                             </ul>
                         </li>
                     </ul>
