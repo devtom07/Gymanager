@@ -2,16 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
+
 //login
 Route::get('dangnhap', 'Admin\AuthurController@admin')->name('admin');
 Route::match(['post', 'get'], '/login', 'Admin\AuthurController@login')->name('login');
@@ -50,7 +41,7 @@ Route::middleware(['auth'])->group(function () {
             ->name('permission.update');
         Route::get('/xoachucnang/{id}', 'Users\PermissionController@destroy')
             ->name('permission.destroy');
-        //user
+
         Route::get('xemtaikhoan', 'Users\UserController@index')
             ->name('user.index')
             ->middleware(['permission:xem tài khoản']);
@@ -101,10 +92,8 @@ Route::middleware(['auth'])->group(function () {
         Route::post('/sua-nhan-vien/post/{id}', 'Nhanvien\ListnhanvienController@update')
             ->name('staff.update')
             ->middleware(['permission:Sửa nhân viên']);
-        Route::get('/staff-delete/{id}', 'Nhanvien\ListnhanvienController@destroy')->name('deleteStaff');
-        // Route::get('/nhanvien/xoa/{id}','Nhanvien\ListnhanvienController@destroy')
-        // ->name('staff.delete')
-        // ->middleware(['permission:Xóa nhân viên']);
+        Route::get('/staff-delete/{id}','Nhanvien\ListnhanvienController@destroy')->name('deleteStaff');
+        
         // chức vụ
         Route::get('/chuc-vu', 'Nhanvien\PositionController@index')
             ->name('listposition');
@@ -118,6 +107,7 @@ Route::middleware(['auth'])->group(function () {
             ->name('position.update');
         Route::get('/chuc-vu-xoa/{id}', 'Nhanvien\PositionController@destroy')
             ->name('position.delete');
+
         // Ca làm việc
         Route::get('/calamviec', 'Nhanvien\CalamviecController@index')
             ->name('calamviec');
@@ -145,6 +135,7 @@ Route::middleware(['auth'])->group(function () {
             ->name('suacalamviecnhanvien');
         Route::get('/xoa/{id}', 'Nhanvien\WorkSiftStaffController@destroy')
             ->name('xoacalamviecvn');
+
         //customers
         Route::get('khachhang', 'KhachHang\CustomerController@index')
             ->name('customer.index');
@@ -192,7 +183,6 @@ Route::middleware(['auth'])->group(function () {
             ->name('pt.index');
         Route::get('dangKyPt', 'PT\PtController@addPt')
             ->name('pt.add');
-
         //pt-level
         Route::get('goi-cuoc', 'KhachHang\PackageController@index')
             ->name('package.index');
@@ -205,8 +195,10 @@ Route::middleware(['auth'])->group(function () {
         Route::post('sua-goi-cuoc/{id}', 'KhachHang\PackageController@update')
             ->name('package.edit');
         Route::get('xoa-goi-cuoc/{id}', 'KhachHang\PackageController@delete')
+
             ->name('package.delete');
 
+        //=========================Sản phẩm==================//
         //san pham
         Route::get('/san-pham', 'Sanpham\ProductController@index')
             ->name('listproduct');
@@ -249,6 +241,7 @@ Route::middleware(['auth'])->group(function () {
         Route::get('/xoa-chuong-trinh-PT/{id}', 'PT\PtProgramController@destroy')
             ->name('ptProgram.delete');
         Route::get('getPackage/{id}', 'PT\PtProgramController@getPackage')
+
             ->name('ptProgram.getPacket');
 
         //tài khoản khách hàng
@@ -266,3 +259,4 @@ Route::middleware(['auth'])->group(function () {
             ->name('customer_account.delete');
     });
 });
+
