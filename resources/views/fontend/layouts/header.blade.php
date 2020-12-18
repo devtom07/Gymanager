@@ -32,7 +32,7 @@
                                     </nav>
                                 </div>
                                 <div class="header-right-btn f-right d-none d-lg-block ml-30">
-                                    <a href="from.html" class="btn header-btn">Trở thành thành viên của chúng tôi</a>
+                                    <a href="{{ route('newmember') }}" class="btn header-btn">Trở thành thành viên của chúng tôi</a>
                                 </div>
                             </div>
                         </div>   
