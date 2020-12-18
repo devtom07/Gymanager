@@ -20,12 +20,12 @@
                                             <li><a href="services.html">Dịch vụ</a></li>
                                             <li><a href="schedule.html">Lịch trình</a></li>
                                             <li><a href="gallery.html">Ảnh</a></li>
-                                            <li><a href="blog.html">Bài viết</a>
-                                                <ul class="submenu">
+                                            <li><a href="{{ route('blogs') }}">Bài viết</a>
+                                                <!-- <ul class="submenu">
                                                     <li><a href="blog.html">Hướng dẫn tập</a></li>
                                                     <li><a href="blog_details.html">Thông tin phòng tập</a></li>
                                                     <li><a href="elements.html">Thông tin khác</a></li>
-                                                </ul>
+                                                </ul> -->
                                             </li>
                                             <li><a href="{{ route('contact') }}">Liên hệ</a></li>
                                         </ul>
