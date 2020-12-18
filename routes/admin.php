@@ -245,14 +245,22 @@ Route::middleware(['auth'])->group(function () {
             ->name('ptProgram.getPacket');
         Route::get('/lich-day', 'PT\PtProgramController@training')
             ->name('ptProgram.training');
-
+        Route::get('/thong-tin-pt', 'PT\PtProgramController@profilePt')
+            ->name('ptProgram.profilePt');
         //tài khoản khách hàng
-        Route::get('/tai-khoan-khach', 'CustomerAccount\CustomerAccountController@index')->name('customer_account'); 
-        Route::get('/them-tai-khoan-khach/', 'CustomerAccount\CustomerAccountController@create')->name('customer_account.add'); 
-        Route::post('/them-tai-khoan-khach', 'CustomerAccount\CustomerAccountController@store')->name('customer_account.add'); 
-        Route::get('/sua-tai-khoan-khach/{id}', 'CustomerAccount\CustomerAccountController@edit')->name('customer_account.edit'); 
-        Route::post('/tai-khoan-khach/{id}', 'CustomerAccount\CustomerAccountController@update')->name('customer_account.edit'); 
-        Route::get('/xoa-tai-khoan-khach/{id}', 'CustomerAccount\CustomerAccountController@destroy')->name('customer_account.delete'); 
-        Route::get('/xoa-tai-khoan-khach/search', 'CustomerAccount\CustomerAccountController@search')->name('customer_account.search'); 
+        Route::get('/tai-khoan-khach', 'CustomerAccount\CustomerAccountController@index')
+            ->name('customer_account');
+        Route::get('/them-tai-khoan-khach/', 'CustomerAccount\CustomerAccountController@create')
+            ->name('customer_account.add');
+        Route::post('/them-tai-khoan-khach', 'CustomerAccount\CustomerAccountController@store')
+            ->name('customer_account.add');
+        Route::get('/sua-tai-khoan-khach/{id}', 'CustomerAccount\CustomerAccountController@edit')
+            ->name('customer_account.edit');
+        Route::post('/tai-khoan-khach/{id}', 'CustomerAccount\CustomerAccountController@update')
+            ->name('customer_account.edit');
+        Route::get('/xoa-tai-khoan-khach/{id}', 'CustomerAccount\CustomerAccountController@destroy')
+            ->name('customer_account.delete');
+        Route::get('/xoa-tai-khoan-khach/search', 'CustomerAccount\CustomerAccountController@search')
+            ->name('customer_account.search');
 });
 });
