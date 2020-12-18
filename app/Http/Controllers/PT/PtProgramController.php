@@ -136,4 +136,14 @@ class PtProgramController extends Controller
         return redirect()->route('ptProgram.index');
     }
 
+    public function profilePt()
+    {
+        $pt = Position::where('name', 'Huấn luyện viên')->get();
+        foreach ($pt as $pts){
+            $id_pt = $pts->staff->id;
+        }
+        $customer_pt = PtProgram::has('customer')->where('pt_id',$id_pt)->count();
+        return view('admin.pt_program.pt', compact('pt','customer_pt'));
+    }
+
 }

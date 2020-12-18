@@ -378,7 +378,7 @@
                                 <li><a href="{{route('ptProgram.add')}}">Đăng ký </a></li>
                                 <li><a href="{{route('ptProgram.index')}}">Chương trình PT</a></li>
                                 <li><a href="{{route('ptProgram.training')}}">Lịch dạy</a></li>
-                                <li><a href="{{route('ptProgram.index')}}">Thông tin PT</a></li>
+                                <li><a href="{{route('ptProgram.profilePt')}}">Thông tin PT</a></li>
 
                             </ul>
                         </li>
