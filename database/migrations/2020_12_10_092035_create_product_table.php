@@ -20,7 +20,7 @@ class CreateProductTable extends Migration
 //            $table->foreign('cate_id')->references('id')->on('category');
             $table->string('avatar');
             $table->integer('price');
-            $table->integer('quantitiy');
+            $table->integer('quantity');
             $table->integer('sale_price');
             $table->text('detail');
             $table->timestamps();

@@ -8,6 +8,7 @@ use App\Http\Requests\ValidateAddProduct;
 use App\Http\Requests\ValidateEditProduct;
 use App\Models\Product;
 use App\Models\Category;
+use Cart;
 
 class ProductController extends Controller
 {
@@ -45,7 +46,9 @@ class ProductController extends Controller
 
     public function show($id)
     {
-        
+        $data_total = Cart::total();
+        $listProduct = Product::find($id);
+        return view('admin.san-pham.list-san-pham.sanpham_ban',['listProduct'=>$listProduct,'data_total'=>$data_total]);
     }
 
     public function edit($id)
@@ -90,4 +93,10 @@ class ProductController extends Controller
         Alert()->success('thành công','bạn đã xóa sản phẩm thành công');
         return back();
     }
+
+public function getUpdateCart(Request $request)
+{
+    Cart::update($request->rowId, $request->quantity);
+
+}
 }
