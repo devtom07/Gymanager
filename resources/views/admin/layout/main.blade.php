@@ -420,7 +420,7 @@
                                 <span>Liên hệ</span>
                             </a>
                             <ul class="nav-second-level" aria-expanded="false">
-                                <li><a href="">Xem thông tin liên hệ từ khách hàng</a></li>
+                                <li><a href="{{ route('contact.admin') }}">Xem thông tin liên hệ từ khách hàng</a></li>
                             </ul>
                         </li>
                         <li>

@@ -262,5 +262,8 @@ Route::middleware(['auth'])->group(function () {
             ->name('customer_account.delete');
         Route::get('/xoa-tai-khoan-khach/search', 'CustomerAccount\CustomerAccountController@search')
             ->name('customer_account.search');
+
+        //liên hệ
+        Route::get('/lien-he-admin', 'Admin\AdminController@contact')->name('contact.admin');
 });
 });
