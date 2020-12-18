@@ -5,6 +5,7 @@ namespace App\Http\Controllers\CustomerInterface;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Customer;
+use App\Models\CustomerAccount;
 use App\Http\Requests\CustomerAccount\ChangePasswordRequest;
 use Illuminate\Support\Facades\DB;   
 use App\Models\Service;
