@@ -15,4 +15,7 @@ class FontendController extends Controller
     public function contact(){
     	return view('fontend.contact.index');
     }
+    public function blogs(){
+    	return view('fontend.blogs.index');
+    }
 }
