@@ -49,7 +49,7 @@
                                     entries
                                  </label>
                               </div>
-                              <div id="datatable_filter" class="dataTables_filter" ><label>Search:<input type="search" class="form-control form-control-sm" placeholder="" aria-controls="datatable"></label></div>
+                              <div id="datatable_filter" class="dataTables_filter" ><label>Search:<input type="text" name="searchAcc" id="searchAcc" class="form-control form-control-sm" placeholder="" aria-controls="datatable"></label></div>
                            </div>
                            <div class="table-responsive fixed-solution" data-pattern="priority-columns">
                               <table id="tech-companies-1-clone" class="table table-striped">
@@ -64,7 +64,7 @@
                                        <th data-priority="6" id="tech-companies-1-col-8-clone">Action</th>
                                     </tr>
                                  </thead>
-                                 <tbody>
+                                 <tbody id="tbodyAccountCustomer">
                                  @foreach($cutomer_account as $key => $cutomer_accounts)
                                     <tr>
                                        <th data-org-colspan="1" data-columns="tech-companies-1-col-0">{{$key+1}}</th>

@@ -587,6 +587,6 @@
 <script src="{{asset('admin/js/main/setup.js')}}"></script>
 <script src="{{asset('admin/js/ptprogram/addptProgram.js')}}"></script>
 <script scr="{{asset('admin/js/package/package.js')}}"></script>
+<script src="{{ asset('admin/js/ajax/ajax.js') }}"></script>
 </body>
-
 </html>

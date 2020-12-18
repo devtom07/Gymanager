@@ -56,9 +56,9 @@
                                     <div class="form-group">
                                         <label for="exampleInputPassword1">password(*)</label>
                                         <!-- <input type="text" name="cycle"> -->
-                                        <input type="password" name="passsword" class="form-control">
+                                        <input type="password" name="password" class="form-control">
                                     </div>
-                                    @error('passsword')
+                                    @error('password')
                                     <p style="color:red">{{$message}}</p>
                                     @enderror
                                     <div class="form-group">
