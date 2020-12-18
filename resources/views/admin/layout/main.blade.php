@@ -340,22 +340,22 @@
                                 {{--                                <span class="badge badge-danger badge-pill float-right">New</span>--}}
                             </a>
                             <ul class="nav-second-level" aria-expanded="false">
-                                <li><a href="{{route('user.index')}}">Quản trị người dùng</a></li>
-                                <li><a href="{{route('role')}}">Quyền</a></li>
-                                <li><a href="{{route('customer_account')}}">Quản trị tài khoản khách</a></li>
+                                <li><a href="{{route('user.index')}}">Admin</a></li>
+                                <li><a href="{{route('role')}}">Phân quyền</a></li>
+                                <li><a href="{{route('customer_account')}}">Khách hàng</a></li>
                             </ul>
                         </li>
                         <li>
                             <a href="javascript: void(0);">
-                                <i class="mdi mdi-star-off"></i>
+                                <i class="mdi mdi-nature-people"></i>
                                 <span>Nhân viên</span>
                                 {{--                                <span class="badge badge-danger badge-pill float-right">New</span>--}}
                             </a>
                             <ul class="nav-second-level" aria-expanded="false">
                                 <li><a href="{{route('listnhanvien')}}">Danh sách nhân viên</a></li>
+                                <li><a href="{{route('listposition')}}">Chức vụ</a></li>
                                 <li><a href="{{route('calamviec')}}">Ca làm việc</a></li>
                                 <li><a href="{{route('calamviecnhanvien')}}">Ca làm việc nhân viên</a></li>
-                                <li><a href="{{route('listposition')}}">Chức vụ</a></li>
                             </ul>
                         </li>
                         <li>
@@ -376,7 +376,9 @@
                             </a>
                             <ul class="nav-second-level" aria-expanded="false">
                                 <li><a href="{{route('ptProgram.add')}}">Đăng ký </a></li>
-                                <li><a href="{{route('ptProgram.index')}}">Quản lý đăng ký PT</a></li>
+                                <li><a href="{{route('ptProgram.index')}}">Chương trình PT</a></li>
+                                <li><a href="{{route('ptProgram.training')}}">Lịch dạy</a></li>
+                                <li><a href="{{route('ptProgram.index')}}">Thông tin PT</a></li>
 
                             </ul>
                         </li>
@@ -389,8 +391,6 @@
                                 <li><a href="{{route('service')}}"> Xem dịch vụ</a></li>
                                 <li><a href="{{route('hymnal.index')}}">Ca tập</a></li>
                                 <li><a href="{{ route('package.index') }}">Gói cước</a></li>
-
-
                             </ul>
                         </li>
                         <li>
@@ -404,7 +404,7 @@
                         </li>
                         <li>
                             <a href="javascript: void(0);">
-                                <i class="mdi mdi-progress-upload"></i>
+                                <i class="mdi mdi-access-point"></i>
                                 <span> Quản lý sản phẩm </span>
                             </a>
                             <ul class="nav-second-level" aria-expanded="false">
@@ -412,6 +412,34 @@
                                 <li><a href="{{route('product.add')}}">Thêm sản phẩm</a></li>
                                 <li><a href="{{route('listcategory')}}">Danh sách loại sản phẩm</a></li>
                                 <li><a href="{{route('category.add')}}">Thêm loại sản phẩm</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="javascript: void(0);">
+                                <i class="mdi mdi-contact-mail"></i>
+                                <span>Liên hệ</span>
+                            </a>
+                            <ul class="nav-second-level" aria-expanded="false">
+                                <li><a href="">Xem thông tin liên hệ từ khách hàng</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="javascript: void(0);">
+                                <i class="mdi mdi-seal-variant"></i>
+                                <span>Quản lý bài viết</span>
+                            </a>
+                            <ul class="nav-second-level" aria-expanded="false">
+                                <li><a href="">Bài viết</a></li>
+                                <li><a href="">Danh mục bài viết</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="javascript: void(0);">
+                                <i class="mdi mdi-bread-slice"></i>
+                                <span>Quản lý slide</span>
+                            </a>
+                            <ul class="nav-second-level" aria-expanded="false">
+                                <li><a href="">Slide</a></li>
                             </ul>
                         </li>
                     </ul>

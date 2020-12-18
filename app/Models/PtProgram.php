@@ -18,4 +18,13 @@ class PtProgram extends Model
     {
         return $this->belongsToMany(Trainings::class, 'ptprogram_trainings', 'id_ptprogram', 'id_training');
     }
+
+    public function customer()
+    {
+        return $this->belongsTo(Customer::class, 'customer_id', 'id');
+    }
+    public function pt()
+    {
+        return $this->belongsTo(Staff::class, 'pt_id', 'id');
+    }
 }

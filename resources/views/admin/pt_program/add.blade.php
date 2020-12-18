@@ -16,7 +16,7 @@
                                     <select name="customer" class="custom-select mb-3">
                                         <option selected="">choose...</option>
                                         @foreach($customer as $customers)
-                                            <option value="{{$customers->id}}">{{$customers->name}}</option>
+                                            <option value="{{$customers->customer->id}}">{{$customers->customer->name}}</option>
                                         @endforeach
                                     </select>
                                     @if($errors->first('customer'))
@@ -70,11 +70,11 @@
                                     <label>Trạng thái</label>
                                     <select name="status" class="custom-select mb-3">
                                         <option selected="">Đang thuê</option>
-                                        <option value="1">Đã xong</option>
-                                        <option value="2">Đã chuyển</option>
-                                        <option value="3">Hủy</option>
-                                        <option value="3">Hết hạn</option>
-                                        <option value="3">Bảo lưu</option>
+                                        <option value="Đã xong">Đã xong</option>
+                                        <option value="Đã chuyển">Đã chuyển</option>
+                                        <option value="Hủy">Hủy</option>
+                                        <option value="Hết hạn">Hết hạn</option>
+                                        <option value="Bảo lưu">Bảo lưu</option>
                                     </select>
                                     @if($errors->first('status'))
                                         <p class="text-danger">{{ $errors->first('status') }}</p>
@@ -89,7 +89,7 @@
                                 <select name="pt" class="custom-select mb-3">
                                     <option selected="">choose...</option>
                                     @foreach($pt as $pts)
-                                        <option value="{{$pts->id}}">{{$pts->name}}</option>
+                                        <option value="{{$pts->staff->id}}">{{$pts->staff->name}}</option>
                                     @endforeach
                                 </select>
                                 @if($errors->first('pt'))

@@ -8,17 +8,24 @@ use App\Http\Requests\ValidatePtProgram;
 
 use App\Models\Hymnal;
 use App\Models\Package;
+use App\Models\Position;
 use App\Models\PtProgram;
+use App\Models\Services;
 use App\Models\Staff;
 use Illuminate\Http\Request;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\DB;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class PtProgramController extends Controller
 {
-    public function index()
-    {
 
+    public function index(){
+        $ptProgram = PtProgram::all();
+        return view('admin.pt_program.index',compact('ptProgram'));
+    }
+    public function training()
+    {
         $monday = Carbon::now()->startOfWeek();
         $tuesday = $monday->copy()->addDay();
         $wednesday = $tuesday->copy()->addDay();
@@ -28,45 +35,39 @@ class PtProgramController extends Controller
         $Sunday = $Saturday->copy()->endOfWeek();
         $hymnal = Hymnal::all();
         foreach ($hymnal as $hymnals){
-         $id_hymnal = $hymnals->id;
+            $id_hymnal = $hymnals->id;
         }
-        $package = Package::where('id_catap',$id_hymnal)->get();
-        foreach ($package as $packages){
-            $id_package = $packages->id;
-        }
-        $ptProgram = PtProgram::where('package_id',$id_package)->get();
-        return view('admin.pt_program.index',
-            compact('ptProgram', 'wednesday', 'monday', 'tuesday', 'Thursday', 'Friday', 'Saturday', 'Sunday','hymnal'));
+        return view('admin.pt_program.training',
+            compact('ptProgram', 'wednesday', 'monday', 'tuesday', 'Thursday', 'Friday', 'Saturday', 'Sunday', 'hymnal'));
     }
-
     public function add()
     {
         $schedule = DB::table('trainings')->get();
-        $customer = Customer::all();
-        $pt = Staff::where('position', '2')->get();
+        $customer = Services::where('status','Kèm PT')->get();
+        $pt = Position::where('name', 'Huấn luyện viên')->get();
         $package = Package::all();
         return view('admin.pt_program.add', compact('customer', 'pt', 'package', 'schedule'));
 
     }
-
     public function getPackage($id)
     {
         $Get_package = Package::where('id', $id)->get();
         return response()->json($Get_package);
     }
 
-    public function edit()
+    public function edit($id)
     {
-        return view('admin.pt_program.edit');
-
+        $schedule = DB::table('trainings')->get();
+        $customer = Services::where('status','Kèm PT')->get();
+        $pt = Position::where('name', 'Huấn luyện viên')->get();
+        $package = Package::all();
+        $ptProgram = PtProgram::where('id',$id)->get();
+        return view('admin.pt_program.edit',compact('schedule','customer','pt','package','ptProgram'));
     }
-
     public function store(ValidatePtProgram $request)
     {
-
         $schedule = $request->schedule;
         DB::beginTransaction();
-
         $ptProgram = PtProgram::create([
             'customer_id' => $request->customer,
             'day_contract' => $request->day_contract,
@@ -85,15 +86,14 @@ class PtProgramController extends Controller
             'package_id' => $request->package,
         ]);
         $ptProgram->training()->attach($schedule);
-
         DB::commit();
+        Alert()->success('Thành công','Bạn đã đăng lý PT thành công');
+        return redirect()->route('ptProgram.index');
     }
-
     public function update()
     {
 
     }
-
     public function delete()
     {
 
