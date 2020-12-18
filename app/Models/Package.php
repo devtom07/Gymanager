@@ -12,7 +12,4 @@ class Package extends Model
     public function hymnal(){
         return $this->hasOne(Hymnal::class, 'id_catap', 'id');
     }
-    public function service(){
-    	return $this->belongsTo(Service::class);
-    }
 }

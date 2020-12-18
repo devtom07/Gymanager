@@ -247,6 +247,7 @@ Route::middleware(['auth'])->group(function () {
             ->name('ptProgram.training');
 
         //tài khoản khách hàng
+
         Route::get('/tai-khoan-khach', 'CustomerAccount\CustomerAccountController@index')
             ->name('customer_account');
         Route::get('/them-tai-khoan-khach/', 'CustomerAccount\CustomerAccountController@create')

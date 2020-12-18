@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 
 use Illuminate\Database\Migrations\Migration;
@@ -42,4 +41,3 @@ class CreateStaffsTable extends Migration
         Schema::dropIfExists('staffs');
     }
 }
-
