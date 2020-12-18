@@ -149,7 +149,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Ngày kết thúc</label>
-                                <input type="date" class="form-control" id="end_date" name="end_date">
+                                <input value="{{old('end_date')}}" type="date" class="form-control" id="end_date" name="end_date">
                                 @if($errors->first('end_date'))
                                     <p class="text-danger">{{ $errors->first('end_date') }}</p>
                                 @endif

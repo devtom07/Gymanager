@@ -10,7 +10,7 @@
 
                         <div class="row">
                             <div class="col-xl-6">
-                                <form action="{{route('ptProgram.store')}}" method="post">
+                                <form action="{{route('ptProgram.update',$ptPrograms->id)}}" method="post">
                                     @csrf
                                     <div class="form-group">
                                         <label for="exampleInputEmail1">Khách hàng</label>
@@ -249,7 +249,7 @@
                                             <div class="col-md-2">
                                                 <label class="label">{{$schedules->name}}</label>
                                                 <br>
-                                                <input value="{{$schedules->id}}" name="schedule[]" type="checkbox"
+                                                <input {{$PtTraining->contains($schedules->id) ? 'checked' : '' }} value="{{$schedules->id}}" name="schedule[]" type="checkbox"
                                                        class="checkbox">
                                             </div>
                                         @endforeach

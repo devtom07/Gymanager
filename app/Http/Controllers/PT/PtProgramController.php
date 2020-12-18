@@ -20,10 +20,12 @@ use RealRashid\SweetAlert\Facades\Alert;
 class PtProgramController extends Controller
 {
 
-    public function index(){
+    public function index()
+    {
         $ptProgram = PtProgram::all();
-        return view('admin.pt_program.index',compact('ptProgram'));
+        return view('admin.pt_program.index', compact('ptProgram'));
     }
+
     public function training()
     {
         $monday = Carbon::now()->startOfWeek();
@@ -34,21 +36,23 @@ class PtProgramController extends Controller
         $Saturday = $Friday->copy()->addDay();
         $Sunday = $Saturday->copy()->endOfWeek();
         $hymnal = Hymnal::all();
-        foreach ($hymnal as $hymnals){
+        foreach ($hymnal as $hymnals) {
             $id_hymnal = $hymnals->id;
         }
         return view('admin.pt_program.training',
             compact('ptProgram', 'wednesday', 'monday', 'tuesday', 'Thursday', 'Friday', 'Saturday', 'Sunday', 'hymnal'));
     }
+
     public function add()
     {
         $schedule = DB::table('trainings')->get();
-        $customer = Services::where('status','Kèm PT')->get();
+        $customer = Services::where('status', 'Kèm PT')->get();
         $pt = Position::where('name', 'Huấn luyện viên')->get();
         $package = Package::all();
         return view('admin.pt_program.add', compact('customer', 'pt', 'package', 'schedule'));
 
     }
+
     public function getPackage($id)
     {
         $Get_package = Package::where('id', $id)->get();
@@ -58,12 +62,14 @@ class PtProgramController extends Controller
     public function edit($id)
     {
         $schedule = DB::table('trainings')->get();
-        $customer = Services::where('status','Kèm PT')->get();
+        $customer = Services::where('status', 'Kèm PT')->get();
         $pt = Position::where('name', 'Huấn luyện viên')->get();
         $package = Package::all();
-        $ptProgram = PtProgram::where('id',$id)->get();
-        return view('admin.pt_program.edit',compact('schedule','customer','pt','package','ptProgram'));
+        $ptProgram = PtProgram::where('id', $id)->get();
+        $PtTraining = DB::table('ptprogram_trainings')->where('id_ptprogram', $id)->pluck('id_training');
+        return view('admin.pt_program.edit', compact('schedule', 'customer', 'pt', 'package', 'ptProgram', 'PtTraining'));
     }
+
     public function store(ValidatePtProgram $request)
     {
         $schedule = $request->schedule;
@@ -87,16 +93,47 @@ class PtProgramController extends Controller
         ]);
         $ptProgram->training()->attach($schedule);
         DB::commit();
-        Alert()->success('Thành công','Bạn đã đăng lý PT thành công');
+        Alert()->success('Thành công', 'Bạn đã đăng ký PT thành công');
         return redirect()->route('ptProgram.index');
     }
-    public function update()
-    {
 
+    public function update(ValidatePtProgram $request, $id)
+    {
+        $schedule = $request->schedule;
+        DB::beginTransaction();
+        PtProgram::where('id', $id)->update([
+            'customer_id' => $request->customer,
+            'day_contract' => $request->day_contract,
+            'number_sessions' => $request->number_sessions,
+            'total' => $request->total,
+            'money_paid' => $request->money_paid,
+            'start_date' => $request->start_date,
+            'status' => $request->status,
+            'pt_id' => $request->pt,
+            'contract_code' => $request->contract_code,
+            'time' => $request->time,
+            'pay' => $request->customRadio,
+            'bank_account' => $request->bank_account,
+            'still_owe' => $request->still_owe,
+            'end_date' => $request->end_date,
+            'package_id' => $request->package,
+        ]);
+        DB::table('ptprogram_trainings')->where('id_ptprogram', $id)->delete();
+        $ptProgram = PtProgram::find($id);
+        $ptProgram->training()->attach($schedule);
+        DB::commit();
+        Alert()->success('Thành công', 'Bạn đã cập nhật thành công');
+        return redirect()->route('ptProgram.index');
     }
-    public function delete()
-    {
 
+    public function destroy($id)
+    {
+        DB::beginTransaction();
+        DB::table('ptprogram_trainings')->where('id_ptprogram', $id)->delete();
+        PtProgram::find($id)->delete();
+        DB::commit();
+        Alert()->success('Thành công', 'Bạn đã cập nhật thành công');
+        return redirect()->route('ptProgram.index');
     }
 
 }

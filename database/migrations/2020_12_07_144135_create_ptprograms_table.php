@@ -16,7 +16,7 @@ class CreatePtprogramsTable extends Migration
         Schema::create('ptprograms', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('customer_id');
-            $table->foreign('customer_id')->references('id')->on('customers');
+//            $table->foreign('customer_id')->references('id')->on('customers')->onDelete('cascade');;
             $table->date('day_contract');
             $table->integer('number_sessions');
             $table->integer('total');
@@ -24,7 +24,7 @@ class CreatePtprogramsTable extends Migration
             $table->date('start_date');
             $table->string('status');
             $table->unsignedBigInteger('pt_id');
-            $table->foreign('pt_id')->references('id')->on('staffs');
+//            $table->foreign('pt_id')->references('id')->on('staffs')->onDelete('cascade');;
             $table->string('contract_code');
             $table->integer('time');
             $table->string('pay');
@@ -32,7 +32,7 @@ class CreatePtprogramsTable extends Migration
             $table->integer('still_owe');
             $table->date('end_date');
             $table->unsignedBigInteger('package_id');
-            $table->foreign('package_id')->references('id')->on('packages');
+//            $table->foreign('package_id')->references('id')->on('packages')->onDelete('cascade');;
             $table->timestamps();
         });
     }
