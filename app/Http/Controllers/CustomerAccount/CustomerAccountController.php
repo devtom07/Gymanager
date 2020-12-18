@@ -12,7 +12,11 @@ use DB;
 
 class CustomerAccountController extends Controller
 {
-
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
     public function index()
     {
         //
@@ -21,7 +25,11 @@ class CustomerAccountController extends Controller
 
     }
 
-
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
     public function create()
     {
         //
@@ -29,7 +37,12 @@ class CustomerAccountController extends Controller
         return view('admin.customer_account.add',compact('customer'));
     }
 
-
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
     public function store(CustomerAccountRequest $request)
     {
         //
@@ -44,13 +57,23 @@ class CustomerAccountController extends Controller
         return redirect()->route('customer_account')->with('thongbao','thêm thành công');
     }
 
-
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
     public function show($id)
     {
         //
     }
 
-
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
     public function edit($id)
     {
         //
@@ -59,7 +82,13 @@ class CustomerAccountController extends Controller
         return view('admin.customer_account.edit', compact('customer_account','customer'));
     }
 
-
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
     public function update(CustomerAccountEditRequest $request, $id)
     {
         //
@@ -73,7 +102,12 @@ class CustomerAccountController extends Controller
         return redirect(route('customer_account'))->with('thongbao', 'Sửa thành công');
     }
 
-
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
     public function destroy($id)
     {
         //
@@ -95,7 +129,7 @@ class CustomerAccountController extends Controller
                             <td>'. $customer_accounts->name . '</td>
                             <td>'. $customer_accounts->email . '</td>
                             <td>'. $customer_accounts->status . '</td>
-                            <td>'. $customer_accounts->customer->name . '</td>
+                            // <td>'. $customer_accounts->customer->name . '</td>
 
                         </tr>';
                     }    
