@@ -12,4 +12,7 @@ class FontendController extends Controller
         return view('fontend.index');
     }
 
+    public function contact(){
+    	return view('fontend.contact.index');
+    }
 }
