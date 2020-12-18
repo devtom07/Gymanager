@@ -22,31 +22,55 @@
                 
                 <div class="row">
                     <div class="col-12">
-                        <h2 class="contact-title">Liên Hệ Với Phòng Gym</h2>
+                        <h2 class="contact-title">Liên Hệ Với Chúng Tôi</h2>
+                        @if(session('thongbao'))
+                    <div class="alert-success alert">{{ session('thongbao') }}</div>
+                    @endif
                     </div>
+
                     <div class="col-lg-8">
-                        <form class="form-contact contact_form" action="https://preview.colorlib.com/theme/fitnessclub/contact_process.php" method="post" id="contactForm" novalidate="novalidate">
+                        <form class="form-contact contact_form" method="post" action="{{ route('contact.add') }}" >
+                            @csrf
                             <div class="row">
                                 <div class="col-12">
                                     <div class="form-group">
-                                    	<label></label>
-                                        <textarea class="form-control w-100" name="message" id="message" cols="30" rows="9" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Message'" placeholder=" Enter Message"></textarea>
+                                        <input class="form-control" name="title" id="subject" type="text" placeholder="Tiêu đề" value="{{ old('title') }}">
                                     </div>
-                                </div>
-                                <div class="col-sm-6">
-                                    <div class="form-group">
-                                        <input class="form-control valid" name="name" id="name" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your name'" placeholder="Enter your name">
-                                    </div>
-                                </div>
-                                <div class="col-sm-6">
-                                    <div class="form-group">
-                                        <input class="form-control valid" name="email" id="email" type="email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter email address'" placeholder="Email">
-                                    </div>
+                                    @error('title')
+                                    <p style="color: red">{{ $message }}</p>
+                                    @enderror
                                 </div>
                                 <div class="col-12">
                                     <div class="form-group">
-                                        <input class="form-control" name="subject" id="subject" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Subject'" placeholder="Enter Subject">
+                                        <textarea class="form-control w-100" name="desc" id="message" cols="30" rows="9"placeholder=" Nội dung"></textarea>
                                     </div>
+                                    @error('desc')
+                                    <p style="color: red">{{ $message }}</p>
+                                    @enderror
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <input class="form-control" name="name"  type="text" placeholder="Họ và tên" value="{{ old('name') }}">
+                                    </div>
+                                    @error('name')
+                                    <p style="color: red">{{ $message }}</p>
+                                    @enderror
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <input class="form-control" name="email" type="email" placeholder="Email" value="{{ old('email') }}">
+                                    </div>
+                                    @error('email')
+                                    <p style="color: red">{{ $message }}</p>
+                                    @enderror
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <input class="form-control" name="phone" type="number" placeholder="Số điện thoại" value="{{ old('phone') }}">
+                                    </div>
+                                    @error('phone')
+                                    <p style="color: red">{{ $message }}</p>
+                                    @enderror
                                 </div>
                             </div>
                             <div class="form-group mt-3">

@@ -4,3 +4,5 @@ Route::get('/','FontendController@index')->name('fontend');
 Route::get('/lien-he', 'FontendController@contact')->name('contact');
 Route::get('/blogs', 'FontendController@blogs')->name('blogs');
 Route::get('/newmember', 'FontendController@newmember')->name('newmember');
+Route::post('/lien-he', 'FontendController@addContact')->name('contact.add');
+
