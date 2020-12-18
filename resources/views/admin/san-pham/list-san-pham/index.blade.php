@@ -10,7 +10,7 @@
             <div class="col-12">
                <div class="page-title-box">
 
-                  <h4 class="page-title">Danh sách Nhân viên</h4>
+                  <h4 class="page-title">Danh sách sản phẩm</h4>
                </div>
             </div>
          </div>
@@ -29,10 +29,10 @@
                                  <ul class="dropdown-menu">
                                     <li class="checkbox-row"><input type="checkbox" name="toggle-tech-companies-1-col-1" id="toggle-tech-companies-1-col-1" value="tech-companies-1-col-1"> <label for="toggle-tech-companies-1-col-1">Email</label></li>
                                     <li class="checkbox-row"><input type="checkbox" name="toggle-tech-companies-1-col-2" id="toggle-tech-companies-1-col-2" value="tech-companies-1-col-2"> <label for="toggle-tech-companies-1-col-2">Trạng thái</label></li>
-                                    <li class="checkbox-row"><input type="checkbox" name="toggle-tech-companies-1-col-3" id="toggle-tech-companies-1-col-3" value="tech-companies-1-col-3"> <label for="toggle-tech-companies-1-col-3">Ngày bắt đầu</label></li>
+                                    {{-- <li class="checkbox-row"><input type="checkbox" name="toggle-tech-companies-1-col-3" id="toggle-tech-companies-1-col-3" value="tech-companies-1-col-3"> <label for="toggle-tech-companies-1-col-3">Ngày bắt đầu</label></li>
                                     <li class="checkbox-row"><input type="checkbox" name="toggle-tech-companies-1-col-4" id="toggle-tech-companies-1-col-4" value="tech-companies-1-col-4"> 
                                        <label for="toggle-tech-companies-1-col-4">Ngày kết thúc</label>
-                                    </li>
+                                    </li> --}}
                                     <li class="checkbox-row"><input type="checkbox" name="toggle-tech-companies-1-col-5" id="toggle-tech-companies-1-col-5" value="tech-companies-1-col-5"> <label for="toggle-tech-companies-1-col-5">Avarta</label></li>
                                  </ul>
                               </div>
@@ -45,10 +45,11 @@
                                        <tr>
                                           <th id="tech-companies-1-col-0-clone">STT</th>
                                           <th data-priority="1" id="tech-companies-1-col-1-clone">Tên sản phẩm</th>
+                                          <th data-priority="1" id="tech-companies-1-col-1-clone">Loại sản phẩm</th>
                                           <th data-priority="1" id="tech-companies-1-col-1-clone">Giá</th>
-                                          <th data-priority="3" id="tech-companies-1-col-4-clone">Khuyến mãi</th>
-                                          <th data-priority="3" id="tech-companies-1-col-5-clone">Tiêu đề</th>
-                                          <th data-priority="6" id="tech-companies-1-col-6-clone">Chi tiết</th>
+                                          {{-- <th data-priority="3" id="tech-companies-1-col-4-clone">Khuyến mãi</th> --}}
+                                          <th data-priority="3" id="tech-companies-1-col-5-clone">Số lượng</th>
+                                          {{-- <th data-priority="6" id="tech-companies-1-col-6-clone">Chi tiết</th> --}}
                                           <th data-priority="6" id="tech-companies-1-col-8-clone">Action</th>
                                        </tr>
                                     </thead>
@@ -61,18 +62,21 @@
                                                 {{ $product->name}}
                                              </span>
                                           </td>
+                                          <td data-org-colspan="1" data-priority="1" data-columns="tech-companies-1-col-1">
+                                             {{$product->category->name}}
+                                          </td>
                                           <td data-org-colspan="1" data-priority="6" data-columns="tech-companies-1-col-7">
                                              {{number_format( $product->price, 0, ',', ' ')}}
                                           </td>
-                                          <td data-org-colspan="1" data-priority="1" data-columns="tech-companies-1-col-1">
+                                          {{-- <td data-org-colspan="1" data-priority="1" data-columns="tech-companies-1-col-1">
                                              {{ $product->sale_price}}
-                                          </td>
+                                          </td> --}}
                                           <td data-org-colspan="1" data-priority="3" data-columns="tech-companies-1-col-2">
-                                             {{ $product->short_title}}
+                                             {{ $product->quantity}}
                                           </td>
-                                          <td data-org-colspan="1" data-priority="1" data-columns="tech-companies-1-col-3">
+                                          {{-- <td data-org-colspan="1" data-priority="1" data-columns="tech-companies-1-col-3">
                                              {{ $product->detail}}
-                                          </td>
+                                          </td> --}}
                                           <td data-org-colspan="1" data-priority="6" data-columns="tech-companies-1-col-8">
                                              <div class="btn-group mt-1 mr-1">
                                                 <button class="btn btn-success btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

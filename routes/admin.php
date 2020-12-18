@@ -26,28 +26,28 @@ Route::get('/logout','Admin\AuthurController@logout')->name('logout');
          //Chức vụ
          Route::get('/chucvu','Users\RoleController@index')
              ->name('role');
-         Route::get('/themchucvu','RoleController@create')
+         Route::get('/themchucvu','Users\RoleController@create')
              ->name('role.add');
-         Route::post('/themchucvu/post','RoleController@store')
+         Route::post('/themchucvu/post','Users\RoleController@store')
              ->name('role.store');
-         Route::get('/suachucvu/{id}','RoleController@edit')
+         Route::get('/suachucvu/{id}','Users\RoleController@edit')
              ->name('role.edit');
-         Route::post('/suachucvu/post/{id}','RoleController@update')
+         Route::post('/suachucvu/post/{id}','Users\RoleController@update')
              ->name('role.update');
-         Route::get('/xoachucvu/{id}','RoleController@destroy')
+         Route::get('/xoachucvu/{id}','Users\RoleController@destroy')
              ->name('role.delete');
          //quyền
-         Route::get('/chucnang','PermissionController@index')
+         Route::get('/chucnang','Users\PermissionController@index')
              ->name('permission.index');
-         Route::get('/themchucnang','PermissionController@add')
+         Route::get('/themchucnang','Users\PermissionController@add')
              ->name('permission.add');
-         Route::get('/suachucnang/{id}','PermissionController@edit')
+         Route::get('/suachucnang/{id}','Users\PermissionController@edit')
              ->name('permission.edit');
-         Route::post('/themchucnang/post','PermissionController@store')
+         Route::post('/themchucnang/post','Users\PermissionController@store')
              ->name('permission.store');
-         Route::post('/suachucnang/post/{id}','PermissionController@update')
+         Route::post('/suachucnang/post/{id}','Users\PermissionController@update')
              ->name('permission.update');
-         Route::get('/xoachucnang/{id}','PermissionController@destroy')
+         Route::get('/xoachucnang/{id}','Users\PermissionController@destroy')
              ->name('permission.destroy');
         //user
         Route::get('xemtaikhoan','Users\UserController@index')
@@ -187,9 +187,9 @@ Route::get('/logout','Admin\AuthurController@logout')->name('logout');
              ->name('hymnal.delete');
 
           //Pt
-         Route::get('Pt','PtController@index')
+         Route::get('Pt','PT\PtController@index')
              ->name('pt.index');
-         Route::get('dangKyPt','PtController@addPt')
+         Route::get('dangKyPt','PT\PtController@addPt')
              ->name('pt.add');
 
        //pt-level
@@ -206,7 +206,6 @@ Route::get('/logout','Admin\AuthurController@logout')->name('logout');
         Route::get('xoa-goi-cuoc/{id}','KhachHang\PackageController@delete')
         ->name('package.delete');
 
-
         //san pham
         Route::get('/san-pham','Sanpham\ProductController@index')
             ->name('listproduct');
@@ -221,8 +220,20 @@ Route::get('/logout','Admin\AuthurController@logout')->name('logout');
         Route::get('/san-pham-xoa/{id}','Sanpham\ProductController@destroy')
             ->name('product.delete');
 
+        //loai san pham
+        Route::get('/loai-san-pham','Sanpham\CategoryController@index')
+            ->name('listcategory');
+        Route::get('/them-loai-san-pham','Sanpham\CategoryController@create')
+            ->name('category.add');
+        Route::post('/them-loai-san-pham/post','Sanpham\CategoryController@store')
+            ->name('category.store');
+        Route::get('/sua-loai-san-pham/{id}','Sanpham\CategoryController@edit')
+            ->name('category.edit');
+        Route::post('/sua-loai-san-pham/post/{id}','Sanpham\CategoryController@update')
+            ->name('category.update');
+        Route::get('/loai-san-pham-xoa/{id}','Sanpham\CategoryController@destroy')
+            ->name('category.delete');
 
-         });
        //Pt-program
      Route::get('/chuong-trinh-PT','PT\PtProgramController@index')
          ->name('ptProgram.index');
@@ -238,4 +249,13 @@ Route::get('/logout','Admin\AuthurController@logout')->name('logout');
          ->name('ptProgram.delete');
      Route::get('getPackage/{id}','PT\PtProgramController@getPackage')
          ->name('ptProgram.getPacket');
+
+        //tài khoản khách hàng
+        Route::get('/tai-khoan-khach', 'CustomerAccount\CustomerAccountController@index')->name('customer_account'); 
+        Route::get('/them-tai-khoan-khach/', 'CustomerAccount\CustomerAccountController@create')->name('customer_account.add'); 
+        Route::post('/them-tai-khoan-khach', 'CustomerAccount\CustomerAccountController@store')->name('customer_account.add'); 
+        Route::get('/sua-tai-khoan-khach/{id}', 'CustomerAccount\CustomerAccountController@edit')->name('customer_account.edit'); 
+        Route::post('/tai-khoan-khach/{id}', 'CustomerAccount\CustomerAccountController@update')->name('customer_account.edit'); 
+        Route::get('/xoa-tai-khoan-khach/{id}', 'CustomerAccount\CustomerAccountController@destroy')->name('customer_account.delete'); 
 });
+ });

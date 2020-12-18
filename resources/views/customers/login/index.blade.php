@@ -10,7 +10,8 @@
     <meta name="keywords" content="au theme template">
 
     <!-- Title Page-->
-    <title>Login</title>
+    <title>@yield('title') | Gymanager</title>
+    <link rel="shortcut icon" href="{{url('admin')}}/images/logogym.gif">
     <<base href="{{ asset('') }}" target="_blank, _self, _parent, _top">
     <!-- Fontfaces CSS-->
     <link href="customers/css/font-face.css" rel="stylesheet" media="all">

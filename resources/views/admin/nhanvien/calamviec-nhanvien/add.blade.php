@@ -98,7 +98,4 @@
     <!-- Footer Start -->
     <!-- end Footer -->
 </div>
-<script type="text/javascript" charset="utf-8" >
-    
-</script>
 @endsection()
