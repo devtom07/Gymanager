@@ -347,7 +347,7 @@
                         </li>
                         <li>
                             <a href="javascript: void(0);">
-                                <i class="mdi mdi-star-off"></i>
+                                <i class="mdi mdi-nature-people"></i>
                                 <span>Nhân viên</span>
                                 {{--                                <span class="badge badge-danger badge-pill float-right">New</span>--}}
                             </a>
