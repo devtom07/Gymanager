@@ -29,9 +29,6 @@
                                                 </button>
 
                                             </div>
-                                            <div id="datatable_filter" class="dataTables_filter"><label>Search:<input
-                                                            type="search" class="form-control form-control-sm"
-                                                            placeholder="" aria-controls="datatable"></label></div>
                                         </div>
                                         <div class="table-responsive fixed-solution" data-pattern="priority-columns">
                                             <table id="tech-companies-1-clone" class="table table-striped">
@@ -71,29 +68,25 @@
                                                 </thead>
                                                 <tbody>
 
-                                                @foreach($hymnal as $hymnals)
+                                                @foreach($ptProgram as $ptPrograms)
                                                     <tr>
                                                         <td data-org-colspan="1" data-priority="1"
-                                                            data-columns="tech-companies-1-col-1">{{$hymnals->start_hour}} - {{$hymnals->end_hour}}</td>
-                                                        <td data-org-colspan="1" data-priority="1"
                                                             data-columns="tech-companies-1-col-1"></td>
+                                                        <td data-org-colspan="1" data-priority="1"
+                                                            data-columns="tech-companies-1-col-1">{{$ptPrograms->pt->name}}</td>
                                                         <td data-org-colspan="1" data-priority="3"
-                                                            data-columns="tech-companies-1-col-2"></td>
+                                                            data-columns="tech-companies-1-col-2">{{$ptPrograms->pt->name}}</td>
                                                         <td data-org-colspan="1" data-priority="3"
-                                                            data-columns="tech-companies-1-col-2"></td>
+                                                            data-columns="tech-companies-1-col-2">{{$ptPrograms->pt->name}}</td>
                                                         <td data-org-colspan="1" data-priority="3"
-                                                            data-columns="tech-companies-1-col-2"></td>
+                                                            data-columns="tech-companies-1-col-2">{{$ptPrograms->pt->name}}</td>
                                                         <td data-org-colspan="1" data-priority="3"
-                                                            data-columns="tech-companies-1-col-2"></td>
+                                                            data-columns="tech-companies-1-col-2">{{$ptPrograms->pt->name}}</td>
                                                         <td data-org-colspan="1" data-priority="6"
-                                                            data-columns="tech-companies-1-col-8">
+                                                            data-columns="tech-companies-1-col-8">{{$ptPrograms->pt->name}}
                                                         </td>
                                                         <td data-org-colspan="1" data-priority="6"
-                                                            data-columns="tech-companies-1-col-8">
-                                                        </td>
-                                                        <td data-org-colspan="1" data-priority="6"
-                                                            data-columns="tech-companies-1-col-8">
-                                                        </td>
+                                                            data-columns="tech-companies-1-col-8">{{$ptPrograms->pt->name}}</td>
                                                     </tr>
                                                 @endforeach
                                                 </tbody>

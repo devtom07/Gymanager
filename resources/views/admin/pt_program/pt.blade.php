@@ -41,17 +41,19 @@
                                                 </thead>
                                                 <tbody>
                                                 @foreach($pt as $key => $pts)
+                                                    @foreach($pts->staff  as $staffs)
                                                     <tr>
                                                         <td data-org-colspan="1" data-priority="1" data-columns="tech-companies-1-col-1">{{$key + 1}}</td>
-                                                        <td data-org-colspan="1" data-priority="3" data-columns="tech-companies-1-col-2">{{$pts->staff->name}}</td>
-                                                        <td data-org-colspan="1" data-priority="3" data-columns="tech-companies-1-col-2">{{$pts->staff->phone}}</td>
-                                                        <td data-org-colspan="1" data-priority="3" data-columns="tech-companies-1-col-2">{{$pts->staff->email}}</td>
-                                                        <td data-org-colspan="1" data-priority="3" data-columns="tech-companies-1-col-2">{{$pts->staff->address}}</td>
-                                                        <td data-org-colspan="1" data-priority="3" data-columns="tech-companies-1-col-2">{{$pts->staff->status}}</td>
+                                                        <td data-org-colspan="1" data-priority="3" data-columns="tech-companies-1-col-2">{{$staffs->name}}</td>
+                                                        <td data-org-colspan="1" data-priority="3" data-columns="tech-companies-1-col-2">{{$staffs->phone}}</td>
+                                                        <td data-org-colspan="1" data-priority="3" data-columns="tech-companies-1-col-2">{{$staffs->email}}</td>
+                                                        <td data-org-colspan="1" data-priority="3" data-columns="tech-companies-1-col-2">{{$staffs->address}}</td>
+                                                        <td data-org-colspan="1" data-priority="3" data-columns="tech-companies-1-col-2">{{$staffs->status}}</td>
                                                         <td data-org-colspan="1" data-priority="3" data-columns="tech-companies-1-col-2">{{$customer_pt}}</td>
                                                         <td data-org-colspan="1" data-priority="6" data-columns="tech-companies-1-col-8">
                                                         </td>
                                                     </tr>
+                                                    @endforeach
                                                 @endforeach
 
                                                 </tbody>

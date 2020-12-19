@@ -15,4 +15,8 @@ class Staff extends Model
     public function user(){
         return $this->hasMany(User::class,'staff_id','id');
     }
+    public function position(){
+        return $this->belongsTo(Position::class,'position','id');
+
+    }
 }
