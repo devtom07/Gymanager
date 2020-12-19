@@ -112,21 +112,19 @@
                                                         <th data-org-colspan="1"
                                                             data-columns="tech-companies-1-col-0">{{$key+1}}</th>
                                                         <td data-org-colspan="1" data-priority="1"
-                                                            data-columns="tech-companies-1-col-1">{{$customer->name}}</td>
+                                                            data-columns="tech-companies-1-col-1">{{$customer->customer->name}}</td>
                                                         <td data-org-colspan="1" data-priority="1"
-                                                            data-columns="tech-companies-1-col-1">{{$customer->phone}}</td>
-                                                        @foreach($customer->services as $service)
-                                                            <td data-org-colspan="1" data-priority="3"
-                                                                data-columns="tech-companies-1-col-2">{{$service->name}}</td>
-                                                            <td data-org-colspan="1" data-priority="1"
-                                                                data-columns="tech-companies-1-col-3">{{$service->total_package}}</td>
-                                                            <td id="days" data-org-colspan="1" data-priority="3"
-                                                                data-columns="tech-companies-1-col-4"></td>
-                                                            <td data-org-colspan="1" data-priority="3"
-                                                                data-columns="tech-companies-1-col-5">{{$service->start_date}}</td>
-                                                            <td id="endDate" data-org-colspan="1" data-priority="6"
-                                                                data-columns="tech-companies-1-col-6">{{$service->end_date}}</td>
-                                                        @endforeach
+                                                            data-columns="tech-companies-1-col-1">{{$customer->customer->phone}}</td>
+                                                        <td data-org-colspan="1" data-priority="3"
+                                                            data-columns="tech-companies-1-col-2">{{$customer->name}}</td>
+                                                        <td data-org-colspan="1" data-priority="1"
+                                                            data-columns="tech-companies-1-col-3">{{$customer->total_package}}</td>
+                                                        <td id="days" data-org-colspan="1" data-priority="3"
+                                                            data-columns="tech-companies-1-col-4"></td>
+                                                        <td data-org-colspan="1" data-priority="3"
+                                                            data-columns="tech-companies-1-col-5">{{$customer->start_date}}</td>
+                                                        <td id="endDate" data-org-colspan="1" data-priority="6"
+                                                            data-columns="tech-companies-1-col-6">{{$customer->end_date}}</td>
                                                         <td data-org-colspan="1" data-priority="6"
                                                             data-columns="tech-companies-1-col-8">
                                                             <div class="btn-group mt-1 mr-1">
@@ -138,13 +136,13 @@
                                                                 <div class="dropdown-menu" x-placement="bottom-start"
                                                                      style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 29px, 0px);">
                                                                     <a class="dropdown-item  btn-show"
-                                                                       id="show_customer" data-id="{{$customer->id}}"
+                                                                       id="show_customer" data-id="{{$customer->customer->id}}"
                                                                        data-toggle="modal"
                                                                        data-target="#exampleModalCenter"> Chi tiết</a>
                                                                     <a class="dropdown-item"
-                                                                       href="{{route('customer.edit',$customer->id)}}">Sửa</a>
+                                                                       href="{{route('customer.edit',$customer->customer->id)}}">Sửa</a>
                                                                     <a class="dropdown-item"
-                                                                       href="{{route('customer.delete',$customer->id)}}">Xoá</a>
+                                                                       href="{{route('customer.delete',$customer->customer->id)}}">Xoá</a>
 
                                                                 </div>
                                                             </div>

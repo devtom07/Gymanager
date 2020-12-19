@@ -18,7 +18,7 @@ class CustomerController extends Controller
     public function index()
     {
         $date = new \DateTime();
-        $customers = Customer::all();
+        $customers = Service::all();
         return view('admin.customer.index', compact('customers', 'date'));
     }
 
@@ -86,14 +86,15 @@ class CustomerController extends Controller
             'identity_card' => $request->identity_card,
         ]);
         DB::commit();
-        Alert()->success('thành công', 'thêm khách hàng thành công');
+        Alert()->success('Thành công', 'thêm khách hàng thành công');
         return redirect()->route('customer.index');
     }
 
     public function destroy($id)
     {
-        Customer::find($id)->delete();
-        Alert()->success('thành công', 'thêm khách hàng thành công');
+        Service::where('id_customer',$id)->delete();
+        Customer::where('id',$id)->delete();
+        Alert()->success('Thành công', 'thêm khách hàng thành công');
         return redirect()->route('customer.index');
     }
 
