@@ -1,9 +1,10 @@
 @extends('fontend.layouts.index')
+@section('title', 'Liên hệ')
 @section('content')
  <main>
         <!--? Hero Start -->
         <div class="slider-area2">
-            <div class="slider-height2 d-flex align-items-center">
+            <div class="slider-height2 d-flex align-items-center slider-area">
                 <div class="container">
                     <div class="row">
                         <div class="col-xl-12">
@@ -24,7 +25,7 @@
                     <div class="col-12">
                         <h2 class="contact-title">Liên Hệ Với Chúng Tôi</h2>
                         @if(session('thongbao'))
-                    <div class="alert-success alert">{{ session('thongbao') }}</div>
+                    <h5 class="alert-success alert">{{ session('thongbao') }}</h5>
                     @endif
                     </div>
 

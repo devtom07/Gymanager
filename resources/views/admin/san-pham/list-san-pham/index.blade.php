@@ -27,7 +27,8 @@
                                         <div class="btn-group dropdown-btn-group pull-right">
                                             <button type="button" class="btn btn-default"><a
                                                     href="{{route('product.add')}}" class="active">Tạo
-                                                    mới</a></button><button type="button"
+                                                    mới</a></button>
+                                                    <!-- <button type="button"
                                                 class="btn btn-default dropdown-toggle" data-toggle="dropdown">Hiện thêm
                                                 thông tin <span class="caret"></span></button>
                                             <ul class="dropdown-menu">
@@ -50,16 +51,18 @@
                                                         id="toggle-tech-companies-1-col-5"
                                                         value="tech-companies-1-col-5"> <label
                                                         for="toggle-tech-companies-1-col-5">Avarta</label></li>
-                                            </ul>
+                                            </ul> -->
                                         </div>
-                                        <div class="dataTables_length" id="datatable_length"><label>Show <select
+                                        <div class="dataTables_length" id="datatable_length">
+                                        <!-- <label>Show <select
                                                     name="datatable_length" aria-controls="datatable"
                                                     class="custom-select custom-select-sm form-control form-control-sm">
                                                     <option value="10">10</option>
                                                     <option value="25">25</option>
                                                     <option value="50">50</option>
                                                     <option value="100">100</option>
-                                                </select> entries</label></div>
+                                                </select> entries</label> -->
+                                                </div>
                                         <div id="datatable_filter" class="dataTables_filter"><label>Search:<input
                                                     type="search" class="form-control form-control-sm" placeholder=""
                                                     aria-controls="datatable"></label></div>

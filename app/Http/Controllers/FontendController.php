@@ -4,9 +4,10 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\ContactRequest;
+use App\Http\Requests\NewMemberRequest;
 use Illuminate\Http\Request;
 use App\Models\Contact;
-
+use App\Models\NewMember;
 class FontendController extends Controller
 {
     public function index()
@@ -14,15 +15,29 @@ class FontendController extends Controller
         return view('fontend.index');
     }
 
-    public function contact(){
-    	return view('fontend.contact.index');
-    }
     public function blogs(){
     	return view('fontend.blogs.index');
     }
     public function newmember(){
     	return view('fontend.newmember.index');
 	}
+
+    public function addMember(NewMemberRequest $request){
+        $new = new NewMember;
+        $new->name = $request->name;
+        $new->phone = $request->phone;
+        $new->service = $request->service;
+        $new->email = $request->email;
+        $new->content = $request->content;
+        $new->save();
+        // Alert()->success('Thông báo!', 'Bạn đã đăng kí thành công');
+        return redirect()->back()->with('thongbao', 'Bạn đã đăng kí thàng công!!!Cảm ơn!!');
+    }
+
+    public function contact(){
+        return view('fontend.contact.index');
+    }
+
     public function addContact(ContactRequest $request){
     	// alert('aaaa');
     	$contact = new Contact;

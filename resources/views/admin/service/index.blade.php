@@ -22,13 +22,14 @@
                             <div class="table-rep-plugin">
                                 <div class="table-wrapper">
                                     <div class="btn-toolbar">
-                                        <div class="btn-group focus-btn-group"><button type="button"
+                                        <!-- <div class="btn-group focus-btn-group"><button type="button"
                                                 class="btn btn-default"><span
-                                                    class="glyphicon glyphicon-screenshot"></span> Lọc</button></div>
+                                                    class="glyphicon glyphicon-screenshot"></span> Lọc</button></div> -->
                                         <div class="btn-group dropdown-btn-group pull-right">
                                             <button type="button" class="btn btn-default"><a
                                                     href="{{route('service.add')}}" class="active">Thêm
-                                                </a></button><button type="button"
+                                                </a></button>
+                                                <!-- <button type="button"
                                                 class="btn btn-default dropdown-toggle" data-toggle="dropdown">Hiện thêm
                                                 thông tin <span class="caret"></span></button>
                                             <ul class="dropdown-menu">
@@ -73,7 +74,7 @@
                                                         id="toggle-tech-companies-1-col-8"
                                                         value="tech-companies-1-col-8"> <label
                                                         for="toggle-tech-companies-1-col-8">1y Target Est</label></li>
-                                            </ul>
+                                            </ul> -->
                                         </div>
                                     </div>
                                     <div class="table-responsive fixed-solution" data-pattern="priority-columns">

@@ -7,7 +7,7 @@
                         <!-- Logo -->
                         <div class="col-xl-2 col-lg-2 col-md-1">
                             <div class="logo">
-                                <a href="index.html"><img src="{{url('fontend')}}/img/logo/logo.png" alt=""></a>
+                                <a href="{{route('fontend')}}"><img src="{{url('fontend')}}/img/logogym.gif" alt="" width="150px"></a>
                             </div>
                         </div>
                         <div class="col-xl-10 col-lg-10 col-md-10">
@@ -16,10 +16,8 @@
                                 <div class="main-menu f-right d-none d-lg-block">
                                     <nav>
                                         <ul id="navigation">
-                                            <li><a href="index.html">Trang chủ</a></li>
+                                            <li><a href="{{route('fontend')}}">Trang chủ</a></li>
                                             <li><a href="services.html">Dịch vụ</a></li>
-                                            <li><a href="schedule.html">Lịch trình</a></li>
-                                            <li><a href="gallery.html">Ảnh</a></li>
                                             <li><a href="{{ route('blogs') }}">Bài viết</a>
                                                 <!-- <ul class="submenu">
                                                     <li><a href="blog.html">Hướng dẫn tập</a></li>
