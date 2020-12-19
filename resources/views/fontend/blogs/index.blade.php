@@ -33,7 +33,7 @@
                                     </a>
                                 </div>
                                 <div class="blog_details">
-                                    <a class="d-inline-block" href="blog_details.html">
+                                    <a class="d-inline-block" href="{{route('detailblog')}}">
                                         <h2 class="blog-head" style="color: #2d2d2d;">Google inks pact for new 35-storey office</h2>
                                     </a>
                                     <p>That dominion stars lights dominion divide years for fourth have don't stars is that
@@ -53,7 +53,7 @@
                                     </a>
                                 </div>
                                 <div class="blog_details">
-                                    <a class="d-inline-block" href="blog_details.html">
+                                    <a class="d-inline-block" href="{{route('detailblog')}}">
                                         <h2 class="blog-head" style="color: #2d2d2d;">Google inks pact for new 35-storey office</h2>
                                     </a>
                                     <p>That dominion stars lights dominion divide years for fourth have don't stars is that
@@ -147,7 +147,7 @@
                                 <div class="media post_item">
                                     <img src="{{url('fontend')}}/img/post/post_1.png" alt="post">
                                     <div class="media-body">
-                                        <a href="blog_details.html">
+                                        <a href="{{route('detailblog')}}">
                                             <h3 style="color: #2d2d2d;">From life was you fish...</h3>
                                         </a>
                                         <p>January 12, 2019</p>
@@ -165,7 +165,7 @@
                                 <div class="media post_item">
                                     <img src="{{url('fontend')}}/img/post/post_3.png" alt="post">
                                     <div class="media-body">
-                                        <a href="blog_details.html">
+                                        <a href="{{route('detailblog')}}">
                                             <h3 style="color: #2d2d2d;">Astronomy Or Astrology</h3>
                                         </a>
                                         <p>03 Hours ago</p>
@@ -174,7 +174,7 @@
                                 <div class="media post_item">
                                     <img src="{{url('fontend')}}/img/post/post_4.png" alt="post">
                                     <div class="media-body">
-                                        <a href="blog_details.html">
+                                        <a href="{{route('detailblog')}}">
                                             <h3 style="color: #2d2d2d;">Asteroids telescope</h3>
                                         </a>
                                         <p>01 Hours ago</p>
