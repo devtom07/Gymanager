@@ -436,7 +436,7 @@
                         <li>
                             <a href="javascript: void(0);">
                                 <i class="mdi mdi-bread-slice"></i>
-                                <span>Quản lý slide</span>
+                                <span>Quản lý khách hàng đăng kí-form</span>
                             </a>
                             <ul class="nav-second-level" aria-expanded="false">
                                 <li><a href="">Slide</a></li>

@@ -1,6 +1,7 @@
 @extends('admin.layout.main')
 @section('title', 'Liên hệ')
 @section('content')
+
 <div class="content-page">
         <div class="content">
             <!-- Start Content-->
@@ -89,6 +90,7 @@
                                                 </tr>
                                                 </thead>
                                                 <tbody>
+                                                    
                                                 @foreach($contact as $key => $contact)
 
                                                     <tr>
@@ -117,9 +119,7 @@
                                                                        data-toggle="modal"
                                                                        data-target="#exampleModalCenter"> Chi tiết</a>
                                                                     <a class="dropdown-item"
-                                                                       href="
-                                                                       {{-- {{route('contact.delete',$contact->id)}} --}}
-                                                                       ">Xoá</a>
+                                                                       href="{{route('contact.delete',$contact->id)}}">Xoá</a>
 
                                                                 </div>
                                                             </div>
@@ -146,7 +146,9 @@
         </div>
         <!-- end content -->
         <!-- Footer Start -->
-
         <!-- end Footer -->
     </div>
+    @if($contact == null){
+    @include('admin.contact.detail_contact')
+    }@endif
 @endsection

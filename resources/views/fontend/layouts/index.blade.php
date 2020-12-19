@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title> Health & Fitness | Template </title>
+    <title>Gymmanager</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="manifest" href="site.html">
@@ -27,6 +27,8 @@
 	<link rel="stylesheet" href="{{url('fontend')}}/css/style.css">
 </head>
 <body>
+    @include('sweetalert::alert')
+
     <!-- ? Preloader Start -->
     <div id="preloader-active">
         <div class="preloader d-flex align-items-center justify-content-center">
@@ -50,6 +52,7 @@
     </div>
 
     <!-- JS here -->
+    
 
     <script src="{{url('fontend')}}/js/vendor/modernizr-3.5.0.min.js"></script>
     <!-- Jquery, Popper, Bootstrap -->
@@ -89,7 +92,8 @@
     <!-- Jquery Plugins, main Jquery -->	
     <script src="{{url('fontend')}}/js/plugins.js"></script>
     <script src="{{url('fontend')}}/js/main.js"></script>
-
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
      <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
 <script>
