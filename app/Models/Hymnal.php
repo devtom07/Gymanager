@@ -11,6 +11,6 @@ class Hymnal extends Model
      'code' , 'name' , 'start_hour' ,'end_hour' ,'describe'
     ];
     public function package(){
-        return $this->belongsTo(Package::class,'id','id_catap');
+        return $this->belongsTo(Package::class, 'id_catap', 'id');
     }
 }
