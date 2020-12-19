@@ -1,5 +1,6 @@
 
 @extends('fontend.layouts.index')
+@section('title', 'Bài viết')
 @section('content')
 <main>
         <!--? Hero Start -->

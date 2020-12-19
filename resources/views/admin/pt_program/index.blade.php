@@ -26,7 +26,7 @@
                                                 <button type="button" class="btn btn-default"><a
                                                             href="{{route('hymnal.add')}}" class="active">Tạo mới</a>
                                                 </button>
-                                                <button type="button" class="btn btn-default dropdown-toggle"
+                                                <!-- <button type="button" class="btn btn-default dropdown-toggle"
                                                         data-toggle="dropdown">Hiện thêm thông tin <span
                                                             class="caret"></span></button>
                                                 <ul class="dropdown-menu">
@@ -74,7 +74,7 @@
                                                                                     value="tech-companies-1-col-8">
                                                         <label for="toggle-tech-companies-1-col-8">1y Target Est</label>
                                                     </li>
-                                                </ul>
+                                                </ul> -->
                                             </div>
                                             <div id="datatable_filter" class="dataTables_filter"><label>Search:<input
                                                             type="search" class="form-control form-control-sm"

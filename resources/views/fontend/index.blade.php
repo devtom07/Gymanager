@@ -1,4 +1,5 @@
 @extends('fontend.layouts.index')
+@section('title', 'Trang chủ')
 @section('content')
 <main>
         <!--? slider Area Start-->
