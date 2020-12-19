@@ -1,24 +1,7 @@
 @extends('admin.layout.main')
 @section('title', 'Sản phẩm')
 @section('content')
-<script type="text/javascript">
-function updateCart(quantity, rowId) {
-    $.get(
-        //url
-        '{{asset('
-        show_san_pham / update ')}}',
-        // đối tượng
-        {
-            quantity: quantity,
-            rowId: rowId
-        },
-        // phương thức
-        function() {
-            location.reload();
-        }
-    );
-}
-</script>
+
 <div class="content-page">
     <div class="content">
         <!-- Start Content-->
@@ -44,15 +27,16 @@ function updateCart(quantity, rowId) {
                                         <td><img class="img-responsive" width="100px"
                                                 src="{{asset('product/' . $listProduct->avatar)}}"> </td>
                                         <td>{{$listProduct->name}}</td>
-                                        <td><input class="form-control" type="number" value="{{$listProduct->quantity}}"
-                                                onchange="updateCart(this.value,'{{$listProduct->rowId}}')" /></td>
+                                        <td><input id="qtyCart" data-id="{{$listProduct->id}}" class="form-control"
+                                                type="number" value="{{$listProduct->quantity}}" /></td>
                                         <td class="text-right">{{number_format($listProduct->price,0,',','.')}}đ</td>
                                         <td class="text-right">
                                             {{number_format($listProduct->price*$listProduct->quantity,0,',','.')}}đ
                                         </td>
-                                        <td class="text-right"><button class="btn btn-sm btn-danger"><i
-                                                    class="fa fa-trash"></i> </button> </td>
+                                        <td class="text-right"><button class="btn btn-sm btn-danger btn-remove"><a
+                                                    href=""></a><i class="fa fa-trash"></i> </button> </td>
                                     </tr>
+
                                     <tr>
                                         <td></td>
                                         <td></td>

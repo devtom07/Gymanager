@@ -26,9 +26,9 @@ class ValidateFormEditService extends FormRequest
         return [
             'id_package' => 'required:id_package',
             'id_customer' => 'required:id_customer ',
-            'start_date' => 'required:start_date',
-            'end_date' => 'required:end_date',
-            'active_date' => 'required:active_date',
+            'start_date' => 'required:start_date|after:yesterday',
+            'end_date' => 'required:end_date|after:start_date',
+            'active_date' => 'required:active_date|after:start_date|before:end_date',
             'total_package' => 'required:total_package',
             'customers_pay' => 'required:customers_pay',
             'pay_method' => 'required:pay_method',
@@ -39,7 +39,10 @@ class ValidateFormEditService extends FormRequest
     {
         return [
             'required' => ':attribute không được để trống',
-            // 'end_date.after'=>' Ngày kết thúc không được trước ngày bắt đầu',
+            'end_date.after'=>' Ngày kết thúc không được trước ngày bắt đầu',
+            'start_date.after'=>' Ngày bắt đầu không được trước ngày hôm nay',
+            'active_date.after'=>' Ngày kích hoạt không để trước ngày bắt đầu',
+            'active_date.before'=>' Ngày kích hoạt không được để sau ngày kết thúc',
 
         ];
     }
