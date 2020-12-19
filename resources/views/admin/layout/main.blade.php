@@ -11,10 +11,21 @@
     <link rel="shortcut icon" href="{{url('admin')}}/images/logogym.gif">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
     <!-- App css -->
-    <link href="{{url('admin')}}/css/bootstrap.min.css" rel="stylesheet" type="text/css" id="bootstrap-stylesheet"/>
-    <link href="{{url('admin')}}/css/icons.min.css" rel="stylesheet" type="text/css"/>
-    <link href="{{url('admin')}}/css/app.min.css" rel="stylesheet" type="text/css" id="app-stylesheet"/>
-    <link href="{{url('admin')}}/css/style.css" rel="stylesheet" type="text/css" id="app-stylesheet"/>
+    <link href="{{asset('admin/libs/dropify/dropify.min.css')}}" rel="stylesheet" type="text/css" />
+
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="{{asset('admin\images\logogym.gif')}}">
+    <!-- App css -->
+    <link href="{{asset('admin/css/bootstrap.min.css')}}" rel="stylesheet" type="text/css" id="bootstrap-stylesheet">
+    <link href="{{asset('admin/css/icons.min.css')}}" rel="stylesheet" type="text/css">
+    <link href="{{asset('admin/css/app.min.css')}}" rel="stylesheet" type="text/css" id="app-stylesheet">
+    <link href="{{asset('admin/css/style.css')}}" rel="stylesheet" type="text/css" id="app-stylesheet">
+
+    <link href="{{asset('admin/css/bootstrap.min.css')}}" rel="stylesheet" type="text/css" id="bootstrap-stylesheet">
+    <link href="{{asset('admin/css/icons.min.css')}}" rel="stylesheet" type="text/css">
+    <link href="{{asset('admin/css/app.min.css')}}" rel="stylesheet" type="text/css" id="app-stylesheet">
+    <link href="{{asset('admin/css/style.css')}}" rel="stylesheet" type="text/css" id="app-stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.css">
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet"/>
     <!-- ajax -->
@@ -384,10 +395,37 @@
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
 <!-- Vendor js -->
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-<script src="{{url('admin')}}/js/vendor.min.js"></script>
-<script src="{{url('admin')}}/js/app.min.js"></script>
-<script src="{{url('admin')}}/libs/raphael/raphael.min.js"></script>
-<script src="{{url('admin')}}/js/app.min.js"></script>
+<script src="{{asset('admin/js/vendor.min.js')}}"></script>
+
+<!--Morris Chart-->
+<script src="{{asset('admin\libs\morris-js\morris.min.js')}}"></script>
+<script src="{{asset('admin   \libs\raphael\raphael.min.js')}}"></script>
+<!-- Dashboard init js-->
+<script src="{{asset('admin\js\pages\dashboard.init.js')}}"></script>
+<!-- App js -->
+<script src="{{asset('admin\js\app.min.js')}}"></script>
+
+<!--Form Wizard-->
+<script src="{{asset('admin/libs/jquery-steps/jquery.steps.min.js')}}"></script>
+
+<script src="{{asset('admin/libs/jquery-validation/jquery.validate.min.js')}}"></script>
+<!-- Init js-->
+<script src="{{asset('admin/js/pages/form-wizard.init.js')}}"></script>
+<!-- Plugins js -->
+<script src="{{asset('admin/libs/dropify/dropify.min.js')}}"></script>
+
+<!-- Init js-->
+<script src="{{asset('admin/js/pages/form-fileuploads.init.js')}}"></script>
+
+
+<!-- App js -->
+<script src="{{asset('admin/libs/morris-js/morris.min.js')}}"></script>
+<script src="{{asset('admin/libs/raphael/raphael.min.js')}}"></script>
+<!-- Dashboard init js-->
+<script src="{{asset('assets/js/pages/dashboard.init.js')}}"></script>
+
+<!-- App js -->
+<script src="{{asset('admin/js/app.min.js')}}"></script>
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 <script src="{{asset('admin/js/user/user.js')}}"></script>
 <script src="{{asset('admin/js/customer/showCustomer.js')}}"></script>
@@ -396,5 +434,9 @@
 <script src="{{asset('admin/js/ptprogram/addptProgram.js')}}"></script>
 <script scr="{{asset('admin/js/package/package.js')}}"></script>
 <script src="{{ asset('admin/js/ajax/ajax.js') }}"></script>
+<script src="{{ asset('ckeditor4/ckeditor.js') }}"></script>
+<script> CKEDITOR.replace('editor1'); </script>
+<script> CKEDITOR.replace('editor2'); </script>
+
 </body>
 </html>

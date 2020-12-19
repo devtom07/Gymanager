@@ -92,9 +92,9 @@ Route::middleware(['auth'])->group(function () {
         Route::post('/sua-nhan-vien/post/{id}', 'Nhanvien\ListnhanvienController@update')
             ->name('staff.update')
             ->middleware(['permission:Sửa nhân viên']);
-        Route::get('/staff-delete/{id}','Nhanvien\ListnhanvienController@destroy')
+        Route::get('/staff-delete/{id}', 'Nhanvien\ListnhanvienController@destroy')
             ->name('deleteStaff');
-        
+
         // chức vụ
         Route::get('/chuc-vu', 'Nhanvien\PositionController@index')
             ->name('listposition');
@@ -196,7 +196,6 @@ Route::middleware(['auth'])->group(function () {
         Route::post('sua-goi-cuoc/{id}', 'KhachHang\PackageController@update')
             ->name('package.edit');
         Route::get('xoa-goi-cuoc/{id}', 'KhachHang\PackageController@delete')
-
             ->name('package.delete');
 
         //=========================Sản phẩm==================//
@@ -215,7 +214,7 @@ Route::middleware(['auth'])->group(function () {
             ->name('product.delete');
         Route::get('/show_san_pham/{id}', 'Sanpham\ProductController@show')
             ->name('product.sanpham_ban');
-            Route::get('/san-pham-all/{id}', 'Sanpham\ProductController@delete')
+        Route::get('/san-pham-all/{id}', 'Sanpham\ProductController@delete')
             ->name('product.xoa');
 
         //loai san pham
@@ -269,6 +268,7 @@ Route::middleware(['auth'])->group(function () {
 
         //liên hệ
         Route::get('/lien-he-admin', 'Admin\AdminController@contact')->name('contact.admin');
+
         Route::get('/xóa-lien-he/{id}', 'Admin\AdminController@deleteContact')->name('contact.delete');
 });
 });
