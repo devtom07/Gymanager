@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers\PT;
 
+use App\Http\Controllers\Controller;
 use App\Models\Customer;
+use App\Models\PtProgram;
 use App\Models\Services;
 use App\User;
 use Illuminate\Http\Request;
@@ -16,11 +18,11 @@ class PtController extends Controller
        foreach ($pt as $pts){
           $pt_id = $pts->staff->id;
        }
-       $customer_pt = Services::where('id_coach',$pt_id)->get();
+       $customer_pt = PtProgram::where('pt_id',$pt_id)->get();
        foreach ($customer_pt as $customers){
            $customer_id = $customers->id;
        }
-       $count_customer = Services::has('customer')->where('id_coach',$pt_id)->count();
+       $count_customer = PtProgram::has('customer')->where('pt_id',$pt_id)->count();
         return view('admin.pt.index',compact('pt','customer_pt','count_customer'));
     }
     public function addPt(){

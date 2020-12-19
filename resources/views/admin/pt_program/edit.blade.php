@@ -135,12 +135,14 @@
                                     <select name="pt" class="custom-select mb-3">
                                         <option selected="">choose...</option>
                                         @foreach($pt as $pts)
-                                            @if($ptPrograms->customer_id == $pts->staff->id)
+                                            @foreach($pts->staff as $staff)
+                                            @if($ptPrograms->customer_id == $staff->id)
                                                 <option selected
-                                                        value="{{$pts->staff->id}}">{{$pts->staff->name}}</option>
+                                                        value="{{$staff->id}}">{{$staff->name}}</option>
                                             @else
-                                                <option value="{{$pts->staff->id}}">{{$pts->staff->name}}</option>
+                                                <option value="{{$staff->id}}">{{$staff->name}}</option>
                                             @endif
+                                            @endforeach
                                         @endforeach
                                     </select>
                                     @if($errors->first('pt'))

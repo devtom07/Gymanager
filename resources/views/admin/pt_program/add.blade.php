@@ -89,7 +89,9 @@
                                 <select name="pt" class="custom-select mb-3">
                                     <option selected="">choose...</option>
                                     @foreach($pt as $pts)
-                                        <option value="{{$pts->staff->id}}">{{$pts->staff->name}}</option>
+                                        @foreach($pts->staff as $staffs)
+                                        <option value="{{$staffs->id}}">{{$staffs->name}}</option>
+                                        @endforeach
                                     @endforeach
                                 </select>
                                 @if($errors->first('pt'))

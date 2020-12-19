@@ -505,6 +505,7 @@
                             </a>
                             <ul class="nav-second-level" aria-expanded="false">
                                 <li><a href="{{route('pt.index')}}">Thông tin PT</a></li>
+                                <li><a href="{{route('pt.index')}}">lịch dạy</a></li>
                             </ul>
 
                         </li>

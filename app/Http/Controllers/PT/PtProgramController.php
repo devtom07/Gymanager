@@ -36,11 +36,9 @@ class PtProgramController extends Controller
         $Saturday = $Friday->copy()->addDay();
         $Sunday = $Saturday->copy()->endOfWeek();
         $hymnal = Hymnal::all();
-        foreach ($hymnal as $hymnals) {
-            $id_hymnal = $hymnals->id;
-        }
+        $ptProgram = PtProgram::where('start_date', '<', $monday)->orWhere('end_date', '<', $Sunday)->get();
         return view('admin.pt_program.training',
-            compact('ptProgram', 'wednesday', 'monday', 'tuesday', 'Thursday', 'Friday', 'Saturday', 'Sunday', 'hymnal'));
+            compact('ptProgram', 'wednesday', 'monday', 'tuesday', 'Thursday', 'Friday', 'Saturday', 'Sunday', 'hymnal', 'ptProgram'));
     }
 
     public function add()
@@ -139,11 +137,13 @@ class PtProgramController extends Controller
     public function profilePt()
     {
         $pt = Position::where('name', 'Huấn luyện viên')->get();
-        foreach ($pt as $pts){
-            $id_pt = $pts->staff->id;
+        foreach ($pt as $pts) {
+            foreach ($pts->staff as $staffs) {
+                $id_pt = $staffs->id;
+            }
         }
-        $customer_pt = PtProgram::has('customer')->where('pt_id',$id_pt)->count();
-        return view('admin.pt_program.pt', compact('pt','customer_pt'));
+        $customer_pt = PtProgram::has('customer')->where('pt_id', $id_pt)->count();
+        return view('admin.pt_program.pt', compact('pt', 'customer_pt'));
     }
 
 }

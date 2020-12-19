@@ -12,6 +12,6 @@ class Position extends Model
 
 
      public function staff(){
-         return $this->belongsTo(Staff::class,'id','position');
+         return $this->hasMany(Staff::class,'position','id');
      }
 }
