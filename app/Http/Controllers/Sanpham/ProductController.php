@@ -40,7 +40,7 @@ class ProductController extends Controller
         $products->detail = $request->detail;
         $products['avatar'] = $new_image;
         $products->save();
-        Alert()->success('thành công','bạn đã thêm sản phẩm thành công');
+        Alert()->success('Thành công','Bạn đã thêm sản phẩm thành công');
         return redirect()->action('Sanpham\ProductController@index');
     }
 
@@ -84,13 +84,13 @@ class ProductController extends Controller
              $arr['detail'] = $request->detail;
              $products->where('id', $id)->update($arr);
          }
-        Alert()->success('Thành công','bạn đã sửa sản phẩm thành công');
+        Alert()->success('Thành công','Bạn đã sửa sản phẩm thành công');
         return redirect()->action('Sanpham\ProductController@index');
     }
     public function destroy($id)
     {
         Product::where('id',$id)->delete();
-        Alert()->success('thành công','bạn đã xóa sản phẩm thành công');
+        Alert()->success('Thành công','Bạn đã xóa sản phẩm thành công');
         return back();
     }
 
@@ -98,5 +98,11 @@ public function getUpdateCart(Request $request)
 {
     Cart::update($request->rowId, $request->quantity);
 
+}
+public function delete($id)
+{
+    Product::where('id',$id)->delete();
+    Alert()->success('Thành công','Bạn đã xóa sản phẩm thành công');
+    return back();
 }
 }

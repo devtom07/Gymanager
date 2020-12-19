@@ -135,7 +135,6 @@
                                     <label for="">Phương thức thanh toán</label>
                                     <select class="form-control" id="pay_method" name="pay_method"
                                         value="{{$service->pay_method}}">
-                                        <option value=""></option>
                                         <option value="Tiền mặt">Tiền Mặt</option>
                                         <option value="Chuyển khoản">Chuyển khoản</option>
                                     </select>

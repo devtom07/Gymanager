@@ -215,6 +215,8 @@ Route::middleware(['auth'])->group(function () {
             ->name('product.delete');
         Route::get('/show_san_pham/{id}', 'Sanpham\ProductController@show')
             ->name('product.sanpham_ban');
+            Route::get('/san-pham-all/{id}', 'Sanpham\ProductController@delete')
+            ->name('product.xoa');
 
         //loai san pham
         Route::get('/loai-san-pham', 'Sanpham\CategoryController@index')
