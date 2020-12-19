@@ -68,7 +68,7 @@ class CustomerController extends Controller
         $service->pay_method = $request->pay_method;
         $service->save();
         DB::commit();
-        Alert()->success('thành công', 'thêm khách hàng thành công');
+        Alert()->success('Thành công', 'thêm khách hàng thành công');
         return redirect()->route('customer.index');
     }
 
@@ -102,7 +102,7 @@ class CustomerController extends Controller
         $arr['pay_method'] = $request->pay_method;
         $service::where('id_customer',$id)->update($arr);
         DB::commit();
-        Alert()->success('thành công', 'Cập nhật khách hàng thành công');
+        Alert()->success('Thành công', 'Cập nhật khách hàng thành công');
         return redirect()->route('customer.index');
     }
 

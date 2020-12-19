@@ -24,7 +24,7 @@
                                         <div class="btn-toolbar">
                                             <div class="btn-group dropdown-btn-group pull-right">
                                                 <button type="button" class="btn btn-default"><a
-                                                            href="{{route('hymnal.add')}}" class="active">Tạo mới</a>
+                                                            href="{{route('hymnal.add')}}" class="active">Đăng ký chương trình PT</a>
                                                 </button>
                                                 <!-- <button type="button" class="btn btn-default dropdown-toggle"
                                                         data-toggle="dropdown">Hiện thêm thông tin <span

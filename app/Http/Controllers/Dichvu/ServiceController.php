@@ -47,30 +47,20 @@ class ServiceController extends Controller
         $service->save();
         Alert()->success('Thành công','Thêm ca làm việc thành công');
         return redirect()->route('service');
-    
-     
-
+        
     }
-
-
     public function show($id)
     {
         //
         
     }
-
-
     public function edit($id)
     {
-       
-
         $service= Service::find($id);
         $package= Package::all();
         $customer = Customer::all();
         return view('admin.service.edit',compact('service','package','customer'));
     }
-
-
     public function update(ValidateFormEditService $request, $id)
     {
         $service = new Service;

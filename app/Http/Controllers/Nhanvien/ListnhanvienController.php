@@ -15,7 +15,7 @@ class ListnhanvienController extends Controller
     public function index()
     {
         $listStaffs = Staff::all();
-        return view('admin.nhanvien.list-nhanvien.index',['listStaffs'=>$listStaffs]);
+        return view('admin.nhanvien.list-nhanvien.index',compact('listStaffs'));
 
     }
     public function create()
@@ -40,7 +40,7 @@ class ListnhanvienController extends Controller
         $staffs->status = $request->status;
         $staffs->contract = $request->contract;
         $staffs->wage = $request->wage;
-        $staffs->position = $request->position;
+        $staffs->id_position = $request->position;
         $staffs['avatar'] = $new_image;
         $staffs->save();
         Alert()->success('thành công','bạn đã thêm nhân viên thành công');
@@ -76,9 +76,9 @@ class ListnhanvienController extends Controller
              $arr['address'] = $request->address;
              $arr['contract'] = $request->contract;
              $arr['wage'] = $request->wage;
-             $arr['position'] = $request->position;
+             $arr['id_position'] = $request->position;
              $arr['status'] = $request->status;
-             $staffs['avatar'] = $new_image;
+             $arr['avatar'] = $new_image;
              $staffs->where('id', $id)->update($arr);
          }else{
              $staffs = new Staff;
@@ -90,7 +90,7 @@ class ListnhanvienController extends Controller
              $arr['address'] = $request->address;
              $arr['contract'] = $request->contract;
              $arr['wage'] = $request->wage;
-             $arr['position'] = $request->position;
+             $arr['id_position'] = $request->position;
              $arr['status'] = $request->status;
              $staffs->where('id', $id)->update($arr);
          }

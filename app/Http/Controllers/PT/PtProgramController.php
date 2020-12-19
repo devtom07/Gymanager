@@ -137,12 +137,12 @@ class PtProgramController extends Controller
     public function profilePt()
     {
         $pt = Position::where('name', 'Huấn luyện viên')->get();
-        foreach ($pt as $pts) {
-            foreach ($pts->staff as $staffs) {
-                $id_pt = $staffs->id;
-            }
-        }
-        $customer_pt = PtProgram::has('customer')->where('pt_id', $id_pt)->count();
+//        foreach ($pt as $pts) {
+//            foreach ($pts->staff as $staffs) {
+//                $id_pt = $staffs->id;
+//            }
+//        }
+//        $customer_pt = PtProgram::has('customer')->where('pt_id', $id_pt)->count();
         return view('admin.pt_program.pt', compact('pt', 'customer_pt'));
     }
 
