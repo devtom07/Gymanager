@@ -7,7 +7,7 @@
                         <!-- Logo -->
                         <div class="col-xl-2 col-lg-2 col-md-1">
                             <div class="logo">
-                                <a href="{{route('fontend')}}"><img src="{{url('fontend')}}/img/logo/logo.png" alt=""></a>
+                                <a href="{{route('fontend')}}"><img src="{{url('fontend')}}/img/logogym.gif" alt="" width="150px"></a>
                             </div>
                         </div>
                         <div class="col-xl-10 col-lg-10 col-md-10">

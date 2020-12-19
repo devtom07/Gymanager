@@ -22,17 +22,17 @@
                                     <div class="table-wrapper">
                                         <div class="btn-toolbar">
                                             <div class="btn-group focus-btn-group">
-                                                <button type="button" class="btn btn-default"><span
+                                                <!-- <button type="button" class="btn btn-default"><span
                                                             class="glyphicon glyphicon-screenshot"></span> Lọc
-                                                </button>
+                                                </button> -->
                                             </div>
                                             <div class="btn-group dropdown-btn-group pull-right">
                                                 <button type="button" class="btn btn-default"><a
                                                             href="{{route('customer.add')}}" class="active">Đăng ký</a>
                                                 </button>
-                                                <button type="button" class="btn btn-default dropdown-toggle"
+                                                <!-- <button type="button" class="btn btn-default dropdown-toggle"
                                                         data-toggle="dropdown">Hiện thêm thông tin <span
-                                                            class="caret"></span></button>
+                                                            class="caret"></span></button> -->
                                                 <ul class="dropdown-menu">
                                                     <li class="checkbox-row"><input type="checkbox"
                                                                                     name="toggle-tech-companies-1-col-1"
