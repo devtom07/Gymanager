@@ -150,8 +150,8 @@
                             <h2>Các giảng viên có kinh nghiệm nhất của chúng tôi</h2>
                         </div>
                     </div>
-                    <div class="col-xl-2 col-lg-2 col-md-3">Nhiều dịch vụ hơn</a>
-                    </div>
+                    <!-- <div class="col-xl-2 col-lg-2 col-md-3">Nhiều dịch vụ hơn</a>
+                    </div> -->
                 </div>
             </div>
         </section>
