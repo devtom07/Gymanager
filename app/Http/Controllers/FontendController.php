@@ -20,8 +20,13 @@ class FontendController extends Controller
     }
     public function newmember(){
     	return view('fontend.newmember.index');
+    }
+    public function detailblog(){
+    	return view('fontend.blogs.detailblog');
 	}
-
+    public function service(){
+    	return view('fontend.services.index');
+	}
     public function addMember(NewMemberRequest $request){
         $new = new NewMember;
         $new->name = $request->name;
