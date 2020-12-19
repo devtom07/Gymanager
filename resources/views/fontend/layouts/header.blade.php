@@ -7,7 +7,7 @@
                         <!-- Logo -->
                         <div class="col-xl-2 col-lg-2 col-md-1">
                             <div class="logo">
-                                <a href="http://localhost/Gymanager/public/"><img src="{{url('fontend')}}/img/logo/logo.png" alt=""></a>
+                                <a href="{{route('fontend')}}"><img src="{{url('fontend')}}/img/logo/logo.png" alt=""></a>
                             </div>
                         </div>
                         <div class="col-xl-10 col-lg-10 col-md-10">
@@ -16,7 +16,7 @@
                                 <div class="main-menu f-right d-none d-lg-block">
                                     <nav>
                                         <ul id="navigation">
-                                            <li><a href="http://localhost/Gymanager/public/">Trang chủ</a></li>
+                                            <li><a href="{{route('fontend')}}">Trang chủ</a></li>
                                             <li><a href="services.html">Dịch vụ</a></li>
                                             <li><a href="{{ route('blogs') }}">Bài viết</a>
                                                 <!-- <ul class="submenu">
