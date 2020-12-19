@@ -24,16 +24,17 @@ class CustomerController extends Controller
 
     public function add()
     {
-        $staff = Staff::where('position', 'pt')->get();
         $data_packages = Package::all();
         $data = Customer::all();
-        return view('admin.customer.add', compact('staff', 'data_packages', 'data'));
+        return view('admin.customer.add', compact( 'data_packages', 'data'));
     }
 
     public function edit($id)
     {
-        $customer = Customer::where('id', $id)->get();
-        return view('admin.customer.edit', compact('customer'));
+        $data_packages = Package::all();
+        $customer = Service::where('id_customer', $id)->get();
+        $customer_1 =Customer::all();
+        return view('admin.customer.edit', compact('customer','data_packages','customer_1'));
     }
 
     public function store(ValidateFormAddCustomer $request)
@@ -73,9 +74,12 @@ class CustomerController extends Controller
 
     public function update(ValidateFormAddCustomer $request, $id)
     {
+        $code = substr(md5(microtime()), rand(0, 26), 5);
+        $customer = new Customer();
         DB::beginTransaction();
-        Customer::where('id', $id)->update([
-            'name' => $request->name,
+        $customer::where('id',$id)->update([
+            'code' => $code,
+            'name' => $request->name_customer,
             'phone' => $request->phone,
             'level' => $request->level,
             'address' => $request->address,
@@ -85,8 +89,20 @@ class CustomerController extends Controller
             'note' => $request->note,
             'identity_card' => $request->identity_card,
         ]);
+        $service = new Service();
+        $arr['name'] = $request->name;
+        $arr['id_package'] = $request->id_package;
+        $arr['id_customer'] = $id;
+        $arr['status'] = $request->status;
+        $arr['start_date'] = $request->start_date;
+        $arr['end_date'] = $request->end_date;
+        $arr['active_date'] = $request->active_date;
+        $arr['total_package'] = $request->total_package;
+        $arr['customers_pay'] = $request->customers_pay;
+        $arr['pay_method'] = $request->pay_method;
+        $service::where('id_customer',$id)->update($arr);
         DB::commit();
-        Alert()->success('Thành công', 'thêm khách hàng thành công');
+        Alert()->success('thành công', 'Cập nhật khách hàng thành công');
         return redirect()->route('customer.index');
     }
 
