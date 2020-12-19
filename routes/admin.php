@@ -269,5 +269,6 @@ Route::middleware(['auth'])->group(function () {
 
         //liên hệ
         Route::get('/lien-he-admin', 'Admin\AdminController@contact')->name('contact.admin');
+        Route::get('/xóa-lien-he/{id}', 'Admin\AdminController@deleteContact')->name('contact.delete');
 });
 });
