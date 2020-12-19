@@ -27,7 +27,6 @@ class ValidateEditStaff extends FormRequest
             'name' => 'required',
             'gender' =>'required',
             'status'=>'required',
-            'avatar' => 'required|image|mimes:jpeg,png,jpg',
             'phone' => 'required|max:11|regex:/^([0-9\s\-\+\(\)]*)$/|min:10',
             'email' => 'required|email',
             'address' => 'required',

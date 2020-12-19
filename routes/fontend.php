@@ -11,4 +11,4 @@ Route::get('/detailblogs', 'FontendController@detailblog')->name('detailblog');
 Route::get('/dang-ki-thanh-vien', 'FontendController@newmember')->name('newmember');
 Route::post('/dang-ki-thanh-vien', 'FontendController@addMember')->name('newmember.add');
 //dịch vụ
-Route::get('/dichvu', 'FontendController@service')->name('service');
+Route::get('/dichvu', 'FontendController@service')->name('layout.service');

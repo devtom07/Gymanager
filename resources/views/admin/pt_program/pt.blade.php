@@ -36,7 +36,7 @@
                                                     <th data-priority="1" id="tech-companies-1-col-3-clone">Email</th>
                                                     <th data-priority="1" id="tech-companies-1-col-3-clone">Địa chỉ</th>
                                                     <th data-priority="1" id="tech-companies-1-col-3-clone">Trạng thái</th>
-                                                    <th data-priority="1" id="tech-companies-1-col-3-clone">Số học viên</th>
+{{--                                                 <th data-priority="1" id="tech-companies-1-col-3-clone">Số học viên</th>--}}
                                                 </tr>
                                                 </thead>
                                                 <tbody>
@@ -49,7 +49,7 @@
                                                         <td data-org-colspan="1" data-priority="3" data-columns="tech-companies-1-col-2">{{$staffs->email}}</td>
                                                         <td data-org-colspan="1" data-priority="3" data-columns="tech-companies-1-col-2">{{$staffs->address}}</td>
                                                         <td data-org-colspan="1" data-priority="3" data-columns="tech-companies-1-col-2">{{$staffs->status}}</td>
-                                                        <td data-org-colspan="1" data-priority="3" data-columns="tech-companies-1-col-2">{{$customer_pt}}</td>
+{{--                                                        <td data-org-colspan="1" data-priority="3" data-columns="tech-companies-1-col-2">{{$customer_pt}}</td>--}}
                                                         <td data-org-colspan="1" data-priority="6" data-columns="tech-companies-1-col-8">
                                                         </td>
                                                     </tr>

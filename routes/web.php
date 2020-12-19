@@ -25,9 +25,9 @@ Route::get('/login-khach-hang','CustomerInterface\LoginController@index')->name(
 Route::post('/login-khach-hang','CustomerInterface\LoginController@loginCustomer')->name('loginCustomer');
 Route::get('/logout-khach-hang','CustomerInterface\LoginController@logoutCustomer')->name('logoutCustomer');
 
-Route::group([ 'prefix' => '/', 'middleware'=>'checkAuth'], function () {
+Route::group([ 'prefix' => '/hoc-vien', 'middleware'=>'checkAuth'], function () {
 
-Route::get('/khach-hang','CustomerInterface\HomeController@index')->name('khachhang.index');
+Route::get('/','CustomerInterface\HomeController@index')->name('khachhang.index');
 
 Route::get('/profile-khach-hang/{id}','CustomerInterface\HomeController@profile')->name('profile');
 Route::get('/doi-mat-khau', 'CustomerInterface\HomeController@changePassword')->name('changePassword');
