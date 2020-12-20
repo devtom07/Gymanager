@@ -1,5 +1,5 @@
 @extends('admin.layout.main')
-@section('title', 'Thêm tài khoản khách hàng')
+@section('title', 'Sửa tài khoản khách hàng')
 @section('content')
 <div class="content-page">
     <div class="content">
@@ -27,7 +27,7 @@
                         <h4 class="header-title mb-4">Tạo mới tài khoản khách hàng</h4>
                         <div class="row">
                             <div class="col-xl-6">
-                                <form action="{{ route('customer_account.edit', $customer_account->id) }}" method="post">
+                                <form action="{{ route('customer_accounts.edit', $customer_account->id) }}" method="post">
                                     @csrf
                                     <div class="form-group">
                                         <label>Tên tài khoản khách</label>
@@ -57,14 +57,14 @@
                                     @error('email')
                                     <p style="color:red">{{$message}}</p>
                                     @enderror
-                                    <div class="form-group">
+                                    {{-- <div class="form-group">
                                         <label for="exampleInputPassword1">password(*)</label>
                                         <!-- <input type="text" name="cycle"> -->
                                         <input type="password" name="passsword" class="form-control">
                                     </div>
                                     @error('passsword')
                                     <p style="color:red">{{$message}}</p>
-                                    @enderror
+                                    @enderror --}}
                                     <div class="form-group">
                                         <label for="exampleInputPassword1">Trạng thái (*)</label>
                                         <select name="status" class="form-control">
