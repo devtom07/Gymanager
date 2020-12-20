@@ -255,8 +255,8 @@
                                 <span>Quản lý bài viết</span>
                             </a>
                             <ul class="nav-second-level" aria-expanded="false">
-                                <li><a href="">Bài viết</a></li>
-                                <li><a href="">Danh mục bài viết</a></li>
+                                <li><a href="{{route('listposts')}}">Bài viết</a></li>
+                                <li><a href="{{route('listcate_posts')}}">Danh mục bài viết</a></li>
                             </ul>
                         </li>
                         <li>
