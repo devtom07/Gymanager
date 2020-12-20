@@ -1,6 +1,7 @@
 <?php
 use Illuminate\Support\Facades\Route;
 Route::get('/','FontendController@index')->name('fontend');
+Route::get('/gioithieu', 'FontendController@about')->name('about');
 //lien he
 Route::get('/lien-he', 'FontendController@contact')->name('contact');
 Route::post('/lien-he', 'FontendController@addContact')->name('contact.add');
