@@ -1,6 +1,7 @@
 @extends('customers.layouts.master')
 @section('title', 'Lịch tập của khách hàng')
 @section('content')
+  <div class="container">
 	<table class="table table-borderless" style="background: #fff">
   <thead>
     <tr>
@@ -35,4 +36,5 @@
     </tr>
   </tbody>
 </table>
+  </div>
 @endsection

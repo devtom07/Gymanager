@@ -192,6 +192,12 @@ Route::middleware(['auth'])->group(function () {
             ->name('pt.ptStudent');
         Route::post('xep-lich-hoc/post/{id}','PT\PtController@storeTrainingPt')
             ->name('pt.storeTrainingPt');
+        Route::get('cap-nhat-lich-hoc/{id}','PT\PtController@editTrainingPt')
+            ->name('pt.editTrainingPt');
+        Route::post('cap-nhat-lich-hoc/post/{id}','PT\PtController@updateTrainingPt')
+            ->name('pt.updateTrainingPt');
+        Route::get('xoa-lich-hoc/{id}','PT\PtController@destroyTrainingPt')
+            ->name('pt.destroyTrainingPt');
         //pt-level
         Route::get('goi-cuoc', 'KhachHang\PackageController@index')
             ->name('package.index');
