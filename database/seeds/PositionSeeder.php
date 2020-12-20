@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Position;
 use Illuminate\Database\Seeder;
 
 class PositionSeeder extends Seeder
@@ -13,15 +14,15 @@ class PositionSeeder extends Seeder
     {
         Position::create([
             'name' => 'Huấn luyện viên',
-           ]);
-           Position::create([
-               'name' => 'Quản lý kho',
-           ]);
-           Position::create([
-               'name' => 'Markettiong',
-           ]);
-           Position::create([
-               'name' => 'Sale',
-           ]);
+        ]);
+        Position::create([
+            'name' => 'Quản lý kho',
+        ]);
+        Position::create([
+            'name' => 'Markettiong',
+        ]);
+        Position::create([
+            'name' => 'Sale',
+        ]);
     }
 }
