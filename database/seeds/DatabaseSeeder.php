@@ -27,6 +27,10 @@ class DatabaseSeeder extends Seeder
             HymnalSeeder::class,
             WorkSiftsSeeder::class,
             WorkSiftStaffSeeder::class,
+            CategorySeeder::class,
+            ContactSeeder::class,
+            NewMemberSeeder::class,
+            ProductSeeder::class,
         ]);
     }
 }
