@@ -21,7 +21,7 @@
                                             <div class="info clearfix">
                                                 <div class="image">
                                                     <a href="#">
-                                                        <img src="images/icon/avatar-01.jpg" alt="John Doe" />
+                                                        <img src="{{asset('admin')}}/images/logogym.gif" alt="" width="50px">
                                                     </a>
                                                 </div>
                                                 <div class="content">
@@ -46,8 +46,10 @@
                                                 </div>
                                             </div> --}}
                                             <div class="account-dropdown__footer">
+                                                <a href="{{ route('changePassword') }}">
+                                                    Đổi mật khẩu</a>
                                                 <a href="{{ route('logoutCustomer') }}">
-                                                    <i class="zmdi zmdi-power"></i>Logout</a>
+                                                    <i class="zmdi zmdi-power"></i>Đăng xuất</a>
                                             </div>
                                         </div>
                                     </div>

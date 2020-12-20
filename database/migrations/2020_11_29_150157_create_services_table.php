@@ -18,7 +18,7 @@ class CreateServicesTable extends Migration
             $table->string('name');
             $table->integer('id_package');
             $table->integer('id_customer');
-            $table->integer('id_coach');
+            $table->string('status');
             $table->date('start_date');
             $table->date('end_date');
             $table->date('active_date');

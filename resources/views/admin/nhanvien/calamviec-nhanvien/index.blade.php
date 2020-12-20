@@ -23,13 +23,14 @@
                         <div class="table-wrapper">
                         <div class="btn-toolbar">
                               <div class="btn-group dropdown-btn-group pull-right">
-                                 <button type="button" class="btn btn-default"><a href="{{route('calamviecnhanvien.add')}}" class="active">Tạo mới</a></button><button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Hiện thêm thông tin <span class="caret"></span></button>
+                                 <button type="button" class="btn btn-default"><a href="{{route('calamviecnhanvien.add')}}" class="active">Tạo mới</a></button>
+                                 <!-- <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Hiện thêm thông tin <span class="caret"></span></button> -->
                                  @if(session('thongbao'))
                                  <div class="alert alert-success">
                                      {{ session('thongbao') }}
                                  </div>
                                  @endif
-                                 <ul class="dropdown-menu">
+                                 <!-- <ul class="dropdown-menu">
                                     <li class="checkbox-row"><input type="checkbox" name="toggle-tech-companies-1-col-1" id="toggle-tech-companies-1-col-1" value="tech-companies-1-col-1"> <label for="toggle-tech-companies-1-col-1">Email</label></li>
                                     <li class="checkbox-row"><input type="checkbox" name="toggle-tech-companies-1-col-2" id="toggle-tech-companies-1-col-2" value="tech-companies-1-col-2"> <label for="toggle-tech-companies-1-col-2">Trạng thái</label></li>
                                     <li class="checkbox-row"><input type="checkbox" name="toggle-tech-companies-1-col-3" id="toggle-tech-companies-1-col-3" value="tech-companies-1-col-3"> <label for="toggle-tech-companies-1-col-3">Ngày bắt đầu</label></li>
@@ -40,9 +41,9 @@
                                     <li class="checkbox-row"><input type="checkbox" name="toggle-tech-companies-1-col-6" id="toggle-tech-companies-1-col-6" value="tech-companies-1-col-6"> <label for="toggle-tech-companies-1-col-6">Bid</label></li>
                                     <li class="checkbox-row"><input type="checkbox" name="toggle-tech-companies-1-col-7" id="toggle-tech-companies-1-col-7" value="tech-companies-1-col-7"> <label for="toggle-tech-companies-1-col-7">Ask</label></li>
                                     <li class="checkbox-row"><input type="checkbox" name="toggle-tech-companies-1-col-8" id="toggle-tech-companies-1-col-8" value="tech-companies-1-col-8"> <label for="toggle-tech-companies-1-col-8">1y Target Est</label></li>
-                                 </ul>
+                                 </ul> -->
                               </div>
-                              <div class="dataTables_length" id="datatable_length"><label>Show <select name="datatable_length" aria-controls="datatable" class="custom-select custom-select-sm form-control form-control-sm"><option value="10">10</option><option value="25">25</option><option value="50">50</option><option value="100">100</option></select> entries</label></div>
+                              <!-- <div class="dataTables_length" id="datatable_length"><label>Show <select name="datatable_length" aria-controls="datatable" class="custom-select custom-select-sm form-control form-control-sm"><option value="10">10</option><option value="25">25</option><option value="50">50</option><option value="100">100</option></select> entries</label></div> -->
                               <div id="datatable_filter" class="dataTables_filter" ><label>Search:<input type="search" class="form-control form-control-sm" placeholder="" aria-controls="datatable"></label></div>
                             
                            </div>
@@ -102,10 +103,14 @@
                                       @foreach($work_staffs as $work_staff)
                                        <tr>
                                           <th data-org-colspan="1" data-columns="tech-companies-1-col-0"><span class="co-name">
+                                            @if(is_array($work_staff) || is_object($work_staff) )
                                             @foreach(
                                             json_decode($work_staff->work_sift_id)  as $item)
                                             <li>{{$work_sift->find($item)->name }}</li>
-                                          @endforeach</span></th>
+                                          @endforeach
+                                          @endif
+                                          {{-- {{ $work_staff->workSift->name }} --}}
+                                          </span></th>
                                           <td data-org-colspan="1" data-priority="1" data-columns="tech-companies-1-col-1">{{ $work_staff->Staff->name }}</td>
                                           <td data-org-colspan="1" data-priority="3" data-columns="tech-companies-1-col-2">{{ $work_staff->date_start }}</td>
                                           <td data-org-colspan="1" data-priority="1" data-columns="tech-companies-1-col-3">{{ $work_staff->cycle }}</td>

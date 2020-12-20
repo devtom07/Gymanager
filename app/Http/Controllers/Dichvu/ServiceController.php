@@ -24,10 +24,10 @@ class ServiceController extends Controller
 
     public function create()
     {
-        $staff = Staff::where('position','pt')->get();
+
         $data_packages = Package::all();
          $data = Customer::all();
-        return view('admin.service.add',compact('data','data_packages','staff'));
+        return view('admin.service.add',compact('data','data_packages'));
     }
 
 
@@ -37,7 +37,7 @@ class ServiceController extends Controller
         $service->name = $request->name;
         $service->id_package = $request->id_package;
         $service->id_customer = $request->id_customer;
-        $service->id_coach = $request->id_coach;
+        $service->status = $request->status;
         $service->start_date = $request->start_date;
         $service->end_date = $request->end_date;
         $service->active_date = $request->active_date;
@@ -47,35 +47,27 @@ class ServiceController extends Controller
         $service->save();
         Alert()->success('Thành công','Thêm ca làm việc thành công');
         return redirect()->route('service');
-    
-     
-
+        
     }
-
-
     public function show($id)
     {
         //
         
     }
-
-
     public function edit($id)
     {
-       
-        $customers ['data'] = Customer::all();
-        $data['service'] = Service::find($id);
-        return view('admin.service.edit', $data,$customers);
+        $service= Service::find($id);
+        $package= Package::all();
+        $customer = Customer::all();
+        return view('admin.service.edit',compact('service','package','customer'));
     }
-
-
     public function update(ValidateFormEditService $request, $id)
     {
         $service = new Service;
-        $service->name = $request->name;
+        $arr['name'] = $request->name;
         $arr['id_package'] = $request->id_package;
         $arr['id_customer'] = $request->id_customer;
-        $arr['id_coach'] = $request->id_coach;
+        $arr['status'] = $request->status;
         $arr['start_date'] = $request->start_date;
         $arr['end_date'] = $request->end_date;
         $arr['active_date'] = $request->active_date;

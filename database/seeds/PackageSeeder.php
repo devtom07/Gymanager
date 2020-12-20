@@ -19,7 +19,6 @@ class PackageSeeder extends Seeder
             'start_date' => '2020-12-01',
             'end_date' => '2021-01-01',
             'desc' => 'note',
-            'id_catap' => '1',
             'status' => 'Hoạt động'
         ]);
         Package::create([
@@ -30,7 +29,6 @@ class PackageSeeder extends Seeder
             'start_date' => '2020-12-01',
             'end_date' => '2021-01-01',
             'desc' => 'note',
-            'id_catap' => '1',
             'status' => 'Hoạt động'
         ]);
         Package::create([
@@ -41,7 +39,6 @@ class PackageSeeder extends Seeder
             'start_date' => '2020-12-01',
             'end_date' => '2021-01-01',
             'desc' => 'note',
-            'id_catap' => '1',
             'status' => 'Hoạt động'
         ]);
         Package::create([
@@ -52,7 +49,6 @@ class PackageSeeder extends Seeder
             'start_date' => '2020-12-01',
             'end_date' => '2021-01-01',
             'desc' => 'note',
-            'id_catap' => '1',
             'status' => 'Hoạt động'
         ]);
     }

@@ -10,7 +10,8 @@ class Position extends Model
     protected $primaryKey = 'id';
     protected $guarded =[];
 
-    // public function staff(){
-    //     return $this->hasMany(Staff::class,'','id');
-    // }
+
+     public function staff(){
+         return $this->hasMany(Staff::class,'id_position','id');
+     }
 }

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 
 use Illuminate\Database\Migrations\Migration;
@@ -26,7 +25,6 @@ class CreateStaffsTable extends Migration
             $table->string('contract');
             $table->string('avatar')->nullable();
             $table->integer('wage');
-            $table->unsignedBigInteger('position');
             $table->timestamps();
         });
     }
@@ -41,4 +39,3 @@ class CreateStaffsTable extends Migration
         Schema::dropIfExists('staffs');
     }
 }
-

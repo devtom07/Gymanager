@@ -16,7 +16,7 @@
                                     <select name="customer" class="custom-select mb-3">
                                         <option selected="">choose...</option>
                                         @foreach($customer as $customers)
-                                            <option value="{{$customers->id}}">{{$customers->name}}</option>
+                                            <option value="{{$customers->customer->id}}">{{$customers->customer->name}}</option>
                                         @endforeach
                                     </select>
                                     @if($errors->first('customer'))
@@ -70,11 +70,11 @@
                                     <label>Trạng thái</label>
                                     <select name="status" class="custom-select mb-3">
                                         <option selected="">Đang thuê</option>
-                                        <option value="1">Đã xong</option>
-                                        <option value="2">Đã chuyển</option>
-                                        <option value="3">Hủy</option>
-                                        <option value="3">Hết hạn</option>
-                                        <option value="3">Bảo lưu</option>
+                                        <option value="Đã xong">Đã xong</option>
+                                        <option value="Đã chuyển">Đã chuyển</option>
+                                        <option value="Hủy">Hủy</option>
+                                        <option value="Hết hạn">Hết hạn</option>
+                                        <option value="Bảo lưu">Bảo lưu</option>
                                     </select>
                                     @if($errors->first('status'))
                                         <p class="text-danger">{{ $errors->first('status') }}</p>
@@ -89,7 +89,9 @@
                                 <select name="pt" class="custom-select mb-3">
                                     <option selected="">choose...</option>
                                     @foreach($pt as $pts)
-                                        <option value="{{$pts->id}}">{{$pts->name}}</option>
+                                        @foreach($pts->staff as $staffs)
+                                        <option value="{{$staffs->id}}">{{$staffs->name}}</option>
+                                        @endforeach
                                     @endforeach
                                 </select>
                                 @if($errors->first('pt'))
@@ -149,7 +151,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Ngày kết thúc</label>
-                                <input type="date" class="form-control" id="end_date" name="end_date">
+                                <input value="{{old('end_date')}}" type="date" class="form-control" id="end_date" name="end_date">
                                 @if($errors->first('end_date'))
                                     <p class="text-danger">{{ $errors->first('end_date') }}</p>
                                 @endif
@@ -168,22 +170,7 @@
                                     <p class="text-danger">{{ $errors->first('package') }}</p>
                                 @endif
                             </div>
-                            <div class="form-group col-md-12">
-                                <label>Lịch tập</label>
-                                <div class="row">
-                                    @foreach($schedule as $schedules)
-                                        <div class="col-md-2">
-                                            <label class="label">{{$schedules->name}}</label>
-                                            <br>
-                                            <input value="{{$schedules->id}}" name="schedule[]" type="checkbox"
-                                                   class="checkbox">
-                                        </div>
-                                    @endforeach
-                                </div>
-                                @if($errors->first('schedule'))
-                                    <p class="text-danger">{{ $errors->first('schedule') }}</p>
-                                @endif
-                            </div>
+
                         </div>
                         <button type="submit" class="btn btn-primary">Submit</button>
                         </form>

@@ -34,9 +34,9 @@
                             <div class="col-xl-6">
                                 <form method="post" enctype="multipart/form-data">
                                     <div class="form-group">
-                                        <label for="name">Tên</label>
+                                        <label for="name">Tên dịch vụ</label>
                                         <input type="text" class="form-control" id="name" name="name"
-                                               placeholder="Tên" value="{{old('name')}}">
+                                            placeholder="Tên dịch vụ" value="{{old('name')}}">
                                     </div>
                                     @error('name')
                                     <p style="color:red">{{$message}}</p>
@@ -68,21 +68,19 @@
                                     <p style="color:red">{{$message}}</p>
                                     @enderror
                                     <div class="form-group">
-                                        <label for="">Tên huấn luyện viên</label>
-                                        <select class="form-control" id="id_coach" name="id_coach"
-                                            value="{{old('id_coach')}}">
-
-                                            <option value=""></option>"
-                                            @foreach($staff as $Pt)
-                                            <option value="{{$Pt->id}}">{{$Pt->name}}</option>
-
-                                            @endforeach
-                                        </select>
-
+                                        <label>Trạng thái</label>
+                                        <div class="mt-4">
+                                            <div class="radio radio-info form-check-inline">
+                                                <input type="radio" id="inlineRadio1" value="Không kèm PT" name="status"
+                                                    checked>
+                                                <label for="inlineRadio1">Không kèm PT</label>
+                                            </div>
+                                            <div class="radio form-check-inline">
+                                                <input type="radio" id="inlineRadio2" value="Kèm PT" name="status">
+                                                <label for="inlineRadio2">Kèm PT</label>
+                                            </div>
+                                        </div>
                                     </div>
-                                    @error('id_coach')
-                                    <p style="color:red">{{$message}}</p>
-                                    @enderror
                                     <div class="form-group">
                                         <label for="">Ngày bắt đầu</label>
                                         <input type="date" class="form-control" id="start_date" name="start_date"
@@ -140,6 +138,7 @@
                                 @error('pay_method')
                                 <p style="color:red">{{$message}}</p>
                                 @enderror
+
                                 <button type="submit" class="btn btn-primary">Submit</button>
                             </div>
 

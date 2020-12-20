@@ -21,8 +21,8 @@ class UserController extends Controller
 {
     public function index()
     {
-        $user = User::with('staff')->orderBy('id','desc')->get();
-        return view('admin.users.account.index',compact('user'));
+        $user = User::with('staff')->orderBy('id', 'desc')->get();
+        return view('admin.users.account.index', compact('user'));
     }
 
 
@@ -31,32 +31,37 @@ class UserController extends Controller
         $role = Role::all();
         $permission = Permission::all();
         $staff = Staff::all();
-        return view('admin.users.account.add',compact('role','permission','staff'));
+        return view('admin.users.account.add', compact('role', 'permission', 'staff'));
     }
-    public function show($id){
+
+    public function show($id)
+    {
         $role_user = Role::all();
         $role_id = [];
-        $listRoleUser = DB::table('model_has_roles')->where('model_id',$id)->pluck('role_id');
-        $users = User::with('staff')->with('role')->where('id',$id)->get();
-        foreach ($users as $user){}
-        foreach ($user->role as $roles){
+        $listRoleUser = DB::table('model_has_roles')->where('model_id', $id)->pluck('role_id');
+        $users = User::with('staff')->with('role')->where('id', $id)->get();
+        foreach ($users as $user) {
+        }
+        foreach ($user->role as $roles) {
             $role_id[] = $roles->id;
         }
-        return view('admin.users.account.show_detail',compact('user','role_user','roles','role_id','listRoleUser'));
-            }
-            public function GetUser($id){
-                $role_user = Role::all();
-                $role_id = [];
-                $listRoleUser = DB::table('model_has_roles')->where('model_id',$id)->pluck('role_id');
-                $users = User::with('staff')->with('role')->where('id',$id)->get();
-                foreach ($users as $user){
-                    $staff = $user->staff->name;
-                }
-                foreach ($user->role as $roles){
-                    $role_id[] = $roles->id;
-                }
-                return json_encode(array('data'=>$user));
-            }
+        return view('admin.users.account.show_detail', compact('user', 'role_user', 'roles', 'role_id', 'listRoleUser'));
+    }
+
+    public function GetUser($id)
+    {
+        $role_user = Role::all();
+        $role_id = [];
+        $listRoleUser = DB::table('model_has_roles')->where('model_id', $id)->pluck('role_id');
+        $users = User::with('staff')->with('role')->where('id', $id)->get();
+        foreach ($users as $user) {
+            $staff = $user->staff->name;
+        }
+        foreach ($user->role as $roles) {
+            $role_id[] = $roles->id;
+        }
+        return json_encode(array('data' => $user));
+    }
 
     public function store(ValidateFormaddUser $request)
     {
@@ -66,19 +71,19 @@ class UserController extends Controller
         $new_image = $name_image . rand(0, 99) . '.' . $get_image->getClientOriginalExtension();
         $get_image->move('user', $new_image);
         DB::beginTransaction();
-       $user =  User::create([
+        $user = User::create([
             'name' => $request->name,
             'email' => $request->email,
-           'phone' => $request->phone,
-           'staff_id' => $request->staff_user,
-           'password' => Hash::make($request->password),
-           'avatar' => $new_image
+            'phone' => $request->phone,
+            'staff_id' => $request->staff_user,
+            'password' => Hash::make($request->password),
+            'avatar' => $new_image
         ]);
-       $roles = $request->role;
+        $roles = $request->role;
         $user->assignRole([$roles]);
 
         DB::commit();
-        Alert()->success('Thành công','Bạn đã thêm tài khoản thành công');
+        Alert()->success('Thành công', 'Bạn đã thêm tài khoản thành công');
         return redirect()->route('user.index');
     }
 
@@ -87,13 +92,14 @@ class UserController extends Controller
         $staff = Staff::all();
         $role_user = Role::all();
         $role_id = [];
-        $listRoleUser = DB::table('model_has_roles')->where('model_id',$id)->pluck('role_id');
-        $users = User::with('staff')->with('role')->where('id',$id)->get();
-        foreach ($users as $user){}
-        foreach ($user->role as $roles){
+        $listRoleUser = DB::table('model_has_roles')->where('model_id', $id)->pluck('role_id');
+        $users = User::with('staff')->with('role')->where('id', $id)->get();
+        foreach ($users as $user) {
+        }
+        foreach ($user->role as $roles) {
             $role_id[] = $roles->id;
         }
-        return view('admin.users.account.edit',compact('user','role_user','role_id','listRoleUser','staff'));
+        return view('admin.users.account.edit', compact('user', 'role_user', 'role_id', 'listRoleUser', 'staff'));
 
     }
 
@@ -102,7 +108,7 @@ class UserController extends Controller
     {
         $get_image = $request->file('avatar');
         $password = $request->password;
-        if($password != null){
+        if ($password != null) {
             if ($get_image) {
                 $get_name_image = $get_image->getClientOriginalName();
                 $name_image = current(explode('.', $get_name_image));
@@ -123,7 +129,7 @@ class UserController extends Controller
                 Alert()->success('Thành công', 'Bạn đã cập nhật thàn công');
                 return redirect()->route('user.index');
 
-            }else{
+            } else {
                 User::find($id)->update([
                     'name' => $request->name,
                     'email' => $request->email,
@@ -137,7 +143,7 @@ class UserController extends Controller
                 Alert()->success('Thành công', 'Bạn đã cập nhật thàn công');
                 return redirect()->route('user.index');
             }
-        }else {
+        } else {
             if ($get_image) {
                 $get_name_image = $get_image->getClientOriginalName();
                 $name_image = current(explode('.', $get_name_image));
@@ -163,7 +169,6 @@ class UserController extends Controller
                     'email' => $request->email,
                     'phone' => $request->phone,
                     'staff_id' => $request->staff_user,
-                    'password' => Hash::make($request->password),
                 ]);
                 $user = User::find($id);
                 $user->syncRoles($request->role);
@@ -174,21 +179,25 @@ class UserController extends Controller
         }
 
     }
+
     public function destroy($id)
     {
-       $user = User::find($id);
+        $user = User::find($id);
 
-           $user->delete();
-           Alert()->success('Thành công','Bạn đã xóa thàn công');
-           return redirect()->route('user.index',$id);
+        $user->delete();
+        Alert()->success('Thành công', 'Bạn đã xóa thàn công');
+        return redirect()->route('user.index', $id);
     }
-    public function updateRole(Request $request,$id){
+
+    public function updateRole(Request $request, $id)
+    {
         $user = User::find($id);
         $user->syncRoles($request->role);
-        Alert()->success('Thành công','Cập nhật quyền thành công');
-        return redirect()->route('user.show',$id);
+        Alert()->success('Thành công', 'Cập nhật quyền thành công');
+        return redirect()->route('user.show', $id);
     }
-    public function updateimage(Request $request,$id)
+
+    public function updateimage(Request $request, $id)
     {
         $user = User::find($id);
         $data = array();
@@ -203,12 +212,16 @@ class UserController extends Controller
         return redirect()->route('user.show', $id);
 
     }
-    public function profile($id){
-       $users = User::where('id',$id)->get();
 
-        return view('admin.users.account.profile',compact('users'));
+    public function profile($id)
+    {
+        $users = User::where('id', $id)->get();
+
+        return view('admin.users.account.profile', compact('users'));
     }
-    public function ImageProfile(Request $request,$id){
+
+    public function ImageProfile(Request $request, $id)
+    {
         $user = User::find($id);
         $data = array();
         $get_image = $request->file('cover');
@@ -221,19 +234,22 @@ class UserController extends Controller
         Alert()->success('Thành công', 'Cập nhật ảnh thành công');
         return redirect()->route('user.profile', $id);
     }
-    public function updateProfile(ValidateFormProfile $request,$id)
+
+    public function updateProfile(ValidateFormProfile $request, $id)
     {
         DB::beginTransaction();
-                User::where('id', $id)->update([
-                    'name' => $request->name,
-                    'phone' => $request->phone,
-                    'email' => $request->email,
-                  ]);
+        User::where('id', $id)->update([
+            'name' => $request->name,
+            'phone' => $request->phone,
+            'email' => $request->email,
+        ]);
         DB::commit();
         Alert()->success('Thành công', 'Bạn đã cập nhật thàn công');
         return redirect()->route('user.profile', $id);
-            }
-    public function updatePassword(ValidateFormProfilePassword $request,$id){
+    }
+
+    public function updatePassword(ValidateFormProfilePassword $request, $id)
+    {
         DB::beginTransaction();
         User::where('id', $id)->update([
             'password' => Hash::make($request->password)

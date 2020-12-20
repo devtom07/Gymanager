@@ -22,13 +22,14 @@
                             <div class="table-rep-plugin">
                                 <div class="table-wrapper">
                                     <div class="btn-toolbar">
-                                        <div class="btn-group focus-btn-group"><button type="button"
+                                        <!-- <div class="btn-group focus-btn-group"><button type="button"
                                                 class="btn btn-default"><span
-                                                    class="glyphicon glyphicon-screenshot"></span> Lọc</button></div>
+                                                    class="glyphicon glyphicon-screenshot"></span> Lọc</button></div> -->
                                         <div class="btn-group dropdown-btn-group pull-right">
                                             <button type="button" class="btn btn-default"><a
                                                     href="{{route('service.add')}}" class="active">Thêm
-                                                </a></button><button type="button"
+                                                </a></button>
+                                                <!-- <button type="button"
                                                 class="btn btn-default dropdown-toggle" data-toggle="dropdown">Hiện thêm
                                                 thông tin <span class="caret"></span></button>
                                             <ul class="dropdown-menu">
@@ -73,7 +74,7 @@
                                                         id="toggle-tech-companies-1-col-8"
                                                         value="tech-companies-1-col-8"> <label
                                                         for="toggle-tech-companies-1-col-8">1y Target Est</label></li>
-                                            </ul>
+                                            </ul> -->
                                         </div>
                                     </div>
                                     <div class="table-responsive fixed-solution" data-pattern="priority-columns">
@@ -84,9 +85,6 @@
                                                     <th id="tech-companies-1-col-0-clone">STT</th>
                                                     <th data-priority="1" id="tech-companies-1-col-1-clone"
                                                         style="text-alight:center">Tên khách hàng</th>
-                                                    <th data-priority="3" id="tech-companies-1-col-2-clone">
-                                                        Tên HLV
-                                                    </th>
                                                     <th data-priority="1" id="tech-companies-1-col-3-clone">Dịch vụ</th>
                                                     <th data-priority="6" id="tech-companies-1-col-6-clone">Ngày bắt đầu
                                                     </th>
@@ -115,12 +113,15 @@
                                                         data-columns="tech-companies-1-col-1">
                                                         {{$service->customer->name}}
                                                     </td>
+                                                    <!-- <td data-org-colspan="1" data-priority="1"
+                                                        data-columns="tech-companies-1-col-1">{{$service->name}}
+                                                    </td> -->
                                                     <td data-org-colspan="1" data-priority="1"
-                                                        data-columns="tech-companies-1-col-1">{{$service->staff->name}}
+                                                        data-columns="tech-companies-1-col-1">{{$service->status}}
                                                     </td>
-                                                    <td data-org-colspan="1" data-priority="3"
+                                                    <!-- <td data-org-colspan="1" data-priority="3"
                                                         data-columns="tech-companies-1-col-2">{{$service->id_package}}
-                                                    </td>
+                                                    </td> -->
                                                     <td data-org-colspan="1" data-priority="1"
                                                         data-columns="tech-companies-1-col-3">{{$service->start_date}}
                                                     </td>

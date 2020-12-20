@@ -8,7 +8,6 @@ use App\Http\Requests\ValidateFormHymnalupdate;
 use App\Models\Hymnal;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-
 class HymnalController extends Controller
 {
     public function index(){

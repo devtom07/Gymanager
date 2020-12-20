@@ -25,18 +25,8 @@
                         <div class="table-wrapper">
                            <div class="btn-toolbar">
                               <div class="btn-group dropdown-btn-group pull-right">
-                                 <button type="button" class="btn btn-default"><a href="{{route('listnhanvien.add')}}" class="active">Tạo mới</a></button><button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Hiện thêm thông tin <span class="caret"></span></button>
-                                 <ul class="dropdown-menu">
-                                    <li class="checkbox-row"><input type="checkbox" name="toggle-tech-companies-1-col-1" id="toggle-tech-companies-1-col-1" value="tech-companies-1-col-1"> <label for="toggle-tech-companies-1-col-1">Email</label></li>
-                                    <li class="checkbox-row"><input type="checkbox" name="toggle-tech-companies-1-col-2" id="toggle-tech-companies-1-col-2" value="tech-companies-1-col-2"> <label for="toggle-tech-companies-1-col-2">Trạng thái</label></li>
-                                    <li class="checkbox-row"><input type="checkbox" name="toggle-tech-companies-1-col-3" id="toggle-tech-companies-1-col-3" value="tech-companies-1-col-3"> <label for="toggle-tech-companies-1-col-3">Ngày bắt đầu</label></li>
-                                    <li class="checkbox-row"><input type="checkbox" name="toggle-tech-companies-1-col-4" id="toggle-tech-companies-1-col-4" value="tech-companies-1-col-4"> 
-                                       <label for="toggle-tech-companies-1-col-4">Ngày kết thúc</label>
-                                    </li>
-                                    <li class="checkbox-row"><input type="checkbox" name="toggle-tech-companies-1-col-5" id="toggle-tech-companies-1-col-5" value="tech-companies-1-col-5"> <label for="toggle-tech-companies-1-col-5">Avarta</label></li>
-                                 </ul>
+                                 <button type="button" class="btn btn-default"><a href="{{route('listnhanvien.add')}}" class="active">Tạo mới</a></button>
                               </div>
-                              <div class="dataTables_length" id="datatable_length"><label>Show <select name="datatable_length" aria-controls="datatable" class="custom-select custom-select-sm form-control form-control-sm"><option value="10">10</option><option value="25">25</option><option value="50">50</option><option value="100">100</option></select> entries</label></div>
                               <div id="datatable_filter" class="dataTables_filter" ><label>Search:<input type="search" class="form-control form-control-sm" placeholder="" aria-controls="datatable"></label></div>
                            </div>
                            <div class="table-responsive fixed-solution" data-pattern="priority-columns">
@@ -44,9 +34,8 @@
                                     <thead>
                                        <tr>
                                           <th id="tech-companies-1-col-0-clone">STT</th>
-                                          <th data-priority="1" id="tech-companies-1-col-1-clone">Mã nhân viên</th>
                                           <th data-priority="1" id="tech-companies-1-col-1-clone">Họ và Tên</th>
-                                          {{-- <th data-priority="1" id="tech-companies-1-col-1-clone">Anh dai dien</th> --}}
+                                           <th data-priority="1" id="tech-companies-1-col-1-clone">Anh dai dien</th>
                                           <th data-priority="3" id="tech-companies-1-col-2-clone">Điện thoại</th>
                                           <th data-priority="1" id="tech-companies-1-col-3-clone">Email</th>
                                           <th data-priority="3" id="tech-companies-1-col-4-clone">Địa chỉ</th>
@@ -66,9 +55,14 @@
                                                 {{ $staffs->name}}
                                              </span>
                                           </td>
-                                          {{-- <td data-org-colspan="1" data-priority="1" data-columns="tech-companies-1-col-1">
-                                             <img src="{{asset('staff/'.$staffs->avatar)}}" width="100" height="100" alt="">
-                                          </td> --}}
+                                           <td data-org-colspan="1" data-priority="1" data-columns="tech-companies-1-col-1">
+                                              @if($staffs->avatar)
+                                                 <img src="{{asset('/staff/' .$staffs->avatar)}}" alt="" width="100px"
+                                                      height="100px">
+                                              @else
+                                                 <img width="100px" src="http://placehold.it/150x150">
+                                              @endif
+                                          </td>
                                           <td data-org-colspan="1" data-priority="1" data-columns="tech-companies-1-col-1">
                                              {{ $staffs->phone}}
                                           </td>
@@ -79,7 +73,7 @@
                                              {{ $staffs->address}}
                                           </td>
                                           <td data-org-colspan="1" data-priority="3" data-columns="tech-companies-1-col-5">
-                                             {{ $staffs->position}}
+                                             {{ $staffs->position->name}}
                                           </td>
                                           <td data-org-colspan="1" data-priority="6" data-columns="tech-companies-1-col-6">
                                              {{ $staffs->contract}}

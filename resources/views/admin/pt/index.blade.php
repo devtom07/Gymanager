@@ -2,23 +2,27 @@
 @section('title', 'PT')
 @section('content')
         <h2>Thông tin PT</h2>
-        <div style="margin-top: 100px;" class="page-content page-container" id="page-content">
+        <div style="margin-top: 100px;margin-left: 200px" class="page-content page-container" id="page-content">
                 @foreach($pt as $pts)
             <div class="padding">
                 <div class="row container d-flex justify-content-center">
-                    <div class="col-xl-6 col-md-12">
+                    <div class="col-xl-10 col-md-12">
                         <div class="card user-card-full">
                             <div class="row m-l-0 m-r-0">
                                 <div class="col-sm-4 bg-c-lite-green user-profile">
                                     <div class="card-block text-center text-white">
-                                        <div class="m-b-25"> <img width="150px" src="{{asset('/staff/'.$pts->staff->avatar)}}" class="img-radius" alt=""> </div>
+                                        <br>
+                                        <br>
+                                        <div style="margin-left: 10px" class="m-b-25"> <img width="150px" src="{{asset('/staff/'.$pts->staff->avatar)}}" class="img-radius" alt=""> </div>
                                         <h6 class="f-w-600">{{$pts->staff->name}}</h6>
                                         <p>{{$pts->staff->code}}</p> <i class=" mdi mdi-square-edit-outline feather icon-edit m-t-10 f-16"></i>
                                     </div>
                                 </div>
                                 <div class="col-sm-8">
                                     <div class="card-block">
-                                        <h6 class="m-b-20 p-b-5 b-b-default f-w-600">Thông tin PT</h6>
+                                        <br>
+                                        <h6 class="m-b-20 p-b-5 b-b-default f-w-600 text-danger">Thông tin PT</h6>
+                                        <br>
                                         <div class="row">
                                             <div class="col-sm-6">
                                                 <p class="m-b-10 f-w-600">Email</p>
@@ -89,7 +93,7 @@
                         <h6 class="text-muted f-w-400">{{$customer_pts->customer->address}}</h6>
                     </div>
                 </div>
-                <div class="third mt-4"> <button class="btn btn-success btn-block"><i class="fa fa-clock-o"></i> Book Now</button>
+                <div class="third mt-4"> <a  href="{{route('pt.ptStudent',$customer_pts->customer->id)}}" class="btn btn-success btn-block"><i class="fa fa-clock-o"></i>Xem lịch học</a>
                 </div>
             </div>
             @endforeach
