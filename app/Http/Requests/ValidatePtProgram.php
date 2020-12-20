@@ -29,7 +29,7 @@ class ValidatePtProgram extends FormRequest
             'number_sessions' => 'required|numeric|min:0',
             'total' => 'required',
             'money_paid' => 'required|numeric|min:0',
-            'start_date' => 'required',
+            'start_date' => 'required|after:yesterday',
             'status' => 'required',
             'pt' => 'required',
             'contract_code' => 'required|numeric|min:0',
@@ -38,7 +38,6 @@ class ValidatePtProgram extends FormRequest
             'still_owe' => 'required',
             'end_date' => 'required|after:start_date',
             'package' => 'required',
-            'schedule' => 'required',
         ];
     }
 
@@ -67,7 +66,8 @@ class ValidatePtProgram extends FormRequest
             'end_date.after' => 'Ngày kết thúc phải sau ngày bắt đầu',
             'package' => 'Không được phép để trống !',
             'schedule.required' => 'Không được phép để trống !',
-            'time.min' => 'Chỉ được phép nhỏ hơn 0'
+            'time.min' => 'Chỉ được phép nhỏ hơn 0',
+            'start_date.after' => 'Ngày bắt đầu phải trước ngày hôm nay'
         ];
     }
 }

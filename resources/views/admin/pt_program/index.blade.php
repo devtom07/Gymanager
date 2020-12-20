@@ -10,7 +10,7 @@
                     <div class="col-12">
                         <div class="page-title-box">
 
-                            <h4 class="page-title">Danh sách nhóm quyền</h4>
+                            <h4 class="page-title">Chương trình PT</h4>
                         </div>
                     </div>
                 </div>
@@ -24,7 +24,7 @@
                                         <div class="btn-toolbar">
                                             <div class="btn-group dropdown-btn-group pull-right">
                                                 <button type="button" class="btn btn-default"><a
-                                                            href="{{route('hymnal.add')}}" class="active">Đăng ký chương trình PT</a>
+                                                            href="{{route('ptProgram.add')}}" class="active">Đăng ký chương trình PT</a>
                                                 </button>
                                                 <!-- <button type="button" class="btn btn-default dropdown-toggle"
                                                         data-toggle="dropdown">Hiện thêm thông tin <span

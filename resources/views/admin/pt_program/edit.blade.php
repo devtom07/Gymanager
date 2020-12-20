@@ -136,9 +136,8 @@
                                         <option selected="">choose...</option>
                                         @foreach($pt as $pts)
                                             @foreach($pts->staff as $staff)
-                                            @if($ptPrograms->customer_id == $staff->id)
-                                                <option selected
-                                                        value="{{$staff->id}}">{{$staff->name}}</option>
+                                            @if($ptPrograms->pt_id == $staff->id)
+                                                <option selected value="{{$staff->id}}">{{$staff->name}}</option>
                                             @else
                                                 <option value="{{$staff->id}}">{{$staff->name}}</option>
                                             @endif
@@ -242,22 +241,6 @@
                                     </select>
                                     @if($errors->first('package'))
                                         <p class="text-danger">{{ $errors->first('package') }}</p>
-                                    @endif
-                                </div>
-                                <div class="form-group col-md-12">
-                                    <label>Lịch tập</label>
-                                    <div class="row">
-                                        @foreach($schedule as $schedules)
-                                            <div class="col-md-2">
-                                                <label class="label">{{$schedules->name}}</label>
-                                                <br>
-                                                <input {{$PtTraining->contains($schedules->id) ? 'checked' : '' }} value="{{$schedules->id}}" name="schedule[]" type="checkbox"
-                                                       class="checkbox">
-                                            </div>
-                                        @endforeach
-                                    </div>
-                                    @if($errors->first('schedule'))
-                                        <p class="text-danger">{{ $errors->first('schedule') }}</p>
                                     @endif
                                 </div>
                             </div>

@@ -170,22 +170,7 @@
                                     <p class="text-danger">{{ $errors->first('package') }}</p>
                                 @endif
                             </div>
-                            <div class="form-group col-md-12">
-                                <label>Lịch tập</label>
-                                <div class="row">
-                                    @foreach($schedule as $schedules)
-                                        <div class="col-md-2">
-                                            <label class="label">{{$schedules->name}}</label>
-                                            <br>
-                                            <input value="{{$schedules->id}}" name="schedule[]" type="checkbox"
-                                                   class="checkbox">
-                                        </div>
-                                    @endforeach
-                                </div>
-                                @if($errors->first('schedule'))
-                                    <p class="text-danger">{{ $errors->first('schedule') }}</p>
-                                @endif
-                            </div>
+
                         </div>
                         <button type="submit" class="btn btn-primary">Submit</button>
                         </form>

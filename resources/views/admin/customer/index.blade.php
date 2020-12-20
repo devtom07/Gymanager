@@ -30,55 +30,6 @@
                                                 <button type="button" class="btn btn-default"><a
                                                             href="{{route('customer.add')}}" class="active">Đăng ký</a>
                                                 </button>
-                                                <!-- <button type="button" class="btn btn-default dropdown-toggle"
-                                                        data-toggle="dropdown">Hiện thêm thông tin <span
-                                                            class="caret"></span></button> -->
-                                                <ul class="dropdown-menu">
-                                                    <li class="checkbox-row"><input type="checkbox"
-                                                                                    name="toggle-tech-companies-1-col-1"
-                                                                                    id="toggle-tech-companies-1-col-1"
-                                                                                    value="tech-companies-1-col-1">
-                                                        <label for="toggle-tech-companies-1-col-1">Email</label></li>
-                                                    <li class="checkbox-row"><input type="checkbox"
-                                                                                    name="toggle-tech-companies-1-col-2"
-                                                                                    id="toggle-tech-companies-1-col-2"
-                                                                                    value="tech-companies-1-col-2">
-                                                        <label for="toggle-tech-companies-1-col-2">Trạng thái</label>
-                                                    </li>
-                                                    <li class="checkbox-row"><input type="checkbox"
-                                                                                    name="toggle-tech-companies-1-col-3"
-                                                                                    id="toggle-tech-companies-1-col-3"
-                                                                                    value="tech-companies-1-col-3">
-                                                        <label for="toggle-tech-companies-1-col-3">Ngày bắt đầu</label>
-                                                    </li>
-                                                    <li class="checkbox-row"><input type="checkbox"
-                                                                                    name="toggle-tech-companies-1-col-4"
-                                                                                    id="toggle-tech-companies-1-col-4"
-                                                                                    value="tech-companies-1-col-4">
-                                                        <label for="toggle-tech-companies-1-col-4">Ngày kết thúc</label>
-                                                    </li>
-                                                    <li class="checkbox-row"><input type="checkbox"
-                                                                                    name="toggle-tech-companies-1-col-5"
-                                                                                    id="toggle-tech-companies-1-col-5"
-                                                                                    value="tech-companies-1-col-5">
-                                                        <label for="toggle-tech-companies-1-col-5">Avarta</label></li>
-                                                    <li class="checkbox-row"><input type="checkbox"
-                                                                                    name="toggle-tech-companies-1-col-6"
-                                                                                    id="toggle-tech-companies-1-col-6"
-                                                                                    value="tech-companies-1-col-6">
-                                                        <label for="toggle-tech-companies-1-col-6">Bid</label></li>
-                                                    <li class="checkbox-row"><input type="checkbox"
-                                                                                    name="toggle-tech-companies-1-col-7"
-                                                                                    id="toggle-tech-companies-1-col-7"
-                                                                                    value="tech-companies-1-col-7">
-                                                        <label for="toggle-tech-companies-1-col-7">Ask</label></li>
-                                                    <li class="checkbox-row"><input type="checkbox"
-                                                                                    name="toggle-tech-companies-1-col-8"
-                                                                                    id="toggle-tech-companies-1-col-8"
-                                                                                    value="tech-companies-1-col-8">
-                                                        <label for="toggle-tech-companies-1-col-8">1y Target Est</label>
-                                                    </li>
-                                                </ul>
                                             </div>
                                         </div>
                                         <div class="table-responsive fixed-solution" data-pattern="priority-columns">

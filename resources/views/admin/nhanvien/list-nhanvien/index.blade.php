@@ -56,7 +56,12 @@
                                              </span>
                                           </td>
                                            <td data-org-colspan="1" data-priority="1" data-columns="tech-companies-1-col-1">
-                                             <img src="{{asset('staff/'.$staffs->avatar)}}"  width="100" height="100" alt="">
+                                              @if($staffs->avatar)
+                                                 <img src="{{asset('/staff/' .$staffs->avatar)}}" alt="" width="100px"
+                                                      height="100px">
+                                              @else
+                                                 <img width="100px" src="http://placehold.it/150x150">
+                                              @endif
                                           </td>
                                           <td data-org-colspan="1" data-priority="1" data-columns="tech-companies-1-col-1">
                                              {{ $staffs->phone}}

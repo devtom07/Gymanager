@@ -43,11 +43,10 @@ class PtProgramController extends Controller
 
     public function add()
     {
-        $schedule = DB::table('trainings')->get();
         $customer = Services::where('status', 'Kèm PT')->get();
         $pt = Position::where('name', 'Huấn luyện viên')->get();
         $package = Package::all();
-        return view('admin.pt_program.add', compact('customer', 'pt', 'package', 'schedule'));
+        return view('admin.pt_program.add', compact('customer', 'pt', 'package'));
 
     }
 
@@ -59,18 +58,15 @@ class PtProgramController extends Controller
 
     public function edit($id)
     {
-        $schedule = DB::table('trainings')->get();
         $customer = Services::where('status', 'Kèm PT')->get();
         $pt = Position::where('name', 'Huấn luyện viên')->get();
         $package = Package::all();
         $ptProgram = PtProgram::where('id', $id)->get();
-        $PtTraining = DB::table('ptprogram_trainings')->where('id_ptprogram', $id)->pluck('id_training');
-        return view('admin.pt_program.edit', compact('schedule', 'customer', 'pt', 'package', 'ptProgram', 'PtTraining'));
+        return view('admin.pt_program.edit', compact( 'customer', 'pt', 'package', 'ptProgram'));
     }
 
     public function store(ValidatePtProgram $request)
     {
-        $schedule = $request->schedule;
         DB::beginTransaction();
         $ptProgram = PtProgram::create([
             'customer_id' => $request->customer,
@@ -89,7 +85,6 @@ class PtProgramController extends Controller
             'end_date' => $request->end_date,
             'package_id' => $request->package,
         ]);
-        $ptProgram->training()->attach($schedule);
         DB::commit();
         Alert()->success('Thành công', 'Bạn đã đăng ký PT thành công');
         return redirect()->route('ptProgram.index');
@@ -97,7 +92,6 @@ class PtProgramController extends Controller
 
     public function update(ValidatePtProgram $request, $id)
     {
-        $schedule = $request->schedule;
         DB::beginTransaction();
         PtProgram::where('id', $id)->update([
             'customer_id' => $request->customer,
@@ -116,9 +110,7 @@ class PtProgramController extends Controller
             'end_date' => $request->end_date,
             'package_id' => $request->package,
         ]);
-        DB::table('ptprogram_trainings')->where('id_ptprogram', $id)->delete();
-        $ptProgram = PtProgram::find($id);
-        $ptProgram->training()->attach($schedule);
+
         DB::commit();
         Alert()->success('Thành công', 'Bạn đã cập nhật thành công');
         return redirect()->route('ptProgram.index');

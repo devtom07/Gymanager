@@ -66,13 +66,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                     <!-- <div class="form-group">
-                                        <label for="exampleInputPassword1">dịch vụ free </label>
-                                        <select class="form-group" name="free_service[]" value="{{ old('free_service') }}" id="free_service" multiple>
-                                            <option value="khăn">khăn</option>
-                                            <option value="vé xe">vé xe</option>
-                                        </select>
-                                    </div>  -->
+
                                     <div class="form-group">
                                         <label>Dich vu free</label><br>
                                         <input type="radio" id="male" checked name="free_service" value="Nước">
@@ -95,15 +89,6 @@
                                     @error('desc')
                                             <p style="color:red">{{$message}}</p>
                                     @enderror
-                                    <div class="form-group">
-                                        <label>Ca tập (*)</label>
-                                        <select class="form-control" id="exampleSelect1" value="{{ old('id_catap') }}" name="id_catap">
-
-                                            @foreach($catap as $ca)
-                                            <option value="{{$ca->id}}">{{$ca->name}}</option>   
-                                            @endforeach
-                                        </select>
-                                    </div>
                                     <div class="form-group">
                                         <label for="exampleInputEmail1">Ngày bắt đầu(*)</label>
                                         <input type="date" class="form-control" name="start_date" value="{{ old('start_date') }}" placeholder="">

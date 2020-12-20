@@ -29,7 +29,6 @@ class PackageRequest extends FormRequest
             'price'=>'required',
             'end_date'=>'required|date|after:date_start',
             'desc'=>'required',
-            'id_catap'=>'required',
             'free_service'=>'required'
         ];
     }

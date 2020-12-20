@@ -22,7 +22,6 @@ class CreatePackagesTable extends Migration
             $table->date('start_date');
             $table->date('end_date');
             $table->text('desc');
-            $table->unsignedBigInteger('id_catap');
             $table->string('status');
             $table->timestamps();
         });

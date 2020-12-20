@@ -12,14 +12,12 @@ class PackageController extends Controller
 {
     //
     public function index(){
-		$package = Package::with('hymnal')->orderBy('id','desc')->get();
-		// $catap = Hymnal::all();
+        $package = Package::all();
     	return view('admin.package.index',compact('package'));
     }
     public function create()
     {
-		$catap = Hymnal::all();
-    	return view('admin.package.add', compact('catap'));
+    	return view('admin.package.add');
     }
     public function add(PackageRequest $request){
     	$package=new Package;
@@ -29,7 +27,6 @@ class PackageController extends Controller
     	$package->status=$request->status;
     	$package->free_service=$request->free_service;
     	$package->desc=$request->desc;
-    	$package->id_catap=$request->id_catap;
     	$package->start_date=$request->start_date;
 		$package->end_date=$request->end_date;
 		// dd($package);
@@ -40,9 +37,8 @@ class PackageController extends Controller
 
     }
     public function edit($id){
-    	$package=Package::find($id);
-    	$catap = Hymnal::all();
-    	return view('admin  .package.edit',compact('package','catap'));
+        $package = Package::where('id',$id)->get();
+    	return view('admin.package.edit',compact('package'));
     }
     public function update(PackageRequest $request,$id){
     	$package=Package::find($id);
@@ -52,7 +48,6 @@ class PackageController extends Controller
     	$package->status=$request->status;
     	$package->free_service=$request->free_service;
     	$package->desc=$request->desc;
-    	$package->id_catap=$request->id_catap;
     	$package->start_date=$request->start_date;
     	$package->end_date=$request->end_date;
     	$package->update();
