@@ -1,7 +1,20 @@
 @extends('admin.layout.main')
 @section('title', 'Sản phẩm')
 @section('content')
-
+<script type="text/javascript">
+    function updateCart(qty,rowId) {
+        console.log(qty);
+        console.log(rowId);
+        $.get(
+  
+    '{{asset('admin/show_san_pham/update')}}',
+    {qty:qty,rowId:rowId},
+    function(){
+        location.reload();
+    }
+        );
+}
+</script>
 <div class="content-page">
     <div class="content">
         <!-- Start Content-->
@@ -23,29 +36,33 @@
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    @foreach($cartContent as $key => $item)
                                     <tr>
+                                      
                                         <td><img class="img-responsive" width="100px"
-                                                src="{{asset('product/' . $listProduct->avatar)}}"> </td>
-                                        <td>{{$listProduct->name}}</td>
-                                        <td><input id="qtyCart" data-id="{{$listProduct->id}}" class="form-control"
-                                                type="number" value="{{$listProduct->quantity}}" /></td>
-                                        <td class="text-right">{{number_format($listProduct->price,0,',','.')}}đ</td>
+                                            src="{{asset('product/'.$item->options['image'])}}"> </td>
+                                        <td>{{$item->name}}</td>
+                                        <td><input class="form-control" type="number" value="{{$item->qty}}" onchange="updateCart(this.value,'{{$item->rowId}}')">
+                                        </td>
+                                        <td class="text-right">{{number_format($item->price,0,',','.')}}đ</td>
                                         <td class="text-right">
-                                            {{number_format($listProduct->price*$listProduct->quantity,0,',','.')}}đ
+                                            {{number_format($item->price*$item->qty,0,',','.')}}đ
                                         </td>
                                         <td class="text-right"><button class="btn btn-sm btn-danger btn-remove"><a
-                                                    href=""></a><i class="fa fa-trash"></i> </button> </td>
+                                                    href=""></a><i class="fa fa-trash"></i></button> </td>
                                     </tr>
-
+                                    @endforeach
                                     <tr>
+                                        <td></td>
                                         <td></td>
                                         <td></td>
                                         <td></td>
                                         <td><strong>Total</strong></td>
                                         <td class="text-right">
-                                            <strong>{{number_format($listProduct->price*$listProduct->quantity,0,',','.')}}</strong>
+                                            <strong>{{ $totalPrice }}</strong>
                                         </td>
                                     </tr>
+                                  
                                 </tbody>
                             </table>
                         </div>
