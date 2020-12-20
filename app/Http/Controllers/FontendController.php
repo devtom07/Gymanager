@@ -7,6 +7,7 @@ use App\Http\Requests\ContactRequest;
 use App\Http\Requests\NewMemberRequest;
 use Illuminate\Http\Request;
 use App\Models\Contact;
+use App\Models\Service;
 use App\Models\NewMember;
 class FontendController extends Controller
 {
@@ -19,7 +20,8 @@ class FontendController extends Controller
     	return view('fontend.blogs.index');
     }
     public function newmember(){
-    	return view('fontend.newmember.index');
+    	$service = Service::all();
+    	return view('fontend.newmember.index', compact('service'));
     }
     public function detailblog(){
     	return view('fontend.blogs.detailblog');
@@ -29,7 +31,7 @@ class FontendController extends Controller
 	}
     public function addMember(NewMemberRequest $request){
         $new = new NewMember;
-        $new->name = $request->name;
+        $new->name_member = $request->name;
         $new->phone = $request->phone;
         $new->service = $request->service;
         $new->email = $request->email;

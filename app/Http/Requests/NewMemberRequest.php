@@ -25,7 +25,7 @@ class NewMemberRequest extends FormRequest
     {
         return [
             'name'=>'required|min:5|max:30|not_regex:/([!@#$%^&*])/i',
-            'phone'=>'required|numeric|size:10|not_regex:/([!#$%^&*])/i|regex:/(0)[0-9]{9}/',
+            'phone'=>'required|numeric|not_regex:/([!#$%^&*])/i|regex:/(0)[0-9]{9}/',
             'email'=>'required|email|min:5|max:40|not_regex:/([!#$%^&*])/i|regex:/(.*)@gmail\.com/i',
             'content'=>'required|min:5|max:191'
         ];
@@ -40,7 +40,7 @@ class NewMemberRequest extends FormRequest
             'name.max'=>'Tên không được để quá 30 ký tự',
             'email.email'=>'vui lòng để đúng định dạng email!',
             'email.regex'=>'Vui lòng để dúng định dạng email',
-            'phone.size'=>'Vui nhập đủ 10 số',
+            // 'phone.size'=>'Vui nhập đủ 10 số',
             'phone.regex'=>'Vui lòng nhập đúng định dạng',
             'phone.numeric'=>'Vui lòng nhập đúng định dạng!'
         ];

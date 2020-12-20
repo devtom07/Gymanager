@@ -252,13 +252,10 @@
                             </ul>
                         </li>
                         <li>
-                            <a href="javascript: void(0);">
+                            <a href="{{ route('listForm') }}">
                                 <i class="mdi mdi-bread-slice"></i>
                                 <span>Thông tin Đăng kí</span>
                             </a>
-                            <ul class="nav-second-level" aria-expanded="false">
-                                <li><a href="">Thông tin đăng kí</a></li>
-                            </ul>
                         </li>
                     </ul>
                 </div>
