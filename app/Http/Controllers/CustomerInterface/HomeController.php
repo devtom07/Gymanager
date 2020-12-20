@@ -13,6 +13,7 @@ use App\Models\Service;
 class HomeController extends Controller
 {
     public function index(){
+
     	return view('customers.customer_training.index');
     }
     public function profile($id){

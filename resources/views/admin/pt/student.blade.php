@@ -70,10 +70,10 @@
                                                         <td data-org-colspan="1" data-priority="6"
                                                             data-columns="tech-companies-1-col-8">
                                                             <a class="dropdown-item"
-                                                               href=""><i
+                                                               href="{{route('pt.editTrainingPt',$teachingSchedules->id)}}"><i
                                                                         class="mdi mdi-calendar-edit"></i></a>
                                                             <a class="dropdown-item btn-remove"
-                                                               href=""><i
+                                                               href="{{route('pt.destroyTrainingPt',$teachingSchedules->id)}}"><i
                                                                         class="mdi mdi-delete"></i></a>
 
                                                         </td>
