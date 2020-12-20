@@ -249,6 +249,38 @@ Route::middleware(['auth'])->group(function () {
         Route::get('/loai-san-pham-xoa/{id}', 'Sanpham\CategoryController@destroy')
             ->name('category.delete');
 
+        //danh sach bai viet
+        Route::get('/danh-sach-bai-viet', 'Sanpham\PostsController@index')
+            ->name('listcate_posts');
+        Route::get('/them-danh-muc-bai-viet', 'Sanpham\PostsController@create')
+            ->name('cate_posts.add');
+        Route::post('/them-danh-muc-bai-viet/post', 'Sanpham\PostsController@store')
+            ->name('cate_posts.store');
+        Route::get('/sua-danh-muc-bai-viet/{id}', 'Sanpham\PostsController@edit')
+            ->name('cate_posts.edit');
+        Route::post('/sua-danh-muc-bai-viet/post/{id}', 'Sanpham\PostsController@update')
+            ->name('cate_posts.update');
+        Route::get('/danh-muc-bai-viet-xoa/{id}', 'Sanpham\PostsController@destroy')
+            ->name('cate_posts.delete');
+        
+        //bai viet
+        Route::get('/bai-viet', 'Sanpham\PostsController@index')
+            ->name('listposts');
+        Route::get('/them-bai-viet', 'Sanpham\PostsController@create')
+            ->name('posts.add');
+        Route::post('/them-bai-viet/post', 'Sanpham\PostsController@store')
+            ->name('posts.store');
+        Route::get('/sua-bai-viet/{id}', 'Sanpham\PostsController@edit')
+            ->name('posts.edit');
+        Route::post('/sua-bai-viet/post/{id}', 'Sanpham\PostsController@update')
+            ->name('posts.update');
+        Route::get('/bai-viet-xoa/{id}', 'Sanpham\PostsController@destroy')
+            ->name('posts.delete');
+        Route::get('/show_san_pham/{id}', 'Sanpham\PostsController@show')
+            ->name('posts.sanpham_ban');
+        Route::get('/bai-viet-all/{id}', 'Sanpham\PostsController@delete')
+            ->name('posts.xoa');
+
         //Pt-program
         Route::get('/chuong-trinh-PT', 'PT\PtProgramController@index')
             ->name('ptProgram.index');
