@@ -25,7 +25,6 @@ class CreateStaffsTable extends Migration
             $table->string('contract');
             $table->string('avatar')->nullable();
             $table->integer('wage');
-
             $table->timestamps();
         });
     }

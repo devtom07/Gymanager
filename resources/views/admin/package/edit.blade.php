@@ -1,6 +1,7 @@
 @extends('admin.layout.main')
 @section('title', 'Tạo mới nhân viên')
 @section('content')
+    @foreach($package as $package)
 <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
 <div class="content-page">
     <div class="content">
@@ -88,15 +89,7 @@
                                     @error('desc')
                                             <p style="color:red">{{$message}}</p>
                                     @enderror
-                                    <div class="form-group">
-                                        <label>Ca tập (*)</label>
-                                        <select class="form-control" id="exampleSelect1" value="{{ old('id_catap') }}" name="id_catap">
 
-                                            @foreach($catap as $ca)
-                                            <option value="{{$ca->id}}">{{$ca->name}}</option>   
-                                            @endforeach
-                                        </select>
-                                    </div>
                                     <div class="form-group">
                                         <label for="exampleInputEmail1">Ngày bắt đầu(*)</label>
                                         <input type="date" class="form-control" name="start_date" value="{{ $package->start_date }}" placeholder="">
@@ -130,4 +123,5 @@
     <!-- Footer Start -->
     <!-- end Footer -->
 </div>
+    @endforeach
 @endsection()

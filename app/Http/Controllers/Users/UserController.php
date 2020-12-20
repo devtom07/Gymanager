@@ -169,7 +169,6 @@ class UserController extends Controller
                     'email' => $request->email,
                     'phone' => $request->phone,
                     'staff_id' => $request->staff_user,
-                    'password' => Hash::make($request->password),
                 ]);
                 $user = User::find($id);
                 $user->syncRoles($request->role);

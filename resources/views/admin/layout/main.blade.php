@@ -238,7 +238,7 @@
                                 <span>Liên hệ</span>
                             </a>
                             <ul class="nav-second-level" aria-expanded="false">
-                                <li><a href="{{ route('contact.admin') }}">Xem thông tin liên hệ từ khách hàng</a></li>
+                                <li><a href="{{ route('contact.admin') }}">Xem thông tin liên hệ </a></li>
                             </ul>
                         </li>
                         <li>
@@ -254,10 +254,10 @@
                         <li>
                             <a href="javascript: void(0);">
                                 <i class="mdi mdi-bread-slice"></i>
-                                <span>Quản lý khách hàng đăng kí-form</span>
+                                <span>Thông tin Đăng kí</span>
                             </a>
                             <ul class="nav-second-level" aria-expanded="false">
-                                <li><a href="">Slide</a></li>
+                                <li><a href="">Thông tin đăng kí</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -309,7 +309,6 @@
                     <ul class="metismenu" id="side-menu">
 
                         <li class="menu-title">Gymmanager</li>
-
                         <li>
                             <a href="{{route('dashboard')}}">
                                 <i class="mdi mdi-view-dashboard"></i>
@@ -318,12 +317,22 @@
                         </li>
                         <li>
                             <a href="javascript: void(0);">
-                                <i class="mdi mdi-teach"></i>
-                                <span> PT </span>
+                                <i class="mdi mdi-book-open"></i>
+                                <span> Học viên </span>
                             </a>
                             <ul class="nav-second-level" aria-expanded="false">
-                                <li><a href="{{route('pt.index')}}">Thông tin PT</a></li>
-                                <li><a href="{{route('pt.index')}}">lịch dạy</a></li>
+                                <li><a href="{{route('pt.index')}}">Thông tin học viên</a></li>
+                            </ul>
+
+                        </li>
+                        <li>
+                            <a href="javascript: void(0);">
+                                <i class="mdi mdi-eye-check"></i>
+                                <span> Lịch dạy </span>
+                            </a>
+                            <ul class="nav-second-level" aria-expanded="false">
+                                <li><a href="{{route('pt.teaching')}}">lịch dạy theo ngày</a></li>
+
                             </ul>
 
                         </li>

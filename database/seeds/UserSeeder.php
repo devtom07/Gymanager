@@ -16,14 +16,14 @@ class UserSeeder extends Seeder
         DB::table('users')->insert([
             'name' => 'admin',
             'email' => 'admin@gmail.com',
-            'phone' => '12345678',
+            'phone' => '0344560381',
             'password' => Hash::make('123456'),
             'staff_id' => '1',
         ]);
         DB::table('users')->insert([
             'name' => 'nhanvien1',
             'email' => 'nhanvien1@gmail.com',
-            'phone' => '12345678',
+            'phone' => '0392146603',
             'password' => Hash::make('123456'),
             'staff_id' => '2',
 
@@ -31,7 +31,7 @@ class UserSeeder extends Seeder
         DB::table('users')->insert([
             'name' => 'nhanvien2',
             'email' => 'nhanvien2@gmail.com',
-            'phone' => '12345678',
+            'phone' => '0337019846',
             'password' => Hash::make('123456'),
             'staff_id' => '3',
 
@@ -39,7 +39,7 @@ class UserSeeder extends Seeder
         DB::table('users')->insert([
             'name' => 'nhanvien3',
             'email' => 'nhanvien3@gmail.com',
-            'phone' => '12345678',
+            'phone' => '0944194857',
             'password' => Hash::make('123456'),
             'staff_id' => '4',
 
@@ -47,7 +47,7 @@ class UserSeeder extends Seeder
         DB::table('users')->insert([
             'name' => 'nhanvien4',
             'email' => 'nhanvien4@gmail.com',
-            'phone' => '12345678',
+            'phone' => '0967861842',
             'password' => Hash::make('123456'),
             'staff_id' => '5',
 
