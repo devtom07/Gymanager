@@ -184,19 +184,19 @@ Route::middleware(['auth'])->group(function () {
             ->name('pt.index');
         Route::get('dangKyPt', 'PT\PtController@addPt')
             ->name('pt.add');
-        Route::get('lich-day-pt','PT\PtController@teaching')
+        Route::get('lich-day-pt', 'PT\PtController@teaching')
             ->name('pt.teaching');
-        Route::get('xep-lich-hoc/{id}','PT\PtController@addTrainingPt')
+        Route::get('xep-lich-hoc/{id}', 'PT\PtController@addTrainingPt')
             ->name('pt.addTrainingPt');
-        Route::get('lich-hoc-hoc-vien/{id}','PT\PtController@ptStudent')
+        Route::get('lich-hoc-hoc-vien/{id}', 'PT\PtController@ptStudent')
             ->name('pt.ptStudent');
-        Route::post('xep-lich-hoc/post/{id}','PT\PtController@storeTrainingPt')
+        Route::post('xep-lich-hoc/post/{id}', 'PT\PtController@storeTrainingPt')
             ->name('pt.storeTrainingPt');
-        Route::get('cap-nhat-lich-hoc/{id}','PT\PtController@editTrainingPt')
+        Route::get('cap-nhat-lich-hoc/{id}', 'PT\PtController@editTrainingPt')
             ->name('pt.editTrainingPt');
-        Route::post('cap-nhat-lich-hoc/post/{id}','PT\PtController@updateTrainingPt')
+        Route::post('cap-nhat-lich-hoc/post/{id}', 'PT\PtController@updateTrainingPt')
             ->name('pt.updateTrainingPt');
-        Route::get('xoa-lich-hoc/{id}','PT\PtController@destroyTrainingPt')
+        Route::get('xoa-lich-hoc/{id}', 'PT\PtController@destroyTrainingPt')
             ->name('pt.destroyTrainingPt');
         //pt-level
         Route::get('goi-cuoc', 'KhachHang\PackageController@index')
@@ -226,10 +226,14 @@ Route::middleware(['auth'])->group(function () {
             ->name('product.update');
         Route::get('/san-pham-xoa/{id}', 'Sanpham\ProductController@destroy')
             ->name('product.delete');
-        Route::get('/show_san_pham/{id}', 'Sanpham\ProductController@show')
+        Route::get('/show_san_pham', 'Sanpham\ProductController@show')
             ->name('product.sanpham_ban');
-        Route::get('/san-pham-all/{id}', 'Sanpham\ProductController@delete')
-            ->name('product.xoa');
+        Route::get('/addCart/{id}', 'Sanpham\ProductController@addCart')
+            ->name('product.AddCart');
+        // Route::get('/deleteCart/{id}', 'Sanpham\ProductController@getDeleteCart')
+        //     ->name('product.DeleteCart');
+        Route::get('/show_san_pham/update', 'Sanpham\ProductController@updateCart')->name('product.update_sp');
+        // Route::get('/update/{id}/{qty}', 'Sanpham\ProductController@update_sp')->name('product.sanpham_ban');
 
         //loai san pham
         Route::get('/loai-san-pham', 'Sanpham\CategoryController@index')
@@ -286,6 +290,6 @@ Route::middleware(['auth'])->group(function () {
         //-quan lý danh sách của khách đăng kí form
         Route::get('/danh-sach-dang-ki', 'Admin\AdminController@listForm')->name('listForm');
         Route::get('/xoa-danh-sach-dang-ki/{id}', 'Admin\AdminController@deleteListForm')->name('listForm.delete');
-        Route::get('/status/{id}', 'Admin\AdminController@statusForm' )->name('statusForm');
-});
+        Route::get('/status/{id}', 'Admin\AdminController@statusForm')->name('statusForm');
+    });
 });
