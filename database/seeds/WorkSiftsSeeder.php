@@ -27,5 +27,13 @@ class WorkSiftsSeeder extends Seeder
             'hour_end' =>  '20:00',
             'status' => 'Còn hiệu lực'
         ]);
+        WorkSift::create([
+            'name' => 'ca3',
+            'hour_start' => '14:05',
+            'hour_start_center' => '15:00',
+            'hour_end_center' => '15:30',
+            'hour_end' =>  '20:00',
+            'status' => 'Còn hiệu lực'
+        ]);
     }
 }

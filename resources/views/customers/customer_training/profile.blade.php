@@ -97,20 +97,22 @@
 </style>
 <div class="container emp-profile">
             <form method="post">
+                 @foreach($customer_account as $profile)
                 <div class="row">
                     <div class="col-md-4">
                         <div class="profile-img">
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS52y5aInsxSm31CvHOFHWujqUx_wWTS9iM6s7BAm21oEN_RiGoog" alt=""/>
+                            <img src="{{ asset('admin/customers/images/'.$profile->customer->avatar) }}" alt=""/>
                             <div class="file btn btn-lg btn-primary">
                                 Change Photo
                                 <input type="file" name="file"/>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6">
-                        @foreach($customer_account as $profile)                        <div class="profile-head">
+                    <div class="col-md-6">                   
+                        <div class="profile-head">
                                     <h5>
                                         {{ $profile->customer->name }}
+                                        
                                     </h5>
                                     <h6>
                                       Giới tính:  {{ $profile->customer->sex }}
@@ -125,9 +127,10 @@
                                 </li>
                             </ul>
                         </div>
-                        @endforeach
+                        
                     </div>
                 </div>
+                @endforeach
                 <div class="row">
                     <div class="col-md-4">
                         {{-- <div class="profile-work">

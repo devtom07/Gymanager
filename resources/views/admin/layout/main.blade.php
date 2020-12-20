@@ -27,7 +27,7 @@
     <link href="{{asset('admin/css/style.css')}}" rel="stylesheet" type="text/css" id="app-stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet"/>
+    {{-- <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet"/> --}}
     <!-- ajax -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -438,11 +438,54 @@
 <script src="{{asset('admin/js/service/addService.js')}}"></script>
 <script src="{{asset('admin/js/main/setup.js')}}"></script>
 <script src="{{asset('admin/js/ptprogram/addptProgram.js')}}"></script>
-<script scr="{{asset('admin/js/package/package.js')}}"></script>
+{{-- <script scr="{{asset('admin/js/package/package.js')}}"></script> --}}
 <script src="{{ asset('admin/js/ajax/ajax.js') }}"></script>
 <script src="{{ asset('ckeditor4/ckeditor.js') }}"></script>
 <script> CKEDITOR.replace('editor1'); </script>
 <script> CKEDITOR.replace('editor2'); </script>
+<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+    $('body').on('change', '#date_start', function(event){
+        event.preventDefault();
+        var val = $(this).val();
+        var chuki = $('#chuki').val();
+        var numberCk = 0;
+        switch(chuki){
+            case 'week':
+                numberCk = 7;
+                break;
+            case 'month':
+                numberCk = 30;
+                break;
+            default:
+                numberCk = 365;
+        }
+        var n=  getdate(val,numberCk);
+        // datend =  val + chuki
 
+        console.log(n);
+    })
+})
+function getdate(tt,total) {
+    var date = new Date(tt);
+    var newdate = new Date(date);
+
+    newdate.setDate(newdate.getDate() + total);
+
+    var dd = newdate.getDate();
+    var mm = newdate.getMonth() + 1;
+    var y = newdate.getFullYear();
+
+    var someFormattedDate = y+'-'+mm+'-'+dd;
+
+    document.getElementById("date_end").valueAsDate = new Date(someFormattedDate);
+    return someFormattedDate;
+}
+$(document).ready(function() {
+    $('#calamviec').select2();
+});
+</script>
 </body>
 </html>
