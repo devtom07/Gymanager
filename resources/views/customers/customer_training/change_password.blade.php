@@ -7,7 +7,7 @@
 		<div class="form-group" style="position:relative;">
 			<label>Mật khẩu cũ</label>
 			<input type="password" name="current_password" class="form-control">
-			<a style="position: absolute;top:54%;right: 10px;color: red;" href="javascript:void(0)"><i class="fa fa-eye"></i></a>
+			{{-- <a style="position: absolute;top:54%;right: 10px;color: red;" href="javascript:void(0)"><i class="fa fa-eye"></i></a> --}}
 			@error('current_password')
 			<p style="color: red">{{ $message }}</p>
 			@enderror
@@ -15,7 +15,7 @@
 		<div class="form-group" style="position:relative;">
 			<label>Mật khẩu mới</label>
 			<input type="password" name="password" class="form-control">
-			<a style="position: absolute;top:54%;right: 10px;color: red;" href="javascript::void(0)"><i class="fa fa-eye"></i></a>
+			{{-- <a style="position: absolute;top:54%;right: 10px;color: red;" href="javascript::void(0)"><i class="fa fa-eye"></i></a> --}}
 			@error('password')
 			<p style="color: red">{{ $message }}</p>
 			@enderror
@@ -23,7 +23,7 @@
 		<div class="form-group" style="position:relative;">
 			<label>Nhập lại mật khẩu mới</label>
 			<input type="password" name="password_confirm" class="form-control">
-			<a style="position: absolute;top:54%;right: 10px;color: red;" href="javascript:void(0)"><i class="fa fa-eye"></i></a>
+			{{-- <a style="position: absolute;top:54%;right: 10px;color: red;" href="javascript:void(0);"><i class="fa fa-eye"></i></a> --}}
 			@error('password_confirm')
 			<p style="color: red">{{ $message }}</p>
 			@enderror

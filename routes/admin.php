@@ -271,12 +271,15 @@ Route::middleware(['auth'])->group(function () {
             ->name('customer_account.edit');
         Route::get('/xoa-tai-khoan-khach/{id}', 'CustomerAccount\CustomerAccountController@destroy')
             ->name('customer_account.delete');
-        Route::get('/xoa-tai-khoan-khach/search', 'CustomerAccount\CustomerAccountController@search')
+        Route::get('/search-khoan-khach/search', 'CustomerAccount\CustomerAccountController@search')
             ->name('customer_account.search');
         //liên hệ
-        Route::get('/lien-he-admin', 'Admin\AdminController@contact')
-            ->name('contact.admin');
-        Route::get('/xóa-lien-he/{id}', 'Admin\AdminController@deleteContact')
-            ->name('contact.delete');
+        Route::get('/lien-he-admin', 'Admin\AdminController@contact')->name('contact.admin');
+        Route::get('/xóa-lien-he/{id}', 'Admin\AdminController@deleteContact')->name('contact.delete');
+
+        //-quan lý danh sách của khách đăng kí form
+        Route::get('/danh-sach-dang-ki', 'Admin\AdminController@listForm')->name('listForm');
+        Route::get('/xoa-danh-sach-dang-ki/{id}', 'Admin\AdminController@deleteListForm')->name('listForm.delete');
+        Route::get('/status/{id}', 'Admin\AdminController@statusForm' )->name('statusForm');
 });
 });

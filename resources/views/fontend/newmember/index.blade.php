@@ -61,8 +61,9 @@
                                     <div class="col-lg-6 col-md-6 mb-30">
                                         <div class="select-itms">
                                             <select name="service" id="select2" style="display: none;">
-                                                <option value="Gói kèm HLV">Gói kèm HLV</option>
-                                                <option value="Gói không HLV">Gói không HLV</option>
+                                                @foreach($service as $services)
+                                                <option value="{{ $services->id }}">{{ $services->name }}</option>
+                                                @endforeach
                                             </select>
                                         </div>
                                     </div>

@@ -8,4 +8,8 @@ class NewMember extends Model
 {
     //
     protected $table = 'new_members';
+
+    public function service(){
+    	return $this->hasOne(Service::class, 'id');
+    }
 }
