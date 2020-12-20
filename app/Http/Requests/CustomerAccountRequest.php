@@ -24,7 +24,7 @@ class CustomerAccountRequest extends FormRequest
     public function rules()
     {
         return [
-            'name'=>['required','min:5','max:20','unique:customer_accounts','regex:/^[^(\|\]~`!%^&*=};:?><’)]*$/'],
+            'name'=>['required','min:5','max:20','regex:/^[^(\|\]~`!%^&*=};:?><’)]*$/'],
             'email'=>'required|min:15|max:40|email|regex:/(.*)@gmail\.com/i|not_regex:/([!#$%^&*])/i|unique:customer_accounts',
             'password'=>'required|min:6|max:15|not_regex:/([!@#$%^&*])/i'
         ];

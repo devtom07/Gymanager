@@ -7,6 +7,7 @@ use App\Models\Package;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Package\PackageRequest;
+use App\Http\Requests\Package\PackageEditRequest;
 
 class PackageController extends Controller
 {
@@ -17,7 +18,8 @@ class PackageController extends Controller
     }
     public function create()
     {
-    	return view('admin.package.add');
+        $catap = Hymnal::All();
+    	return view('admin.package.add',compact('catap'));
     }
     public function add(PackageRequest $request){
     	$package=new Package;
@@ -26,7 +28,8 @@ class PackageController extends Controller
     	$package->type_use=$request->type_use;
     	$package->status=$request->status;
     	$package->free_service=$request->free_service;
-    	$package->desc=$request->desc;
+        $package->desc=$request->desc;
+    	$package->id_catap=$request->id_catap;
     	$package->start_date=$request->start_date;
 		$package->end_date=$request->end_date;
 		// dd($package);
@@ -38,9 +41,10 @@ class PackageController extends Controller
     }
     public function edit($id){
         $package = Package::where('id',$id)->get();
-    	return view('admin.package.edit',compact('package'));
+        $catap = Hymnal::All();
+    	return view('admin.package.edit',compact('package','catap'));
     }
-    public function update(PackageRequest $request,$id){
+    public function update(PackageEditRequest $request,$id){
     	$package=Package::find($id);
     	$package->name=$request->name;
     	$package->price=$request->price;
@@ -48,6 +52,7 @@ class PackageController extends Controller
     	$package->status=$request->status;
     	$package->free_service=$request->free_service;
     	$package->desc=$request->desc;
+        $package->id_catap=$request->id_catap;
     	$package->start_date=$request->start_date;
     	$package->end_date=$request->end_date;
     	$package->update();

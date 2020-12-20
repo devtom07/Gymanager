@@ -309,8 +309,8 @@ Route::middleware(['auth'])->group(function () {
             ->name('customer_account.add');
         Route::get('/sua-tai-khoan-khach/{id}', 'CustomerAccount\CustomerAccountController@edit')
             ->name('customer_account.edit');
-        Route::post('/tai-khoan-khach/{id}', 'CustomerAccount\CustomerAccountController@update')
-            ->name('customer_account.edit');
+        Route::post('/sua-khoan-khach/{id}', 'CustomerAccount\CustomerAccountController@update')
+            ->name('customer_accounts.edit');
         Route::get('/xoa-tai-khoan-khach/{id}', 'CustomerAccount\CustomerAccountController@destroy')
             ->name('customer_account.delete');
         Route::get('/search-khoan-khach/search', 'CustomerAccount\CustomerAccountController@search')

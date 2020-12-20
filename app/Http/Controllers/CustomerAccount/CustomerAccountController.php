@@ -9,6 +9,7 @@ use App\Models\Customer;
 use App\Http\Requests\CustomerAccountRequest;
 use App\Http\Requests\CustomerAccount\CustomerAccountEditRequest;
 use DB;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class CustomerAccountController extends Controller
 {
@@ -54,7 +55,8 @@ class CustomerAccountController extends Controller
         $customer_account->id_customer=$request->id_customer;
         $customer_account->save();
         // dd($customer_account);
-        return redirect()->route('customer_account')->with('thongbao','thêm thành công');
+        Alert()->success('Thông báo', 'Thêm thành công!!');
+        return redirect()->route('customer_account');
     }
 
     /**
@@ -92,14 +94,15 @@ class CustomerAccountController extends Controller
     public function update(CustomerAccountEditRequest $request, $id)
     {
         //
-        $customer_account=new CustomerAccount;
+        $customer_account=CustomerAccount::find($id);
         $customer_account->name=$request->name;
         $customer_account->email=$request->email;
-        $customer_account->password=\Illuminate\Support\Facades\Hash::make($request->password);
+        // $customer_account->password=\Illuminate\Support\Facades\Hash::make($request->password);
         $customer_account->id_customer=$request->id_customer;
         $customer_account->status=$request->status;
         $customer_account->update();
-        return redirect(route('customer_account'))->with('thongbao', 'Sửa thành công');
+        Alert()->success('Thông báo', 'Sửa thành công!!');
+        return redirect(route('customer_account'));
     }
 
     /**
@@ -113,23 +116,23 @@ class CustomerAccountController extends Controller
         //
         $customer_account=CustomerAccount::find($id);
         $customer_account->delete();
+        Alert()->success('Thông báo', 'Xóa thành công!!');
         return redirect()->back()->with('thongbao','Xóa thành công');
     }
 
     public function search(Request $request){
         if ($request->ajax()) {
             $output='';
-            $customer_account = CustomerAccount::Where('name','LIKE','%' . $request->searchAcc .'%')
+            $customer_account = CustomerAccount::where('name','LIKE','%' . $request->searchAcc .'%')
                                 // ->orWhere('email','LIKE','%' . $request->search .'%')
                                 ->get();
             if ($customer_account) {
-                foreach ($cutomer_account as $key => $cutomer_accounts) {
+                foreach ($customer_account as $key => $cutomer_accounts) {
                         $output .='<tr>
                             <td>'. $key + 1 . '</td>
                             <td>'. $customer_accounts->name . '</td>
                             <td>'. $customer_accounts->email . '</td>
                             <td>'. $customer_accounts->status . '</td>
-                            // <td>'. $customer_accounts->customer->name . '</td>
 
                         </tr>';
                     }    

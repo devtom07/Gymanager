@@ -48,7 +48,7 @@
                                     @enderror
                                     <div class="form-group">
                                         <label for="exampleInputPassword1">Kiểu sử dụng (*)</label>
-                                        <select name="type_use" value="{{ $package->type_use }}" id="">
+                                        <select name="type_use" class="form-control" value="{{ $package->type_use }}" id="">
                                             <option value="theo ngày">Theo ngày</option>
                                             <option value="theo tuần">Theo tuần</option>
                                             <option value="theo tháng">Theo tháng</option>
@@ -89,7 +89,18 @@
                                     @error('desc')
                                             <p style="color:red">{{$message}}</p>
                                     @enderror
-
+                                    <div class="form-group">
+                                        <label for="exampleInputPassword1">Ca tập (*)</label>
+                                        <select name="id_catap" class="form-control" id="">
+                                            @foreach($catap as $catap)
+                                            <option 
+                                            <?php if($package->id_catap ==$catap->id) :?>
+                                            selected
+                                            <?php endif?>
+                                            value="{{ $catap->id }}">{{ $catap->name }}</option>
+                                            @endforeach
+                                        </select>
+                                    </div>
                                     <div class="form-group">
                                         <label for="exampleInputEmail1">Ngày bắt đầu(*)</label>
                                         <input type="date" class="form-control" name="start_date" value="{{ $package->start_date }}" placeholder="">
