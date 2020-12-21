@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
-
+use App\Models\Position;
 class PositionSeeder extends Seeder
 {
     /**
