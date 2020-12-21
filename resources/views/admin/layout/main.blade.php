@@ -234,9 +234,10 @@
                             </a>
                             <ul class="nav-second-level" aria-expanded="false">
 
-                                <li><a href="{{route('package.index')}}">Doanh thu</a></li>
+                                <li><a href="{{route('listRevenue')}}">Doanh thu</a></li>
 
-                             
+
+
                             </ul>
                         </li>
                         <li>
