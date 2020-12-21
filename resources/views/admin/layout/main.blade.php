@@ -22,7 +22,6 @@
     <link href="{{asset('admin/css/style.css')}}" rel="stylesheet" type="text/css" id="app-stylesheet">
      {{--     datatable--}}
     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.7/css/jquery.dataTables.min.css">
     {{--     enđatable--}}
     <link href="{{asset('admin/css/bootstrap.min.css')}}" rel="stylesheet" type="text/css" id="bootstrap-stylesheet">
     <link href="{{asset('admin/css/icons.min.css')}}" rel="stylesheet" type="text/css">
@@ -94,7 +93,7 @@
                 </div>
             </li>
 
-           
+
 
         </ul>
 
@@ -408,9 +407,9 @@
 
 <!--Morris Chart-->
 <script src="{{asset('admin\libs\morris-js\morris.min.js')}}"></script>
-<script src="{{asset('admin   \libs\raphael\raphael.min.js')}}"></script>
+{{-- <script src="{{asset('admin   \libs\raphael\raphael.min.js')}}"></script> --}}
 <!-- Dashboard init js-->
-<script src="{{asset('admin\js\pages\dashboard.init.js')}}"></script>
+{{-- <script src="{{asset('admin\js\pages\dashboard.init.js')}}"></script> --}}
 <!-- App js -->
 <script src="{{asset('admin\js\app.min.js')}}"></script>
 
@@ -431,7 +430,7 @@
 <script src="{{asset('admin/libs/morris-js/morris.min.js')}}"></script>
 <script src="{{asset('admin/libs/raphael/raphael.min.js')}}"></script>
 <!-- Dashboard init js-->
-<script src="{{asset('assets/js/pages/dashboard.init.js')}}"></script>
+{{-- <script src="{{asset('assets/js/pages/dashboard.init.js')}}"></script> --}}
 
 <!-- App js -->
 <script src="{{asset('admin/js/app.min.js')}}"></script>
@@ -444,6 +443,7 @@
 <script scr="{{asset('admin/js/package/package.js')}}"></script>
 <script src="{{ asset('admin/js/ajax/ajax.js') }}"></script>
 <script src="{{ asset('admin/js/user/SearchAccount.js') }}"></script>
+<script src="{{ asset('admin/js/hymnal/search.js') }}"></script>
 <script src="{{ asset('ckeditor4/ckeditor.js') }}"></script>
 {{-- datatable--}}
 <!-- Bootstrap JavaScript -->

@@ -2,40 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="04252629-b95a-44f4-aed8-9611f189c638" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/phpunit.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/phpunit.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_01_48,_11_11_2020_[Default_Changelist]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_01_48__11_11_2020__Default_Changelist_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_02_54,_11_11_2020_[Default_Changelist]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_02_54__11_11_2020__Default_Changelist_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_02_55,_11_11_2020_[Default_Changelist]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_02_55__11_11_2020__Default_Changelist_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_22_59,_11_11_2020_[Default_Changelist]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_22_59__11_11_2020__Default_Changelist_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CustomerAccount/CustomerAccountController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CustomerAccount/CustomerAccountController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/FontendController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/FontendController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/KhachHang/PackageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/KhachHang/PackageController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Sanpham/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Sanpham/ProductController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/CustomerAccount/CustomerAccountEditRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/CustomerAccount/CustomerAccountEditRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/ValidateAddProduct.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/ValidateAddProduct.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/ValidateEditProduct.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/ValidateEditProduct.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Hymnal.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Hymnal.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Package.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Package.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Position.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Position.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_10_092035_create_product_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_12_10_092035_create_product_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/PackageSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/PackageSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/PositionSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/PositionSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/WorkSiftStaffSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/WorkSiftStaffSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/WorkSiftsSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/WorkSiftsSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/admin/js/cart/changcart.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/admin/js/cart/changcart.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/admin/js/package/package.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/admin/js/package/package.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/contact/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/contact/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/customer_account/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/customer_account/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/nhanvien/calamviec-nhanvien/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/nhanvien/calamviec-nhanvien/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/package/add.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/package/add.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/package/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/package/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/san-pham/list-san-pham/add.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/san-pham/list-san-pham/add.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/san-pham/list-san-pham/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/san-pham/list-san-pham/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/san-pham/list-san-pham/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/san-pham/list-san-pham/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/san-pham/list-san-pham/sanpham_ban.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/san-pham/list-san-pham/sanpham_ban.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/customers/customer_training/profile.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/customers/customer_training/profile.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/fontend/layouts/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/fontend/layouts/header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Dichvu/HymnalController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Dichvu/HymnalController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/hymnal/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/hymnal/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/layout/main.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/layout/main.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/admin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/fontend.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/fontend.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -195,6 +174,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
@@ -218,10 +198,32 @@
       <updated>1608366571963</updated>
       <workItem from="1608366573257" duration="227000" />
       <workItem from="1608443998557" duration="72000" />
+      <workItem from="1608513056643" duration="69000" />
+      <workItem from="1608513141602" duration="294000" />
+      <workItem from="1608513449706" duration="590000" />
+      <workItem from="1608515960168" duration="4884000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="456" y="276" width="444" height="249" key="#Composer" timestamp="1608512825669">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state x="456" y="276" width="444" height="249" key="#Composer/0.27.1366.741@0.27.1366.741" timestamp="1608512825669" />
+    <state x="0" y="27" width="700" height="741" key="#PHP" timestamp="1608513421495">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state x="0" y="27" width="700" height="741" key="#PHP/0.27.1366.741@0.27.1366.741" timestamp="1608513421495" />
+    <state x="141" y="40" width="1084" height="728" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1608513430407">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state x="141" y="40" width="1084" height="728" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.27.1366.741@0.27.1366.741" timestamp="1608513430407" />
+    <state x="466" y="155" width="424" height="491" key="FileChooserDialogImpl" timestamp="1608514037781">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state x="466" y="155" width="424" height="491" key="FileChooserDialogImpl/0.27.1366.741@0.27.1366.741" timestamp="1608514037781" />
   </component>
 </project>
