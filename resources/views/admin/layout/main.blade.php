@@ -9,13 +9,13 @@
     <meta content="Coderthemes" name="author" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <!-- App favicon -->
-    <link rel="shortcut icon" href="{{url('admin')}}/images/logogym.gif">
+    <link rel="shortcut icon" href="{{url('admin')}}\images\logogym.gif">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
     <!-- App css -->
     <link href="{{asset('admin/libs/dropify/dropify.min.css')}}" rel="stylesheet" type="text/css" />
 
     <!-- App favicon -->
-    <link rel="shortcut icon" href="{{asset('admin\images\logogym.gif')}}">
+    <link rel="shortcut icon" href="{{asset('admin/images/logogym.gif')}}">
     <!-- App css -->
     <link href="{{asset('admin/css/bootstrap.min.css')}}" rel="stylesheet" type="text/css" id="bootstrap-stylesheet">
     <link href="{{asset('admin/css/icons.min.css')}}" rel="stylesheet" type="text/css">
@@ -233,7 +233,10 @@
                                 <span> Doanh thu </span>
                             </a>
                             <ul class="nav-second-level" aria-expanded="false">
-                                <li><a href="{{route('listRevenue')}}">Doanh thu</a></li>
+
+                                <li><a href="{{route('package.index')}}">Doanh thu</a></li>
+
+                             
                             </ul>
                         </li>
                         <li>
@@ -250,11 +253,11 @@
                         </li>
                         <li>
                             <a href="javascript: void(0);">
-                                <i class="mdi mdi-contact-mail"></i>
+                                <i class="mdi mdi-reflect-vertical"></i>
                                 <span>Liên hệ</span>
                             </a>
                             <ul class="nav-second-level" aria-expanded="false">
-                                <li><a href="{{ route('contact.admin') }}">Xem thông tin liên hệ </a></li>
+                                <li><a href="{{route('contact.admin')}}">Xem thông tin liên hệ</a></li>
                             </ul>
                         </li>
                         <li>

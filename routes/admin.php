@@ -41,7 +41,7 @@ Route::middleware(['auth'])->group(function () {
             ->name('permission.update');
         Route::get('/xoachucnang/{id}', 'Users\PermissionController@destroy')
             ->name('permission.destroy');
-         //user
+        //user
         Route::get('xemtaikhoan', 'Users\UserController@index')
             ->name('user.index')
             ->middleware(['permission:xem tài khoản']);
@@ -331,6 +331,5 @@ Route::middleware(['auth'])->group(function () {
         //-quan lý danh sách của khách đăng kí form
         Route::get('/danh-sach-dang-ki', 'Admin\AdminController@listForm')->name('listForm');
         Route::get('/xoa-danh-sach-dang-ki/{id}', 'Admin\AdminController@deleteListForm')->name('listForm.delete');
-        Route::get('/status/{id}', 'Admin\AdminController@statusForm')->name('statusForm');
     });
 });

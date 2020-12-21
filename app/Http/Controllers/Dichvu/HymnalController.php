@@ -12,24 +12,27 @@ use Yajra\DataTables\Facades\DataTables;
 
 class HymnalController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        $hymnal = Hymnal::all();
-        return view('admin.hymnal.index', compact('hymnal'));
+        $hymnal = Hymnal::paginate(5);
+        if ($request->ajax()) {
+            return view('admin.hymnal.index', compact('hymnal'));
+        }
+        return view('admin.hymnal.pagination', compact('hymnal'));
     }
+
 
     public function search(Request $request)
     {
-        if($request->ajax()){
+        if ($request->ajax()) {
             $output = '';
             $hymnal = DB::table('hymnals')
-                ->orWhere('code', 'like', '%'.$request->search.'%')
-                ->orWhere('name', 'like', '%'.$request->search.'%')
-                ->orderBy('id','desc')
+                ->orWhere('code', 'like', '%' . $request->search . '%')
+                ->orWhere('name', 'like', '%' . $request->search . '%')
+                ->orderBy('id', 'desc')
                 ->get();
-            if($hymnal){
-                foreach($hymnal as $key => $hymnals)
-                {
+            if ($hymnal) {
+                foreach ($hymnal as $key => $hymnals) {
 
                     $output .= '
                                                        <tr>

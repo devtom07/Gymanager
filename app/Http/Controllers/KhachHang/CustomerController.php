@@ -15,26 +15,28 @@ use App\Http\Controllers\Controller;
 
 class CustomerController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
         $date = new \DateTime();
-        $customers = Service::all();
-        return view('admin.customer.index', compact('customers', 'date'));
+        $customers = Service::paginate(5);
+        if ($request->ajax()) {
+            return view('admin.customer.index', compact('customers'));
+        }
+        return view('admin.customer.pagination', compact('customers', 'date'));
     }
-
     public function add()
     {
         $data_packages = Package::all();
         $data = Customer::all();
-        return view('admin.customer.add', compact( 'data_packages', 'data'));
+        return view('admin.customer.add', compact('data_packages', 'data'));
     }
 
     public function edit($id)
     {
         $data_packages = Package::all();
         $customer = Service::where('id_customer', $id)->get();
-        $customer_1 =Customer::all();
-        return view('admin.customer.edit', compact('customer','data_packages','customer_1'));
+        $customer_1 = Customer::all();
+        return view('admin.customer.edit', compact('customer', 'data_packages', 'customer_1'));
     }
 
     public function store(ValidateFormAddCustomer $request)
@@ -42,7 +44,7 @@ class CustomerController extends Controller
         $code = substr(md5(microtime()), rand(0, 26), 5);
         $customer = new Customer();
         DB::beginTransaction();
-        $customer ->fill([
+        $customer->fill([
             'code' => $code,
             'name' => $request->name_customer,
             'phone' => $request->phone,
@@ -77,7 +79,7 @@ class CustomerController extends Controller
         $code = substr(md5(microtime()), rand(0, 26), 5);
         $customer = new Customer();
         DB::beginTransaction();
-        $customer::where('id',$id)->update([
+        $customer::where('id', $id)->update([
             'code' => $code,
             'name' => $request->name_customer,
             'phone' => $request->phone,
@@ -100,7 +102,7 @@ class CustomerController extends Controller
         $arr['total_package'] = $request->total_package;
         $arr['customers_pay'] = $request->customers_pay;
         $arr['pay_method'] = $request->pay_method;
-        $service::where('id_customer',$id)->update($arr);
+        $service::where('id_customer', $id)->update($arr);
         DB::commit();
         Alert()->success('Thành công', 'Cập nhật khách hàng thành công');
         return redirect()->route('customer.index');
@@ -108,8 +110,8 @@ class CustomerController extends Controller
 
     public function destroy($id)
     {
-        Service::where('id_customer',$id)->delete();
-        Customer::where('id',$id)->delete();
+        Service::where('id_customer', $id)->delete();
+        Customer::where('id', $id)->delete();
         Alert()->success('Thành công', 'thêm khách hàng thành công');
         return redirect()->route('customer.index');
     }
@@ -118,6 +120,5 @@ class CustomerController extends Controller
     {
         $customer = Customer::where('id', $id)->get();
         return json_encode(array('data' => $customer));
-
     }
 }

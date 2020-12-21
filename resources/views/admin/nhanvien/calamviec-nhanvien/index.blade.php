@@ -104,6 +104,7 @@
                                        <tr>
                                           <th data-org-colspan="1" data-columns="tech-companies-1-col-0"><span class="co-name">
 
+
                                             
                                           {{ $work_staff->workSift->name }}-({{ $work_staff->workSift->hour_start }}-{{ $work_staff->workSift->hour_end }})
                                           </span></th>
@@ -128,6 +129,7 @@
                                        @endforeach
                                     </tbody>
                                  </table>
+                                 {!! $work_sift->render() !!}
                            </div>
                         </div>
                         <!-- end .table-responsive -->

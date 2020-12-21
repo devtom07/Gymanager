@@ -13,11 +13,14 @@ use RealRashid\SweetAlert\Facades\Alert;
 
 class ProductController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        $listProducts = Product::with('category')->get();
+        $listProducts = Product::paginate(5);
         $listCategory = Category::all();
-        return view('admin.san-pham.list-san-pham.index', ['listProducts' => $listProducts, 'listCategory' => $listCategory]);
+        if ($request->ajax()) {
+            return view('admin.san-pham.list-san-pham.index', ['listProducts' => $listProducts, 'listCategory' => $listCategory]);
+        }
+        return view('admin.san-pham.list-san-pham.pagination', compact('listProducts'));
     }
     public function create()
     {

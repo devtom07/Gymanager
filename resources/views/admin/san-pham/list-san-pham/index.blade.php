@@ -126,6 +126,7 @@
                                                 @endforeach
                                             </tbody>
                                         </table>
+                                        {!! $listProducts->render() !!}
                                     </div>
                                 </div>
                                 <!-- end .table-responsive -->

@@ -14,7 +14,7 @@
             <div class="col-12">
                <div class="page-title-box">
 
-                  <h4 class="page-title">anh sách khách hàng đăng kí</h4>
+                  <h4 class="page-title">Danh sách khách hàng đăng kí</h4>
                </div>
             </div>
          </div>
@@ -26,10 +26,10 @@
                      <div class="table-rep-plugin">
                         <div class="table-wrapper">
                         <div class="btn-toolbar">
-                              <div id="datatable_filter" class="dataTables_filter" ><label>Search:<input type="search" class="form-control form-control-sm" placeholder="" aria-controls="datatable"></label></div>
-                            
-                           </div>
                            <div class="table-responsive fixed-solution" data-pattern="priority-columns">
+                              <div class="btn-group focus-btn-group">
+                                 <div id="datatable_filter" class="dataTables_filter" ><label><input id="myInput" type="text" placeholder="Tìm kiếm ..." class="form-control form-control-sm" placeholder="" aria-controls="datatable"></label></div>
+                             </div>
                               <div class="sticky-table-header" style="height: 49px; visibility: hidden; width: auto; top: -1px;">
                                  {{-- <table id="tech-companies-1-clone" class="table table-striped">
                                     <thead>
@@ -82,7 +82,7 @@
                                           <th data-priority="6" id="tech-companies-1-col-8-clone">Action</th>
                                        </tr>
                                     </thead>
-                                    <tbody>
+                                    <tbody id='myTable'>
                                       @foreach($list as $key=> $list)
                                        <tr>
                                           <th data-org-colspan="1" data-columns="tech-companies-1-col-0"><span class="co-name">
@@ -109,7 +109,6 @@
                                                 @else
                                             <input class="btn btn-success" type="submit" value="Chưa xử lý">
                                                 @endif
-
 
                                           </td>
                                           <td data-org-colspan="1" data-priority="6" data-columns="tech-companies-1-col-8">
