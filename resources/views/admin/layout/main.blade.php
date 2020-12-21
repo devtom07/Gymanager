@@ -9,13 +9,13 @@
     <meta content="Coderthemes" name="author" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <!-- App favicon -->
-    <link rel="shortcut icon" href="{{url('admin')}}/images/logogym.gif">
+    <link rel="shortcut icon" href="{{url('admin')}}\images\logogym.gif">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
     <!-- App css -->
     <link href="{{asset('admin/libs/dropify/dropify.min.css')}}" rel="stylesheet" type="text/css" />
 
     <!-- App favicon -->
-    <link rel="shortcut icon" href="{{asset('admin\images\logogym.gif')}}">
+    <link rel="shortcut icon" href="{{asset('admin/images/logogym.gif')}}">
     <!-- App css -->
     <link href="{{asset('admin/css/bootstrap.min.css')}}" rel="stylesheet" type="text/css" id="bootstrap-stylesheet">
     <link href="{{asset('admin/css/icons.min.css')}}" rel="stylesheet" type="text/css">
