@@ -135,7 +135,7 @@ class PtProgramController extends Controller
 //            }
 //        }
 //        $customer_pt = PtProgram::has('customer')->where('pt_id', $id_pt)->count();
-        return view('admin.pt_program.pt', compact('pt', 'customer_pt'));
+        return view('admin.pt_program.pt', compact('pt'));
     }
 
 }

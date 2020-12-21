@@ -30,6 +30,7 @@ class DatabaseSeeder extends Seeder
             ContactSeeder::class,
             NewMemberSeeder::class,
             ProductSeeder::class,
+            CatePostSeeder::class,
         ]);
     }
 }
