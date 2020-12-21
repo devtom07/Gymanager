@@ -177,6 +177,7 @@ return [
         RealRashid\SweetAlert\SweetAlertServiceProvider::class,
         Spatie\Permission\PermissionServiceProvider::class,
         //  Bumbummen99\Shoppingcart\ShoppingcartServiceProvider::class, 
+        Yajra\Datatables\DatatablesServiceProvider::class,
 
     ],
 
@@ -230,6 +231,8 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
         'Alert' => RealRashid\SweetAlert\Facades\Alert::class,
         // 'Cart' => Bumbummen99\Shoppingcart\Facades\Cart::class,
+        'Datatables' => Yajra\Datatables\Facades\Datatables::class,
+        Tightenco\Ziggy\ZiggyServiceProvider::class
 
     ],
 

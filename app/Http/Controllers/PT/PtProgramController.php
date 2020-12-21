@@ -12,6 +12,7 @@ use App\Models\Position;
 use App\Models\PtProgram;
 use App\Models\Services;
 use App\Models\Staff;
+use App\Models\TeachingSchedule;
 use Illuminate\Http\Request;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\DB;
@@ -37,8 +38,10 @@ class PtProgramController extends Controller
         $Sunday = $Saturday->copy()->endOfWeek();
         $hymnal = Hymnal::all();
         $ptProgram = PtProgram::where('start_date', '<', $monday)->orWhere('end_date', '<', $Sunday)->get();
+        $teachingSchedule1 = TeachingSchedule::get();
+        $teachingSchedule = collect($teachingSchedule1)->sortBy('date')->values();
         return view('admin.pt_program.training',
-            compact('ptProgram', 'wednesday', 'monday', 'tuesday', 'Thursday', 'Friday', 'Saturday', 'Sunday', 'hymnal', 'ptProgram'));
+            compact('ptProgram', 'wednesday', 'monday', 'tuesday', 'Thursday', 'Friday', 'Saturday', 'Sunday', 'hymnal', 'ptProgram','teachingSchedule'));
     }
 
     public function add()

@@ -41,7 +41,7 @@ Route::middleware(['auth'])->group(function () {
             ->name('permission.update');
         Route::get('/xoachucnang/{id}', 'Users\PermissionController@destroy')
             ->name('permission.destroy');
-
+         //user
         Route::get('xemtaikhoan', 'Users\UserController@index')
             ->name('user.index')
             ->middleware(['permission:xem tài khoản']);
@@ -74,7 +74,8 @@ Route::middleware(['auth'])->group(function () {
             ->name('user.updateProfile');
         Route::post('profile/update/password/{id}', 'Users\UserController@updatePassword')
             ->name('user.updatePassword');
-
+        Route::get('user/search/', 'Users\UserController@search')
+            ->name('user.search');
         //=========================Nhân viên==================//
         //nhân viên
         Route::get('/nhan-vien', 'Nhanvien\ListnhanvienController@index')
@@ -168,6 +169,8 @@ Route::middleware(['auth'])->group(function () {
         //ca tap
         Route::get('catap', 'Dichvu\HymnalController@index')
             ->name('hymnal.index');
+        Route::get('catap/getdata', 'Dichvu\HymnalController@getdata')
+            ->name('hymnal.getdata');
         Route::get('themcatap', 'Dichvu\HymnalController@add')
             ->name('hymnal.add');
         Route::get('suacatap/{id}', 'Dichvu\HymnalController@edit')
@@ -282,7 +285,6 @@ Route::middleware(['auth'])->group(function () {
         //liên hệ
         Route::get('/lien-he-admin', 'Admin\AdminController@contact')->name('contact.admin');
         Route::get('/xóa-lien-he/{id}', 'Admin\AdminController@deleteContact')->name('contact.delete');
-
         //-quan lý danh sách của khách đăng kí form
         Route::get('/danh-sach-dang-ki', 'Admin\AdminController@listForm')->name('listForm');
         Route::get('/xoa-danh-sach-dang-ki/{id}', 'Admin\AdminController@deleteListForm')->name('listForm.delete');

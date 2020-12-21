@@ -20,7 +20,10 @@
     <link href="{{asset('admin/css/icons.min.css')}}" rel="stylesheet" type="text/css">
     <link href="{{asset('admin/css/app.min.css')}}" rel="stylesheet" type="text/css" id="app-stylesheet">
     <link href="{{asset('admin/css/style.css')}}" rel="stylesheet" type="text/css" id="app-stylesheet">
-
+     {{--     datatable--}}
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.7/css/jquery.dataTables.min.css">
+    {{--     enđatable--}}
     <link href="{{asset('admin/css/bootstrap.min.css')}}" rel="stylesheet" type="text/css" id="bootstrap-stylesheet">
     <link href="{{asset('admin/css/icons.min.css')}}" rel="stylesheet" type="text/css">
     <link href="{{asset('admin/css/app.min.css')}}" rel="stylesheet" type="text/css" id="app-stylesheet">
@@ -184,7 +187,7 @@
                             </a>
                             <ul class="nav-second-level" aria-expanded="false">
                                 <li><a href="{{route('customer')}}">Danh sách khách hàng</a></li>
-                                <li><a href="{{ route('package.index') }}">Lịch tập</a></li>
+                                <li><a href="{{ route('customer.add') }}">Đăng kí</a></li>
                             </ul>
                         </li>
                         <li>
@@ -391,6 +394,7 @@
 
 <!-- Right bar overlay-->
 <div class="rightbar-overlay"></div>
+
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
         crossorigin="anonymous">
@@ -400,7 +404,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
 <!-- Vendor js -->
-<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 <script src="{{asset('admin/js/vendor.min.js')}}"></script>
 
 <!--Morris Chart-->
@@ -440,7 +443,11 @@
 <script src="{{asset('admin/js/ptprogram/addptProgram.js')}}"></script>
 <script scr="{{asset('admin/js/package/package.js')}}"></script>
 <script src="{{ asset('admin/js/ajax/ajax.js') }}"></script>
+<script src="{{ asset('admin/js/user/SearchAccount.js') }}"></script>
 <script src="{{ asset('ckeditor4/ckeditor.js') }}"></script>
+{{-- datatable--}}
+<!-- Bootstrap JavaScript -->
+<!-- App scripts -->
 <script> CKEDITOR.replace('editor1'); </script>
 <script> CKEDITOR.replace('editor2'); </script>
 

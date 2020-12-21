@@ -8,11 +8,17 @@ use App\Http\Requests\ValidateFormHymnalupdate;
 use App\Models\Hymnal;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Yajra\DataTables\Facades\DataTables;
+
 class HymnalController extends Controller
 {
     public function index(){
           $hymnal = Hymnal::all();
          return view('admin.hymnal.index',compact('hymnal'));
+    }
+    public function getData()
+    {
+        return DataTables::of(Hymnal::query())->make(true);
     }
     public function  add(){
         return view('admin.hymnal.add');
