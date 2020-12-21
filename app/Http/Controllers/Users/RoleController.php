@@ -38,7 +38,7 @@ class RoleController extends Controller
         $permission = $request->permission;
         $role->givePermissionTo([$permission]);
         DB::commit();
-        Alert()->success('Thành công','Thêm chức vụ thành công');
+        Alert()->success('Thành công','Thêm phân quyền thành công');
         return redirect()->route('role');
     }
     public function edit($id)
@@ -60,7 +60,7 @@ class RoleController extends Controller
         $permission = $request->permission;
         $roles->syncPermissions([$permission]);
         DB::commit();
-        Alert()->success('Thành công','Cập nhật chức vụ thành công');
+        Alert()->success('Thành công','Cập nhật phân quyền thành công');
         return redirect()->route('role');
     }
     public function destroy($id)
