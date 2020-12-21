@@ -112,7 +112,7 @@ class CustomerController extends Controller
     {
         Service::where('id_customer', $id)->delete();
         Customer::where('id', $id)->delete();
-        Alert()->success('Thành công', 'thêm khách hàng thành công');
+        Alert()->success('Thành công', 'Xóa khách hàng thành công');
         return redirect()->route('customer.index');
     }
 

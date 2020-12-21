@@ -57,10 +57,8 @@
                                 <span>Giới thiệu về gym</span>
                                 <h2>GIẢI PHÁP PHÙ HỢP XÂY DỰNG CƠ THỂ AN TOÀN GIÚP TIẾT KIỆM THỜI GIAN QUÝ GIÁ CỦA CHÚNG TA</h2>
                             </div>
-                            <p class="pera-top">Brook giới thiệu các dịch vụ của bạn với bố cục linh hoạt, tiện lợi và đa năng. Bạn có thể chọn bố cục và yếu tố yêu thích của mình cho ts cular với khả năng tùy chỉnh không giới hạn. Dự định sao chép hoàn hảo pixel của các nhà thiết kế./p>
-                            <p class="mb-65 pera-bottom">Brook trình bày các dịch vụ của bạn với bố cục đa dụng linh hoạt, thông thoáng và sang trọng. Bạn có thể chọn bố cục yêu thích của mình.
-
-</p>
+                            <p class="pera-top">Giới thiệu các dịch vụ của bạn với bố cục linh hoạt, tiện lợi và đa năng. Bạn có thể chọn bố cục và yếu tố yêu thích của mình cho ts cular với khả năng tùy chỉnh không giới hạn. Dự định sao chép hoàn hảo pixel của các nhà thiết kế.</p>
+                            <p class="mb-65 pera-bottom">Trình bày các dịch vụ của bạn với bố cục đa dụng linh hoạt, thông thoáng và sang trọng. Bạn có thể chọn bố cục yêu thích của mình.</p>
                             <a href="from.html" class="btn">Trở thành viên của chúng tôi</a>
                         </div>
                     </div>
@@ -260,7 +258,7 @@
                                 </div>
                                 <div class="blog-cap">
                                     <span>tạo bởi Tuấn Anh</span>
-                                    <h3><a href="blog_details.html">Quá trinhg tập gym </a></h3>
+                                    <h3><a href="blog_details.html">Quá trình tập gym </a></h3>
                                 </div>
                             </div>
                         </div>
@@ -273,12 +271,12 @@
                                     <!-- Blog date -->
                                     <div class="blog-date text-center">
                                         <span>24</span>
-                                        <p>bay giờ</p>
+                                        <p>Bay giờ</p>
                                     </div>
                                 </div>
                                 <div class="blog-cap">
                                     <span>Được tạo bởi Phan tuấn anh</span>
-                                    <h3><a href="blog_details.html">Tập gum hàng ngày tăng cường vóc dáng</a></h3>
+                                    <h3><a href="blog_details.html">Tập gym hàng ngày tăng cường vóc dáng</a></h3>
                                 </div>
                             </div>
                         </div>

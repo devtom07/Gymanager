@@ -12,9 +12,7 @@
 
 
                   <h4 class="page-title">Tài khoản khách hàng</h4>
-                  @if(session('thongbao'))
-                        <div class="alert-success alert">{{ session('thongbao') }}</div>
-                  @endif
+                 
                </div>
             </div>
          </div>
