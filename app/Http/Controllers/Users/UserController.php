@@ -6,7 +6,8 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\ValidateFormaddUser;
 use App\Http\Requests\ValidateFormProfile;
 use App\Http\Requests\ValidateFormProfilePassword;
-use App\Http\Requests\ValidateFormUpdateUser;
+use App\Http\Requests\User\ValidateFormUpdateUser;
+use App\Http\Requests\ValidateFormUpdateUser as RequestsValidateFormUpdateUser;
 use App\Models\Staff;
 use App\User;
 use Illuminate\Http\Request;
@@ -100,11 +101,10 @@ class UserController extends Controller
             $role_id[] = $roles->id;
         }
         return view('admin.users.account.edit', compact('user', 'role_user', 'role_id', 'listRoleUser', 'staff'));
-
     }
 
 
-    public function update(ValidateFormUpdateUser $request, $id)
+    public function update(RequestsValidateFormUpdateUser $request, $id)
     {
         $get_image = $request->file('avatar');
         $password = $request->password;
@@ -128,7 +128,6 @@ class UserController extends Controller
                 DB::commit();
                 Alert()->success('Thành công', 'Bạn đã cập nhật thàn công');
                 return redirect()->route('user.index');
-
             } else {
                 User::find($id)->update([
                     'name' => $request->name,
@@ -162,7 +161,6 @@ class UserController extends Controller
                 DB::commit();
                 Alert()->success('Thành công', 'Bạn đã cập nhật thàn công');
                 return redirect()->route('user.index');
-
             } else {
                 User::find($id)->update([
                     'name' => $request->name,
@@ -177,7 +175,6 @@ class UserController extends Controller
                 return redirect()->route('user.index');
             }
         }
-
     }
 
     public function destroy($id)
@@ -210,7 +207,6 @@ class UserController extends Controller
         DB::table('users')->where('id', $user->id)->update($data);
         Alert()->success('Thành công', 'Cập nhật ảnh thành công');
         return redirect()->route('user.show', $id);
-
     }
 
     public function profile($id)
@@ -258,22 +254,16 @@ class UserController extends Controller
         Alert()->success('Thành công', 'Bạn đã cập nhật mật khẩu thành công');
         return redirect()->route('user.profile', $id);
     }
-    public function search(Request $request){
-    if($request->ajax()){
-    $output = '';
-        $user = User::with('staff')->orderBy('id', 'desc')->get();
-    if ($user){
-   foreach ($user as $key => $users){
-       $output.='';
-
-
-   }
-
-    }
-
-
-    }
-
-
+    public function search(Request $request)
+    {
+        if ($request->ajax()) {
+            $output = '';
+            $user = User::with('staff')->orderBy('id', 'desc')->get();
+            if ($user) {
+                foreach ($user as $key => $users) {
+                    $output .= '';
+                }
+            }
+        }
     }
 }

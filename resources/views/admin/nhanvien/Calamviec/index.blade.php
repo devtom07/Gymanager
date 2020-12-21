@@ -216,8 +216,7 @@
                                                         {{$listwork->hour_end}}</td>
                                                     <td data-org-colspan="1" data-priority="3"
                                                         data-columns="tech-companies-1-col-4"><button type="button"
-                                                            class="btn btn-success btn-rounded waves-effect waves-light">Còn
-                                                            hiệu lực</button></td>
+                                                            class="btn btn-success btn-rounded waves-effect waves-light">{{$listwork->status}}</button></td>
                                                     <td data-org-colspan="1" data-priority="6"
                                                         data-columns="tech-companies-1-col-8">
                                                         <div class="btn-group mt-1 mr-1">
