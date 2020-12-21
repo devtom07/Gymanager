@@ -107,7 +107,7 @@
                                             @foreach(
                                             json_decode($work_staff->work_sift_id)  as $item)
                                             <li>{{$item->name }}</li>
-                                             @endforeach
+                                              @endforeach
                                              @endif
                                           {{-- {{ $work_staff->workSift->name }} --}}
                                           </span></th>
