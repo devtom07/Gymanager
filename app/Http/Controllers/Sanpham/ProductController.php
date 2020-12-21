@@ -35,7 +35,6 @@ class ProductController extends Controller
         $products->name = $request->name;
         $products->cate_id = $request->cate_id;
         $products->price = $request->price;
-        $products->sale_price = $request->sale_price;
         $products->quantity = $request->quantity;
         $products->detail = $request->detail;
         $products['avatar'] = $new_image;
@@ -69,7 +68,6 @@ class ProductController extends Controller
             $arr['name'] = $request->name;
             $arr['cate_id'] = $request->cate_id;
             $arr['price'] = $request->price;
-            $arr['sale_price'] = $request->sale_price;
             $arr['quantity'] = $request->quantity;
             $arr['detail'] = $request->detail;
             $products['avatar'] = $new_image;
@@ -137,10 +135,11 @@ class ProductController extends Controller
     //     return back();
     //     // return response()->json($count);
     // }
-    // public function UpdateCart(Request $request)
-    // {
-    //     Cart::update($request->rowId, $request->qty);
-    // }
+    public function UpdateCart(Request $request)
+    {
+        Cart::update($request->rowId, $request->qty);
+        // return back();
+    }
     // public function update_sp($id, $qty)
     // {
     //     Cart::update_sp($id, $qty);
@@ -150,18 +149,13 @@ class ProductController extends Controller
     //     ];
     //     return response()->json($data);
     // }
-    // public function getDeleteCart($id)
-    // {
-    //     if ($id == 'all') {
-    //         Cart::destroy();
-    //     } else {
-    //         Cart::remove($id);
-    //     }
-    //     return back();
-    // }
-    public function updateCart(Request $request)
+    public function DeleteCart($id)
     {
-        Cart::update($request->qty, $request->rowId);
-        // return redirect()->route('listproduct');
+        if ($id == 'all') {
+            Cart::destroy();
+        } else {
+            Cart::remove($id);
+        }
+        return back();
     }
 }
