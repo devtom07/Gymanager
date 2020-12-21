@@ -9,6 +9,7 @@ use App\Http\Requests\ValidateAddStaff;
 use App\Http\Requests\ValidateEditStaff;
 use App\Models\Staff;
 use App\Models\Position;
+use Illuminate\Support\Facades\Auth;
 use RealRashid\SweetAlert\Facades\Alert;
 
 class ListnhanvienController extends Controller
@@ -104,9 +105,16 @@ class ListnhanvienController extends Controller
     }
     public function destroy($id)
     {
-        User::where('staff_id', $id)->delete();
-        Staff::where('id', $id)->delete();
-        Alert()->success('Thành công', 'Xóa nhân viên thành công');
-        return back();
+        $user_id = Auth::user()->id;
+        if($user_id == $id){
+            Alert()->error('Không thể xóa', 'Hiện tại tài khoản đang được đăng nhập');
+            return back();
+        }else{
+            User::where('staff_id', $id)->delete();
+            Staff::where('id', $id)->delete();
+            Alert()->success('Thành công', 'Xóa nhân viên thành công');
+            return back();
+        }
+
     }
 }

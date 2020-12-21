@@ -31,7 +31,7 @@ class ValidateFormAddCustomer extends FormRequest
             'note' => 'required|min:5',
             'address' => 'required|min:5',
             'contract_code' => 'required|min:5',
-            'identity_card' => 'required|min:12',
+            'identity_card' => 'required|min:9',
             'level' => 'required',
             'name' => 'required:name',
             'id_package' => 'required:id_package',
