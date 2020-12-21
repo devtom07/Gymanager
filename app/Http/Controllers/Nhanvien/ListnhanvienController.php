@@ -48,7 +48,7 @@ class ListnhanvienController extends Controller
         $staffs->id_position = $request->position;
         $staffs['avatar'] = $new_image;
         $staffs->save();
-        Alert()->success('thành công', 'bạn đã thêm nhân viên thành công');
+        Alert()->success('Thành công', 'Bạn đã thêm thàn công');
         return redirect()->route('listnhanvien');
     }
 
