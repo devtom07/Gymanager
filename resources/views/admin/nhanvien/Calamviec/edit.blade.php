@@ -70,16 +70,14 @@
                                     @enderror
                                     <div class="form-group">
                                         <label>Trạng thái</label>
-                                        <div class="mt-4">
-                                            <div class="radio radio-info form-check-inline">
-                                                <input type="radio" id="inlineRadio1" value="Còn hiệu lực" name="status" checked>
-                                                <label for="inlineRadio1">Còn hiệu lực</label>
-                                            </div>
-                                            <div class="radio form-check-inline">
-                                                <input type="radio" id="inlineRadio2" value="Hết hạn" name="status">
-                                                <label for="inlineRadio2"> Hết hạn</label>
-                                            </div>
-                                        </div>
+                                        <select class="form-control" id="exampleSelect1" name="status">
+                                            <option value="Hoạt động" {{ $work_sift->status == 'Hoạt động' ? 'selected' : ''}}>
+                                                Hoạt động
+                                            </option>
+                                            <option value="Không hoạt động" {{ $work_sift->status == 'Không hoạt động' ? 'selected' : ''}}>
+                                                Không hoạt động
+                                            </option>
+                                        </select>
                                     </div>
                                     <button type="submit" class="btn btn-primary">Submit</button>
                                     {{csrf_field()}}
