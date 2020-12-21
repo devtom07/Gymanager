@@ -120,24 +120,5 @@ class CustomerAccountController extends Controller
         return redirect()->back()->with('thongbao','Xóa thành công');
     }
 
-    public function search(Request $request){
-        if ($request->ajax()) {
-            $output='';
-            $customer_account = CustomerAccount::where('name','LIKE','%' . $request->searchAcc .'%')
-                                // ->orWhere('email','LIKE','%' . $request->search .'%')
-                                ->get();
-            if ($customer_account) {
-                foreach ($customer_account as $key => $cutomer_accounts) {
-                        $output .='<tr>
-                            <td>'. $key + 1 . '</td>
-                            <td>'. $customer_accounts->name . '</td>
-                            <td>'. $customer_accounts->email . '</td>
-                            <td>'. $customer_accounts->status . '</td>
-
-                        </tr>';
-                    }    
-            }
-            return Response($output);
-        }
-    }
+   
 }

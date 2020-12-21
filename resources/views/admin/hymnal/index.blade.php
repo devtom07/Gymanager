@@ -2,6 +2,16 @@
 @extends('admin.layout.main')
 @section('title', 'Danh sách ca tập')
 @section('content')
+<script>
+    $(document).ready(function(){
+      $("#myInput").on("keyup", function() {
+        var value = $(this).val().toLowerCase();
+        $("#myTable tr").filter(function() {
+          $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+        });
+      });
+    });
+    </script>
     <div class="content-page">
         <div class="content">
             <!-- Start Content-->
@@ -29,6 +39,7 @@
                                             <div class="dataTables_length" id="datatable_length">
                                             </div>
                                             <div id="datatable_filter" class="dataTables_filter" ><label>Search:<input name="search" id="searchHymnal" type="search" class="form-control form-control-sm" placeholder="" aria-controls="datatable" ></label></div>
+
                                         </div>
                                         <div class="table-responsive fixed-solution" data-pattern="priority-columns">
                                             <table id="tech-companies-1-clone" class="table table-striped">
@@ -43,6 +54,7 @@
                                                 </tr>
                                                 </thead>
                                                 <tbody id="listHymnal">
+
                                                 @foreach($hymnal as $key => $hymnals)
                                                     <tr>
                                                         <td data-org-colspan="1" data-priority="1" data-columns="tech-companies-1-col-1">{{$hymnals->code}}</td>

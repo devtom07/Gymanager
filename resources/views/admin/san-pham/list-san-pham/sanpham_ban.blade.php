@@ -36,6 +36,7 @@
                                         <th scope="col" class="text-right">Action</th>
                                     </tr>
                                 </thead>
+                                <form   action="{{route('revenue.store')}}" method="post" enctype="multipart/form-data">
                                 <tbody>
                                     @foreach($cartContent as $key => $item)
                                     <tr>
@@ -72,13 +73,13 @@
                     @endif
                     <div class="col mb-2">
                         <div class="row">
-                            <div class="col-sm-12  col-md-6">
-                                <button class="btn btn-block btn-light">Continue Shopping</button>
-                            </div>
                             <div class="col-sm-12 col-md-6 text-right">
-                                <button class="btn btn-lg btn-block btn-success text-uppercase">Checkout</button>
+                                <button class="btn btn-lg btn-block btn-success text-uppercase" type="submit">Checkout</button>
                             </div>
                         </div>
+                        {{csrf_field()}}
+                    </form>
+
                     </div>
                 </div>
             </div>
