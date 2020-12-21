@@ -122,7 +122,6 @@ class PtProgramController extends Controller
     public function destroy($id)
     {
         DB::beginTransaction();
-        DB::table('ptprogram_trainings')->where('id_ptprogram', $id)->delete();
         PtProgram::find($id)->delete();
         DB::commit();
         Alert()->success('Thành công', 'Bạn đã cập nhật thành công');

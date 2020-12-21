@@ -37,48 +37,48 @@
 
                         <div class="row">
                             <div class="col-md-6 col-xl-3">
-                                <div class="card-box tilebox-one">
-                                    <i class="mdi mdi-account"></i>
-                                    <h6 class="text-muted text-uppercase mt-0">Tài khoản</h6>
-                                    <h3 class="my-3" >{{$countAccount}}</h3>
+                                <div class="card-box tilebox-one bg-success">
+                                    <i class="mdi mdi-account text-white"></i>
+                                    <h6 class="text-uppercase mt-0 text-white">Tài khoản</h6>
+                                    <h3 class="my-3 text-white" >{{$countAccount}}</h3>
                                 </div>
                             </div>
 
                             <div class="col-md-6 col-xl-3">
-                                <div class="card-box tilebox-one">
-                                    <i class="mdi mdi-book"></i>
-                                    <h6 class="text-muted text-uppercase mt-0">Nhân viên</h6>
-                                    <h3 class="my-3">{{$countStaff}}</h3>
+                                <div class="card-box tilebox-one bg-info">
+                                    <i class="mdi mdi-book text-white"></i>
+                                    <h6 class=" text-uppercase mt-0 text-white">Nhân viên</h6>
+                                    <h3 class="my-3 text-white">{{$countStaff}}</h3>
                                 </div>
                             </div>
 
                             <div class="col-md-6 col-xl-3">
-                                <div class="card-box tilebox-one">
-                                    <i class="mdi mdi-account"></i>
-                                    <h6 class="text-muted text-uppercase mt-0">Khách hàng</h6>
-                                    <h3 class="my-3">{{$countCustomer}}</h3>
+                                <div class="card-box tilebox-one bg-warning">
+                                    <i class="mdi mdi-account text-white"></i>
+                                    <h6 class=" text-uppercase mt-0 text-white">Khách hàng</h6>
+                                    <h3 class="my-3 text-white">{{$countCustomer}}</h3>
                                 </div>
                             </div>
 
                             <div class="col-md-6 col-xl-3">
-                                <div class="card-box tilebox-one">
-                                    <i class="mdi mdi-view-dashboard"></i>
-                                    <h6 class="text-muted text-uppercase mt-0">Dịch vụ</h6>
-                                    <h3 class="my-3" >{{$countService}}</h3>
+                                <div class="card-box tilebox-one bg-danger">
+                                    <i class="mdi mdi-view-dashboard text-white"></i>
+                                    <h6 class=" text-uppercase mt-0 text-white">Dịch vụ</h6>
+                                    <h3 class="my-3 text-white" >{{$countService}}</h3>
                                 </div>
                             </div>
                             <div class="col-md-6 col-xl-3">
-                                <div class="card-box tilebox-one">
-                                    <i class="mdi mdi-star"></i>
-                                    <h6 class="text-muted text-uppercase mt-0">Sản phẩm</h6>
-                                    <h3 class="my-3" >{{$countProduct}}</h3>
+                                <div class="card-box tilebox-one bg-secondary">
+                                    <i class="mdi mdi-star text-white"></i>
+                                    <h6 class=" text-uppercase mt-0 text-white">Sản phẩm</h6>
+                                    <h3 class="my-3 text-white" >{{$countProduct}}</h3>
                                 </div>
                             </div>
                             <div class="col-md-6 col-xl-3">
-                                <div class="card-box tilebox-one">
-                                    <i class="mdi mdi-bread-slice"></i>
-                                    <h6 class="text-muted text-uppercase mt-0">Bài viết</h6>
-                                    <h3 class="my-3" >{{$blog}}</h3>
+                                <div class="card-box tilebox-one bg-dark">
+                                    <i class="mdi mdi-bread-slice text-white"></i>
+                                    <h6 class=" text-uppercase mt-0 text-white">Bài viết</h6>
+                                    <h3 class="my-3 text-white" >{{$blog}}</h3>
                                 </div>
                             </div>
                         </div>
@@ -88,13 +88,13 @@
                     <div class="container">
                         <h2 class="text-success">MENU</h2>
                         <div class="button-list">
-                            <a href="{{route('user.index')}}" type="button" class="btn btn-warning waves-effect waves-light width-lg">Tài khoản</a>
-                            <a href="{{route('listnhanvien')}}" type="button" class="btn btn-warning waves-effect waves-light width-lg">Nhân viên</a>
-                            <a href="{{route('customer.index')}}" type="button" class="btn btn-warning waves-effect waves-light width-lg">Khách hàng</a>
-                            <a href="{{route('service')}}" type="button" class="btn btn-warning waves-effect waves-light width-lg">Dịch vụ</a>
-                            <a href="{{route('ptProgram.index')}}" type="button" class="btn btn-warning waves-effect waves-light width-lg">Chương trình PT</a>
-                            <a href="{{route('listproduct')}}" type="button" class="btn btn-warning waves-effect waves-light width-lg">Quản lý sản phẩm</a>
-                            <a href="{{route('listRevenue')}}" type="button" class="btn btn-warning waves-effect waves-light width-lg">Doanh thu</a>
+                            <a href="{{route('user.index')}}" type="button" class="btn btn-warning waves-effect waves-light width-lg text-white">Tài khoản</a>
+                            <a href="{{route('listnhanvien')}}" type="button" class="btn btn-warning waves-effect waves-light width-lg text-white">Nhân viên</a>
+                            <a href="{{route('customer.index')}}" type="button" class="btn btn-warning waves-effect waves-light width-lg text-white">Khách hàng</a>
+                            <a href="{{route('service')}}" type="button" class="btn btn-warning waves-effect waves-light width-lg text-white">Dịch vụ</a>
+                            <a href="{{route('ptProgram.index')}}" type="button" class="btn btn-warning waves-effect waves-light width-lg text-white">Chương trình PT</a>
+                            <a href="{{route('listproduct')}}" type="button" class="btn btn-warning waves-effect waves-light width-lg text-white">Quản lý sản phẩm</a>
+                            <a href="{{route('listRevenue')}}" type="button" class="btn btn-warning waves-effect waves-light width-lg text-white">Doanh thu</a>
 
                         </div>
                     </div>

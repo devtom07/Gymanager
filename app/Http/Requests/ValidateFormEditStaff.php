@@ -24,7 +24,7 @@ class ValidateFormEditStaff extends FormRequest
     public function rules()
     {
         return [
-            'name' => 'required|unique:work_sifts,name',
+            'name' => 'required:work_sifts,name',
             'hour_start' => 'required:work_sifts,hour_start ',
             'hour_start_center' => 'required:work_sifts,hour_start_center',
             'hour_end_center' => 'required:work_sifts,hour_end_center',
@@ -36,7 +36,7 @@ class ValidateFormEditStaff extends FormRequest
     {
         return [
             'required' => ':attribute không được để trống',
-            'name.unique' => 'Ca này đã có !'
+            // 'name.unique' => 'Ca này đã có !'
 
         ];
     }
