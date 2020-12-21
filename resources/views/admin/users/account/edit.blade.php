@@ -92,11 +92,12 @@
                                         <div class="form-group">
                                             <label>Phân loại tài khoản (*)</label>
                                             <br>
-                                            <select  multiple  name="role[]" class="selected" id="exampleSelect1">
-                                                @foreach($role_user as  $roles )
-                                                    <option {{$listRoleUser->contains($roles->id) ? 'selected' : '' }} value="{{$roles->id}}">{{$roles->name}}</option>
-                                                @endforeach
-                                            </select>
+                                            @foreach($role_user as  $roles)
+                                                <div>
+                                                    <input {{$listRoleUser->contains($roles->id) ? 'checked' : '' }} name="role[]" value="{{$roles->id}}" type="checkbox" class="checkbox" >
+                                                    <label class="label" for="customCheck1">{{$roles->name}}</label>
+                                                </div>
+                                            @endforeach
                                             @if($errors->first('role'))
                                                 <p class="text-danger">{{ $errors->first('role') }}</p>
                                             @endif

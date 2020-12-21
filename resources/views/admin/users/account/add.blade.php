@@ -61,11 +61,14 @@
                         <div class="col-xl-6">
                            <div class="form-group">
                               <label>Phân loại tài khoản (*)</label>
-                              <select multiple  name="role[]" class="form-control" id="exampleSelect1">
-                                  @foreach($role as $key => $roles )
-                                 <option value="{{$roles->id}}">{{$roles->name}}</option>
-                                  @endforeach
-                              </select>
+                              <div class="mt-3">
+                                 @foreach($role as $key => $roles )
+                                 <div>
+                                    <input class="checkbox" name="role[]" value="{{$roles->id}}" type="checkbox"  >
+                                    <label class="label" for="customCheck1">{{$roles->name}}</label>
+                                 </div>
+                                 @endforeach
+                              </div>
                                @if($errors->first('role'))
                                    <p class="text-danger">{{ $errors->first('role') }}</p>
                                @endif

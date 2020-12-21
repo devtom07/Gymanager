@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Users;
 
 use App\Http\Requests\ValidateRole;
+use App\Http\Requests\UpdateRole;
 use App\Models\Permission;
 use Illuminate\Http\Request;
 use App\Models\Role;
@@ -50,7 +51,7 @@ class RoleController extends Controller
     }
 
 
-    public function update(ValidateRole $request, $id)
+    public function update(UpdateRole $request, $id)
     {
         DB::beginTransaction();
         Role::find($id)->update([

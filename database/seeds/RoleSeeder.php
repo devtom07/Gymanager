@@ -20,7 +20,7 @@ class RoleSeeder extends Seeder
             'guard_name' => 'web'
         ]);
         DB::table('roles')->insert([
-            'name' => 'pt',
+            'name' => 'PT',
             'guard_name' => 'web'
         ]);
     }

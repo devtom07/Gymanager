@@ -124,7 +124,7 @@ class PtProgramController extends Controller
         DB::beginTransaction();
         PtProgram::find($id)->delete();
         DB::commit();
-        Alert()->success('Thành công', 'Bạn đã cập nhật thành công');
+        Alert()->success('Thành công', 'Bạn đã xóa thành công');
         return redirect()->route('ptProgram.index');
     }
 
