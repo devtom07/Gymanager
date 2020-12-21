@@ -8,7 +8,7 @@ use RealRashid\SweetAlert\Facades\Alert;
 use App\Models\Contact;
 use App\Models\NewMember;
 use App\Models\Service;
-use DB;
+use Illuminate\Support\Facades\DB;
 
 class AdminController extends Controller
 {
