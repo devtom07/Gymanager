@@ -60,7 +60,7 @@ class PostsController extends Controller
              $name_image = current(explode('.',$get_name_image));
              $new_image =  $name_image . rand(0,99) . '.' .$get_image->getClientOriginalExtension();
              $get_image->move('posts',$new_image);
-             $posts = new Posts;
+             $posts = new Post;
              $arr['start_posts'] = $request->start_posts;
              $arr['detail'] = $request->detail;
              $arr['title'] = $request->title;
@@ -79,7 +79,7 @@ class PostsController extends Controller
              // dd($posts);
          }
         Alert()->success('Thành công','Cập nhật bài viết thành công');
-        return redirect()->action('Sanpham/PostsController@index');
+        return redirect()->action('Sanpham\PostsController@index');
     }
     public function destroy($id)
     {
