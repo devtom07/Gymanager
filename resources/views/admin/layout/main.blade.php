@@ -22,7 +22,6 @@
     <link href="{{asset('admin/css/app.min.css')}}" rel="stylesheet" type="text/css" id="app-stylesheet">
     <link href="{{asset('admin/css/style.css')}}" rel="stylesheet" type="text/css" id="app-stylesheet">
      {{--     datatable--}}
-    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
     {{--     enđatable--}}
     <link href="{{asset('admin/css/bootstrap.min.css')}}" rel="stylesheet" type="text/css" id="bootstrap-stylesheet">
     <link href="{{asset('admin/css/icons.min.css')}}" rel="stylesheet" type="text/css">
@@ -237,6 +236,7 @@
                                 <li><a href="{{route('listRevenue')}}">Doanh thu</a></li>
 
 
+
                             </ul>
                         </li>
                         <li>
@@ -416,6 +416,8 @@
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
         crossorigin="anonymous">
 </script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
 <!-- ajax js -->
 <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
