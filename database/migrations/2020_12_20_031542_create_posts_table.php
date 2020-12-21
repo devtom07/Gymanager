@@ -19,7 +19,7 @@ class CreatePostsTable extends Migration
             $table->string('title');
             $table->date('start_posts');
             $table->text('detail');
-            $table->foreign('id_posts_cate')->references('id')->on('cate_posts');
+            // $table->foreign('id_posts_cate')->references('id')->on('cate_posts');
             $table->timestamps();
         });
     }
