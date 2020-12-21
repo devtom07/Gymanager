@@ -59,7 +59,7 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="exampleInputPassword1">Chu kỳ (*)</label>
-                                        {{-- <input type="text" name="cycle"> --}}
+
                                         <select class="form-control" name="cycle" id="chuki">
                                             <option value="week">Tuần</option>
                                             <option value="month">Tháng</option>
@@ -67,8 +67,16 @@
                                         </select>
                                     </div>
                                     @error('cycle')
+                                    <p style="color:red">{{$message}}</p>
+                                    @enderror
+                                    <div class="form-group">
+                                        <label for="exampleInputPassword1">Ngày bắt đầu (*)</label>
+                                        <input class="form-control" type="date" name="date_start" value="{{ $work_staff->date_start }}" id="example-time-input">
+                                    </div>
+                                    @error('date_start')
                                         <p style="color:red">{{$message}}</p>
                                     @enderror
+                                    
                                     <div class="form-group">
                                         <label for="exampleInputPassword1">Ngày bắt đầu (*)</label>
                                         <input class="form-control" type="date" name="date_start" value="{{ $work_staff->date_start }}" id="example-time-input">

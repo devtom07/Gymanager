@@ -101,7 +101,7 @@
                 <div class="row">
                     <div class="col-md-4">
                         <div class="profile-img">
-                            <img src="{{ asset('admin/customers/images/'.$profile->customer->avatar) }}" alt=""/>
+                            <img src="{{ asset('customer/'.$profile->customer->avatar) }}" alt=""/>
                             <div class="file btn btn-lg btn-primary">
                                 Change Photo
                                 <input type="file" name="file"/>
