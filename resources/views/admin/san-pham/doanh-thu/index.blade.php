@@ -10,7 +10,8 @@
                 <div class="col-12">
                     <div class="page-title-box">
 
-                        <h4 class="page-title">Danh sách sản phẩm</h4>
+                        <h4 class="page-title">Các sản phẩm đã bán</h4>
+
                     </div>
                 </div>
             </div>
@@ -26,13 +27,14 @@
                                     <div class="btn-toolbar">
                                         <div class="btn-group dropdown-btn-group pull-right">
                                             <button type="button" class="btn btn-default"><a
-                                                    href="{{route('product.add')}}" class="active">Tạo
-                                                    mới</a></button>
+                                                    href="{{route('listproduct')}}" class="active">Xem sản phẩm</a></button>
+
                                                     <button type="button" class="btn btn-default"><a
                                                         href="{{route('product.sanpham_ban')}}" class="active">Xem giỏ hàng
                                                         </a></button>
                                         </div>
                                         <div class="dataTables_length" id="datatable_length">
+
                                         <!-- <label>Show <select
                                                     name="datatable_length" aria-controls="datatable"
                                                     class="custom-select custom-select-sm form-control form-control-sm">
@@ -53,86 +55,54 @@
                                                     <th id="tech-companies-1-col-0-clone">STT</th>
                                                     <th data-priority="1" id="tech-companies-1-col-1-clone">Tên sản phẩm
                                                     </th>
-                                                    <th data-priority="1" id="tech-companies-1-col-1-clone">Loại sản
-                                                        phẩm</th>
                                                     <th data-priority="1" id="tech-companies-1-col-1-clone">Ảnh sản
                                                         phẩm</th>
                                                     <th data-priority="1" id="tech-companies-1-col-1-clone">Giá</th>
-                                                    {{-- <th data-priority="3" id="tech-companies-1-col-4-clone">Khuyến mãi</th> --}}
                                                     <th data-priority="3" id="tech-companies-1-col-5-clone">Số lượng
                                                     </th>
-                                                    {{-- <th data-priority="6" id="tech-companies-1-col-6-clone">Chi tiết</th> --}}
-                                                    <th data-priority="6" id="tech-companies-1-col-8-clone">Bán sản phẩm
+                                                    <th data-priority="6" id="tech-companies-1-col-8-clone">Tổng tiền
                                                     </th>
-                                                    <th data-priority="6" id="tech-companies-1-col-8-clone">Action</th>
-
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                              
+                                              @foreach($listRevenue as $key => $listRevenues)
                                                 <tr>
                                                     <th data-org-colspan="1" data-columns="tech-companies-1-col-0">
-                                                       </th>
+                                                      {{$key+1}} </th>
                                                     <td data-org-colspan="1" data-priority="1"
                                                         data-columns="tech-companies-1-col-1">
                                                         <span class="co-name">
-                                                          
+                                                            {{$listRevenues->name}}
+
                                                         </span>
                                                     </td>
                                                     <td data-org-colspan="1" data-priority="1"
                                                         data-columns="tech-companies-1-col-1">
-                                                      
+                                                        <img class="img-responsive" width="100px"
+                                                             src="{{asset('product/'.$listRevenues->product->avatar)}}">
                                                     </td>
                                                     <td data-org-colspan="1" data-priority="1"
                                                         data-columns="tech-companies-1-col-1">
-                                                        <img class="img-responsive" width="100px"
-                                                            src="">
+                                                        {{$listRevenues->price}}
+
                                                     </td>
                                                     <td data-org-colspan="1" data-priority="6"
                                                         data-columns="tech-companies-1-col-7">
-                                                     
+                                                        {{$listRevenues->quantity}}
                                                     </td>
-
-                                                    {{-- <td data-org-colspan="1" data-priority="1" data-columns="tech-companies-1-col-1">
-                                             {{ $product->sale_price}}
-                                                    </td> --}}
                                                     <td data-org-colspan="1" data-priority="3"
                                                         data-columns="tech-companies-1-col-2">
-                                                       
+                                                        {{$listRevenues->total}}
+
                                                     </td>
-                                                    {{-- <td data-org-colspan="1" data-priority="1" data-columns="tech-companies-1-col-3">
-                                             {{ $product->detail}}
-                                                    </td> --}}
                                                     <td data-org-colspan="1" data-priority="3"
-                                                        data-columns="tech-companies-1-col-4"><button type="button"
-                                                            class="btn"><a class=" btn bg-success"
-                                                                href="">Bán</a></button>
+                                                        data-columns="tech-companies-1-col-2">
+
                                                     </td>
-                                                    <td data-org-colspan="1" data-priority="6"
-                                                        data-columns="tech-companies-1-col-8">
-                                                        <div class="btn-group mt-1 mr-1">
-                                                            <button class="btn btn-success btn-sm dropdown-toggle"
-                                                                type="button" data-toggle="dropdown"
-                                                                aria-haspopup="true" aria-expanded="false">
-                                                                <i class="mdi mdi-format-list-bulleted-square"></i>
-                                                            </button>
-                                                            <div class="dropdown-menu" x-placement="bottom-start"
-                                                                style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 29px, 0px);">
-                                                                <a class="dropdown-item"
-                                                                    href="">
-                                                                    <i class="mdi mdi-lead-pencil"></i>
-                                                                    Sửa
-                                                                </a>
-                                                                <a class="dropdown-item btn-remove"
-                                                                    href="">
-                                                                    <i class="mdi mdi-delete"></i>
-                                                                    Xoá
-                                                                </a>
-                                                            </div>
-                                                        </div>
-                                                    </td>
+
                                                 </tr>
-                                        
+                                              @endforeach
+
                                             </tbody>
                                         </table>
                                     </div>
