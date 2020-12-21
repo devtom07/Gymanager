@@ -78,6 +78,7 @@
                             </div>
                             <div class="col-sm-12 col-md-6 text-right">
                                 <button class="btn btn-lg btn-block btn-success text-uppercase" type="submit">Bán</button>
+
                             </div>
                         </div>
                         {{csrf_field()}}

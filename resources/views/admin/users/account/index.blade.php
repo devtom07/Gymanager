@@ -10,7 +10,7 @@
             <div class="col-12">
                <div class="page-title-box">
 
-                  <h4 class="page-title">Danh sách Nhân viên</h4>
+                  <h4 class="page-title">Danh sách nhân viên</h4>
                </div>
             </div>
          </div>
@@ -27,7 +27,8 @@
                               </div>
                               <div class="dataTables_length" id="datatable_length">
                               </div>
-                              <div id="searchAccountUser" class="dataTables_filter" ><label>Search:<input type="search" class="form-control form-control-sm" placeholder="" aria-controls="datatable"></label></div>
+
+                              <div id="datatable_filter" class="dataTables_filter" ><label><input id="myInput" type="text" placeholder="Tìm kiếm ..." class="form-control form-control-sm" placeholder="" aria-controls="datatable"></label></div>
                            </div>
                            <div class="table-responsive fixed-solution" data-pattern="priority-columns">
                               <table id="tech-companies-1-clone" class="table table-striped">
@@ -42,7 +43,7 @@
                                        <th data-priority="6" id="tech-companies-1-col-8-clone">Action</th>
                                     </tr>
                                  </thead>
-                                 <tbody id="bodyUser">
+                                 <tbody id="myTable">
                                  @foreach($user as $key => $users)
                                     <tr>
                                        <th data-org-colspan="1" data-columns="tech-companies-1-col-0">{{$key+1}}</th>

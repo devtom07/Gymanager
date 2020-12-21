@@ -29,13 +29,7 @@
                             @csrf
                             <div class="row">
                                 <div class="col-xl-6">
-                                    <div class="form-group">
-                                        <label for="exampleInputEmail1">Tên bài viết (*)</label>
-                                        <input type="text" class="form-control" name="name" id="exampleInputEmail1" placeholder="Tên bài viết">
-                                    </div>
-                                    @error('name')
-                                            <p style="color:red">{{$message}}</p>
-                                    @enderror
+                                    
                                     <div class="form-group">
                                         <label for="exampleInputEmail1">Ảnh sản phẩm (*)</label>
                                         <input type="file" class="form-control" name="avatar" id="exampleInputEmail1" placeholder="">

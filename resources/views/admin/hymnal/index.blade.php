@@ -40,6 +40,7 @@
                                             </div>
                                             <div id="datatable_filter" class="dataTables_filter" ><label>Search:<input name="search" id="searchHymnal" type="search" class="form-control form-control-sm" placeholder="" aria-controls="datatable" ></label></div>
 
+
                                         </div>
                                         <div class="table-responsive fixed-solution" data-pattern="priority-columns">
                                             <table id="tech-companies-1-clone" class="table table-striped">

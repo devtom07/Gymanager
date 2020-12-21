@@ -30,34 +30,25 @@
                                                    
                                         </div>
                                         <div class="dataTables_length" id="datatable_length"></div>
-                                        <div id="datatable_filter" class="dataTables_filter"><label>Search:<input
-                                                    type="search" class="form-control form-control-sm" placeholder=""
-                                                    aria-controls="datatable"></label></div>
+                                        <div id="datatable_filter" class="dataTables_filter" ><label><input id="myInput" type="text" placeholder="Tìm kiếm ..." class="form-control form-control-sm" placeholder="" aria-controls="datatable"></label></div>
                                     </div>
                                     <div class="table-responsive fixed-solution" data-pattern="priority-columns">
                                         <table id="tech-companies-1-clone" class="table table-striped">
                                             <thead>
                                                 <tr>
                                                     <th id="tech-companies-1-col-0-clone">STT</th>
-                                                    <th data-priority="1" id="tech-companies-1-col-1-clone">Tên bài viết</th>
+                                                    
                                                     <th data-priority="1" id="tech-companies-1-col-1-clone">Danh mục bài viết</th>
                                                     <th data-priority="1" id="tech-companies-1-col-1-clone">Ảnh bài viết</th>
                                                     <th data-priority="1" id="tech-companies-1-col-1-clone">Tiêu đề</th>
-                                                    <th data-priority="6" id="tech-companies-1-col-6-clone">Chi tiết</th>
                                                     <th data-priority="6" id="tech-companies-1-col-8-clone">Action</th>
                                                 </tr>
                                             </thead>
-                                            <tbody>
+                                            <tbody id="myTable">
                                                 @foreach($listPosts as $key => $posts)
                                                 <tr>
                                                     <th data-org-colspan="1" data-columns="tech-companies-1-col-0">
                                                         {{$key+1}}</th>
-                                                    <td data-org-colspan="1" data-priority="1"
-                                                        data-columns="tech-companies-1-col-1">
-                                                        <span class="co-name">
-                                                            {{ $posts->name}}
-                                                        </span>
-                                                    </td>
                                                     <td data-org-colspan="1" data-priority="1"
                                                         data-columns="tech-companies-1-col-1">
                                                         {{$posts->cate_posts->name}}
@@ -65,7 +56,7 @@
                                                     <td data-org-colspan="1" data-priority="1"
                                                         data-columns="tech-companies-1-col-1">
                                                         <img class="img-responsive" width="100px"
-                                                            src="{{asset('posts/' . $posts->avatar)}}">
+                                                            src="{{asset('posts/' . $posts->avatar)}}" width="50px" height="50px">
                                                     </td>
                                                     <td data-org-colspan="1" data-priority="1" data-columns="tech-companies-1-col-1">
                                                         {{ $posts->title}}
@@ -80,6 +71,9 @@
                                                             </button>
                                                             <div class="dropdown-menu" x-placement="bottom-start"
                                                                 style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 29px, 0px);">
+                                                                <a class="dropdown-item  btn-show" id="show_contact" data-id="{{$posts->id}}"
+                                                                       data-toggle="modal"
+                                                                       data-target="#exampleModalCenter">Chi tiết</a>
                                                                 <a class="dropdown-item"
                                                                     href="{{route('posts.edit',$posts->id)}}">
                                                                     <i class="mdi mdi-lead-pencil"></i>
@@ -118,4 +112,7 @@
 
     <!-- end Footer -->
 </div>
+    {{-- @if($posts == null){ --}}
+    @include('admin.san-pham.list-bai-viet.detail')
+    {{-- }@endif --}}
 @endsection()

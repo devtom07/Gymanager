@@ -24,11 +24,11 @@ class ValidateEditPosts extends FormRequest
     public function rules()
     {
         return [
-            'name' => 'required',
-            'start_posts'=>'required',
-            'avatar' => 'required|image|mimes:jpeg,png,jpg',
-            'title'=>'required',
-            'detail' => 'required',
+            // 'name' => 'required',
+            // 'start_posts'=>'required',
+            // // 'avatar' => 'required|image|mimes:jpeg,png,jpg',
+            // 'title'=>'required',
+            // 'detail' => 'required',
         ];
     }
     public function messages()

@@ -270,6 +270,7 @@ Route::middleware(['auth'])->group(function () {
         Route::post('/sua-danh-muc-bai-viet/post/{id}', 'Sanpham\PostsController@update')
             ->name('cate_posts.update');
         Route::get('/danh-muc-bai-viet-xoa/{id}', 'Sanpham\PostsController@destroy')
+
             ->name('cate_posts.delete');
 
         //bai viet

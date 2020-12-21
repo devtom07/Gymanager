@@ -3,7 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
-
+use App\Models\Staff;
 class Position extends Model
 {
     protected $table = "position";

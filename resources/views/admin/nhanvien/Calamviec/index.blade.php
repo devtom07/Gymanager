@@ -83,10 +83,7 @@
                                                     <option value="100">100</option>
                                                 </select> entries</label> -->
                                                 </div>
-                                        <div id="datatable_filter" class="dataTables_filter"><label>Search:<input
-                                                    type="search" class="form-control form-control-sm" placeholder=""
-                                                    aria-controls="datatable"></label></div>
-
+                                                <div id="datatable_filter" class="dataTables_filter" ><label><input id="myInput" type="text" placeholder="Tìm kiếm ..." class="form-control form-control-sm" placeholder="" aria-controls="datatable"></label></div>
                                     </div>
                                     <div class="table-responsive fixed-solution" data-pattern="priority-columns">
                                         <div class="sticky-table-header"
@@ -200,7 +197,7 @@
                                                     <th data-priority="6" id="tech-companies-1-col-8-clone">Action</th>
                                                 </tr>
                                             </thead>
-                                            <tbody>
+                                            <tbody id="myTable">
                                                 @foreach($listWorkSift as $listwork)
                                                 <tr>
                                                     <th data-org-colspan="1" data-columns="tech-companies-1-col-0"><span

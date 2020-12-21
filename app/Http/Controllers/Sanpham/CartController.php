@@ -9,6 +9,7 @@ use App\Models\Revenue;
 use Gloudemans\Shoppingcart\Facades\Cart;
 use App\Models\Product;
 
+
 class CartController extends Controller
 {
     public function index()
@@ -29,6 +30,7 @@ class CartController extends Controller
         $cartCount = Cart::count();
         foreach ($cart as $carts) {
             $cart_id = $carts->id;
+
             $cartPrice = $carts->qty * $carts->price;
             $revenues = new Revenue;
             $revenues->id_product = $carts->id;
@@ -49,6 +51,7 @@ class CartController extends Controller
             'quantity' => $product_qty
         ]);
         Cart::destroy();
+
         Alert()->success('Thành công', 'Bạn đã thêm sản phẩm thành công');
         return redirect()->action('Sanpham\CartController@index');
     }
