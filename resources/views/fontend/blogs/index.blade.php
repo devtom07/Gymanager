@@ -31,11 +31,10 @@
                                     <img class="card-img rounded-0" src="{{ asset('/posts/'.$list->avatar) }}" height="300px">
                                 </div>
                                 <div class="blog_details">
-                                    <a class="d-inline-block" href="{{route('detailblog')}}">
+                                    <a class="d-inline-block" href="{{route('detailblog',$list->id)}}">
                                         <h2 class="blog-head" style="color: #2d2d2d;">{{ $list->title }}</h2>
                                     </a>
-                                    <p>That dominion stars lights dominion divide years for fourth have don't stars is that
-                                        he earth it first without heaven in place seed it second morning saying.</p>
+                                    <p>{{ $list->detail }}</p>
                                     <p>{{ $list->start_posts }}</p>
                                 </div>
                             </article>
@@ -49,56 +48,13 @@
                                 <ul class="list cat-list">
                                     <li>
                                         @foreach($cate as $cate)
-                                        <a href="#" class="d-flex">
-                                            <p>{{ $cate->name }}</p>
-                                            <p>({{ $cate->count() }})</p>
+                                        <a href="{{ route('cateBlogs',$cate->id) }}" class="d-flex">
+                                            <p style="color: black" >{{ $cate->name }}</p>
                                         </a>
                                         @endforeach
                                     </li>
                                 </ul>
                             </aside>
-                            <aside class="single_sidebar_widget popular_post_widget">
-                                <h3 class="widget_title" style="color: #2d2d2d;">Bài đăng gần đây</h3>
-                                <div class="media post_item">
-                                    <img src="{{url('fontend')}}/img/post/post_1.png" alt="post">
-                                    <div class="media-body">
-                                        <a href="{{route('detailblog')}}">
-                                            <h3 style="color: #2d2d2d;">From life was you fish...</h3>
-                                        </a>
-                                        <p>January 12, 2019</p>
-                                    </div>
-                                </div>
-                                <div class="media post_item">
-                                    <img src="{{url('fontend')}}/img/post/post_2.png" alt="post">
-                                    <div class="media-body">
-                                        <a href="blog_details.html">
-                                            <h3 style="color: #2d2d2d;">The Amazing Hubble</h3>
-                                        </a>
-                                        <p>02 Hours ago</p>
-                                    </div>
-                                </div>
-                                <div class="media post_item">
-                                    <img src="{{url('fontend')}}/img/post/post_3.png" alt="post">
-                                    <div class="media-body">
-                                        <a href="{{route('detailblog')}}">
-                                            <h3 style="color: #2d2d2d;">Astronomy Or Astrology</h3>
-                                        </a>
-                                        <p>03 Hours ago</p>
-                                    </div>
-                                </div>
-                                <div class="media post_item">
-                                    <img src="{{url('fontend')}}/img/post/post_4.png" alt="post">
-                                    <div class="media-body">
-                                        <a href="{{route('detailblog')}}">
-                                            <h3 style="color: #2d2d2d;">Asteroids telescope</h3>
-                                        </a>
-                                        <p>01 Hours ago</p>
-                                    </div>
-                                </div>
-                            </aside>
-            
-
-                          
                         </div>
                     </div>
                 </div>
@@ -106,4 +62,4 @@
         </section>
         <!-- Blog Area End -->
     </main>
-    @endsection
+@endsection

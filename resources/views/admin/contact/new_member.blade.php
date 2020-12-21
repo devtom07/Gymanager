@@ -110,7 +110,6 @@
                                             <input class="btn btn-success" type="submit" value="Chưa xử lý">
                                                 @endif
 
-
                                           </td>
                                           <td data-org-colspan="1" data-priority="6" data-columns="tech-companies-1-col-8">
                                           <a class="" href="{{ route('listForm.delete', ['id'=>$list->id]) }}"><i class="mdi mdi-delete"></i> Xoá</a></td>
