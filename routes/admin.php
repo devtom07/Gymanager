@@ -233,8 +233,14 @@ Route::middleware(['auth'])->group(function () {
         Route::get('/show_san_pham/deleteCart/{id}', 'Sanpham\ProductController@DeleteCart')
             ->name('product.deleteCart_sp');
         Route::get('/show_san_pham/update', 'Sanpham\ProductController@UpdateCart')->name('product.update_sp');
-        // Route::get('/update/{id}/{qty}', 'Sanpham\ProductController@update_sp')->name('product.sanpham_ban');
 
+        //doanh thu
+        Route::get('/doanh-thu', 'Sanpham\CartController@index')
+            ->name('listRevenue');
+        Route::get('/doanh-thu-add', 'Sanpham\CartController@create')
+            ->name('revenue.add');
+        Route::post('/doanh-thu-add/post', 'Sanpham\CartController@store')
+            ->name('revenue.store');
         //loai san pham
         Route::get('/loai-san-pham', 'Sanpham\CategoryController@index')
             ->name('listcategory');
@@ -262,7 +268,7 @@ Route::middleware(['auth'])->group(function () {
             ->name('cate_posts.update');
         Route::get('/danh-muc-bai-viet-xoa/{id}', 'Sanpham\PostsController@destroy')
             ->name('cate_posts.delete');
-        
+
         //bai viet
         Route::get('/bai-viet', 'Sanpham\PostsController@index')
             ->name('listposts');

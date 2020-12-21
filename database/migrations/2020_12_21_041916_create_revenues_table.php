@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateCatePostsTable extends Migration
+class CreateRevenuesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,15 @@ class CreateCatePostsTable extends Migration
      */
     public function up()
     {
-        Schema::create('cate_posts', function (Blueprint $table) {
+        Schema::create('revenues', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->integer('price');
+            $table->integer('quantity');
+            $table->integer('total');
+            $table->unsignedBigInteger('id_product');
+            $table->foreign('id_product')->references('id')->on('product');
+
             $table->timestamps();
         });
     }
@@ -27,6 +33,6 @@ class CreateCatePostsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('cate_posts');
+        Schema::dropIfExists('revenues');
     }
 }
