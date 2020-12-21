@@ -11,6 +11,6 @@ class Cate_posts extends Model
     protected $guarded =[];
 
     public function posts(){
-        return $this->hasMany(Posts::class,'id_posts_cate','id');
+        return $this->belongsTo(Posts::class);
     }
 }

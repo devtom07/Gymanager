@@ -16,9 +16,11 @@
                         <div class="col-sm-3 col-md-2 col-5">
                             <label style="font-family: inherit">chi tiết</label>
                         </div>
+                        @foreach($listPosts as $posts)
                         <div id="name" class="col-md-8 col-6">
                             {{ $posts->detail }}
                         </div>
+                        @endforeach
                     </div>
                 </div>
                 </div>

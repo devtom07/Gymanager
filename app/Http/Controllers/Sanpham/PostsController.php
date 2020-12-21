@@ -79,7 +79,7 @@ class PostsController extends Controller
              // dd($posts);
          }
         Alert()->success('Thành công','Cập nhật bài viết thành công');
-        return redirect()->action('Sanpham/PostsController@index');
+        return redirect()->action('Sanpham\PostsController@index');
     }
     public function destroy($id)
     {

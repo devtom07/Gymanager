@@ -14,7 +14,7 @@ class WorkSiftStaff extends Model
 	protected $primaryKey = 'id';
 
 	public function workSift(){
-		return $this->belongsTo(WorkSift::class, 'work_sift_id' ,'id');
+		return $this->hasOne(WorkSift::class, 'id' ,'work_sift_id');
 	} 
 	public function Staff(){
 		return $this->belongsTo(Staff::class, 'staff_id', 'id');
