@@ -161,6 +161,7 @@
                                                 @endforeach
                                             </tbody>
                                         </table>
+                                        {!! $listService->render() !!}
                                     </div>
                                 </div>
                                 <!-- end .table-responsive -->

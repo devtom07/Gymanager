@@ -10,7 +10,7 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="page-title-box">
-                            <h4 class="page-title">Liên hệ với khách hàng</h4>
+                            <h4 class="page-title">Thông tin khách hàng</h4>
                         </div>
                     </div>
                 </div>
@@ -127,6 +127,7 @@
                                                 @endforeach
                                                 </tbody>
                                             </table>
+                                        
                                         </div>
                                     </div>
                                     <!-- end .table-responsive -->

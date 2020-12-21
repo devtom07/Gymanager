@@ -14,20 +14,22 @@ use App\Http\Requests\ValidateFormEditService;
 class ServiceController extends Controller
 {
 
-    public function index()
+    public function index(Request $request)
     {
-        
-        $listService = Service::all();
-        return view('admin.service.index',compact('listService'));
-    }
 
+        $listService = Service::paginate(5);
+        if ($request->ajax()) {
+            return view('admin.service.index', compact('listService'));
+        }
+        return view('admin.service.pagination', compact('listService'));
+    }
 
     public function create()
     {
 
         $data_packages = Package::all();
-         $data = Customer::all();
-        return view('admin.service.add',compact('data','data_packages'));
+        $data = Customer::all();
+        return view('admin.service.add', compact('data', 'data_packages'));
     }
 
 
@@ -45,21 +47,20 @@ class ServiceController extends Controller
         $service->customers_pay = $request->customers_pay;
         $service->pay_method = $request->pay_method;
         $service->save();
-        Alert()->success('Thành công','Thêm ca làm việc thành công');
+        Alert()->success('Thành công', 'Thêm ca làm việc thành công');
         return redirect()->route('service');
-        
     }
     public function show($id)
     {
         //
-        
+
     }
     public function edit($id)
     {
-        $service= Service::find($id);
-        $package= Package::all();
+        $service = Service::find($id);
+        $package = Package::all();
         $customer = Customer::all();
-        return view('admin.service.edit',compact('service','package','customer'));
+        return view('admin.service.edit', compact('service', 'package', 'customer'));
     }
     public function update(ValidateFormEditService $request, $id)
     {
@@ -75,14 +76,14 @@ class ServiceController extends Controller
         $arr['customers_pay'] = $request->customers_pay;
         $arr['pay_method'] = $request->pay_method;
         $service::where('id', $id)->update($arr);
-        Alert()->success('Thành công','Cập nhật ca làm việc thành công');
+        Alert()->success('Thành công', 'Cập nhật ca làm việc thành công');
         return redirect()->route('service');
     }
 
     public function destroy($id)
-  {
-    Service::destroy($id);
-    Alert()->success('Thành công','Xóa ca làm việc thành công');
-    return redirect()->route('service'); 
-  }
+    {
+        Service::destroy($id);
+        Alert()->success('Thành công', 'Xóa ca làm việc thành công');
+        return redirect()->route('service');
+    }
 }

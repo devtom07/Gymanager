@@ -19,15 +19,16 @@ class WorkSiftStaffController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $work_staff = WorkSiftStaff::with('workSift', 'Staff')->orderBy('id', 'DESC')->get(); 
-         $work_sift = WorkSift::get();
-        // DB::table('work_sift_staffs')
-        // ->join('work_sifts','work_sift_staffs.work_sift_id', '=', 'work_sifts.id')
-        // ->orderBy('work_sift_staffs.id','desc')
-        // ->get();
-        return view('admin.nhanvien.calamviec-nhanvien.index', ['work_staffs'=>$work_staff,'work_sift'=>$work_sift]);
+        $work_staff = WorkSiftStaff::with('workSift', 'Staff')->orderBy('id', 'DESC')->get();
+
+
+        $work_sift = WorkSift::paginate(5);
+        if ($request->ajax()) {
+            return view('admin.nhanvien.calamviec-nhanvien.index', compact('work_sift'));
+        }
+        return view('admin.nhanvien.calamviec-nhanvien.pagination', ['work_staffs' => $work_staff, 'work_sift' => $work_sift]);
     }
 
     /**
@@ -39,7 +40,7 @@ class WorkSiftStaffController extends Controller
     {
         $work_sift['data'] = WorkSift::all();
         $staff['dataStaff'] = Staff::all();
-        return view('admin.nhanvien.calamviec-nhanvien.add',$work_sift,$staff);
+        return view('admin.nhanvien.calamviec-nhanvien.add', $work_sift, $staff);
     }
 
     /**
@@ -62,7 +63,6 @@ class WorkSiftStaffController extends Controller
         $work_staff->save();
         // return back();
         return redirect()->route('calamviecnhanvien')->with('thongbao', 'thanh cong');
-
     }
 
     /**
@@ -74,10 +74,10 @@ class WorkSiftStaffController extends Controller
     public function show($id)
     {
         //
-        $work_staff=WorkSiftStaff::find($id);
-        $dataStaff=Staff::all();
-        $work_sift['data']=WorkSift::all();
-        return  view('admin.nhanvien.calamviec-nhanvien.edit',['work_staff'=>$work_staff,'dataStaff'=>$dataStaff],$work_sift);  
+        $work_staff = WorkSiftStaff::find($id);
+        $dataStaff = Staff::all();
+        $work_sift['data'] = WorkSift::all();
+        return  view('admin.nhanvien.calamviec-nhanvien.edit', ['work_staff' => $work_staff, 'dataStaff' => $dataStaff], $work_sift);
     }
 
     /**
@@ -101,7 +101,7 @@ class WorkSiftStaffController extends Controller
     public function update(WorkStaffRequest $request, $id)
     {
         //
-        $work_staff=WorkSiftStaff::find($id);
+        $work_staff = WorkSiftStaff::find($id);
         $work_staff->work_sift_id = $request->work_sift_id;
         $work_staff->date_start = $request->date_start;
         $work_staff->date_end = $request->date_end;
@@ -122,10 +122,8 @@ class WorkSiftStaffController extends Controller
     public function destroy($id)
     {
         //
-        $work_staff=WorkSiftStaff::find($id);
+        $work_staff = WorkSiftStaff::find($id);
         $work_staff->delete();
         return redirect()->route('calamviecnhanvien')->with('thongbao', 'xoa thanh cong');
-
-
     }
 }
