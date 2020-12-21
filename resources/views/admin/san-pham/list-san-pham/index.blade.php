@@ -42,9 +42,7 @@
                                                     <option value="100">100</option>
                                                 </select> entries</label> -->
                                                 </div>
-                                        <div id="datatable_filter" class="dataTables_filter"><label>Search:<input
-                                                    type="search" class="form-control form-control-sm" placeholder=""
-                                                    aria-controls="datatable"></label></div>
+                                                <div id="datatable_filter" class="dataTables_filter" ><label><input id="myInput" type="text" placeholder="Tìm kiếm ..." class="form-control form-control-sm" placeholder="" aria-controls="datatable"></label></div>
                                     </div>
                                     <div class="table-responsive fixed-solution" data-pattern="priority-columns">
                                         <table id="tech-companies-1-clone" class="table table-striped">
@@ -68,7 +66,7 @@
 
                                                 </tr>
                                             </thead>
-                                            <tbody>
+                                            <tbody id="myTable">
                                                 @foreach($listProducts as $key => $product)
                                                 <tr>
                                                     <th data-org-colspan="1" data-columns="tech-companies-1-col-0">
@@ -86,7 +84,7 @@
                                                     <td data-org-colspan="1" data-priority="1"
                                                         data-columns="tech-companies-1-col-1">
                                                         <img class="img-responsive" width="100px"
-                                                            src="{{asset('product/' . $product->avatar)}}">
+                                                            src="{{asset('product/' .$product->avatar)}}">
                                                     </td>
                                                     <td data-org-colspan="1" data-priority="6"
                                                         data-columns="tech-companies-1-col-7">

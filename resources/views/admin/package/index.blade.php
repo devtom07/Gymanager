@@ -13,10 +13,10 @@
                      <ol class="breadcrumb m-0">
                         <li class="breadcrumb-item"><a href="javascript: void(0);">Gymmanager</a></li>
                         <li class="breadcrumb-item"><a href="javascript: void(0);">Tables</a></li>
-                        <li class="breadcrumb-item active">Danh sách khách hàng</li>
+                        <li class="breadcrumb-item active">Gói cước</li>
                      </ol>
                   </div>
-                  <h4 class="page-title">Danh sách khách hàng</h4>
+                  <h4 class="page-title">Gói cước</h4>
                </div>
             </div>
          </div>
@@ -28,7 +28,7 @@
                      <div class="table-rep-plugin">
                         <div class="table-wrapper">
                            <div class="btn-toolbar">
-                              <div class="btn-group focus-btn-group"><button type="button" class="btn btn-default"><span class="glyphicon glyphicon-screenshot"></span> Lọc</button></div>
+                              <div id="datatable_filter" class="dataTables_filter" ><label><input id="myInput" type="text" placeholder="Tìm kiếm ..." class="form-control form-control-sm" placeholder="" aria-controls="datatable"></label></div>
                               <div class="btn-group dropdown-btn-group pull-right">
                                  <button type="button" class="btn btn-default"><a href="{{route('package.create')}}" class="active">Thêm gói</a></button>
                                  @if(session('thongbao'))
