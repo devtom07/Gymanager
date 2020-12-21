@@ -20,7 +20,7 @@ class CreateNewMembersTable extends Migration
             $table->string('service');
             $table->string('email');
             $table->text('content');
-            $table->tinyInteger('status')->default('0');
+            $table->tinyInteger('statuss')->default('0');
             $table->timestamps();
         });
     }

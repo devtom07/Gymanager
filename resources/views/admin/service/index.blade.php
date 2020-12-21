@@ -22,9 +22,7 @@
                             <div class="table-rep-plugin">
                                 <div class="table-wrapper">
                                     <div class="btn-toolbar">
-                                        <!-- <div class="btn-group focus-btn-group"><button type="button"
-                                                class="btn btn-default"><span
-                                                    class="glyphicon glyphicon-screenshot"></span> Lọc</button></div> -->
+                                        <div id="datatable_filter" class="dataTables_filter" ><label><input id="myInput" type="text" placeholder="Tìm kiếm ..." class="form-control form-control-sm" placeholder="" aria-controls="datatable"></label></div>
                                         <div class="btn-group dropdown-btn-group pull-right">
                                             <button type="button" class="btn btn-default"><a
                                                     href="{{route('service.add')}}" class="active">Thêm
@@ -104,7 +102,7 @@
                                                     <th data-priority="6" id="tech-companies-1-col-8-clone">Action</th>
                                                 </tr>
                                             </thead>
-                                            <tbody>
+                                            <tbody id="myTable">
                                                 @foreach($listService as $key => $service)
                                                 <tr>
                                                     <th data-org-colspan="1" data-columns="tech-companies-1-col-0">

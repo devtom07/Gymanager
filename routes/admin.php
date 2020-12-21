@@ -41,7 +41,7 @@ Route::middleware(['auth'])->group(function () {
             ->name('permission.update');
         Route::get('/xoachucnang/{id}', 'Users\PermissionController@destroy')
             ->name('permission.destroy');
-         //user
+        //user
         Route::get('xemtaikhoan', 'Users\UserController@index')
             ->name('user.index')
             ->middleware(['permission:xem tài khoản']);

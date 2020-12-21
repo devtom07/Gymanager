@@ -24,7 +24,7 @@
                                     <div class="table-wrapper">
                                         <div class="btn-toolbar">
 
-                                            <div id="datatable_filter" class="dataTables_filter" ><label>Search:<input type="search" class="form-control form-control-sm" placeholder="" aria-controls="datatable"></label></div>
+                                            <div id="datatable_filter" class="dataTables_filter" ><label><input id="myInput" type="text" placeholder="Tìm kiếm ..." class="form-control form-control-sm" placeholder="" aria-controls="datatable"></label></div>
                                         </div>
                                         <div class="table-responsive fixed-solution" data-pattern="priority-columns">
                                             <table id="tech-companies-1-clone" class="table table-striped">
@@ -39,7 +39,7 @@
 {{--                                                 <th data-priority="1" id="tech-companies-1-col-3-clone">Số học viên</th>--}}
                                                 </tr>
                                                 </thead>
-                                                <tbody>
+                                                <tbody id="myTable">
                                                 @foreach($pt as $key => $pts)
                                                     @foreach($pts->staff  as $staffs)
                                                     <tr>

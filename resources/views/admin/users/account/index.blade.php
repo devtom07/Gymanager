@@ -27,11 +27,7 @@
                               </div>
                               <div class="dataTables_length" id="datatable_length">
                               </div>
-<<<<<<< HEAD
-                              <div id="searchAccountUser" class="dataTables_filter" ><label>Search:<input type="search" class="form-control form-control-sm" placeholder="" aria-controls="datatable"></label></div>
-=======
                               <div id="datatable_filter" class="dataTables_filter" ><label><input id="myInput" type="text" placeholder="Tìm kiếm ..." class="form-control form-control-sm" placeholder="" aria-controls="datatable"></label></div>
->>>>>>> c4955184... edit_share
                            </div>
                            <div class="table-responsive fixed-solution" data-pattern="priority-columns">
                               <table id="tech-companies-1-clone" class="table table-striped">
