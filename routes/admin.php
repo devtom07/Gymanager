@@ -230,9 +230,9 @@ Route::middleware(['auth'])->group(function () {
             ->name('product.sanpham_ban');
         Route::get('/addCart/{id}', 'Sanpham\ProductController@addCart')
             ->name('product.AddCart');
-        // Route::get('/deleteCart/{id}', 'Sanpham\ProductController@getDeleteCart')
-        //     ->name('product.DeleteCart');
-        Route::get('/show_san_pham/update', 'Sanpham\ProductController@updateCart')->name('product.update_sp');
+        Route::get('/show_san_pham/deleteCart/{id}', 'Sanpham\ProductController@DeleteCart')
+            ->name('product.deleteCart_sp');
+        Route::get('/show_san_pham/update', 'Sanpham\ProductController@UpdateCart')->name('product.update_sp');
         // Route::get('/update/{id}/{qty}', 'Sanpham\ProductController@update_sp')->name('product.sanpham_ban');
 
         //loai san pham

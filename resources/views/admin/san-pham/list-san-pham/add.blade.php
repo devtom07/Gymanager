@@ -63,13 +63,6 @@
                                 </div>
                                 <div class="col-xl-6">
                                     <div class="form-group">
-                                        <label for="exampleInputPassword1">Giá khuyến mãi (*)</label>
-                                        <input type="number" class="form-control" name="sale_price" id="exampleInputPassword1" placeholder="">
-                                    </div>
-                                    @error('sale_price')
-                                            <p style="color:red">{{$message}}</p>
-                                    @enderror
-                                    <div class="form-group">
                                         <label>Số lượng</label>
                                         <input class="form-control" type="number" name="quantity" placeholder="">
                                     </div>
