@@ -11,6 +11,7 @@ use App\Http\Requests\CustomerAccount\ChangePasswordRequest;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use App\Models\Service;
+use App\Models\CustomerAccount;
 
 class HomeController extends Controller
 {
