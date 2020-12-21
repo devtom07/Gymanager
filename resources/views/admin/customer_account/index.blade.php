@@ -10,6 +10,7 @@
             <div class="col-12">
                <div class="page-title-box">
 
+
                   <h4 class="page-title">Tài khoản khách hàng</h4>
                   @if(session('thongbao'))
                         <div class="alert-success alert">{{ session('thongbao') }}</div>

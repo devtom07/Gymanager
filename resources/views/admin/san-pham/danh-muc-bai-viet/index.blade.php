@@ -57,6 +57,7 @@
                                                 {{ $category->name}}
                                              </span>
                                           </td>
+
                                           <td data-org-colspan="1" data-priority="6" data-columns="tech-companies-1-col-3 bg-light">
                                                    <a class="dropdown-item btn-remove" href="{{route('cate_posts.delete',$category->id)}}">
                                                       <i class="mdi mdi-delete"></i> 

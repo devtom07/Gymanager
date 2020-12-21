@@ -27,6 +27,7 @@
                               </div>
                               <div class="dataTables_length" id="datatable_length">
                               </div>
+
                               <div id="datatable_filter" class="dataTables_filter" ><label><input id="myInput" type="text" placeholder="Tìm kiếm ..." class="form-control form-control-sm" placeholder="" aria-controls="datatable"></label></div>
                            </div>
                            <div class="table-responsive fixed-solution" data-pattern="priority-columns">
@@ -100,3 +101,4 @@
 </div>
    @include('admin.users.account.show_detail')
 @endsection()
+

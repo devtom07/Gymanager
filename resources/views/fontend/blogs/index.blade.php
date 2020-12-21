@@ -31,6 +31,7 @@
                                     <img class="card-img rounded-0" src="{{ asset('/posts/'.$list->avatar) }}" height="300px">
                                 </div>
                                 <div class="blog_details">
+
                                     <a class="d-inline-block" href="{{route('detailblog',$list->id)}}">
                                         <h2 class="blog-head" style="color: #2d2d2d;">{{ $list->title }}</h2>
                                     </a>
@@ -48,6 +49,7 @@
                                 <ul class="list cat-list">
                                     <li>
                                         @foreach($cate as $cate)
+
                                         <a href="{{ route('cateBlogs',$cate->id) }}" class="d-flex">
                                             <p style="color: black" >{{ $cate->name }}</p>
                                         </a>

@@ -8,6 +8,16 @@ use RealRashid\SweetAlert\Facades\Alert;
 use App\Models\Contact;
 use App\Models\NewMember;
 use App\Models\Service;
+ 
+use App\Models\Staff;
+use App\Models\Customer;
+use App\Models\Product;
+use App\Models\Position;
+use App\Models\PtProgram;
+use App\Models\Post;
+
+use App\User;
+
 use Illuminate\Support\Facades\DB;
 
 class AdminController extends Controller
@@ -15,7 +25,19 @@ class AdminController extends Controller
 
     public function index()
     {
-        return view('admin.index');
+        $countAccount = User::all()->count();
+        $countStaff = Staff::all()->count();
+        $countCustomer = Customer::all()->count();
+        $countService = Service::all()->count();
+        $countProduct = Product::all()->count();
+        $pt = Position::where('name', 'Huấn luyện viên')->get();
+        foreach ($pt as $pts) {
+            foreach ($pts->staff as $staffs) {
+                $countPt = Staff::where('id', $staffs->id)->get()->count();
+            }
+        }
+        $blog = Post::all()->count();
+        return view('admin.index', compact('countAccount', 'countStaff', 'countCustomer', 'countService', 'countProduct', 'countPt','blog'));
     }
 
     public function contact()
