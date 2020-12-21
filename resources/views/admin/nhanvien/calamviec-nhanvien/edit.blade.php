@@ -38,7 +38,7 @@
                                         @enderror
                                     <div class="form-group">
                                         <label for="exampleInputEmail1">Ca làm việc (*)</label>
-                                        <select class="form-control" id="calamviec" name="work_sift_id[]" multiple>
+                                        <select class="form-control" id="calamviec" name="work_sift_id">
                                             @foreach($data as $work_sifts)
                                             <option 
                                             <?php if($work_sifts->id == $work_staff->work_sift_id):?>

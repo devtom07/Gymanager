@@ -25,10 +25,10 @@
                 <div class="col-12">
                     <div class="card-box">
                         <h4 class="header-title mb-4">Thêm thể loại</h4>
-                        <form action="{{route('category.store')}}" method="post" enctype="multipart/form-data">
+                        <form action="{{route('cate_posts.store')}}" method="post" enctype="multipart/form-data">
                             @csrf
                             <div class="row">
-                                <div class="col-xl-6">
+                                <div class="col-xl-12">
                                     <div class="form-group">
                                         <label for="exampleInputEmail1">Tên thể loại (*)</label>
                                         <input type="text" class="form-control" name="name" id="exampleInputEmail1" placeholder="Tên thể loại">
@@ -37,8 +37,8 @@
                                             <p style="color:red">{{$message}}</p>
                                     @enderror
                                 </div>
-                                <button type="submit" class="btn btn-primary">Lưu</button>
                             </div>
+                            <button type="submit" class="btn btn-primary">Lưu</button>
                         </form>
                         <!-- end col -->
                         <!-- end row -->

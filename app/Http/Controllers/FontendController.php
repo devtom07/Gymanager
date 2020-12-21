@@ -9,6 +9,8 @@ use Illuminate\Http\Request;
 use App\Models\Contact;
 use App\Models\Service;
 use App\Models\NewMember;
+use App\Models\Post;
+use App\Models\Cate_posts;
 class FontendController extends Controller
 {
     public function index()
@@ -17,7 +19,9 @@ class FontendController extends Controller
     }
 
     public function blogs(){
-    	return view('fontend.blogs.index');
+        $listPosts = Post::all();
+        $cate = Cate_posts::all();
+    	return view('fontend.blogs.index', compact('listPosts', 'cate'));
     }
     public function newmember(){
     	$service = Service::all();
