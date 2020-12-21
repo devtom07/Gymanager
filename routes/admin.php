@@ -41,7 +41,7 @@ Route::middleware(['auth'])->group(function () {
             ->name('permission.update');
         Route::get('/xoachucnang/{id}', 'Users\PermissionController@destroy')
             ->name('permission.destroy');
-
+         //user
         Route::get('xemtaikhoan', 'Users\UserController@index')
             ->name('user.index')
             ->middleware(['permission:xem tài khoản']);
@@ -74,7 +74,8 @@ Route::middleware(['auth'])->group(function () {
             ->name('user.updateProfile');
         Route::post('profile/update/password/{id}', 'Users\UserController@updatePassword')
             ->name('user.updatePassword');
-
+        Route::get('user/search/', 'Users\UserController@search')
+            ->name('user.search');
         //=========================Nhân viên==================//
         //nhân viên
         Route::get('/nhan-vien', 'Nhanvien\ListnhanvienController@index')
@@ -168,6 +169,8 @@ Route::middleware(['auth'])->group(function () {
         //ca tap
         Route::get('catap', 'Dichvu\HymnalController@index')
             ->name('hymnal.index');
+        Route::get('catap/search', 'Dichvu\HymnalController@search')
+            ->name('hymnal.search');
         Route::get('themcatap', 'Dichvu\HymnalController@add')
             ->name('hymnal.add');
         Route::get('suacatap/{id}', 'Dichvu\HymnalController@edit')
@@ -233,8 +236,14 @@ Route::middleware(['auth'])->group(function () {
         Route::get('/show_san_pham/deleteCart/{id}', 'Sanpham\ProductController@DeleteCart')
             ->name('product.deleteCart_sp');
         Route::get('/show_san_pham/update', 'Sanpham\ProductController@UpdateCart')->name('product.update_sp');
-        // Route::get('/update/{id}/{qty}', 'Sanpham\ProductController@update_sp')->name('product.sanpham_ban');
 
+        //doanh thu
+        Route::get('/doanh-thu', 'Sanpham\CartController@index')
+            ->name('listRevenue');
+        Route::get('/doanh-thu-add', 'Sanpham\CartController@create')
+            ->name('revenue.add');
+        Route::post('/doanh-thu-add/post', 'Sanpham\CartController@store')
+            ->name('revenue.store');
         //loai san pham
         Route::get('/loai-san-pham', 'Sanpham\CategoryController@index')
             ->name('listcategory');
@@ -262,7 +271,7 @@ Route::middleware(['auth'])->group(function () {
             ->name('cate_posts.update');
         Route::get('/danh-muc-bai-viet-xoa/{id}', 'Sanpham\PostsController@destroy')
             ->name('cate_posts.delete');
-        
+
         //bai viet
         Route::get('/bai-viet', 'Sanpham\PostsController@index')
             ->name('listposts');
@@ -318,7 +327,6 @@ Route::middleware(['auth'])->group(function () {
         //liên hệ
         Route::get('/lien-he-admin', 'Admin\AdminController@contact')->name('contact.admin');
         Route::get('/xóa-lien-he/{id}', 'Admin\AdminController@deleteContact')->name('contact.delete');
-
         //-quan lý danh sách của khách đăng kí form
         Route::get('/danh-sach-dang-ki', 'Admin\AdminController@listForm')->name('listForm');
         Route::get('/xoa-danh-sach-dang-ki/{id}', 'Admin\AdminController@deleteListForm')->name('listForm.delete');

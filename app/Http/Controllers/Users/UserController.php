@@ -258,4 +258,22 @@ class UserController extends Controller
         Alert()->success('Thành công', 'Bạn đã cập nhật mật khẩu thành công');
         return redirect()->route('user.profile', $id);
     }
+    public function search(Request $request){
+    if($request->ajax()){
+    $output = '';
+        $user = User::with('staff')->orderBy('id', 'desc')->get();
+    if ($user){
+   foreach ($user as $key => $users){
+       $output.='';
+
+
+   }
+
+    }
+
+
+    }
+
+
+    }
 }
