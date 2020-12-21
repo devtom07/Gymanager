@@ -110,7 +110,15 @@
                                           </span></th>
                                           <td data-org-colspan="1" data-priority="1" data-columns="tech-companies-1-col-1">{{ $work_staff->Staff->name }}</td>
                                           <td data-org-colspan="1" data-priority="3" data-columns="tech-companies-1-col-2">{{ $work_staff->date_start }}</td>
-                                          <td data-org-colspan="1" data-priority="1" data-columns="tech-companies-1-col-3">{{ $work_staff->cycle }}</td>
+                                          <td data-org-colspan="1" data-priority="1" data-columns="tech-companies-1-col-3">
+                                            @if($work_staff->cycle == 'week')
+                                            Tuần
+                                            @elseif($work_staff->cycle == 'month')
+                                            Tháng
+                                            @else
+                                            Năm
+                                            @endif
+                                          </td>
                                           <td data-org-colspan="1" data-priority="3" data-columns="tech-companies-1-col-4">{{ $work_staff->work_schedule_name }}</td>
                                           <td data-org-colspan="1" data-priority="6" data-columns="tech-companies-1-col-7">{{ $work_staff->date_end }}</td>
                                           <td data-org-colspan="1" data-priority="6" data-columns="tech-companies-1-col-8">

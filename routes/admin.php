@@ -303,20 +303,23 @@ Route::middleware(['auth'])->group(function () {
         Route::get('/loai-san-pham-xoa/{id}', 'Sanpham\CategoryController@destroy')
             ->name('category.delete');
         //danh sach bai viet
-        Route::get('/danh-sach-bai-viet', 'Sanpham\PostsController@index')
+
+        Route::get('/danh-muc-bai-viet', 'Sanpham\CatePostController@index')
             ->name('listcate_posts')
-            ->middleware(['permission:Xem danh mục bài viết']);
-        Route::get('/them-danh-muc-bai-viet', 'Sanpham\PostsController@create')
+                      ->middleware(['permission:Xem danh mục bài viết']);
+        Route::get('/them-danh-muc-bai-viet', 'Sanpham\CatePostController@create')
             ->name('cate_posts.add')
-            ->middleware(['permission:Thêm danh mục bài viết']);
-        Route::post('/them-danh-muc-bai-viet/post', 'Sanpham\PostsController@store')
+                      ->middleware(['permission:Thêm danh mục bài viết']);
+        Route::post('/them-danh-muc-bai-viet/post', 'Sanpham\CatePostController@store')
             ->name('cate_posts.store')
-            ->middleware(['permission:Thêm danh mục bài viết']);
-        Route::get('/sua-danh-muc-bai-viet/{id}', 'Sanpham\PostsController@edit')
+                      ->middleware(['permission:Thêm danh mục bài viết']);
+        Route::get('/sua-danh-muc-bai-viet/{id}', 'Sanpham\CatePostController@edit')
             ->name('cate_posts.edit');
-        Route::post('/sua-danh-muc-bai-viet/post/{id}', 'Sanpham\PostsController@update')
+        Route::post('/sua-danh-muc-bai-viet/post/{id}', 'Sanpham\CatePostController@update')
             ->name('cate_posts.update');
-        Route::get('/danh-muc-bai-viet-xoa/{id}', 'Sanpham\PostsController@destroy')
+
+        Route::get('/danh-muc-bai-viet-xoa/{id}', 'Sanpham\CatePostController@destroy')
+
             ->name('cate_posts.delete');
 
         //bai viet

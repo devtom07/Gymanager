@@ -6,6 +6,7 @@ use App\Http\Requests\ValidateEditPosition;
 use App\Http\Controllers\Controller;
 use App\Models\Category;
 use App\Models\Product;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class CategoryController extends Controller
 {

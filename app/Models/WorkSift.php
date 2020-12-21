@@ -9,4 +9,8 @@ class WorkSift extends Model
     protected $table ='work_sifts';
     protected $primaryKey = 'id';
     protected $guarded =[];
+
+    public function workStaff(){
+    	return $this->hasOne(WorkSiftStaff::class);
+    }
 }
