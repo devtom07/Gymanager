@@ -11,6 +11,7 @@
                     <div class="page-title-box">
 
                         <h4 class="page-title">Các sản phẩm đã bán</h4>
+
                     </div>
                 </div>
             </div>
@@ -27,12 +28,21 @@
                                         <div class="btn-group dropdown-btn-group pull-right">
                                             <button type="button" class="btn btn-default"><a
                                                     href="{{route('listproduct')}}" class="active">Xem sản phẩm</a></button>
+
                                                     <button type="button" class="btn btn-default"><a
                                                         href="{{route('product.sanpham_ban')}}" class="active">Xem giỏ hàng
                                                         </a></button>
                                         </div>
                                         <div class="dataTables_length" id="datatable_length">
 
+                                        <!-- <label>Show <select
+                                                    name="datatable_length" aria-controls="datatable"
+                                                    class="custom-select custom-select-sm form-control form-control-sm">
+                                                    <option value="10">10</option>
+                                                    <option value="25">25</option>
+                                                    <option value="50">50</option>
+                                                    <option value="100">100</option>
+                                                </select> entries</label> -->
                                                 </div>
                                         <div id="datatable_filter" class="dataTables_filter"><label>Search:<input
                                                     type="search" class="form-control form-control-sm" placeholder=""
@@ -63,6 +73,7 @@
                                                         data-columns="tech-companies-1-col-1">
                                                         <span class="co-name">
                                                             {{$listRevenues->name}}
+
                                                         </span>
                                                     </td>
                                                     <td data-org-colspan="1" data-priority="1"
@@ -91,6 +102,7 @@
 
                                                 </tr>
                                               @endforeach
+
                                             </tbody>
                                         </table>
                                     </div>

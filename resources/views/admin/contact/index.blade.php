@@ -147,7 +147,7 @@
         <!-- Footer Start -->
         <!-- end Footer -->
     </div>
-    @if($contact == null){
+    {{-- @if($contact == null){ --}}
     @include('admin.contact.detail_contact')
-    }@endif
+    {{-- }@endif --}}
 @endsection

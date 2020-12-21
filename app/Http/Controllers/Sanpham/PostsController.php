@@ -5,14 +5,16 @@ namespace App\Http\Controllers\Sanpham;
 use App\Http\Requests\ValidateAddPosts;
 use App\Http\Requests\ValidateEditPosts;
 use App\Http\Controllers\Controller;
-use App\Models\Posts;
+use App\Models\Post;
+use Illuminate\Http\Request;
+
 use App\Models\Cate_posts;
 
 class PostsController extends Controller
 {
     public function index()
     {
-        $listPosts = Posts::all();
+        $listPosts = Post::all();
         return view('admin.san-pham.list-bai-viet.index',compact('listPosts'));
 
     }
@@ -28,8 +30,7 @@ class PostsController extends Controller
         $name_image = current(explode('.',$get_name_image));
         $new_image =  $name_image . rand(0,99) . '.' .$get_image->getClientOriginalExtension();
         $get_image->move('posts',$new_image);
-        $posts = new Posts;
-        $posts->name = $request->name;
+        $posts = new Post;
         $posts->start_posts = $request->start_posts;
         $posts->title = $request->title;
         $posts->detail = $request->detail;
@@ -47,7 +48,7 @@ class PostsController extends Controller
 
     public function edit($id)
     {
-        $listPosts = Posts::find($id);
+        $listPosts = Post::find($id);
         $listCate_posts = Cate_posts::all();
         return view('admin.san-pham.list-bai-viet.edit',['listPosts'=>$listPosts, 'listCate_posts'=>$listCate_posts]);
     }
@@ -60,21 +61,22 @@ class PostsController extends Controller
              $new_image =  $name_image . rand(0,99) . '.' .$get_image->getClientOriginalExtension();
              $get_image->move('posts',$new_image);
              $posts = new Posts;
-             $arr['name'] = $request->name;
              $arr['start_posts'] = $request->start_posts;
              $arr['detail'] = $request->detail;
              $arr['title'] = $request->title;
              $arr['id_posts_cate'] = $request->id_posts_cate;
              $arr['avatar'] = $new_image;
              $posts->where('id', $id)->update($arr);
+             // dd($posts);
          }else{
-             $posts = new Posts;
-             $arr['name'] = $request->name;
+             $posts = new Post;
+             // $arr['name'] = $request->name;
              $arr['start_posts'] = $request->start_posts;
              $arr['detail'] = $request->detail;
              $arr['title'] = $request->title;
              $arr['id_posts_cate'] = $request->id_posts_cate;
              $posts->where('id', $id)->update($arr);
+             // dd($posts);
          }
         Alert()->success('Thành công','Cập nhật bài viết thành công');
         return redirect()->action('Sanpham/PostsController@index');

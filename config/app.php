@@ -233,6 +233,7 @@ return [
         'Alert' => RealRashid\SweetAlert\Facades\Alert::class,
         'Datatables' => Yajra\Datatables\Facades\Datatables::class,
         Tightenco\Ziggy\ZiggyServiceProvider::class
+        'Cart' => Bumbummen99\Shoppingcart\Facades\Cart::class,
 
     ],
 

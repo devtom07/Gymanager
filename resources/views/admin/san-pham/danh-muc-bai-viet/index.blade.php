@@ -24,7 +24,7 @@
                         <div class="table-wrapper">
                            <div class="btn-toolbar">
                               <div class="btn-group dropdown-btn-group pull-right">
-                                 <button type="button" class="btn btn-default"><a href="{{route('category.add')}}" class="active">Tạo mới</a></button>
+                                 <button type="button" class="btn btn-default"><a href="{{route('cate_posts.add')}}" class="active">Tạo mới</a></button>
                                  <!-- <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Hiện thêm thông tin <span class="caret"></span></button>
                                  <ul class="dropdown-menu">
                                     <li class="checkbox-row"><input type="checkbox" name="toggle-tech-companies-1-col-1" id="toggle-tech-companies-1-col-1" value="tech-companies-1-col-1"> <label for="toggle-tech-companies-1-col-1">Email</label></li>
@@ -58,21 +58,10 @@
                                              </span>
                                           </td>
                                           <td data-org-colspan="1" data-priority="6" data-columns="tech-companies-1-col-8">
-                                             <div class="btn-group mt-1 mr-1">
-                                                <button class="btn btn-success btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                   <i class="mdi mdi-format-list-bulleted-square"></i>
-                                                </button>
-                                                <div class="dropdown-menu" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 29px, 0px);">
-                                                   <a class="dropdown-item" href="{{route('category.edit',$category->id)}}">
-                                                      <i class="mdi mdi-lead-pencil"></i> 
-                                                         Cập nhật
-                                                   </a>
-                                                   <a class="dropdown-item btn-remove" href="{{route('category.delete',$category->id)}}">
+                                                   <a class="dropdown-item btn-remove" href="{{route('cate_posts.delete',$category->id)}}">
                                                       <i class="mdi mdi-delete"></i> 
                                                          Xoá
                                                    </a>
-                                                </div>
-                                             </div>
                                           </td>
                                        </tr>
                                        @endforeach
