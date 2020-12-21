@@ -17,11 +17,10 @@ class CreateProductTable extends Migration
             $table->id();
             $table->string('name');
             $table->unsignedBigInteger('cate_id');
-//            $table->foreign('cate_id')->references('id')->on('category');
-            $table->string('avatar');
+            //            $table->foreign('cate_id')->references('id')->on('category');
+            $table->string('avatar')->nullable();
             $table->integer('price');
             $table->integer('quantity');
-            $table->integer('sale_price');
             $table->text('detail');
             $table->timestamps();
         });

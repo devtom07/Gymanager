@@ -117,10 +117,9 @@
                                                                     <a class="dropdown-item  btn-show"
                                                                        id="show_contact" data-id="{{$contact->id}}"
                                                                        data-toggle="modal"
-                                                                       data-target="#exampleModalCenter"> Chi tiết</a>
+                                                                       data-target="#exampleModalCenter">Chi tiết</a>
                                                                     <a class="dropdown-item"
                                                                        href="{{route('contact.delete',$contact->id)}}">Xoá</a>
-
                                                                 </div>
                                                             </div>
                                                         </td>

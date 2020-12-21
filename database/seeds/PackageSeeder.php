@@ -19,7 +19,7 @@ class PackageSeeder extends Seeder
             'start_date' => '2020-12-01',
             'end_date' => '2021-01-01',
             'desc' => 'note',
-            'status' => 'Hoạt động'
+            'status' => 'Đang hoạt động'
         ]);
         Package::create([
             'name' => 'Gói 2',
@@ -29,7 +29,7 @@ class PackageSeeder extends Seeder
             'start_date' => '2020-12-01',
             'end_date' => '2021-01-01',
             'desc' => 'note',
-            'status' => 'Hoạt động'
+            'status' => 'Đang hoạt động'
         ]);
         Package::create([
             'name' => 'Gói 3',
@@ -39,7 +39,7 @@ class PackageSeeder extends Seeder
             'start_date' => '2020-12-01',
             'end_date' => '2021-01-01',
             'desc' => 'note',
-            'status' => 'Hoạt động'
+            'status' => 'Đang hoạt động'
         ]);
         Package::create([
             'name' => 'Gói 4',
@@ -49,7 +49,7 @@ class PackageSeeder extends Seeder
             'start_date' => '2020-12-01',
             'end_date' => '2021-01-01',
             'desc' => 'note',
-            'status' => 'Hoạt động'
+            'status' => 'Đang hoạt động'
         ]);
     }
 }

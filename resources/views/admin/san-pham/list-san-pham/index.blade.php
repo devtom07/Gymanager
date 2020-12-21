@@ -28,30 +28,9 @@
                                             <button type="button" class="btn btn-default"><a
                                                     href="{{route('product.add')}}" class="active">Tạo
                                                     mới</a></button>
-                                                    <!-- <button type="button"
-                                                class="btn btn-default dropdown-toggle" data-toggle="dropdown">Hiện thêm
-                                                thông tin <span class="caret"></span></button>
-                                            <ul class="dropdown-menu">
-                                                <li class="checkbox-row"><input type="checkbox"
-                                                        name="toggle-tech-companies-1-col-1"
-                                                        id="toggle-tech-companies-1-col-1"
-                                                        value="tech-companies-1-col-1"> <label
-                                                        for="toggle-tech-companies-1-col-1">Email</label></li>
-                                                <li class="checkbox-row"><input type="checkbox"
-                                                        name="toggle-tech-companies-1-col-2"
-                                                        id="toggle-tech-companies-1-col-2"
-                                                        value="tech-companies-1-col-2"> <label
-                                                        for="toggle-tech-companies-1-col-2">Trạng thái</label></li>
-                                                {{-- <li class="checkbox-row"><input type="checkbox" name="toggle-tech-companies-1-col-3" id="toggle-tech-companies-1-col-3" value="tech-companies-1-col-3"> <label for="toggle-tech-companies-1-col-3">Ngày bắt đầu</label></li>
-                                    <li class="checkbox-row"><input type="checkbox" name="toggle-tech-companies-1-col-4" id="toggle-tech-companies-1-col-4" value="tech-companies-1-col-4"> 
-                                       <label for="toggle-tech-companies-1-col-4">Ngày kết thúc</label>
-                                    </li> --}}
-                                                <li class="checkbox-row"><input type="checkbox"
-                                                        name="toggle-tech-companies-1-col-5"
-                                                        id="toggle-tech-companies-1-col-5"
-                                                        value="tech-companies-1-col-5"> <label
-                                                        for="toggle-tech-companies-1-col-5">Avarta</label></li>
-                                            </ul> -->
+                                                    <button type="button" class="btn btn-default"><a
+                                                        href="{{route('product.sanpham_ban')}}" class="active">Xem giỏ hàng
+                                                        </a></button>
                                         </div>
                                         <div class="dataTables_length" id="datatable_length">
                                         <!-- <label>Show <select
@@ -127,7 +106,7 @@
                                                     <td data-org-colspan="1" data-priority="3"
                                                         data-columns="tech-companies-1-col-4"><button type="button"
                                                             class="btn"><a class=" btn bg-success"
-                                                                href="{{route('product.sanpham_ban',$product->id)}}">Bán</a></button>
+                                                                href="{{route('product.AddCart' ,$product->id)}}">Bán</a></button>
                                                     </td>
                                                     <td data-org-colspan="1" data-priority="6"
                                                         data-columns="tech-companies-1-col-8">

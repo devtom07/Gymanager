@@ -1,7 +1,8 @@
 <?php
 
-use Illuminate\Database\Seeder;
 use App\Models\Position;
+use Illuminate\Database\Seeder;
+
 class PositionSeeder extends Seeder
 {
     /**
@@ -12,7 +13,7 @@ class PositionSeeder extends Seeder
     public function run()
     {
         Position::create([
-         'name' => 'Huấn luyện viên',
+            'name' => 'Huấn luyện viên',
         ]);
         Position::create([
             'name' => 'Quản lý kho',

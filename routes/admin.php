@@ -169,8 +169,8 @@ Route::middleware(['auth'])->group(function () {
         //ca tap
         Route::get('catap', 'Dichvu\HymnalController@index')
             ->name('hymnal.index');
-        Route::get('catap/getdata', 'Dichvu\HymnalController@getdata')
-            ->name('hymnal.getdata');
+        Route::get('catap/search', 'Dichvu\HymnalController@getdata')
+            ->name('hymnal.search');
         Route::get('themcatap', 'Dichvu\HymnalController@add')
             ->name('hymnal.add');
         Route::get('suacatap/{id}', 'Dichvu\HymnalController@edit')
