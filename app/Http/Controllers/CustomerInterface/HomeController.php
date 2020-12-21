@@ -3,19 +3,23 @@
 namespace App\Http\Controllers\CustomerInterface;
 
 use App\Http\Controllers\Controller;
+use App\Models\TeachingSchedule;
 use Illuminate\Http\Request;
 use App\Models\Customer;
 use App\Models\CustomerAccount;
 use App\Http\Requests\CustomerAccount\ChangePasswordRequest;
-use Illuminate\Support\Facades\DB;   
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 use App\Models\Service;
 use App\Models\CustomerAccount;
 
 class HomeController extends Controller
 {
     public function index(){
-
-    	return view('customers.customer_training.index');
+     $customer_id = Auth::guard('customer_accounts')->user()->id_customer;
+        $teachingSchedule1 = TeachingSchedule::where('id_customer', $customer_id)->get();
+        $teachingSchedule = collect($teachingSchedule1)->sortBy('date')->values();
+    	return view('customers.customer_training.index',compact('teachingSchedule'));
     }
     public function profile($id){
     	$customer_account = CustomerAccount::with('customer')->where('id',$id)->get();

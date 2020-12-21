@@ -21,7 +21,9 @@
     <link href="{{asset('admin/css/icons.min.css')}}" rel="stylesheet" type="text/css">
     <link href="{{asset('admin/css/app.min.css')}}" rel="stylesheet" type="text/css" id="app-stylesheet">
     <link href="{{asset('admin/css/style.css')}}" rel="stylesheet" type="text/css" id="app-stylesheet">
-
+     {{--     datatable--}}
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    {{--     enđatable--}}
     <link href="{{asset('admin/css/bootstrap.min.css')}}" rel="stylesheet" type="text/css" id="bootstrap-stylesheet">
     <link href="{{asset('admin/css/icons.min.css')}}" rel="stylesheet" type="text/css">
     <link href="{{asset('admin/css/app.min.css')}}" rel="stylesheet" type="text/css" id="app-stylesheet">
@@ -101,7 +103,13 @@
                     </a>
                 </li>
 
-            </ul>
+                </div>
+            </li>
+
+
+
+        </ul>
+
 
             <!-- LOGO -->
             <div class="logo-box">
@@ -192,7 +200,7 @@
                             </a>
                             <ul class="nav-second-level" aria-expanded="false">
                                 <li><a href="{{route('customer')}}">Danh sách khách hàng</a></li>
-                                <li><a href="{{ route('package.index') }}">Lịch tập</a></li>
+                                <li><a href="{{ route('customer.add') }}">Đăng kí</a></li>
                             </ul>
                         </li>
                         <li>
@@ -400,6 +408,7 @@
 
 <!-- Right bar overlay-->
 <div class="rightbar-overlay"></div>
+
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
         crossorigin="anonymous">
@@ -409,14 +418,13 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
 <!-- Vendor js -->
-<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 <script src="{{asset('admin/js/vendor.min.js')}}"></script>
 
 <!--Morris Chart-->
 <script src="{{asset('admin\libs\morris-js\morris.min.js')}}"></script>
-<script src="{{asset('admin   \libs\raphael\raphael.min.js')}}"></script>
+{{-- <script src="{{asset('admin   \libs\raphael\raphael.min.js')}}"></script> --}}
 <!-- Dashboard init js-->
-<script src="{{asset('admin\js\pages\dashboard.init.js')}}"></script>
+{{-- <script src="{{asset('admin\js\pages\dashboard.init.js')}}"></script> --}}
 <!-- App js -->
 <script src="{{asset('admin\js\app.min.js')}}"></script>
 
@@ -437,7 +445,7 @@
 <script src="{{asset('admin/libs/morris-js/morris.min.js')}}"></script>
 <script src="{{asset('admin/libs/raphael/raphael.min.js')}}"></script>
 <!-- Dashboard init js-->
-<script src="{{asset('assets/js/pages/dashboard.init.js')}}"></script>
+{{-- <script src="{{asset('assets/js/pages/dashboard.init.js')}}"></script> --}}
 
 <!-- App js -->
 <script src="{{asset('admin/js/app.min.js')}}"></script>
@@ -449,7 +457,12 @@
 <script src="{{asset('admin/js/ptprogram/addptProgram.js')}}"></script>
 {{-- <script scr="{{asset('admin/js/package/package.js')}}"></script> --}}
 <script src="{{ asset('admin/js/ajax/ajax.js') }}"></script>
+<script src="{{ asset('admin/js/user/SearchAccount.js') }}"></script>
+<script src="{{ asset('admin/js/hymnal/search.js') }}"></script>
 <script src="{{ asset('ckeditor4/ckeditor.js') }}"></script>
+{{-- datatable--}}
+<!-- Bootstrap JavaScript -->
+<!-- App scripts -->
 <script> CKEDITOR.replace('editor1'); </script>
 <script> CKEDITOR.replace('editor2'); </script>
 <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
