@@ -62,18 +62,25 @@
                                     @error('hour_end')
                                     <p style="color:red">{{$message}}</p>
                                     @enderror
-                                    <div class="form-group">
+                                    {{-- <div class="form-group">
                                         <label>Trạng thái</label>
                                         <div class="mt-4">
                                             <div class="radio radio-info form-check-inline">
-                                                <input type="radio" id="inlineRadio1" value="0" name="status" checked>
+                                                <input type="radio" id="inlineRadio1" value="Còn hiệu lực" name="status" checked>
                                                 <label for="inlineRadio1">Còn hiệu lực</label>
                                             </div>
                                             <div class="radio form-check-inline">
-                                                <input type="radio" id="inlineRadio2" value="1" name="status">
+                                                <input type="radio" id="inlineRadio2" value="Hết hạn" name="status">
                                                 <label for="inlineRadio2"> Hết hạn</label>
                                             </div>
                                         </div>
+                                    </div> --}}
+                                    <div class="form-group">
+                                        <label>Trạng thái</label>
+                                        <select class="form-control" id="exampleSelect1" name="status">
+                                            <option value="Hoạt động">Hoạt động</option>
+                                            <option value="Không hoạt động">Không hoạt động</option>
+                                        </select>
                                     </div>
                                     <button type="submit" class="btn btn-primary">Submit</button>
                                     {{csrf_field()}}

@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers\Sanpham;
-
+use RealRashid\SweetAlert\Facades\Alert;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Cate_posts;
