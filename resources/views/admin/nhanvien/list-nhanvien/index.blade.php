@@ -102,7 +102,9 @@
                                        </tr>
                                        @endforeach
                                     </tbody>
+
                                  </table>
+                                 {!! $listStaffs->render() !!}
                            </div>
                         </div>
                         <!-- end .table-responsive -->

@@ -74,7 +74,7 @@
                                             </div>
                                         </div>
                                         <div class="table-responsive fixed-solution" data-pattern="priority-columns">
-
+                                            <div id="datatable_filter" class="dataTables_filter" ><label><input id="myInput" type="text" placeholder="Tìm kiếm ..." class="form-control form-control-sm" placeholder="" aria-controls="datatable"></label></div>
                                             <table id="tech-companies-1" class="table table-striped">
                                                 <thead>
                                                 <tr>
@@ -89,7 +89,7 @@
                                                     <th data-priority="6" id="tech-companies-1-col-8-clone">Action</th>
                                                 </tr>
                                                 </thead>
-                                                <tbody>
+                                                <tbody id="myTable">
                                                     
                                                 @foreach($contact as $key => $contact)
 
