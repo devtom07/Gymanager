@@ -1,5 +1,5 @@
 @extends('fontend.layouts.index')
-@section('title', ' Chi tiết bài viết')
+@section('title', 'Bài viết')
 @section('content')
 <main>
       <!--? Hero Start -->
@@ -21,35 +21,21 @@
       <section class="blog_area single-post-area section-padding">
          <div class="container">
             <div class="row">
-               <div class="col-lg-8 posts-list">
+               <div class="col-lg-12 posts-list">
                   <div class="single-post">
+
+                     @foreach($post as $post)
                      <div class="feature-img">
-                        <img class="img-fluid" src="{{ asset('/posts/'.$detail->avatar) }}"height="300px">
+                        <img class="img-fluid" src="{{ asset('/posts/'.$post->avatar) }}"height="300px">
                      </div>
                      <div class="blog_details">
-                        <h2 style="color: #2d2d2d;">{{ $detail->title }}
+                        <h2 style="color: #2d2d2d;">{{ $post->title }}
                         </h2>
                         <p class="excert">
-                          {{ $detail->detail }}
+                          {{ $post->detail }}
                         </p>
                      </div>
-                  </div>
-               </div>
-               <div class="col-lg-4">
-                  <div class="blog_right_sidebar">
-                     
-                     <aside class="single_sidebar_widget post_category_widget">
-                        <h4 class="widget_title" style="color: #2d2d2d;">Danh Muc</h4>
-                        <ul class="list cat-list">
-                           <li>
-                              @foreach($cate as $cate)
-                              <a href="{{ route('cateBlogs',$cate->id) }}" class="d-flex">
-                                 <p>{{ $cate->name }}</p>
-                              </a>
-                              @endforeach
-                           </li>
-                        </ul>
-                     </aside>
+                     @endforeach
                   </div>
                </div>
             </div>

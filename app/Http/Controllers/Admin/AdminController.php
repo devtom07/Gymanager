@@ -8,6 +8,7 @@ use RealRashid\SweetAlert\Facades\Alert;
 use App\Models\Contact;
 use App\Models\NewMember;
 use App\Models\Service;
+ 
 use App\Models\Staff;
 use App\Models\Customer;
 use App\Models\Product;
@@ -16,7 +17,8 @@ use App\Models\PtProgram;
 use App\Models\Post;
 
 use App\User;
-use DB;
+
+use Illuminate\Support\Facades\DB;
 
 class AdminController extends Controller
 {

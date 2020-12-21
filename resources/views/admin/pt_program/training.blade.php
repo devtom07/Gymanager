@@ -2,8 +2,9 @@
 @section('title', 'Chương trình PT')
 @section('content')
     <div class="container">
-        <table class="table table-data" style="background: #fff;margin-top:100px;margin-left: 120px ">
+        <table class="table table-data" style="background: #fff;margin-top:0px;margin-left: 120px ">
             <thead>
+            <div id="datatable_filter" class="dataTables_filter" style="margin-top:150px;margin-left: 120px"><label><input id="myInput" type="text" placeholder="Tìm kiếm ..." class="form-control form-control-sm" placeholder="" aria-controls="datatable"></label></div>
             <tr>
                 <th scope="col">Stt</th>
                 <th scope="col">Ngày tập</th>

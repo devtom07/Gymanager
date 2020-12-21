@@ -23,12 +23,22 @@ class FontendController extends Controller
         $cate = Cate_posts::all();
     	return view('fontend.blogs.index', compact('listPosts', 'cate'));
     }
+
+    public function cateBlogs($id){
+        // $listPosts = Post::all();
+        $cate = Cate_posts::find($id);
+        $post = Post::where('id_posts_cate',$id)->get();
+        return view('fontend.blogs.cate_blog', compact('cate', 'post'));
+    }
+
     public function newmember(){
     	$service = Service::all();
     	return view('fontend.newmember.index', compact('service'));
     }
-    public function detailblog(){
-    	return view('fontend.blogs.detailblog');
+    public function detailblog($id){
+        $detail = Post::find($id);
+        $cate = Cate_posts::all();
+    	return view('fontend.blogs.detailblog', compact('detail','cate'));
 	}
     public function service(){
     	return view('fontend.services.index');

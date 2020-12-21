@@ -38,7 +38,8 @@
                                             </div>
                                             <div class="dataTables_length" id="datatable_length">
                                             </div>
-                                            <div id="datatable_filter" class="dataTables_filter" ><label>Search:<input name="search" id="searchHymnal" type="search" class="form-control form-control-sm" placeholder="" aria-controls="datatable" ></label></div>
+                                            <div id="datatable_filter" class="dataTables_filter" ><label><input id="myInput" type="text" placeholder="Tìm kiếm ..." class="form-control form-control-sm" placeholder="" aria-controls="datatable"></label></div>
+
 
 
                                         </div>
@@ -54,7 +55,7 @@
                                                     <th data-priority="6" id="tech-companies-1-col-8-clone">Action</th>
                                                 </tr>
                                                 </thead>
-                                                <tbody id="listHymnal">
+                                                <tbody id="myTable">
 
                                                 @foreach($hymnal as $key => $hymnals)
                                                     <tr>
@@ -79,6 +80,7 @@
 
                                                 </tbody>
                                             </table>
+                                            {!! $hymnal->render() !!}
                                         </div>
                                     </div>
                                     <!-- end .table-responsive -->
