@@ -74,7 +74,7 @@
                     <div class="col mb-2">
                         <div class="row">
                             <div class="col-sm-12 col-md-6 text-right">
-                                <button class="btn btn-lg btn-block btn-success text-uppercase" type="submit">Tiếp tục mua hàng</button>
+                                <a href="{{route('listproduct')}}" class="btn btn-lg btn-block btn-success text-uppercase" type="submit">Tiếp tục mua hàng</a>
                             </div>
                             <div class="col-sm-12 col-md-6 text-right">
                                 <button class="btn btn-lg btn-block btn-success text-uppercase" type="submit">Bán</button>
