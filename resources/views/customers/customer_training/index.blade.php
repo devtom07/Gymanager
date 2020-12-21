@@ -13,27 +13,15 @@
     </tr>
   </thead>
   <tbody>
+  @foreach($teachingSchedule as $key => $teachingSchedules)
     <tr>
-      <th scope="row">1</th>
-      <td>12/02/2020</td>
-      <td>ca2</td>
-      <td>Nguyễn Hữu Tiến</td>
-      <td>18:00-19:00</td>
+      <th scope="row">{{$key+1}}</th>
+      <td>{{$teachingSchedules->date}}</td>
+      <td>{{$teachingSchedules->hymnal->name}}</td>
+      <td>{{$teachingSchedules->pt->name}}</td>
+      <td>{{$teachingSchedules->hymnal->start_hour}} - {{$teachingSchedules->hymnal->end_hour}}</td>
     </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>12/02/2020</td>
-      <td>ca4</td>
-      <td>Nguyễn Hữu Tiến</td>
-      <td>19:00-20:00</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>12/02/2020</td>
-      <td>ca1</td>
-      <td>Nguyễn Hữu Tiến</td>
-      <td>17:00-18:00</td>
-    </tr>
+  @endforeach
   </tbody>
 </table>
   </div>

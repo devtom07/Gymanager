@@ -46,7 +46,7 @@
                                                     </th>
                                                     <th data-priority="1" id="tech-companies-1-col-3-clone">Dịch vụ</th>
                                                     <th data-priority="3" id="tech-companies-1-col-4-clone">Giá</th>
-                                                    <th data-priority="3" id="tech-companies-1-col-5-clone">Còn lại</th>
+{{--                                                    <th data-priority="3" id="tech-companies-1-col-5-clone">Còn lại</th>--}}
                                                     <th data-priority="6" id="tech-companies-1-col-6-clone">Ngày bắt
                                                         đầu
                                                     </th>
@@ -70,8 +70,8 @@
                                                             data-columns="tech-companies-1-col-2">{{$customer->name}}</td>
                                                         <td data-org-colspan="1" data-priority="1"
                                                             data-columns="tech-companies-1-col-3">{{$customer->total_package}}</td>
-                                                        <td id="days" data-org-colspan="1" data-priority="3"
-                                                            data-columns="tech-companies-1-col-4"></td>
+{{--                                                        <td id="days" data-org-colspan="1" data-priority="3"--}}
+{{--                                                            data-columns="tech-companies-1-col-4"></td>--}}
                                                         <td data-org-colspan="1" data-priority="3"
                                                             data-columns="tech-companies-1-col-5">{{$customer->start_date}}</td>
                                                         <td id="endDate" data-org-colspan="1" data-priority="6"
