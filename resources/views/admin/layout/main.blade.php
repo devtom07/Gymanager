@@ -233,7 +233,7 @@
                                 <span> Doanh thu </span>
                             </a>
                             <ul class="nav-second-level" aria-expanded="false">
-                                <li><a href="">Doanh thu</a></li>
+                                <li><a href="{{route('listRevenue')}}">Doanh thu</a></li>
                             </ul>
                         </li>
                         <li>
@@ -508,6 +508,7 @@ function getdate(tt,total) {
 $(document).ready(function() {
     $('#calamviec').select2();
 });
+
 
 $(document).ready(function(){
   $("#myInput").on("keyup", function() {
