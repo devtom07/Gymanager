@@ -16,7 +16,7 @@ class ListnhanvienController extends Controller
 
     public function index(Request $request)
     {
-        $listStaffs = Staff::paginate(10);
+        $listStaffs = Staff::paginate(5);
         if ($request->ajax()) {
             return view('admin.nhanvien.list-nhanvien.index', compact('listStaffs'));
         }

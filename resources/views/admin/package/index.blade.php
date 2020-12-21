@@ -99,6 +99,7 @@
                                        @endforeach
                                  </tbody>
                               </table>
+                              {!! $package->render() !!}
                            </div>
                         </div>
                         <!-- end .table-responsive -->

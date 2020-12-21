@@ -100,6 +100,7 @@
                                                 @endforeach
                                                 </tbody>
                                             </table>
+                                            {!! $customers->render() !!}
                                         </div>
                                     </div>
                                     <!-- end .table-responsive -->

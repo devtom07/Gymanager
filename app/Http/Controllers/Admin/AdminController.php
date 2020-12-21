@@ -9,6 +9,7 @@ use App\Models\Contact;
 use App\Models\NewMember;
 use App\Models\Service;
 use DB;
+
 class AdminController extends Controller
 {
 
@@ -17,31 +18,35 @@ class AdminController extends Controller
         return view('admin.index');
     }
 
-    public function contact(){
-        $contact= Contact::all();
+    public function contact()
+    {
+        $contact = Contact::all();
         return view('admin.contact.index', compact('contact'));
     }
 
-    public function deleteContact($id){
+    public function deleteContact($id)
+    {
         $contact = Contact::find($id);
         $contact->delete();
         Alert()->success('Thông báo', 'Bạn đã xóa thành công!!');
         return redirect()->back();
     }
 
-    public function listForm(){
-        $data['list'] = DB::table('new_members')->join('services','new_members.service', '=', 'services.id')
-        ->get();
+    public function listForm()
+    {
+        $data['list'] = DB::table('new_members')->join('services', 'new_members.service', '=', 'services.id')
+            ->get();
         // $list = NewMember::with('service')->orderBy('id','desc')->get();
         // foreach ($list as $list ) {
         //     $id_service = $list->service;
         // }
-        
+
         // $service = Service::where('id', $id_service)->get();
         return view('admin.contact.new_member', $data);
     }
 
-    public function deleteListForm($id){
+    public function deleteListForm($id)
+    {
         $list = NewMember::find($id);
         $list->delete();
         Alert()->success('Thông báo!', 'Bạn đã xóa thành công!!');

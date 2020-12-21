@@ -128,6 +128,7 @@
                                        @endforeach
                                     </tbody>
                                  </table>
+                                 {!! $work_sift->render() !!}
                            </div>
                         </div>
                         <!-- end .table-responsive -->
