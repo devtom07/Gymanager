@@ -103,12 +103,13 @@
                                       @foreach($work_staffs as $work_staff)
                                        <tr>
                                           <th data-org-colspan="1" data-columns="tech-companies-1-col-0"><span class="co-name">
-                                            @if(is_array($work_staff) || is_object($work_staff) )
+
+                                            @if(is_array($work_staff->work_sift_id) || is_object($work_staff->work_sift_id) )
                                             @foreach(
                                             json_decode($work_staff->work_sift_id)  as $item)
-                                            <li>{{$work_sift->find($item)->name }}</li>
-                                          @endforeach
-                                          @endif
+                                            <li>{{$item->name }}</li>
+                                             @endforeach
+                                             @endif
                                           {{-- {{ $work_staff->workSift->name }} --}}
                                           </span></th>
                                           <td data-org-colspan="1" data-priority="1" data-columns="tech-companies-1-col-1">{{ $work_staff->Staff->name }}</td>

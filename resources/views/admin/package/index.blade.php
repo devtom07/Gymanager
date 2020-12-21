@@ -52,7 +52,7 @@
                                        <th data-priority="6" id="tech-companies-1-col-8-clone" >Action</th>
                                     </tr>
                                  </thead>
-                                 <tbody>
+                                 <tbody id="myTable">
                                     @foreach($package as $key => $packages)
                                        <tr>
                                           <th data-org-colspan="1" data-columns="tech-companies-1-col-0">{{$key+1}}</th>
@@ -120,4 +120,5 @@
 
    <!-- end Footer -->
 </div>
+
 @endsection()
