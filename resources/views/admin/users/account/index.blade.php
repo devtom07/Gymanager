@@ -54,7 +54,7 @@
                                        <td data-org-colspan="1" data-priority="1" data-columns="tech-companies-1-col-1">{{$users->name}}</td>
                                        <td data-org-colspan="1" data-priority="1" data-columns="tech-companies-1-col-1">
                                           @foreach($users->role as $roles)
-                                            {{$roles->name}}
+                                            {{$roles->name}} <br>
                                           @endforeach
                                        </td>
                                     @if($users->avatar)

@@ -39,11 +39,14 @@
                                         </div>
                                         <div class="form-group">
                                             <label>Chon nhóm chức năng (*)</label>
-                                            <select multiple name="permission[]" class="form-control" id="exampleSelect1">
-                                                @foreach($permission as $permissions)
-                                                    <option {{$role_permission->contains($permissions->id) ? 'selected' : ''}} value="{{$permissions->id}}">{{$permissions->name}}</option>
+                                            <div class="mt-3">
+                                                @foreach($permission as $permissions )
+                                                    <div>
+                                                        <input {{$role_permission->contains($permissions->id) ? 'checked' : ''}} class="checkbox" name="permission[]" value="{{$permissions->id}}" type="checkbox"  >
+                                                        <label class="label" for="customCheck1">{{$permissions->name}}</label>
+                                                    </div>
                                                 @endforeach
-                                            </select>
+                                            </div>
                                             @if($errors->first('permission'))
                                                 <p class="text-danger">{{ $errors->first('permission') }}</p>
                                             @endif

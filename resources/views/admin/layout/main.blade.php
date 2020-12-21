@@ -74,16 +74,7 @@
                         </a>
 
                         <!-- item-->
-                        <a href="javascript:void(0);" class="dropdown-item notify-item">
-                            <i class="mdi mdi-settings-outline"></i>
-                            <span>Settings</span>
-                        </a>
 
-                        <!-- item-->
-                        <a href="javascript:void(0);" class="dropdown-item notify-item">
-                            <i class="mdi mdi-lock-outline"></i>
-                            <span>Lock Screen</span>
-                        </a>
 
                         <div class="dropdown-divider"></div>
 
@@ -96,11 +87,7 @@
                     </div>
                 </li>
 
-                <li class="dropdown notification-list">
-                    <a href="javascript:void(0);" class="nav-link right-bar-toggle waves-effect waves-light">
-                        <i class="mdi mdi-settings-outline noti-icon"></i>
-                    </a>
-                </li>
+
 
                 </div>
             </li>
@@ -284,39 +271,114 @@
 
             </div>
             @elseif($user->hasAnyRole('Admin'))
-            <div class="slimscroll-menu">
-                <!--- Sidemenu -->
-                <div id="sidebar-menu">
+                <div class="slimscroll-menu">
 
-                    <ul class="metismenu" id="side-menu">
+                    <!--- Sidemenu -->
+                    <div id="sidebar-menu">
 
-                        <li class="menu-title">Gymmanager</li>
+                        <ul class="metismenu" id="side-menu">
 
-                        <li>
-                            <a href="{{route('dashboard')}}">
-                                <i class="mdi mdi-view-dashboard"></i>
-                                <span> Dashboard </span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="javascript: void(0);">
-                                <i class="mdi mdi-star-off"></i>
-                                <span>Nhân viên</span>
-                                {{--                                <span class="badge badge-danger badge-pill float-right">New</span>--}}
-                            </a>
-                            <ul class="nav-second-level" aria-expanded="false">
-                                <li><a href="{{route('listnhanvien')}}">Danh sách nhân viên</a></li>
-                                <li><a href="{{route('calamviec')}}">Ca làm việc</a></li>
-                                <li><a href="{{route('calamviecnhanvien')}}">Ca làm việc nhân viên</a></li>
-                            </ul>
-                        </li>
-                    </ul>
+                            <li class="menu-title">Gymmanager</li>
+
+                            <li>
+                                <a href="{{route('dashboard')}}">
+                                    <i class="mdi mdi-view-dashboard"></i>
+                                    <span> Dashboard </span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="javascript: void(0);">
+                                    <i class="mdi mdi-account-multiple"></i>
+                                    <span> Khách hàng </span>
+                                    {{--                                <span class="badge badge-danger badge-pill float-right">New</span>--}}
+                                </a>
+                                <ul class="nav-second-level" aria-expanded="false">
+                                    <li><a href="{{route('customer')}}">Danh sách khách hàng</a></li>
+                                    <li><a href="{{ route('customer.add') }}">Đăng kí</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="javascript: void(0);">
+                                    <i class="mdi mdi-teach"></i>
+                                    <span>Chương trình PT</span>
+                                </a>
+                                <ul class="nav-second-level" aria-expanded="false">
+                                    <li><a href="{{route('ptProgram.add')}}">Đăng ký </a></li>
+                                    <li><a href="{{route('ptProgram.index')}}">Chương trình PT</a></li>
+                                    <li><a href="{{route('ptProgram.training')}}">Lịch dạy</a></li>
+                                    <li><a href="{{route('ptProgram.profilePt')}}">Thông tin PT</a></li>
+
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="javascript: void(0);">
+                                    <i class="mdi mdi-package"></i>
+                                    <span>Dịch vụ</span>
+                                </a>
+                                <ul class="nav-second-level" aria-expanded="false">
+                                    <li><a href="{{route('service')}}"> Xem dịch vụ</a></li>
+                                    <li><a href="{{route('hymnal.index')}}">Ca tập</a></li>
+                                    <li><a href="{{ route('package.index') }}">Gói cước</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="javascript: void(0);">
+                                    <i class="mdi mdi-reflect-vertical"></i>
+                                    <span> Doanh thu </span>
+                                </a>
+                                <ul class="nav-second-level" aria-expanded="false">
+
+                                    <li><a href="{{route('listRevenue')}}">Doanh thu</a></li>
+
+
+
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="javascript: void(0);">
+                                    <i class="mdi mdi-access-point"></i>
+                                    <span> Quản lý sản phẩm </span>
+                                </a>
+                                <ul class="nav-second-level" aria-expanded="false">
+                                    <li><a href="{{route('listproduct')}}">Danh sách sản phẩm</a></li>
+                                    <li><a href="{{route('product.add')}}">Thêm sản phẩm</a></li>
+                                    <li><a href="{{route('listcategory')}}">Danh sách loại sản phẩm</a></li>
+                                    <li><a href="{{route('category.add')}}">Thêm loại sản phẩm</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="javascript: void(0);">
+                                    <i class="mdi mdi-reflect-vertical"></i>
+                                    <span>Liên hệ</span>
+                                </a>
+                                <ul class="nav-second-level" aria-expanded="false">
+                                    <li><a href="{{route('contact.admin')}}">Xem thông tin liên hệ</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="javascript: void(0);">
+                                    <i class="mdi mdi-seal-variant"></i>
+                                    <span>Quản lý bài viết</span>
+                                </a>
+                                <ul class="nav-second-level" aria-expanded="false">
+                                    <li><a href="{{route('listposts')}}">Bài viết</a></li>
+                                    <li><a href="{{route('listcate_posts')}}">Danh mục bài viết</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="{{ route('listForm') }}">
+                                    <i class="mdi mdi-bread-slice"></i>
+                                    <span>Thông tin Đăng kí</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- End Sidebar -->
+
+                    <div class="clearfix"></div>
+
                 </div>
-                <!-- End Sidebar -->
-
-                <div class="clearfix"></div>
-
-            </div>
             @elseif($user->hasAnyRole('pt'))
             <div class="slimscroll-menu">
                 <!--- Sidemenu -->
