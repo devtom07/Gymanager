@@ -37,8 +37,9 @@
                                             <p style="color:red">{{$message}}</p>
                                     @enderror
                                 </div>
-                                <button type="submit" class="btn btn-primary">Lưu</button>
+                                {{-- <button type="submit" class="btn btn-primary">Lưu</button> --}}
                             </div>
+                            <button type="submit" class="btn btn-primary">Lưu</button>
                         </form>
                         <!-- end col -->
                         <!-- end row -->

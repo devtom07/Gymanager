@@ -22,9 +22,7 @@
                                     <div class="table-wrapper">
                                         <div class="btn-toolbar">
                                             <div class="btn-group focus-btn-group">
-                                                <!-- <button type="button" class="btn btn-default"><span
-                                                            class="glyphicon glyphicon-screenshot"></span> Lọc
-                                                </button> -->
+                                                <div id="datatable_filter" class="dataTables_filter" ><label><input id="myInput" type="text" placeholder="Tìm kiếm ..." class="form-control form-control-sm" placeholder="" aria-controls="datatable"></label></div>
                                             </div>
                                             <div class="btn-group dropdown-btn-group pull-right">
                                                 <button type="button" class="btn btn-default"><a
@@ -56,7 +54,7 @@
                                                     <th data-priority="6" id="tech-companies-1-col-8-clone">Action</th>
                                                 </tr>
                                                 </thead>
-                                                <tbody>
+                                                <tbody id="myTable">
                                                 @foreach($customers as $key => $customer)
 
                                                     <tr>

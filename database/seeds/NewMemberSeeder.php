@@ -18,7 +18,7 @@ class NewMemberSeeder extends Seeder
 			'service' => '2',
 			'email' => 'tien@gmail.com',
 			'content' => 'muốn tập đẹp bụng',
-			'status' => '1'
+			'statuss' => '1'
 		]);
 		NewMember::create([
 			'name_member' => 'Nguyễn Văn Thiên',
@@ -26,7 +26,7 @@ class NewMemberSeeder extends Seeder
 			'service' => '1',
 			'email' => 'thien@gmail.com',
 			'content' => 'muốn tập bụng 6 múi',
-			'status' => '0'
+			'statuss' => '0'
 		]);
 		NewMember::create([
 			'name_member' => 'Nguyễn Tiền',
@@ -34,7 +34,7 @@ class NewMemberSeeder extends Seeder
 			'service' => '1',
 			'email' => 'tien1@gmail.com',
 			'content' => 'muốn tập chân thon',
-			'status' => '0'
+			'statuss' => '0'
 		]);
 	}
 }

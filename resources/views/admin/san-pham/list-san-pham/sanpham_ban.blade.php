@@ -74,7 +74,11 @@
                     <div class="col mb-2">
                         <div class="row">
                             <div class="col-sm-12 col-md-6 text-right">
-                                <button class="btn btn-lg btn-block btn-success text-uppercase" type="submit">Checkout</button>
+                                <button class="btn btn-lg btn-block btn-success text-uppercase" type="submit">Tiếp tục mua hàng</button>
+                            </div>
+                            <div class="col-sm-12 col-md-6 text-right">
+                                <button class="btn btn-lg btn-block btn-success text-uppercase" type="submit">Bán</button>
+
                             </div>
                         </div>
                         {{csrf_field()}}

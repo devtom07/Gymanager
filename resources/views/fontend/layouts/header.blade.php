@@ -18,7 +18,7 @@
                                         <ul id="navigation">
                                             <li><a href="{{route('fontend')}}">Trang chủ</a></li>
                                             <li><a href="{{route('about')}}">Giới thiệu</a></li>
-                                            <li><a href="{{route('service')}}">Dịch vụ</a></li>
+                                            <li><a href="{{route('layout.service')}}">Dịch vụ</a></li>
                                             <li><a href="{{ route('blogs') }}">Bài viết</a>
                                                 <!-- <ul class="submenu">
                                                     <li><a href="blog.html">Hướng dẫn tập</a></li>

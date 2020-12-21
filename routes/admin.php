@@ -41,7 +41,7 @@ Route::middleware(['auth'])->group(function () {
             ->name('permission.update');
         Route::get('/xoachucnang/{id}', 'Users\PermissionController@destroy')
             ->name('permission.destroy');
-         //user
+        //user
         Route::get('xemtaikhoan', 'Users\UserController@index')
             ->name('user.index')
             ->middleware(['permission:xem tài khoản']);
@@ -270,6 +270,7 @@ Route::middleware(['auth'])->group(function () {
         Route::post('/sua-danh-muc-bai-viet/post/{id}', 'Sanpham\PostsController@update')
             ->name('cate_posts.update');
         Route::get('/danh-muc-bai-viet-xoa/{id}', 'Sanpham\PostsController@destroy')
+
             ->name('cate_posts.delete');
 
         //bai viet

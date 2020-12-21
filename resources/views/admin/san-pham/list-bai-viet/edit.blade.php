@@ -30,15 +30,12 @@
                             <div class="row">
                                 <div class="col-xl-6">
                                     <div class="form-group">
-                                        <label for="exampleInputEmail1">Tên bài viết (*)</label>
-                                        <input type="text" class="form-control" name="name" id="exampleInputName1" value="{{ $listPosts->name}}">
-                                    </div>
-                                    @error('name')
-                                            <p style="color:red">{{$message}}</p>
-                                    @enderror
-                                    <div class="form-group">
                                         <label for="exampleInputEmail1">Ảnh đại diện (*)</label>
-                                        <input type="file" class="form-control" name="avatar" id="avatar" value="{{$listPosts->avatar}}">
+                                        <input type="file" onchange="encodeImageFileAsURL(this)"  name="avatar" class="form-control" >
+                                       
+                                        <img src="{{ asset('posts/'.$listPosts->avatar) }}"  id="img-preview" height="250" width="100%">
+
+                                        {{-- <input type="file" class="form-control" name="avatar" id="avatar" value="{{$listPosts->avatar}}"> --}}
                                     
                                         {{-- <img src="{{asset('/staff/' .$listPosts->avatar)}}" alt="" width="100px" height="100px"> --}}
                                     </div>
@@ -56,7 +53,7 @@
                                 <div class="col-xl-6">
                                     <div class="form-group">
                                         <label>Danh mục bài viết</label>
-                                        <select class="form-control" id="exampleSelect1" name="id_cate_posts">
+                                        <select class="form-control" id="exampleSelect1" name="id_posts_cate">
                                             @foreach ($listCate_posts as $item)
                                                 <option value="{{$item->id }}"
                                                     <?php if($item->id == $listPosts->id_cate_posts):?>
@@ -70,6 +67,13 @@
                                     </div>
                                     @error('id_cate_posts')
                                         <p style="color:red">{{$message}}</p>
+                                    @enderror
+                                    <div class="form-group">
+                                        <label>Ngày viết</label>
+                                        <input value="{{ $listPosts->start_posts }}" class="form-control" type="date" name="start_posts" placeholder="" >
+                                    </div>
+                                    @error('start_posts')
+                                            <p style="color:red">{{$message}}</p>
                                     @enderror
                                     <div class="form-group">
                                         <label>Chi tiết</label>
@@ -97,4 +101,18 @@
     <!-- Footer Start -->
     <!-- end Footer -->
 </div>
+<script>
+    function encodeImageFileAsURL(element) {
+        var file = element.files[0];
+        if(file === undefined){
+            $("#img-preview").attr("src", "{{ $listPosts->avatar }}");
+            return false;
+        }
+        var reader = new FileReader();
+        reader.onloadend = function() {
+            $("#img-preview").attr("src", reader.result);
+        }
+        reader.readAsDataURL(file);
+    }
+</script>
 @endsection()

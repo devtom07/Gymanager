@@ -233,7 +233,10 @@
                                 <span> Doanh thu </span>
                             </a>
                             <ul class="nav-second-level" aria-expanded="false">
-                                <li><a href="">Doanh thu</a></li>
+
+                                <li><a href="{{route('package.index')}}">Doanh thu</a></li>
+
+                             
                             </ul>
                         </li>
                         <li>
@@ -250,11 +253,11 @@
                         </li>
                         <li>
                             <a href="javascript: void(0);">
-                                <i class="mdi mdi-contact-mail"></i>
+                                <i class="mdi mdi-reflect-vertical"></i>
                                 <span>Liên hệ</span>
                             </a>
                             <ul class="nav-second-level" aria-expanded="false">
-                                <li><a href="{{ route('contact.admin') }}">Xem thông tin liên hệ </a></li>
+                                <li><a href="{{route('contact.admin')}}">Xem thông tin liên hệ</a></li>
                             </ul>
                         </li>
                         <li>
@@ -507,6 +510,16 @@ function getdate(tt,total) {
 }
 $(document).ready(function() {
     $('#calamviec').select2();
+});
+
+
+$(document).ready(function(){
+  $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#myTable tr").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
 });
 </script>
 </body>

@@ -44,7 +44,7 @@
                                  </ul> -->
                               </div>
                               <!-- <div class="dataTables_length" id="datatable_length"><label>Show <select name="datatable_length" aria-controls="datatable" class="custom-select custom-select-sm form-control form-control-sm"><option value="10">10</option><option value="25">25</option><option value="50">50</option><option value="100">100</option></select> entries</label></div> -->
-                              <div id="datatable_filter" class="dataTables_filter" ><label>Search:<input type="search" class="form-control form-control-sm" placeholder="" aria-controls="datatable"></label></div>
+                              <div id="datatable_filter" class="dataTables_filter" ><label><input id="myInput" type="text" placeholder="Tìm kiếm ..." class="form-control form-control-sm" placeholder="" aria-controls="datatable"></label></div>
                             
                            </div>
                            <div class="table-responsive fixed-solution" data-pattern="priority-columns">
@@ -99,18 +99,14 @@
                                           <th data-priority="6" id="tech-companies-1-col-8-clone">Action</th>
                                        </tr>
                                     </thead>
-                                    <tbody>
+                                    <tbody id="myTable">
                                       @foreach($work_staffs as $work_staff)
                                        <tr>
                                           <th data-org-colspan="1" data-columns="tech-companies-1-col-0"><span class="co-name">
 
-                                            @if(is_array($work_staff->work_sift_id) || is_object($work_staff->work_sift_id) )
-                                            @foreach(
-                                            json_decode($work_staff->work_sift_id)  as $item)
-                                            <li>{{$item->name }}</li>
-                                              @endforeach
-                                             @endif
-                                          {{-- {{ $work_staff->workSift->name }} --}}
+
+                                            
+                                          {{ $work_staff->workSift->name }}-({{ $work_staff->workSift->hour_start }}-{{ $work_staff->workSift->hour_end }})
                                           </span></th>
                                           <td data-org-colspan="1" data-priority="1" data-columns="tech-companies-1-col-1">{{ $work_staff->Staff->name }}</td>
                                           <td data-org-colspan="1" data-priority="3" data-columns="tech-companies-1-col-2">{{ $work_staff->date_start }}</td>
