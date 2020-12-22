@@ -84,19 +84,12 @@
                                    
                                     <div class="form-group">
                                         <label>Mô tả</label>
-                                        <input class="form-control" type="text" name="desc" value="{{ old('desc') }}" placeholder="Mô tả">
+                                        <textarea id="editor1" class="form-control" type="text" name="desc" value="{{ old('desc') }}" placeholder="Mô tả"></textarea>
                                     </div>
                                     @error('desc')
                                             <p style="color:red">{{$message}}</p>
                                     @enderror
-                                    <div class="form-group">
-                                        <label for="exampleInputPassword1">Ca tập (*)</label>
-                                        <select name="id_catap" class="form-control" id="">
-                                            @foreach($catap as $catap)
-                                            <option value="{{ $catap->id }}">{{ $catap->name }}</option>
-                                            @endforeach
-                                        </select>
-                                    </div>
+
                                     <div class="form-group">
                                         <label for="exampleInputEmail1">Ngày bắt đầu(*)</label>
                                         <input type="date" class="form-control" name="start_date" value="{{ old('start_date') }}" placeholder="">

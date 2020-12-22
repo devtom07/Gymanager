@@ -24,7 +24,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="card-box">
-                        <h4 class="header-title mb-4">Thêm thể loại</h4>
+                        <h4 class="header-title mb-4">Thêm danh mục bài viết</h4>
                         <form action="{{route('cate_posts.store')}}" method="post" enctype="multipart/form-data">
                             @csrf
                             <div class="row">

@@ -159,6 +159,8 @@ class ProductController extends Controller
         } else {
             Cart::remove($id);
         }
+        Alert()->success('Thành công', 'Bạn đã xóa sản phẩm khỏi giỏ hàng thành công');
+
         return back();
     }
 }

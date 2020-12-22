@@ -101,7 +101,7 @@ class ListnhanvienController extends Controller
             $staffs->where('id', $id)->update($arr);
         }
         Alert()->success('Thành công', 'Cập nhật nhân viên thành công');
-        return redirect()->action('Nhanvien\ListnhanvienController@index');
+        return redirect()->route('listnhanvien');
     }
     public function destroy($id)
     {
