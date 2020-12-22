@@ -80,7 +80,6 @@ class ProductController extends Controller
             $arr['name'] = $request->name;
             $arr['cate_id'] = $request->cate_id;
             $arr['price'] = $request->price;
-            $arr['sale_price'] = $request->sale_price;
             $arr['quantity'] = $request->quantity;
             $arr['detail'] = $request->detail;
             $products->where('id', $id)->update($arr);
