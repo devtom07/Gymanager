@@ -379,7 +379,7 @@
                     <div class="clearfix"></div>
 
                 </div>
-            @elseif($user->hasAnyRole('pt'))
+            @elseif($user->hasAnyRole('PT'))
             <div class="slimscroll-menu">
                 <!--- Sidemenu -->
                 <div id="sidebar-menu">

@@ -73,7 +73,7 @@ class ProductController extends Controller
             $arr['price'] = $request->price;
             $arr['quantity'] = $request->quantity;
             $arr['detail'] = $request->detail;
-            $products['avatar'] = $new_image;
+            $arr['avatar'] = $new_image;
             $products->where('id', $id)->update($arr);
         } else {
             $products = new Product;
