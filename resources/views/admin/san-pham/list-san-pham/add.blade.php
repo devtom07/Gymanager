@@ -45,7 +45,7 @@
                                     @enderror
                                     <div class="form-group">
                                         <label for="exampleInputPassword1">Giá (*)</label>
-                                        <input type="number" class="form-control" name="price" id="exampleInputPassword1" placeholder="">
+                                        <input min="0" type="number" class="form-control" name="price" id="exampleInputPassword1" placeholder="">
                                     </div>
                                     @error('price')
                                             <p style="color:red">{{$message}}</p>
@@ -64,7 +64,7 @@
                                 <div class="col-xl-6">
                                     <div class="form-group">
                                         <label>Số lượng</label>
-                                        <input class="form-control" type="number" name="quantity" placeholder="">
+                                        <input  min="0" class="form-control" type="number" name="quantity" placeholder="">
                                     </div>
                                     @error('quantity')
                                             <p style="color:red">{{$message}}</p>
