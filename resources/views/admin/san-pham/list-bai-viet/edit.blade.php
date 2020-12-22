@@ -77,7 +77,7 @@
                                     @enderror
                                     <div class="form-group">
                                         <label>Chi tiết</label>
-                                        <textarea id="editor1" class="form-control" type="text" name="detail" placeholder="" >{{ $listPosts->detail}}</textarea>
+                                        <textarea  class="form-control" type="text" name="detail" placeholder="" >{{ $listPosts->detail}}</textarea>
 
                                     </div>
                                     @error('detail')
