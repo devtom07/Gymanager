@@ -85,10 +85,7 @@
                                                                 </button>
                                                                 <div class="dropdown-menu" x-placement="bottom-start"
                                                                      style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 29px, 0px);">
-                                                                    <a class="dropdown-item  btn-show"
-                                                                       id="show_customer" data-id="{{$customer->customer->id}}"
-                                                                       data-toggle="modal"
-                                                                       data-target="#exampleModalCenter"> Chi tiết</a>
+                                                                    
                                                                     <a class="dropdown-item"
                                                                        href="{{route('customer.edit',$customer->customer->id)}}">Sửa</a>
                                                                     <a class="dropdown-item"
