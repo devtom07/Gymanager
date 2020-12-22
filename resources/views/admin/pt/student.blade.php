@@ -46,8 +46,7 @@
                                                     <th data-priority="1" id="tech-companies-1-col-3-clone">Ca tập
                                                     </th>
 
-                                                    <th data-priority="1" id="tech-companies-1-col-3-clone">Huấn luyện
-                                                        viên
+                                                    <th data-priority="1" id="tech-companies-1-col-3-clone">Học viên
                                                     </th>
                                                     <th data-priority="1" id="tech-companies-1-col-3-clone">Thời gian
                                                     </th>
@@ -64,7 +63,7 @@
                                                         <td data-org-colspan="1" data-priority="3"
                                                             data-columns="tech-companies-1-col-2">{{$teachingSchedules->hymnal->name}}</td>
                                                         <td data-org-colspan="1" data-priority="3"
-                                                            data-columns="tech-companies-1-col-2">{{$teachingSchedules->pt->name}}</td>
+                                                            data-columns="tech-companies-1-col-2">{{$teachingSchedules->customer->name}}</td>
                                                         <td data-org-colspan="1" data-priority="3"
                                                             data-columns="tech-companies-1-col-2">{{$teachingSchedules->hymnal->start_hour}} - {{$teachingSchedules->hymnal->end_hour}}</td>
                                                         <td data-org-colspan="1" data-priority="6"

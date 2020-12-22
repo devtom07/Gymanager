@@ -214,11 +214,9 @@ Route::middleware(['auth'])->group(function () {
             ->name('pt.teaching')
             ->middleware(['permission:Lịch dạy pt']);
         Route::get('xep-lich-hoc/{id}', 'PT\PtController@addTrainingPt')
-            ->name('pt.addTrainingPt')
-            ->middleware(['permission:Lịch học cho học viên']);
+            ->name('pt.addTrainingPt');
         Route::get('lich-hoc-hoc-vien/{id}', 'PT\PtController@ptStudent')
-            ->name('pt.ptStudent')
-            ->middleware(['permission:Lịch học cho học viên']);
+            ->name('pt.ptStudent');
 
         Route::post('xep-lich-hoc/post/{id}', 'PT\PtController@storeTrainingPt')
             ->name('pt.storeTrainingPt');

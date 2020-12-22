@@ -91,7 +91,7 @@
                                     <thead>
                                        <tr>
                                           
-                                          <th data-priority="1" id="tech-companies-1-col-1-clone">Ca làm việc</th>
+                                          {{-- <th data-priority="1" id="tech-companies-1-col-1-clone">Ca làm việc</th> --}}
                                           <th data-priority="3" id="tech-companies-1-col-2-clone">Nhân viên</th>
                                           <th data-priority="1" id="tech-companies-1-col-3-clone">Ngày bắt đầu</th>
                                           <th data-priority="3" id="tech-companies-1-col-4-clone">Chu kỳ</th>
@@ -103,12 +103,12 @@
                                     <tbody id="myTable">
                                       @foreach($work_staffs as $work_staff)
                                        <tr>
-                                          <th data-org-colspan="1" data-columns="tech-companies-1-col-0"><span class="co-name">
+                                          {{-- <th data-org-colspan="1" data-columns="tech-companies-1-col-0"><span class="co-name">
 
 
                                             
                                           {{ $work_staff->workSift->name }}-({{ $work_staff->workSift->hour_start }}-{{ $work_staff->workSift->hour_end }})
-                                          </span></th>
+                                          </span></th> --}}
                                           <td data-org-colspan="1" data-priority="1" data-columns="tech-companies-1-col-1">{{ $work_staff->Staff->name }}</td>
                                           <td data-org-colspan="1" data-priority="3" data-columns="tech-companies-1-col-2">{{ $work_staff->date_start }}</td>
                                           <td data-org-colspan="1" data-priority="1" data-columns="tech-companies-1-col-3">

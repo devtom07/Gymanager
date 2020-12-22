@@ -44,7 +44,8 @@ class ValidateFormAddService extends FormRequest
             'start_date.after'=>' Ngày bắt đầu không được trước ngày hôm nay',
             'active_date.after'=>' Ngày kích hoạt không để trước ngày bắt đầu',
             'active_date.before'=>' Ngày kích hoạt không được để sau ngày kết thúc',
-
+            'name.unique' => 'Tên này đã tồn tại'
+ 
         ];
     }
     public function attributes()

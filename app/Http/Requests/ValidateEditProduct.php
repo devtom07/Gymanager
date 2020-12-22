@@ -26,9 +26,8 @@ class ValidateEditProduct extends FormRequest
         return [
             'name' => 'required',
             'cate_id' => 'required',
-            'avatar' => 'required|image|mimes:jpeg,png,jpg',
             'price' => 'required',
-            'quantity' => 'required',
+            'quantity' => 'required|numeric|min:0',
             'detail' => 'required',
         ];
     }
@@ -37,6 +36,9 @@ class ValidateEditProduct extends FormRequest
         return [
             'required' => ':attribute không được để trống',
             'avatar.image' => 'Phải nhập đúng định dạng file ảnh',
+            'quantity.numeric' => 'chỉ được phép nhập số',
+            'quantity.min' => 'số nhỏ nhất là 0',
+
         ];
     }
     public function attributes()
