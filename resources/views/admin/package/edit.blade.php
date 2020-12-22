@@ -11,14 +11,8 @@
             <div class="row">
                 <div class="col-12">
                     <div class="page-title-box">
-                        <div class="page-title-right">
-                            <ol class="breadcrumb m-0">
-                                <li class="breadcrumb-item"><a href="javascript: void(0);">Gymanager</a></li>
-                                <li class="breadcrumb-item"><a href="javascript: void(0);">Forms</a></li>
-                                <li class="breadcrumb-item active">Tạo mới gói tập</li>
-                            </ol>
-                        </div>
-                        <h4 class="page-title">Tạo mới gói tập</h4>
+
+                        <h4 class="page-title">Cập nhật gói cước</h4>
                     </div>
                 </div>
             </div>
@@ -89,18 +83,7 @@
                                     @error('desc')
                                             <p style="color:red">{{$message}}</p>
                                     @enderror
-                                    <div class="form-group">
-                                        <label for="exampleInputPassword1">Ca tập (*)</label>
-                                        <select name="id_catap" class="form-control" id="">
-                                            @foreach($catap as $catap)
-                                            <option 
-                                            <?php if($package->id_catap ==$catap->id) :?>
-                                            selected
-                                            <?php endif?>
-                                            value="{{ $catap->id }}">{{ $catap->name }}</option>
-                                            @endforeach
-                                        </select>
-                                    </div>
+
                                     <div class="form-group">
                                         <label for="exampleInputEmail1">Ngày bắt đầu(*)</label>
                                         <input type="date" class="form-control" name="start_date" value="{{ $package->start_date }}" placeholder="">

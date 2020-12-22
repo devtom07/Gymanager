@@ -2,6 +2,8 @@
 @extends('admin.layout.main')
 @section('title', 'Danh sách ca tập')
 @section('content')
+    @include('sweetalert::alert')
+
 <script>
     $(document).ready(function(){
       $("#myInput").on("keyup", function() {

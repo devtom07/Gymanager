@@ -68,7 +68,7 @@
                                     @enderror
                                     <div class="form-group">
                                         <label>Chi tiết</label>
-                                        <input class="form-control" type="text" name="detail" placeholder="" >
+                                        <textarea id="editor1" class="form-control" type="text" name="detail" placeholder="" ></textarea>
                                     </div>
                                     @error('detail')
                                             <p style="color:red">{{$message}}</p>

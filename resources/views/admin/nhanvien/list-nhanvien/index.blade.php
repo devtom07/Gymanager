@@ -1,6 +1,7 @@
 @extends('admin.layout.main')
 @section('title', 'Danh sach nhan vien')
 @section('content')
+   @include('sweetalert::alert')
 <div class="content-page">
    <div class="content">
       <!-- Start Content-->
@@ -35,11 +36,11 @@
                                        <tr>
                                           <th id="tech-companies-1-col-0-clone">STT</th>
                                           <th data-priority="1" id="tech-companies-1-col-1-clone">Họ và Tên</th>
-                                           <th data-priority="1" id="tech-companies-1-col-1-clone">Anh dai dien</th>
+                                           <th data-priority="1" id="tech-companies-1-col-1-clone">Avatar</th>
                                           <th data-priority="3" id="tech-companies-1-col-2-clone">Điện thoại</th>
                                           <th data-priority="1" id="tech-companies-1-col-3-clone">Email</th>
                                           <th data-priority="3" id="tech-companies-1-col-4-clone">Địa chỉ</th>
-                                          <th data-priority="3" id="tech-companies-1-col-5-clone">Chuc vu</th>
+                                          <th data-priority="3" id="tech-companies-1-col-5-clone">Chức vụ</th>
                                           <th data-priority="6" id="tech-companies-1-col-6-clone">Loại hợp đồng</th>
                                           <th data-priority="6" id="tech-companies-1-col-7-clone">Mức lương</th>
                                           <th data-priority="6" id="tech-companies-1-col-8-clone">Action</th>
