@@ -1,6 +1,7 @@
 @extends('admin.layout.main')
 @section('title', 'Danh sach the loai')
 @section('content')
+   @include('sweetalert::alert')
 <div class="content-page">
    <div class="content">
       <!-- Start Content-->
@@ -9,7 +10,7 @@
          <div class="row">
             <div class="col-12">
                <div class="page-title-box">
-                  <h4 class="page-title">Danh sách Thể loại</h4>
+                  <h4 class="page-title">Danh mục bài viết</h4>
                </div>
             </div>
          </div>

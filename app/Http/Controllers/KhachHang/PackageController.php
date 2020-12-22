@@ -35,7 +35,6 @@ class PackageController extends Controller
 		$package->status = $request->status;
 		$package->free_service = $request->free_service;
 		$package->desc = $request->desc;
-		$package->id_catap = $request->id_catap;
 		$package->start_date = $request->start_date;
 		$package->end_date = $request->end_date;
 		// dd($package);
@@ -59,7 +58,6 @@ class PackageController extends Controller
 		$package->status = $request->status;
 		$package->free_service = $request->free_service;
 		$package->desc = $request->desc;
-		$package->id_catap = $request->id_catap;
 		$package->start_date = $request->start_date;
 		$package->end_date = $request->end_date;
 		$package->update();

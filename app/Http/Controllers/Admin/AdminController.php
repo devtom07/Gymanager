@@ -69,8 +69,8 @@ class AdminController extends Controller
 
     public function deleteListForm($id)
     {
-        $list = NewMember::find($id);
-        $list->delete();
+         NewMember::where('id',$id)->delete();
+        
         Alert()->success('Thông báo!', 'Bạn đã xóa thành công!!');
         return back();
     }

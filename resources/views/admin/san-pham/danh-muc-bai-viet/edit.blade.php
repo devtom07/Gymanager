@@ -9,13 +9,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="page-title-box">
-                        <div class="page-title-right">
-                            <ol class="breadcrumb m-0">
-                                <li class="breadcrumb-item"><a href="javascript: void(0);">Gymanager</a></li>
-                                <li class="breadcrumb-item"><a href="javascript: void(0);">Forms</a></li>
-                                {{-- <li class="breadcrumb-item active">Tạo mới nhân viên</li> --}}
-                            </ol>
-                        </div>
+
                         {{-- <h4 class="page-title">Tạo mới nhân viên</h4> --}}
                     </div>
                 </div>
@@ -24,7 +18,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="card-box">
-                    <h4 class="header-title mb-4">Sửa thể loại</h4>
+                    <h4 class="header-title mb-4">Cập nhật danh mục bài viết</h4>
                     <form action="{{route('category.update',$listCategory->id)}}" method="POST"  enctype="multipart/form-data">
                             @csrf
                             <div class="row">

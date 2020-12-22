@@ -1,6 +1,7 @@
 @extends('admin.layout.main')
 @section('title', 'Danh sach bai viet')
 @section('content')
+    @include('sweetalert::alert')
 <div class="content-page">
     <div class="content">
         <!-- Start Content-->

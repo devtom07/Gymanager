@@ -1,3 +1,4 @@
+
 <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
@@ -65,7 +66,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" id="closerUser" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
-{{--                <button type="button" data-id="" id="editUser" class="btn btn-primary">Sửa</button>--}}
+                <button type="button" data-id="" id="editUser" class="btn btn-primary">Sửa</button>
             </div>
         </div>
     </div>
