@@ -78,7 +78,6 @@
                                           <th data-priority="3" id="tech-companies-1-col-4-clone">Dịch vụ</th>
                                           <th data-priority="3" id="tech-companies-1-col-5-clone">Email</th>
                                           <th data-priority="6" id="tech-companies-1-col-7-clone">Ghi chú</th>
-                                          <th data-priority="6" id="tech-companies-1-col-7-clone">Trạng thái</th>
                                           <th data-priority="6" id="tech-companies-1-col-8-clone">Action</th>
                                        </tr>
                                     </thead>
@@ -103,14 +102,7 @@
                                           </td>
                                           <td data-org-colspan="1" data-priority="3" data-columns="tech-companies-1-col-4">{{ $list->email }}</td>
                                           <td data-org-colspan="1" data-priority="6" data-columns="tech-companies-1-col-7">{{ $list->content }}</td>
-                                          <td data-org-colspan="1" data-priority="6" data-columns="tech-companies-1-col-7">
-                                            @if($list->statuss == 1)
-                                            <input class="btn btn-success" type="submit" value="Đã xử lý">
-                                                @else
-                                            <input class="btn btn-success" type="submit" value="Chưa xử lý">
-                                                @endif
-
-                                          </td>
+                                         
                                           <td data-org-colspan="1" data-priority="6" data-columns="tech-companies-1-col-8">
                                           <a class="" href="{{ route('listForm.delete', ['id'=>$list->id]) }}"><i class="mdi mdi-delete"></i> Xoá</a></td>
                                        </tr>
