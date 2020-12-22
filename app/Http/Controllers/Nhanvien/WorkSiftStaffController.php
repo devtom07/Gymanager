@@ -23,7 +23,7 @@ class WorkSiftStaffController extends Controller
         $work_staff = WorkSiftStaff::with('workSift', 'Staff')->orderBy('id', 'DESC')->get();
 
 
-        $work_sift = WorkSift::paginate(5);
+        $work_sift = WorkSift::paginate(4);
         if ($request->ajax()) {
             return view('admin.nhanvien.calamviec-nhanvien.index', compact('work_sift', 'work_staff'));
         }
@@ -33,7 +33,7 @@ class WorkSiftStaffController extends Controller
     /**
      * Show the form for creating a new resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\Responseg
      */
     public function create()
     {
@@ -122,7 +122,7 @@ class WorkSiftStaffController extends Controller
     public function destroy($id)
     {
         //
-        $work_staff = WorkSiftStaff::where('id',$id)->first();
+        $work_staff = WorkSiftStaff::where('id', $id)->first();
         $work_staff->delete();
         Alert()->success('Thông báo!', 'Xóa thêm thành công!');
         return redirect()->route('calamviecnhanvien');
