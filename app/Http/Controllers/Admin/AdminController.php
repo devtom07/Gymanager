@@ -8,7 +8,7 @@ use RealRashid\SweetAlert\Facades\Alert;
 use App\Models\Contact;
 use App\Models\NewMember;
 use App\Models\Service;
- 
+
 use App\Models\Staff;
 use App\Models\Customer;
 use App\Models\Product;
@@ -37,7 +37,7 @@ class AdminController extends Controller
             }
         }
         $blog = Post::all()->count();
-        return view('admin.index', compact('countAccount', 'countStaff', 'countCustomer', 'countService', 'countProduct', 'countPt','blog'));
+        return view('admin.index', compact('countAccount', 'countStaff', 'countCustomer', 'countService', 'countProduct', 'countPt', 'blog'));
     }
 
     public function contact()
