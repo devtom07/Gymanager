@@ -1,6 +1,20 @@
 @extends('fontend.layouts.index')
 @section('title', 'Liên hệ')
 @section('content')
+<style>
+    .form-contact .form-control {
+    border: 1px solid #000000;
+    border-radius: 0px;
+    height: 48px;
+    padding-left: 18px;
+    font-size: 13px;
+    background: transparent;
+}
+.boxed-btn {
+    color: white !important;
+    border: 1px solid white !important;
+}
+</style>
  <main>
         <!--? Hero Start -->
         <div class="slider-area2">
@@ -75,7 +89,7 @@
                                 </div>
                             </div>
                             <div class="form-group mt-3">
-                                <button type="submit" class="button button-contactForm boxed-btn">Send</button>
+                                <button type="submit" class="button button-contactForm boxed-btn bg-success text-white">Send</button>
                             </div>
                         </form>
                     </div>

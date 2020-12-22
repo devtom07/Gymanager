@@ -29,9 +29,6 @@
                                 <h2>Đột phá giới hạn của bạn</h2>
                             </div>
                         </div>
-                        <div class="col-xl-2 col-lg-2 col-md-3">
-                            <a href="services.html" class="btn wantToWork-btn f-right">Dịch vụ khác</a>
-                        </div>
                     </div>
                 </div>
             </section>
