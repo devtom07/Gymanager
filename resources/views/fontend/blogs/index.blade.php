@@ -35,7 +35,7 @@
                                     <a class="d-inline-block" href="{{route('detailblog',$list->id)}}">
                                         <h2 class="blog-head" style="color: #2d2d2d;">{{ $list->title }}</h2>
                                     </a>
-                                    <p>{{ $list->detail }}</p>
+                                    {{-- <p>{{ $list->detail }}</p> --}}
                                     <p>{{ $list->start_posts }}</p>
                                 </div>
                             </article>

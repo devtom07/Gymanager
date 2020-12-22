@@ -10,7 +10,7 @@
                 <div class="col-12">
                     <div class="page-title-box">
 
-                        <h4 class="page-title">Danh sách bai viet</h4>
+                        <h4 class="page-title">Danh sách bài viết</h4>
                     </div>
                 </div>
             </div>
