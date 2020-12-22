@@ -29,7 +29,7 @@ class CategoryController extends Controller
         $category = new Category;
         $category->name = $request->name;
         $category->save();
-        Alert()->success('thành công','bạn đã thêm chức vụ thành công');
+        Alert()->success('Thành công','Bạn đã thêm loại sản phẩm thành công');
         return redirect()->route('listcategory');
     }
 
@@ -49,14 +49,14 @@ class CategoryController extends Controller
         $category = new Category;
         $arr['name'] = $request->name;
         $category->where('id', $id)->update($arr);
-        Alert()->success('Thành công','bạn đã sửa chức vụ thành công');
+        Alert()->success('Thành công','Bạn đã cập nhật loại sản phẩm thành công');
         return redirect()->route('listcategory');
     }
 
     public function destroy($id)
     {
         Category::find($id)->delete();
-        Alert()->success('thành công','bạn đã xóa chức vụ thành công');
+        Alert()->success('Thành công','Bạn đã xóa loại sản phẩm thành công');
         return back();
     }
 }

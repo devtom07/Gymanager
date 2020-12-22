@@ -42,6 +42,7 @@
                                                     <th data-priority="1" id="tech-companies-1-col-1-clone">Danh mục bài viết</th>
                                                     <th data-priority="1" id="tech-companies-1-col-1-clone">Ảnh bài viết</th>
                                                     <th data-priority="1" id="tech-companies-1-col-1-clone">Tiêu đề</th>
+                                                    <th data-priority="1" id="tech-companies-1-col-1-clone">Chi tiết</th>
                                                     <th data-priority="6" id="tech-companies-1-col-8-clone">Action</th>
                                                 </tr>
                                             </thead>
@@ -62,6 +63,9 @@
                                                     <td data-org-colspan="1" data-priority="1" data-columns="tech-companies-1-col-1">
                                                         {{ $posts->title}}
                                                     </td>
+                                                    <td data-org-colspan="1" data-priority="1" data-columns="tech-companies-1-col-1">
+                                                        {{ $posts->detail   }}
+                                                    </td>
                                                     <td data-org-colspan="1" data-priority="6"
                                                         data-columns="tech-companies-1-col-8">
                                                         <div class="btn-group mt-1 mr-1">
@@ -72,9 +76,9 @@
                                                             </button>
                                                             <div class="dropdown-menu" x-placement="bottom-start"
                                                                 style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 29px, 0px);">
-                                                                <a class="dropdown-item  btn-show" id="show_contact" data-id="{{$posts->id}}"
+                                                                {{-- <a class="dropdown-item  btn-show" id="show_contact" data-id="{{$posts->id}}"
                                                                        data-toggle="modal"
-                                                                       data-target="#exampleModalCenter">Chi tiết</a>
+                                                                       data-target="#exampleModalCenter">Chi tiết</a> --}}
                                                                 <a class="dropdown-item"
                                                                     href="{{route('posts.edit',$posts->id)}}">
                                                                     <i class="mdi mdi-lead-pencil"></i>
