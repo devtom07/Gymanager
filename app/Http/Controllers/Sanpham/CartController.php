@@ -52,7 +52,7 @@ class CartController extends Controller
         ]);
         Cart::destroy();
 
-        Alert()->success('Thành công', 'Bạn đã thêm sản phẩm thành công');
+        Alert()->success('Thành công', 'Bạn đã bán phẩm thành công');
         return redirect()->action('Sanpham\CartController@index');
     }
 }
